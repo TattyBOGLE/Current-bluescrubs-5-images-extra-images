@@ -1248,6 +1248,88 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
     }
   });
 
+  // Per-question study tips: AI-generated mnemonics specific to this question's topic
+  const studyTipsCache = new Map<string, any>();
+
+  app.post('/api/study-tips', async (req, res) => {
+    const { question, category, correctOption, questionId } = req.body || {};
+    if (!question || !correctOption) {
+      return res.status(400).json({ error: 'question and correctOption are required' });
+    }
+
+    // Return cached result if available
+    const cacheKey = String(questionId || question).slice(0, 120);
+    if (studyTipsCache.has(cacheKey)) {
+      return res.json(studyTipsCache.get(cacheKey));
+    }
+
+    if (!isAIEnabled() || (!process.env.OPENAI_API_KEY && !process.env.AI_INTEGRATIONS_OPENAI_API_KEY)) {
+      return res.json({ mnemonics: [], source: 'unavailable' });
+    }
+
+    try {
+      const { default: OpenAI } = await import('openai');
+      const openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+        baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
+      });
+
+      const prompt = `You are a UK PLAB 1 medical educator. Given this MCQ question and its correct answer, generate 2-3 concise, memorable mnemonics or clinical pearls that will help the student remember the key concepts tested.
+
+QUESTION: ${question}
+CORRECT ANSWER: ${correctOption}
+SPECIALTY: ${category || 'General Medicine'}
+
+Rules:
+- Each mnemonic must be directly relevant to THIS question's specific topic and correct answer
+- Do NOT use generic mnemonics like SOCRATES, WIPE, or IPPA unless directly tested by this question
+- Each must be immediately useful for PLAB 1 exam technique
+- Acronym-based mnemonics should spell out a real word or memorable phrase
+- Keep expansions concise (1 sentence per letter/element)
+
+Return STRICT JSON:
+{
+  "mnemonics": [
+    {
+      "title": "Topic: \\"ACRONYM\\"",
+      "expansion": "A = ..., B = ..., C = ..."
+    }
+  ]
+}`;
+
+      const completion = await openai.chat.completions.create({
+        model: 'gpt-4o',
+        messages: [
+          { role: 'system', content: 'You are a concise UK medical exam coach. Return only valid JSON.' },
+          { role: 'user', content: prompt },
+        ],
+        temperature: 0.4,
+        response_format: { type: 'json_object' },
+        max_tokens: 600,
+      });
+
+      const raw = completion.choices?.[0]?.message?.content || '{}';
+      let parsed: any;
+      try { parsed = JSON.parse(raw); } catch { parsed = {}; }
+
+      const result = {
+        mnemonics: Array.isArray(parsed.mnemonics) ? parsed.mnemonics : [],
+        source: 'ai' as const,
+      };
+
+      studyTipsCache.set(cacheKey, result);
+      if (studyTipsCache.size > 1000) {
+        const first = studyTipsCache.keys().next().value;
+        if (first) studyTipsCache.delete(first);
+      }
+
+      return res.json(result);
+    } catch (err) {
+      console.error('Study tips error:', err);
+      return res.json({ mnemonics: [], source: 'error' });
+    }
+  });
+
   // AI NHS Prep endpoint
   app.post("/api/ask-nhs-prep", async (req, res) => {
     if (!isAIEnabled()) {

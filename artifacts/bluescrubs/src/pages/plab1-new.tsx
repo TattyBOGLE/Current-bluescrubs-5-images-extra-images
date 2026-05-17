@@ -127,6 +127,16 @@ export default function PLAB1New() {
   const [aiExplanationLoading, setAiExplanationLoading] = useState(false);
   // Cache of explanations by question id, so navigating back to a question doesn't re-fetch.
   const aiExplanationCache = useRef<Map<string, AIExplanation>>(new Map());
+
+  // AI-generated study tips / mnemonics specific to each question
+  type AIStudyTips = {
+    mnemonics: Array<{ title: string; expansion: string }>;
+    source: 'ai' | 'unavailable' | 'error';
+  };
+  const [aiStudyTips, setAiStudyTips] = useState<AIStudyTips | null>(null);
+  const [aiStudyTipsLoading, setAiStudyTipsLoading] = useState(false);
+  // Cache by question id so tips are ready when the explanation section appears
+  const studyTipsCache = useRef<Map<string, AIStudyTips>>(new Map());
   const sessionTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const clearSessionTimeout = () => {
     if (sessionTimeoutRef.current) {
@@ -922,6 +932,51 @@ export default function PLAB1New() {
     }
   };
 
+  // Fetch question-specific mnemonics from the AI study-tips endpoint (cached per question id)
+  const fetchStudyTips = async (question: any) => {
+    if (!question) return;
+
+    const qid = String(question.id ?? `idx_${currentQuestionIndex}`);
+    const cached = studyTipsCache.current.get(qid);
+    if (cached) { setAiStudyTips(cached); return; }
+
+    // Resolve the correct answer option text so the AI knows what to focus on
+    const correctIdxRaw = question.correctAnswer ?? question.correct_answer ?? question.answer;
+    const correctIdx = typeof correctIdxRaw === 'string'
+      ? (/^[A-E]$/.test(correctIdxRaw) ? correctIdxRaw.charCodeAt(0) - 65 : parseInt(correctIdxRaw) || 0)
+      : (typeof correctIdxRaw === 'number' ? correctIdxRaw : 0);
+
+    const optionsArr: string[] = Array.isArray(question.options)
+      ? question.options.map((o: any) => typeof o === 'string' ? o : (o?.text ?? ''))
+      : Object.values(question.options || {}).map((o: any) => typeof o === 'string' ? o : (o?.text ?? ''));
+
+    const correctOption = optionsArr[correctIdx] ?? '';
+    if (!correctOption) return;
+
+    setAiStudyTipsLoading(true);
+    setAiStudyTips(null);
+    try {
+      const resp = await fetch('/api/study-tips', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          question: question.question || question.question_scenario || '',
+          category: question.category || question.topic,
+          correctOption,
+          questionId: qid,
+        }),
+      });
+      if (!resp.ok) return;
+      const data: AIStudyTips = await resp.json();
+      studyTipsCache.current.set(qid, data);
+      setAiStudyTips(data);
+    } catch (err) {
+      console.error('Failed to fetch study tips:', err);
+    } finally {
+      setAiStudyTipsLoading(false);
+    }
+  };
+
   // Handle next question navigation
   const handleNextQuestion = () => {
     // Check for correct answer milestone
@@ -946,6 +1001,8 @@ export default function PLAB1New() {
       setShowExplanation(false);
       setAiExplanation(null);
       setAiExplanationLoading(false);
+      setAiStudyTips(null);
+      setAiStudyTipsLoading(false);
       setQuestionStartTime(Date.now());
       if (isTimedSession) {
         setQuestionTimer(0);
@@ -1222,6 +1279,14 @@ export default function PLAB1New() {
       translateFullQuestion(currentQuestion);
     }
   }, [currentQuestion, translateQuestions, selectedLanguage]);
+
+  // Proactively fetch question-specific study tips as soon as a new question loads.
+  // This way the tips are ready (or loading) when the student submits their answer.
+  useEffect(() => {
+    if (currentQuestion && sessionStarted) {
+      void fetchStudyTips(currentQuestion);
+    }
+  }, [currentQuestionIndex, sessionStarted]);
 
   // If no session started, show the landing page
   if (!sessionStarted && !isGeneratingQuestions) {
@@ -2867,154 +2932,45 @@ export default function PLAB1New() {
               </div>
             </div>
 
-            {/* Study Tips Section with Medical Mnemonics */}
+            {/* Study Tips Section — AI-generated mnemonics specific to this question */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <div className="flex items-start gap-2 mb-3">
+              <div className="flex items-start gap-2">
                 <Lightbulb className="w-4 h-4 text-blue-600 flex-shrink-0 mt-1" />
                 <div className="w-full">
-                  <p className="text-sm font-medium text-blue-900 mb-3">{translateText('Study Tips & Medical Mnemonics')}</p>
-                  
-                  {/* Display question-specific study tips */}
-                  {currentQuestion.study_tips ? (
-                    <div className="space-y-3">
-                      {/* Question-specific mnemonic */}
-                      {currentQuestion.study_tips.mnemonic && (
-                        <div className="bg-white border border-blue-200 rounded-lg p-3 border-l-4 border-l-yellow-400">
-                          <div className="flex items-start gap-2">
-                            <span className="text-lg">💡</span>
-                            <div>
-                              <p className="text-sm font-semibold text-blue-900 mb-1">Memory Aid:</p>
-                              <p className="text-sm text-blue-800 leading-relaxed font-medium">{currentQuestion.study_tips.mnemonic}</p>
-                            </div>
-                          </div>
+                  <p className="text-sm font-medium text-blue-900 mb-3">
+                    Study Tips &amp; Medical Mnemonics
+                  </p>
+
+                  {/* Loading skeleton while AI generates tips */}
+                  {aiStudyTipsLoading && !aiStudyTips && (
+                    <div className="space-y-3 animate-pulse">
+                      {[1, 2].map(i => (
+                        <div key={i} className="bg-white border border-blue-200 rounded-lg p-3">
+                          <div className="h-3 bg-blue-200 rounded w-2/5 mb-2" />
+                          <div className="h-2.5 bg-blue-100 rounded w-full mb-1" />
+                          <div className="h-2.5 bg-blue-100 rounded w-4/5" />
                         </div>
-                      )}
-                      
-                      {/* Key learning points */}
-                      {currentQuestion.study_tips.key_learning_points && currentQuestion.study_tips.key_learning_points.length > 0 && (
-                        <div className="bg-white border border-blue-200 rounded-lg p-3">
-                          <p className="text-sm font-semibold text-blue-900 mb-2">Key Learning Points:</p>
-                          <ul className="space-y-1">
-                            {currentQuestion.study_tips.key_learning_points.map((point: string, index: number) => (
-                              <li key={index} className="text-sm text-blue-800 flex items-start gap-2">
-                                <span className="text-blue-600 mt-1">•</span>
-                                <span>{point}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                      ))}
                     </div>
-                  ) : (
-                    // Category-specific mnemonics based on question topic
+                  )}
+
+                  {/* AI-generated mnemonics */}
+                  {aiStudyTips && aiStudyTips.mnemonics.length > 0 && (
                     <div className="space-y-3">
-                      {/* Cardiology Mnemonics */}
-                      {currentQuestion.category?.toLowerCase().includes('cardio') && (
-                        <>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">ECG Reading: "RATE-RHYTHM-AXIS"</p>
-                            <p className="text-sm text-blue-800">Rate → Rhythm → Axis → Intervals (PR, QRS, QT) → ST-T changes</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Heart Murmurs: "All Physicians Take Money"</p>
-                            <p className="text-sm text-blue-800">Aortic (2nd R ICS) → Pulmonary (2nd L ICS) → Tricuspid (4th L ICS) → Mitral (5th L MCL)</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Heart Failure: "FACES"</p>
-                            <p className="text-sm text-blue-800">Fatigue, Activity limitation, Congestion/Edema, Shortness of breath</p>
-                          </div>
-                        </>
-                      )}
-
-                      {/* Respiratory Mnemonics */}
-                      {currentQuestion.category?.toLowerCase().includes('respiratory') && (
-                        <>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Asthma Management: "SABA-MART"</p>
-                            <p className="text-sm text-blue-800">SABA reliever → Maintenance and Reliever Therapy → Add-on treatments</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">COPD Exacerbation: "STAMP"</p>
-                            <p className="text-sm text-blue-800">Steroids, Theophylline, Antibiotics, Mucolytics, Physiotherapy</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Pneumonia Severity: "CURB-65"</p>
-                            <p className="text-sm text-blue-800">Confusion, Urea above 7, Respiratory rate 30+, BP below 90/60, age 65+</p>
-                          </div>
-                        </>
-                      )}
-
-                      {/* Endocrinology/Diabetes Mnemonics */}
-                      {(currentQuestion.category?.toLowerCase().includes('diabetes') || 
-                        currentQuestion.category?.toLowerCase().includes('endocrin')) && (
-                        <>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Diabetes Complications: "REINS"</p>
-                            <p className="text-sm text-blue-800">Retinopathy, Erectile dysfunction, Infection, Neuropathy, Stroke/CVD</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">DKA Management: "INSULIN"</p>
-                            <p className="text-sm text-blue-800">IV fluids, Normal saline, Serum glucose, Urea/electrolytes, Labs, IV insulin, Nursing care</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Thyroid Function: "T3-T4-TSH"</p>
-                            <p className="text-sm text-blue-800">High TSH + Low T4 = Hypothyroid; Low TSH + High T4 = Hyperthyroid</p>
-                          </div>
-                        </>
-                      )}
-
-                      {/* Gastroenterology Mnemonics */}
-                      {currentQuestion.category?.toLowerCase().includes('gastro') && (
-                        <>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">IBD vs IBS: "CROWS vs DOVES"</p>
-                            <p className="text-sm text-blue-800">IBD: Chronic, Rectal bleeding, Obstruction, Weight loss, Systemic symptoms</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Liver Function: "ALT-AST-ALP"</p>
-                            <p className="text-sm text-blue-800">ALT/AST raised = hepatocellular; ALP raised = cholestatic pattern</p>
-                          </div>
-                        </>
-                      )}
-
-                      {/* Neurology Mnemonics */}
-                      {currentQuestion.category?.toLowerCase().includes('neuro') && (
-                        <>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Stroke Assessment: "FAST-BEFAST"</p>
-                            <p className="text-sm text-blue-800">Balance, Eyes, Face, Arms, Speech, Time + Blood pressure, Emergency response</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Seizure Types: "TONIC-CLONIC"</p>
-                            <p className="text-sm text-blue-800">Tonic (stiffening) → Clonic (jerking) → Post-ictal confusion</p>
-                          </div>
-                        </>
-                      )}
-
-                      {/* General Medicine Mnemonics */}
-                      {(!currentQuestion.category || 
-                        (!currentQuestion.category.toLowerCase().includes('cardio') && 
-                         !currentQuestion.category.toLowerCase().includes('respiratory') && 
-                         !currentQuestion.category.toLowerCase().includes('diabetes') && 
-                         !currentQuestion.category.toLowerCase().includes('endocrin') && 
-                         !currentQuestion.category.toLowerCase().includes('gastro') && 
-                         !currentQuestion.category.toLowerCase().includes('neuro'))) && (
-                        <>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Clinical Assessment: "SOCRATES"</p>
-                            <p className="text-sm text-blue-800">Site, Onset, Character, Radiation, Associated symptoms, Timing, Exacerbating factors, Severity</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Drug History: "WIPE"</p>
-                            <p className="text-sm text-blue-800">What drugs, Including OTC/herbal, Past reactions, Effectiveness of current treatment</p>
-                          </div>
-                          <div className="bg-white border border-blue-200 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-blue-900 mb-1">Examination Approach: "IPPA"</p>
-                            <p className="text-sm text-blue-800">Inspection → Palpation → Percussion → Auscultation</p>
-                          </div>
-                        </>
-                      )}
+                      {aiStudyTips.mnemonics.map((m, i) => (
+                        <div key={i} className="bg-white border border-blue-200 rounded-lg p-3 border-l-4 border-l-yellow-400">
+                          <p className="text-sm font-semibold text-blue-900 mb-1">{m.title}</p>
+                          <p className="text-sm text-blue-800 leading-relaxed">{m.expansion}</p>
+                        </div>
+                      ))}
                     </div>
+                  )}
+
+                  {/* Shown only if AI is unavailable and tips never loaded */}
+                  {!aiStudyTipsLoading && (!aiStudyTips || aiStudyTips.mnemonics.length === 0) && (
+                    <p className="text-xs text-blue-500 italic">
+                      Question-specific mnemonics will appear here once the AI generates them.
+                    </p>
                   )}
                 </div>
               </div>
