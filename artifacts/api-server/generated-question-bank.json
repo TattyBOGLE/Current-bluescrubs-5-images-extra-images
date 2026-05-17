@@ -164,7 +164,7 @@
   {
     "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
     "options": [
-      "Methimazole",
+      "Carbimazole",
       "Levothyroxine",
       "Radioactive iodine therapy",
       "Thyroidectomy",
@@ -299,7 +299,7 @@
   {
     "question": "A 34-year-old male presents with fever, rash, and arthralgia. He recently returned from a trip to Brazil. Dengue fever is suspected. What is the most appropriate management?",
     "options": [
-      "Acetaminophen",
+      "Paracetamol",
       "Ibuprofen",
       "Aspirin",
       "Antibiotics",
@@ -307,7 +307,7 @@
     ],
     "answer": 0,
     "explanation": {
-      "A": "Acetaminophen is recommended for fever and pain in dengue.",
+      "A": "Paracetamol is recommended for fever and pain in dengue.",
       "B": "NSAIDs can increase bleeding risk in dengue.",
       "C": "Aspirin is contraindicated due to bleeding risk.",
       "D": "Antibiotics are not effective against viral infections.",
@@ -596,7 +596,7 @@
   {
     "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
     "options": [
-      "Methimazole",
+      "Carbimazole",
       "Levothyroxine",
       "Radioactive iodine therapy",
       "Thyroidectomy",
@@ -812,7 +812,7 @@
   {
     "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
     "options": [
-      "Methimazole",
+      "Carbimazole",
       "Levothyroxine",
       "Radioactive iodine therapy",
       "Thyroidectomy",
@@ -1647,7 +1647,7 @@
       "Liothyronine",
       "Levothyroxine",
       "Radioiodine therapy",
-      "Methimazole",
+      "Carbimazole",
       "Propylthiouracil"
     ],
     "answer": 1,
@@ -1655,7 +1655,7 @@
       "A": "Liothyronine is not typically first-line for hypothyroidism.",
       "B": "Levothyroxine is the standard treatment for hypothyroidism.",
       "C": "Radioiodine is used for hyperthyroidism.",
-      "D": "Methimazole is used for hyperthyroidism, not hypothyroidism.",
+      "D": "Carbimazole is used for hyperthyroidism, not hypothyroidism.",
       "E": "Propylthiouracil is used for hyperthyroidism, not hypothyroidism."
     },
     "mnemonic": "Hypo-Levo",
@@ -1988,13 +1988,13 @@
     "question": "A 28-year-old woman presents with weight loss, palpitations, and tremors. Her TSH is suppressed, and free T4 is elevated. What is the most appropriate initial treatment?",
     "options": [
       "Radioactive iodine",
-      "Methimazole",
+      "Carbimazole",
       "Propranolol",
       "Thyroidectomy",
       "Levothyroxine"
     ],
     "answer": 1,
-    "explanation": "The correct answer is methimazole. According to NICE guidelines, antithyroid drugs like methimazole are the first-line treatment for hyperthyroidism to control hormone production. Propranolol can be used to manage symptoms such as palpitations and tremors but does not address the underlying hyperthyroidism. Radioactive iodine and thyroidectomy are definitive treatments but are not used initially. Levothyroxine is used for hypothyroidism, not hyperthyroidism. Remember 'MAP' for hyperthyroidism management: Methimazole, Antithyroid drug, Propranolol for symptoms.",
+    "explanation": "The correct answer is carbimazole. According to NICE guidelines, antithyroid drugs like carbimazole are the first-line treatment for hyperthyroidism to control hormone production. Propranolol can be used to manage symptoms such as palpitations and tremors but does not address the underlying hyperthyroidism. Radioactive iodine and thyroidectomy are definitive treatments but are not used initially. Levothyroxine is used for hypothyroidism, not hyperthyroidism. Remember 'MAP' for hyperthyroidism management: Carbimazole, Antithyroid drug, Propranolol for symptoms.",
     "mnemonic": "MAP",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng145",

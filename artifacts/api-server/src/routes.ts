@@ -83,6 +83,21 @@ CRITICAL Requirements:
 - Use realistic patient presentations with specific vital signs, investigation results
 - Each question must be unique and clinically accurate
 
+UK DRUG NAMES — MANDATORY (never use the US equivalent):
+- Carbimazole (NOT methimazole) — first-line antithyroid drug in the UK
+- Paracetamol (NOT acetaminophen)
+- Adrenaline (NOT epinephrine) — e.g. adrenaline auto-injector, adrenaline in anaphylaxis/ALS
+- Noradrenaline (NOT norepinephrine) — vasopressor in ITU
+- Salbutamol (NOT albuterol) — SABA inhaler
+- Lignocaine (NOT lidocaine) — used interchangeably in UK but lignocaine is preferred in older guidelines
+- Frusemide OR furosemide (both acceptable in UK)
+- Ibuprofen, not 'NSAID brand names' in options
+- Amoxicillin (NOT amoxicillin — same spelling; just ensure it is spelled correctly)
+- Morphine (NOT oxycodone as first-line — morphine is UK standard)
+- Warfarin for anticoagulation where appropriate (not solely relying on DOACs)
+- All doses must be in metric (mg, mcg, mmol/L — NOT grains, oz, mEq)
+- Blood pressure and lab values must use UK reference ranges (e.g. K+ 3.5–5.0 mmol/L, creatinine in µmol/L)
+
 For ${displayCategory}, focus on core topics like:
 ${getCategoryTopics(category)}
 
