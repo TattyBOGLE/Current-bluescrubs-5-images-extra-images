@@ -133,5 +133,302 @@
     "category": "Cardiovascular",
     "difficulty": "mixed",
     "topic": "Heart Failure"
+  },
+  {
+    "question": "A 65-year-old male presents with a sudden onset of severe headache and neck stiffness. His blood pressure is 190/110 mmHg. What is the most appropriate initial investigation?",
+    "options": [
+      "CT scan of the head",
+      "MRI of the brain",
+      "Lumbar puncture",
+      "Carotid Doppler ultrasound",
+      "EEG"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
+      "B": "MRI is useful but not the initial choice in acute settings.",
+      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
+      "D": "Not relevant to the acute presentation.",
+      "E": "Not indicated for headache and neck stiffness."
+    },
+    "mnemonic": "CT for Crisis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng127",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_0",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology"
+  },
+  {
+    "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
+    "options": [
+      "Methimazole",
+      "Levothyroxine",
+      "Radioactive iodine therapy",
+      "Thyroidectomy",
+      "Beta-blockers"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Used for hyperthyroidism, not indicated here.",
+      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
+      "C": "Used for hyperthyroidism, not indicated here.",
+      "D": "Considered in certain cases of hyperthyroidism.",
+      "E": "Used symptomatically in hyperthyroidism."
+    },
+    "mnemonic": "Levothyroxine for Low",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_1",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Endocrinology"
+  },
+  {
+    "question": "A 30-year-old male presents with abdominal pain and jaundice. Blood tests show elevated bilirubin and alkaline phosphatase. What is the most appropriate initial imaging?",
+    "options": [
+      "Abdominal ultrasound",
+      "CT scan of the abdomen",
+      "MRI of the liver",
+      "ERCP",
+      "Liver biopsy"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
+      "B": "CT is useful but usually not the first step for jaundice workup.",
+      "C": "MRI is more detailed but not typically first-line.",
+      "D": "Used for therapeutic as well as diagnostic purposes.",
+      "E": "Invasive and not first-line for initial evaluation."
+    },
+    "mnemonic": "U for Ultrasound in Uro",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng104",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_2",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology"
+  },
+  {
+    "question": "A 45-year-old female presents with a 2-week history of productive cough and fever. Chest X-ray shows right lower lobe consolidation. What is the most appropriate antibiotic therapy?",
+    "options": [
+      "Amoxicillin",
+      "Ciprofloxacin",
+      "Metronidazole",
+      "Erythromycin",
+      "Vancomycin"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Amoxicillin is commonly used for community-acquired pneumonia.",
+      "B": "Ciprofloxacin is not first-line for pneumonia.",
+      "C": "Metronidazole targets anaerobes, not typically used in pneumonia.",
+      "D": "Erythromycin can be used if there is penicillin allergy.",
+      "E": "Vancomycin is used for MRSA, not typical cases."
+    },
+    "mnemonic": "Amoxicillin for Airway",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng138",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_3",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Respiratory"
+  },
+  {
+    "question": "A 22-year-old female presents with polyuria, polydipsia, and weight loss. Blood glucose is 22 mmol/L. What is the most appropriate immediate management?",
+    "options": [
+      "Metformin",
+      "Insulin",
+      "Sulfonylureas",
+      "Thiazolidinediones",
+      "Dietary modification"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Metformin is not appropriate for acute management of hyperglycemia.",
+      "B": "Insulin is necessary for immediate control of high blood glucose.",
+      "C": "Sulfonylureas are not used in acute scenarios.",
+      "D": "Thiazolidinediones are not used in acute management.",
+      "E": "Dietary changes are part of long-term management."
+    },
+    "mnemonic": "Insulin for Immediate",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng17",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_4",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Diabetes"
+  },
+  {
+    "question": "A 55-year-old male presents with chest pain and shortness of breath. ECG shows ST-segment elevation in leads II, III, and aVF. What is the most appropriate immediate management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "Thrombolysis",
+      "Beta-blocker",
+      "Nitrate infusion",
+      "Urgent PCI"
+    ],
+    "answer": 4,
+    "explanation": {
+      "A": "Antiplatelets are part of management but not immediate intervention.",
+      "B": "Thrombolysis is an option if PCI is not available.",
+      "C": "Used in management but not immediate intervention for STEMI.",
+      "D": "Used symptomatically but not as immediate definitive management.",
+      "E": "Urgent PCI is the most effective immediate management for STEMI."
+    },
+    "mnemonic": "PCI for Prompt Coronary Intervention",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng94",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_5",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology"
+  },
+  {
+    "question": "A 34-year-old male presents with fever, rash, and arthralgia. He recently returned from a trip to Brazil. Dengue fever is suspected. What is the most appropriate management?",
+    "options": [
+      "Acetaminophen",
+      "Ibuprofen",
+      "Aspirin",
+      "Antibiotics",
+      "Corticosteroids"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Acetaminophen is recommended for fever and pain in dengue.",
+      "B": "NSAIDs can increase bleeding risk in dengue.",
+      "C": "Aspirin is contraindicated due to bleeding risk.",
+      "D": "Antibiotics are not effective against viral infections.",
+      "E": "Steroids are not indicated in uncomplicated dengue."
+    },
+    "mnemonic": "Tylenol for Tropics",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_6",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Infectious Diseases"
+  },
+  {
+    "question": "A 70-year-old male with a history of atrial fibrillation presents with sudden onset weakness in his right arm and leg. What is the most appropriate initial investigation?",
+    "options": [
+      "CT scan of the brain",
+      "MRI of the brain",
+      "Carotid Doppler ultrasound",
+      "Electroencephalogram",
+      "Chest X-ray"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "CT scan is the initial investigation to rule out hemorrhagic stroke.",
+      "B": "MRI provides more detail but is not usually the first step.",
+      "C": "Carotid imaging is useful but not first-line in acute stroke.",
+      "D": "EEG is not indicated in acute stroke settings.",
+      "E": "Chest X-ray is not relevant to the acute neurological presentation."
+    },
+    "mnemonic": "CT for Clot Check",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_7",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology"
+  },
+  {
+    "question": "A 60-year-old female with a history of COPD presents with increasing dyspnea and cough. Her oxygen saturation is 88% on room air. What is the most appropriate initial management?",
+    "options": [
+      "Oral corticosteroids",
+      "High-flow oxygen therapy",
+      "Bronchodilator nebulization",
+      "Antibiotic therapy",
+      "Intravenous fluids"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Steroids are used but not the immediate first step.",
+      "B": "High-flow oxygen can suppress respiratory drive in COPD patients.",
+      "C": "Bronchodilator nebulization provides immediate relief.",
+      "D": "Antibiotics may be needed but not the immediate action.",
+      "E": "IV fluids are not indicated as immediate management for respiratory distress."
+    },
+    "mnemonic": "Nebulizers for Narrow Airways",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029617037_8",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Respiratory"
+  },
+  {
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset of severe chest pain radiating to his back. Blood pressure is 180/90 mmHg, and heart rate is 110 bpm. What is the most appropriate initial investigation?",
+    "options": [
+      "Chest X-ray",
+      "CT Angiography",
+      "Echocardiogram",
+      "Electrocardiogram",
+      "Troponin I levels"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Chest X-ray may show mediastinal widening but is not the most sensitive test.",
+      "B": "CT Angiography is the investigation of choice for suspected aortic dissection.",
+      "C": "Echocardiogram can provide information on cardiac function but not for initial diagnosis of aortic dissection.",
+      "D": "ECG can rule out myocardial infarction but is not specific for aortic dissection.",
+      "E": "Troponin is useful for myocardial infarction, not for diagnosing aortic dissection."
+    },
+    "mnemonic": "CT for Crisis Tear (CT for Aortic Dissection)",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_cardiovascular_1779029717199_0",
+    "category": "Cardiovascular",
+    "difficulty": "mixed",
+    "topic": "Aortic Dissection"
+  },
+  {
+    "question": "A 72-year-old female with a history of atrial fibrillation presents with a 2-day history of left leg pain and swelling. Doppler ultrasound confirms a deep vein thrombosis. What is the most appropriate initial treatment?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Low-molecular-weight heparin",
+      "Thrombolysis",
+      "Compression stockings"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Aspirin is not effective for acute management of DVT.",
+      "B": "Warfarin is used for long-term anticoagulation but not for initial treatment.",
+      "C": "Low-molecular-weight heparin is the initial treatment of choice for DVT.",
+      "D": "Thrombolysis is reserved for massive DVT or pulmonary embolism with hemodynamic instability.",
+      "E": "Compression stockings are used as adjunctive therapy, not initial treatment."
+    },
+    "mnemonic": "Heparin for Help (Heparin for acute DVT)",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_cardiovascular_1779029717199_1",
+    "category": "Cardiovascular",
+    "difficulty": "mixed",
+    "topic": "Deep Vein Thrombosis"
   }
 ]
