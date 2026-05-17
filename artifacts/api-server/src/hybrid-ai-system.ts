@@ -106,7 +106,7 @@ export class HybridAISystem {
   private async generateQuestionWithAI(category: string, count: number): Promise<any[]> {
     if (this.config.aiProvider === 'openai') {
       const { default: OpenAI } = await import('openai');
-      const openai = new OpenAI({ apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL });
 
       const prompt = `Generate ${count} high-quality PLAB 1 medical exam questions for ${category} specialty.
@@ -147,7 +147,7 @@ Format as JSON array with: question, options, answer (index), explanation (objec
   private async generateOSCEWithAI(stationType: string, specialty: string): Promise<any> {
     if (this.config.aiProvider === 'openai') {
       const { default: OpenAI } = await import('openai');
-      const openai = new OpenAI({ apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL });
 
       const prompt = `Generate 1 authentic PLAB 2 OSCE station for ${specialty} specialty, ${stationType} type.
@@ -202,7 +202,7 @@ Return only valid JSON.`;
   private async analyzeVideoWithAI(stationTitle: string, stationCategory: string, learningObjectives: string[], duration: number): Promise<any> {
     if (this.config.aiProvider === 'openai') {
       const { default: OpenAI } = await import('openai');
-      const openai = new OpenAI({ apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL });
 
       const prompt = `Analyze this PLAB 2 OSCE performance:
@@ -258,7 +258,7 @@ Return JSON format:
   private async generateFeedbackWithAI(topic: string, userResponse: string): Promise<string> {
     if (this.config.aiProvider === 'openai') {
       const { default: OpenAI } = await import('openai');
-      const openai = new OpenAI({ apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL });
 
       const prompt = `Provide educational feedback for this medical scenario response:

@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 import fs from 'fs';
 
 const openai = new OpenAI({
-  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY || 'placeholder-configure-openai-key',
+  apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY || 'placeholder-configure-openai-key',
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
 });
 
