@@ -145,29 +145,116 @@ const REFERENCE_URL_MAP: { match: RegExp; url: string }[] = [
   { match: /Foundation Programme/i, url: 'https://foundationprogramme.nhs.uk/curriculum/' },
 ];
 
-const getReferenceUrl = (text: string): string | null => {
+// ── Dynamic link builder ─────────────────────────────────────────────────────
+// Strips resource names and filler words to isolate the clinical topic.
+function extractTopicFromLabel(text: string): string {
+  return text
+    .replace(/\b(NICE|CKS|BNF|GMC|SIGN|RCGP|ESC|BTS|BSG|RCOG|ADA|MLA)\b/gi, '')
+    .replace(/\b(Guidelines?|Guidance|Clinical Knowledge Summaries?|British National Formulary|Good Medical Practice|Content Map|Medical Licensing Assessment|Foundation Programme Curriculum?|European Society of Cardiology|British Thoracic Society|British Society of Gastroenterology|Royal College of Obstetricians and Gynaecologists?|Royal College of General Practitioners|American Diabetes Association|Scottish Intercollegiate Guidelines? Network|Scottish|evidence.based|recommendations?|standards|evidence|practice)\b/gi, '')
+    .replace(/[-—–]+/g, ' ')
+    .replace(/[()[\]{};,./\\]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function toQ(s: string) { return encodeURIComponent(s.trim()); }
+function toSlug(s: string) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+
+interface RefLink { url: string; label: string }
+
+function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   if (!text) return null;
-  for (const entry of REFERENCE_URL_MAP) {
-    if (entry.match.test(text)) return entry.url;
+  const rawTopic = (contextTopic && contextTopic.length > 2)
+    ? contextTopic
+    : extractTopicFromLabel(text);
+  const hasT = rawTopic.length > 2;
+  const q = toQ(rawTopic);
+  const slug = toSlug(rawTopic);
+
+  if (/\bNICE\b/i.test(text)) {
+    return {
+      url: hasT ? `https://www.nice.org.uk/search#q=${q}&ndt=Guidance` : 'https://www.nice.org.uk/guidance',
+      label: hasT ? `NICE — ${rawTopic}` : 'NICE Guidelines',
+    };
+  }
+  if (/\bCKS\b|Clinical Knowledge Summaries/i.test(text)) {
+    return {
+      url: hasT ? `https://cks.nice.org.uk/topics/${slug}/` : 'https://cks.nice.org.uk/topics',
+      label: hasT ? `CKS — ${rawTopic}` : 'CKS Clinical Knowledge Summaries',
+    };
+  }
+  if (/\bBNF\b|British National Formulary/i.test(text)) {
+    return {
+      url: hasT ? `https://bnf.nice.org.uk/search/?q=${q}` : 'https://bnf.nice.org.uk/treatment-summaries/',
+      label: hasT ? `BNF — ${rawTopic}` : 'BNF — British National Formulary',
+    };
+  }
+  if (/\bGMC\b|Good Medical Practice/i.test(text)) {
+    if (/consent/i.test(text)) return { url: 'https://www.gmc-uk.org/ethical-guidance/ethical-guidance-for-doctors/consent', label: 'GMC — Consent' };
+    if (/child|0.18/i.test(text)) return { url: 'https://www.gmc-uk.org/ethical-guidance/ethical-guidance-for-doctors/0-18-years', label: 'GMC — 0-18 Years' };
+    return {
+      url: hasT ? `https://www.gmc-uk.org/search#q=${q}` : 'https://www.gmc-uk.org/professional-standards/professional-standards-for-doctors/good-medical-practice',
+      label: hasT ? `GMC — ${rawTopic}` : 'GMC Good Medical Practice',
+    };
+  }
+  if (/\bSIGN\b|Scottish Intercollegiate/i.test(text)) {
+    return {
+      url: hasT ? `https://www.sign.ac.uk/search/?q=${q}` : 'https://www.sign.ac.uk/our-guidelines/',
+      label: hasT ? `SIGN — ${rawTopic}` : 'SIGN Guidelines',
+    };
+  }
+  if (/\bRCGP\b|Royal College of General Practitioners/i.test(text)) {
+    return {
+      url: hasT ? `https://cks.nice.org.uk/topics/${slug}/` : 'https://cks.nice.org.uk/topics',
+      label: hasT ? `CKS (RCGP) — ${rawTopic}` : 'CKS — RCGP-aligned Guidelines',
+    };
+  }
+  if (/\bESC\b|European Society of Cardiology/i.test(text)) {
+    if (/atrial fibrillation|\bAF\b/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Atrial-Fibrillation-Guidelines', label: 'ESC — Atrial Fibrillation' };
+    if (/STEMI|acute coronary/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Acute-Coronary-Syndromes-STEMI-Guidelines', label: 'ESC — ACS / STEMI' };
+    if (/dyslipidaemia|lipid|cholesterol/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias', label: 'ESC — Dyslipidaemia' };
+    return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines', label: hasT ? `ESC — ${rawTopic}` : 'ESC Clinical Practice Guidelines' };
+  }
+  if (/\bBTS\b|British Thoracic Society/i.test(text)) {
+    if (/asthma/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/asthma/', label: 'BTS — Asthma' };
+    if (/COPD|obstructive/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/copd/', label: 'BTS — COPD' };
+    return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/', label: hasT ? `BTS — ${rawTopic}` : 'BTS Guidelines' };
+  }
+  if (/\bBSG\b|British Society of Gastroenterology/i.test(text)) {
+    return { url: 'https://www.bsg.org.uk/clinical-resource/guidelines/', label: hasT ? `BSG — ${rawTopic}` : 'BSG Clinical Guidelines' };
+  }
+  if (/\bRCOG\b|Royal College of Obstetricians/i.test(text)) {
+    return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/', label: hasT ? `RCOG — ${rawTopic}` : 'RCOG Green-top Guidelines' };
+  }
+  if (/\bADA\b|American Diabetes Association/i.test(text)) {
+    return { url: `https://www.nice.org.uk/search#q=${toQ('diabetes')}&ndt=Guidance`, label: 'NICE — Diabetes (ADA-aligned)' };
+  }
+  if (/\bMLA\b|Medical Licensing Assessment/i.test(text)) {
+    return { url: 'https://www.gmc-uk.org/education/standards-guidance-and-curricula/curricula/medical-licensing-assessment', label: 'GMC MLA Content Map' };
+  }
+  if (/Foundation Programme/i.test(text)) {
+    return { url: 'https://foundationprogramme.nhs.uk/curriculum/', label: 'Foundation Programme Curriculum' };
   }
   return null;
-};
+}
 
-const ReferenceLink = ({ text }: { text: string }) => {
-  const url = getReferenceUrl(text);
-  if (!url) {
-    return <p className="text-blue-700">• {text}</p>;
-  }
+// Backwards-compat wrapper used by inline reference rendering
+const getReferenceUrl = (text: string, topic?: string): string | null =>
+  buildDynamicLink(text, topic)?.url ?? null;
+
+const ReferenceLink = ({ text, topic }: { text: string; topic?: string }) => {
+  const link = buildDynamicLink(text, topic);
+  if (!link) return <p className="text-blue-700">• {text}</p>;
   return (
     <p className="text-blue-700">
       <span aria-hidden="true">• </span>
       <a
-        href={url}
+        href={link.url}
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-700 hover:text-blue-900 underline decoration-blue-400 hover:decoration-blue-700 underline-offset-2 inline-flex items-baseline gap-1"
       >
-        {text}
+        {link.label}
         <ExternalLink className="w-3 h-3 self-center" aria-hidden="true" />
       </a>
     </p>
@@ -2914,7 +3001,7 @@ export default function PLAB1New() {
                         })
                         .map((reference: any, index: number) => {
                           const refTitle = typeof reference === 'string' ? reference : reference.title || reference.text || '';
-                          const refUrl = (typeof reference === 'object' && reference.url) || getReferenceUrl(refTitle);
+                          const refUrl = (typeof reference === 'object' && reference.url) || getReferenceUrl(refTitle, currentQuestion.topic || currentQuestion.category);
                           return (
                             <div key={index} className="bg-white border border-blue-200 rounded-lg p-3 mb-3">
                               <p className="text-blue-700 leading-relaxed mb-3 text-sm">{refTitle}</p>
@@ -2935,69 +3022,62 @@ export default function PLAB1New() {
                     ) : (
                       <div className="space-y-2">
                         {/* Specialty-specific references with comprehensive guidelines */}
-                        {currentQuestion.category?.toLowerCase().includes('cardio') && (
-                          <>
-                            <ReferenceLink text="ESC Guidelines - European Society of Cardiology evidence-based recommendations" />
-                            <ReferenceLink text="NICE Guidelines - Cardiovascular disease prevention and management" />
-                            <ReferenceLink text="SIGN Guidelines - Scottish cardiovascular evidence and recommendations" />
-                            <ReferenceLink text="BNF - British National Formulary for cardiac medications" />
-                            <ReferenceLink text="MLA Content Map - Applied Medical Sciences: Cardiovascular pathophysiology" />
-                            <ReferenceLink text="Foundation Programme - Acute care and emergency medicine competencies" />
-                          </>
-                        )}
-                        {currentQuestion.category?.toLowerCase().includes('respiratory') && (
-                          <>
-                            <ReferenceLink text="BTS Guidelines - British Thoracic Society respiratory standards" />
-                            <ReferenceLink text="NICE Guidelines - Asthma, COPD and respiratory disease management" />
-                            <ReferenceLink text="SIGN Guidelines - Scottish respiratory evidence and recommendations" />
-                            <ReferenceLink text="BNF - British National Formulary for respiratory medications" />
-                            <ReferenceLink text="MLA Content Map - Clinical Skills: Respiratory examination and procedures" />
-                            <ReferenceLink text="Foundation Programme - Safe prescribing and therapeutics" />
-                          </>
-                        )}
-                        {(currentQuestion.category?.toLowerCase().includes('diabetes') || 
-                          currentQuestion.category?.toLowerCase().includes('endocrin')) && (
-                          <>
-                            <ReferenceLink text="ADA Guidelines - American Diabetes Association standards of care" />
-                            <ReferenceLink text="NICE Guidelines - Type 1 and Type 2 diabetes management" />
-                            <ReferenceLink text="SIGN Guidelines - Scottish diabetes evidence and recommendations" />
-                            <ReferenceLink text="BNF - British National Formulary for diabetes medications" />
-                            <ReferenceLink text="MLA Content Map - Applied Medical Sciences: Endocrine pathophysiology" />
-                            <ReferenceLink text="Foundation Programme - Quality improvement and patient safety" />
-                          </>
-                        )}
-                        {currentQuestion.category?.toLowerCase().includes('gastro') && (
-                          <>
-                            <ReferenceLink text="BSG Guidelines - British Society of Gastroenterology clinical standards" />
-                            <ReferenceLink text="NICE Guidelines - Gastrointestinal conditions and procedures" />
-                            <ReferenceLink text="SIGN Guidelines - Scottish GI evidence and recommendations" />
-                            <ReferenceLink text="BNF - British National Formulary for GI medications" />
-                            <ReferenceLink text="MLA Content Map - Clinical Skills: Abdominal examination techniques" />
-                            <ReferenceLink text="Foundation Programme - Infection prevention and antimicrobial stewardship" />
-                          </>
-                        )}
-                        {(currentQuestion.category?.toLowerCase().includes('obstetric') || 
-                          currentQuestion.category?.toLowerCase().includes('gynaecol')) && (
-                          <>
-                            <ReferenceLink text="RCOG Guidelines - Royal College of Obstetricians and Gynaecologists standards" />
-                            <ReferenceLink text="NICE Guidelines - Antenatal, intrapartum and postnatal care" />
-                            <ReferenceLink text="SIGN Guidelines - Scottish women's health evidence" />
-                            <ReferenceLink text="BNF - British National Formulary for women's health medications" />
-                            <ReferenceLink text="MLA Content Map - Professional Behaviour: Women's health communication" />
-                            <ReferenceLink text="Foundation Programme - Health inequalities and social determinants" />
-                          </>
-                        )}
-                        {/* Always show core UK medical references with MLA content map integration */}
-                        <>
-                          <ReferenceLink text="NICE Guidelines - Clinical evidence and recommendations" />
-                          <ReferenceLink text="CKS Clinical Knowledge Summaries - Practical primary care guidance" />
-                          <ReferenceLink text="BNF - British National Formulary for medications and prescribing" />
-                          <ReferenceLink text="GMC Good Medical Practice - Professional standards and ethics" />
-                          <ReferenceLink text="MLA Content Map - Applied Medical Sciences, Clinical Skills, Professional Behaviour" />
-                          <ReferenceLink text="Foundation Programme Curriculum - Acute care, safe prescribing, quality improvement" />
-                          <ReferenceLink text="RCGP Guidelines - Royal College of General Practitioners clinical standards" />
-                          <ReferenceLink text="SIGN Guidelines - Scottish Intercollegiate Guidelines Network evidence" />
-                        </>
+                        {(() => {
+                          const qTopic = currentQuestion.topic || currentQuestion.category || '';
+                          const cat = currentQuestion.category?.toLowerCase() || '';
+                          return (
+                            <>
+                              {cat.includes('cardio') && (
+                                <>
+                                  <ReferenceLink text="ESC Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="BNF" topic={qTopic} />
+                                  <ReferenceLink text="Foundation Programme" topic={qTopic} />
+                                </>
+                              )}
+                              {cat.includes('respiratory') && (
+                                <>
+                                  <ReferenceLink text="BTS Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="BNF" topic={qTopic} />
+                                </>
+                              )}
+                              {(cat.includes('diabetes') || cat.includes('endocrin')) && (
+                                <>
+                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="BNF" topic={qTopic} />
+                                  <ReferenceLink text="CKS Clinical Knowledge Summaries" topic={qTopic} />
+                                </>
+                              )}
+                              {cat.includes('gastro') && (
+                                <>
+                                  <ReferenceLink text="BSG Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="BNF" topic={qTopic} />
+                                </>
+                              )}
+                              {(cat.includes('obstetric') || cat.includes('gynaecol')) && (
+                                <>
+                                  <ReferenceLink text="RCOG Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
+                                  <ReferenceLink text="BNF" topic={qTopic} />
+                                </>
+                              )}
+                              {/* Core UK references — always shown, dynamically linked to the question topic */}
+                              <ReferenceLink text="NICE Guidelines" topic={qTopic} />
+                              <ReferenceLink text="CKS Clinical Knowledge Summaries" topic={qTopic} />
+                              <ReferenceLink text="BNF" topic={qTopic} />
+                              <ReferenceLink text="GMC Good Medical Practice" topic={qTopic} />
+                              <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
+                              <ReferenceLink text="Foundation Programme" />
+                            </>
+                          );
+                        })()}
                       </div>
                     )}
                     
