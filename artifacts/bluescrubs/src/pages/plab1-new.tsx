@@ -50,6 +50,8 @@ const NICE_GUIDELINE_MAP: Record<string, string> = {
   'vte': 'ng158',
   'pulmonary-embolism': 'ng158',
   'dvt': 'ng158',
+  'deep-vein-thrombosis': 'ng158',
+  'venous-thromboembolism': 'ng158',
   'asthma': 'ng80',
   'copd': 'ng115',
   'pneumonia': 'cg191',
@@ -189,6 +191,11 @@ const BNF_TREATMENT_MAP: Record<string, string> = {
   'hypertension': 'hypertension',
   'atrial-fibrillation': 'arrhythmias',
   'af': 'arrhythmias',
+  'dvt': 'anticoagulation',
+  'deep-vein-thrombosis': 'anticoagulation',
+  'venous-thromboembolism': 'anticoagulation',
+  'vte': 'anticoagulation',
+  'pulmonary-embolism': 'anticoagulation',
   'anticoagulants': 'anticoagulation',
   'statins': 'lipid-regulating-drugs',
   'lipids': 'lipid-regulating-drugs',
@@ -261,11 +268,37 @@ const CKS_SLUG_MAP: Record<string, string> = {
   'chronic-kidney-disease': 'chronic-kidney-disease',
   'anaphylaxis': 'anaphylaxis',
   'otitis-media': 'otitis-media-acute',
+  'dvt': 'deep-vein-thrombosis',
+  'deep-vein-thrombosis': 'deep-vein-thrombosis',
+  'venous-thromboembolism': 'deep-vein-thrombosis',
+  'vte': 'deep-vein-thrombosis',
+  'pulmonary-embolism': 'pulmonary-embolism',
+  'pe': 'pulmonary-embolism',
+  'meningitis': 'meningitis-bacterial',
+  'copd-exacerbation': 'chronic-obstructive-pulmonary-disease',
+  'chest-infection': 'chest-infections-adult',
+  'cellulitis': 'cellulitis-acute',
+  'back-pain': 'back-pain-low-without-radiculopathy',
+  'low-back-pain': 'back-pain-low-without-radiculopathy',
+  'knee-pain': 'knee-pain',
+  'shoulder-pain': 'shoulder-pain',
+  'chest-pain': 'chest-pain',
+  'headache': 'headache',
+  'dizziness': 'dizziness-vertigo',
+  'vertigo': 'dizziness-vertigo',
+  'palpitations': 'palpitations',
+  'syncope': 'syncope',
+  'tinnitus': 'tinnitus',
+  'alcohol': 'alcohol-problem-drinking',
+  'smoking-cessation': 'stop-smoking',
+  'obesity': 'obesity',
+  'palliative-care': 'palliative-cancer-care-pain',
 };
 
-// Strip action-word suffixes, return a normalised base slug used for all lookup tables
+// Strip action-word suffixes and parenthetical abbreviations, return a normalised base slug
 function toConditionSlug(topic: string): string {
   const stripped = topic
+    .replace(/\s*\([^)]*\)/g, '')                  // remove "(DVT)", "(COPD)", "(MI)", etc.
     .replace(/\b(management|diagnosis|recognition|treatment|exacerbation|prevention|care|overview|approach|assessment|investigation|workup|acute|chronic)\b/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
