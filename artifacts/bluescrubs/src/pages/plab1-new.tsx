@@ -3551,7 +3551,7 @@ export default function PLAB1New() {
       {sessionStarted && (
         <Button
           onClick={() => setShowAITutor(true)}
-          className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg z-50 flex items-center justify-center"
+          className="fixed bottom-24 right-4 w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg z-50 flex items-center justify-center"
           title="Ask AI Tutor"
         >
           <MessageCircle className="w-6 h-6 text-white" />
@@ -3561,7 +3561,7 @@ export default function PLAB1New() {
       {/* NICE NG136 Guide Floating Button - Always visible */}
       <Button
         onClick={() => setShowNiceGuide(true)}
-        className="fixed bottom-24 right-6 w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 shadow-lg z-50 flex items-center justify-center"
+        className="fixed bottom-40 right-4 w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 shadow-lg z-50 flex items-center justify-center"
         title="NICE NG136 + PLAB MCQ"
       >
         <FileText className="w-6 h-6 text-white" />
