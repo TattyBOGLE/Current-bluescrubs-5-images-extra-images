@@ -3110,8 +3110,8 @@ app.get("/api/test/questions", async (req, res) => {
                 description: "NHS guidance on heart attack management and treatment"
               },
               {
-                title: "ESC Guidelines",
-                url: "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines",
+                title: "ESC ACS/STEMI Guidelines",
+                url: "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Acute-Coronary-Syndromes-STEMI-Guidelines",
                 description: "European Society of Cardiology - STEMI management guidelines"
               },
               {
@@ -3208,9 +3208,9 @@ app.get("/api/test/questions", async (req, res) => {
                 description: "NHS guidance on pneumonia treatment and management"
               },
               {
-                title: "British Thoracic Society",
-                url: "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/",
-                description: "BTS guidelines for respiratory medicine"
+                title: "BTS Pneumonia Guidelines",
+                url: "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/pneumonia/",
+                description: "BTS guidelines for community-acquired pneumonia"
               },
               {
                 title: "PHE Respiratory Guidelines",
@@ -3453,9 +3453,9 @@ app.get("/api/test/questions", async (req, res) => {
                 description: "NHS gastrointestinal treatment protocols"
               },
               {
-                title: "BSG Guidelines",
-                url: "https://www.bsg.org.uk/clinical-guidance/",
-                description: "British Society of Gastroenterology clinical guidance"
+                title: "BSG GORD Guidelines",
+                url: "https://www.bsg.org.uk/clinical-guidance/oesophageal/",
+                description: "British Society of Gastroenterology - oesophageal and GORD guidance"
               },
               {
                 title: "CKS: Gastro-oesophageal Reflux Disease",
