@@ -1510,5 +1510,286 @@
     "category": "all",
     "difficulty": "intermediate",
     "topic": "Gastroenterology"
+  },
+  {
+    "question": "A 45-year-old male presents with sudden onset severe headache, neck stiffness, and photophobia. CT scan shows no abnormalities. What is the most appropriate next step in management?",
+    "options": [
+      "MRI of the brain",
+      "Lumbar puncture",
+      "Intravenous antibiotics",
+      "CT angiography",
+      "Urgent neurology referral"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "MRI may be considered later if diagnosis remains unclear.",
+      "B": "Lumbar puncture is indicated to rule out subarachnoid hemorrhage.",
+      "C": "Antibiotics are not indicated without evidence of infection.",
+      "D": "CT angiography is not the initial step after a normal CT scan.",
+      "E": "Referral is not immediate unless further intervention is required."
+    },
+    "mnemonic": "Headache-Neck-Lumbar",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg150"
+    },
+    "id": "generated_all_1779034113027_0",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology"
+  },
+  {
+    "question": "A 67-year-old female with a history of hypertension presents with sudden vision loss in the right eye. Fundoscopy reveals a pale retina with a cherry-red spot. What is the most likely diagnosis?",
+    "options": [
+      "Central retinal artery occlusion",
+      "Retinal detachment",
+      "Vitreous hemorrhage",
+      "Acute glaucoma",
+      "Age-related macular degeneration"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Characteristic pale retina with cherry-red spot indicates CRAO.",
+      "B": "Retinal detachment usually presents with visual field loss or shadow.",
+      "C": "Vitreous hemorrhage presents with floaters and blurred vision.",
+      "D": "Acute glaucoma involves eye pain and redness, not specific findings.",
+      "E": "AMD involves gradual loss, not sudden vision loss."
+    },
+    "mnemonic": "Cherry-CRAO",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng81"
+    },
+    "id": "generated_all_1779034113027_1",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Ophthalmology"
+  },
+  {
+    "question": "A 23-year-old female presents with a 3-day history of dysuria and frequency. Urinalysis shows nitrites and leukocytes. What is the most appropriate management?",
+    "options": [
+      "Ciprofloxacin",
+      "Nitrofurantoin",
+      "Trimethoprim",
+      "Amoxicillin",
+      "Cefalexin"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Ciprofloxacin is reserved for complicated infections.",
+      "B": "Nitrofurantoin is first-line for uncomplicated UTI in women.",
+      "C": "Trimethoprim can be used but resistance is an issue.",
+      "D": "Amoxicillin is not typically first choice due to resistance.",
+      "E": "Cefalexin is not first-line for simple UTIs."
+    },
+    "mnemonic": "Nitrate-Nitrofurantoin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng109"
+    },
+    "id": "generated_all_1779034113027_2",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Urology"
+  },
+  {
+    "question": "A 60-year-old male with a history of chronic alcohol use presents with confusion and ataxia. What is the most appropriate initial treatment?",
+    "options": [
+      "Thiamine",
+      "Diazepam",
+      "Glucose",
+      "Lorazepam",
+      "Haloperidol"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Thiamine is crucial in Wernicke's encephalopathy due to alcohol use.",
+      "B": "Diazepam is used for alcohol withdrawal but not for this condition.",
+      "C": "Glucose should not be given before thiamine.",
+      "D": "Lorazepam is used for withdrawal symptoms.",
+      "E": "Haloperidol is not used for acute Wernicke's encephalopathy."
+    },
+    "mnemonic": "Ataxia-Alcohol-Thiamine",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/qs11"
+    },
+    "id": "generated_all_1779034113027_3",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology"
+  },
+  {
+    "question": "A 70-year-old male presents with progressive shortness of breath and chronic productive cough. Spirometry shows FEV1/FVC ratio of 55%. What is the most appropriate management?",
+    "options": [
+      "Inhaled corticosteroids",
+      "Long-acting beta agonists",
+      "Short-acting anticholinergics",
+      "Oral corticosteroids",
+      "Pulmonary rehabilitation"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Inhaled corticosteroids are used in more severe or frequent exacerbations.",
+      "B": "LABAs are appropriate for moderate COPD to improve symptoms.",
+      "C": "Short-acting agents are for immediate symptom relief.",
+      "D": "Oral steroids are for acute exacerbations, not maintenance.",
+      "E": "Pulmonary rehab is part of comprehensive management but not first-line."
+    },
+    "mnemonic": "COPD-LABA",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115"
+    },
+    "id": "generated_all_1779034113027_4",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Respiratory"
+  },
+  {
+    "question": "A 55-year-old woman presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate initial treatment?",
+    "options": [
+      "Liothyronine",
+      "Levothyroxine",
+      "Radioiodine therapy",
+      "Methimazole",
+      "Propylthiouracil"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Liothyronine is not typically first-line for hypothyroidism.",
+      "B": "Levothyroxine is the standard treatment for hypothyroidism.",
+      "C": "Radioiodine is used for hyperthyroidism.",
+      "D": "Methimazole is used for hyperthyroidism, not hypothyroidism.",
+      "E": "Propylthiouracil is used for hyperthyroidism, not hypothyroidism."
+    },
+    "mnemonic": "Hypo-Levo",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145"
+    },
+    "id": "generated_all_1779034113027_5",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Endocrinology"
+  },
+  {
+    "question": "A 36-year-old male presents with chest pain and a pericardial friction rub is heard on auscultation. ECG shows widespread ST elevation. What is the most appropriate initial management?",
+    "options": [
+      "NSAIDs",
+      "Beta-blockers",
+      "ACE inhibitors",
+      "Aspirin and clopidogrel",
+      "Corticosteroids"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "NSAIDs are first-line for relieving pain in pericarditis.",
+      "B": "Beta-blockers are not indicated for pericarditis.",
+      "C": "ACE inhibitors are used for heart failure, not pericarditis.",
+      "D": "Aspirin and clopidogrel are for ACS, not pericarditis.",
+      "E": "Corticosteroids are reserved for refractory cases."
+    },
+    "mnemonic": "Pericarditis-NSAIDs",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg95"
+    },
+    "id": "generated_all_1779034113027_6",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology"
+  },
+  {
+    "question": "A 29-year-old female presents with abdominal pain, diarrhea, and weight loss. Colonoscopy reveals cobblestone mucosa. What is the most likely diagnosis?",
+    "options": [
+      "Ulcerative colitis",
+      "Crohn's disease",
+      "Irritable bowel syndrome",
+      "Diverticulitis",
+      "Coeliac disease"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Ulcerative colitis affects the colon with uniform inflammation.",
+      "B": "Cobblestone appearance is characteristic of Crohn's disease.",
+      "C": "IBS does not cause structural changes like cobblestone mucosa.",
+      "D": "Diverticulitis involves pouches, not cobblestone.",
+      "E": "Coeliac disease affects the small intestine, not colon with cobblestone."
+    },
+    "mnemonic": "Cobblestone-Crohn's",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng129"
+    },
+    "id": "generated_all_1779034113027_7",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology"
+  },
+  {
+    "question": "A 40-year-old male with a history of smoking presents with a persistent cough. Chest X-ray shows a solitary peripheral lung nodule. What is the most appropriate next step in management?",
+    "options": [
+      "Bronchoscopy",
+      "CT scan of the chest",
+      "Sputum cytology",
+      "PET scan",
+      "Transthoracic needle biopsy"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Bronchoscopy is used for central lesions, not peripheral.",
+      "B": "CT scan is crucial for further characterizing the nodule.",
+      "C": "Sputum cytology is less sensitive for peripheral lesions.",
+      "D": "PET scan is used for staging rather than initial assessment.",
+      "E": "Biopsy may follow after imaging confirms suspicious features."
+    },
+    "mnemonic": "Nodule-CT-Chest",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng122"
+    },
+    "id": "generated_all_1779034113027_8",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Respiratory"
+  },
+  {
+    "question": "A 50-year-old female presents with joint pain, morning stiffness, and a positive rheumatoid factor. What is the most appropriate initial treatment?",
+    "options": [
+      "Methotrexate",
+      "NSAIDs",
+      "Steroids",
+      "Hydroxychloroquine",
+      "Sulfasalazine"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Methotrexate is the first-line DMARD but NSAIDs are used for pain relief.",
+      "B": "NSAIDs are used initially for symptom control.",
+      "C": "Steroids are used for flare-ups, not first-line maintenance.",
+      "D": "Hydroxychloroquine is used in mild cases or as an adjunct.",
+      "E": "Sulfasalazine is another DMARD but not first choice."
+    },
+    "mnemonic": "Rheuma-NSAIDs",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100"
+    },
+    "id": "generated_all_1779034113027_9",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Rheumatology"
+  },
+  {
+    "id": "generated_respiratory_1779034334222_0",
+    "topic": "Pulmonary Embolism",
+    "category": "Respiratory",
+    "question": "A 45-year-old woman presents to the emergency department with sudden onset of pleuritic chest pain and shortness of breath. She has a history of recent long-haul flight two days ago. Her vital signs are: BP 110/70 mmHg, HR 110 bpm, RR 24/min, SpO2 92% on room air, and temperature 37.2°C. ECG shows sinus tachycardia. What is the most appropriate initial investigation to confirm the diagnosis?",
+    "options": [
+      "CT Pulmonary Angiography",
+      "D-dimer test",
+      "Ventilation-Perfusion (V/Q) scan",
+      "Chest X-ray",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is CT Pulmonary Angiography. In this scenario, the patient's presentation is highly suggestive of a pulmonary embolism (PE), given the acute onset of pleuritic chest pain, dyspnea, and recent immobility due to a long-haul flight. CT Pulmonary Angiography is the gold standard for diagnosing PE as it directly visualizes the pulmonary arteries and any emboli present. NICE guidelines recommend this as the first-line investigation in patients with a high clinical suspicion of PE. \n\nThe D-dimer test (Option B) is useful in ruling out PE when the clinical probability is low, but it is not confirmatory. A Ventilation-Perfusion scan (Option C) is an alternative when CT is contraindicated but less definitive. A Chest X-ray (Option D) is often done to rule out other pathologies but does not confirm PE. An Echocardiogram (Option E) can show right heart strain but is not diagnostic for PE. Remember, 'CT is the Key' for PE diagnosis.",
+    "mnemonic": "CT is the Key for PE",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/pulmonary-embolism/"
+    },
+    "difficulty": "mixed"
   }
 ]

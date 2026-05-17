@@ -76,27 +76,35 @@ async function generateMedicalQuestions(templates: any[], category: string, diff
 
     const prompt = `Generate ${count} high-quality PLAB 1 medical exam questions for ${displayCategory} specialty.
 
-Use these template questions as the EXACT format reference:
-${JSON.stringify(templates.slice(0, 2), null, 2)}
-
 CRITICAL Requirements:
-- Follow the exact JSON structure: id, topic, category, question, options (A-E), answer, explanation (object with A-E keys), mnemonic, links
 - Create authentic UK medical scenarios based on real clinical practice
-- Include verified NICE, CKS, NHS, BNF, or GMC guideline references in links object
+- Include verified NICE, CKS, NHS, BNF, or GMC guideline references
 - Questions must test clinical knowledge appropriate for PLAB 1 level
 - Use realistic patient presentations with specific vital signs, investigation results
-- Provide detailed explanations for each option (correct and incorrect)
-- Include memorable mnemonics
 - Each question must be unique and clinically accurate
 
 For ${displayCategory}, focus on core topics like:
 ${getCategoryTopics(category)}
 
-Return ONLY a valid JSON array with exactly ${count} questions. No additional text.`;
+Return ONLY a valid JSON array with exactly ${count} questions. Each question must follow this EXACT structure:
+{
+  "id": "unique_id",
+  "topic": "Specific Clinical Topic",
+  "category": "${displayCategory}",
+  "question": "Full clinical scenario question text",
+  "options": ["Option A text", "Option B text", "Option C text", "Option D text", "Option E text"],
+  "answer": 0,
+  "explanation": "DETAILED multi-paragraph explanation. First paragraph: explain WHY the correct answer is right, referencing specific clues from the stem (age, symptoms, signs, investigations) and the relevant UK guideline (NICE/CKS/BNF). Second paragraph: systematically explain why each wrong option is incorrect — what each would typically present with and why it doesn't fit this scenario. End with a clinical pearl or mnemonic. Minimum 150 words.",
+  "mnemonic": "A memorable mnemonic or clinical pearl",
+  "links": { "NICE": "https://www.nice.org.uk/...", "CKS": "https://cks.nice.org.uk/..." }
+}
+
+The "explanation" field MUST be a detailed string (not an object), minimum 150 words, covering correct answer rationale, wrong option reasoning, and UK guideline references.
+Return ONLY a valid JSON array. No additional text.`;
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o",
-      max_tokens: 4000,
+      max_tokens: 8000,
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7
     });
@@ -1128,7 +1136,7 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
         });
       }
 
-      if (!isAIEnabled() || !process.env.AI_INTEGRATIONS_OPENAI_API_KEY) {
+      if (!isAIEnabled() || (!process.env.OPENAI_API_KEY && !process.env.AI_INTEGRATIONS_OPENAI_API_KEY)) {
         return res.json(buildFallbackExplanation(question, options, correctIndex, selectedIndex, safeStored));
       }
 
