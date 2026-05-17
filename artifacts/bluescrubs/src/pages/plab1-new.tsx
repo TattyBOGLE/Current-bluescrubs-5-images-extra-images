@@ -3203,60 +3203,34 @@ export default function PLAB1New() {
                         })
                     ) : (
                       <div className="space-y-2">
-                        {/* Specialty-specific references with comprehensive guidelines */}
                         {(() => {
                           const qTopic = currentQuestion.topic || currentQuestion.category || '';
-                          const cat = currentQuestion.category?.toLowerCase() || '';
+                          const cat = (currentQuestion.category || '').toLowerCase();
+                          const topic = qTopic.toLowerCase();
+                          const isEthics = /ethics|consent|professionalism|communication|legal|capacity|safeguarding/i.test(cat + ' ' + topic);
                           return (
                             <>
+                              {/* Specialty-specific source — shown INSTEAD of duplicating below */}
                               {cat.includes('cardio') && (
-                                <>
-                                  <ReferenceLink text="ESC Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="BNF" topic={qTopic} />
-                                  <ReferenceLink text="Foundation Programme" topic={qTopic} />
-                                </>
+                                <ReferenceLink text="ESC Guidelines" topic={qTopic} />
                               )}
                               {cat.includes('respiratory') && (
-                                <>
-                                  <ReferenceLink text="BTS Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="BNF" topic={qTopic} />
-                                </>
-                              )}
-                              {(cat.includes('diabetes') || cat.includes('endocrin')) && (
-                                <>
-                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="BNF" topic={qTopic} />
-                                  <ReferenceLink text="CKS Clinical Knowledge Summaries" topic={qTopic} />
-                                </>
+                                <ReferenceLink text="BTS Guidelines" topic={qTopic} />
                               )}
                               {cat.includes('gastro') && (
-                                <>
-                                  <ReferenceLink text="BSG Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="BNF" topic={qTopic} />
-                                </>
+                                <ReferenceLink text="BSG Guidelines" topic={qTopic} />
                               )}
                               {(cat.includes('obstetric') || cat.includes('gynaecol')) && (
-                                <>
-                                  <ReferenceLink text="RCOG Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="NICE Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
-                                  <ReferenceLink text="BNF" topic={qTopic} />
-                                </>
+                                <ReferenceLink text="RCOG Guidelines" topic={qTopic} />
                               )}
-                              {/* Core UK references — always shown, dynamically linked to the question topic */}
+                              {/* Core PLAB 1 references — always relevant */}
                               <ReferenceLink text="NICE Guidelines" topic={qTopic} />
                               <ReferenceLink text="CKS Clinical Knowledge Summaries" topic={qTopic} />
                               <ReferenceLink text="BNF" topic={qTopic} />
-                              <ReferenceLink text="GMC Good Medical Practice" topic={qTopic} />
-                              <ReferenceLink text="SIGN Guidelines" topic={qTopic} />
-                              <ReferenceLink text="Foundation Programme" />
+                              {/* GMC only for ethics/consent/professional topics */}
+                              {isEthics && (
+                                <ReferenceLink text="GMC Good Medical Practice" topic={qTopic} />
+                              )}
                             </>
                           );
                         })()}
