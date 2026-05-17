@@ -62,7 +62,7 @@ const NICE_GUIDELINE_MAP: Record<string, string> = {
   'dvt': 'ng158',
   'deep-vein-thrombosis': 'ng158',
   'venous-thromboembolism': 'ng158',
-  'asthma': 'ng80',
+  'asthma': 'ng245',
   'copd': 'ng115',
   'pneumonia': 'cg191',
   'type-1-diabetes': 'ng17',

@@ -1829,7 +1829,7 @@
     "explanation": "The correct answer is to start oral corticosteroids. The scenario describes an acute asthma exacerbation, indicated by the significant drop in peak flow and frequent use of the rescue inhaler. NICE guidelines recommend oral corticosteroids for acute exacerbations to reduce airway inflammation. Increasing the dosage of salbutamol or adding a long-acting beta agonist is not appropriate in acute settings, as they do not address inflammation. Adding a leukotriene receptor antagonist is more for chronic control rather than acute management. Referral to pulmonology is not immediately necessary unless the patient fails to respond to initial treatment. Remember 'SOB' for acute asthma: Steroids, Oxygen, Beta-agonists.",
     "mnemonic": "SOB",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/ng80",
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
       "CKS": "https://cks.nice.org.uk/asthma"
     },
     "difficulty": "intermediate"
@@ -2060,7 +2060,7 @@
     "explanation": "The correct answer is to add a Beclometasone inhaler. NICE guidelines recommend adding a low-dose inhaled corticosteroid, such as beclometasone, when asthma symptoms are not controlled with a short-acting beta-agonist like salbutamol used more than twice a week. This helps reduce airway inflammation and improve symptom control.\nIncreasing the salbutamol dose is not recommended as it addresses symptoms rather than preventing them. Oral prednisolone is reserved for acute exacerbations and not for regular management. Montelukast, a leukotriene receptor antagonist, may be considered in specific cases but is not the first add-on treatment. Referral to a pulmonologist is unnecessary unless asthma is severe or poorly controlled despite optimal treatment.",
     "mnemonic": "Step up to Steroids when SABA is Spent.",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/ng80",
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
       "CKS": "https://cks.nice.org.uk/topics/asthma"
     },
     "difficulty": "intermediate"
@@ -2209,6 +2209,846 @@
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ta464",
       "CKS": "https://cks.nice.org.uk/topics/osteoporosis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_0",
+    "topic": "Hypertension",
+    "category": "all",
+    "question": "A 55-year-old man presents to the GP with a blood pressure of 160/100 mmHg on three separate occasions. He has no significant past medical history and is not on any medication. What is the most appropriate initial management according to NICE guidelines?",
+    "options": [
+      "Lifestyle modification",
+      "Start amlodipine",
+      "Start ramipril",
+      "Start bendroflumethiazide",
+      "Refer to a cardiologist"
+    ],
+    "answer": 2,
+    "explanation": "In this scenario, the patient is diagnosed with stage 2 hypertension, as his blood pressure readings are consistently above 150/90 mmHg. According to NICE guidelines (NG136), the first-line treatment for hypertension in patients under 55 years is an ACE inhibitor such as ramipril. Lifestyle modification is important but not sufficient as an initial treatment for stage 2 hypertension. Amlodipine is preferred in patients over 55 or those of African or Caribbean descent. Bendroflumethiazide is a thiazide-like diuretic that may be considered if the patient has contraindications to ACE inhibitors or calcium channel blockers. Referral to a cardiologist is not required for initial management.",
+    "mnemonic": "ACE for under 55",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 22-year-old female presents with worsening shortness of breath, wheezing, and tightness in her chest. She uses a salbutamol inhaler twice daily. What is the next step in management according to NICE guidelines?",
+    "options": [
+      "Increase salbutamol dosage",
+      "Add a low-dose inhaled corticosteroid",
+      "Prescribe oral corticosteroids",
+      "Refer to a specialist",
+      "Add a long-acting beta agonist"
+    ],
+    "answer": 1,
+    "explanation": "The patient is experiencing asthma symptoms more than twice a week, indicating poor control. NICE guidelines recommend adding a low-dose inhaled corticosteroid (ICS) as the next step in management if a patient is using a short-acting beta-agonist (SABA) like salbutamol more than twice a week. Increasing salbutamol dosage is not recommended as it does not address the underlying inflammation. Oral corticosteroids are reserved for acute exacerbations. Referral to a specialist is not necessary at this stage. Long-acting beta agonists (LABA) are considered only after an ICS has been added.",
+    "mnemonic": "SABA + ICS for asthma control",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old male with newly diagnosed type 2 diabetes has an HbA1c of 58 mmol/mol. According to NICE guidelines, what is the most appropriate initial pharmacological treatment?",
+    "options": [
+      "Lifestyle modification",
+      "Start metformin",
+      "Start gliclazide",
+      "Start insulin",
+      "Start sitagliptin"
+    ],
+    "answer": 1,
+    "explanation": "In newly diagnosed type 2 diabetes with an HbA1c above 48 mmol/mol, NICE guidelines recommend starting metformin in addition to lifestyle modifications. Metformin is the first-line pharmacological treatment unless contraindicated. Lifestyle modification alone is insufficient given the HbA1c level. Sulfonylureas like gliclazide are not first-line due to the risk of hypoglycaemia. Insulin is reserved for more severe cases or when oral medications are inadequate. Sitagliptin is a DPP-4 inhibitor used as an add-on therapy rather than initial treatment.",
+    "mnemonic": "Metformin first in type 2",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_3",
+    "topic": "Hyperthyroidism",
+    "category": "all",
+    "question": "A 30-year-old woman presents with weight loss, palpitations, and heat intolerance. Her thyroid function tests reveal suppressed TSH and elevated free T4. What is the first-line treatment?",
+    "options": [
+      "Carbimazole",
+      "Propylthiouracil",
+      "Radioactive iodine",
+      "Thyroidectomy",
+      "Beta blockers"
+    ],
+    "answer": 0,
+    "explanation": "The clinical presentation and thyroid function tests suggest hyperthyroidism. NICE guidelines recommend carbimazole as the first-line treatment for hyperthyroidism due to its efficacy in controlling hyperthyroid symptoms. Propylthiouracil is reserved for specific situations, such as first trimester pregnancy. Radioactive iodine and thyroidectomy are not first-line options but may be considered in severe or refractory cases. Beta blockers can be used to manage symptoms like palpitations but do not address the underlying hyperthyroidism.",
+    "mnemonic": "Carbimazole for hyper",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_4",
+    "topic": "Heart Failure Management",
+    "category": "all",
+    "question": "A 68-year-old male with a history of myocardial infarction presents with exertional dyspnoea and ankle swelling. Echocardiogram shows left ventricular ejection fraction of 35%. What is the first-line treatment according to NICE guidelines?",
+    "options": [
+      "ACE inhibitor",
+      "Beta blocker",
+      "Diuretic",
+      "Digoxin",
+      "ARB"
+    ],
+    "answer": 0,
+    "explanation": "The patient has heart failure with reduced ejection fraction (HFrEF). NICE guidelines recommend an ACE inhibitor such as ramipril as a first-line treatment to improve symptoms and reduce mortality. Beta blockers are also crucial in HFrEF but are typically introduced after ACE inhibitors. Diuretics are used for symptomatic relief of fluid overload but do not improve long-term outcomes. Digoxin is reserved for patients with atrial fibrillation or those who remain symptomatic despite optimal treatment. ARBs are alternatives for those intolerant to ACE inhibitors.",
+    "mnemonic": "ACE first in heart failure",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_5",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 58-year-old male with chest pain and elevated troponin levels is diagnosed with non-ST elevation myocardial infarction (NSTEMI). What is the most appropriate initial antithrombotic therapy?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "Aspirin and ticagrelor",
+      "Aspirin and warfarin",
+      "Low molecular weight heparin",
+      "Fondaparinux"
+    ],
+    "answer": 1,
+    "explanation": "For patients with NSTEMI, NICE guidelines recommend dual antiplatelet therapy with aspirin and ticagrelor as initial antithrombotic treatment. Ticagrelor has been shown to be more effective than clopidogrel in reducing cardiovascular events. Aspirin alone is not sufficient. Warfarin is not indicated for acute management of NSTEMI. Low molecular weight heparin or fondaparinux are used in conjunction with antiplatelet therapy but not as a standalone treatment.",
+    "mnemonic": "Aspirin + Ticagrelor for NSTEMI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_6",
+    "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "category": "all",
+    "question": "A 70-year-old male with a 40-pack-year smoking history presents with chronic cough and dyspnoea. Spirometry confirms COPD with an FEV1 of 60% predicted. What is the most appropriate first-line inhaler therapy?",
+    "options": [
+      "Short-acting beta agonist",
+      "Long-acting beta agonist",
+      "Inhaled corticosteroid",
+      "Short-acting muscarinic antagonist",
+      "Long-acting muscarinic antagonist"
+    ],
+    "answer": 4,
+    "explanation": "NICE guidelines recommend a long-acting muscarinic antagonist (LAMA) as the first-line treatment for patients with COPD who have persistent breathlessness or exercise limitation despite using a short-acting bronchodilator. A short-acting beta agonist like salbutamol is used for symptom relief but not as maintenance therapy. Long-acting beta agonists are typically added if symptoms persist despite LAMA. Inhaled corticosteroids are used in combination with LABAs for patients with frequent exacerbations. Short-acting muscarinic antagonists are not recommended as maintenance therapy.",
+    "mnemonic": "LAMA first for COPD control",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/chronic-obstructive-pulmonary-disease"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_7",
+    "topic": "Venous Thromboembolism (VTE) Prophylaxis",
+    "category": "all",
+    "question": "A 45-year-old woman is admitted for elective hip replacement surgery. She has no history of VTE. What is the recommended pharmacological prophylaxis?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Low molecular weight heparin",
+      "Direct oral anticoagulant",
+      "Fondaparinux"
+    ],
+    "answer": 2,
+    "explanation": "NICE guidelines recommend low molecular weight heparin (LMWH) for VTE prophylaxis in patients undergoing elective hip replacement surgery. LMWH is effective in reducing the risk of post-operative VTE. Aspirin is not recommended as sole prophylaxis in this setting. Warfarin is not used for immediate post-operative prophylaxis due to its delayed onset of action. Direct oral anticoagulants may be used but are not the first-line recommendation for this context. Fondaparinux is an alternative if LMWH is contraindicated.",
+    "mnemonic": "LMWH for surgery VTE prophylaxis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng89",
+      "CKS": "https://cks.nice.org.uk/topics/venous-thromboembolism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_8",
+    "topic": "Anaphylaxis Management",
+    "category": "all",
+    "question": "A 35-year-old man presents to A&E with sudden onset of wheezing, itching, and swelling of the lips after eating peanuts. What is the first-line treatment?",
+    "options": [
+      "Chlorphenamine",
+      "Hydrocortisone",
+      "Adrenaline",
+      "Salbutamol",
+      "Oxygen"
+    ],
+    "answer": 2,
+    "explanation": "The patient is experiencing anaphylaxis, a severe allergic reaction. The first-line treatment for anaphylaxis is adrenaline (epinephrine) administered intramuscularly, as it rapidly reverses airway and cardiovascular symptoms. Chlorphenamine and hydrocortisone are adjuncts but act too slowly to be used as first-line treatments. Salbutamol may help wheezing but does not address the systemic reaction. Oxygen supports respiratory function but does not treat the underlying anaphylaxis.",
+    "mnemonic": "Adrenaline first in anaphylaxis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng183",
+      "CKS": "https://cks.nice.org.uk/topics/anaphylaxis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041298976_9",
+    "topic": "Osteoporosis",
+    "category": "all",
+    "question": "A 68-year-old postmenopausal woman presents with a low-impact fracture. DEXA scan shows a T-score of -2.7. What is the most appropriate initial management?",
+    "options": [
+      "Calcium and vitamin D supplementation",
+      "Bisphosphonates",
+      "Denosumab",
+      "Hormone replacement therapy",
+      "Teriparatide"
+    ],
+    "answer": 1,
+    "explanation": "The patient has osteoporosis with a T-score indicating high fracture risk. NICE guidelines recommend bisphosphonates as the first-line treatment for postmenopausal osteoporosis to reduce fracture risk. Calcium and vitamin D are important but not sufficient alone. Denosumab is an alternative for those intolerant to bisphosphonates. Hormone replacement therapy is considered primarily for menopausal symptoms rather than osteoporosis. Teriparatide is reserved for severe cases or when other treatments fail.",
+    "mnemonic": "Bisphosphonates for bones",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng56",
+      "CKS": "https://cks.nice.org.uk/topics/osteoporosis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_0",
+    "topic": "Cardiology",
+    "category": "all",
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset chest pain radiating to his left arm. His blood pressure is 150/90 mmHg, heart rate is 100 bpm, and ECG shows ST elevation in leads II, III, and aVF. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin",
+      "Morphine",
+      "Salbutamol",
+      "Adrenaline",
+      "Carbimazole"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Aspirin'. In the case of an ST-elevation myocardial infarction (STEMI), the immediate management involves administering 300 mg of aspirin as it is an antiplatelet agent that helps prevent further clot formation. According to NICE guidelines, early administration of aspirin is crucial in acute coronary syndrome management. Morphine is used for pain control but does not address the immediate need to reduce clot formation. Salbutamol is a bronchodilator and not relevant here. Adrenaline is used in cardiac arrest situations, not in the initial management of STEMI. Carbimazole is an antithyroid drug and irrelevant in this context. Remember, 'MONA' (Morphine, Oxygen, Nitroglycerin, Aspirin) is a classic mnemonic for initial STEMI management, but aspirin is first for clot prevention.",
+    "mnemonic": "MONA",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_1",
+    "topic": "Endocrinology",
+    "category": "all",
+    "question": "A 35-year-old woman presents with weight loss, palpitations, and heat intolerance. Her TSH is suppressed and free T4 is elevated. What is the first-line treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Propranolol",
+      "Frusemide",
+      "Warfarin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Carbimazole'. This patient shows symptoms and lab results consistent with hyperthyroidism, likely due to Graves' disease. NICE guidelines recommend carbimazole as the first-line treatment to reduce thyroid hormone production. Levothyroxine is used for hypothyroidism. Propranolol can be used to manage symptoms like palpitations but does not treat the underlying cause. Frusemide is a diuretic, and Warfarin is an anticoagulant, both unsuitable here. A mnemonic for hyperthyroidism treatment is 'Cool the thyroid with Carbimazole'.",
+    "mnemonic": "Cool the thyroid with Carbimazole",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_2",
+    "topic": "Respiratory",
+    "category": "all",
+    "question": "A 70-year-old man with COPD presents with increased breathlessness and productive cough. He is afebrile. His SpO2 is 88% on room air. What is the most appropriate next step in management?",
+    "options": [
+      "High flow oxygen",
+      "Nebulised salbutamol",
+      "Oral steroids",
+      "Antibiotics",
+      "Non-invasive ventilation"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Nebulised salbutamol'. In a COPD exacerbation, bronchodilators like salbutamol are used first to improve airway patency. NICE guidelines suggest using bronchodilators as a primary step in managing COPD exacerbations. High flow oxygen should be used cautiously in COPD due to the risk of CO2 retention. Oral steroids are also part of management but are not the immediate priority. Antibiotics are used if there's evidence of infection, which is not clear here. Non-invasive ventilation is for severe cases with acidosis. Remember, 'Always Start with Salbutamol in COPD exacerbation'.",
+    "mnemonic": "Always Start with Salbutamol",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_3",
+    "topic": "Nephrology",
+    "category": "all",
+    "question": "A 55-year-old woman with a history of type 2 diabetes and hypertension presents with swelling in her legs. Her blood tests show: Na+ 140 mmol/L, K+ 4.8 mmol/L, creatinine 200 µmol/L. Urinalysis reveals proteinuria. What is the most likely diagnosis?",
+    "options": [
+      "Acute kidney injury",
+      "Chronic kidney disease",
+      "Nephrotic syndrome",
+      "Renal artery stenosis",
+      "Diabetic nephropathy"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is 'Diabetic nephropathy'. The patient's history of diabetes, hypertension, and proteinuria suggests diabetic nephropathy, a common cause of kidney disease in diabetics. Chronic kidney disease would present with a gradual decline in function, typically with a history of prolonged renal issues. Nephrotic syndrome involves significant proteinuria, hypoalbuminemia, and oedema but would typically have more pronounced protein loss. Renal artery stenosis presents with resistant hypertension and possibly a bruit. NICE guidelines underline the importance of managing diabetes to prevent renal complications. Remember: 'Diabetes damages kidneys'.",
+    "mnemonic": "Diabetes damages kidneys",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_4",
+    "topic": "Gastroenterology",
+    "category": "all",
+    "question": "A 50-year-old woman presents with upper abdominal pain and nausea after meals. She has a history of gallstones. What is the most likely diagnosis?",
+    "options": [
+      "Peptic ulcer disease",
+      "Acute pancreatitis",
+      "Cholecystitis",
+      "Gastro-oesophageal reflux disease",
+      "Irritable bowel syndrome"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Cholecystitis'. The symptoms of postprandial upper abdominal pain and nausea in a patient with gallstones suggest cholecystitis, inflammation of the gallbladder. Peptic ulcer disease would present with epigastric pain that might improve with food. Acute pancreatitis typically involves more severe, constant pain and systemic symptoms. GERD would involve heartburn rather than pain after meals. IBS involves bowel changes and cramping. NICE guidelines emphasize ultrasonography for gallstones and inflammation. Remember: 'Fatty meals trigger cholecystitis'.",
+    "mnemonic": "Fatty meals trigger cholecystitis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_5",
+    "topic": "Infectious Diseases",
+    "category": "all",
+    "question": "A 22-year-old university student presents with fever, headache, and a petechial rash. What is the most appropriate initial test to confirm the diagnosis?",
+    "options": [
+      "Blood cultures",
+      "Lumbar puncture",
+      "CT scan of the brain",
+      "Throat swab",
+      "Chest X-ray"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Lumbar puncture'. The clinical presentation is suggestive of meningococcal meningitis, characterized by fever, headache, and petechial rash. A lumbar puncture with cerebrospinal fluid analysis is the definitive test. Blood cultures can identify the organism but are not as immediate. A CT scan is not indicated unless neurological deficits are present. A throat swab or chest X-ray would not yield a diagnosis in this context. NICE guidelines stress the importance of a lumbar puncture in suspected meningitis. Remember: 'Neck stiffness needs needle'.",
+    "mnemonic": "Neck stiffness needs needle",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_6",
+    "topic": "Dermatology",
+    "category": "all",
+    "question": "A 30-year-old woman presents with a red, scaly rash on her elbows and knees. What is the most likely diagnosis?",
+    "options": [
+      "Psoriasis",
+      "Eczema",
+      "Tinea corporis",
+      "Seborrhoeic dermatitis",
+      "Contact dermatitis"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Psoriasis'. The classic presentation of psoriasis includes well-demarcated, red plaques with silvery scales on extensor surfaces such as elbows and knees. Eczema typically affects flexor surfaces and is more itchy. Tinea corporis presents as ring-shaped lesions. Seborrhoeic dermatitis affects oily areas like the scalp. Contact dermatitis requires a direct irritant or allergen. NICE guidelines highlight psoriasis features and management options like topical steroids. Remember: 'Psoriasis on the Palms and Plaques'.",
+    "mnemonic": "Psoriasis on the Palms and Plaques",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_7",
+    "topic": "Neurology",
+    "category": "all",
+    "question": "A 68-year-old man presents with sudden weakness in his right arm and leg. He has a history of hypertension. What is the most appropriate initial imaging to perform?",
+    "options": [
+      "CT scan of the head",
+      "MRI of the spine",
+      "Carotid Doppler",
+      "Echocardiogram",
+      "X-ray of the cervical spine"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'CT scan of the head'. In the case of a suspected stroke, immediate imaging is crucial to differentiate between ischaemic and haemorrhagic stroke. A CT scan is the first-line imaging due to its quick availability and effectiveness in detecting haemorrhage. An MRI is more sensitive but takes longer. Carotid Doppler assesses carotid stenosis, which is not immediate. Echocardiogram checks cardiac sources of emboli. An X-ray of the cervical spine is irrelevant here. NICE guidelines stress rapid CT scanning in stroke assessment. Remember: 'CT for Clot and Haemorrhage'.",
+    "mnemonic": "CT for Clot and Haemorrhage",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_8",
+    "topic": "Hematology",
+    "category": "all",
+    "question": "A 45-year-old woman presents with fatigue and pallor. Blood tests reveal Hb 8 g/dL, MCV 70 fL, and serum ferritin low. What is the most likely diagnosis?",
+    "options": [
+      "Iron deficiency anaemia",
+      "Thalassemia",
+      "Pernicious anaemia",
+      "Anaemia of chronic disease",
+      "Sideroblastic anaemia"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Iron deficiency anaemia'. The microcytic anaemia (low MCV) and low serum ferritin suggest iron deficiency. Thalassemia also causes microcytic anaemia but often with normal or raised ferritin. Pernicious anaemia causes macrocytic anaemia. Anaemia of chronic disease presents with normal or low MCV and normal or raised ferritin. Sideroblastic anaemia is rare and requires specific bone marrow findings. NICE guidelines recommend checking ferritin to confirm iron deficiency. Remember: 'Iron Low, Ferritin Low'.",
+    "mnemonic": "Iron Low, Ferritin Low",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041348798_9",
+    "topic": "Rheumatology",
+    "category": "all",
+    "question": "A 60-year-old woman presents with morning stiffness lasting over an hour and symmetrical joint swelling in her hands. What is the most likely diagnosis?",
+    "options": [
+      "Osteoarthritis",
+      "Rheumatoid arthritis",
+      "Gout",
+      "Psoriatic arthritis",
+      "Lupus"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Rheumatoid arthritis'. Prolonged morning stiffness and symmetrical joint involvement are hallmark features. Osteoarthritis presents with shorter, less severe stiffness and asymmetrical joint involvement. Gout typically affects one joint at a time. Psoriatic arthritis often has a history of psoriasis. Lupus has more systemic features and less joint-specific symptoms. NICE guidelines for rheumatoid arthritis stress the importance of early diagnosis and treatment. Remember: 'Rheumatoid is Really Stiff'.",
+    "mnemonic": "Rheumatoid is Really Stiff",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 55-year-old man presents with newly diagnosed hypertension. His blood pressure readings average 150/95 mmHg. He has no significant past medical history and is otherwise healthy. According to NICE guidelines, what is the most appropriate initial management?",
+    "options": [
+      "Lifestyle modifications",
+      "Start amlodipine",
+      "Start atenolol",
+      "Start ramipril",
+      "Start furosemide"
+    ],
+    "answer": 0,
+    "explanation": "Lifestyle modifications are the recommended initial management for stage 1 hypertension (clinic blood pressure 140/90 mmHg to 159/99 mmHg) in patients under 80 years with no end-organ damage, cardiovascular disease, renal disease, diabetes, or an estimated 10-year cardiovascular risk below 20%. NICE guidelines emphasize non-pharmacological approaches such as dietary changes and exercise before initiating pharmacotherapy. Starting amlodipine, ramipril, or atenolol would be indicated if lifestyle changes fail after a reasonable period or if the patient has a higher cardiovascular risk. Furosemide is not typically used for primary hypertension management without additional indications like fluid overload. Remember: 'Lifestyle before Lifelines'.",
+    "mnemonic": "Lifestyle before Lifelines",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_1",
+    "topic": "Asthma Exacerbation",
+    "category": "all",
+    "question": "A 22-year-old woman presents to the emergency department with an acute exacerbation of asthma. She is breathless, using accessory muscles, and has a respiratory rate of 28/min. Oxygen saturation is 92% on room air. What is the first-line treatment in this situation?",
+    "options": [
+      "Oral prednisone",
+      "Intravenous aminophylline",
+      "Nebulised salbutamol",
+      "Intravenous magnesium sulfate",
+      "Nebulised ipratropium bromide"
+    ],
+    "answer": 2,
+    "explanation": "Nebulised salbutamol is the first-line treatment for an acute asthma exacerbation, as it provides rapid bronchodilation. NICE guidelines recommend inhaled short-acting beta-agonists (SABAs) like salbutamol as the initial treatment for acute severe asthma. Oral prednisone and nebulised ipratropium bromide are used as adjuncts but are not the first-line. Intravenous aminophylline and magnesium sulfate are reserved for more severe cases where initial treatments fail. The mnemonic 'SABA for Sudden' helps recall the first-line management.",
+    "mnemonic": "SABA for Sudden",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_2",
+    "topic": "Diabetes Mellitus",
+    "category": "all",
+    "question": "A 60-year-old woman with type 2 diabetes presents for a routine check-up. Her HbA1c is 65 mmol/mol (8.1%). According to the latest NICE guidelines, what is the next step in her management?",
+    "options": [
+      "Increase metformin dose",
+      "Add sulfonylurea",
+      "Add DPP-4 inhibitor",
+      "Add GLP-1 receptor agonist",
+      "Start insulin"
+    ],
+    "answer": 1,
+    "explanation": "Adding a sulfonylurea is recommended when metformin alone does not adequately control blood glucose levels, as indicated by her HbA1c of 65 mmol/mol. NICE guidelines for type 2 diabetes suggest considering a second oral agent like sulfonylureas if metformin monotherapy is insufficient. Increasing metformin is not an option as the maximum tolerable dose is presumed. DPP-4 inhibitors or GLP-1 receptor agonists are alternatives but more costly. Insulin is considered when oral therapies are inadequate. Remember: 'Sulfonylurea for Supplement'.",
+    "mnemonic": "Sulfonylurea for Supplement",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_3",
+    "topic": "Heart Failure",
+    "category": "all",
+    "question": "A 70-year-old man with chronic heart failure presents with worsening shortness of breath and peripheral oedema over the past week. His blood pressure is 130/80 mmHg, pulse 88 bpm, and he has bilateral basal crackles. What is the most appropriate initial step in managing his condition?",
+    "options": [
+      "Increase furosemide dose",
+      "Start spironolactone",
+      "Start digoxin",
+      "Refer for cardiac resynchronization therapy",
+      "Start ACE inhibitor"
+    ],
+    "answer": 0,
+    "explanation": "Increasing the dose of furosemide is the most appropriate initial step to manage acute decompensated heart failure with fluid overload symptoms like dyspnoea and oedema. NICE guidelines recommend optimizing diuretic therapy to alleviate congestion. Spironolactone, ACE inhibitors, and digoxin are used for long-term management and stabilization. Cardiac resynchronization therapy is considered in select patients with specific criteria. The mnemonic 'Furosemide for Fluid' aids in recalling this treatment strategy.",
+    "mnemonic": "Furosemide for Fluid",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_4",
+    "topic": "Hyperthyroidism",
+    "category": "all",
+    "question": "A 35-year-old woman presents with palpitations, weight loss, and heat intolerance. Her thyroid function tests reveal suppressed TSH and elevated free T4. What is the first-line treatment for her condition according to UK guidelines?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Radioiodine therapy",
+      "Propranolol",
+      "Thyroidectomy"
+    ],
+    "answer": 0,
+    "explanation": "Carbimazole is the first-line treatment for hyperthyroidism in the UK. NICE guidelines suggest antithyroid drugs as the initial treatment to achieve euthyroidism. Levothyroxine is used for hypothyroidism. Radioiodine therapy and thyroidectomy are considered if medical management fails or is not tolerated. Propranolol provides symptomatic relief but doesn't address the underlying hyperthyroidism. The mnemonic 'Carbimazole for Control' helps remember the first-line treatment.",
+    "mnemonic": "Carbimazole for Control",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_5",
+    "topic": "Anaphylaxis",
+    "category": "all",
+    "question": "A 25-year-old man with a known peanut allergy is brought in by ambulance after accidentally ingesting peanuts. He is wheezing, hypotensive with a blood pressure of 85/50 mmHg, and has widespread urticaria. What is the immediate treatment?",
+    "options": [
+      "Intravenous chlorphenamine",
+      "Intramuscular adrenaline",
+      "Intravenous hydrocortisone",
+      "Nebulised salbutamol",
+      "Intravenous fluids"
+    ],
+    "answer": 1,
+    "explanation": "Intramuscular adrenaline is the immediate treatment for anaphylaxis. NICE guidelines emphasize the prompt administration of adrenaline to counteract severe allergic reactions. Intravenous chlorphenamine and hydrocortisone can be administered subsequently but are not immediate treatments. Nebulised salbutamol is used for wheezing but does not address the systemic reaction. Intravenous fluids support blood pressure but are secondary to adrenaline administration. The mnemonic 'Adrenaline for Anaphylaxis' is a useful reminder.",
+    "mnemonic": "Adrenaline for Anaphylaxis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg134",
+      "CKS": "https://cks.nice.org.uk/topics/anaphylaxis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_6",
+    "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "category": "all",
+    "question": "A 68-year-old woman with COPD presents with worsening dyspnoea and productive cough. Her SpO2 is 88% on room air. What is the most appropriate immediate management?",
+    "options": [
+      "Oral corticosteroids",
+      "High-flow oxygen",
+      "Nebulised ipratropium bromide",
+      "Initiate non-invasive ventilation",
+      "Antibiotic therapy"
+    ],
+    "answer": 2,
+    "explanation": "Nebulised ipratropium bromide, a bronchodilator, is appropriate for acute exacerbations of COPD to improve airflow. NICE guidelines recommend using short-acting bronchodilators initially. Oral corticosteroids and antibiotics may be needed based on the severity and suspicion of infection. High-flow oxygen should be used cautiously in COPD due to the risk of hypercapnia, and SpO2 should be maintained between 88-92%. Non-invasive ventilation is reserved for respiratory failure. The mnemonic 'Ipratropium for Immediate Relief' aids in recall.",
+    "mnemonic": "Ipratropium for Immediate Relief",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_7",
+    "topic": "Myocardial Infarction",
+    "category": "all",
+    "question": "A 58-year-old man presents with acute chest pain radiating to his left arm. ECG shows ST elevation in leads II, III, and aVF. What is the most appropriate immediate management in a UK setting?",
+    "options": [
+      "Aspirin",
+      "Clopidogrel",
+      "Thrombolysis",
+      "Primary PCI",
+      "Morphine"
+    ],
+    "answer": 3,
+    "explanation": "Primary PCI is the preferred immediate management for STEMI in a UK setting, provided it can be performed within 120 minutes of first medical contact. NICE guidelines prioritize PCI over thrombolysis due to better outcomes. Aspirin and clopidogrel are administered as part of antiplatelet therapy but are not definitive treatments. Morphine is used for pain relief but does not address the occlusion. The mnemonic 'PCI for Prompt Coronary Intervention' helps recall this.",
+    "mnemonic": "PCI for Prompt Coronary Intervention",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng172",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_8",
+    "topic": "Deep Vein Thrombosis (DVT)",
+    "category": "all",
+    "question": "A 45-year-old woman on long-haul flight recently presents with a swollen, painful left calf. D-dimer is elevated and ultrasound confirms DVT. What is the first-line treatment?",
+    "options": [
+      "Warfarin",
+      "Aspirin",
+      "Low molecular weight heparin",
+      "Thrombolysis",
+      "Surgical thrombectomy"
+    ],
+    "answer": 2,
+    "explanation": "Low molecular weight heparin (LMWH) is the first-line treatment for acute DVT, providing effective anticoagulation. NICE guidelines recommend LMWH for initial treatment due to rapid action and predictable dosing. Warfarin is used for long-term anticoagulation but requires bridging. Aspirin is not adequate for DVT treatment. Thrombolysis and surgical thrombectomy are reserved for massive DVT with life- or limb-threatening complications. The mnemonic 'Heparin for Hemostasis' assists recall.",
+    "mnemonic": "Heparin for Hemostasis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/dvt"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041565982_9",
+    "topic": "Stroke",
+    "category": "all",
+    "question": "A 72-year-old man is brought to the emergency department with right-sided weakness and aphasia lasting 90 minutes. CT scan shows no haemorrhage. What is the most appropriate immediate treatment?",
+    "options": [
+      "Aspirin",
+      "Thrombolysis",
+      "Clopidogrel",
+      "Surgical thrombectomy",
+      "Heparin"
+    ],
+    "answer": 1,
+    "explanation": "Thrombolysis with alteplase is the immediate treatment for acute ischaemic stroke within 4.5 hours of symptom onset, as recommended by NICE. Aspirin is used once haemorrhage is ruled out, but thrombolysis is prioritized for eligible patients. Clopidogrel and heparin are not indicated acutely in this scenario. Surgical thrombectomy is considered if thrombolysis is contraindicated or unsuccessful. The mnemonic 'Time for Thrombolysis' underscores the importance of timing.",
+    "mnemonic": "Time for Thrombolysis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 55-year-old man with a history of type 2 diabetes presents for a routine check-up. His blood pressure is 155/95 mmHg, and he has a BMI of 32 kg/m². He is not currently on any antihypertensive medication. According to the NICE guidelines, what is the most appropriate initial management?",
+    "options": [
+      "Amlodipine",
+      "Lisinopril",
+      "Bendroflumethiazide",
+      "Bisoprolol",
+      "Losartan"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Lisinopril. According to NICE guidelines, the first-line treatment for hypertension in patients under 55 years, without contraindications, is usually an ACE inhibitor such as lisinopril, especially in those with diabetes. The presence of diabetes and the need for renal protection also support the use of an ACE inhibitor. Amlodipine would be more suitable for older patients or those of black African or African-Caribbean family origin. Bendroflumethiazide, a thiazide-like diuretic, is not the first-line choice in this scenario. Bisoprolol is typically used in specific conditions such as heart failure or post-myocardial infarction. Losartan, an ARB, may be used if the patient cannot tolerate ACE inhibitors due to side effects such as cough. Remember, ‘ACE inhibitors in younger diabetics’ as a clinical pearl.",
+    "mnemonic": "ACE before ARB in diabetes",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with a history of asthma presents with increased wheezing and shortness of breath. Her peak expiratory flow rate (PEFR) is 55% of her predicted value. She uses her salbutamol inhaler more than three times a week. What is the most appropriate step-up treatment in this case?",
+    "options": [
+      "Increase salbutamol",
+      "Add beclometasone inhaler",
+      "Add montelukast",
+      "Add theophylline",
+      "Refer to a specialist"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add a beclometasone inhaler. NICE guidelines recommend adding an inhaled corticosteroid (such as beclometasone) for patients who are using a short-acting beta-agonist like salbutamol more than three times a week or experiencing night-time symptoms. Increasing salbutamol usage does not address the underlying inflammation. Montelukast and theophylline are not first-line add-ons in this scenario. Referral to a specialist is considered when control remains poor despite optimal therapy. A useful clinical pearl is ‘2+3 rule’: Two or more days a week using a SABA or three nights a month waking due to asthma requires a step-up.",
+    "mnemonic": "ICS for Inflammation in Asthma",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_2",
+    "topic": "Anemia Investigation",
+    "category": "all",
+    "question": "A 68-year-old woman presents with fatigue and pallor. Blood tests reveal: Hb 9.0 g/dL, MCV 70 fL. What is the most likely cause of her anemia?",
+    "options": [
+      "Iron deficiency anemia",
+      "Vitamin B12 deficiency",
+      "Chronic kidney disease",
+      "Hereditary spherocytosis",
+      "Aplastic anemia"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Iron deficiency anemia. The low MCV indicates microcytic anemia, which is most commonly caused by iron deficiency, particularly in older adults. Vitamin B12 deficiency typically leads to macrocytic anemia with an elevated MCV. Chronic kidney disease often causes normocytic anemia. Hereditary spherocytosis leads to hemolytic anemia, not typically microcytic. Aplastic anemia is a pancytopenia with normocytic or slightly macrocytic anemia. When encountering microcytic anemia, 'Think Iron First' is a helpful clinical pearl.",
+    "mnemonic": "IRON = Initial Review of Microcytic",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng24",
+      "CKS": "https://cks.nice.org.uk/topics/anaemia-iron-deficiency"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_3",
+    "topic": "Heart Failure Management",
+    "category": "all",
+    "question": "A 72-year-old male with a history of ischaemic heart disease presents with exertional dyspnoea and ankle swelling. Echocardiography shows an ejection fraction of 35%. What medication should be started to improve his prognosis?",
+    "options": [
+      "Furosemide",
+      "Atenolol",
+      "Ramipril",
+      "Digoxin",
+      "Spironolactone"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Ramipril. NICE guidelines recommend ACE inhibitors like ramipril as first-line treatment in heart failure with reduced ejection fraction to improve symptoms and prognosis. Furosemide helps with fluid overload but doesn't improve long-term outcomes. Atenolol, a beta-blocker, may be added after stable initiation of an ACE inhibitor. Digoxin is used primarily for rate control in atrial fibrillation or symptomatic relief. Spironolactone may be added later if symptoms persist. Remember, ‘ACE for CHF’ for heart failure management.",
+    "mnemonic": "ACE in HEART failure",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_4",
+    "topic": "Thyroid Dysfunction",
+    "category": "all",
+    "question": "A 45-year-old woman presents with weight loss, heat intolerance, and palpitations. Her TFTs show: TSH <0.01 mU/L, free T4 32 pmol/L. Which medication should be initiated?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Propranolol",
+      "Iodine",
+      "Radioactive iodine"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Carbimazole. Her symptoms and TFTs indicate hyperthyroidism, and carbimazole is the first-line treatment in the UK to reduce thyroid hormone production. Levothyroxine is used for hypothyroidism. Propranolol can help with symptom control but does not address the underlying hyperthyroidism. Iodine and radioactive iodine are used in specific scenarios, often refractory or nodular disease. For hyperthyroidism, ‘Carbimazole First’ is a memorable pearl.",
+    "mnemonic": "Carbimazole Controls thyroxine",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_5",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 60-year-old man presents with chest pain radiating to his left arm. ECG shows ST elevation in leads II, III, and aVF. What is the immediate management step?",
+    "options": [
+      "Aspirin and ticagrelor",
+      "IV morphine",
+      "Sub-lingual GTN",
+      "Thrombolysis",
+      "Percutaneous coronary intervention (PCI)"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is Percutaneous coronary intervention (PCI). This patient is having an inferior ST-elevation myocardial infarction (STEMI). According to NICE, primary PCI is the preferred reperfusion strategy if it can be performed within 120 minutes of diagnosis. Aspirin and ticagrelor are part of medical therapy but do not directly open the occluded coronary artery. IV morphine provides pain relief but does not address the underlying cause. Sub-lingual GTN may reduce symptoms temporarily. Thrombolysis is considered if PCI is unavailable. Remember, ‘Time is Muscle’ in STEMI management.",
+    "mnemonic": "PCI for STEMI saves",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_6",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 65-year-old smoker with COPD presents with increased cough and sputum production. His FEV1 is 50% of predicted. What is the most appropriate first-line maintenance treatment?",
+    "options": [
+      "Salbutamol inhaler",
+      "Ipratropium bromide",
+      "Tiotropium",
+      "Inhaled corticosteroid",
+      "Oral theophylline"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Tiotropium. In COPD patients with FEV1 < 60% predicted, NICE guidelines recommend a long-acting muscarinic antagonist (LAMA) like tiotropium as first-line maintenance therapy. Salbutamol is used for symptom relief, not maintenance. Ipratropium, a short-acting muscarinic antagonist, is less effective for long-term control. Inhaled corticosteroids are added if the patient has frequent exacerbations. Oral theophylline is not preferred due to side effects. For COPD, ‘LAMA for Long-term’ is a useful mnemonic.",
+    "mnemonic": "LAMA in Lung Disease",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_7",
+    "topic": "Diabetes Complications",
+    "category": "all",
+    "question": "A 48-year-old man with type 2 diabetes presents with proteinuria. Which medication should be added to his regimen to protect his renal function?",
+    "options": [
+      "Metformin",
+      "Gliclazide",
+      "Ramipril",
+      "Amlodipine",
+      "Furosemide"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Ramipril. ACE inhibitors like ramipril are recommended by NICE guidelines for patients with diabetes and proteinuria to reduce the risk of nephropathy progression. Metformin is used for glycaemic control, not renal protection. Gliclazide is a sulfonylurea, also aimed at glucose control. Amlodipine controls blood pressure but does not specifically address proteinuria. Furosemide is a diuretic for fluid management, not renal protection. Remember, ‘ACE for Albuminuria’ in diabetic nephropathy.",
+    "mnemonic": "ACE protects Kidneys",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_8",
+    "topic": "Venous Thromboembolism",
+    "category": "all",
+    "question": "A 32-year-old woman presents with sudden onset dyspnoea and pleuritic chest pain. She returned from a long-haul flight two days ago. What is the most appropriate initial diagnostic test?",
+    "options": [
+      "CT pulmonary angiogram",
+      "D-dimer test",
+      "Ventilation-perfusion scan",
+      "Chest X-ray",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is CT pulmonary angiogram. This test is the gold standard for diagnosing pulmonary embolism (PE), particularly in cases with high clinical suspicion. A D-dimer test is useful for ruling out PE in low-risk patients but not in high-risk scenarios. A ventilation-perfusion scan is an alternative if CT is contraindicated. Chest X-ray is done to rule out other causes but is not diagnostic for PE. An echocardiogram can assess right heart strain but does not confirm PE. Remember, ‘CT for Clots in Lungs’ as a clinical pearl.",
+    "mnemonic": "CT for PE",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/pulmonary-embolism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779041660084_9",
+    "topic": "Hyperkalemia Management",
+    "category": "all",
+    "question": "A 70-year-old man with chronic kidney disease presents with muscle weakness. His ECG shows peaked T waves. His potassium level is 6.5 mmol/L. What is the immediate management?",
+    "options": [
+      "Calcium gluconate",
+      "Insulin and glucose",
+      "Furosemide",
+      "Sodium bicarbonate",
+      "Sodium polystyrene sulfonate"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Calcium gluconate. This is administered to stabilize the cardiac membrane in cases of severe hyperkalaemia with ECG changes. Insulin and glucose are used to temporarily shift potassium into cells but do not stabilize the cardiac membrane. Furosemide can help reduce potassium levels longer term but is not immediate. Sodium bicarbonate can be used in metabolic acidosis but is not first-line. Sodium polystyrene sulfonate helps remove potassium but is slow acting. For hyperkalaemia, ‘Calcium for Cardiac Protection’ is crucial.",
+    "mnemonic": "Calcium for K+ Crisis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng148",
+      "CKS": "https://cks.nice.org.uk/topics/hyperkalaemia"
     },
     "difficulty": "intermediate"
   }

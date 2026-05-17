@@ -98,6 +98,14 @@ UK DRUG NAMES — MANDATORY (never use the US equivalent):
 - All doses must be in metric (mg, mcg, mmol/L — NOT grains, oz, mEq)
 - Blood pressure and lab values must use UK reference ranges (e.g. K+ 3.5–5.0 mmol/L, creatinine in µmol/L)
 
+CURRENT UK GUIDELINES — use these versions (do NOT reference superseded versions):
+- Asthma: NICE NG245 (November 2024) — replaces old NG80 and old BTS/SIGN step ladder.
+  NG245 key points: (1) Prescribe a regular low-dose ICS alongside the SABA reliever from initial diagnosis; (2) Step up to ICS + LABA (not just higher-dose ICS) if inadequately controlled; (3) Do NOT write questions implying SABA-only is ever a complete first-line regimen.
+- Hypertension: NICE NG136 (2019, updated 2023) — ABCD rule: ACE/ARB (age <55, non-Black); CCB (age >55 or Black); thiazide-like diuretic at step 3
+- Stroke/TIA: NICE NG128 — dual antiplatelet for TIA/minor stroke; alteplase within 4.5 h for ischaemic stroke
+- Type 2 Diabetes: NICE NG28 — metformin first-line; add SGLT-2 inhibitor or GLP-1 if cardiovascular risk; HbA1c target 48 mmol/mol
+- VTE/PE: NICE NG158 — direct oral anticoagulants (DOACs) first-line for most; consider LMWH in cancer
+
 For ${displayCategory}, focus on core topics like:
 ${getCategoryTopics(category)}
 
@@ -158,7 +166,7 @@ Return ONLY a valid JSON array. No additional text.`;
 function getCategoryTopics(category: string): string {
   const topics = {
     cardiovascular: "Hypertension, Acute Coronary Syndrome, Heart Failure, Arrhythmias, Valvular Disease",
-    respiratory: "Asthma, COPD, Pneumonia, Pulmonary Embolism, Pleural Disease",
+    respiratory: "Asthma (NICE NG245 2024), COPD (NICE NG115), Pneumonia (NICE CG191 / CURB-65), Pulmonary Embolism (NICE NG158), Pleural Disease, Bronchiectasis",
     'infectious-diseases': "UTI, Sepsis, Meningitis, Endocarditis, Tuberculosis",
     endocrinology: "Diabetes, Thyroid Disorders, Adrenal Disorders, Calcium Disorders",
     gastroenterology: "IBD, Peptic Ulcer Disease, Hepatitis, Pancreatitis, Bowel Obstruction",
@@ -2539,12 +2547,12 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
           E: "Add oral prednisolone"
         },
         answer: "B",
-        explanation: "BTS/SIGN guidelines recommend adding low-dose ICS when SABA is needed more than twice weekly or there are night symptoms.",
-        mnemonic: "Asthma Steps: SAIL = Salbutamol, Add ICS, LABA, then oral",
+        explanation: "NICE NG245 (2024) — the current UK asthma guideline — recommends starting a regular low-dose inhaled corticosteroid (ICS) such as beclometasone when a patient uses their SABA reliever more than twice a week, has any night-time symptoms, or has had an exacerbation in the past two years. Adding ICS is the correct next step; LABA should only be added if symptoms remain uncontrolled on low-dose ICS alone. Increasing SABA dose or adding oral prednisolone is not appropriate for step-up in chronic management. Note: NG245 superseded the old BTS/SIGN step ladder (NG80) in November 2024 and now recommends ICS be prescribed alongside the SABA reliever from the outset for newly diagnosed adults.",
+        mnemonic: "NICE NG245 Asthma ladder: SABA reliever + ICS → add LABA → increase ICS → add-on therapies (LTRA/theophylline)",
         links: {
           primary: {
-            title: "BTS/SIGN Asthma Guidelines",
-            url: "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/asthma/"
+            title: "NICE NG245 — Asthma (2024)",
+            url: "https://www.nice.org.uk/guidance/ng245"
           }
         }
       }
