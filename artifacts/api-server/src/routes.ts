@@ -1352,19 +1352,28 @@ INFECTION / SEPSIS:
 
 STRICT RULES — FOLLOW PRECISELY:
 1. CHECK the bank above first. If an established mnemonic applies to this question's topic, USE IT verbatim. Do not paraphrase.
-2. NEVER build a mnemonic using a drug name as one of the letters (e.g. R = Rivaroxaban, M = Metformin, W = Warfarin). Drug-name acronyms are confusing and useless — they do not help recall.
-3. NEVER invent a mnemonic where the letters do not give a genuine memory hook. If you cannot create something genuinely memorable and clinically useful, return FEWER mnemonics (even just 1) rather than inventing something worthless.
-4. Each mnemonic must be DIRECTLY relevant to the specific concept tested — not a generic guideline reminder.
-5. Title format: the acronym/score name in double quotes — e.g. "FAST" or "CURB-65". No prefix labels.
+2. NEVER build a mnemonic using a drug name as one of the letters (e.g. R = Rivaroxaban, M = Metformin, W = Warfarin). Drug-name acronyms are useless.
+3. NEVER invent a mnemonic where the letters do not give a genuine memory hook. Return FEWER mnemonics (even just 1) rather than inventing something worthless.
+4. Each mnemonic must be DIRECTLY relevant to the specific concept tested.
+5. Title format: acronym/score name in double quotes — e.g. "FAST" or "CURB-65". No prefix labels.
 6. Expansion: one short phrase per letter/element, separated by commas.
 
-Return STRICT JSON:
+Also generate exactly 3 study tips of DIFFERENT types:
+- type "pearl": the single most important clinical fact to memorise about this topic (a concrete, specific rule — e.g. a threshold number, a first-line drug, a key investigation)
+- type "exam": a specific test-taking insight — what clue in the stem should trigger the correct answer, or how to distinguish this condition from the most common distractor
+- type "pitfall": the most common mistake candidates make on this topic and why it is wrong
+
+Keep each tip to 1-2 concise sentences. Be specific — avoid generic advice like "read the guidelines".
+
+Return STRICT JSON (no other text):
 {
   "mnemonics": [
-    {
-      "title": "\\"ACRONYM\\"",
-      "expansion": "A = ..., B = ..., C = ..."
-    }
+    { "title": "\\"ACRONYM\\"", "expansion": "A = ..., B = ..., C = ..." }
+  ],
+  "tips": [
+    { "type": "pearl", "text": "..." },
+    { "type": "exam", "text": "..." },
+    { "type": "pitfall", "text": "..." }
   ]
 }`;
 
@@ -1385,6 +1394,7 @@ Return STRICT JSON:
 
       const result = {
         mnemonics: Array.isArray(parsed.mnemonics) ? parsed.mnemonics : [],
+        tips: Array.isArray(parsed.tips) ? parsed.tips : [],
         source: 'ai' as const,
       };
 

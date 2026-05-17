@@ -525,8 +525,10 @@ export default function PLAB1New() {
   const aiExplanationCache = useRef<Map<string, AIExplanation>>(new Map());
 
   // AI-generated study tips / mnemonics specific to each question
+  type AIStudyTip = { type: 'pearl' | 'exam' | 'pitfall'; text: string };
   type AIStudyTips = {
     mnemonics: Array<{ title: string; expansion: string }>;
+    tips: Array<AIStudyTip>;
     source: 'ai' | 'unavailable' | 'error';
   };
   const [aiStudyTips, setAiStudyTips] = useState<AIStudyTips | null>(null);
@@ -3295,47 +3297,76 @@ export default function PLAB1New() {
               </div>
             </div>
 
-            {/* Study Tips Section — AI-generated mnemonics specific to this question */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <div className="flex items-start gap-2">
-                <Lightbulb className="w-4 h-4 text-blue-600 flex-shrink-0 mt-1" />
-                <div className="w-full">
-                  <p className="text-sm font-medium text-blue-900 mb-3">
-                    Study Tips &amp; Medical Mnemonics
+            {/* Study Tips Section — AI-generated tips + mnemonics specific to this question */}
+            <div className="rounded-xl border border-blue-200 overflow-hidden">
+              {/* Header */}
+              <div className="bg-blue-600 px-4 py-2.5 flex items-center gap-2">
+                <Lightbulb className="w-4 h-4 text-white flex-shrink-0" />
+                <p className="text-sm font-semibold text-white tracking-wide">Study Tips &amp; Mnemonics</p>
+              </div>
+
+              <div className="bg-blue-50 p-4 space-y-3">
+                {/* Loading skeleton */}
+                {aiStudyTipsLoading && !aiStudyTips && (
+                  <div className="space-y-3 animate-pulse">
+                    {[1, 2, 3, 4].map(i => (
+                      <div key={i} className="bg-white border border-blue-100 rounded-lg p-3">
+                        <div className="h-3 bg-blue-200 rounded w-1/3 mb-2" />
+                        <div className="h-2.5 bg-blue-100 rounded w-full mb-1" />
+                        <div className="h-2.5 bg-blue-100 rounded w-3/4" />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {aiStudyTips && (() => {
+                  const tipConfig: Record<string, { label: string; icon: string; bg: string; border: string; labelColor: string; textColor: string }> = {
+                    pearl:   { label: 'Clinical Pearl',  icon: '⭐', bg: 'bg-amber-50',  border: 'border-amber-300', labelColor: 'text-amber-700', textColor: 'text-amber-900' },
+                    exam:    { label: 'Exam Technique',  icon: '🎯', bg: 'bg-green-50',  border: 'border-green-300', labelColor: 'text-green-700', textColor: 'text-green-900' },
+                    pitfall: { label: 'Common Pitfall',  icon: '⚠️', bg: 'bg-red-50',    border: 'border-red-300',   labelColor: 'text-red-700',   textColor: 'text-red-900'   },
+                  };
+                  return (
+                    <>
+                      {/* Tips (pearl / exam / pitfall) */}
+                      {aiStudyTips.tips && aiStudyTips.tips.length > 0 && aiStudyTips.tips.map((tip, i) => {
+                        const cfg = tipConfig[tip.type] ?? tipConfig['pearl'];
+                        return (
+                          <div key={i} className={`rounded-lg border ${cfg.bg} ${cfg.border} p-3`}>
+                            <p className={`text-xs font-bold uppercase tracking-wide mb-1 ${cfg.labelColor}`}>
+                              {cfg.icon} {cfg.label}
+                            </p>
+                            <p className={`text-sm leading-relaxed ${cfg.textColor}`}>{tip.text}</p>
+                          </div>
+                        );
+                      })}
+
+                      {/* Divider before mnemonics if both present */}
+                      {aiStudyTips.mnemonics.length > 0 && aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
+                        <div className="border-t border-blue-200 pt-1" />
+                      )}
+
+                      {/* Mnemonics */}
+                      {aiStudyTips.mnemonics.length > 0 && aiStudyTips.mnemonics.map((m, i) => (
+                        <div key={i} className="bg-white border border-yellow-300 rounded-lg p-3 border-l-4 border-l-yellow-400">
+                          <p className="text-xs font-bold uppercase tracking-wide text-yellow-700 mb-1">
+                            🧠 Mnemonic
+                          </p>
+                          <p className="text-sm font-semibold text-gray-900 mb-0.5">
+                            {m.title.replace(/^(Topic|Mnemonic|Tip):\s*/i, '').replace(/^"|"$/g, '')}
+                          </p>
+                          <p className="text-sm text-gray-700 leading-relaxed">{m.expansion}</p>
+                        </div>
+                      ))}
+                    </>
+                  );
+                })()}
+
+                {/* Shown only if AI is unavailable and tips never loaded */}
+                {!aiStudyTipsLoading && (!aiStudyTips || (aiStudyTips.mnemonics.length === 0 && (!aiStudyTips.tips || aiStudyTips.tips.length === 0))) && (
+                  <p className="text-xs text-blue-500 italic text-center py-2">
+                    Study tips will appear here once generated.
                   </p>
-
-                  {/* Loading skeleton while AI generates tips */}
-                  {aiStudyTipsLoading && !aiStudyTips && (
-                    <div className="space-y-3 animate-pulse">
-                      {[1, 2].map(i => (
-                        <div key={i} className="bg-white border border-blue-200 rounded-lg p-3">
-                          <div className="h-3 bg-blue-200 rounded w-2/5 mb-2" />
-                          <div className="h-2.5 bg-blue-100 rounded w-full mb-1" />
-                          <div className="h-2.5 bg-blue-100 rounded w-4/5" />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* AI-generated mnemonics */}
-                  {aiStudyTips && aiStudyTips.mnemonics.length > 0 && (
-                    <div className="space-y-3">
-                      {aiStudyTips.mnemonics.map((m, i) => (
-                        <div key={i} className="bg-white border border-blue-200 rounded-lg p-3 border-l-4 border-l-yellow-400">
-                          <p className="text-sm font-semibold text-blue-900 mb-1">{m.title.replace(/^(Topic|Mnemonic|Tip):\s*/i, '')}</p>
-                          <p className="text-sm text-blue-800 leading-relaxed">{m.expansion}</p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Shown only if AI is unavailable and tips never loaded */}
-                  {!aiStudyTipsLoading && (!aiStudyTips || aiStudyTips.mnemonics.length === 0) && (
-                    <p className="text-xs text-blue-500 italic">
-                      Question-specific mnemonics will appear here once the AI generates them.
-                    </p>
-                  )}
-                </div>
+                )}
               </div>
             </div>
           </div>
