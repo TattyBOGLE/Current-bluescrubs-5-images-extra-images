@@ -3969,5 +3969,216 @@
       "CKS": "https://cks.nice.org.uk/topics/dvt"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man is diagnosed with hypertension. His blood pressure readings average 146/92 mmHg. He has no significant past medical history and is not on any medication. According to the latest NICE guidelines, what is the most appropriate first-line treatment for this patient?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Bendroflumethiazide",
+      "Losartan",
+      "Doxazosin"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Ramipril. According to NICE NG136 (2023 update), for adults under the age of 55 who are not of Black African or African-Caribbean family origin, an ACE inhibitor such as Ramipril is recommended as the first-line treatment for hypertension. This patient, being a 52-year-old Caucasian man, fits this demographic perfectly. \n\nAmlodipine is typically recommended for those over 55 or of Black African or African-Caribbean descent. Bendroflumethiazide is not preferred as a first-line option due to its side effect profile. Losartan, while effective, is generally used if ACE inhibitors are not tolerated. Doxazosin is primarily used in resistant hypertension cases. Always remember 'ACE first for non-Black under 55'.",
+    "mnemonic": "ACE for under 55 unless Black",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 35-year-old woman with a new diagnosis of asthma presents to her GP. She experiences wheezing and shortness of breath twice a week. What is the recommended initial treatment for her according to the latest NICE guidelines?",
+    "options": [
+      "SABA only",
+      "Low-dose ICS",
+      "Low-dose ICS and LABA",
+      "High-dose ICS",
+      "LTRA"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Low-dose ICS. NICE NG245 (2024) emphasizes starting adults with asthma on a regular low-dose inhaled corticosteroid (ICS) from the outset, along with a short-acting beta agonist (SABA) as a reliever. This is a shift from older guidelines where SABA alone could suffice initially. \n\nSABA alone is no longer recommended as it does not address airway inflammation. Adding a LABA is a step-up option if control is not achieved with low-dose ICS. High-dose ICS is reserved for more severe or uncontrolled asthma. LTRAs are considered if ICS and LABA are insufficient. Remember 'ICS first for asthma maintenance'.",
+    "mnemonic": "ICS from the outset",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_2",
+    "topic": "Type 2 Diabetes \u2014 Established CVD: Metformin + SGLT-2i (NICE NG28)",
+    "category": "all",
+    "question": "A 58-year-old man with a BMI of 32 kg/m\u00b2 and a history of myocardial infarction two years ago is newly diagnosed with type 2 diabetes. He has no contraindications to any glucose-lowering agent and his eGFR is 78. According to NICE NG28, what is the most appropriate initial pharmacological treatment?",
+    "options": [
+      "Metformin alone",
+      "Gliclazide alone",
+      "Insulin",
+      "Metformin plus an SGLT-2 inhibitor with proven cardiovascular benefit (e.g. empagliflozin or dapagliflozin)",
+      "GLP-1 receptor agonist alone"
+    ],
+    "answer": 3,
+    "explanation": "NICE NG28 (2022 update) makes a specific recommendation for patients with type 2 diabetes AND established cardiovascular disease (which includes a history of myocardial infarction): offer an SGLT-2 inhibitor with proven cardiovascular benefit (empagliflozin, dapagliflozin, or canagliflozin) IN ADDITION TO metformin at initiation, not just as a step-up. This is because SGLT-2 inhibitors have demonstrated significant reductions in major adverse cardiovascular events (MACE), cardiovascular death, and hospitalisation for heart failure in trials such as EMPA-REG OUTCOME (empagliflozin) and DECLARE-TIMI 58 (dapagliflozin). Metformin alone (Option A) is correct for newly diagnosed T2DM without CVD, but this patient's MI history changes the recommendation. Gliclazide (sulfonylurea) carries hypoglycaemia risk and no cardiovascular benefit. GLP-1 RA (e.g. semaglutide, liraglutide) is an alternative with cardiovascular benefit but is second-line if SGLT-2i is tolerated. This is a key distinction in current NICE NG28 and a common PLAB exam topic.",
+    "mnemonic": "Metformin first for T2DM",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate",
+    "specialty": "Endocrinology"
+  },
+  {
+    "id": "generated_all_1779044247004_3",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 70-year-old woman presents with palpitations and is found to have atrial fibrillation. Her CHA\u2082DS\u2082-VASc score is 3. What is the most appropriate management to prevent stroke in this patient?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Rivaroxaban",
+      "Clopidogrel",
+      "Dabigatran"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Rivaroxaban. NICE NG196 (2021) recommends using a direct oral anticoagulant (DOAC) like rivaroxaban for stroke prevention in atrial fibrillation if the CHA\u2082DS\u2082-VASc score is 2 or more in men or 3 or more in women. This patient has a score of 3, indicating a high risk of stroke. \n\nAspirin and clopidogrel are not recommended for stroke prevention in atrial fibrillation. Warfarin is an alternative but requires regular INR monitoring and is less convenient. Dabigatran is another DOAC option but rivaroxaban is chosen here. 'Use DOACs for AF stroke prevention' is the guideline.",
+    "mnemonic": "DOACs for AF strokes",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_4",
+    "topic": "Community-Acquired Pneumonia Management",
+    "category": "all",
+    "question": "A 67-year-old man presents with fever, cough, and pleuritic chest pain. His CURB-65 score is 3. What is the most appropriate initial antibiotic management?",
+    "options": [
+      "Amoxicillin",
+      "Clarithromycin",
+      "Co-amoxiclav",
+      "Amoxicillin and Clarithromycin",
+      "Levofloxacin"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is Amoxicillin and Clarithromycin. According to NICE guidelines (CG191/NG138), a CURB-65 score of 3 indicates a high severity pneumonia, warranting dual antibiotic therapy with amoxicillin and clarithromycin to cover typical and atypical pathogens. \n\nAmoxicillin alone is inadequate for high-severity cases. Clarithromycin alone does not cover all common pathogens. Co-amoxiclav is used in severe cases or if there is suspicion of a resistant organism. Levofloxacin is not first-line due to its side effect profile. 'Dual antibiotics for high CURB-65' is key.",
+    "mnemonic": "Dual therapy for CURB-65",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng138",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia-acute-community-acquired"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_5",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 45-year-old woman presents with fatigue, weight gain, and cold intolerance. Her thyroid function tests show TSH 8.5 mU/L and free T4 9 pmol/L. What is the most appropriate initial treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Propylthiouracil",
+      "Liothyronine",
+      "Radioactive Iodine"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Levothyroxine. NICE NG145 (2019) recommends levothyroxine as the first-line treatment for hypothyroidism. The patient's elevated TSH and low free T4 confirm the diagnosis. Levothyroxine should be started at a dose of 25\u201350 mcg/day and titrated based on TSH levels. \n\nCarbimazole and propylthiouracil are used for hyperthyroidism, not hypothyroidism. Liothyronine is not recommended for routine use due to its short half-life. Radioactive iodine is used for hyperthyroid conditions. 'Levothyroxine for hypo' is the key principle.",
+    "mnemonic": "Levothyroxine for low",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_6",
+    "topic": "Acute Coronary Syndrome Management",
+    "category": "all",
+    "question": "A 60-year-old man presents with chest pain radiating to his left arm. ECG shows ST elevation in leads II, III, and aVF. What is the most appropriate next step in management?",
+    "options": [
+      "Thrombolysis",
+      "Primary PCI",
+      "Aspirin only",
+      "Clopidogrel only",
+      "Beta-blocker"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Primary PCI. NICE NG185 (2020) advises primary percutaneous coronary intervention (PCI) within 120 minutes of first medical contact for ST-elevation myocardial infarction (STEMI) unless contraindicated. This patient presents with a classic inferior STEMI pattern on ECG. \n\nThrombolysis is considered if PCI is unavailable within the timeframe. Aspirin and clopidogrel are essential but not the immediate priority. A beta-blocker is part of long-term management but not the immediate next step. 'PCI within 120 for STEMI' is crucial.",
+    "mnemonic": "PCI pronto for STEMI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_7",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 68-year-old male smoker presents with a chronic cough and dyspnoea. His FEV1 is 55% of predicted. What is the most appropriate inhaler therapy according to the NICE guidelines?",
+    "options": [
+      "SABA only",
+      "SAMA only",
+      "LABA alone",
+      "LABA + LAMA",
+      "ICS + LABA"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is LABA + LAMA. NICE NG115 (2018) suggests dual therapy with a long-acting beta-agonist (LABA) and a long-acting muscarinic antagonist (LAMA) for patients with moderate to severe COPD (FEV1 < 60% predicted) who experience symptoms or exacerbations. \n\nSABA or SAMA alone is for mild COPD. LABA alone is insufficient for moderate cases. ICS + LABA is reserved for frequent exacerbators due to pneumonia risk with ICS. 'Dual LABA/LAMA for moderate COPD' is the guideline.",
+    "mnemonic": "Dual LABA/LAMA for FEV1 < 60%",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_8",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 74-year-old woman in a care home is found to be confused and febrile. Her BP is 88/54 mmHg, HR 110 bpm, and temperature 38.9\u00b0C. Septic shock is suspected. What is the most appropriate initial management step?",
+    "options": [
+      "Oral antibiotics",
+      "IV fluid resuscitation",
+      "High-flow oxygen",
+      "Blood cultures",
+      "IV antibiotics"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is IV fluid resuscitation. NICE NG51 (2016) and the Surviving Sepsis Campaign 2021 emphasize the importance of administering 500 mL of crystalloid IV fluid bolus immediately in suspected septic shock to restore perfusion. \n\nOral antibiotics are inadequate. While IV antibiotics are crucial, fluid resuscitation is the immediate step to address hypotension. High-flow oxygen is supportive but secondary. Blood cultures should be taken but not delay fluid administration. 'Fluid first in sepsis' is vital.",
+    "mnemonic": "Fluids first for septic shock",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779044247004_9",
+    "topic": "Rheumatoid Arthritis Management",
+    "category": "all",
+    "question": "A 50-year-old woman presents with swollen and painful joints in her hands and morning stiffness lasting over an hour. She is diagnosed with rheumatoid arthritis. What is the most appropriate initial pharmacological treatment?",
+    "options": [
+      "NSAIDs",
+      "Methotrexate",
+      "Prednisolone",
+      "Sulfasalazine",
+      "Hydroxychloroquine"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Methotrexate. NICE NG100 (2018) recommends starting a disease-modifying antirheumatic drug (DMARD) like methotrexate within 3 months of symptom onset to slow disease progression in rheumatoid arthritis. Methotrexate is often the first choice due to its efficacy and long-term data. \n\nNSAIDs provide symptom relief but do not alter disease course. Prednisolone can be used as a bridging therapy but not long-term. Sulfasalazine and hydroxychloroquine are alternatives or add-ons but not typically first-line. 'Methotrexate first for RA' is essential.",
+    "mnemonic": "Methotrexate for early RA",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100",
+      "CKS": "https://cks.nice.org.uk/topics/rheumatoid-arthritis"
+    },
+    "difficulty": "intermediate"
   }
 ]
