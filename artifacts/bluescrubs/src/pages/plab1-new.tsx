@@ -17,38 +17,132 @@ import { useToast } from "@/hooks/use-toast";
 
 // Map a reference label/title to its canonical official URL.
 // All URLs below are openly accessible — no login, paywall, or subscription required.
-// Order matters: SPECIFIC topic-aware patterns first, then generic fallbacks.
+// Order matters: MOST SPECIFIC condition first, broad fallbacks last.
 const REFERENCE_URL_MAP: { match: RegExp; url: string }[] = [
-  // === NICE — deep-link to specialty topic indices ===
-  { match: /NICE.*(cardiovascular|cardiac|cardio)/i, url: 'https://www.nice.org.uk/guidance/conditions-and-diseases/cardiovascular-conditions' },
-  { match: /NICE.*(asthma|copd|respiratory)/i, url: 'https://www.nice.org.uk/guidance/conditions-and-diseases/respiratory-conditions' },
-  { match: /NICE.*(diabetes|type 1|type 2)/i, url: 'https://www.nice.org.uk/search?q=diabetes&ngt=Guidance' },
-  { match: /NICE.*(endocrin|nutrition|metabolic)/i, url: 'https://www.nice.org.uk/search?q=endocrine&ngt=Guidance' },
-  { match: /NICE.*(gastrointestinal|gastro|digestive|gi conditions|gi medications)/i, url: 'https://www.nice.org.uk/guidance/conditions-and-diseases/digestive-tract-conditions' },
-  { match: /NICE.*(antenatal|intrapartum|postnatal|pregnancy|maternity|maternal)/i, url: 'https://www.nice.org.uk/search?q=antenatal+care&ngt=Guidance' },
-  { match: /NICE.*(obstetric|gynaecol|gynecol|women)/i, url: 'https://www.nice.org.uk/search?q=obstetrics+gynaecology&ngt=Guidance' },
 
-  // === BNF — deep-link to system-level treatment summaries ===
+  // ── NICE: Cardiovascular ──────────────────────────────────────────────────
+  { match: /NICE.*(hypertension|raised blood pressure|high blood pressure)/i,     url: 'https://www.nice.org.uk/guidance/ng136' },
+  { match: /NICE.*(heart failure|HFrEF|HFpEF|cardiac failure)/i,                  url: 'https://www.nice.org.uk/guidance/ng106' },
+  { match: /NICE.*(atrial fibrillation|\bAF\b|anticoagulat)/i,                    url: 'https://www.nice.org.uk/guidance/ng196' },
+  { match: /NICE.*(acute coronary|STEMI|NSTEMI|myocardial infarction|\bMI\b)/i,   url: 'https://www.nice.org.uk/guidance/ng185' },
+  { match: /NICE.*(lipid|cholesterol|statin|dyslipidaemia|hypercholesterolaemia)/i, url: 'https://www.nice.org.uk/guidance/cg181' },
+  { match: /NICE.*(stroke|TIA|transient ischaemic)/i,                              url: 'https://www.nice.org.uk/guidance/ng128' },
+  { match: /NICE.*(pulmonary embolism|\bPE\b|\bDVT\b|venous thromboembolism|VTE)/i, url: 'https://www.nice.org.uk/guidance/ng158' },
+  { match: /NICE.*(cardiovascular|cardiac|cardio)/i,                               url: 'https://www.nice.org.uk/guidance/ng185' },
+
+  // ── NICE: Respiratory ────────────────────────────────────────────────────
+  { match: /NICE.*(asthma)/i,                                                       url: 'https://www.nice.org.uk/guidance/ng80' },
+  { match: /NICE.*(COPD|chronic obstructive pulmonary)/i,                           url: 'https://www.nice.org.uk/guidance/ng115' },
+  { match: /NICE.*(pneumonia|community.acquired)/i,                                 url: 'https://www.nice.org.uk/guidance/cg191' },
+  { match: /NICE.*(respiratory)/i,                                                   url: 'https://www.nice.org.uk/guidance/ng115' },
+
+  // ── NICE: Diabetes & Endocrine ────────────────────────────────────────────
+  { match: /NICE.*(type 1 diabetes|T1DM|type one diabetes)/i,                       url: 'https://www.nice.org.uk/guidance/ng17' },
+  { match: /NICE.*(type 2 diabetes|T2DM|type two diabetes)/i,                       url: 'https://www.nice.org.uk/guidance/ng28' },
+  { match: /NICE.*(gestational diabetes)/i,                                          url: 'https://www.nice.org.uk/guidance/ng3' },
+  { match: /NICE.*(diabetic ketoacidosis|DKA)/i,                                     url: 'https://www.nice.org.uk/guidance/ng17' },
+  { match: /NICE.*(diabetes)/i,                                                       url: 'https://www.nice.org.uk/guidance/ng28' },
+  { match: /NICE.*(hypothyroid|hyperthyroid|thyroid)/i,                              url: 'https://www.nice.org.uk/guidance/ng145' },
+  { match: /NICE.*(endocrin|metabolic|adrenal)/i,                                    url: 'https://www.nice.org.uk/guidance/ng28' },
+
+  // ── NICE: Infection & Sepsis ──────────────────────────────────────────────
+  { match: /NICE.*(urinary tract infection|\bUTI\b)/i,                               url: 'https://www.nice.org.uk/guidance/ng109' },
+  { match: /NICE.*(sepsis|septic shock)/i,                                            url: 'https://www.nice.org.uk/guidance/ng51' },
+  { match: /NICE.*(antibiotic|antimicrobial)/i,                                       url: 'https://www.nice.org.uk/guidance/ng15' },
+
+  // ── NICE: Gastroenterology ────────────────────────────────────────────────
+  { match: /NICE.*(Crohn|ulcerative colitis|\bIBD\b)/i,                              url: 'https://www.nice.org.uk/guidance/ng129' },
+  { match: /NICE.*(GORD|gastro.oesophageal reflux|reflux)/i,                         url: 'https://www.nice.org.uk/guidance/cg184' },
+  { match: /NICE.*(peptic ulcer|dyspepsia)/i,                                         url: 'https://www.nice.org.uk/guidance/cg184' },
+  { match: /NICE.*(appendicitis)/i,                                                    url: 'https://www.nice.org.uk/guidance/cg141' },
+  { match: /NICE.*(gastrointestinal|gastro|digestive)/i,                              url: 'https://www.nice.org.uk/guidance/cg184' },
+
+  // ── NICE: Obstetrics & Gynaecology ───────────────────────────────────────
+  { match: /NICE.*(pre.?eclampsia|eclampsia|hypertension in pregnancy)/i,             url: 'https://www.nice.org.uk/guidance/ng133' },
+  { match: /NICE.*(antenatal|intrapartum|postnatal|pregnancy|maternity)/i,            url: 'https://www.nice.org.uk/guidance/ng201' },
+  { match: /NICE.*(obstetric|gynaecol|gynecol|women)/i,                               url: 'https://www.nice.org.uk/guidance/ng201' },
+
+  // ── NICE: Neurology ───────────────────────────────────────────────────────
+  { match: /NICE.*(epilepsy|seizure)/i,                                                url: 'https://www.nice.org.uk/guidance/ng217' },
+  { match: /NICE.*(Parkinson)/i,                                                        url: 'https://www.nice.org.uk/guidance/ng71' },
+  { match: /NICE.*(multiple sclerosis|\bMS\b)/i,                                       url: 'https://www.nice.org.uk/guidance/cg186' },
+  { match: /NICE.*(dementia|Alzheimer)/i,                                               url: 'https://www.nice.org.uk/guidance/ng97' },
+  { match: /NICE.*(headache|migraine)/i,                                                url: 'https://www.nice.org.uk/guidance/cg150' },
+
+  // ── NICE: Psychiatry ──────────────────────────────────────────────────────
+  { match: /NICE.*(depression|antidepressant)/i,                                        url: 'https://www.nice.org.uk/guidance/ng222' },
+  { match: /NICE.*(anxiety|GAD|panic disorder)/i,                                       url: 'https://www.nice.org.uk/guidance/cg113' },
+  { match: /NICE.*(schizophrenia|psychosis|antipsychotic)/i,                            url: 'https://www.nice.org.uk/guidance/cg178' },
+  { match: /NICE.*(bipolar)/i,                                                           url: 'https://www.nice.org.uk/guidance/cg185' },
+
+  // ── NICE: Musculoskeletal & Skin ──────────────────────────────────────────
+  { match: /NICE.*(osteoporosis|fracture risk|bone density)/i,                          url: 'https://www.nice.org.uk/guidance/cg146' },
+  { match: /NICE.*(rheumatoid arthritis)/i,                                              url: 'https://www.nice.org.uk/guidance/ng100' },
+  { match: /NICE.*(gout)/i,                                                              url: 'https://www.nice.org.uk/guidance/cg56' },
+  { match: /NICE.*(psoriasis)/i,                                                         url: 'https://www.nice.org.uk/guidance/cg153' },
+  { match: /NICE.*(eczema|atopic dermatitis)/i,                                          url: 'https://www.nice.org.uk/guidance/cg57' },
+  { match: /NICE.*(acne)/i,                                                              url: 'https://www.nice.org.uk/guidance/ng198' },
+
+  // ── NICE: Renal ───────────────────────────────────────────────────────────
+  { match: /NICE.*(chronic kidney|CKD|renal disease)/i,                                 url: 'https://www.nice.org.uk/guidance/ng203' },
+  { match: /NICE.*(acute kidney injury|AKI)/i,                                           url: 'https://www.nice.org.uk/guidance/cg169' },
+
+  // ── NICE: Generic fallback (only if no specific match above) ─────────────
+  { match: /\bNICE\b/i, url: 'https://www.nice.org.uk/guidance' },
+
+  // ── CKS — specific topic pages ────────────────────────────────────────────
+  { match: /CKS.*(hypertension)/i,           url: 'https://cks.nice.org.uk/topics/hypertension/' },
+  { match: /CKS.*(heart failure)/i,          url: 'https://cks.nice.org.uk/topics/heart-failure-chronic/' },
+  { match: /CKS.*(atrial fibrillation|\bAF\b)/i, url: 'https://cks.nice.org.uk/topics/atrial-fibrillation/' },
+  { match: /CKS.*(asthma)/i,                 url: 'https://cks.nice.org.uk/topics/asthma/' },
+  { match: /CKS.*(COPD|obstructive pulmonary)/i, url: 'https://cks.nice.org.uk/topics/chronic-obstructive-pulmonary-disease/' },
+  { match: /CKS.*(type 1 diabetes|T1DM)/i,  url: 'https://cks.nice.org.uk/topics/diabetes-type-1/' },
+  { match: /CKS.*(type 2 diabetes|T2DM)/i,  url: 'https://cks.nice.org.uk/topics/diabetes-type-2/' },
+  { match: /CKS.*(UTI|urinary tract)/i,      url: 'https://cks.nice.org.uk/topics/urinary-tract-infection-lower-women/' },
+  { match: /CKS.*(sepsis)/i,                 url: 'https://cks.nice.org.uk/topics/sepsis/' },
+  { match: /CKS.*(depression)/i,             url: 'https://cks.nice.org.uk/topics/depression/' },
+  { match: /CKS.*(GORD|reflux)/i,            url: 'https://cks.nice.org.uk/topics/gastro-oesophageal-reflux-disease/' },
+  { match: /CKS.*(psoriasis)/i,              url: 'https://cks.nice.org.uk/topics/psoriasis/' },
+  { match: /CKS.*(eczema|atopic)/i,          url: 'https://cks.nice.org.uk/topics/eczema-atopic/' },
+  { match: /CKS.*(osteoporosis)/i,           url: 'https://cks.nice.org.uk/topics/osteoporosis-prevention-of-fragility-fractures/' },
+  { match: /\bCKS\b|Clinical Knowledge Summaries/i, url: 'https://cks.nice.org.uk/topics' },
+
+  // ── BNF — system-level treatment summaries ────────────────────────────────
+  { match: /BNF.*(anticoagulant|apixaban|warfarin|rivaroxaban|DOAC)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/anticoagulation/' },
+  { match: /BNF.*(antihypertensive|ACE inhibitor|ARB|calcium channel|beta.blocker)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/hypertension/' },
   { match: /BNF.*(cardiac|cardiovascular)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/cardiovascular-system-overview/' },
-  { match: /BNF.*(respiratory|asthma|copd)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/respiratory-system-overview/' },
-  { match: /BNF.*(diabetes|endocrin)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/diabetes/' },
-  { match: /BNF.*(gi|gastrointestinal|gastro|digestive)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/gastro-intestinal-system-overview/' },
-  { match: /BNF.*(women|obstetric|gynaecol|pregnancy|contracept)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/contraception-overview/' },
+  { match: /BNF.*(inhaler|bronchodilator|SABA|LABA|ICS|respiratory|asthma|copd)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/respiratory-system-overview/' },
+  { match: /BNF.*(insulin|metformin|SGLT2|GLP|diabetes|endocrin)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/diabetes/' },
+  { match: /BNF.*(antidepressant|SSRI|SNRI|TCA)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/antidepressant-drugs/' },
+  { match: /BNF.*(antibiotic|antibacterial|antimicrobial)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/antibacterials-principles-of-therapy/' },
+  { match: /BNF.*(analgesic|painkiller|opioid|NSAIDs)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/analgesics/' },
+  { match: /BNF.*(gi|gastrointestinal|gastro|digestive|PPI|proton pump)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/gastro-intestinal-system-overview/' },
+  { match: /BNF.*(contracept|women|obstetric|gynaecol|pregnancy)/i, url: 'https://bnf.nice.org.uk/treatment-summaries/contraception-overview/' },
+  { match: /\bBNF\b|British National Formulary/i, url: 'https://bnf.nice.org.uk/treatment-summaries/' },
 
-  // === Other source organisations (all free / open access) ===
+  // ── ESC — specific guideline documents ───────────────────────────────────
+  { match: /ESC.*(atrial fibrillation|\bAF\b)/i,  url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Atrial-Fibrillation-Guidelines' },
+  { match: /ESC.*(STEMI|ST.elevation|acute coronary)/i, url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Acute-Coronary-Syndromes-STEMI-Guidelines' },
+  { match: /ESC.*(dyslipidaemia|lipid|cholesterol)/i, url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias' },
   { match: /\bESC\b|European Society of Cardiology/i, url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines' },
+
+  // ── BTS — specific guideline pages ───────────────────────────────────────
+  { match: /BTS.*(asthma)/i, url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/asthma/' },
+  { match: /BTS.*(COPD|obstructive)/i, url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/copd/' },
   { match: /\bBTS\b|British Thoracic Society/i, url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/' },
-  { match: /\bBSG\b|British Society of Gastroenterology/i, url: 'https://www.bsg.org.uk/clinical-resource/guidelines/' },
-  { match: /\bRCOG\b|Royal College of Obstetricians/i, url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/' },
+
+  // ── Other organisations ───────────────────────────────────────────────────
+  { match: /\bBSG\b|British Society of Gastroenterology/i,     url: 'https://www.bsg.org.uk/clinical-resource/guidelines/' },
+  { match: /\bRCOG\b|Royal College of Obstetricians/i,         url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/' },
   { match: /\bRCGP\b|Royal College of General Practitioners/i, url: 'https://cks.nice.org.uk/topics' },
-  { match: /\bADA\b|American Diabetes Association/i, url: 'https://www.nice.org.uk/guidance/ng28' },
-  { match: /\bSIGN\b|Scottish Intercollegiate/i, url: 'https://www.sign.ac.uk/our-guidelines/' },
+  { match: /\bADA\b|American Diabetes Association/i,            url: 'https://www.nice.org.uk/guidance/ng28' },
+  { match: /\bSIGN\b|Scottish Intercollegiate/i,                url: 'https://www.sign.ac.uk/our-guidelines/' },
   { match: /\bGMC\b.*Good Medical Practice|Good Medical Practice/i, url: 'https://www.gmc-uk.org/professional-standards/professional-standards-for-doctors/good-medical-practice' },
+  { match: /\bGMC\b.*consent/i,   url: 'https://www.gmc-uk.org/ethical-guidance/ethical-guidance-for-doctors/consent' },
+  { match: /\bGMC\b.*child|0.18/i, url: 'https://www.gmc-uk.org/ethical-guidance/ethical-guidance-for-doctors/0-18-years' },
+  { match: /\bGMC\b/i,            url: 'https://www.gmc-uk.org/professional-standards/professional-standards-for-doctors/good-medical-practice' },
   { match: /\bMLA\b|Medical Licensing Assessment|Content Map/i, url: 'https://www.gmc-uk.org/education/standards-guidance-and-curricula/curricula/medical-licensing-assessment' },
   { match: /Foundation Programme/i, url: 'https://foundationprogramme.nhs.uk/curriculum/' },
-  { match: /\bCKS\b|Clinical Knowledge Summaries/i, url: 'https://cks.nice.org.uk/topics' },
-  { match: /\bBNF\b|British National Formulary/i, url: 'https://bnf.nice.org.uk/treatment-summaries/' },
-  { match: /\bNICE\b/i, url: 'https://www.nice.org.uk/guidance' },
 ];
 
 const getReferenceUrl = (text: string): string | null => {
