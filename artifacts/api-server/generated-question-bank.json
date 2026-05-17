@@ -1746,22 +1746,16 @@
     "topic": "Respiratory"
   },
   {
-    "question": "A 50-year-old female presents with joint pain, morning stiffness, and a positive rheumatoid factor. What is the most appropriate initial treatment?",
+    "question": "A 50-year-old female is newly diagnosed with rheumatoid arthritis. She has joint pain, morning stiffness lasting >1 hour, and a positive rheumatoid factor. She has no contraindications to disease-modifying therapy. What is the most appropriate initial treatment according to NICE NG100?",
     "options": [
+      "NSAIDs alone",
       "Methotrexate",
-      "NSAIDs",
-      "Steroids",
-      "Hydroxychloroquine",
-      "Sulfasalazine"
+      "Hydroxychloroquine alone",
+      "Biologic therapy (anti-TNF)",
+      "Oral prednisolone alone"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Methotrexate is the first-line DMARD but NSAIDs are used for pain relief.",
-      "B": "NSAIDs are used initially for symptom control.",
-      "C": "Steroids are used for flare-ups, not first-line maintenance.",
-      "D": "Hydroxychloroquine is used in mild cases or as an adjunct.",
-      "E": "Sulfasalazine is another DMARD but not first choice."
-    },
+    "explanation": "NICE NG100 (2018) recommends starting a conventional synthetic DMARD within 3 months of diagnosis in all patients with active RA. Methotrexate is the anchor DMARD of choice and should be offered as first-line DMARD, ideally in combination with a short course of bridging corticosteroid to control symptoms while methotrexate takes effect (onset 6\u201312 weeks). NSAIDs alone (Option A) only treat symptoms and have no disease-modifying effect \u2014 they should not be used as the sole treatment. Anti-TNF biologics (Option D) are reserved for patients who have failed two conventional DMARDs. Folic acid 5 mg weekly is co-prescribed with methotrexate to reduce toxicity.",
     "mnemonic": "Rheuma-NSAIDs",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng100"
@@ -1769,7 +1763,8 @@
     "id": "generated_all_1779034113027_9",
     "category": "all",
     "difficulty": "intermediate",
-    "topic": "Rheumatology"
+    "topic": "Rheumatoid Arthritis \u2014 Initial DMARD Therapy",
+    "specialty": "Rheumatology"
   },
   {
     "id": "generated_respiratory_1779034334222_0",
@@ -2174,24 +2169,25 @@
   },
   {
     "id": "generated_all_1779039924287_8",
-    "topic": "Depression",
+    "topic": "Depression \u2014 Moderate: First-Line Treatment (NICE NG222)",
     "category": "all",
-    "question": "A 35-year-old woman presents with low mood, loss of interest in activities, and fatigue for the past two months. Her PHQ-9 score suggests moderate depression. What is the most appropriate initial treatment?",
+    "question": "A 35-year-old woman presents with low mood, loss of interest in activities, and fatigue for the past two months. She has had no previous treatment for depression. Her PHQ-9 score indicates moderate depression. According to NICE NG222, what is the most appropriate initial treatment?",
     "options": [
-      "Sertraline",
-      "Amitriptyline",
-      "Counselling",
-      "Cognitive Behavioural Therapy (CBT)",
-      "Fluoxetine"
+      "Sertraline alone",
+      "Amitriptyline alone",
+      "Individual CBT alone",
+      "A combination of an SSRI (e.g. sertraline) and individual CBT",
+      "Electroconvulsive therapy (ECT)"
     ],
     "answer": 3,
-    "explanation": "The correct answer is Cognitive Behavioural Therapy (CBT). NICE guidelines recommend CBT as a first-line treatment for moderate depression, especially if the patient prefers non-pharmacological interventions. CBT is effective in altering negative thought patterns and behaviours contributing to depression.\nSertraline and fluoxetine are SSRIs that may be considered if psychological therapies are declined or if depression is severe. Amitriptyline, a tricyclic antidepressant, is not first-line due to side effect profiles. Counselling may be helpful but is not as structured or evidence-based as CBT for depression. Recognizing the importance of psychological therapies in depression management is key to providing comprehensive care.",
+    "explanation": "NICE NG222 (2022) recommends that adults with moderate depression should be offered a combination of an antidepressant and a psychological therapy such as individual CBT, as combined treatment is more effective than either alone for moderate-to-severe depression. The preferred first-line antidepressant is an SSRI \u2014 sertraline is the most commonly used first-line SSRI in UK primary care due to its safety profile. Amitriptyline (a TCA) is not first-line due to its toxicity in overdose and side effect profile. ECT is reserved for severe treatment-resistant depression. For mild depression, NICE recommends low-intensity psychosocial interventions (e.g. guided self-help, group CBT) before prescribing medication.",
     "mnemonic": "CBT Clears the Blues Thoughtfully.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng222",
       "CKS": "https://cks.nice.org.uk/topics/depression"
     },
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "specialty": "Psychiatry"
   },
   {
     "id": "generated_all_1779039924287_9",
@@ -2302,24 +2298,25 @@
   },
   {
     "id": "generated_all_1779041298976_4",
-    "topic": "Heart Failure Management",
+    "topic": "Heart Failure with Reduced EF \u2014 First-Line Therapy (NICE NG106)",
     "category": "all",
-    "question": "A 68-year-old male with a history of myocardial infarction presents with exertional dyspnoea and ankle swelling. Echocardiogram shows left ventricular ejection fraction of 35%. What is the first-line treatment according to NICE guidelines?",
+    "question": "A 68-year-old male with a history of myocardial infarction presents with exertional dyspnoea and ankle swelling. Echocardiogram shows left ventricular ejection fraction (LVEF) of 35%, confirming HFrEF. He is not currently on any regular cardiac medications. What is the most appropriate first drug class to initiate according to NICE NG106?",
     "options": [
-      "ACE inhibitor",
-      "Beta blocker",
-      "Diuretic",
+      "ACE inhibitor (e.g. ramipril)",
+      "Beta-blocker (e.g. bisoprolol)",
+      "Loop diuretic (e.g. furosemide)",
       "Digoxin",
-      "ARB"
+      "ARB (e.g. candesartan)"
     ],
     "answer": 0,
-    "explanation": "The patient has heart failure with reduced ejection fraction (HFrEF). NICE guidelines recommend an ACE inhibitor such as ramipril as a first-line treatment to improve symptoms and reduce mortality. Beta blockers are also crucial in HFrEF but are typically introduced after ACE inhibitors. Diuretics are used for symptomatic relief of fluid overload but do not improve long-term outcomes. Digoxin is reserved for patients with atrial fibrillation or those who remain symptomatic despite optimal treatment. ARBs are alternatives for those intolerant to ACE inhibitors.",
+    "explanation": "NICE NG106 (2023) recommends quadruple therapy for HFrEF: ACE inhibitor (or ARNI), beta-blocker, MRA (spironolactone), and SGLT-2 inhibitor. All four drug classes improve mortality. In practice, an ACE inhibitor (e.g. ramipril) is typically started first, once the patient is haemodynamically stable, followed sequentially by the other agents. The ACE inhibitor reduces afterload and neurohumoral activation. A loop diuretic (furosemide) should be added for symptomatic fluid overload but does not improve mortality. ARB is an alternative to ACE inhibitor if the patient develops a cough. The goal is to titrate all four pillars to maximum tolerated doses.",
     "mnemonic": "ACE first in heart failure",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
       "CKS": "https://cks.nice.org.uk/topics/heart-failure"
     },
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "specialty": "Cardiology"
   },
   {
     "id": "generated_all_1779041298976_5",
@@ -2680,24 +2677,25 @@
   },
   {
     "id": "generated_all_1779041565982_2",
-    "topic": "Diabetes Mellitus",
+    "topic": "Type 2 Diabetes \u2014 Step-Up Therapy (NICE NG28)",
     "category": "all",
-    "question": "A 60-year-old woman with type 2 diabetes presents for a routine check-up. Her HbA1c is 65 mmol/mol (8.1%). According to the latest NICE guidelines, what is the next step in her management?",
+    "question": "A 60-year-old woman with type 2 diabetes is reviewed in clinic. She is currently on metformin 1 g BD and has no cardiovascular disease or significant renal impairment (eGFR 72). Her HbA1c is 65 mmol/mol (8.1%). According to NICE NG28, what is the most appropriate next step?",
     "options": [
-      "Increase metformin dose",
-      "Add sulfonylurea",
-      "Add DPP-4 inhibitor",
-      "Add GLP-1 receptor agonist",
-      "Start insulin"
+      "Increase metformin to maximum dose",
+      "Add an SGLT-2 inhibitor (e.g. dapagliflozin or empagliflozin)",
+      "Add a sulfonylurea",
+      "Add a DPP-4 inhibitor (e.g. sitagliptin)",
+      "Start insulin therapy"
     ],
     "answer": 1,
-    "explanation": "Adding a sulfonylurea is recommended when metformin alone does not adequately control blood glucose levels, as indicated by her HbA1c of 65 mmol/mol. NICE guidelines for type 2 diabetes suggest considering a second oral agent like sulfonylureas if metformin monotherapy is insufficient. Increasing metformin is not an option as the maximum tolerable dose is presumed. DPP-4 inhibitors or GLP-1 receptor agonists are alternatives but more costly. Insulin is considered when oral therapies are inadequate. Remember: 'Sulfonylurea for Supplement'.",
+    "explanation": "NICE NG28 (updated 2022) recommends adding an SGLT-2 inhibitor as the preferred second-line agent when HbA1c remains above target on metformin alone, especially in patients with established or high risk of cardiovascular disease or CKD. SGLT-2 inhibitors (dapagliflozin, empagliflozin, canagliflozin) have additional cardiorenal protective benefits beyond glucose lowering. A sulfonylurea (Option C) is still an option but is less preferred due to the risk of hypoglycaemia and weight gain, and NICE now recommends considering SGLT-2i or DPP-4i ahead of sulfonylurea in most cases. DPP-4 inhibitor (Option D) is appropriate if SGLT-2i is not tolerated or contraindicated. The target HbA1c on drug therapy is 53 mmol/mol (7.0%).",
     "mnemonic": "Sulfonylurea for Supplement",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng28",
       "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
     },
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "specialty": "Endocrinology"
   },
   {
     "id": "generated_all_1779041565982_3",
@@ -3295,24 +3293,25 @@
   },
   {
     "id": "generated_all_1779042657723_1",
-    "topic": "Atrial Fibrillation",
+    "topic": "Atrial Fibrillation \u2014 Anticoagulation (NICE NG196)",
     "category": "all",
-    "question": "A 70-year-old man presents with palpitations and is found to have atrial fibrillation on an ECG. He is otherwise healthy and has no history of heart failure or structural heart disease. His CHA\u2082DS\u2082-VASc score is 2. What is the most appropriate management strategy for his atrial fibrillation?",
+    "question": "A 70-year-old man is newly diagnosed with atrial fibrillation. His CHA\u2082DS\u2082-VASc score is 2. He has hypertension and type 2 diabetes, but no history of stroke, heart failure, or structural heart disease. He is not currently on any anticoagulant. What is the most appropriate management according to NICE NG196?",
     "options": [
       "Start warfarin and rate control with bisoprolol",
-      "Rhythm control with amiodarone",
-      "Rate control with digoxin",
-      "No treatment is necessary",
-      "Cardioversion with flecainide"
+      "Start a DOAC (e.g. apixaban or rivaroxaban) and rate control with bisoprolol",
+      "Rate control with bisoprolol only \u2014 anticoagulation not yet indicated",
+      "Rhythm control with amiodarone only",
+      "Aspirin 75 mg daily and rate control"
     ],
-    "answer": 0,
-    "explanation": "The correct answer is to start warfarin and rate control with bisoprolol. According to NICE NG196 (2021), rate control is typically the first-line strategy in atrial fibrillation unless the patient is highly symptomatic. Bisoprolol, a beta-blocker, is suitable for rate control. Given the CHA\u2082DS\u2082-VASc score of 2, anticoagulation is recommended to reduce stroke risk, with DOACs preferred, although warfarin is a valid alternative. Amiodarone and flecainide are used for rhythm control, generally in symptomatic cases or when rate control fails. Digoxin is less effective for rate control in active patients and is typically reserved for those with sedentary lifestyles. Clinical pearl: 'Rhythm for symptomatic, rate for most' simplifies management decisions. For more details, see NICE NG196.",
+    "answer": 1,
+    "explanation": "NICE NG196 (2021) recommends anticoagulation for AF when CHA\u2082DS\u2082-VASc \u22652 in men (\u22653 in women). This patient scores 2 (hypertension + diabetes), so anticoagulation is indicated. A direct oral anticoagulant (DOAC \u2014 apixaban, rivaroxaban, edoxaban, or dabigatran) is preferred over warfarin for non-valvular AF because DOACs have comparable or superior efficacy with a better safety profile and no requirement for INR monitoring. Warfarin is now reserved for specific indications (e.g. mechanical heart valves, antiphospholipid syndrome). Rate control (bisoprolol or CCB) is used alongside anticoagulation. Aspirin is not recommended for stroke prevention in AF \u2014 it has poor efficacy and similar bleeding risk to anticoagulants.",
     "mnemonic": "Rhythm for symptoms, rate for most!",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng196",
       "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
     },
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "specialty": "Cardiology"
   },
   {
     "id": "generated_all_1779042657723_2",
@@ -3783,24 +3782,25 @@
   },
   {
     "id": "generated_all_1779043452703_1",
-    "topic": "Asthma Management",
+    "topic": "Asthma \u2014 SABA-Only Prescribing Review (NICE NG245)",
     "category": "all",
-    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She has been using her salbutamol inhaler more frequently and wakes up at night due to breathlessness. What is the most appropriate next step in her asthma management?",
+    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She has never been prescribed a preventer inhaler and is currently on salbutamol PRN only. She reports using her salbutamol inhaler more frequently and wakes up at night due to breathlessness. According to NICE NG245, what is the most appropriate next step?",
     "options": [
       "Increase salbutamol use",
-      "Add a low-dose ICS",
+      "Add a regular low-dose inhaled corticosteroid (ICS) alongside the salbutamol",
       "Prescribe a long-acting beta-agonist (LABA)",
       "Refer to a respiratory specialist",
       "Prescribe oral corticosteroids"
     ],
     "answer": 1,
-    "explanation": "The most appropriate next step in managing this patient's asthma is to add a low-dose inhaled corticosteroid (ICS). According to the updated NICE NG245 guidelines, all adults with asthma should have a regular ICS prescribed alongside a SABA. The patient's current reliance on her SABA and nocturnal symptoms indicate that her asthma is not well controlled, necessitating the initiation of an ICS to reduce inflammation and control symptoms. \nIncreasing salbutamol use is not recommended as it does not address underlying inflammation. A LABA should be added only after ICS treatment has been established. Referral to a respiratory specialist is not required at this stage. Oral corticosteroids are reserved for acute exacerbations. Remember, for asthma management, start with a SABA and low-dose ICS as foundation therapy.",
+    "explanation": "NICE NG245 (November 2024) requires that a regular low-dose ICS be co-prescribed alongside a SABA reliever for all adults with asthma \u2014 SABA-only prescribing is no longer acceptable. This patient has been on salbutamol alone and has never had a preventer, which means her treatment needs updating to align with current guidelines. Using SABA more frequently and having night-time symptoms are both NG245 indicators that a preventer is essential. The correct next step is to add a regular low-dose ICS (e.g. beclometasone 200 mcg/day). LABA (Option C) is Step 2 \u2014 it is only added after ICS alone has been tried and symptoms remain uncontrolled; LABA must not be prescribed without ICS.",
     "mnemonic": "ICS is the base for asthma race.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
       "CKS": "https://cks.nice.org.uk/topics/asthma"
     },
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "specialty": "Respiratory"
   },
   {
     "id": "generated_all_1779043452703_2",
