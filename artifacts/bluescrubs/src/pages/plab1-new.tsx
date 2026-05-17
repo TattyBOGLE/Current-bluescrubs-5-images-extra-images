@@ -160,6 +160,60 @@ function extractTopicFromLabel(text: string): string {
 function toQ(s: string) { return encodeURIComponent(s.trim()); }
 function toSlug(s: string) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
 
+// CKS topic slugs are not always predictable from condition names — maintain an exact map
+// for the most common PLAB 1 topics and strip action-words for the rest.
+const CKS_SLUG_MAP: Record<string, string> = {
+  'asthma': 'asthma',
+  'copd': 'chronic-obstructive-pulmonary-disease',
+  'chronic-obstructive-pulmonary-disease': 'chronic-obstructive-pulmonary-disease',
+  'hypertension': 'hypertension',
+  'heart-failure': 'heart-failure-chronic',
+  'atrial-fibrillation': 'atrial-fibrillation',
+  'af': 'atrial-fibrillation',
+  'stroke': 'stroke-and-tia',
+  'tia': 'stroke-and-tia',
+  'type-1-diabetes': 'diabetes-type-1',
+  'type-2-diabetes': 'diabetes-type-2',
+  'diabetic-ketoacidosis': 'diabetes-type-1',
+  'dka': 'diabetes-type-1',
+  'hypothyroidism': 'hypothyroidism',
+  'hyperthyroidism': 'hyperthyroidism',
+  'uti': 'urinary-tract-infection-lower-women',
+  'urinary-tract-infection': 'urinary-tract-infection-lower-women',
+  'sepsis': 'sepsis',
+  'pneumonia': 'pneumonia',
+  'depression': 'depression',
+  'anxiety': 'generalized-anxiety-disorder',
+  'epilepsy': 'epilepsy',
+  'migraine': 'migraine',
+  'gord': 'gastro-oesophageal-reflux-disease',
+  'gastro-oesophageal-reflux-disease': 'gastro-oesophageal-reflux-disease',
+  'gastroesophageal-reflux-disease': 'gastro-oesophageal-reflux-disease',
+  'peptic-ulcer': 'dyspepsia',
+  'dyspepsia': 'dyspepsia',
+  'eczema': 'eczema-atopic',
+  'atopic-eczema': 'eczema-atopic',
+  'atopic-dermatitis': 'eczema-atopic',
+  'psoriasis': 'psoriasis',
+  'osteoporosis': 'osteoporosis-prevention-of-fragility-fractures',
+  'rheumatoid-arthritis': 'rheumatoid-arthritis',
+  'gout': 'gout',
+  'ckd': 'chronic-kidney-disease',
+  'chronic-kidney-disease': 'chronic-kidney-disease',
+  'anaphylaxis': 'anaphylaxis',
+  'otitis-media': 'otitis-media-acute',
+};
+
+// Strip action-word suffixes ("Management", "Diagnosis", etc.) then look up the CKS slug
+function toCKSSlug(topic: string): string {
+  const stripped = topic
+    .replace(/\b(management|diagnosis|recognition|treatment|exacerbation|prevention|care|overview|approach|assessment|investigation|workup|acute|chronic)\b/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const base = toSlug(stripped || topic);
+  return CKS_SLUG_MAP[base] ?? base;
+}
+
 interface RefLink { url: string; label: string }
 
 function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
@@ -169,7 +223,7 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
     : extractTopicFromLabel(text);
   const hasT = rawTopic.length > 2;
   const q = toQ(rawTopic);
-  const slug = toSlug(rawTopic);
+  const cksSlug = toCKSSlug(rawTopic);
 
   if (/\bNICE\b/i.test(text)) {
     return {
@@ -179,7 +233,7 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   }
   if (/\bCKS\b|Clinical Knowledge Summaries/i.test(text)) {
     return {
-      url: hasT ? `https://cks.nice.org.uk/topics/${slug}/` : 'https://cks.nice.org.uk/topics',
+      url: hasT ? `https://cks.nice.org.uk/topics/${cksSlug}/` : 'https://cks.nice.org.uk/topics',
       label: hasT ? `CKS — ${rawTopic}` : 'CKS Clinical Knowledge Summaries',
     };
   }
@@ -205,7 +259,7 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   }
   if (/\bRCGP\b|Royal College of General Practitioners/i.test(text)) {
     return {
-      url: hasT ? `https://cks.nice.org.uk/topics/${slug}/` : 'https://cks.nice.org.uk/topics',
+      url: hasT ? `https://cks.nice.org.uk/topics/${cksSlug}/` : 'https://cks.nice.org.uk/topics',
       label: hasT ? `CKS (RCGP) — ${rawTopic}` : 'CKS — RCGP-aligned Guidelines',
     };
   }
