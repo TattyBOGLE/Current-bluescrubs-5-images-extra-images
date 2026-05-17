@@ -412,7 +412,10 @@ export default function PLAB1New() {
       ? Object.entries(raw).map(([k, v]) => `Option ${k}: ${v}`).join('\n')
       : String(raw);
     const userAnswerIndex = parseInt(userAnswer);
-    const correctAnswerIndex = question.correctAnswer;
+    let correctAnswerIndex = question.correctAnswer ?? question.correct_answer ?? question.answer;
+    if (typeof correctAnswerIndex === 'string') {
+      correctAnswerIndex = correctAnswerIndex.charCodeAt(0) - 65;
+    }
     
     if (isCorrect) {
       // User got it right - show why their answer is correct
@@ -1206,9 +1209,8 @@ export default function PLAB1New() {
   const currentQuestion = generatedQuestions[currentQuestionIndex];
   const isCorrect = showExplanation && selectedAnswer !== "" && (() => {
     if (!currentQuestion) return false;
-    let correctAnswerIndex = currentQuestion.correctAnswer;
+    let correctAnswerIndex = currentQuestion.correctAnswer ?? currentQuestion.correct_answer ?? currentQuestion.answer;
     if (typeof correctAnswerIndex === 'string') {
-      // Convert letter-based answers (A, B, C, D, E) to index
       correctAnswerIndex = correctAnswerIndex.charCodeAt(0) - 65;
     }
     return parseInt(selectedAnswer) === correctAnswerIndex;
@@ -2060,7 +2062,8 @@ export default function PLAB1New() {
               })().map((option: string, index: number) => {
                 // Handle different correct answer formats
                 // Use ?? not || so that index 0 (option A) is not treated as falsy
-                let correctAnswerIndex = currentQuestion.correctAnswer ?? currentQuestion.correct_answer;
+                // Also check .answer — used by the AI-generated question bank
+                let correctAnswerIndex = currentQuestion.correctAnswer ?? currentQuestion.correct_answer ?? currentQuestion.answer;
                 if (typeof correctAnswerIndex === 'string') {
                   // Convert letter-based answers (A, B, C, D, E) to index
                   correctAnswerIndex = correctAnswerIndex.charCodeAt(0) - 65; // A=0, B=1, etc.
