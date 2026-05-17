@@ -2020,24 +2020,25 @@
   },
   {
     "id": "generated_all_1779039924287_1",
-    "topic": "Diabetes Mellitus",
+    "topic": "Type 2 Diabetes \u2014 Step-Up Therapy: SGLT-2i vs Sulfonylurea (NICE NG28 2022)",
     "category": "all",
-    "question": "A 45-year-old man with type 2 diabetes presents with a blood glucose level of 15 mmol/L and HbA1c of 9%. He is currently on metformin. According to NICE guidelines, what is the next step in managing his diabetes?",
+    "question": "A 45-year-old man with type 2 diabetes is reviewed in clinic. He is currently on metformin 1 g BD. His HbA1c is 72 mmol/mol (8.7%) and he has no established cardiovascular disease, CKD, or heart failure. According to NICE NG28, what is the most appropriate next step?",
     "options": [
-      "Add Gliclazide",
-      "Add Sitagliptin",
-      "Add Insulin",
-      "Increase Metformin dose",
-      "Add Pioglitazone"
+      "Add an SGLT-2 inhibitor (e.g. dapagliflozin)",
+      "Add a DPP-4 inhibitor (e.g. sitagliptin)",
+      "Add a sulfonylurea (e.g. gliclazide)",
+      "Increase metformin to maximum dose",
+      "Start insulin therapy"
     ],
     "answer": 0,
-    "explanation": "The correct answer is to add Gliclazide. According to NICE guidelines, if metformin alone does not achieve adequate glycaemic control (evidenced by the patient's high HbA1c), a sulfonylurea like gliclazide is often recommended as the next step. Gliclazide helps increase insulin secretion and is effective in reducing HbA1c levels.\nSitagliptin, a DPP-4 inhibitor, could be considered if there are specific contraindications to sulfonylureas. Insulin is generally reserved for more severe cases or when oral medications are inadequate. Increasing the metformin dose is an option only if the current dose is not at maximum. Pioglitazone, a thiazolidinedione, is not typically the first choice due to side effects. Always review patient-specific factors like weight, hypoglycemia risk, and comorbidities when choosing a second-line agent.",
+    "explanation": "NICE NG28 (2022 update) recommends that when HbA1c remains above target on metformin alone, the preferred second-line agents are an SGLT-2 inhibitor or a DPP-4 inhibitor \u2014 not a sulfonylurea. SGLT-2 inhibitors (dapagliflozin, empagliflozin, canagliflozin) are preferred when there is established CVD, high CVD risk, or CKD, but are also acceptable second-line in patients without these conditions. Sulfonylureas (Option C) are still listed in NG28 as an option but are now less preferred due to hypoglycaemia risk, weight gain, and lack of cardiovascular or renal benefit. DPP-4 inhibitors (Option B) are weight-neutral alternatives with fewer side effects than sulfonylureas. Increasing metformin beyond the currently tolerated dose is unlikely to add benefit. Insulin is reserved for when oral/injectable therapy has failed.",
     "mnemonic": "Guide Metformin with Gliclazide when Glucose is Grim.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng28",
       "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
     },
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "specialty": "Endocrinology"
   },
   {
     "id": "generated_all_1779039924287_2",
