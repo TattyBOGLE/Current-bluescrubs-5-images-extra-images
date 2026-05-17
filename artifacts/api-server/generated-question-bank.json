@@ -2869,24 +2869,27 @@
   },
   {
     "id": "generated_all_1779041660084_1",
-    "topic": "Asthma Management",
-    "category": "all",
-    "question": "A 30-year-old woman with a history of asthma presents with increased wheezing and shortness of breath. Her peak expiratory flow rate (PEFR) is 55% of her predicted value. She uses her salbutamol inhaler more than three times a week. What is the most appropriate step-up treatment in this case?",
+    "question": "A 30-year-old woman with asthma has been on regular low-dose beclometasone 200 mcg/day for 4 months. She re-presents with worsening wheeze and shortness of breath. Her PEFR is 55% of predicted and she is using her salbutamol inhaler more than three times a week despite her ICS. What is the most appropriate next step in her management?",
     "options": [
-      "Increase salbutamol",
-      "Add beclometasone inhaler",
+      "Increase salbutamol frequency",
+      "Switch to oral prednisolone",
+      "Add a long-acting beta-agonist (LABA) to her existing low-dose ICS",
       "Add montelukast",
-      "Add theophylline",
-      "Refer to a specialist"
+      "Refer to a specialist immediately"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is to add a beclometasone inhaler. NICE guidelines recommend adding an inhaled corticosteroid (such as beclometasone) for patients who are using a short-acting beta-agonist like salbutamol more than three times a week or experiencing night-time symptoms. Increasing salbutamol usage does not address the underlying inflammation. Montelukast and theophylline are not first-line add-ons in this scenario. Referral to a specialist is considered when control remains poor despite optimal therapy. A useful clinical pearl is \u20182+3 rule\u2019: Two or more days a week using a SABA or three nights a month waking due to asthma requires a step-up.",
-    "mnemonic": "ICS for Inflammation in Asthma",
-    "links": {
-      "NICE": "https://www.nice.org.uk/guidance/ng245",
-      "CKS": "https://cks.nice.org.uk/topics/asthma"
-    },
-    "difficulty": "intermediate"
+    "correctAnswer": 2,
+    "explanation": "NICE NG245 (2024) \u2014 Step 2: when asthma remains uncontrolled on regular low-dose ICS (using SABA >3x/week or night symptoms), the correct next step is to ADD a LABA to the existing ICS, not to increase the ICS dose or switch to oral steroids. This is ideally given as a fixed-dose ICS/LABA combination inhaler (e.g. beclometasone/formoterol), or as MART therapy. A PEFR of 55% with ongoing symptoms on ICS confirms Step 2 is required. Oral prednisolone is reserved for acute exacerbations only. A specialist referral is not required before trialling Step 2.",
+    "topic": "Asthma \u2014 Step 2 Management (ICS + LABA)",
+    "specialty": "Respiratory",
+    "difficulty": "medium",
+    "tags": [
+      "asthma",
+      "NICE NG245",
+      "LABA",
+      "ICS",
+      "step 2",
+      "step-up"
+    ]
   },
   {
     "id": "generated_all_1779041660084_2",
@@ -3079,24 +3082,27 @@
   },
   {
     "id": "generated_all_1779042522269_1",
-    "topic": "Asthma Management",
-    "category": "all",
-    "question": "A 30-year-old female with a history of asthma presents with increased use of her salbutamol inhaler over the past month. She currently uses salbutamol as needed but reports waking up at night due to asthma symptoms. According to the latest NICE guidelines, what is the most appropriate next step in her management?",
+    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She is currently on salbutamol PRN only \u2014 she has never been prescribed a preventer inhaler. She reports using her salbutamol inhaler most days and wakes up at night with breathlessness twice a week. According to NICE NG245, what is the most appropriate next step?",
     "options": [
       "Increase the frequency of salbutamol use",
-      "Initiate low-dose inhaled corticosteroid therapy",
-      "Add a long-acting beta agonist",
+      "Initiate a regular low-dose inhaled corticosteroid (ICS) alongside her salbutamol",
+      "Add a long-acting beta-agonist (LABA)",
       "Prescribe oral corticosteroids",
-      "Initiate leukotriene receptor antagonist therapy"
+      "Initiate leukotriene receptor antagonist (LTRA) therapy"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is to initiate low-dose inhaled corticosteroid (ICS) therapy. NICE NG245 (November 2024) recommends starting all adults with asthma on a regular low-dose ICS to control symptoms and reduce exacerbations, alongside their SABA. This patient has symptoms suggestive of inadequate control with SABA alone, and ICS is the next step. Increasing SABA use is not recommended as it does not address inflammation. LABA should only be added after establishing ICS. Oral corticosteroids are for acute exacerbations only, and leukotriene receptor antagonists are considered if ICS and LABA are inadequate.",
-    "mnemonic": "ICS first: Inhaled Corticosteroids Start first for asthma",
-    "links": {
-      "NICE": "https://www.nice.org.uk/guidance/ng245",
-      "CKS": "https://cks.nice.org.uk/topics/asthma/"
-    },
-    "difficulty": "intermediate"
+    "correctAnswer": 1,
+    "explanation": "NICE NG245 (November 2024) states that ALL adults with asthma should be prescribed a regular low-dose ICS alongside their SABA reliever from the point of diagnosis. This patient has never had a preventer inhaler \u2014 this is non-compliant with NG245. Using SABA on most days and having night-time symptoms are both triggers that indicate a preventer is essential. The correct next step is to add a regular low-dose ICS (e.g. beclometasone 200 mcg/day). LABA (Option C) is Step 2 and is only added after ICS has been established and symptoms remain uncontrolled \u2014 it must NOT be given without ICS. SABA-only therapy is no longer an acceptable complete regimen under NG245.",
+    "topic": "Asthma \u2014 Step 1: Initiating ICS (NICE NG245)",
+    "specialty": "Respiratory",
+    "difficulty": "easy",
+    "tags": [
+      "asthma",
+      "NICE NG245",
+      "ICS",
+      "SABA only",
+      "step 1",
+      "preventer inhaler"
+    ]
   },
   {
     "id": "generated_all_1779042522269_2",
@@ -3310,24 +3316,26 @@
   },
   {
     "id": "generated_all_1779042657723_2",
-    "topic": "Asthma in Adults",
-    "category": "all",
-    "question": "A 35-year-old woman with newly diagnosed asthma is seen in the clinic. She experiences symptoms twice a week and uses her salbutamol inhaler once daily. What is the most appropriate management strategy according to the latest NICE guidelines?",
+    "question": "A 35-year-old woman is newly diagnosed with asthma in clinic today. She has symptoms twice a week and has been given a salbutamol inhaler for immediate relief. She has not yet been prescribed any preventer treatment. What is the most appropriate management strategy according to NICE NG245?",
     "options": [
-      "Continue with salbutamol alone",
-      "Add a low-dose inhaled corticosteroid",
-      "Switch to a long-acting beta-agonist",
+      "Continue with salbutamol alone and review in 6 weeks",
+      "Prescribe a regular low-dose ICS today alongside the salbutamol",
+      "Switch to a long-acting beta-agonist instead of salbutamol",
       "Add oral theophylline",
-      "Introduce a leukotriene receptor antagonist"
+      "Introduce montelukast as the first preventer"
     ],
-    "answer": 1,
-    "explanation": "The correct answer is to add a low-dose inhaled corticosteroid. According to NICE NG245 (2024), all adults diagnosed with asthma should be prescribed a regular low-dose inhaled corticosteroid (ICS) to manage inflammation, alongside a SABA for symptom relief. Continuing with SABA alone is no longer recommended due to the lack of anti-inflammatory effects. A LABA or LTRA could be considered as add-ons if control remains inadequate, but not as initial treatments. Theophylline has limited use due to side effects and drug interactions. Clinical pearl: 'ICS from the start, symptoms depart' helps remember to start with ICS. For more details, see NICE NG245.",
-    "mnemonic": "ICS from the start, symptoms depart!",
-    "links": {
-      "NICE": "https://www.nice.org.uk/guidance/ng245",
-      "CKS": "https://cks.nice.org.uk/topics/asthma"
-    },
-    "difficulty": "intermediate"
+    "correctAnswer": 1,
+    "explanation": "NICE NG245 (November 2024) requires that a regular low-dose ICS be prescribed alongside a SABA reliever at the point of asthma diagnosis \u2014 not at a later review. Option A (salbutamol alone with a 6-week wait) represents the outdated pre-NG245 approach and is now incorrect. Starting ICS from day one reduces airway inflammation, lowers exacerbation risk, and prevents the patient from becoming reliant on SABA alone. Beclometasone 200 mcg/day or equivalent is the standard starting dose. LABA is a Step 2 treatment added only if low-dose ICS + SABA fails to control symptoms. Montelukast (LTRA) is an alternative second-line preventer, not first-line.",
+    "topic": "Asthma \u2014 Newly Diagnosed: ICS from Day One (NICE NG245)",
+    "specialty": "Respiratory",
+    "difficulty": "easy",
+    "tags": [
+      "asthma",
+      "NICE NG245",
+      "ICS",
+      "newly diagnosed",
+      "first-line preventer"
+    ]
   },
   {
     "id": "generated_all_1779042657723_3",
@@ -3751,5 +3759,215 @@
       "ICS",
       "GP review"
     ]
+  },
+  {
+    "id": "generated_all_1779043452703_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 50-year-old Caucasian male presents to the clinic for a routine check-up. His blood pressure is measured at 155/95 mmHg on two separate occasions. He has no significant past medical history and is not on any medications. What is the most appropriate first-line treatment for this patient?",
+    "options": [
+      "Amlodipine",
+      "Lisinopril",
+      "Bendroflumethiazide",
+      "Spironolactone",
+      "Atenolol"
+    ],
+    "answer": 1,
+    "explanation": "Lisinopril is the most appropriate first-line treatment for a 50-year-old Caucasian male with newly diagnosed hypertension according to the NICE NG136 guideline. This guideline recommends that for patients under 55 years who are not of Black African or African-Caribbean family origin, an ACE inhibitor or an ARB should be used as the initial treatment. The patient's age and ethnicity fit these criteria, making Lisinopril the correct choice. \nAmlodipine is typically used as first-line in patients over 55 or of Black African or African-Caribbean origin. Bendroflumethiazide is not the preferred thiazide-like diuretic; indapamide is recommended at step 3. Spironolactone is used at step 4 if potassium levels are below 4.5 mmol/L. Atenolol, a beta-blocker, is not first-line for hypertension management in this scenario. Remember the 'ABC' rule for hypertension: ACE-i/ARB for under 55s and non-Black, and CCB for over 55s or Black patients.",
+    "mnemonic": "Under 55? Go for ACE!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She has been using her salbutamol inhaler more frequently and wakes up at night due to breathlessness. What is the most appropriate next step in her asthma management?",
+    "options": [
+      "Increase salbutamol use",
+      "Add a low-dose ICS",
+      "Prescribe a long-acting beta-agonist (LABA)",
+      "Refer to a respiratory specialist",
+      "Prescribe oral corticosteroids"
+    ],
+    "answer": 1,
+    "explanation": "The most appropriate next step in managing this patient's asthma is to add a low-dose inhaled corticosteroid (ICS). According to the updated NICE NG245 guidelines, all adults with asthma should have a regular ICS prescribed alongside a SABA. The patient's current reliance on her SABA and nocturnal symptoms indicate that her asthma is not well controlled, necessitating the initiation of an ICS to reduce inflammation and control symptoms. \nIncreasing salbutamol use is not recommended as it does not address underlying inflammation. A LABA should be added only after ICS treatment has been established. Referral to a respiratory specialist is not required at this stage. Oral corticosteroids are reserved for acute exacerbations. Remember, for asthma management, start with a SABA and low-dose ICS as foundation therapy.",
+    "mnemonic": "ICS is the base for asthma race.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_2",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 65-year-old man presents to the emergency department with cough, fever, and shortness of breath. His CURB-65 score is 3. What is the most appropriate initial management?",
+    "options": [
+      "Oral amoxicillin",
+      "Oral doxycycline",
+      "Intravenous co-amoxiclav and clarithromycin",
+      "Intravenous ciprofloxacin",
+      "Oral azithromycin"
+    ],
+    "answer": 2,
+    "explanation": "For a patient with a CURB-65 score of 3, indicating severe community-acquired pneumonia, the initial management should include intravenous co-amoxiclav and clarithromycin. According to the NICE NG138 guidelines, a score of 2 or more typically warrants hospital admission and intravenous antibiotics to cover a broad range of pathogens. \nOral amoxicillin and doxycycline are used for mild to moderate cases (CURB-65 score of 0-1). Intravenous ciprofloxacin is not typically used for pneumonia due to its limited coverage against Streptococcus pneumoniae. Oral azithromycin alone would not provide adequate coverage in severe cases. Remember, a CURB-65 score of 2+ indicates the need for hospital care and intravenous antibiotics.",
+    "mnemonic": "High CURB, IV serve.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng138",
+      "CKS": "https://cks.nice.org.uk/topics/chest-infections-adults"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_3",
+    "topic": "Atrial Fibrillation",
+    "category": "all",
+    "question": "A 68-year-old woman presents with palpitations and is found to have atrial fibrillation. Her CHA\u2082DS\u2082-VASc score is 3. She is otherwise healthy. What is the most appropriate management to reduce her stroke risk?",
+    "options": [
+      "Aspirin",
+      "No treatment needed",
+      "Warfarin",
+      "Rivaroxaban",
+      "Beta-blocker"
+    ],
+    "answer": 3,
+    "explanation": "According to the NICE NG196 guidelines, a CHA\u2082DS\u2082-VASc score of 3 in a female patient indicates a high risk of stroke, warranting anticoagulation. Rivaroxaban, a DOAC, is preferred over warfarin due to its ease of use and reduced need for monitoring. Aspirin is not recommended for stroke prevention in atrial fibrillation as it offers inadequate protection. \nNo treatment would put the patient at risk of an embolic event. Warfarin could be considered if DOACs are contraindicated, but it requires regular INR monitoring. Beta-blockers are used for rate control in AF but do not prevent stroke. Remember, for a high CHA\u2082DS\u2082-VASc score, choose a DOAC for stroke prevention.",
+    "mnemonic": "High CHA\u2082DS\u2082, DOAC for stroke ads!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_4",
+    "topic": "Type 2 Diabetes",
+    "category": "all",
+    "question": "A 58-year-old man with type 2 diabetes and a history of myocardial infarction attends a follow-up appointment. His HbA1c is 60 mmol/mol. He is currently on metformin. What is the most appropriate next step in his diabetes management?",
+    "options": [
+      "Add sulfonylurea",
+      "Switch to insulin",
+      "Add SGLT-2 inhibitor",
+      "Increase metformin dose",
+      "Add GLP-1 receptor agonist"
+    ],
+    "answer": 2,
+    "explanation": "Given this patient's history of myocardial infarction and type 2 diabetes, adding an SGLT-2 inhibitor is the most appropriate next step. NICE NG28 recommends adding an SGLT-2 inhibitor like empagliflozin for patients with established cardiovascular disease to reduce cardiovascular risk and improve glycaemic control. \nSulfonylureas are not preferred due to the risk of hypoglycaemia. Insulin is not indicated at this stage as oral agents should be optimised first. Increasing the metformin dose might not adequately address the cardiovascular risk. GLP-1 receptor agonists are considered when BMI is \u226535. Remember, in diabetes with CVD, think SGLT-2 for dual benefit.",
+    "mnemonic": "Diabetes with heart, SGLT-2 is smart.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_5",
+    "topic": "Hypothyroidism",
+    "category": "all",
+    "question": "A 40-year-old woman presents with fatigue, weight gain, and cold intolerance. Her thyroid function tests show TSH of 12 mU/L and low T4. What is the most appropriate treatment?",
+    "options": [
+      "Carbimazole",
+      "Radioactive iodine",
+      "Levothyroxine",
+      "Propranolol",
+      "Thyroidectomy"
+    ],
+    "answer": 2,
+    "explanation": "Levothyroxine is the treatment of choice for primary hypothyroidism as indicated by the elevated TSH and low T4 levels. NICE NG145 recommends starting levothyroxine to normalise TSH and alleviate symptoms. Carbimazole and radioactive iodine are used for hyperthyroidism. \nPropranolol provides symptomatic relief for hyperthyroid symptoms, not hypothyroidism. Thyroidectomy is not indicated for hypothyroidism. Remember, for hypothyroidism, levothyroxine is the definitive treatment.",
+    "mnemonic": "Hypo needs Levo.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_6",
+    "topic": "Depression Treatment",
+    "category": "all",
+    "question": "A 35-year-old woman is diagnosed with moderate depression. She has no significant medical history and is not taking any medications. What is the most appropriate initial treatment?",
+    "options": [
+      "Cognitive Behavioural Therapy",
+      "Sertraline",
+      "Electroconvulsive Therapy",
+      "St John's Wort",
+      "Amitriptyline"
+    ],
+    "answer": 1,
+    "explanation": "Sertraline is recommended as the first-line pharmacological treatment for moderate depression according to the NICE NG222 guideline. SSRIs like sertraline are preferred due to their efficacy and tolerability. Cognitive Behavioural Therapy (CBT) is also effective and can be used in conjunction with medication, but the question asks specifically for initial treatment. \nElectroconvulsive Therapy is reserved for severe or treatment-resistant depression. St John's Wort has variable efficacy and safety concerns. Amitriptyline, a tricyclic antidepressant, is not first-line due to its side effect profile. Remember, for moderate depression, start with an SSRI.",
+    "mnemonic": "Moderate depression, start the Sertraline session.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng222",
+      "CKS": "https://cks.nice.org.uk/topics/depression"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_7",
+    "topic": "Chronic Heart Failure",
+    "category": "all",
+    "question": "A 72-year-old man with heart failure with reduced ejection fraction (HFrEF) presents for review. He is currently on ramipril and bisoprolol. Despite this, he remains symptomatic. What is the next recommended step in his management?",
+    "options": [
+      "Increase bisoprolol dose",
+      "Add spironolactone",
+      "Switch to digoxin",
+      "Start loop diuretic",
+      "Refer for cardiac resynchronisation therapy"
+    ],
+    "answer": 1,
+    "explanation": "In patients with HFrEF who remain symptomatic despite ACE inhibitor and beta-blocker therapy, adding a mineralocorticoid receptor antagonist like spironolactone is recommended according to NICE NG106 guidelines. This addition helps reduce mortality and hospitalisations. \nIncreasing bisoprolol may not be beneficial if the patient is on an optimal dose. Digoxin is not first-line and is mainly used for rate control in AF. Loop diuretics are used for fluid overload, not specifically for heart failure symptom management. CRT is considered in severe cases with specific ECG findings. Remember, after ACE-i and beta-blocker, spironolactone is the next step for HFrEF.",
+    "mnemonic": "ACE, Beta, then Spiro.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_8",
+    "topic": "Acute Coronary Syndrome Management",
+    "category": "all",
+    "question": "A 60-year-old man presents with chest pain and ECG changes consistent with ST-elevation myocardial infarction (STEMI). The nearest PCI centre is 3 hours away. What is the most appropriate immediate management?",
+    "options": [
+      "Administer ticagrelor",
+      "Administer thrombolysis",
+      "Transfer immediately to PCI centre",
+      "Start fondaparinux",
+      "Administer oral beta-blocker"
+    ],
+    "answer": 1,
+    "explanation": "In the case of a STEMI where PCI cannot be performed within 120 minutes, immediate thrombolysis is recommended as per NICE NG185 guidelines. This approach aims to quickly restore coronary blood flow. \nTicagrelor is part of dual antiplatelet therapy but does not replace the need for reperfusion. Immediate transfer would delay treatment. Fondaparinux is used in NSTEMI/UA. Oral beta-blockers are secondary in acute management. Remember, if PCI is delayed, think thrombolysis for STEMI.",
+    "mnemonic": "If no PCI, try Thrombo in a jiffy.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndromes"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779043452703_9",
+    "topic": "Venous Thromboembolism",
+    "category": "all",
+    "question": "A 45-year-old woman is diagnosed with a deep vein thrombosis (DVT). She has no active cancer and her renal function is normal. What is the most appropriate anticoagulation therapy?",
+    "options": [
+      "Warfarin",
+      "Dalteparin",
+      "Rivaroxaban",
+      "Aspirin",
+      "Fondaparinux"
+    ],
+    "answer": 2,
+    "explanation": "Rivaroxaban is the first-line anticoagulant for a patient with a DVT, as recommended by NICE NG158. DOACs like rivaroxaban are preferred due to their ease of use and lower risk of bleeding compared to warfarin. Dalteparin is the choice for patients with active cancer. \nAspirin is not adequate for DVT treatment. Fondaparinux is used in certain acute coronary syndromes and as a bridging anticoagulant but not as a primary treatment for DVT in this situation. Remember, for DVT, DOACs like rivaroxaban are the go-to.",
+    "mnemonic": "For DVT, DOAC is key.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/dvt"
+    },
+    "difficulty": "intermediate"
   }
 ]
