@@ -2001,5 +2001,215 @@
       "CKS": "https://cks.nice.org.uk/hyperthyroidism"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_0",
+    "topic": "Hypertension",
+    "category": "all",
+    "question": "A 58-year-old woman presents to her GP with persistent headaches and dizziness. Her blood pressure is measured at 165/100 mmHg on two separate occasions. Her BMI is 29 kg/m². According to NICE guidelines, what is the most appropriate initial pharmacological management?",
+    "options": [
+      "Amlodipine",
+      "Lisinopril",
+      "Bendroflumethiazide",
+      "Losartan",
+      "Atenolol"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Amlodipine. According to NICE guidelines for hypertension management, a calcium channel blocker like amlodipine is recommended as the first-line treatment for patients over 55 or of African or Caribbean family origin. In this scenario, the patient's age and persistent elevated blood pressure make amlodipine appropriate. Amlodipine is effective in reducing cardiovascular events and is well-tolerated.\nLisinopril, an ACE inhibitor, is more suitable for younger patients or those with diabetes. Bendroflumethiazide, a thiazide-like diuretic, may be considered if calcium channel blockers are unsuitable. Losartan, an angiotensin receptor blocker, is typically used if ACE inhibitors are not tolerated. Atenolol, a beta-blocker, is not recommended as first-line therapy for hypertension unless there are other indications such as heart failure. Remember ABCD: ACE inhibitors/ARB, Beta-blockers, Calcium channel blockers, Diuretics as a stepwise approach in hypertension management.",
+    "mnemonic": "ABCD - ACE/ARB, Beta-blocker, Calcium channel blocker, Diuretic",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_1",
+    "topic": "Diabetes Mellitus",
+    "category": "all",
+    "question": "A 45-year-old man with type 2 diabetes presents with a blood glucose level of 15 mmol/L and HbA1c of 9%. He is currently on metformin. According to NICE guidelines, what is the next step in managing his diabetes?",
+    "options": [
+      "Add Gliclazide",
+      "Add Sitagliptin",
+      "Add Insulin",
+      "Increase Metformin dose",
+      "Add Pioglitazone"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to add Gliclazide. According to NICE guidelines, if metformin alone does not achieve adequate glycaemic control (evidenced by the patient's high HbA1c), a sulfonylurea like gliclazide is often recommended as the next step. Gliclazide helps increase insulin secretion and is effective in reducing HbA1c levels.\nSitagliptin, a DPP-4 inhibitor, could be considered if there are specific contraindications to sulfonylureas. Insulin is generally reserved for more severe cases or when oral medications are inadequate. Increasing the metformin dose is an option only if the current dose is not at maximum. Pioglitazone, a thiazolidinedione, is not typically the first choice due to side effects. Always review patient-specific factors like weight, hypoglycemia risk, and comorbidities when choosing a second-line agent.",
+    "mnemonic": "Guide Metformin with Gliclazide when Glucose is Grim.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_2",
+    "topic": "Asthma",
+    "category": "all",
+    "question": "A 22-year-old woman with asthma presents with increased wheezing and shortness of breath. She uses her salbutamol inhaler more than three times a week. What is the next step in her management?",
+    "options": [
+      "Increase Salbutamol dose",
+      "Add Beclometasone inhaler",
+      "Prescribe oral Prednisolone",
+      "Add Montelukast",
+      "Refer to a pulmonologist"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add a Beclometasone inhaler. NICE guidelines recommend adding a low-dose inhaled corticosteroid, such as beclometasone, when asthma symptoms are not controlled with a short-acting beta-agonist like salbutamol used more than twice a week. This helps reduce airway inflammation and improve symptom control.\nIncreasing the salbutamol dose is not recommended as it addresses symptoms rather than preventing them. Oral prednisolone is reserved for acute exacerbations and not for regular management. Montelukast, a leukotriene receptor antagonist, may be considered in specific cases but is not the first add-on treatment. Referral to a pulmonologist is unnecessary unless asthma is severe or poorly controlled despite optimal treatment.",
+    "mnemonic": "Step up to Steroids when SABA is Spent.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng80",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_3",
+    "topic": "Anemia",
+    "category": "all",
+    "question": "A 30-year-old pregnant woman presents with fatigue and pallor. Her blood tests reveal hemoglobin of 9 g/dL and mean corpuscular volume (MCV) of 72 fL. What is the most appropriate initial treatment?",
+    "options": [
+      "Ferrous sulfate",
+      "Vitamin B12 injections",
+      "Folic acid supplements",
+      "Erythropoietin",
+      "Iron sucrose IV"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Ferrous sulfate. The patient's blood tests indicate microcytic anemia, commonly due to iron deficiency, especially during pregnancy. NICE guidelines recommend oral iron supplements, such as ferrous sulfate, as the first-line treatment for iron deficiency anemia.\nVitamin B12 injections are indicated for macrocytic anemia due to B12 deficiency. Folic acid supplements are also for macrocytic anemia but due to folate deficiency. Erythropoietin is used in anemia associated with chronic kidney disease. Iron sucrose IV is reserved for cases where oral iron is not tolerated or ineffective. Addressing iron deficiency is crucial in pregnancy to avoid complications for both mother and child.",
+    "mnemonic": "Iron for Itty-bitty RBCs in Iron deficiency.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng62",
+      "CKS": "https://cks.nice.org.uk/topics/anaemia-iron-deficiency"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_4",
+    "topic": "Hyperthyroidism",
+    "category": "all",
+    "question": "A 35-year-old woman presents with weight loss, palpitations, and tremors. Her thyroid function tests reveal suppressed TSH and elevated free T4. What is the most appropriate initial treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Propranolol",
+      "Radioiodine therapy",
+      "Thyroidectomy"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Carbimazole. In the UK, NICE guidelines recommend antithyroid drugs like carbimazole as the initial treatment for hyperthyroidism. Carbimazole reduces thyroid hormone production and helps control symptoms.\nLevothyroxine is used for hypothyroidism, not hyperthyroidism. Propranolol can be used adjunctively to control symptoms like palpitations but does not treat the underlying cause. Radioiodine therapy and thyroidectomy are options if medical therapy fails or is contraindicated. Carbimazole is effective in achieving euthyroidism and is usually well-tolerated, with regular monitoring of blood counts due to the risk of agranulocytosis.",
+    "mnemonic": "Carbimazole Curbs the Crazy Thyroid.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_5",
+    "topic": "Heart Failure",
+    "category": "all",
+    "question": "A 70-year-old man with chronic heart failure presents with worsening dyspnoea and peripheral oedema. His medication includes lisinopril and bisoprolol. What is the next step in his management?",
+    "options": [
+      "Add Furosemide",
+      "Increase Lisinopril dose",
+      "Add Spironolactone",
+      "Start Digoxin",
+      "Refer for cardiac resynchronization therapy"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to add Spironolactone. NICE guidelines suggest that in patients with heart failure who remain symptomatic despite ACE inhibitors and beta-blockers, adding a mineralocorticoid receptor antagonist like spironolactone can improve symptoms and prognosis by reducing fluid overload and cardiac remodelling.\nFurosemide, a loop diuretic, can be used to manage acute congestion but is not always suitable for long-term management. Increasing the lisinopril dose may be considered but does not specifically address fluid retention. Digoxin is reserved for heart failure with atrial fibrillation or when other treatments are insufficient. Cardiac resynchronization therapy is for select patients with specific ECG changes and severe symptoms. Spironolactone's role in reducing mortality in heart failure makes it an essential part of management once initial therapies are optimized.",
+    "mnemonic": "Spironolactone Sustains the Struggling Heart.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_6",
+    "topic": "Chronic Kidney Disease",
+    "category": "all",
+    "question": "A 55-year-old man with hypertension is found to have an eGFR of 50 mL/min/1.73m². Urinalysis shows proteinuria. What is the most appropriate medication to prescribe?",
+    "options": [
+      "Ramipril",
+      "Amlodipine",
+      "Furosemide",
+      "Metformin",
+      "Spironolactone"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Ramipril. NICE guidelines recommend an ACE inhibitor like ramipril for patients with chronic kidney disease (CKD) who also have proteinuria. ACE inhibitors reduce proteinuria and slow CKD progression by reducing intraglomerular pressure.\nAmlodipine, a calcium channel blocker, is primarily for hypertension without specific renal protective properties in CKD. Furosemide is used for fluid overload, not for reducing proteinuria. Metformin is contraindicated in severe renal impairment due to the risk of lactic acidosis. Spironolactone is used for heart failure and resistant hypertension but is not first-line for CKD with proteinuria. Recognizing the importance of ACE inhibitors in CKD management is crucial for preventing further renal decline.",
+    "mnemonic": "Ramipril Rescues Renal Function.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng203",
+      "CKS": "https://cks.nice.org.uk/topics/chronic-kidney-disease"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_7",
+    "topic": "Pneumonia",
+    "category": "all",
+    "question": "A 60-year-old man presents with fever, cough, and pleuritic chest pain. His chest X-ray shows consolidation in the right lower lobe. What is the most appropriate antibiotic to start?",
+    "options": [
+      "Amoxicillin",
+      "Ciprofloxacin",
+      "Doxycycline",
+      "Clarithromycin",
+      "Co-amoxiclav"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Amoxicillin. According to NICE guidelines, amoxicillin is the first-line antibiotic for community-acquired pneumonia in adults who can be treated in the community. It covers common pathogens such as Streptococcus pneumoniae effectively.\nCiprofloxacin is not typically used for respiratory infections due to poor activity against common respiratory pathogens. Doxycycline or clarithromycin may be considered if there is a penicillin allergy or atypical pathogens are suspected. Co-amoxiclav is reserved for more severe cases or if there is a risk of resistant organisms. Ensuring appropriate antibiotic choice is essential to manage pneumonia effectively and minimize resistance.",
+    "mnemonic": "Amoxicillin Acts against Airspace Infections.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng138",
+      "CKS": "https://cks.nice.org.uk/topics/chest-infections-adults"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_8",
+    "topic": "Depression",
+    "category": "all",
+    "question": "A 35-year-old woman presents with low mood, loss of interest in activities, and fatigue for the past two months. Her PHQ-9 score suggests moderate depression. What is the most appropriate initial treatment?",
+    "options": [
+      "Sertraline",
+      "Amitriptyline",
+      "Counselling",
+      "Cognitive Behavioural Therapy (CBT)",
+      "Fluoxetine"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is Cognitive Behavioural Therapy (CBT). NICE guidelines recommend CBT as a first-line treatment for moderate depression, especially if the patient prefers non-pharmacological interventions. CBT is effective in altering negative thought patterns and behaviours contributing to depression.\nSertraline and fluoxetine are SSRIs that may be considered if psychological therapies are declined or if depression is severe. Amitriptyline, a tricyclic antidepressant, is not first-line due to side effect profiles. Counselling may be helpful but is not as structured or evidence-based as CBT for depression. Recognizing the importance of psychological therapies in depression management is key to providing comprehensive care.",
+    "mnemonic": "CBT Clears the Blues Thoughtfully.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng222",
+      "CKS": "https://cks.nice.org.uk/topics/depression"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779039924287_9",
+    "topic": "Osteoporosis",
+    "category": "all",
+    "question": "A 65-year-old woman with a history of a wrist fracture presents for a bone density scan which shows a T-score of -2.6. According to NICE guidelines, what is the most appropriate initial treatment?",
+    "options": [
+      "Alendronic acid",
+      "Calcium and Vitamin D supplements",
+      "Raloxifene",
+      "Teriparatide",
+      "Denosumab"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Alendronic acid. NICE guidelines recommend bisphosphonates like alendronic acid as first-line treatment for osteoporosis in postmenopausal women with a T-score ≤ -2.5 or with a history of fragility fractures. Alendronic acid reduces the risk of vertebral and hip fractures by inhibiting bone resorption.\nCalcium and Vitamin D supplements are supportive but not sufficient alone for osteoporosis treatment. Raloxifene, a selective estrogen receptor modulator, is used less frequently due to limited efficacy in preventing non-vertebral fractures. Teriparatide, a parathyroid hormone analogue, is reserved for severe cases. Denosumab, a RANK ligand inhibitor, is an alternative if bisphosphonates are unsuitable. Implementing bisphosphonates is crucial for fracture prevention in osteoporosis management.",
+    "mnemonic": "Alendronic Acid Adds to Bone Armor.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ta464",
+      "CKS": "https://cks.nice.org.uk/topics/osteoporosis"
+    },
+    "difficulty": "intermediate"
   }
 ]

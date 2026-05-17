@@ -1298,56 +1298,118 @@ SPECIALTY: ${category || 'General Medicine'}
 ════════════════════════════════════
 ESTABLISHED MNEMONICS — USE THESE EXACTLY IF RELEVANT. DO NOT MODIFY THEM.
 
-CARDIOVASCULAR / HAEMATOLOGY:
-• FAST — Stroke: Face drooping, Arm weakness, Speech difficulty, Time to call 999
-• CHA₂DS₂-VASc — AF stroke risk: Congestive HF(1), Hypertension(1), Age≥75(2), Diabetes(1), Stroke/TIA(2), Vascular disease(1), Age 65-74(1), Sex female(1)
-• HAS-BLED — Bleeding risk in AF: Hypertension, Abnormal renal/liver function, Stroke, Bleeding history, Labile INR, Elderly (>65), Drugs/alcohol
-• Virchow's Triad (DVT/VTE) — SHE: Stasis of blood flow, Hypercoagulability, Endothelial injury
-• Wells DVT Score criteria — CALF+: Calf swelling >3 cm, Active cancer, Leg immobilisation/plaster, Full-leg swelling; plus localised tenderness, pitting oedema, collateral veins, previous DVT; minus "alternative diagnosis equally likely" (-2)
-• 4Ts — HIT: Thrombocytopenia degree, Timing of fall (day 5-10), Thrombosis or skin necrosis, oTher causes of thrombocytopenia excluded
-• HEARTS — Heart failure features: HF symptoms (orthopnoea/PND), Exercise intolerance, Ankle oedema, Raised JVP, Third heart sound (S3), SOB
-• ABCDE thrombolysis contraindications — Active bleed, BP>185/110, CT scan first, Drugs (anticoagulants), End-stage illness
+── CARDIOVASCULAR ──
+• FAST — Stroke recognition: Face drooping, Arm weakness, Speech difficulty, Time to call 999
+• BE-FAST — Extended stroke: Balance loss, Eyes (vision change), Face drooping, Arm weakness, Speech difficulty, Time to call 999
+• ROSIER — Stroke vs. mimic (ED): Seizure absent (+1), Asymmetric facial weakness (+1), Asymmetric arm weakness (+1), Asymmetric leg weakness (+1), Speech disturbance (+1), Visual field defect (+1); vomiting/nausea (-1), seizure (-1) → ≥1 = likely stroke
+• CHA₂DS₂-VASc — AF stroke risk: Congestive HF(1), Hypertension(1), Age ≥75(2), Diabetes(1), Stroke/TIA(2), Vascular disease(1), Age 65-74(1), Sex female(1)
+• HAS-BLED — AF bleeding risk: Hypertension (uncontrolled), Abnormal renal/liver function, Stroke history, Bleeding history/predisposition, Labile INR, Elderly (>65), Drugs (antiplatelets/NSAIDs) or alcohol
+• Virchow's Triad (DVT/VTE) — SHE: Stasis, Hypercoagulability, Endothelial injury
+• Wells DVT Score — CALF: Calf swelling >3 cm, Active cancer, Leg paralysis/plaster/immobility, Full-leg swelling; (+1 each: localised tenderness along deep vein, pitting oedema, collateral superficial veins, previous DVT); −2 if alternative diagnosis equally likely
+• 4Ts — HIT diagnosis: Thrombocytopenia (>50% fall = 2pts), Timing (days 5-10 = 2pts), Thrombosis or skin necrosis (2pts), oTher cause excluded (2pts)
+• HEARTS — Heart failure signs: HF symptoms (orthopnoea/PND), Exercise intolerance, Ankle oedema, Raised JVP, Third heart sound (S3), Shortness of breath
+• ABCDE — ACS immediate management: Aspirin 300 mg, Blood tests + ECG, Chest pain relief (GTN/morphine), Diagnosis (STEMI vs NSTEMI), Expert cardiology input
+• RSVP — STEMI door-to-balloon: Recognise, Stabilise (O₂/aspirin/heparin), Ventilate if needed, Primary PCI within 90 min
+• NICE Hypertension step rule — "ABCD": A = ACE inhibitor/ARB (age <55, non-Black); B = Beta-blocker (only step 4 add-on); C = Calcium channel blocker (age >55 or Black); D = thiazide-like Diuretic (step 3 add)
+• RALES — Left heart failure signs: Respiratory crackles (basal), Added 3rd heart sound (S3), cardiomegaly on CXR/exam, Low ejection fraction on echo (or elevated BNP), Elevated JVP (if RHF coexists), SOB
 
-RESPIRATORY:
-• CURB-65 — Pneumonia severity: Confusion (new), Urea >7 mmol/L, Respiratory rate ≥30/min, BP systolic <90 or diastolic ≤60, age ≥65 (score 0-1: home; 2: hospital; 3+: ITU consider)
-• STOP-BANG — OSA: Snoring, Tired (daytime), Observed apnoeas, Pressure (hypertension), BMI >35, Age >50, Neck >40 cm, Gender male
-• PIRATE — PE risk factors: Prolonged immobility/travel, Inherited thrombophilia, Recent surgery/trauma, Age >40, Thrombosis previous, Estrogen (OCP/HRT)/malignancy
-• ABCDE — Acute severe asthma: PEFR 33-50%, Breathlessness too severe to complete sentence, can't Count to 10, tachycardia >110, Diastolic 60+, SpO2<92% = life-threatening
+── RESPIRATORY ──
+• CURB-65 — Pneumonia severity: Confusion (new), Urea >7 mmol/L, Respiratory rate ≥30/min, BP systolic <90 or diastolic ≤60, age ≥65; 0-1 = home, 2 = hospital, 3-5 = HDU/ITU
+• STOP-BANG — OSA risk: Snoring loudly, Tired/sleepy daytime, Observed apnoeas, Pressure (hypertension treated), BMI >35, Age >50, Neck >40 cm, Gender male; ≥3 = high risk
+• PIRATE — PE risk factors: Prolonged immobility/travel, Inherited thrombophilia, Recent surgery/trauma, Age >40, Thrombosis (previous), Estrogen (OCP/HRT/pregnancy)/malignancy
+• Life-threatening asthma — "SOBS PACED": SpO₂ <92%, Oxygen (need high flow), Bradycardia, Silent chest, PEFR <33%, Altered consciousness, Cyanosis, Exhaustion/confusion/fatigue, sDropping BP
+• Acute severe asthma features — "33/50 rule": PEFR 33–50%, RR ≥25/min, HR ≥110/min, unable to complete sentences
+• COPD Gold ABCD groups — Symptoms (CAT/mMRC) vs exacerbation risk; A = low symptoms/low risk; B = high symptoms/low risk; C = low symptoms/high risk; D = high symptoms/high risk
+• 3 Ps of pneumothorax management — Primary small (<2 cm): Observe; Primary large (≥2 cm): Aspirate; Secondary (any size): Chest drain
 
-ENDOCRINE / METABOLIC:
-• MUDPILES — High anion-gap metabolic acidosis: Methanol, Uraemia, Diabetic ketoacidosis, Propylene glycol, Isoniazid/Iron, Lactic acidosis, Ethylene glycol, Salicylates
-• HHHS — HHS vs DKA: Hyperglycaemia markedly elevated (>30), High osmolality (>320), Hypernatraemia relative, Slow onset over days (no ketones)
+── ENDOCRINE / METABOLIC ──
+• MUDPILES — High anion-gap metabolic acidosis: Methanol, Uraemia, DKA, Propylene glycol, Isoniazid/Iron, Lactic acidosis, Ethylene glycol, Salicylates
 • BONES GROANS MOANS STONES — Hypercalcaemia: Bone pain/fractures, Abdominal groans (nausea/constipation/pancreatitis), Psychic moans (depression/confusion), Renal stones/polyuria
+• HHHS — HHS features (vs DKA): High glucose (>30 mmol/L), High osmolality (>320 mosmol/kg), Hypernatraemia (relative), Slow onset (days; no significant ketones)
+• DKA triad — "KAP": Ketoacidosis, Acidosis (pH <7.3 or bicarb <15), Plasma glucose >11 mmol/L (or known DM)
+• Addison's (adrenal insufficiency) — "The 3 S's crisis": Salt craving/hyponatraemia, Sugar low (hypoglycaemia), Stress precipitant (infection/trauma triggers crisis)
+• Cushing's features — "CUSHINGS": Central obesity, Unusual bruising, Striae (purple), Hypertension, Infections (susceptibility), Necrosis (avascular, femoral head), Glucose raised (DM), Skin thinning/hirsutism
+• Hyperthyroidism management — "RAT": Radioactive iodine (definitive), Antithyroid drugs (Carbimazole first-line in UK), Thyroidectomy (surgery)
+• Hypothyroidism symptoms — "SLOW": Slow heart rate (bradycardia), Low temperature/cold intolerance, Oedema (periorbital/non-pitting myxoedema), Weight gain/constipation/fatigue
 
-NEUROLOGY:
-• AEIOU-TIPS — Coma causes: Alcohol, Epilepsy/Encephalopathy, Insulin (hypo/hyperglycaemia), Opiates/Overdose, Uraemia; Trauma, Infection, Psychiatric, Stroke/Space-occupying lesion
-• THREADS — Parkinson's features: Tremor (resting, pill-rolling), Hypokinesia/Bradykinesia, Rigidity (cogwheel/lead-pipe), Expressionless face (hypomimia), Autonomic dysfunction, Dementia (late), Shuffling festinant gait
+── NEUROLOGY ──
+• AEIOU-TIPS — Coma causes: Alcohol, Epilepsy/Encephalopathy, Insulin (hypo/hyperglycaemia), Opiates, Uraemia; Trauma, Infection, Psychiatric, Stroke/Space-occupying lesion
+• THREADS — Parkinson's features: Tremor (resting, pill-rolling 4-6 Hz), Hypokinesia, Rigidity (cogwheel), Expressionless (hypomimia), Autonomic dysfunction, Dementia (late), Shuffling festinant gait
+• VITAMIN D — Headache red flags (secondary causes): Vascular (SAH, CVT), Infection (meningitis/encephalitis), Tumour, Arteritis (temporal arteritis), Metabolic, Idiopathic intracranial hypertension (IIH), Neck (cervicogenic), Drugs
+• Ottawa Ankle Rules — X-ray needed if: pain near malleolus AND (bone tenderness posterior edge/tip of lateral malleolus, OR bone tenderness posterior edge/tip of medial malleolus, OR unable to weight-bear 4 steps)
+• Ottawa Knee Rules — X-ray needed if: age ≥55, OR tenderness at fibular head, OR isolated patella tenderness, OR inability to flex knee to 90°, OR inability to weight-bear 4 steps
+• SIEVE — Seizure types: Simple partial, Infantile spasms (West syndrome), Electrolyte/metabolic, Vascular (stroke), Encephalitis/tumour
 
-GASTROENTEROLOGY:
-• ALARMING — Upper GI red flags: Anaemia (iron-deficiency), Loss of weight (unexplained), Anorexia, Recent/progressive dysphagia, Melaena/haematemesis, Indigestion (new onset >55 yrs), Nausea (persistent), Gut mass palpable
-• CAGE — Alcohol dependence: Cut down (tried), Annoyed (when criticised), Guilty (about drinking), Eye-opener (morning drink)
+── GASTROENTEROLOGY ──
+• ALARMING — Upper GI cancer red flags: Anaemia (iron-deficiency), Loss of weight unexplained, Anorexia, Recent dysphagia (progressive), Melaena/haematemesis, Indigestion (new, >55 yrs), Nausea (persistent), Gut mass palpable
+• CAGE — Alcohol dependence screening: Cut down (tried), Annoyed (if criticised), Guilty (about drinking), Eye-opener (morning drink); ≥2 = positive screen
+• AUDIT — Alcohol use disorder identification; 10-item validated questionnaire (gold standard vs CAGE for harmful use)
+• Charcot's Triad — Ascending cholangitis: Fever/rigors, Right upper quadrant pain, Jaundice
+• Reynold's Pentad — Severe ascending cholangitis: Charcot's triad + Hypotension + altered Mental state
+• 4 Fs of gallstones — Fat, Female, Fertile (40s), Fair (fair-skinned)
+• 6 Fs of abdominal distension — Fat, Fluid (ascites), Flatus, Faeces, Foetus, Fatal (big) tumour
+• Ranson's criteria (pancreatitis severity) at admission — GALAW: Glucose >11 mmol/L, Age >55, LDH >600 IU/L, AST >250 IU/L, WBC >16×10⁹/L
+• Bristol Stool Scale — types 1-2 = constipation, 3-4 = normal, 5-7 = diarrhoea
 
-PSYCHIATRY / SAFEGUARDING:
-• SIGECAPS — Depression: Sleep change, Interest lost (anhedonia), Guilt/worthlessness, Energy low, Concentration poor, Appetite change, Psychomotor change, Suicidal ideation
-• SADPERSONS — Suicide risk scoring: Sex (male), Age (<19 or >45), Depression, Previous attempt, Ethanol/drugs, Rational thinking lost, Social support absent, Organised plan, No spouse/partner, Sickness (chronic illness)
-• Mental Capacity Act 4 steps — URWC: Understand, Retain, Weigh up/use, Communicate decision
+── PSYCHIATRY / ETHICS ──
+• SIGECAPS — Depression (DSM criteria): Sleep disturbance, Interest lost (anhedonia), Guilt/worthlessness, Energy low, Concentration poor, Appetite change, Psychomotor change, Suicidal ideation; ≥5 for 2 weeks (+ depressed mood or anhedonia) = MDD
+• DIGFAST — Mania features: Distractibility, Insomnia (decreased need for sleep), Grandiosity, Flight of ideas/pressured speech, Activity increased (goal-directed), Sleep reduced, Talkativeness/pressured speech
+• SADPERSONS — Suicide risk: Sex (male), Age (<19 or >45), Depression, Previous attempt, Ethanol/drugs, Rational thinking lost, Social support absent, Organised plan, No spouse/partner, Sickness (chronic)
+• Mental Capacity Act 4 steps — URWC: Understand the information, Retain it long enough, Weigh up/use it in the decision, Communicate the decision
+• 4 principles of medical ethics — BJAN: Beneficence, Justice, Autonomy, Non-maleficence
 
-PHARMACOLOGY / TOXICOLOGY:
-• DUMBBELS — Organophosphate/cholinergic toxidrome: Diarrhoea, Urination, Miosis, Bradycardia/Bronchospasm/Bronchorrhoea, Emesis, Lacrimation, Salivation/Sweating
-• WETBAGS — Anaphylaxis features: Wheeze, Erythema/urticaria, Throat/tongue swelling, Blood pressure drop, Abdominal pain, GI symptoms, Stridor
+── HAEMATOLOGY / ONCOLOGY ──
+• 4Ts — HIT scoring: Thrombocytopenia magnitude, Timing (days 5-10), Thrombosis/skin necrosis, oTher cause excluded
+• STOP — Sickle cell acute crisis: Stop sickling triggers (cold/dehydration/infection), Treat pain (opioids + paracetamol), Oxygen (if SpO₂ <95%), Push fluids (IV/oral)
+• ABCDE — Melanoma features: Asymmetry, Border irregular, Colour variegated, Diameter >6 mm, Evolution/change over time
+• Red flag anaemia — "FAINT": Fatigue + pallor, Anaemia on bloods, Iron deficiency (low ferritin), Night sweats or weight loss (lymphoma), Tenderness in bones (myeloma)
 
-MUSCULOSKELETAL / EXAMINATION:
-• SOCRATES — Pain history: Site, Onset, Character, Radiation, Associated symptoms, Timing/duration, Exacerbating/relieving, Severity (0-10)
+── RENAL / UROLOGY ──
+• PRE-RENAL vs RENAL AKI — "Muddy Brown": granular casts = intrinsic (ATN); FENa <1% = pre-renal; FENa >2% = intrinsic
+• AKI causes — PRE-RENAL (hypovolaemia, cardiac, sepsis), RENAL (ATN, AIN, GN, vasculitis), POST-RENAL (obstruction: stones/BPH/tumour/stricture)
+• AEIOU — Indications for urgent dialysis: Acidosis (pH <7.1), Electrolytes (K+ >6.5 refractory), Intoxication (methanol/ethylene glycol/lithium), Overload (pulmonary oedema refractory), Uraemia (encephalopathy/pericarditis)
+• 5 Ts of haematuria — Tumour (bladder/renal), Trauma, Tuberculosis, Treatment (anticoagulants/cyclophosphamide), Tiny stones (calculi)
+
+── MUSCULOSKELETAL / RHEUMATOLOGY ──
+• SOCRATES — Pain history: Site, Onset, Character, Radiation, Associations, Timing/duration, Exacerbating/relieving, Severity (0-10)
 • GALS — MSK screen: Gait, Arms, Legs, Spine
+• RICE — Soft tissue injury management: Rest, Ice, Compression, Elevation
+• 4 Ds of RA — Deformity (ulnar deviation/swan neck/boutonnière), Destruction (joint space loss on XR), Disability (functional loss), Disease-modifying (DMARD therapy)
+• SHARP — SLE features: Serositis (pleuritis/pericarditis), Haematological (AIHA/thrombocytopaenia/lymphopenia), ANA positive (>95%), Renal (nephritis), Photosensitivity/skin (malar rash)
 
-OBSTETRICS:
-• HELLP — Severe pre-eclampsia complication: Haemolysis, Elevated Liver enzymes, Low Platelets
-• MNEMONIC drugs safe in pregnancy — MAST: Methyldopa, (low-dose) Aspirin, labetalol (Safe beta-blocker), nifediTpine
-• SOAPME — Obstetric emergency kit: Suction, Oxygen, Airway, Pharmacy (drugs), Monitors, Equipment
+── OBSTETRICS & GYNAECOLOGY ──
+• HELLP — Pre-eclampsia complication: Haemolysis, Elevated Liver enzymes, Low Platelets
+• MAST — Drugs safe in pregnancy: Methyldopa (hypertension), (low-dose) Aspirin (pre-eclampsia prophylaxis), labetalol (Safe beta-blocker for hypertension), nifediTpine (tocolysis/hypertension)
+• SOAPME — Obstetric emergency tray: Suction, Oxygen, Airway, Pharmacy, Monitors, Equipment
+• 4 Ts of PPH — Tone (uterine atony, 80%), Tissue (retained products), Trauma (lacerations/uterine rupture), Thrombin (coagulopathy)
+• ABCDE of Pre-eclampsia — Abdominal/epigastric pain, Blurred vision/headache, Clonus, Deep tendon reflexes elevated, Elevated BP ≥140/90 with proteinuria
+• Rule of 3s for ectopic — 3 symptoms: pain + PV bleed + amenorrhoea; 3 signs: cervical excitation, adnexal tenderness, peritonism; β-hCG positive
 
-INFECTION / SEPSIS:
-• qSOFA — Bedside sepsis screen: Respiratory rate ≥22, altered Mentation (GCS<15), Systolic BP ≤100
-• SEPSIS-6 (first hour): Give O₂, Take blood cultures, Give IV antibiotics, Give IV fluids, Check lactate, Insert urinary catheter (monitor output)
+── PAEDIATRICS ──
+• APGAR — Newborn assessment at 1 & 5 min: Appearance (colour), Pulse (HR), Grimace (reflex), Activity (muscle tone), Respiration; 0-2 each; <7 = resuscitation needed
+• WETFLAG — Paediatric emergency drug doses: Weight (kg), Energy (joules for defibrillation = 4 J/kg), Tube size (age/4 + 4), Fluid (10-20 ml/kg), Lorazepam (0.1 mg/kg), Adrenaline (0.1 ml/kg of 1:10 000), Glucose (2 ml/kg of 10%)
+• AVPU — Paediatric consciousness: Alert, responds to Voice, responds to Pain, Unresponsive
+• HEADSS — Adolescent psychosocial screen: Home, Education/Employment, Activities/Peers, Drugs/Alcohol, Sex/Sexuality, Suicide/Self-harm
+
+── INFECTIOUS DISEASES / SEPSIS ──
+• qSOFA — Bedside sepsis screen (≥2 = sepsis likely): respiratory Rate ≥22, altered Mentation (GCS <15), systolic BP ≤100
+• SEPSIS-6 (first hour bundle): Give O₂, Take blood cultures, Give broad-spectrum IV antibiotics, Give IV fluid bolus, Check serum lactate, monitor Urine output (catheterise)
+• SIRS criteria (2 of 4): Temperature >38°C or <36°C, Heart rate >90/min, Respiratory rate >20/min or PaCO₂ <4.3 kPa, WBC >12 or <4 ×10⁹/L
+• Meningitis triad — "The 3 Hs": Headache (severe), Hyperpyrexia (fever), Herniating signs (neck stiffness/photophobia/Kernig's)
+• CURB-65 — (see Respiratory above)
+
+── PHARMACOLOGY / TOXICOLOGY ──
+• DUMBBELS — Cholinergic/organophosphate toxidrome: Diarrhoea, Urination, Miosis, Bradycardia/Bronchospasm/Bronchorrhoea, Emesis, Lacrimation, Salivation/Sweating (antidote: atropine + pralidoxime)
+• AEIOU — Anticholinergic toxidrome ("Mad as a hatter"): dry As a bone, blind As a bat, red As a beet, hot As a hare, mad As a hatter (confusion), plus urinary retention, tachycardia
+• RSVP — Paracetamol overdose: Recognise NAC indication (>150 mg/kg or staggered dose), Start NAC infusion, monitor LFTs and INR, Paediatric dose differs
+• SLUDGE — Muscarinic effects (organophosphate/nerve agent): Salivation, Lacrimation, Urination, Defaecation, GI cramps, Emesis
+
+── EMERGENCY / TRAUMA ──
+• ABCDE — Primary survey: Airway (with C-spine), Breathing, Circulation, Disability (GCS/pupils/BM), Exposure/Environment
+• MARCH — Tactical/trauma CABCDE: Massive haemorrhage control, Airway, Respiration, Circulation, Hypothermia/Head injury
+• MIST — Handover to receiving team: Mechanism of injury, Injuries found/suspected, Signs (obs), Treatment given
+• SAMPLE — Emergency history: Symptoms, Allergies, Medications, Past medical history, Last meal, Events leading to presentation
+• AMPLE — Anaesthetic/pre-op history: Allergies, Medications, Past medical/surgical history, Last meal, Events/environment
 ════════════════════════════════════
 
 STRICT RULES — FOLLOW PRECISELY:
