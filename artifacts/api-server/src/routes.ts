@@ -96,7 +96,7 @@ Return ONLY a valid JSON array with exactly ${count} questions. Each question mu
   "answer": 0,
   "explanation": "DETAILED multi-paragraph explanation. First paragraph: explain WHY the correct answer is right, referencing specific clues from the stem (age, symptoms, signs, investigations) and the relevant UK guideline (NICE/CKS/BNF). Second paragraph: systematically explain why each wrong option is incorrect — what each would typically present with and why it doesn't fit this scenario. End with a clinical pearl or mnemonic. Minimum 150 words.",
   "mnemonic": "A memorable mnemonic or clinical pearl",
-  "links": { "NICE": "https://www.nice.org.uk/...", "CKS": "https://cks.nice.org.uk/..." }
+  "links": { "NICE": "https://www.nice.org.uk/guidance", "CKS": "https://cks.nice.org.uk/topics" }
 }
 
 The "explanation" field MUST be a detailed string (not an object), minimum 150 words, covering correct answer rationale, wrong option reasoning, and UK guideline references.
@@ -130,7 +130,7 @@ Return ONLY a valid JSON array. No additional text.`;
       links: q.links || {
         NICE: `https://www.nice.org.uk/guidance`,
         CKS: `https://cks.nice.org.uk/topics`,
-        BNF: `https://bnf.nice.org.uk`
+        BNF: `https://bnf.nice.org.uk/treatment-summaries/`
       }
     }));
 
@@ -2464,9 +2464,9 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
               description: "Multiple sclerosis patient information and support"
             },
             {
-              title: "Association of British Neurologists",
-              url: "https://www.theabn.org/page/PracticalNeurology",
-              description: "Professional neurology guidance and standards"
+              title: "NICE Guidance: Multiple Sclerosis",
+              url: "https://www.nice.org.uk/guidance/cg186",
+              description: "NICE CG186: Multiple sclerosis in adults — management"
             }
           ]
         }
@@ -2675,9 +2675,9 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
               description: "NHS heart attack emergency treatment protocols"
             },
             {
-              title: "British Cardiovascular Society",
-              url: "https://www.bcs.com/pages/page_box_contents.asp?pageid=1025",
-              description: "BCS primary PCI guidelines"
+              title: "NICE Guidance: Acute Coronary Syndromes",
+              url: "https://www.nice.org.uk/guidance/ng185",
+              description: "NICE NG185: Acute coronary syndromes — includes STEMI and PCI"
             }
           ]
         }
@@ -2717,9 +2717,9 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
               description: "Sepsis Six bundle clinical resources"
             },
             {
-              title: "Surviving Sepsis Campaign",
-              url: "https://www.sccm.org/SurvivingSepsisCampaign/Guidelines",
-              description: "International sepsis management guidelines"
+              title: "Surviving Sepsis Campaign Guidelines",
+              url: "https://www.survivingsepsis.org/guidelines",
+              description: "International evidence-based sepsis management guidelines"
             },
             {
               title: "NHS England Sepsis Guidance",
@@ -2807,19 +2807,19 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
           },
           supplementary: [
             {
-              title: "Joint British Diabetes Societies",
-              url: "https://www.diabetes.org.uk/professionals/position-statements-reports/specialist-care-for-children-and-adults-and-complications/management-of-dka-in-adults",
-              description: "JBDS DKA management guidelines"
+              title: "NICE Guidance: Type 1 Diabetes",
+              url: "https://www.nice.org.uk/guidance/ng17",
+              description: "NICE NG17: Type 1 diabetes in adults — includes DKA management"
             },
             {
-              title: "NHS Diabetes Guidelines",
+              title: "CKS: Diabetic Ketoacidosis",
+              url: "https://cks.nice.org.uk/topics/diabetes-type-1/management/diabetic-ketoacidosis/",
+              description: "CKS primary care guidance on DKA recognition and management"
+            },
+            {
+              title: "NHS England: Diabetes",
               url: "https://www.england.nhs.uk/diabetes/",
-              description: "NHS diabetes emergency management"
-            },
-            {
-              title: "Diabetes UK Professional",
-              url: "https://www.diabetes.org.uk/professionals",
-              description: "Professional diabetes care resources"
+              description: "NHS England diabetes quality improvement resources"
             }
           ]
         }
@@ -2867,8 +2867,9 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
         mnemonic: "Appendicitis: PAINS = Pain migration, Anorexia, Inflammation markers, Nausea/vomiting, Surgery (laparoscopic)",
         links: {
           primary: {
-            title: "RCS Appendicitis Guidelines",
-            url: "https://www.rcseng.ac.uk/standards-and-research/standards-and-guidance/"
+            title: "NICE CG141: Appendicitis",
+            url: "https://www.nice.org.uk/guidance/cg141",
+            description: "NICE CG141: Appendicitis — diagnosis and management"
           }
         }
       }
@@ -3157,9 +3158,9 @@ app.get("/api/test/questions", async (req, res) => {
                 description: "NHS guidance on type 2 diabetes management"
               },
               {
-                title: "Diabetes UK Guidelines", 
-                url: "https://www.diabetes.org.uk/professionals",
-                description: "Professional guidance for diabetes management"
+                title: "CKS: Type 2 Diabetes",
+                url: "https://cks.nice.org.uk/topics/diabetes-type-2/",
+                description: "CKS evidence-based guidance on type 2 diabetes management"
               },
               {
                 title: "SIGN Diabetes Guidelines",
@@ -3456,9 +3457,9 @@ app.get("/api/test/questions", async (req, res) => {
                 description: "British Society of Gastroenterology clinical guidance"
               },
               {
-                title: "RCGP Guidance",
-                url: "https://www.rcgp.org.uk/clinical-and-research/resources/toolkits",
-                description: "Royal College of General Practitioners clinical resources"
+                title: "CKS: Gastro-oesophageal Reflux Disease",
+                url: "https://cks.nice.org.uk/topics/gastro-oesophageal-reflux-disease/",
+                description: "CKS GORD diagnosis and management in primary care"
               }
             ]
           }
@@ -3500,14 +3501,9 @@ app.get("/api/test/questions", async (req, res) => {
                 description: "NHS bone health and osteoporosis guidance"
               },
               {
-                title: "Royal Osteoporosis Society",
-                url: "https://theros.org.uk/healthcare-professionals/",
-                description: "Professional guidance for osteoporosis management"
-              },
-              {
-                title: "NOGG Guidelines",
+                title: "NOGG: Osteoporosis Guidelines",
                 url: "https://www.nogg.org.uk/",
-                description: "National Osteoporosis Guideline Group recommendations"
+                description: "National Osteoporosis Guideline Group — fracture risk and treatment recommendations"
               }
             ]
           }

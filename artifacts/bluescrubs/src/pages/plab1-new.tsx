@@ -39,15 +39,15 @@ const REFERENCE_URL_MAP: { match: RegExp; url: string }[] = [
   { match: /\bESC\b|European Society of Cardiology/i, url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines' },
   { match: /\bBTS\b|British Thoracic Society/i, url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/' },
   { match: /\bBSG\b|British Society of Gastroenterology/i, url: 'https://www.bsg.org.uk/clinical-resource/guidelines/' },
-  { match: /\bRCOG\b|Royal College of Obstetricians/i, url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/' },
-  { match: /\bRCGP\b|Royal College of General Practitioners/i, url: 'https://www.rcgp.org.uk/clinical-and-research' },
-  { match: /\bADA\b|American Diabetes Association/i, url: 'https://professional.diabetes.org/standards-of-care' },
+  { match: /\bRCOG\b|Royal College of Obstetricians/i, url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/' },
+  { match: /\bRCGP\b|Royal College of General Practitioners/i, url: 'https://cks.nice.org.uk/topics' },
+  { match: /\bADA\b|American Diabetes Association/i, url: 'https://www.nice.org.uk/guidance/ng28' },
   { match: /\bSIGN\b|Scottish Intercollegiate/i, url: 'https://www.sign.ac.uk/our-guidelines/' },
   { match: /\bGMC\b.*Good Medical Practice|Good Medical Practice/i, url: 'https://www.gmc-uk.org/professional-standards/professional-standards-for-doctors/good-medical-practice' },
   { match: /\bMLA\b|Medical Licensing Assessment|Content Map/i, url: 'https://www.gmc-uk.org/education/standards-guidance-and-curricula/curricula/medical-licensing-assessment' },
   { match: /Foundation Programme/i, url: 'https://foundationprogramme.nhs.uk/curriculum/' },
-  { match: /\bCKS\b|Clinical Knowledge Summaries/i, url: 'https://cks.nice.org.uk/' },
-  { match: /\bBNF\b|British National Formulary/i, url: 'https://bnf.nice.org.uk/' },
+  { match: /\bCKS\b|Clinical Knowledge Summaries/i, url: 'https://cks.nice.org.uk/topics' },
+  { match: /\bBNF\b|British National Formulary/i, url: 'https://bnf.nice.org.uk/treatment-summaries/' },
   { match: /\bNICE\b/i, url: 'https://www.nice.org.uk/guidance' },
 ];
 
@@ -2660,7 +2660,7 @@ export default function PLAB1New() {
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            window.open(currentQuestion.ada_guidance.ada_url || 'https://professional.diabetes.org/standards-of-care', '_blank');
+                            window.open(currentQuestion.ada_guidance.ada_url || 'https://www.nice.org.uk/guidance/ng28', '_blank');
                           }}
                           className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                         >

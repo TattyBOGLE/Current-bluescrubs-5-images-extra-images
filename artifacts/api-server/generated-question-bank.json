@@ -1791,5 +1791,215 @@
       "CKS": "https://cks.nice.org.uk/topics/pulmonary-embolism/"
     },
     "difficulty": "mixed"
+  },
+  {
+    "id": "generated_all_1779036433343_0",
+    "topic": "Hypertension",
+    "category": "all",
+    "question": "A 55-year-old man presents for a routine check-up. His blood pressure is 160/100 mmHg on two separate occasions. He has no significant past medical history and is not on any medications. What is the most appropriate initial management?",
+    "options": [
+      "Lifestyle modifications",
+      "Start amlodipine",
+      "Start lisinopril",
+      "Start atenolol",
+      "Refer to cardiology"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is lifestyle modifications. According to NICE guidelines for hypertension management, initial treatment for stage 1 hypertension should focus on lifestyle interventions such as reducing salt intake, regular exercise, and weight loss if the patient has no end-organ damage or cardiovascular risk factors. This patient does not have any specified high-risk factors or end-organ damage. Starting antihypertensive medication is not indicated at this stage without these additional factors. Amlodipine, lisinopril, and atenolol are all options for pharmacological treatment, usually considered if lifestyle modifications fail or in cases of stage 2 hypertension. Referral to cardiology is not necessary unless there is a secondary cause of hypertension or complications. Remember the mnemonic 'SLOW' for hypertension: Salt reduction, Lifestyle changes, Obesity management, Weight loss.",
+    "mnemonic": "SLOW",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_1",
+    "topic": "Asthma",
+    "category": "all",
+    "question": "A 30-year-old woman with a history of asthma presents with increasing wheezing and shortness of breath. She uses her salbutamol inhaler three times daily with minimal relief. Her peak flow is 200 L/min (personal best 400 L/min). What is the next step in management?",
+    "options": [
+      "Increase salbutamol dosage",
+      "Add a long-acting beta agonist",
+      "Start oral corticosteroids",
+      "Add a leukotriene receptor antagonist",
+      "Refer to pulmonology"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to start oral corticosteroids. The scenario describes an acute asthma exacerbation, indicated by the significant drop in peak flow and frequent use of the rescue inhaler. NICE guidelines recommend oral corticosteroids for acute exacerbations to reduce airway inflammation. Increasing the dosage of salbutamol or adding a long-acting beta agonist is not appropriate in acute settings, as they do not address inflammation. Adding a leukotriene receptor antagonist is more for chronic control rather than acute management. Referral to pulmonology is not immediately necessary unless the patient fails to respond to initial treatment. Remember 'SOB' for acute asthma: Steroids, Oxygen, Beta-agonists.",
+    "mnemonic": "SOB",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng80",
+      "CKS": "https://cks.nice.org.uk/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_2",
+    "topic": "Type 2 Diabetes Mellitus",
+    "category": "all",
+    "question": "A 45-year-old woman with newly diagnosed type 2 diabetes presents for management advice. Her BMI is 32 kg/m2, and HbA1c is 58 mmol/mol. What is the recommended first-line pharmacological treatment?",
+    "options": [
+      "Sulfonylureas",
+      "Metformin",
+      "Insulin",
+      "DPP-4 inhibitors",
+      "SGLT2 inhibitors"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is metformin. NICE guidelines recommend metformin as the initial pharmacological treatment for type 2 diabetes, especially in overweight or obese patients, due to its efficacy and weight-neutral or weight-reducing effects. Sulfonylureas are not first-line due to the risk of hypoglycemia and weight gain. Insulin is typically reserved for later stages or specific situations like severe hyperglycemia. DPP-4 inhibitors and SGLT2 inhibitors can be considered as add-on therapies if metformin alone is insufficient. They are not first-line treatments. Use the mnemonic 'METS' for initial diabetes management: Metformin, Exercise, Titrate diet, and Stop smoking.",
+    "mnemonic": "METS",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_3",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 60-year-old man presents with sudden-onset chest pain radiating to the left arm, associated with nausea and sweating. ECG shows ST elevation in leads II, III, and aVF. What is the most appropriate immediate management?",
+    "options": [
+      "Oral aspirin",
+      "IV morphine",
+      "Sublingual nitroglycerin",
+      "Primary PCI",
+      "IV beta-blocker"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is primary PCI. The patient is experiencing an ST-elevation myocardial infarction (STEMI), as indicated by ST elevation in the inferior leads. According to NICE guidelines, primary percutaneous coronary intervention (PCI) is the preferred reperfusion strategy for STEMI if it can be performed within 120 minutes of the first medical contact. Oral aspirin should be administered but is not the immediate definitive treatment. IV morphine and sublingual nitroglycerin are used for symptom relief but do not address the underlying ischemia. IV beta-blockers are typically used after stabilization unless contraindicated. Remember 'MONA-P' for initial management of STEMI: Morphine, Oxygen, Nitroglycerin, Aspirin, PCI.",
+    "mnemonic": "MONA-P",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/acute-coronary-syndromes"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_4",
+    "topic": "Anemia",
+    "category": "all",
+    "question": "A 30-year-old woman presents with fatigue and pallor. Blood tests reveal hemoglobin 9 g/dL, MCV 72 fL. What is the most likely cause of her anemia?",
+    "options": [
+      "Vitamin B12 deficiency",
+      "Iron deficiency",
+      "Chronic disease",
+      "Thalassemia",
+      "Folate deficiency"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is iron deficiency. The low mean corpuscular volume (MCV) indicates microcytic anemia, which is most commonly due to iron deficiency. This is supported by the patient's symptoms of fatigue and pallor. Vitamin B12 and folate deficiencies lead to macrocytic anemia with an increased MCV. Anemia of chronic disease can be normocytic or microcytic but is less common in a young, otherwise healthy individual without a chronic illness history. Thalassemia can cause microcytic anemia but would typically be associated with a family history and additional blood abnormalities. Use the mnemonic 'TAILS' for microcytic anemia causes: Thalassemia, Anemia of chronic disease, Iron deficiency, Lead poisoning, Sideroblastic anemia.",
+    "mnemonic": "TAILS",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng47",
+      "CKS": "https://cks.nice.org.uk/anaemia-iron-deficiency"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_5",
+    "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "category": "all",
+    "question": "A 65-year-old man with a 40-pack-year smoking history presents with increasing breathlessness and a chronic productive cough. Spirometry shows FEV1/FVC ratio of 0.6. What is the most appropriate first-line treatment?",
+    "options": [
+      "Short-acting beta-agonist",
+      "Long-acting muscarinic antagonist",
+      "Inhaled corticosteroid",
+      "Oral corticosteroid",
+      "Pulmonary rehabilitation"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is short-acting beta-agonist (SABA). The patient presents with symptoms indicative of COPD, confirmed by the reduced FEV1/FVC ratio. NICE guidelines recommend starting with a SABA or short-acting muscarinic antagonist (SAMA) for symptom relief in COPD patients. Long-acting muscarinic antagonists and inhaled corticosteroids are considered for more severe or frequent symptoms not controlled by short-acting bronchodilators. Oral corticosteroids are used for acute exacerbations, not chronic management. Pulmonary rehabilitation is beneficial but not a first-line pharmacologic treatment. Remember 'ABC' for initial COPD management: Airway clearance, Bronchodilator, Cessation of smoking.",
+    "mnemonic": "ABC",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_6",
+    "topic": "Heart Failure",
+    "category": "all",
+    "question": "A 70-year-old woman with a history of hypertension presents with exertional dyspnea and bilateral ankle swelling. Echocardiogram shows an ejection fraction of 35%. What is the most appropriate initial pharmacological therapy?",
+    "options": [
+      "Loop diuretic",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Aldosterone antagonist",
+      "Digoxin"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is ACE inhibitor. In heart failure with reduced ejection fraction (HFrEF), as indicated by the echocardiogram, NICE guidelines recommend starting an ACE inhibitor as part of the first-line treatment. This helps to reduce symptoms and improve survival. A loop diuretic like furosemide may be used for symptomatic relief of fluid overload but does not modify disease progression. Beta-blockers are also part of the treatment but are typically added after initiating an ACE inhibitor. Aldosterone antagonists and digoxin are added in more severe or refractory cases. Remember 'A-B-C-D' for HFrEF management: ACE inhibitor, Beta-blocker, Control fluid, Digoxin if needed.",
+    "mnemonic": "A-B-C-D",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_7",
+    "topic": "Peptic Ulcer Disease",
+    "category": "all",
+    "question": "A 45-year-old man presents with epigastric pain that improves with eating. He is on no medications. H. pylori test is positive. What is the most appropriate treatment?",
+    "options": [
+      "PPI monotherapy",
+      "PPI and amoxicillin",
+      "PPI, amoxicillin, and clarithromycin",
+      "H2 receptor antagonist",
+      "Surgical intervention"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is a combination of PPI, amoxicillin, and clarithromycin, commonly known as triple therapy. This regimen is recommended by NICE for the eradication of H. pylori infection, which is a common cause of peptic ulcer disease. PPI monotherapy may provide symptom relief but does not eradicate the bacteria. A combination of PPI and amoxicillin alone is not sufficient for eradication. H2 receptor antagonists are less effective than PPIs and do not have an antibacterial effect. Surgical intervention is reserved for complications like perforation or bleeding ulcers. Use the mnemonic 'PAC' for H. pylori eradication: PPI, Amoxicillin, Clarithromycin.",
+    "mnemonic": "PAC",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg184",
+      "CKS": "https://cks.nice.org.uk/dyspepsia-undiagnosed"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_8",
+    "topic": "Deep Vein Thrombosis (DVT)",
+    "category": "all",
+    "question": "A 50-year-old man presents with unilateral leg swelling and pain. Doppler ultrasound confirms a DVT. What is the most appropriate initial anticoagulation therapy?",
+    "options": [
+      "Warfarin",
+      "Aspirin",
+      "Low molecular weight heparin",
+      "Rivaroxaban",
+      "Thrombolysis"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is rivaroxaban. NICE guidelines now recommend direct oral anticoagulants (DOACs) like rivaroxaban as first-line treatment for acute DVT. These agents have the advantage of not requiring monitoring and have a rapid onset of action. Warfarin is an older treatment that requires bridging with heparin and regular INR monitoring. Aspirin is not effective for the treatment of DVT. Low molecular weight heparin is an option, particularly in cancer-associated thrombosis, but is less convenient than DOACs. Thrombolysis is reserved for massive DVT with limb-threatening ischemia. Remember 'RIVAR' for DVT: Rivaroxaban Initiates Venous Anticoagulation Rapidly.",
+    "mnemonic": "RIVAR",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng89",
+      "CKS": "https://cks.nice.org.uk/dvt"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779036433343_9",
+    "topic": "Hyperthyroidism",
+    "category": "all",
+    "question": "A 28-year-old woman presents with weight loss, palpitations, and tremors. Her TSH is suppressed, and free T4 is elevated. What is the most appropriate initial treatment?",
+    "options": [
+      "Radioactive iodine",
+      "Methimazole",
+      "Propranolol",
+      "Thyroidectomy",
+      "Levothyroxine"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is methimazole. According to NICE guidelines, antithyroid drugs like methimazole are the first-line treatment for hyperthyroidism to control hormone production. Propranolol can be used to manage symptoms such as palpitations and tremors but does not address the underlying hyperthyroidism. Radioactive iodine and thyroidectomy are definitive treatments but are not used initially. Levothyroxine is used for hypothyroidism, not hyperthyroidism. Remember 'MAP' for hyperthyroidism management: Methimazole, Antithyroid drug, Propranolol for symptoms.",
+    "mnemonic": "MAP",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/hyperthyroidism"
+    },
+    "difficulty": "intermediate"
   }
 ]
