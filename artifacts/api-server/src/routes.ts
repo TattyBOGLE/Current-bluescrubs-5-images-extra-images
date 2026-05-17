@@ -1162,19 +1162,21 @@ ${optionsList}
 The correct answer is option ${labels[correctIndex] || correctIndex + 1}: "${options[correctIndex]}".
 
 CRITICAL INSTRUCTIONS:
-- TREAT THE MARKED ANSWER AS CORRECT. Do NOT challenge, dispute, or point out any apparent mismatch between the stem and the marked correct answer. Do NOT use phrases like "this is an error", "the question is wrong", "this doesn't fit", "the marked answer doesn't match", or anything similar. The student needs to learn why the marked answer is correct — your job is to construct the strongest possible clinical case for it.
-- If the stem seems to fit a different diagnosis better, still present a coherent rationale for why the marked answer is the best choice. Find the clues that DO support it (even subtle ones) and emphasise them. If a feature could point either way, explain how it could fit the marked answer.
-- Reference the specific clinical clues in the stem (age, demographics, symptoms, signs, investigations, risk factors). Do NOT use generic filler like "clinical reasoning based on presentation and guidelines" or "consider differential diagnosis".
+- TREAT THE MARKED ANSWER AS CORRECT. Never challenge or dispute the marked answer.
+- Reference specific clinical clues from the stem (age, demographics, symptoms, signs, investigations). No generic filler.
 - Every sentence must add specific clinical content.
-- For each WRONG option, explain what that condition typically presents with and why a clinician would prefer the marked answer over it in this scenario — without saying the question is flawed.
+- THE TWO SECTIONS MUST NOT OVERLAP OR REPEAT EACH OTHER:
+  • "correctRationale" = the clinical reasoning linking THIS PATIENT'S specific clues to the correct answer (why this presentation fits). 3-5 sentences focusing on the patient's features.
+  • For the CORRECT option's "why" in the options array = the underlying mechanism, pharmacology, or guideline basis that makes it the right choice IN GENERAL (e.g. drug mechanism, NICE recommendation, pathophysiology). Do NOT repeat the patient-specific clues already covered in correctRationale.
+  • For each WRONG option's "why" = (a) what that condition/treatment typically presents with or does, (b) the key distinguishing reason it doesn't fit this scenario.
 
 Return STRICT JSON in exactly this shape (no extra keys, no commentary):
 {
-  "correctRationale": "Why the marked answer fits — reference clues from the stem (e.g. '20-year smoking history', 'bilateral infiltrates on CT') that support it. 3-5 sentences. Never say the question is wrong.",
+  "correctRationale": "Link the PATIENT'S specific clues from the stem to the correct answer. 3-5 sentences. E.g. 'The sudden painless vision loss combined with the pale retina and cherry-red spot on fundoscopy are pathognomonic for CRAO...'",
   "options": [
     {
       "label": "A",
-      "why": "If this is the correct option: 2-3 sentences confirming why it is the best answer. If incorrect: 2-4 sentences covering (a) what this condition typically presents with, (b) why the marked answer is preferred over it here, (c) any distinguishing feature. Never say the question is flawed."
+      "why": "CORRECT option: explain the underlying mechanism/guideline/pharmacology that makes it correct in general — do NOT repeat the patient-specific clues already in correctRationale. WRONG option: what this condition or treatment typically presents with/does, and the key reason it doesn't fit here."
     }
     // one entry per option, in order
   ],
