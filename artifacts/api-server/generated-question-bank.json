@@ -1,0 +1,137 @@
+[
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "template-cardiology-1779029331762-0",
+    "category": "cardiology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "template-cardiology-1779029331762-1",
+    "category": "cardiology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology"
+  },
+  {
+    "question": "A 45-year-old female presents with 1-month history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Echocardiogram",
+      "ACE inhibitor",
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "Aspirin and clopidogrel"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "template-cardiology-1779029331762-2",
+    "category": "cardiology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology"
+  },
+  {
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset chest pain radiating to the left arm. An ECG shows ST-elevation in leads II, III, and aVF. What is the most appropriate initial management?",
+    "options": [
+      "Beta-blocker",
+      "Urgent cardiology referral",
+      "Aspirin",
+      "ACE inhibitor",
+      "Nitrates"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
+      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
+      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
+      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
+      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
+    },
+    "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg94",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_cardiovascular_1779029553472_0",
+    "category": "Cardiovascular",
+    "difficulty": "mixed",
+    "topic": "Acute Coronary Syndrome"
+  },
+  {
+    "question": "A 72-year-old female presents with a 2-week history of worsening ankle swelling and shortness of breath on exertion. On examination, she has pitting edema and a raised jugular venous pressure. What is the most appropriate initial investigation?",
+    "options": [
+      "Chest X-ray",
+      "Echocardiogram",
+      "ECG",
+      "Blood tests for BNP levels",
+      "CT pulmonary angiogram"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
+      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
+      "C": "ECG can show heart rhythm issues but not heart function.",
+      "D": "BNP levels can indicate heart failure but do not provide structural information.",
+      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
+    },
+    "mnemonic": "Echo for Edema and Exertional dyspnea",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_cardiovascular_1779029553472_1",
+    "category": "Cardiovascular",
+    "difficulty": "mixed",
+    "topic": "Heart Failure"
+  }
+]

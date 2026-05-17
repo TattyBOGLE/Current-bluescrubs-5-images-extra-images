@@ -53,9 +53,6 @@ import { hybridAI, HybridConfig } from './hybrid-ai-system';
 // Independent Question Generation (No AI - keeps questions authentic)
 async function generateMedicalQuestions(templates: any[], category: string, difficulty: string, count: number) {
   try {
-    // Always use template-based generation for questions to maintain authenticity
-    return generateQuestionFromTemplate(category, count);
-    
     const { default: OpenAI } = await import('openai');
     const openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
@@ -448,18 +445,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { targetCount = 5000 } = req.body;
       
-      // Get the 8 template questions from current question bank
-      const templateQuestions = [];
-      
-      // Fetch the 8 existing template questions
-      try {
-        const testQuestionsResponse = await fetch(`http://localhost:5000/api/test/questions`);
-        const existingQuestions = await testQuestionsResponse.json();
-        templateQuestions.push(...existingQuestions.slice(0, 8));
-      } catch (error) {
-        console.error('Failed to fetch template questions:', error);
-        return res.status(500).json({ error: 'Cannot access template questions' });
-      }
+      // Get the 8 template questions from current question bank (direct access, no HTTP)
+      const templateQuestions = ukQuestionBank.slice(0, 8);
 
       // Define medical specialties for comprehensive question generation
       const totalSpecialties = 11;
@@ -974,13 +961,12 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
     }
 
     try {
-      // Use existing test questions as templates
-      const response = await fetch(`${req.protocol}://${req.get('host')}/api/test/questions`);
-      const templateQuestions = await response.json();
+      // Use existing question bank entries as templates (direct access, no HTTP)
+      const templateQuestions = ukQuestionBank.slice(0, 8);
 
       // Generate questions using AI with templates as reference
       const generatedQuestions = await generateMedicalQuestions(
-        templateQuestions.slice(0, 8),
+        templateQuestions,
         category,
         difficulty,
         requestedCount
