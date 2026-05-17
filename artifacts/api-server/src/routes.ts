@@ -1274,24 +1274,25 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
         baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
       });
 
-      const prompt = `You are a UK PLAB 1 medical educator. Given this MCQ question and its correct answer, generate 2-3 concise, memorable mnemonics or clinical pearls that will help the student remember the key concepts tested.
+      const prompt = `You are a UK PLAB 1 medical educator. Given this MCQ question and its correct answer, generate 2-3 memorable mnemonics that help the student remember the key concept tested.
 
 QUESTION: ${question}
 CORRECT ANSWER: ${correctOption}
 SPECIALTY: ${category || 'General Medicine'}
 
 Rules:
-- Each mnemonic must be directly relevant to THIS question's specific topic and correct answer
-- Do NOT use generic mnemonics like SOCRATES, WIPE, or IPPA unless directly tested by this question
-- Each must be immediately useful for PLAB 1 exam technique
-- Acronym-based mnemonics should spell out a real word or memorable phrase
-- Keep expansions concise (1 sentence per letter/element)
+- PREFER established, widely-used medical mnemonics where one exists for this topic (e.g. FAST for stroke, MUDPILES for metabolic acidosis, AEIOU-TIPS for coma, DUMBBELS for organophosphate toxicity, CHADS2-VASc for AF, CURB-65 for pneumonia severity, ABCDE for trauma, SOCRATES for pain, WETBAGS for anaphylaxis, STOP-BANG for OSA, 4Ts for HIT, etc.)
+- If no established mnemonic fits, create a new one that spells a real English word or short memorable phrase
+- Each mnemonic MUST be directly relevant to THIS question's specific topic and correct answer
+- Title format: just the acronym/word in quotes — e.g. "FAST" or "CURB-65" — NO prefix like "Topic:" or "Mnemonic:"
+- Keep expansions concise (one phrase per letter/element)
+- Do NOT use generic mnemonics unless they are directly tested by this question
 
 Return STRICT JSON:
 {
   "mnemonics": [
     {
-      "title": "Topic: \\"ACRONYM\\"",
+      "title": "\\"ACRONYM\\"",
       "expansion": "A = ..., B = ..., C = ..."
     }
   ]

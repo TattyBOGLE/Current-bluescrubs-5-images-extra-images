@@ -3053,7 +3053,7 @@ export default function PLAB1New() {
                     <div className="space-y-3">
                       {aiStudyTips.mnemonics.map((m, i) => (
                         <div key={i} className="bg-white border border-blue-200 rounded-lg p-3 border-l-4 border-l-yellow-400">
-                          <p className="text-sm font-semibold text-blue-900 mb-1">{m.title}</p>
+                          <p className="text-sm font-semibold text-blue-900 mb-1">{m.title.replace(/^(Topic|Mnemonic|Tip):\s*/i, '')}</p>
                           <p className="text-sm text-blue-800 leading-relaxed">{m.expansion}</p>
                         </div>
                       ))}
