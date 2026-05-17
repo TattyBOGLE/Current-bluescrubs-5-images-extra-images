@@ -34,6 +34,16 @@ function toQ(s: string) { return encodeURIComponent(s.trim()); }
 function toSlug(s: string) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
 
 // NICE guideline numbers for the most common PLAB 1 conditions
+// NICE visual summary PDF resource IDs — confirmed from https://www.nice.org.uk/guidance/{code}/resources
+// Format: https://www.nice.org.uk/guidance/{code}/resources/visual-summary-pdf-{id}
+const NICE_VISUAL_SUMMARY_MAP: Record<string, string> = {
+  'ng136': '6899919517',   // Hypertension in adults
+  'ng28':  '6965793901',   // Type 2 diabetes in adults
+  'ng128': '11193380893',  // Stroke and TIA
+  'ng217': '11067088285',  // Epilepsies: diagnosis and management
+  'ng71':  '6544021069',   // Parkinson's disease in adults
+};
+
 const NICE_GUIDELINE_MAP: Record<string, string> = {
   'hypertension': 'ng136',
   'heart-failure': 'cg187',
@@ -316,6 +326,14 @@ function toNICEUrl(topic: string): string | null {
   return code ? `https://www.nice.org.uk/guidance/${code}` : null;
 }
 
+function toNICEVisualUrl(topic: string): string | null {
+  const base = toConditionSlug(topic);
+  const code = NICE_GUIDELINE_MAP[base];
+  if (!code) return null;
+  const resourceId = NICE_VISUAL_SUMMARY_MAP[code];
+  return resourceId ? `https://www.nice.org.uk/guidance/${code}/resources/visual-summary-pdf-${resourceId}` : null;
+}
+
 function toBNFUrl(topic: string): string | null {
   const base = toConditionSlug(topic);
   const slug = BNF_TREATMENT_MAP[base];
@@ -346,7 +364,7 @@ function toRCOGUrl(topic: string): string | null {
   return slug ? `https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/${slug}/` : null;
 }
 
-interface RefLink { url: string; label: string }
+interface RefLink { url: string; label: string; visualUrl?: string }
 
 function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   if (!text) return null;
@@ -359,9 +377,11 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
 
   if (/\bNICE\b/i.test(text)) {
     const specific = hasT ? toNICEUrl(rawTopic) : null;
+    const visualUrl = hasT ? toNICEVisualUrl(rawTopic) : null;
     return {
       url: specific ?? (hasT ? `https://www.nice.org.uk/search#q=${q}&ndt=Guidance` : 'https://www.nice.org.uk/guidance'),
       label: hasT ? `NICE — ${rawTopic}` : 'NICE Guidelines',
+      ...(visualUrl ? { visualUrl } : {}),
     };
   }
   if (/\bCKS\b|Clinical Knowledge Summaries/i.test(text)) {
@@ -461,18 +481,31 @@ const ReferenceLink = ({ text, topic }: { text: string; topic?: string }) => {
   const link = buildDynamicLink(text, topic);
   if (!link) return <p className="text-blue-700">• {text}</p>;
   return (
-    <p className="text-blue-700">
-      <span aria-hidden="true">• </span>
-      <a
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-700 hover:text-blue-900 underline decoration-blue-400 hover:decoration-blue-700 underline-offset-2 inline-flex items-baseline gap-1"
-      >
-        {link.label}
-        <ExternalLink className="w-3 h-3 self-center" aria-hidden="true" />
-      </a>
-    </p>
+    <div className="flex flex-wrap items-center gap-2">
+      <p className="text-blue-700 flex items-center gap-1">
+        <span aria-hidden="true">• </span>
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-700 hover:text-blue-900 underline decoration-blue-400 hover:decoration-blue-700 underline-offset-2 inline-flex items-baseline gap-1"
+        >
+          {link.label}
+          <ExternalLink className="w-3 h-3 self-center" aria-hidden="true" />
+        </a>
+      </p>
+      {link.visualUrl && (
+        <a
+          href={link.visualUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 border border-blue-300"
+        >
+          <ExternalLink className="w-3 h-3" aria-hidden="true" />
+          Visual Summary PDF
+        </a>
+      )}
+    </div>
   );
 };
 
@@ -3218,21 +3251,37 @@ export default function PLAB1New() {
                         })
                         .map((reference: any, index: number) => {
                           const refTitle = typeof reference === 'string' ? reference : reference.title || reference.text || '';
-                          const refUrl = (typeof reference === 'object' && reference.url) || getReferenceUrl(refTitle, currentQuestion.topic || currentQuestion.category);
+                          const refTopic = currentQuestion.topic || currentQuestion.category;
+                          const builtLink = buildDynamicLink(refTitle, refTopic);
+                          const refUrl = (typeof reference === 'object' && reference.url) || builtLink?.url || null;
+                          const visualUrl = builtLink?.visualUrl ?? null;
                           return (
                             <div key={index} className="bg-white border border-blue-200 rounded-lg p-3 mb-3">
                               <p className="text-blue-700 leading-relaxed mb-3 text-sm">{refTitle}</p>
-                              {refUrl && (
-                                <a
-                                  href={refUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium"
-                                >
-                                  <ExternalLink className="w-4 h-4" />
-                                  View Full Guidelines
-                                </a>
-                              )}
+                              <div className="flex flex-wrap gap-2">
+                                {refUrl && (
+                                  <a
+                                    href={refUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium"
+                                  >
+                                    <ExternalLink className="w-4 h-4" />
+                                    View Full Guidelines
+                                  </a>
+                                )}
+                                {visualUrl && (
+                                  <a
+                                    href={visualUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-white border border-blue-400 hover:bg-blue-50 text-blue-700 text-sm font-medium"
+                                  >
+                                    <ExternalLink className="w-4 h-4" />
+                                    Visual Summary PDF
+                                  </a>
+                                )}
+                              </div>
                             </div>
                           );
                         })
