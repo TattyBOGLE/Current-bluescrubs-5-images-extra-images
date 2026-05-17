@@ -1274,19 +1274,74 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
         baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
       });
 
-      const prompt = `You are a UK PLAB 1 medical educator. Given this MCQ question and its correct answer, generate 2-3 memorable mnemonics that help the student remember the key concept tested.
+      const prompt = `You are a UK PLAB 1 medical educator. Generate 2-3 mnemonics to help a student remember the key concept in this question.
 
 QUESTION: ${question}
 CORRECT ANSWER: ${correctOption}
 SPECIALTY: ${category || 'General Medicine'}
 
-Rules:
-- PREFER established, widely-used medical mnemonics where one exists for this topic (e.g. FAST for stroke, MUDPILES for metabolic acidosis, AEIOU-TIPS for coma, DUMBBELS for organophosphate toxicity, CHADS2-VASc for AF, CURB-65 for pneumonia severity, ABCDE for trauma, SOCRATES for pain, WETBAGS for anaphylaxis, STOP-BANG for OSA, 4Ts for HIT, etc.)
-- If no established mnemonic fits, create a new one that spells a real English word or short memorable phrase
-- Each mnemonic MUST be directly relevant to THIS question's specific topic and correct answer
-- Title format: just the acronym/word in quotes — e.g. "FAST" or "CURB-65" — NO prefix like "Topic:" or "Mnemonic:"
-- Keep expansions concise (one phrase per letter/element)
-- Do NOT use generic mnemonics unless they are directly tested by this question
+════════════════════════════════════
+ESTABLISHED MNEMONICS — USE THESE EXACTLY IF RELEVANT. DO NOT MODIFY THEM.
+
+CARDIOVASCULAR / HAEMATOLOGY:
+• FAST — Stroke: Face drooping, Arm weakness, Speech difficulty, Time to call 999
+• CHA₂DS₂-VASc — AF stroke risk: Congestive HF(1), Hypertension(1), Age≥75(2), Diabetes(1), Stroke/TIA(2), Vascular disease(1), Age 65-74(1), Sex female(1)
+• HAS-BLED — Bleeding risk in AF: Hypertension, Abnormal renal/liver function, Stroke, Bleeding history, Labile INR, Elderly (>65), Drugs/alcohol
+• Virchow's Triad (DVT/VTE) — SHE: Stasis of blood flow, Hypercoagulability, Endothelial injury
+• Wells DVT Score criteria — CALF+: Calf swelling >3 cm, Active cancer, Leg immobilisation/plaster, Full-leg swelling; plus localised tenderness, pitting oedema, collateral veins, previous DVT; minus "alternative diagnosis equally likely" (-2)
+• 4Ts — HIT: Thrombocytopenia degree, Timing of fall (day 5-10), Thrombosis or skin necrosis, oTher causes of thrombocytopenia excluded
+• HEARTS — Heart failure features: HF symptoms (orthopnoea/PND), Exercise intolerance, Ankle oedema, Raised JVP, Third heart sound (S3), SOB
+• ABCDE thrombolysis contraindications — Active bleed, BP>185/110, CT scan first, Drugs (anticoagulants), End-stage illness
+
+RESPIRATORY:
+• CURB-65 — Pneumonia severity: Confusion (new), Urea >7 mmol/L, Respiratory rate ≥30/min, BP systolic <90 or diastolic ≤60, age ≥65 (score 0-1: home; 2: hospital; 3+: ITU consider)
+• STOP-BANG — OSA: Snoring, Tired (daytime), Observed apnoeas, Pressure (hypertension), BMI >35, Age >50, Neck >40 cm, Gender male
+• PIRATE — PE risk factors: Prolonged immobility/travel, Inherited thrombophilia, Recent surgery/trauma, Age >40, Thrombosis previous, Estrogen (OCP/HRT)/malignancy
+• ABCDE — Acute severe asthma: PEFR 33-50%, Breathlessness too severe to complete sentence, can't Count to 10, tachycardia >110, Diastolic 60+, SpO2<92% = life-threatening
+
+ENDOCRINE / METABOLIC:
+• MUDPILES — High anion-gap metabolic acidosis: Methanol, Uraemia, Diabetic ketoacidosis, Propylene glycol, Isoniazid/Iron, Lactic acidosis, Ethylene glycol, Salicylates
+• HHHS — HHS vs DKA: Hyperglycaemia markedly elevated (>30), High osmolality (>320), Hypernatraemia relative, Slow onset over days (no ketones)
+• BONES GROANS MOANS STONES — Hypercalcaemia: Bone pain/fractures, Abdominal groans (nausea/constipation/pancreatitis), Psychic moans (depression/confusion), Renal stones/polyuria
+
+NEUROLOGY:
+• AEIOU-TIPS — Coma causes: Alcohol, Epilepsy/Encephalopathy, Insulin (hypo/hyperglycaemia), Opiates/Overdose, Uraemia; Trauma, Infection, Psychiatric, Stroke/Space-occupying lesion
+• THREADS — Parkinson's features: Tremor (resting, pill-rolling), Hypokinesia/Bradykinesia, Rigidity (cogwheel/lead-pipe), Expressionless face (hypomimia), Autonomic dysfunction, Dementia (late), Shuffling festinant gait
+
+GASTROENTEROLOGY:
+• ALARMING — Upper GI red flags: Anaemia (iron-deficiency), Loss of weight (unexplained), Anorexia, Recent/progressive dysphagia, Melaena/haematemesis, Indigestion (new onset >55 yrs), Nausea (persistent), Gut mass palpable
+• CAGE — Alcohol dependence: Cut down (tried), Annoyed (when criticised), Guilty (about drinking), Eye-opener (morning drink)
+
+PSYCHIATRY / SAFEGUARDING:
+• SIGECAPS — Depression: Sleep change, Interest lost (anhedonia), Guilt/worthlessness, Energy low, Concentration poor, Appetite change, Psychomotor change, Suicidal ideation
+• SADPERSONS — Suicide risk scoring: Sex (male), Age (<19 or >45), Depression, Previous attempt, Ethanol/drugs, Rational thinking lost, Social support absent, Organised plan, No spouse/partner, Sickness (chronic illness)
+• Mental Capacity Act 4 steps — URWC: Understand, Retain, Weigh up/use, Communicate decision
+
+PHARMACOLOGY / TOXICOLOGY:
+• DUMBBELS — Organophosphate/cholinergic toxidrome: Diarrhoea, Urination, Miosis, Bradycardia/Bronchospasm/Bronchorrhoea, Emesis, Lacrimation, Salivation/Sweating
+• WETBAGS — Anaphylaxis features: Wheeze, Erythema/urticaria, Throat/tongue swelling, Blood pressure drop, Abdominal pain, GI symptoms, Stridor
+
+MUSCULOSKELETAL / EXAMINATION:
+• SOCRATES — Pain history: Site, Onset, Character, Radiation, Associated symptoms, Timing/duration, Exacerbating/relieving, Severity (0-10)
+• GALS — MSK screen: Gait, Arms, Legs, Spine
+
+OBSTETRICS:
+• HELLP — Severe pre-eclampsia complication: Haemolysis, Elevated Liver enzymes, Low Platelets
+• MNEMONIC drugs safe in pregnancy — MAST: Methyldopa, (low-dose) Aspirin, labetalol (Safe beta-blocker), nifediTpine
+• SOAPME — Obstetric emergency kit: Suction, Oxygen, Airway, Pharmacy (drugs), Monitors, Equipment
+
+INFECTION / SEPSIS:
+• qSOFA — Bedside sepsis screen: Respiratory rate ≥22, altered Mentation (GCS<15), Systolic BP ≤100
+• SEPSIS-6 (first hour): Give O₂, Take blood cultures, Give IV antibiotics, Give IV fluids, Check lactate, Insert urinary catheter (monitor output)
+════════════════════════════════════
+
+STRICT RULES — FOLLOW PRECISELY:
+1. CHECK the bank above first. If an established mnemonic applies to this question's topic, USE IT verbatim. Do not paraphrase.
+2. NEVER build a mnemonic using a drug name as one of the letters (e.g. R = Rivaroxaban, M = Metformin, W = Warfarin). Drug-name acronyms are confusing and useless — they do not help recall.
+3. NEVER invent a mnemonic where the letters do not give a genuine memory hook. If you cannot create something genuinely memorable and clinically useful, return FEWER mnemonics (even just 1) rather than inventing something worthless.
+4. Each mnemonic must be DIRECTLY relevant to the specific concept tested — not a generic guideline reminder.
+5. Title format: the acronym/score name in double quotes — e.g. "FAST" or "CURB-65". No prefix labels.
+6. Expansion: one short phrase per letter/element, separated by commas.
 
 Return STRICT JSON:
 {
