@@ -3679,5 +3679,77 @@
       "NICE": "https://www.nice.org.uk/guidance/ng217"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "ng245_review_1779043390177_1",
+    "question": "A 38-year-old woman with asthma was prescribed salbutamol alone in 2021 under the then-current BTS/SIGN guidelines. She presents for a routine medication review. She uses salbutamol 3\u20134 times per week. Her asthma has never been formally stepped up. What change is required to bring her management in line with NICE NG245 (2024)?",
+    "options": [
+      "Continue salbutamol alone as she is clinically stable",
+      "Add a regular low-dose inhaled corticosteroid \u2014 NG245 requires ICS to be co-prescribed from the point of diagnosis",
+      "Replace salbutamol with a LABA inhaler",
+      "Add oral theophylline as step-up therapy",
+      "No change required until her next acute exacerbation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "NICE NG245 (November 2024) introduced a fundamental change: all adults with asthma must have a regular low-dose ICS (e.g. beclometasone 200 mcg/day) prescribed alongside their SABA reliever from the point of diagnosis. Patients currently on SABA-only regimens prescribed under the old BTS/SIGN step-ladder should have their treatment updated at medication review. Using SABA 3\u20134 times per week indicates inadequate control and strongly supports adding ICS. Option A (continue SABA alone) is no longer compliant with NG245. LABA (Option C) is Step 2 and should only be added after ICS has been established and symptoms remain uncontrolled.",
+    "topic": "Asthma \u2014 Medication Review (NICE NG245)",
+    "specialty": "Respiratory",
+    "difficulty": "medium",
+    "tags": [
+      "asthma",
+      "NICE NG245",
+      "medication review",
+      "ICS",
+      "SABA only",
+      "guideline update"
+    ]
+  },
+  {
+    "id": "ng245_review_1779043390177_2",
+    "question": "A 45-year-old man with asthma was previously stepped up to high-dose ICS monotherapy (beclometasone 800 mcg/day) three years ago. He is reviewed in clinic and his asthma has been well controlled for the past 18 months with no exacerbations. According to NICE NG245, what should be considered?",
+    "options": [
+      "Continue high-dose ICS indefinitely as he is stable",
+      "Step down: try reducing to low-dose ICS + LABA combination",
+      "Add a biologic (anti-IL-5) given the duration of high-dose ICS",
+      "Switch to oral prednisolone to reduce inhaler burden",
+      "Add montelukast to current high-dose ICS"
+    ],
+    "correctAnswer": 1,
+    "explanation": "NICE NG245 (2024) emphasises that high-dose ICS monotherapy is not the preferred step-up approach \u2014 ICS/LABA combination (low-dose ICS + LABA) is preferred over increasing ICS dose at Step 2. For a patient currently on high-dose ICS alone who is well controlled, the appropriate strategy is to step down: try low-dose ICS + LABA, which maintains efficacy while reducing the steroid burden. NG245 specifically recommends considering regular step-down reviews every 3 months in stable patients, with the goal of reaching the lowest effective dose. Biologics are reserved for severe refractory asthma at Step 4\u20135 after specialist review.",
+    "topic": "Asthma \u2014 Step Down and High-Dose ICS Review",
+    "specialty": "Respiratory",
+    "difficulty": "hard",
+    "tags": [
+      "asthma",
+      "NICE NG245",
+      "step down",
+      "high-dose ICS",
+      "ICS/LABA",
+      "medication review"
+    ]
+  },
+  {
+    "id": "ng245_review_1779043390177_3",
+    "question": "A 29-year-old man with asthma has been on salbutamol PRN since being diagnosed by his previous GP five years ago. He moves to a new practice and attends for a medication review. He reports mild wheeze on exertion twice weekly but no night symptoms. What is the MOST important action according to current UK guidelines?",
+    "options": [
+      "Reassure and continue salbutamol \u2014 symptoms are mild",
+      "Perform spirometry and initiate regular low-dose ICS immediately per NICE NG245",
+      "Prescribe a LABA/ICS combination as he has had asthma for 5 years",
+      "Refer to respiratory outpatients before prescribing any preventer inhaler",
+      "Start montelukast as add-on therapy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This patient has been on SABA alone (salbutamol PRN) since diagnosis \u2014 a non-compliant regimen under NICE NG245 (November 2024), which mandates co-prescribing a regular low-dose ICS from the point of asthma diagnosis. At medication review, the GP should confirm the diagnosis (spirometry if not already done) and immediately initiate regular low-dose ICS alongside the SABA reliever. SABA use twice weekly with exertional wheeze indicates ongoing suboptimal control. LABA/ICS (Option C) is Step 2 and premature without first establishing ICS. The five-year gap on SABA alone also warrants assessment of exacerbation history, atopy, and smoking status. Option A is incorrect \u2014 SABA-only prescribing is no longer acceptable under NG245 regardless of symptom severity.",
+    "topic": "Asthma \u2014 Medication Review and NICE NG245 Compliance",
+    "specialty": "Respiratory",
+    "difficulty": "medium",
+    "tags": [
+      "asthma",
+      "NICE NG245",
+      "medication review",
+      "SABA only",
+      "ICS",
+      "GP review"
+    ]
   }
 ]
