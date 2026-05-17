@@ -98,13 +98,73 @@ UK DRUG NAMES — MANDATORY (never use the US equivalent):
 - All doses must be in metric (mg, mcg, mmol/L — NOT grains, oz, mEq)
 - Blood pressure and lab values must use UK reference ranges (e.g. K+ 3.5–5.0 mmol/L, creatinine in µmol/L)
 
-CURRENT UK GUIDELINES — use these versions (do NOT reference superseded versions):
-- Asthma: NICE NG245 (November 2024) — replaces old NG80 and old BTS/SIGN step ladder.
-  NG245 key points: (1) Prescribe a regular low-dose ICS alongside the SABA reliever from initial diagnosis; (2) Step up to ICS + LABA (not just higher-dose ICS) if inadequately controlled; (3) Do NOT write questions implying SABA-only is ever a complete first-line regimen.
-- Hypertension: NICE NG136 (2019, updated 2023) — ABCD rule: ACE/ARB (age <55, non-Black); CCB (age >55 or Black); thiazide-like diuretic at step 3
-- Stroke/TIA: NICE NG128 — dual antiplatelet for TIA/minor stroke; alteplase within 4.5 h for ischaemic stroke
-- Type 2 Diabetes: NICE NG28 — metformin first-line; add SGLT-2 inhibitor or GLP-1 if cardiovascular risk; HbA1c target 48 mmol/mol
-- VTE/PE: NICE NG158 — direct oral anticoagulants (DOACs) first-line for most; consider LMWH in cancer
+CURRENT UK GUIDELINES — always use these versions. NEVER reference superseded guidelines.
+
+CARDIOVASCULAR:
+- Hypertension: NICE NG136 (2023 update) — Step 1: ACE-i/ARB if <55 or non-Black; CCB if >55 or Black. Step 2: ACE-i/ARB + CCB. Step 3: add thiazide-like diuretic (indapamide). Step 4: add spironolactone if K+ <4.5. Targets: clinic BP <140/90 (<150/90 if ≥80 yrs).
+- Atrial Fibrillation: NICE NG196 (2021) — Rate control first (beta-blocker or CCB). Anticoagulate using CHA₂DS₂-VASc ≥2 (men) / ≥3 (women): DOAC preferred over warfarin. Rhythm control with cardioversion or ablation if symptomatic.
+- Acute Coronary Syndromes: NICE NG185 (2020) — STEMI: primary PCI within 120 min (or thrombolysis if PCI unavailable). NSTEMI/UA: dual antiplatelet (aspirin + ticagrelor), fondaparinux, early angiography if high-risk.
+- Heart Failure: NICE NG106 (2018, updated 2023) — HFrEF: ACE-i (or ARB/ARNI) + beta-blocker + MRA + SGLT-2 inhibitor (quadruple therapy). Loop diuretic for congestion.
+- VTE/PE: NICE NG158 (2020) — DOAC (rivaroxaban or apixaban) first-line for DVT/PE. LMWH if active cancer. Compression stockings for DVT. Duration: 3 months provoked; 6+ months unprovoked.
+- Stroke/TIA: NICE NG128 (2019) — Ischaemic stroke: alteplase within 4.5 h if no contraindications; aspirin 300 mg stat. TIA: dual antiplatelet (aspirin + clopidogrel) for 21 days then clopidogrel alone. Carotid endarterectomy within 2 weeks if 50–99% stenosis.
+- Lipids: NICE NG238 (2023) — Statin for primary prevention if 10-yr CVD risk ≥10% (QRISK3); atorvastatin 20 mg. Secondary prevention: atorvastatin 80 mg. Target: >40% reduction in LDL-C.
+
+RESPIRATORY:
+- Asthma: NICE NG245 (November 2024) — REPLACES NG80 and old BTS/SIGN step ladder. NEW approach: all adults with asthma should have a regular low-dose ICS (e.g. beclometasone 200 mcg/day) prescribed alongside a SABA reliever from the outset. SABA-only as a complete regimen is NO LONGER recommended. Step 2: low-dose ICS + LABA. Step 3: increase ICS dose or add LTRA. Do NOT write options saying "SABA alone is adequate first-line".
+- COPD: NICE NG115 (2018) — GOLD staging by FEV₁. Inhaler therapy: SABA/SAMA for mild; LABA or LAMA for moderate+; dual LABA+LAMA or ICS+LABA if frequent exacerbations. Pulmonary rehab if MRC ≥3. Long-term oxygen if PaO₂ <7.3 kPa.
+- Pneumonia (community-acquired): NICE CG191 (2014) / NICE NG138 (2019 antimicrobials) — CURB-65 to guide admission (score ≥2 = admit). Low severity: amoxicillin 500 mg TDS 5 days. Moderate: amoxicillin + clarithromycin. High severity: co-amoxiclav + clarithromycin IV.
+- Pulmonary Embolism: NICE NG158 — see VTE above. Massive PE with haemodynamic compromise: thrombolysis (alteplase) or surgical embolectomy.
+- Pneumothorax: BTS 2023 — Primary spontaneous (<2 cm, asymptomatic): discharge and review. ≥2 cm or symptomatic: aspiration first; chest drain if fails. Secondary (any size): chest drain.
+
+ENDOCRINOLOGY:
+- Type 1 Diabetes: NICE NG17 (2015, updated 2022) — Basal-bolus insulin regimen. HbA1c target 48 mmol/mol (6.5%). Structured education (DAFNE). Continuous glucose monitoring encouraged.
+- Type 2 Diabetes: NICE NG28 (2015, updated 2022) — Metformin first-line. Add SGLT-2 inhibitor (empagliflozin/dapagliflozin) if established CVD or high risk; GLP-1 RA if BMI ≥35 or insulin not acceptable. HbA1c target 48 mmol/mol on lifestyle, 53 mmol/mol on drugs. Avoid sulfonylureas if hypoglycaemia risk.
+- Hypothyroidism: NICE NG145 (2019) — Levothyroxine, start at 25–50 mcg/day, titrate to TSH 0.5–2.5 mU/L. Check TFTs 8–12 weeks after any dose change.
+- Hyperthyroidism: NICE NG145 (2019) — Antithyroid drug: Carbimazole (NOT methimazole) first-line. Definitive: radioactive iodine (RAI) or thyroidectomy. Propranolol for symptom control while awaiting effect.
+- DKA: JBDS 2023 guidelines — IV insulin at 0.1 units/kg/hr fixed rate, IV fluid resuscitation (0.9% NaCl), potassium replacement, hourly glucose/ketone monitoring. Target: ketones falling >0.5 mmol/L/hr.
+- Addison's Disease/Adrenal Crisis: Hydrocortisone 100 mg IV stat, then 50 mg QDS; IV fluids; treat precipitant. Maintenance: hydrocortisone + fludrocortisone.
+
+NEUROLOGY:
+- Epilepsy: NICE NG217 (2022) — Focal epilepsy: lamotrigine or carbamazepine first-line. Generalised: sodium valproate (avoid in women of childbearing age — use levetiracetam or lamotrigine instead). Status epilepticus: lorazepam IV → repeat → phenytoin/levetiracetam IV.
+- Parkinson's Disease: NICE NG71 (2017, updated 2020) — Levodopa (with dopa-decarboxylase inhibitor) most effective, especially in older patients. Younger patients: dopamine agonist (ropinirole/pramipexole) or MAO-B inhibitor (rasagiline) to delay motor complications.
+- Migraine: NICE CG150 (2012) — Acute: triptan + NSAID or paracetamol. Prophylaxis: propranolol or topiramate first-line; amitriptyline if comorbid depression. AVOID opioids.
+- Dementia: NICE NG97 (2018) — Mild-moderate Alzheimer's: AChE inhibitor (donepezil, rivastigmine, galantamine). Moderate-severe: memantine ± AChE inhibitor. Vascular dementia: no specific drug; treat risk factors.
+- Meningitis: NICE NG125 (2018) — Bacterial: ceftriaxone IV immediately (before LP if papilloedema/focal signs/seizures/altered consciousness). Dexamethasone 0.15 mg/kg QDS for 4 days started with or before antibiotics.
+
+PSYCHIATRY:
+- Depression: NICE NG222 (2022) — Mild: low-intensity psychosocial interventions (IAPT/CBT) first. Moderate-severe: SSRI (sertraline or fluoxetine first-line) ± CBT. Review at 4 weeks; switch or augment if no response at 6–8 weeks.
+- Anxiety/GAD: NICE CG113 (2011, updated 2019) — Step 1: psychoeducation. Step 2: CBT or SSRI/SNRI. Step 3: specialist referral. Avoid benzodiazepines (short-term only in crisis).
+- Schizophrenia: NICE CG178 (2014) — Antipsychotic + CBT for psychosis + family intervention. Clozapine if two antipsychotics have failed.
+- Bipolar Disorder: NICE CG185 (2014) — Mania: antipsychotic (olanzapine or quetiapine). Depression: quetiapine or lamotrigine (NOT antidepressant monotherapy). Maintenance: lithium first-line; monitor renal/thyroid/levels.
+
+INFECTION:
+- Sepsis: NICE NG51 (2016) / Surviving Sepsis Campaign 2021 — Sepsis-6 within 1 hour: blood cultures, IV antibiotics (broad-spectrum per local policy), IV fluid 500 mL crystalloid bolus, lactate, urine output monitoring, oxygen.
+- UTI: NICE NG109 (2018, updated 2024) — Lower UTI (non-pregnant women): nitrofurantoin 100 mg MR BD for 3 days first-line; trimethoprim 200 mg BD 3 days if contraindicated. Pregnant: nitrofurantoin 7 days (avoid at term). Upper UTI: co-amoxiclav or cefalexin 7–14 days.
+- Cellulitis: NICE NG141 (2019) — Eron class I (no systemic signs): flucloxacillin 500 mg QDS. Class II+: IV flucloxacillin. Mark margins, elevation, analgesia. Exclude DVT.
+
+GASTROENTEROLOGY:
+- Upper GI Bleed: NICE NG141 (2016) — Rockford/Blatchford score. Urgent endoscopy within 24 h. Terlipressin for variceal bleed; band ligation. PPI infusion post-endoscopy for ulcers.
+- IBD: NICE NG129 (2019) — Crohn's: induce remission with budesonide or prednisolone; maintain with azathioprine/mercaptopurine or biologics (anti-TNF). UC: mild = mesalazine topical/oral; moderate = oral prednisolone; severe = IV hydrocortisone (consider ciclosporin/infliximab if no response).
+
+RENAL:
+- AKI: NICE CG169 (2013) — STOP nephrotoxic drugs (NSAIDs, ACE-i, aminoglycosides), IV fluids for pre-renal, urgent dialysis if AEIOU criteria (acidosis, electrolyte emergency, intoxication, overload, uraemia).
+- CKD: NICE NG203 (2021) — ACE-i or ARB first-line (reduces proteinuria), BP target <130/80 if proteinuria. SGLT-2 inhibitor (dapagliflozin) if DM + CKD. Monitor eGFR/ACR. Avoid NSAIDs/contrast if eGFR <60.
+
+MUSCULOSKELETAL:
+- Rheumatoid Arthritis: NICE NG100 (2018) — DMARD within 3 months of diagnosis. Methotrexate first-line DMARD; add sulfasalazine ± hydroxychloroquine (triple therapy). Biologic (anti-TNF) if DAS28 remains >3.2 despite two DMARDs.
+- Osteoporosis: NICE TA160/NG187 — Alendronate 70 mg weekly first-line bisphosphonate. Calcium + vitamin D supplementation. FRAX/DXA to guide treatment threshold.
+- Gout: NICE CG56 (2012) — Acute: colchicine or NSAID (NOT aspirin). Start allopurinol after acute attack settles; target urate <360 µmol/L.
+
+OBSTETRICS & GYNAECOLOGY:
+- Pre-eclampsia: NICE NG133 (2019) — Labetalol first-line antihypertensive in pregnancy; nifedipine or methyldopa as alternatives. Magnesium sulphate for eclampsia/severe pre-eclampsia (seizure prophylaxis). Deliver at 37 weeks if stable, earlier if severe.
+- Postpartum Haemorrhage: RCOG GTG 52 (2016) / NICE — 4 Ts: Tone (oxytocin 10 units IM, ergometrine, carboprost), Tissue (manual removal), Trauma (suture), Thrombin (FFP/TXA).
+- Ectopic Pregnancy: NICE NG126 (2019) — Methotrexate if unruptured, βhCG <3000, no fetal heartbeat. Surgery (laparoscopic salpingectomy) if ruptured or βhCG >5000.
+- Contraception: FSRH 2023 guidelines — Combined pill CI in migraine with aura, hypertension, obesity. Progesterone-only safe in most. Copper IUD most effective emergency contraception up to 5 days.
+
+PAEDIATRICS:
+- Immunisation schedule: UK JCVI 2023 — at birth (BCG if at risk), 8/12/16 weeks (6-in-1, MenB, rotavirus), 1 year (MMR, MenC/Hib, pneumococcal), 3–4 years (MMR booster, 4-in-1), 12–13 years (HPV).
+- Febrile illness: NICE NG143 (2019) — Traffic light system: green = home; amber = safety-net; red = urgent. Sepsis: immediate IV antibiotics. Meningococcal rash: IM benzylpenicillin + 999.
+- Asthma in children: NICE NG245 (2024) — same ICS-first principle as adults for children ≥5; for under-5s, trial of ICS for 8 weeks and review.
 
 For ${displayCategory}, focus on core topics like:
 ${getCategoryTopics(category)}
@@ -1175,6 +1235,25 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
       ).join('\n');
 
       const prompt = `You are a UK PLAB 1 medical examiner writing model answer explanations for international medical graduates. Reference UK guidance (NICE, CKS, BNF, GMC) where relevant.
+
+CURRENT UK GUIDELINE VERSIONS — always cite these, never superseded ones:
+• Asthma: NICE NG245 (2024) — NOT NG80. Regular low-dose ICS from diagnosis alongside SABA reliever.
+• Hypertension: NICE NG136 (2023 update) — ACE-i/ARB if <55/non-Black; CCB if >55/Black; add thiazide step 3.
+• AF: NICE NG196 (2021) — DOAC preferred. Rate control first-line for most.
+• ACS/STEMI: NICE NG185 (2020) — Primary PCI within 120 min; dual antiplatelet (aspirin + ticagrelor).
+• Heart Failure: NICE NG106 (2023) — Quadruple therapy: ACE-i/ARNI + beta-blocker + MRA + SGLT-2i.
+• Stroke: NICE NG128 (2019) — NOT CG68. Alteplase within 4.5 h; dual antiplatelet for TIA.
+• Lipids: NICE NG238 (2023) — Atorvastatin 20 mg primary; 80 mg secondary prevention.
+• COPD: NICE NG115 (2018) — LABA or LAMA; dual bronchodilator if frequent exacerbations.
+• VTE: NICE NG158 (2020) — DOAC first-line; LMWH if active cancer.
+• Type 2 DM: NICE NG28 (2022) — Metformin; add SGLT-2i if CVD risk; HbA1c target 48 mmol/mol.
+• Epilepsy: NICE NG217 (2022) — Lamotrigine/carbamazepine focal; valproate generalised (avoid in women of childbearing age — use levetiracetam or lamotrigine).
+• Depression: NICE NG222 (2022) — SSRI (sertraline/fluoxetine) + CBT; avoid TCAs first-line.
+• RA: NICE NG100 (2018) — Methotrexate DMARD within 3 months. Anti-TNF if 2 DMARDs fail.
+• UTI: NICE NG109 (2024) — Nitrofurantoin 3 days (non-pregnant women); cefalexin for pyelonephritis.
+• Sepsis: NICE NG51 + Sepsis-6 bundle — blood cultures, IV antibiotics, IV fluids, lactate, O₂, urine output within 1 hour.
+• Antithyroid drug: Carbimazole (NOT methimazole — methimazole is NOT used in the UK).
+• Analgesia: Paracetamol (NOT acetaminophen); Adrenaline (NOT epinephrine).
 
 QUESTION${category ? ` (specialty: ${category})` : ''}:
 ${question}
