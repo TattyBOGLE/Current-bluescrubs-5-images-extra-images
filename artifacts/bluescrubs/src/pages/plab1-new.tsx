@@ -2059,7 +2059,8 @@ export default function PLAB1New() {
                 return options;
               })().map((option: string, index: number) => {
                 // Handle different correct answer formats
-                let correctAnswerIndex = currentQuestion.correctAnswer || currentQuestion.correct_answer;
+                // Use ?? not || so that index 0 (option A) is not treated as falsy
+                let correctAnswerIndex = currentQuestion.correctAnswer ?? currentQuestion.correct_answer;
                 if (typeof correctAnswerIndex === 'string') {
                   // Convert letter-based answers (A, B, C, D, E) to index
                   correctAnswerIndex = correctAnswerIndex.charCodeAt(0) - 65; // A=0, B=1, etc.
