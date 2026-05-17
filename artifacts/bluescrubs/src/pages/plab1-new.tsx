@@ -407,7 +407,10 @@ export default function PLAB1New() {
   const getTargetedExplanation = (question: any, userAnswer: string, isCorrect: boolean): string => {
     if (!question.explanation) return 'Clinical explanation provided for educational purposes.';
     
-    const explanation = question.explanation;
+    const raw = question.explanation;
+    const explanation: string = typeof raw === 'object' && raw !== null
+      ? Object.entries(raw).map(([k, v]) => `Option ${k}: ${v}`).join('\n')
+      : String(raw);
     const userAnswerIndex = parseInt(userAnswer);
     const correctAnswerIndex = question.correctAnswer;
     
@@ -2340,7 +2343,10 @@ export default function PLAB1New() {
                 </div>
               ) : (
                 (() => {
-                  const explanation = currentQuestion.explanation || '';
+                  const rawExplanation = currentQuestion.explanation;
+                  const explanation = typeof rawExplanation === 'object' && rawExplanation !== null
+                    ? Object.entries(rawExplanation).map(([k, v]) => `${k}: ${v}`).join('. ')
+                    : (rawExplanation || '');
                   const sentences = explanation.split('.').filter((s: string) => s.trim().length > 10);
                   return (
                     <div className="space-y-3">

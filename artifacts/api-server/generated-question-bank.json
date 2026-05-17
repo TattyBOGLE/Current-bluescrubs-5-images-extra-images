@@ -430,5 +430,1085 @@
     "category": "Cardiovascular",
     "difficulty": "mixed",
     "topic": "Deep Vein Thrombosis"
+  },
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_0",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_1",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 45-year-old female presents with 1-month history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Echocardiogram",
+      "ACE inhibitor",
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "Aspirin and clopidogrel"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_2",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset chest pain radiating to the left arm. An ECG shows ST-elevation in leads II, III, and aVF. What is the most appropriate initial management?",
+    "options": [
+      "Beta-blocker",
+      "Urgent cardiology referral",
+      "Aspirin",
+      "ACE inhibitor",
+      "Nitrates"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
+      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
+      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
+      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
+      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
+    },
+    "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg94",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_3",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Acute Coronary Syndrome - general variant"
+  },
+  {
+    "question": "A 72-year-old female presents with a 2-week history of worsening ankle swelling and shortness of breath on exertion. On examination, she has pitting edema and a raised jugular venous pressure. What is the most appropriate initial investigation?",
+    "options": [
+      "Chest X-ray",
+      "Echocardiogram",
+      "ECG",
+      "Blood tests for BNP levels",
+      "CT pulmonary angiogram"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
+      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
+      "C": "ECG can show heart rhythm issues but not heart function.",
+      "D": "BNP levels can indicate heart failure but do not provide structural information.",
+      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
+    },
+    "mnemonic": "Echo for Edema and Exertional dyspnea",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_4",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Heart Failure - general variant"
+  },
+  {
+    "question": "A 65-year-old male presents with a sudden onset of severe headache and neck stiffness. His blood pressure is 190/110 mmHg. What is the most appropriate initial investigation?",
+    "options": [
+      "CT scan of the head",
+      "MRI of the brain",
+      "Lumbar puncture",
+      "Carotid Doppler ultrasound",
+      "EEG"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
+      "B": "MRI is useful but not the initial choice in acute settings.",
+      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
+      "D": "Not relevant to the acute presentation.",
+      "E": "Not indicated for headache and neck stiffness."
+    },
+    "mnemonic": "CT for Crisis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng127",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_5",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology - general variant"
+  },
+  {
+    "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
+    "options": [
+      "Methimazole",
+      "Levothyroxine",
+      "Radioactive iodine therapy",
+      "Thyroidectomy",
+      "Beta-blockers"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Used for hyperthyroidism, not indicated here.",
+      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
+      "C": "Used for hyperthyroidism, not indicated here.",
+      "D": "Considered in certain cases of hyperthyroidism.",
+      "E": "Used symptomatically in hyperthyroidism."
+    },
+    "mnemonic": "Levothyroxine for Low",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_6",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Endocrinology - general variant"
+  },
+  {
+    "question": "A 30-year-old male presents with abdominal pain and jaundice. Blood tests show elevated bilirubin and alkaline phosphatase. What is the most appropriate initial imaging?",
+    "options": [
+      "Abdominal ultrasound",
+      "CT scan of the abdomen",
+      "MRI of the liver",
+      "ERCP",
+      "Liver biopsy"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
+      "B": "CT is useful but usually not the first step for jaundice workup.",
+      "C": "MRI is more detailed but not typically first-line.",
+      "D": "Used for therapeutic as well as diagnostic purposes.",
+      "E": "Invasive and not first-line for initial evaluation."
+    },
+    "mnemonic": "U for Ultrasound in Uro",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng104",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_7",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology - general variant"
+  },
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_8",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_9",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 45-year-old female presents with 1-month history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Echocardiogram",
+      "ACE inhibitor",
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "Aspirin and clopidogrel"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_10",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset chest pain radiating to the left arm. An ECG shows ST-elevation in leads II, III, and aVF. What is the most appropriate initial management?",
+    "options": [
+      "Beta-blocker",
+      "Urgent cardiology referral",
+      "Aspirin",
+      "ACE inhibitor",
+      "Nitrates"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
+      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
+      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
+      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
+      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
+    },
+    "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg94",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_11",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Acute Coronary Syndrome - general variant"
+  },
+  {
+    "question": "A 72-year-old female presents with a 2-week history of worsening ankle swelling and shortness of breath on exertion. On examination, she has pitting edema and a raised jugular venous pressure. What is the most appropriate initial investigation?",
+    "options": [
+      "Chest X-ray",
+      "Echocardiogram",
+      "ECG",
+      "Blood tests for BNP levels",
+      "CT pulmonary angiogram"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
+      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
+      "C": "ECG can show heart rhythm issues but not heart function.",
+      "D": "BNP levels can indicate heart failure but do not provide structural information.",
+      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
+    },
+    "mnemonic": "Echo for Edema and Exertional dyspnea",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_12",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Heart Failure - general variant"
+  },
+  {
+    "question": "A 65-year-old male presents with a sudden onset of severe headache and neck stiffness. His blood pressure is 190/110 mmHg. What is the most appropriate initial investigation?",
+    "options": [
+      "CT scan of the head",
+      "MRI of the brain",
+      "Lumbar puncture",
+      "Carotid Doppler ultrasound",
+      "EEG"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
+      "B": "MRI is useful but not the initial choice in acute settings.",
+      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
+      "D": "Not relevant to the acute presentation.",
+      "E": "Not indicated for headache and neck stiffness."
+    },
+    "mnemonic": "CT for Crisis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng127",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_13",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology - general variant"
+  },
+  {
+    "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
+    "options": [
+      "Methimazole",
+      "Levothyroxine",
+      "Radioactive iodine therapy",
+      "Thyroidectomy",
+      "Beta-blockers"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Used for hyperthyroidism, not indicated here.",
+      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
+      "C": "Used for hyperthyroidism, not indicated here.",
+      "D": "Considered in certain cases of hyperthyroidism.",
+      "E": "Used symptomatically in hyperthyroidism."
+    },
+    "mnemonic": "Levothyroxine for Low",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_14",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Endocrinology - general variant"
+  },
+  {
+    "question": "A 30-year-old male presents with abdominal pain and jaundice. Blood tests show elevated bilirubin and alkaline phosphatase. What is the most appropriate initial imaging?",
+    "options": [
+      "Abdominal ultrasound",
+      "CT scan of the abdomen",
+      "MRI of the liver",
+      "ERCP",
+      "Liver biopsy"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
+      "B": "CT is useful but usually not the first step for jaundice workup.",
+      "C": "MRI is more detailed but not typically first-line.",
+      "D": "Used for therapeutic as well as diagnostic purposes.",
+      "E": "Invasive and not first-line for initial evaluation."
+    },
+    "mnemonic": "U for Ultrasound in Uro",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng104",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_15",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology - general variant"
+  },
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_16",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_17",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 45-year-old female presents with 1-month history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Echocardiogram",
+      "ACE inhibitor",
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "Aspirin and clopidogrel"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_18",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset chest pain radiating to the left arm. An ECG shows ST-elevation in leads II, III, and aVF. What is the most appropriate initial management?",
+    "options": [
+      "Beta-blocker",
+      "Urgent cardiology referral",
+      "Aspirin",
+      "ACE inhibitor",
+      "Nitrates"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
+      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
+      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
+      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
+      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
+    },
+    "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg94",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029790107_19",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Acute Coronary Syndrome - general variant"
+  },
+  {
+    "question": "A 45-year-old male presents with crushing chest pain radiating to his left arm, lasting 30 minutes. ECG shows ST elevation in leads II, III, and aVF. What is the most appropriate immediate management?",
+    "options": [
+      "Oral aspirin",
+      "Sublingual nitroglycerin",
+      "Intravenous morphine",
+      "Primary percutaneous coronary intervention",
+      "Beta-blocker"
+    ],
+    "answer": 3,
+    "explanation": {
+      "A": "Aspirin is important but not the immediate life-saving procedure.",
+      "B": "Nitroglycerin can relieve pain but doesn't address the underlying issue.",
+      "C": "Morphine alleviates pain but doesn't open the occluded artery.",
+      "D": "Primary PCI is the gold standard in managing ST-elevation myocardial infarction.",
+      "E": "Beta-blockers are used for rate control, not immediate intervention."
+    },
+    "mnemonic": "MONA-B: Morphine, Oxygen, Nitroglycerin, Aspirin, Beta-blocker",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg167",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_0",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology"
+  },
+  {
+    "question": "A 67-year-old female with a history of hypertension presents with a sudden onset of severe headache and neck stiffness. CT scan shows subarachnoid hemorrhage. What is the most appropriate initial management?",
+    "options": [
+      "Intravenous mannitol",
+      "Oral nimodipine",
+      "Immediate neurosurgical referral",
+      "Intravenous labetalol",
+      "CT angiography"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Mannitol is used for raised intracranial pressure but not immediately indicated here.",
+      "B": "Nimodipine is used to prevent vasospasm but not the first step.",
+      "C": "Immediate neurosurgical evaluation is crucial for potential intervention.",
+      "D": "Labetalol is for hypertension control, not direct treatment of hemorrhage.",
+      "E": "CT angiography is diagnostic, not therapeutic."
+    },
+    "mnemonic": "SAH = Neurosurgery ASAP",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng127",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_1",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology"
+  },
+  {
+    "question": "A 30-year-old male presents with fever, night sweats, and weight loss. He has a painless, rubbery cervical lymph node. What is the most likely diagnosis?",
+    "options": [
+      "Non-Hodgkin's lymphoma",
+      "Hodgkin's lymphoma",
+      "Tuberculosis",
+      "Sarcoidosis",
+      "Metastatic carcinoma"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Non-Hodgkin's lymphoma presents similarly but has different histological findings.",
+      "B": "Hodgkin's lymphoma often presents with these symptoms and characteristic lymphadenopathy.",
+      "C": "Tuberculosis could cause similar symptoms but usually with more systemic signs.",
+      "D": "Sarcoidosis could cause lymphadenopathy but typically with pulmonary involvement.",
+      "E": "Metastatic carcinoma is less likely without a primary tumor history."
+    },
+    "mnemonic": "B symptoms: Fever, Night sweats, Weight loss = Hodgkin's",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng52",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_2",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Oncology"
+  },
+  {
+    "question": "A 23-year-old female presents with a 2-day history of dysuria and urinary frequency. Urinalysis shows nitrites and leukocyte esterase positive. What is the most appropriate management?",
+    "options": [
+      "Oral trimethoprim",
+      "Oral nitrofurantoin",
+      "Intravenous ceftriaxone",
+      "Oral ciprofloxacin",
+      "Urine culture"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Trimethoprim can be used but is not the first-line in some regions due to resistance.",
+      "B": "Nitrofurantoin is a first-line treatment for uncomplicated UTIs.",
+      "C": "Ceftriaxone is reserved for severe cases or when oral treatment is not possible.",
+      "D": "Ciprofloxacin is not first-line due to resistance concerns.",
+      "E": "Urine culture is useful but not immediate management."
+    },
+    "mnemonic": "Nitro for Nitrofurantoin = First-line for UTI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng109",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_3",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Urology"
+  },
+  {
+    "question": "A 50-year-old male presents with a productive cough and hemoptysis. He has a 40-pack-year smoking history. Chest X-ray shows a mass in the right upper lobe. What is the most appropriate next investigation?",
+    "options": [
+      "Bronchoscopy with biopsy",
+      "CT scan of the chest",
+      "Sputum cytology",
+      "MRI of the chest",
+      "PET scan"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Bronchoscopy is diagnostic but not the immediate next investigation.",
+      "B": "CT scan is used to further characterize the mass and assess for metastasis.",
+      "C": "Sputum cytology can be used but is less definitive and not the next step.",
+      "D": "MRI is not typically used for initial lung mass investigation.",
+      "E": "PET scan is for staging rather than initial investigation."
+    },
+    "mnemonic": "CT first for Chest Tumors",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng122",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_4",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Respiratory"
+  },
+  {
+    "question": "A 55-year-old female presents with fatigue, pallor, and glossitis. Blood tests reveal microcytic anemia. What is the most likely cause?",
+    "options": [
+      "Iron deficiency anemia",
+      "Vitamin B12 deficiency",
+      "Folate deficiency",
+      "Thalassemia minor",
+      "Chronic kidney disease"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Microcytic anemia is most commonly due to iron deficiency.",
+      "B": "Vitamin B12 deficiency leads to macrocytic anemia.",
+      "C": "Folate deficiency also leads to macrocytic anemia.",
+      "D": "Thalassemia minor can cause microcytic anemia but is less common.",
+      "E": "Chronic kidney disease usually causes normocytic anemia."
+    },
+    "mnemonic": "Iron Deficiency = Microcytic",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng8",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_5",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Hematology"
+  },
+  {
+    "question": "A 60-year-old male presents with polyuria, polydipsia, and nocturia. Blood tests show a fasting glucose of 8.5 mmol/L. What is the most likely diagnosis?",
+    "options": [
+      "Diabetes mellitus type 1",
+      "Diabetes mellitus type 2",
+      "Diabetes insipidus",
+      "Hyperthyroidism",
+      "Chronic kidney disease"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Type 1 diabetes presents at a younger age, often with more acute symptoms.",
+      "B": "Type 2 diabetes is common in older adults with gradual onset symptoms.",
+      "C": "Diabetes insipidus presents with similar symptoms but normal blood glucose.",
+      "D": "Hyperthyroidism might cause polyuria but not elevated glucose.",
+      "E": "Chronic kidney disease would not cause elevated glucose."
+    },
+    "mnemonic": "2x Poly = Type 2 Diabetes",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_6",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Endocrinology"
+  },
+  {
+    "question": "A 32-year-old female presents with abdominal pain and diarrhea. She recently returned from a trip to India. Stool culture confirms Salmonella. What is the most appropriate treatment?",
+    "options": [
+      "Oral ciprofloxacin",
+      "Oral metronidazole",
+      "Oral amoxicillin",
+      "Oral azithromycin",
+      "Supportive care only"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Ciprofloxacin is effective against Salmonella and used for severe cases.",
+      "B": "Metronidazole is not effective against Salmonella.",
+      "C": "Amoxicillin is not the preferred treatment for Salmonella.",
+      "D": "Azithromycin is an alternative but not first-line.",
+      "E": "Supportive care is important but antibiotics are needed for severe infection."
+    },
+    "mnemonic": "Cipro for Salmonella",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng103",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_7",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology"
+  },
+  {
+    "question": "A 28-year-old male presents with a swollen, painful knee after a football injury. X-ray shows no fracture. What is the most appropriate next step in management?",
+    "options": [
+      "MRI of the knee",
+      "Knee arthroscopy",
+      "Rest, ice, compression, elevation (RICE)",
+      "Oral nonsteroidal anti-inflammatory drugs",
+      "Corticosteroid injection"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "MRI is useful for ligamentous injury but not first-line.",
+      "B": "Arthroscopy is invasive and not initial management for acute injury.",
+      "C": "RICE is the best initial management for acute soft tissue injury.",
+      "D": "NSAIDs can help with pain but are part of conservative management.",
+      "E": "Steroid injection is not indicated in acute traumatic injuries."
+    },
+    "mnemonic": "RICE for Acute Injury",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng39",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_8",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Orthopedics"
+  },
+  {
+    "question": "A 72-year-old male with a history of atrial fibrillation presents with sudden onset of right-sided weakness and aphasia. CT scan shows no hemorrhage. What is the most appropriate treatment?",
+    "options": [
+      "Intravenous alteplase",
+      "Aspirin",
+      "Oral warfarin",
+      "Carotid endarterectomy",
+      "Heparin infusion"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Alteplase is the treatment of choice for ischemic stroke within the therapeutic window.",
+      "B": "Aspirin is used for secondary prevention, not acute treatment.",
+      "C": "Warfarin is for long-term anticoagulation, not acute treatment.",
+      "D": "Endarterectomy is for carotid stenosis, not acute ischemic stroke.",
+      "E": "Heparin is not used acutely in ischemic stroke due to risk of bleeding."
+    },
+    "mnemonic": "tPA for Stroke ASAP",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779029825771_9",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology"
+  },
+  {
+    "question": "A 45-year-old female presents with sudden onset of severe headache and neck stiffness. Her blood pressure is 180/110 mmHg. What is the most appropriate initial investigation?",
+    "options": [
+      "CT scan of the head",
+      "Lumbar puncture",
+      "MRI of the brain",
+      "Blood cultures",
+      "Electroencephalogram"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "A CT scan is the initial investigation of choice to rule out a subarachnoid hemorrhage.",
+      "B": "Lumbar puncture is performed if CT scan is negative and suspicion remains.",
+      "C": "MRI is not the first-line investigation in acute settings for this presentation.",
+      "D": "Blood cultures are indicated for suspected infections, not primary investigation here.",
+      "E": "EEG is used for seizure evaluation, not for acute headache with neck stiffness."
+    },
+    "mnemonic": "CT first for SAH",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg176",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_0",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology"
+  },
+  {
+    "question": "A 32-year-old male presents with 3-week history of cough and weight loss. Chest X-ray shows cavitating lesion in the right upper lobe. What is the most appropriate management?",
+    "options": [
+      "Start empirical antibiotics",
+      "Refer for surgical resection",
+      "Initiate anti-tuberculous therapy",
+      "Request CT scan of the chest",
+      "Bronchoscopy with biopsy"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Empirical antibiotics are not appropriate without confirmed bacterial infection.",
+      "B": "Surgical resection is not first line for infectious causes.",
+      "C": "Anti-tuberculous therapy should be started based on the high suspicion of TB.",
+      "D": "CT scan may provide more detail but is not the immediate step in management.",
+      "E": "Bronchoscopy can be useful but not the initial management step."
+    },
+    "mnemonic": "Cavitating TB needs therapy",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng33",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_1",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Respiratory"
+  },
+  {
+    "question": "A 70-year-old male with atrial fibrillation presents with sudden onset of left leg pain and pallor. What is the most appropriate next step in management?",
+    "options": [
+      "Intravenous heparin",
+      "Oral warfarin",
+      "CT angiography",
+      "Doppler ultrasound",
+      "Revascularization surgery"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Intravenous heparin is crucial to prevent further thromboembolism.",
+      "B": "Warfarin is used for long-term anticoagulation, not immediate management.",
+      "C": "CT angiography is diagnostic but not the immediate management in acute ischemia.",
+      "D": "Doppler ultrasound can confirm diagnosis but does not address acute management.",
+      "E": "Revascularization may be needed but requires anticoagulation first."
+    },
+    "mnemonic": "Heparin for acute limb ischemia",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg180",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_2",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Vascular"
+  },
+  {
+    "question": "A 65-year-old female with type 2 diabetes presents with a 2-day history of fever and dysuria. Urinalysis shows leukocyte esterase and nitrites. What is the most appropriate treatment?",
+    "options": [
+      "Trimethoprim",
+      "Ciprofloxacin",
+      "Nitrofurantoin",
+      "Amoxicillin",
+      "Cefalexin"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Trimethoprim is effective but not the first choice for complicated UTIs in diabetes.",
+      "B": "Ciprofloxacin is reserved for more severe cases due to resistance issues.",
+      "C": "Nitrofurantoin is appropriate for uncomplicated UTIs and is safe in diabetes.",
+      "D": "Amoxicillin is not the first choice due to resistance patterns.",
+      "E": "Cefalexin is used but not preferred first-line in uncomplicated cases."
+    },
+    "mnemonic": "Nitrofurantoin for UTIs",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng109",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_3",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Urology"
+  },
+  {
+    "question": "A 28-year-old female presents with fatigue and pallor. Blood tests reveal microcytic hypochromic anemia. What is the most appropriate investigation to determine the underlying cause?",
+    "options": [
+      "Serum ferritin",
+      "Serum vitamin B12",
+      "Bone marrow biopsy",
+      "Hemoglobin electrophoresis",
+      "Serum folate"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Serum ferritin is key to assess iron deficiency as a cause of microcytic anemia.",
+      "B": "Vitamin B12 is assessed for macrocytic anemia, not microcytic.",
+      "C": "Bone marrow biopsy is invasive and not first-line for microcytic anemia.",
+      "D": "Hemoglobin electrophoresis is used for thalassemia and sickle cell disease.",
+      "E": "Folate is assessed for macrocytic anemia, not microcytic."
+    },
+    "mnemonic": "Ferritin first for iron deficiency",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng8",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_4",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Hematology"
+  },
+  {
+    "question": "A 55-year-old male with chronic liver disease presents with confusion and asterixis. What is the most appropriate initial treatment?",
+    "options": [
+      "Lactulose",
+      "Rifaximin",
+      "Intravenous fluids",
+      "Vitamin K",
+      "Albumin infusion"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Lactulose is used to treat hepatic encephalopathy by reducing ammonia levels.",
+      "B": "Rifaximin is an adjunct to lactulose but not initial treatment.",
+      "C": "IV fluids may support but do not address the underlying encephalopathy.",
+      "D": "Vitamin K is used for coagulopathy, not encephalopathy.",
+      "E": "Albumin is used for ascites or hepatorenal syndrome, not encephalopathy."
+    },
+    "mnemonic": "Lactulose for liver confusion",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng50",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_5",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology"
+  },
+  {
+    "question": "A 68-year-old female presents with sudden loss of vision in her right eye. Examination shows a pale retina with a cherry-red spot. What is the most likely diagnosis?",
+    "options": [
+      "Retinal detachment",
+      "Central retinal artery occlusion",
+      "Central retinal vein occlusion",
+      "Acute angle-closure glaucoma",
+      "Giant cell arteritis"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Retinal detachment presents with floaters and a shadow over vision, not cherry-red spot.",
+      "B": "Central retinal artery occlusion presents with a pale retina and cherry-red spot.",
+      "C": "Vein occlusion leads to a 'blood and thunder' fundus, not a cherry-red spot.",
+      "D": "Acute glaucoma presents with painful red eye, not pale retina.",
+      "E": "Giant cell arteritis can cause vision loss but not with a cherry-red spot."
+    },
+    "mnemonic": "Cherry-red spot in CRAO",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng81",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_6",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Ophthalmology"
+  },
+  {
+    "question": "A 60-year-old male with a history of COPD presents with increasing dyspnea and cough productive of green sputum. What is the most appropriate antibiotic?",
+    "options": [
+      "Amoxicillin",
+      "Clarithromycin",
+      "Ciprofloxacin",
+      "Doxycycline",
+      "Co-amoxiclav"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Amoxicillin is often first-line for COPD exacerbations with bacterial infection.",
+      "B": "Clarithromycin can be used but is not first-line in this scenario.",
+      "C": "Ciprofloxacin is reserved for more severe infections due to resistance.",
+      "D": "Doxycycline is an alternative but not the first choice.",
+      "E": "Co-amoxiclav is used for more severe exacerbations or resistance."
+    },
+    "mnemonic": "Amoxicillin for COPD exacerbation",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng114",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_7",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Respiratory"
+  },
+  {
+    "question": "A 50-year-old female presents with a painful, swollen right knee. Synovial fluid analysis reveals needle-shaped crystals with negative birefringence. What is the most likely diagnosis?",
+    "options": [
+      "Rheumatoid arthritis",
+      "Gout",
+      "Pseudogout",
+      "Septic arthritis",
+      "Osteoarthritis"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Rheumatoid arthritis involves symmetric joint pain, not crystals.",
+      "B": "Gout is characterized by needle-shaped crystals with negative birefringence.",
+      "C": "Pseudogout shows positively birefringent rhomboid crystals.",
+      "D": "Septic arthritis involves infection signs, not crystals.",
+      "E": "Osteoarthritis does not present with crystals in synovial fluid."
+    },
+    "mnemonic": "Gout: Needle crystals, negative birefringence",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng65",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_8",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Rheumatology"
+  },
+  {
+    "question": "A 25-year-old male presents with recurrent abdominal pain and diarrhea. Colonoscopy shows transmural inflammation and skip lesions. What is the most likely diagnosis?",
+    "options": [
+      "Ulcerative colitis",
+      "Crohn's disease",
+      "Irritable bowel syndrome",
+      "Celiac disease",
+      "Diverticulitis"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Ulcerative colitis involves continuous colonic inflammation, not skip lesions.",
+      "B": "Crohn's disease is characterized by transmural inflammation and skip lesions.",
+      "C": "IBS involves functional symptoms without inflammatory changes.",
+      "D": "Celiac disease affects the small intestine, not with skip lesions.",
+      "E": "Diverticulitis involves localized inflammation, not transmural."
+    },
+    "mnemonic": "Crohn's: Transmural, skip lesions",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng129",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779033806234_9",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology"
   }
 ]
