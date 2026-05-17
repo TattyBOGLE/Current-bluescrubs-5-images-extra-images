@@ -1,0 +1,92 @@
+[
+  {
+    "category": "medical",
+    "quote": "The good physician treats the disease; the great physician treats the patient who has the disease.",
+    "author": "William Osler",
+    "tags": ["patient care", "medicine", "compassion"]
+  },
+  {
+    "category": "study",
+    "quote": "Success is the sum of small efforts repeated day in and day out.",
+    "author": "Robert Collier",
+    "tags": ["persistence", "daily practice", "study habits"]
+  },
+  {
+    "category": "perseverance",
+    "quote": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "tags": ["persistence", "progress", "motivation"]
+  },
+  {
+    "category": "medical",
+    "quote": "Medicine is not only a science; it is also an art. It does not consist of compounding pills and plasters; it deals with the very processes of life.",
+    "author": "Paracelsus",
+    "tags": ["medicine", "art of healing", "life"]
+  },
+  {
+    "category": "success",
+    "quote": "The expert in anything was once a beginner.",
+    "author": "Helen Hayes",
+    "tags": ["learning", "expertise", "growth"]
+  },
+  {
+    "category": "study",
+    "quote": "Learning never exhausts the mind.",
+    "author": "Leonardo da Vinci",
+    "tags": ["learning", "knowledge", "mind"]
+  },
+  {
+    "category": "medical",
+    "quote": "Wherever the art of medicine is loved, there is also a love of humanity.",
+    "author": "Hippocrates",
+    "tags": ["humanity", "compassion", "medical ethics"]
+  },
+  {
+    "category": "perseverance",
+    "quote": "Failure is simply the opportunity to begin again, this time more intelligently.",
+    "author": "Henry Ford",
+    "tags": ["failure", "learning", "improvement"]
+  },
+  {
+    "category": "success",
+    "quote": "Your limitation—it's only your imagination.",
+    "author": "Unknown",
+    "tags": ["imagination", "potential", "self-belief"]
+  },
+  {
+    "category": "study",
+    "quote": "Education is the most powerful weapon which you can use to change the world.",
+    "author": "Nelson Mandela",
+    "tags": ["education", "power", "change"]
+  },
+  {
+    "category": "medical",
+    "quote": "The best doctor gives the least medicines.",
+    "author": "Benjamin Franklin",
+    "tags": ["treatment", "wisdom", "medicine"]
+  },
+  {
+    "category": "perseverance",
+    "quote": "Don't watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson",
+    "tags": ["persistence", "time", "motivation"]
+  },
+  {
+    "category": "study",
+    "quote": "The more that you read, the more things you will know. The more that you learn, the more places you'll go.",
+    "author": "Dr. Seuss",
+    "tags": ["reading", "knowledge", "opportunities"]
+  },
+  {
+    "category": "success",
+    "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "tags": ["courage", "persistence", "resilience"]
+  },
+  {
+    "category": "medical",
+    "quote": "To cure sometimes, to relieve often, to comfort always.",
+    "author": "Edward Livingston Trudeau",
+    "tags": ["healing", "comfort", "patient care"]
+  }
+]

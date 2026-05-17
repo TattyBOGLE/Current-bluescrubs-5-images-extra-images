@@ -1,0 +1,1722 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --color-medical-blue: hsl(198 70% 50%);
+  --color-purple-accent: hsl(259 45% 61%);
+  --color-deep-rose: hsl(332 60% 55%);
+  --color-mint-green: hsl(160 84% 54%);
+  --font-sans: var(--app-font-sans, Inter, sans-serif);
+  --font-serif: var(--app-font-serif, Georgia, serif);
+  --font-mono: var(--app-font-mono, Menlo, monospace);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 98%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --primary: 198 70% 42%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 98%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --accent: 210 40% 98%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 198 70% 42%;
+  --radius: 0.75rem;
+  --sidebar: 210 40% 98%;
+  --sidebar-foreground: 222.2 84% 4.9%;
+  --sidebar-border: 214.3 31.8% 91.4%;
+  --sidebar-primary: 198 70% 42%;
+  --sidebar-primary-foreground: 210 40% 98%;
+  --sidebar-accent: 210 40% 96%;
+  --sidebar-accent-foreground: 222.2 84% 4.9%;
+  --sidebar-ring: 198 70% 42%;
+  --chart-1: 198 70% 42%;
+  --chart-2: 262 83% 58%;
+  --chart-3: 142 71% 45%;
+  --chart-4: 32 95% 44%;
+  --chart-5: 0 84% 60%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --primary: 198 70% 52%;
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 198 70% 52%;
+  --sidebar: 217.2 32.6% 17.5%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-border: 217.2 32.6% 17.5%;
+  --sidebar-primary: 198 70% 52%;
+  --sidebar-primary-foreground: 210 40% 98%;
+  --sidebar-accent: 217.2 32.6% 22%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-ring: 198 70% 52%;
+  --chart-1: 198 70% 52%;
+  --chart-2: 262 83% 68%;
+  --chart-3: 142 71% 55%;
+  --chart-4: 32 95% 54%;
+  --chart-5: 0 84% 70%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+
+/* Hero Banner Filter Controls Enhancement */
+.hero-banner .bg-white\/10 {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 2px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8) !important;
+}
+
+.hero-banner label {
+  font-weight: 700 !important;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 1) !important;
+}
+
+.hero-banner [data-radix-select-trigger] {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid rgba(255, 255, 255, 0.7) !important;
+  font-weight: 600 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.hero-banner .badge {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  text-shadow: none !important;
+}
+
+/* Hero banner text override - mobile responsive */
+@layer utilities {
+  .hero-text, .hero-text * {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6) !important;
+  }
+  
+  /* Force white text on colored buttons */
+  .force-white-text,
+  .force-white-text * {
+    color: #ffffff !important;
+  }
+  
+  /* Hero banner performance optimizations */
+  .hero-banner-optimized {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform;
+    contain: layout style paint;
+  }
+  
+  .hero-content-optimized {
+    transform: translateZ(0);
+    contain: layout;
+    will-change: transform;
+  }
+  
+  /* Reduce layout shifts */
+  .hero-video-container {
+    aspect-ratio: 16/9;
+    contain: size layout style;
+  }
+  
+  /* Optimize background images */
+  .hero-bg-optimized {
+    background-attachment: scroll;
+    transform: translateZ(0);
+    will-change: transform;
+    contain: strict;
+  }
+  
+  /* AI Clinical Skills Tutor black text override within utilities layer */
+  .ai-tutor-text,
+  .ai-tutor-text *,
+  h4.ai-tutor-text,
+  h4.font-semibold.text-black.ai-tutor-text,
+  .p-4.border-b.border-gray-200.bg-gradient-to-r.from-blue-50.to-indigo-50 h4.ai-tutor-text {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+  
+  /* Prevent hero-text from affecting AI tutor */
+  .hero-text .ai-tutor-text,
+  .hero-text * .ai-tutor-text {
+    color: #000000 !important;
+  }
+  
+  /* Ultimate override with ID selector */
+  #ai-clinical-skills-tutor-heading {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+  
+  /* Force white text on adaptive learning cards */
+  .adaptive-card-white,
+  .adaptive-card-white *,
+  .adaptive-card-white h3,
+  .adaptive-card-white p,
+  .adaptive-card-white span,
+  .adaptive-card-white svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+  }
+  
+  /* Mobile text adjustments */
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2.5rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .hero-text p {
+      font-size: 1.25rem !important;
+      line-height: 1.4 !important;
+    }
+  }
+  
+  /* Preserve normal text colors on light backgrounds */
+  .text-gray-500 { color: #6b7280 !important; }
+  .text-gray-600 { color: #4b5563 !important; }
+  .text-gray-700 { color: #374151 !important; }
+  .text-gray-800 { color: #1f2937 !important; }
+  .text-gray-900 { color: #111827 !important; }
+  
+  .text-muted-foreground { color: #6b7280 !important; }
+  
+  /* Force white text on practice buttons */
+  button.bg-blue-600 span,
+  button.bg-blue-600 svg,
+  .bg-blue-600 span, 
+  .bg-blue-600 svg {
+    color: white !important;
+  }
+  
+  .force-white-text,
+  .force-white-text *,
+  .force-white-text span,
+  .force-white-text .font-medium,
+  .force-white-text .text-xs {
+    color: white !important;
+    fill: white !important;
+  }
+  
+  /* Override any text color classes with white for practice buttons */
+  .bg-blue-600.cursor-pointer span.text-white,
+  .bg-blue-600.cursor-pointer .text-white {
+    color: white !important;
+  }
+  
+  .practice-button-white,
+  .practice-button-white *,
+  .practice-button-white span,
+  .practice-button-white svg {
+    color: white !important;
+    fill: white !important;
+  }
+  
+  /* Force white text on dashboard hero section */
+  section h1,
+  section p,
+  section span {
+    color: white !important;
+  }
+  
+  /* Force black text for AI Clinical Skills Tutor - Very specific override */
+  .ai-tutor-text,
+  .ai-tutor-text *,
+  h4.ai-tutor-text,
+  .bg-gradient-to-r .ai-tutor-text,
+  .from-blue-50 .ai-tutor-text,
+  .to-indigo-50 .ai-tutor-text,
+  div.bg-gradient-to-r.from-blue-50.to-indigo-50 h4.ai-tutor-text,
+  .border-gray-200 .ai-tutor-text {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+  
+  /* Override any hero text rules for AI tutor specifically */
+  .hero-text .ai-tutor-text,
+  .hero-text * .ai-tutor-text {
+    color: #000000 !important;
+  }
+  
+  /* Maximum specificity override outside utilities layer */
+  html body div#ai-clinical-skills-tutor-heading,
+  html body h4#ai-clinical-skills-tutor-heading {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+  
+  .hero-text-white,
+  .hero-text-white *,
+  .hero-text-white h1,
+  .hero-text-white p,
+  .hero-text-white span {
+    color: white !important;
+  }
+  
+  /* Specific dashboard hero text override */
+  .relative.z-10 h1,
+  .relative.z-10 p,
+  .relative.z-10 span,
+  .relative.z-10 div {
+    color: white !important;
+  }
+  
+  /* Target all text in dashboard hero section */
+  section.relative h1,
+  section.relative p,
+  section.relative span,
+  section.relative div {
+    color: white !important;
+  }
+  
+  /* Force white text for dashboard text elements */
+  .text-4xl, .text-5xl, .text-lg, .text-xl, .text-2xl {
+    color: white !important;
+  }
+  
+  /* Dashboard hero section force white text */
+  .dashboard-hero *,
+  .dashboard-hero h1,
+  .dashboard-hero p,
+  .dashboard-hero span,
+  .dashboard-hero div {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  }
+  
+  /* Override any existing text color classes */
+  .dashboard-hero .text-4xl,
+  .dashboard-hero .text-5xl,
+  .dashboard-hero .text-lg,
+  .dashboard-hero .text-xl,
+  .dashboard-hero .text-2xl,
+  .dashboard-hero .text-sm,
+  .dashboard-hero .font-bold,
+  .dashboard-hero .font-medium {
+    color: white !important;
+  }
+  
+  /* High specificity override for dashboard text */
+  section.dashboard-hero .relative.z-10 h1,
+  section.dashboard-hero .relative.z-10 p,
+  section.dashboard-hero .relative.z-10 span,
+  section.dashboard-hero .relative.z-10 div {
+    color: white !important;
+  }
+  
+  /* Force white text on all dashboard hero elements */
+  .dashboard-hero .text-center * {
+    color: white !important;
+  }
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 98%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --primary: 198 70% 42%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 98%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --accent: 210 40% 98%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 198 70% 42%;
+  --radius: 0.75rem;
+}
+
+/* Comprehensive text visibility fix */
+* {
+  color: inherit !important;
+}
+
+body {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+}
+
+/* Force proper contrast for ALL text elements */
+h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th, label, button, 
+.text-white, .text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500 {
+  color: #1a1a1a !important;
+}
+
+/* Specific overrides for light text that should remain light */
+.text-white.bg-blue-600,
+.text-white.bg-purple-600,
+.text-white.bg-green-600,
+button.bg-gradient-to-r *,
+.bg-blue-600 *,
+.bg-purple-600 *,
+.bg-green-600 * {
+  color: white !important;
+}
+
+/* Card and content area fixes */
+.card, .card-content, .card-header, .card-title, .card-description {
+  color: #1a1a1a !important;
+}
+
+/* Input and form elements */
+input, textarea, select, placeholder {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+}
+
+/* Ensure all Tailwind text utilities show dark text */
+.text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl {
+  color: #1a1a1a !important;
+}
+
+/* Additional comprehensive text fixes */
+[class*="text-"], [class*="Text"], 
+.prose, .prose *, 
+.card *, .Card *, 
+.button *, .Button *,
+.container *, .Container *,
+.flex *, .grid *,
+.space-y-* *, .space-x-* *,
+.gap-* *, .p-* *, .m-* *,
+.rounded * {
+  color: #1a1a1a !important;
+}
+
+/* Force all React component text to be visible */
+div[class*="text"] *,
+span[class*="text"] *,
+p[class*="text"] *,
+h1[class*="text"] *,
+h2[class*="text"] *,
+h3[class*="text"] *,
+h4[class*="text"] *,
+h5[class*="text"] *,
+h6[class*="text"] * {
+  color: #1a1a1a !important;
+}
+
+/* Specific fixes for shadcn/ui components */
+.card-header *, .card-content *, .card-title *, .card-description *,
+.button *, .input *, .textarea *, .label *, .badge *,
+.alert *, .dialog *, .dropdown * {
+  color: #1a1a1a !important;
+}
+
+/* Ultimate text visibility fix - override everything */
+* {
+  color: #1a1a1a !important;
+}
+
+/* Force visibility on all possible selectors */
+body *, html *, div *, span *, p *, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, 
+a *, li *, ul *, ol *, button *, input *, textarea *, label *, 
+.card *, .Card *, [class*="card"] *, [class*="Card"] *,
+[class*="text"] *, [data-testid] *, [role] *, 
+.container *, .flex *, .grid *, .space-y *, .space-x *,
+.gap *, .p *, .m *, .rounded *, .border *, .shadow * {
+  color: #1a1a1a !important;
+}
+
+/* React component text visibility */
+[class] *, [className] * {
+  color: #1a1a1a !important;
+}
+
+/* Exception for elements that should remain white */
+.bg-blue-600, .bg-blue-600 *,
+.bg-purple-600, .bg-purple-600 *,
+.bg-green-600, .bg-green-600 *,
+.bg-red-600, .bg-red-600 *,
+.bg-yellow-600, .bg-yellow-600 *,
+.bg-indigo-600, .bg-indigo-600 *,
+.bg-pink-600, .bg-pink-600 *,
+.bg-gray-800, .bg-gray-800 *,
+.bg-gray-900, .bg-gray-900 *,
+.bg-black, .bg-black *,
+button[class*="bg-gradient"], button[class*="bg-gradient"] * {
+  color: white !important;
+}
+
+/* Specific override for NICE NG136 overlay blocks to ensure black text */
+.bg-blue-50, .bg-blue-50 *,
+.bg-purple-50, .bg-purple-50 *,
+.bg-yellow-50, .bg-yellow-50 *,
+.bg-green-50, .bg-green-50 *,
+.bg-gray-50, .bg-gray-50 *,
+.bg-white, .bg-white * {
+  color: #000000 !important;
+}
+
+/* Force black text in NICE guide overlay specifically */
+.fixed.inset-0.bg-black.bg-opacity-60 .bg-white *,
+.fixed.inset-0.bg-black.bg-opacity-60 .bg-blue-50 *,
+.fixed.inset-0.bg-black.bg-opacity-60 .bg-purple-50 *,
+.fixed.inset-0.bg-black.bg-opacity-60 .bg-yellow-50 *,
+.fixed.inset-0.bg-black.bg-opacity-60 .bg-green-50 *,
+.fixed.inset-0.bg-black.bg-opacity-60 .bg-gray-50 * {
+  color: #000000 !important;
+}
+
+/* Fix layout and overflow issues for green answer explanation boxes */
+.min-h-screen {
+  overflow-x: visible !important;
+  width: 100% !important;
+}
+
+/* Ensure green explanation boxes are fully visible */
+.border-l-4.border-green-400,
+.bg-green-50\/50,
+.bg-green-100 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix container overflow for answer explanations */
+.space-y-4 > div,
+.space-y-6 > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Ensure card content doesn't clip green boxes */
+.card-content,
+.p-6 {
+  overflow: visible !important;
+  width: 100% !important;
+}
+
+/* Mobile responsive fixes for green boxes */
+@media (max-width: 768px) {
+  .border-l-4.border-green-400 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 12px !important;
+    width: 100% !important;
+  }
+  
+  .bg-green-50\/50 {
+    padding: 12px !important;
+    width: 100% !important;
+  }
+}
+
+/* Card and container backgrounds */
+.bg-white {
+  background-color: white !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-gray-900 {
+  color: hsl(222.2 84% 4.9%) !important;
+}
+
+.text-gray-800 {
+  color: hsl(215.4 16.3% 26.9%) !important;
+}
+
+.text-gray-700 {
+  color: hsl(215.4 16.3% 36.9%) !important;
+}
+
+.text-gray-600 {
+  color: hsl(215.4 16.3% 46.9%) !important;
+}
+
+/* Force all input fields to have black text and white background */
+input[type="email"], 
+input[type="password"], 
+input[type="text"], 
+input[type="tel"],
+input,
+textarea,
+select {
+  color: hsl(222.2 84% 4.9%) !important;
+  background-color: white !important;
+}
+
+input[type="email"]::placeholder, 
+input[type="password"]::placeholder, 
+input[type="text"]::placeholder, 
+input[type="tel"]::placeholder,
+input::placeholder {
+  color: rgba(0, 0, 0, 0.8) !important;
+  opacity: 1 !important;
+}
+
+/* Additional targeting for specific input styling */
+.bg-white input,
+[data-radix-collection-item] input {
+  color: black !important;
+  background-color: white !important;
+}
+
+.bg-white input::placeholder,
+[data-radix-collection-item] input::placeholder {
+  color: rgba(0, 0, 0, 0.8) !important;
+  opacity: 1 !important;
+}
+
+/* Custom input styling for black text */
+.auth-input input {
+  color: black !important;
+  background-color: white !important;
+}
+
+.auth-input input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Select field styling */
+.auth-select [data-radix-select-trigger] {
+  color: black !important;
+}
+
+/* Tab button text styling */
+[data-radix-tabs-trigger] {
+  color: black !important;
+}
+
+[data-radix-tabs-trigger][data-state="active"] {
+  color: black !important;
+  background-color: white !important;
+}
+
+[data-radix-tabs-trigger][data-state="inactive"] {
+  color: black !important;
+}
+
+/* Force dark text on Premium PLAB cards - only white background cards */
+.bg-white .premium-plab-card, 
+.bg-white .premium-plab-card *,
+.bg-white .premium-plab-card h1,
+.bg-white .premium-plab-card h2,
+.bg-white .premium-plab-card h3,
+.bg-white .premium-plab-card h4,
+.bg-white .premium-plab-card h5,
+.bg-white .premium-plab-card p,
+.bg-white .premium-plab-card li,
+.bg-white .premium-plab-card span,
+.bg-white .premium-plab-card div {
+  color: #1f2937 !important;
+}
+
+/* Override for pricing badges to keep white text on dark blue background */
+.bg-white .premium-plab-card span.bg-blue-800 {
+  color: white !important;
+  background-color: #1e40af !important;
+}
+
+/* Ensure blue premium package has correct text colors */
+.bg-gradient-to-br.from-blue-900 h4 {
+  color: #e5e7eb !important; /* gray-200 */
+}
+
+.bg-gradient-to-br.from-blue-900 p {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.bg-gradient-to-br.from-blue-900 .text-5xl {
+  color: white !important;
+}
+
+.bg-gradient-to-br.from-blue-900 span.text-sm {
+  color: white !important;
+}
+
+.bg-gradient-to-br.from-blue-900 *:not(h4):not(p):not(.text-gray-200):not(.text-gray-300) {
+  color: white !important;
+}
+
+/* Only apply dark text to non-hero white sections */
+.bg-white .premium-plab-card *,
+.bg-white section:not(.hero-section) *,
+.bg-white > div:not(.hero-section) p,
+.bg-white > div:not(.hero-section) h1,
+.bg-white > div:not(.hero-section) h2,
+.bg-white > div:not(.hero-section) h3,
+.bg-white > div:not(.hero-section) h4 {
+  color: #1f2937 !important;
+}
+
+/* Force white text for auth page hero section */
+#subtext,
+#subtext *,
+p#subtext {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.bg-gradient-to-br.from-blue-600 p,
+.bg-gradient-to-br.from-blue-600 p *,
+.bg-gradient-to-br p,
+.bg-gradient-to-br h2,
+.bg-gradient-to-br h3 {
+  color: #ffffff !important;
+}
+
+/* Target all text in auth page gradient sections */
+.bg-gradient-to-br.from-blue-600.to-purple-700 *,
+.bg-gradient-to-br.from-blue-600.to-purple-700 p,
+.bg-gradient-to-br.from-blue-600.to-purple-700 h2,
+.bg-gradient-to-br.from-blue-600.to-purple-700 h3 {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Ultra specific override for the problematic subtitle text */
+div.bg-gradient-to-br.from-blue-600.to-purple-700 div.max-w-4xl p.text-lg,
+div.bg-gradient-to-br.from-blue-600.to-purple-700 div.max-w-4xl p.text-xl,
+div.bg-gradient-to-br.from-blue-600.to-purple-700 p.text-lg.sm\\:text-xl,
+body p#subtext {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Maximum specificity override for auth page subtitle */
+html body div.bg-gradient-to-br.from-blue-600.to-purple-700 div.max-w-4xl.mx-auto.text-center p#subtext {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Ultra-specific override using custom class */
+.auth-subtitle,
+p.auth-subtitle,
+.bg-gradient-to-br .auth-subtitle {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Force white text for all elements in the auth page gradient section */
+.bg-gradient-to-br.from-blue-600.to-purple-700 h3,
+.bg-gradient-to-br.from-blue-600.to-purple-700 p,
+.bg-gradient-to-br.from-blue-600.to-purple-700 .text-center h3,
+.bg-gradient-to-br.from-blue-600.to-purple-700 .text-center p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Maximum specificity for icon section text */
+div.bg-gradient-to-br.from-blue-600.to-purple-700 div.text-center h3,
+div.bg-gradient-to-br.from-blue-600.to-purple-700 div.text-center p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Custom class overrides for icon text */
+.auth-icon-heading,
+h3.auth-icon-heading,
+.auth-icon-text,
+p.auth-icon-text {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Nuclear option - force all text in gradient to be white */
+[class*="bg-gradient-to-br"][class*="from-blue-600"] * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Hero banner text should be white */
+.hero-text,
+.hero-text *,
+.hero-text h1,
+.hero-text p,
+.hero-text span,
+.hero-text div {
+  color: white !important;
+}
+
+/* Force text to white only in specific dark gradient backgrounds */
+.bg-gradient-to-br.from-slate-900 *,
+.bg-gradient-to-br.from-blue-900 *,
+.bg-gradient-to-br.from-purple-900 *,
+.bg-gradient-to-br.from-indigo-900 *,
+.bg-gradient-to-r.from-slate-900 *,
+.bg-gradient-to-r.from-blue-900 *,
+.bg-gradient-to-r.from-purple-900 * {
+  color: white !important;
+}
+
+/* Exception: Keep specific colored text elements in their original colors */
+.text-blue-600,
+[class*="text-blue"] {
+  color: #2563eb !important;
+}
+
+/* Fix for "Why Choose BlueScrubsPrep" heading - ensure blue text stays blue */
+h2 .text-blue-600,
+h2 span.text-blue-600 {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+}
+
+.text-gray-600,
+[class*="text-gray-6"] {
+  color: #4b5563 !important;
+}
+
+.text-gray-700,
+[class*="text-gray-7"] {
+  color: #374151 !important;
+}
+
+.text-gray-800,
+[class*="text-gray-8"] {
+  color: #1f2937 !important;
+}
+
+.text-gray-900,
+[class*="text-gray-9"] {
+  color: #111827 !important;
+}
+
+.text-black {
+  color: #000000 !important;
+}
+
+/* Light gradient backgrounds should preserve text colors */
+.bg-gradient-to-r.from-blue-100.to-purple-100 .text-blue-600 {
+  color: #2563eb !important;
+}
+
+/* Specific targeting for dark background sections */
+.from-slate-900 *,
+.from-blue-900 *,
+.from-purple-900 *,
+.from-indigo-900 *,
+.via-purple-900 *,
+.to-blue-900 * {
+  color: white !important;
+}
+
+/* Global expansion section specific fixes */
+.bg-gradient-to-br.from-indigo-900 * {
+  color: white !important;
+}
+
+.bg-gradient-to-br.from-indigo-900 .text-purple-300 {
+  color: #d8b4fe !important;
+}
+
+.bg-gradient-to-br.from-indigo-900 .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.bg-gradient-to-br.from-indigo-900 .text-green-300 {
+  color: #86efac !important;
+}
+
+/* Force all country names to be white - highest specificity */
+.bg-gradient-to-br.from-indigo-900 .country-name,
+.bg-gradient-to-br.from-indigo-900 h3.country-name {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Additional override for any text in cards */
+.bg-gradient-to-br.from-indigo-900 [class*="bg-white"] h3 {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Most specific selector for card content */
+.bg-gradient-to-br.from-indigo-900 div[class*="bg-white"] div h3 {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Ultimate override for all h3 and h4 elements in the global section */
+.bg-gradient-to-br h3,
+.bg-gradient-to-br h4,
+.from-indigo-900 h3,
+.from-indigo-900 h4,
+.via-purple-900 h3,
+.via-purple-900 h4,
+.to-blue-900 h3,
+.to-blue-900 h4 {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Target the exact Card component structure */
+[class*="bg-gradient-to-br"] [class*="CardContent"] h3 {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Specific targeting for Advanced Global Features section */
+.text-white h4,
+h4.text-white,
+[class*="text-white"] h4 {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Override any dark text in gradient backgrounds */
+.bg-gradient-to-br h4,
+[class*="bg-gradient"] h4 {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Exception: Admin tools cards should have dark text and visible icons - more specific targeting */
+.bg-gradient-to-br.from-blue-50 .bg-white h4,
+.bg-gradient-to-br.from-blue-50 [class*="bg-white"] h4 {
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+}
+
+/* Ensure icons in admin tools cards are visible - specific targeting */
+.bg-gradient-to-br.from-blue-50 .bg-white svg,
+.bg-gradient-to-br.from-blue-50 [class*="bg-white"] svg {
+  color: #2563eb !important;
+  fill: #2563eb !important;
+}
+
+/* Admin tools section specific fixes */
+.bg-gradient-to-br.from-blue-50 h3,
+.bg-gradient-to-br.from-blue-50 p {
+  color: #1e40af !important;
+  -webkit-text-fill-color: #1e40af !important;
+}
+
+/* Fix visibility for competitive advantages section */
+.premium-plab-card h3,
+.premium-plab-card h4,
+.premium-plab-card p {
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+}
+
+/* Ensure icons in gradient backgrounds are visible */
+.bg-gradient-to-r svg,
+[class*="from-blue-500"] svg,
+[class*="to-purple-500"] svg {
+  color: white !important;
+  fill: white !important;
+}
+
+/* Override any conflicting styles for hero section */
+.hero-text.text-white,
+.hero-text .text-white,
+.hero-text h1.text-white,
+.hero-text p.text-white {
+  color: white !important;
+}
+
+/* Button text styling */
+button {
+  color: inherit !important;
+}
+
+button[variant="outline"] {
+  color: black !important;
+}
+
+/* Comprehensive button and text fixes */
+.bg-white button,
+.bg-white [role="button"],
+[data-radix-tabs-list] button,
+[data-radix-tabs-list] [role="button"] {
+  color: black !important;
+}
+
+/* Force button icons to be white */
+button svg,
+[role="button"] svg {
+  color: white !important;
+}
+
+/* Specific icon styling for landing page buttons */
+.text-white svg {
+  color: white !important;
+  fill: white !important;
+}
+
+/* Force specific text elements to be black */
+p.text-black {
+  color: black !important;
+}
+
+.text-center p {
+  color: black !important;
+}
+
+/* Force all form labels to be black */
+label {
+  color: black !important;
+}
+
+/* Force all text elements within auth forms to be black */
+.text-black,
+[class*="text-black"] {
+  color: black !important;
+}
+
+/* Keep all form area text black */
+.text-center p {
+  color: black !important;
+}
+
+/* Fix checkmark icon visibility */
+.text-green-500.fill-current {
+  color: #10b981 !important;
+  fill: #10b981 !important;
+  stroke-width: 3 !important;
+  font-weight: bold !important;
+}
+
+/* Target specific hero text to make it white */
+#hero-text {
+  color: white !important;
+}
+
+/* Target subtext to make it white */
+#subtext {
+  color: white !important;
+}
+
+/* Target feature description texts to make them white */
+#security-text,
+#community-text,
+#results-text {
+  color: white !important;
+}
+
+/* Fix button text visibility */
+#prep-button {
+  color: #2563eb !important;
+}
+
+#prep-button svg {
+  color: #2563eb !important;
+}
+
+/* Fix Complete Question Bank button text visibility */
+button[class*="bg-white"] {
+  color: #2563eb !important;
+}
+
+button[class*="bg-white"]:hover {
+  color: #2563eb !important;
+}
+
+/* Enhanced radio button selection styling */
+input[type="radio"]:checked {
+  background-color: #1e40af !important;
+  border-color: #1e40af !important;
+  border-width: 2px !important;
+}
+
+input[type="radio"]:checked::before {
+  background-color: white !important;
+  transform: scale(0.8) !important;
+}
+
+/* Radio button hover and focus states */
+input[type="radio"]:hover {
+  border-color: #3b82f6 !important;
+  border-width: 2px !important;
+}
+
+input[type="radio"]:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Target landing page hero text to make it white */
+#landing-hero-text,
+.hero-text,
+.hero-text *,
+.hero-text h1,
+.hero-text h2,
+.hero-text h3,
+.hero-text p,
+.hero-text span,
+.hero-text div {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Ensure badge text stays black even in hero sections */
+.hero-text .bg-white,
+.hero-text .bg-white *,
+.bg-white.text-black,
+.bg-white.text-black *,
+Badge.bg-white,
+Badge.bg-white *,
+.hero-text Badge.bg-white,
+.hero-text Badge.bg-white * {
+  color: black !important;
+  -webkit-text-fill-color: black !important;
+}
+
+/* Removed conflicting blue text styling - handled by consistent button styling below */
+
+/* Comprehensive button styling for all primary buttons */
+button[class*="bg-blue"],
+button[class*="bg-purple"],
+button[class*="bg-indigo"],
+button[class*="bg-green"],
+button[class*="bg-medical"],
+.btn-medical,
+.btn-secondary,
+.btn-success,
+.btn-primary,
+#continue-plab1-btn,
+#continue-practice-btn,
+#prep-button,
+#start-practice-btn,
+#start-ai-session-btn,
+#continue-path-btn,
+#continue-learning-btn,
+#milestone-continue-btn,
+#update-plan-btn,
+#quick-practice-btn,
+#random-quiz-btn,
+#timed-mock-btn,
+button[id*="station-"][id$="-btn"],
+button[id*="video-station-"][id$="-btn"],
+#start-first-video-station-btn,
+#rebalance-week-btn,
+#mark-session-complete-btn,
+#report-missed-day-btn,
+#view-full-profile-btn {
+  color: white !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+}
+
+/* Ensure all primary button backgrounds are consistent */
+.btn-medical,
+.btn-secondary,
+.btn-success,
+.btn-primary,
+#continue-plab1-btn,
+#continue-practice-btn,
+#prep-button,
+#start-practice-btn,
+#start-ai-session-btn,
+#continue-path-btn,
+#continue-learning-btn,
+#milestone-continue-btn,
+#update-plan-btn,
+#quick-practice-btn,
+#random-quiz-btn,
+#timed-mock-btn,
+button[id*="station-"][id$="-btn"],
+button[id*="video-station-"][id$="-btn"],
+#start-first-video-station-btn,
+#rebalance-week-btn,
+#mark-session-complete-btn,
+#report-missed-day-btn,
+#view-full-profile-btn {
+  background: #3B82F6 !important;
+  border: none !important;
+}
+
+/* Hover effects for all primary buttons */
+button[class*="bg-blue"]:hover,
+button[class*="bg-purple"]:hover,
+button[class*="bg-indigo"]:hover,
+button[class*="bg-green"]:hover,
+.btn-medical:hover,
+.btn-secondary:hover,
+.btn-success:hover,
+.btn-primary:hover,
+#continue-plab1-btn:hover,
+#continue-practice-btn:hover,
+#prep-button:hover,
+#start-practice-btn:hover,
+#start-ai-session-btn:hover,
+#continue-path-btn:hover,
+#continue-learning-btn:hover,
+#milestone-continue-btn:hover,
+#update-plan-btn:hover,
+#quick-practice-btn:hover,
+#random-quiz-btn:hover,
+#timed-mock-btn:hover,
+button[id*="station-"][id$="-btn"]:hover,
+button[id*="video-station-"][id$="-btn"]:hover,
+#start-first-video-station-btn:hover,
+#rebalance-week-btn:hover,
+#mark-session-complete-btn:hover,
+#report-missed-day-btn:hover,
+#view-full-profile-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Icons in all primary buttons should be white */
+button[class*="bg-blue"] svg,
+button[class*="bg-purple"] svg,
+button[class*="bg-indigo"] svg,
+button[class*="bg-green"] svg,
+.btn-medical svg,
+.btn-secondary svg,
+.btn-success svg,
+.btn-primary svg,
+#continue-plab1-btn svg,
+#continue-practice-btn svg,
+#prep-button svg,
+#start-practice-btn svg,
+#start-ai-session-btn svg,
+#continue-path-btn svg,
+#continue-learning-btn svg,
+#milestone-continue-btn svg,
+#update-plan-btn svg,
+#quick-practice-btn svg,
+#random-quiz-btn svg,
+#timed-mock-btn svg,
+button[id*="station-"][id$="-btn"] svg,
+button[id*="video-station-"][id$="-btn"] svg,
+#start-first-video-station-btn svg,
+#rebalance-week-btn svg,
+#mark-session-complete-btn svg,
+#report-missed-day-btn svg,
+#view-full-profile-btn svg {
+  color: white !important;
+}
+
+/* Landing page buttons - white/light theme for purple background */
+#trial-button,
+#demo-button {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #4c1d95 !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+#trial-button:hover,
+#demo-button:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  color: #4c1d95 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+#trial-button svg,
+#demo-button svg {
+  color: #4c1d95 !important;
+}
+
+/* Achievement Center header text - ensure white text on purple background */
+.bg-gradient-to-r.from-purple-600.to-blue-600 h1,
+.bg-gradient-to-r.from-purple-600.to-blue-600 p,
+.bg-gradient-to-r.from-purple-600.to-blue-600 .text-white {
+  color: white !important;
+}
+
+.dark {
+  --background: 210 13% 16%;
+  --foreground: 0 0% 98%;
+  --muted: 210 13% 20%;
+  --muted-foreground: 210 6% 64%;
+  --popover: 210 13% 16%;
+  --popover-foreground: 0 0% 98%;
+  --card: 210 13% 16%;
+  --card-foreground: 0 0% 98%;
+  --border: 210 13% 24%;
+  --input: 210 13% 24%;
+  --primary: 198 70% 50%;
+  --primary-foreground: 210 100% 6%;
+  --secondary: 332 60% 55%;
+  --secondary-foreground: 0 0% 6%;
+  --accent: 259 45% 61%;
+  --accent-foreground: 0 0% 6%;
+  --success: 160 84% 54%;
+  --success-foreground: 0 0% 6%;
+  --warning: 35 100% 60%;
+  --warning-foreground: 0 0% 6%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 198 70% 50%;
+  --medical-blue: 198 70% 50%;
+  --deep-rose: 332 60% 55%;
+  --mint-green: 160 84% 54%;
+  --amber-warning: 35 100% 60%;
+  --purple-accent: 259 45% 61%;
+  --light-bg: 210 13% 20%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #212529 !important;
+  }
+
+  /* Force black text for main content areas only */
+  .bg-light-bg {
+    color: #212529 !important;
+  }
+
+  .bg-light-bg > * {
+    color: #212529 !important;
+  }
+
+  /* Ensure card content is readable */
+  .card {
+    color: #212529 !important;
+  }
+
+  .card * {
+    color: #212529 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    color: #212529;
+  }
+
+  /* Ensure better text contrast throughout the app */
+  .text-gray-900 {
+    color: #212529 !important;
+  }
+
+  .text-gray-800 {
+    color: #495057 !important;
+  }
+
+  .text-gray-700 {
+    color: #6c757d !important;
+  }
+
+  .text-gray-600 {
+    color: #6c757d !important;
+  }
+
+  .text-medical-blue {
+    color: hsl(var(--medical-blue));
+  }
+
+  .bg-medical-blue {
+    background-color: hsl(var(--medical-blue));
+  }
+
+  .text-deep-rose {
+    color: hsl(var(--deep-rose));
+  }
+
+  .bg-deep-rose {
+    background-color: hsl(var(--deep-rose));
+  }
+
+  .text-mint-green {
+    color: hsl(var(--mint-green));
+  }
+
+  .bg-mint-green {
+    background-color: hsl(var(--mint-green));
+  }
+
+  .text-amber-warning {
+    color: hsl(var(--amber-warning));
+  }
+
+  .bg-amber-warning {
+    background-color: hsl(var(--amber-warning));
+  }
+
+  .text-purple-accent {
+    color: hsl(var(--purple-accent));
+  }
+
+  .bg-purple-accent {
+    background-color: hsl(var(--purple-accent));
+  }
+
+  .bg-light-bg {
+    background-color: hsl(var(--light-bg));
+  }
+
+  .border-medical-blue {
+    border-color: hsl(var(--medical-blue));
+  }
+
+  .border-deep-rose {
+    border-color: hsl(var(--deep-rose));
+  }
+
+  .border-mint-green {
+    border-color: hsl(var(--mint-green));
+  }
+
+  .border-amber-warning {
+    border-color: hsl(var(--amber-warning));
+  }
+
+  .border-purple-accent {
+    border-color: hsl(var(--purple-accent));
+  }
+
+  /* Custom spacing utilities */
+  .spacing-20 {
+    @apply p-5 gap-5;
+  }
+
+  /* Animation for progress bars */
+  .progress-animate {
+    transition: width 0.8s ease-in-out;
+  }
+
+  /* Custom gradient backgrounds */
+  .gradient-medical {
+    background: linear-gradient(135deg, hsl(var(--medical-blue)), hsl(var(--purple-accent)));
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--deep-rose)), hsl(var(--purple-accent)));
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Enhanced card readability */
+  .card {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border: 1px solid #e9ecef !important;
+  }
+
+  .card-content {
+    color: #212529 !important;
+  }
+
+  /* Fix white text on white background issues */
+  .text-white {
+    color: #ffffff !important;
+  }
+
+  .bg-white {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+  }
+
+  /* Ensure proper contrast for all components */
+  [data-state="open"] {
+    color: #212529 !important;
+  }
+
+  .bg-gray-50 {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+  }
+
+  /* Fix welcome section text visibility */
+  .bg-gradient-to-br {
+    color: #ffffff !important;
+  }
+
+  .bg-gradient-to-br h1,
+  .bg-gradient-to-br p,
+  .bg-gradient-to-br span,
+  .bg-gradient-to-br div {
+    color: #ffffff !important;
+  }
+
+  /* Specific override for gradient sections */
+  .bg-gradient-to-br * {
+    color: #ffffff !important;
+  }
+
+  /* Ensure white text is always visible on gradient backgrounds */
+  .text-white {
+    color: #ffffff !important;
+  }
+
+  /* Override any conflicting text colors in gradient sections */
+  [class*="gradient"] * {
+    color: inherit !important;
+  }
+
+  /* Custom button styles */
+  .btn-medical {
+    @apply bg-medical-blue text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-deep-rose text-white px-6 py-3 rounded-xl font-semibold hover:bg-rose-600 transition-colors;
+  }
+
+  .btn-success {
+    @apply bg-mint-green text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors;
+  }
+
+  /* Quiz option styles */
+  .quiz-option {
+    @apply p-4 border-2 border-gray-200 rounded-lg hover:border-medical-blue hover:bg-blue-50 transition-all cursor-pointer;
+  }
+
+  .quiz-option.selected {
+    @apply border-medical-blue bg-blue-50;
+  }
+
+  .quiz-option.correct {
+    @apply border-mint-green bg-green-50;
+  }
+
+  .quiz-option.incorrect {
+    @apply border-red-500 bg-red-50;
+  }
+
+  /* OSCE station styles */
+  .osce-station {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow;
+  }
+
+  /* Mobile responsive utilities */
+  @media (max-width: 768px) {
+    .mobile-padding {
+      @apply px-3;
+    }
+    
+    .mobile-text {
+      @apply text-sm;
+    }
+    
+    /* Enhanced mobile typography */
+    h1 {
+      @apply text-2xl;
+    }
+    
+    h2 {
+      @apply text-xl;
+      line-height: 1.2 !important;
+      color: black !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+    
+    h3 {
+      @apply text-lg;
+    }
+    
+    /* Fix "Why We're Different" text display on mobile */
+    .text-2xl, .text-3xl, .text-4xl, .text-5xl {
+      color: black !important;
+      line-height: 1.2 !important;
+      word-break: normal !important;
+      white-space: normal !important;
+    }
+    
+    /* Mobile card adjustments */
+    .card {
+      @apply px-3 py-4;
+    }
+    
+    /* Mobile button sizing */
+    button {
+      @apply px-4 py-2 text-sm;
+    }
+    
+    /* Mobile navigation spacing */
+    nav {
+      @apply px-3;
+    }
+    
+    /* Mobile grid adjustments */
+    .grid-cols-3 {
+      @apply grid-cols-2;
+    }
+    
+    .grid-cols-4 {
+      @apply grid-cols-2;
+    }
+    
+    /* Mobile tabs improvements */
+    [data-radix-tabs-list] {
+      @apply text-xs;
+    }
+    
+    /* Mobile form improvements */
+    input, select, textarea {
+      @apply text-base; /* Prevents zoom on iOS */
+    }
+  }
+  
+  /* Tablet responsive utilities */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .tablet-padding {
+      @apply px-6;
+    }
+    
+    .tablet-text {
+      @apply text-base;
+    }
+    
+    /* Tablet grid optimizations */
+    .lg\:grid-cols-3 {
+      @apply grid-cols-2;
+    }
+    
+    .lg\:grid-cols-4 {
+      @apply grid-cols-3;
+    }
+  }
+  
+  /* Touch-friendly interactions */
+  @media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets for mobile */
+    button, [role="button"], a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .card-hover:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  /* Safe area handling for notched devices */
+  @supports (padding-top: env(safe-area-inset-top)) {
+    .safe-top {
+      padding-top: env(safe-area-inset-top);
+    }
+    
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .safe-left {
+      padding-left: env(safe-area-inset-left);
+    }
+    
+    .safe-right {
+      padding-right: env(safe-area-inset-right);
+    }
+  }
+
+  /* Loading animations */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .loading-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Progress indicators */
+  .progress-ring {
+    transition: stroke-dasharray 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}

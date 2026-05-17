@@ -1,0 +1,273 @@
+/* Smart text visibility fix with proper contrast */
+
+/* Fix invisible white/light text on light backgrounds only */
+.text-white:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gray-7"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]):not([class*="bg-black"]),
+.text-gray-100:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gray-7"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]):not([class*="bg-black"]),
+.text-gray-200:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gray-7"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]):not([class*="bg-black"]) {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Fix any completely transparent or invisible text */
+[style*="color: transparent"],
+[style*="color:transparent"],
+[style*="color: rgba(255,255,255,0)"],
+[style*="color:rgba(255,255,255,0)"] {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Ensure body text is dark on light backgrounds */
+body {
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+/* Main content areas */
+.bg-white, .bg-gray-50, .bg-gray-100, .bg-blue-50, .bg-green-50, .bg-yellow-50 {
+  color: #1f2937 !important;
+}
+
+/* Headers and main text on light backgrounds */
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.bg-gray-50 h1, .bg-gray-50 h2, .bg-gray-50 h3, .bg-gray-50 h4, .bg-gray-50 h5, .bg-gray-50 h6,
+.bg-gray-100 h1, .bg-gray-100 h2, .bg-gray-100 h3, .bg-gray-100 h4, .bg-gray-100 h5, .bg-gray-100 h6 {
+  color: #1f2937 !important;
+}
+
+/* Paragraph text on light backgrounds */
+.bg-white p, .bg-white span, .bg-white div,
+.bg-gray-50 p, .bg-gray-50 span, .bg-gray-50 div,
+.bg-gray-100 p, .bg-gray-100 span, .bg-gray-100 div {
+  color: #1f2937 !important;
+}
+
+/* Fix gradient background text */
+.bg-gradient-to-br *:not(button):not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]) {
+  color: #1f2937 !important;
+  text-shadow: 0 0 2px rgba(255,255,255,0.8) !important;
+}
+
+/* Preserve white text on dark buttons */
+.bg-blue-600, .bg-blue-700, .bg-blue-800, .bg-blue-900,
+.bg-purple-600, .bg-purple-700, .bg-purple-800, .bg-purple-900,
+.bg-green-600, .bg-green-700, .bg-green-800, .bg-green-900,
+.bg-red-600, .bg-red-700, .bg-red-800, .bg-red-900,
+.bg-orange-600, .bg-orange-700, .bg-orange-800, .bg-orange-900,
+.bg-yellow-600, .bg-yellow-700, .bg-yellow-800, .bg-yellow-900,
+.bg-indigo-600, .bg-indigo-700, .bg-indigo-800, .bg-indigo-900,
+.bg-gray-700, .bg-gray-800, .bg-gray-900,
+.bg-black {
+  color: white !important;
+}
+
+/* Ensure button text is white on dark backgrounds */
+.bg-blue-600 *, .bg-blue-700 *, .bg-blue-800 *, .bg-blue-900 *,
+.bg-purple-600 *, .bg-purple-700 *, .bg-purple-800 *, .bg-purple-900 *,
+.bg-green-600 *, .bg-green-700 *, .bg-green-800 *, .bg-green-900 *,
+.bg-red-600 *, .bg-red-700 *, .bg-red-800 *, .bg-red-900 *,
+.bg-orange-600 *, .bg-orange-700 *, .bg-orange-800 *, .bg-orange-900 *,
+.bg-yellow-600 *, .bg-yellow-700 *, .bg-yellow-800 *, .bg-yellow-900 *,
+.bg-indigo-600 *, .bg-indigo-700 *, .bg-indigo-800 *, .bg-indigo-900 *,
+.bg-gray-700 *, .bg-gray-800 *, .bg-gray-900 *,
+.bg-black * {
+  color: white !important;
+}
+
+/* Fix dropdown and select components */
+[data-radix-select-content] {
+  background-color: white !important;
+  color: #1f2937 !important;
+}
+
+[data-radix-select-item] {
+  color: #1f2937 !important;
+}
+
+[data-radix-select-item][data-highlighted] {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+}
+
+/* Card components */
+.card, .card-content, .card-header {
+  color: #1f2937 !important;
+}
+
+/* Navigation and menu items */
+nav, nav a, nav span, nav div {
+  color: #1f2937 !important;
+}
+
+/* Form elements */
+input, textarea, select {
+  color: #1f2937 !important;
+  background-color: white !important;
+}
+
+/* Links */
+a:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]) {
+  color: #2563eb !important;
+}
+
+/* Badge and pill components */
+.badge:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]) {
+  color: #1f2937 !important;
+}
+
+/* Tables */
+table, th, td {
+  color: #1f2937 !important;
+}
+
+/* Alert components */
+.alert:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]) {
+  color: #1f2937 !important;
+}
+
+/* Progress bars */
+.progress {
+  color: #1f2937 !important;
+}
+
+/* Specific text color overrides for light backgrounds */
+.text-muted-foreground:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gray-7"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]) {
+  color: #6b7280 !important;
+}
+
+/* Ensure proper contrast for all text sizes */
+.text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl {
+  color: inherit;
+}
+
+/* Override any remaining problematic text colors */
+.text-gray-300:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gray-7"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]),
+.text-gray-400:not([class*="bg-blue"]):not([class*="bg-purple"]):not([class*="bg-green"]):not([class*="bg-red"]):not([class*="bg-gray-7"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]) {
+  color: #6b7280 !important;
+}
+
+/* Force dark text on all light backgrounds - aggressive override */
+.bg-white *, .bg-gray-50 *, .bg-gray-100 *, .bg-blue-50 *, .bg-green-50 *, .bg-yellow-50 *, .bg-orange-50 *, .bg-purple-50 *, .bg-pink-50 *, .bg-indigo-50 * {
+  color: #1f2937 !important;
+}
+
+/* Specifically target white text classes */
+.text-white:not(.bg-blue-600):not(.bg-blue-700):not(.bg-purple-600):not(.bg-purple-700):not(.bg-green-600):not(.bg-green-700):not(.bg-red-600):not(.bg-red-700):not(.bg-orange-600):not(.bg-orange-700):not(.bg-gray-700):not(.bg-gray-800):not(.bg-gray-900):not(.bg-black) {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Emergency override for any white text */
+[style*="color: white"], [style*="color:#ffffff"], [style*="color: #ffffff"], [style*="color:white"] {
+  color: #1f2937 !important;
+}
+
+/* Target specific problematic selectors on right side/panels */
+.text-center *, .flex *, .grid *, .space-y-4 *, .space-y-6 * {
+  color: #1f2937 !important;
+}
+
+/* Override any CSS-in-JS or dynamic styles */
+div[style*="color"], span[style*="color"], p[style*="color"] {
+  color: #1f2937 !important;
+}
+
+/* Maximum specificity override - force dark text everywhere except dark backgrounds */
+html body * {
+  color: #1f2937 !important;
+}
+
+/* Preserve white text only on confirmed dark backgrounds */
+html body .bg-blue-600 *, html body .bg-blue-700 *, html body .bg-blue-800 *, html body .bg-blue-900 *,
+html body .bg-purple-600 *, html body .bg-purple-700 *, html body .bg-purple-800 *, html body .bg-purple-900 *,
+html body .bg-green-600 *, html body .bg-green-700 *, html body .bg-green-800 *, html body .bg-green-900 *,
+html body .bg-red-600 *, html body .bg-red-700 *, html body .bg-red-800 *, html body .bg-red-900 *,
+html body .bg-orange-600 *, html body .bg-orange-700 *, html body .bg-orange-800 *, html body .bg-orange-900 *,
+html body .bg-yellow-600 *, html body .bg-yellow-700 *, html body .bg-yellow-800 *, html body .bg-yellow-900 *,
+html body .bg-indigo-600 *, html body .bg-indigo-700 *, html body .bg-indigo-800 *, html body .bg-indigo-900 *,
+html body .bg-gray-700 *, html body .bg-gray-800 *, html body .bg-gray-900 *,
+html body .bg-black * {
+  color: white !important;
+}
+
+/* Specific fixes for CKS Guidelines and similar links/buttons */
+[href*="cks"], [href*="guidelines"], button[class*="External"], a[class*="External"],
+.text-blue-600, .text-blue-500, .text-blue-700, .text-blue-800, .text-blue-900,
+.text-indigo-600, .text-indigo-500, .text-indigo-700, .text-indigo-800, .text-indigo-900 {
+  color: #1f2937 !important;
+}
+
+/* Force dark text on links and buttons with external icons */
+a:not([class*="bg-blue-6"]):not([class*="bg-blue-7"]):not([class*="bg-blue-8"]):not([class*="bg-blue-9"]), 
+button:not([class*="bg-blue-6"]):not([class*="bg-blue-7"]):not([class*="bg-blue-8"]):not([class*="bg-blue-9"]),
+.external-link, .external-link * {
+  color: #1f2937 !important;
+}
+
+/* Target text content specifically */
+[class*="text-"], span, div, p, a, button {
+  color: #1f2937 !important;
+}
+
+/* Nuclear option - override everything with maximum specificity */
+html body div *:not(.hero-text-white):not(.hero-text-white *) {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+html body span *:not(.hero-text-white):not(.hero-text-white *) {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+html body a *:not(.hero-text-white):not(.hero-text-white *) {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+html body button *:not(.hero-text-white):not(.hero-text-white *) {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Force all text elements */
+*:not(.hero-text-white):not(.hero-text-white *) {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Preserve white text only on dark button backgrounds with highest specificity */
+html body .bg-blue-600, html body .bg-blue-600 *,
+html body .bg-blue-700, html body .bg-blue-700 *,
+html body .bg-purple-600, html body .bg-purple-600 *,
+html body .bg-purple-700, html body .bg-purple-700 *,
+html body .bg-green-600, html body .bg-green-600 *,
+html body .bg-green-700, html body .bg-green-700 *,
+html body .bg-red-600, html body .bg-red-600 *,
+html body .bg-red-700, html body .bg-red-700 *,
+html body .bg-orange-600, html body .bg-orange-600 *,
+html body .bg-orange-700, html body .bg-orange-700 *,
+html body .bg-gray-700, html body .bg-gray-700 *,
+html body .bg-gray-800, html body .bg-gray-800 *,
+html body .bg-gray-900, html body .bg-gray-900 *,
+html body .bg-black, html body .bg-black * {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Hero banner text override - maximum specificity */
+html body .hero-text-white,
+html body .hero-text-white *,
+html body div .hero-text-white,
+html body div .hero-text-white *,
+html body span .hero-text-white,
+html body span .hero-text-white *,
+html body .hero-text-white h1,
+html body .hero-text-white h2,
+html body .hero-text-white h3,
+html body .hero-text-white p,
+html body .hero-text-white span,
+html body .hero-text-white div {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
