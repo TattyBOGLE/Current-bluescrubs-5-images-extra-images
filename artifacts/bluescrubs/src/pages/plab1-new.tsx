@@ -64,6 +64,7 @@ const NICE_GUIDELINE_MAP: Record<string, string> = {
   'venous-thromboembolism': 'ng158',
   'asthma': 'ng245',
   'copd': 'ng115',
+  'obstructive-pulmonary-disease': 'ng115',
   'pneumonia': 'cg191',
   'type-1-diabetes': 'ng17',
   'type-2-diabetes': 'ng28',
@@ -91,6 +92,7 @@ const NICE_GUIDELINE_MAP: Record<string, string> = {
   'eczema': 'cg57',
   'acne': 'ng198',
   'ckd': 'ng203',
+  'kidney-disease': 'ng203',
   'aki': 'cg169',
   'appendicitis': 'cg141',
   'gord': 'cg184',
@@ -211,6 +213,7 @@ const BNF_TREATMENT_MAP: Record<string, string> = {
   'lipids': 'lipid-regulating-drugs',
   'asthma': 'asthma',
   'copd': 'chronic-obstructive-pulmonary-disease',
+  'obstructive-pulmonary-disease': 'chronic-obstructive-pulmonary-disease',
   'type-1-diabetes': 'diabetes-mellitus',
   'type-2-diabetes': 'diabetes-mellitus',
   'diabetes': 'diabetes-mellitus',
@@ -223,8 +226,12 @@ const BNF_TREATMENT_MAP: Record<string, string> = {
   'analgesics': 'analgesics',
   'antibiotics': 'antibacterials-principles-of-therapy',
   'sepsis': 'antibacterials-principles-of-therapy',
+  'stroke': 'stroke',
+  'tia': 'stroke',
   'uti': 'urinary-tract-infections',
   'urinary-tract-infection': 'urinary-tract-infections',
+  'ckd': 'prescribing-in-renal-impairment',
+  'kidney-disease': 'prescribing-in-renal-impairment',
   'contraception': 'contraception-overview',
   'gord': 'dyspepsia-and-gastro-oesophageal-reflux-disease',
   'osteoporosis': 'osteoporosis',
@@ -242,6 +249,7 @@ const CKS_SLUG_MAP: Record<string, string> = {
   'asthma': 'asthma',
   'copd': 'chronic-obstructive-pulmonary-disease',
   'chronic-obstructive-pulmonary-disease': 'chronic-obstructive-pulmonary-disease',
+  'obstructive-pulmonary-disease': 'chronic-obstructive-pulmonary-disease',
   'hypertension': 'hypertension',
   'heart-failure': 'heart-failure-chronic',
   'atrial-fibrillation': 'atrial-fibrillation',
@@ -276,6 +284,7 @@ const CKS_SLUG_MAP: Record<string, string> = {
   'gout': 'gout',
   'ckd': 'chronic-kidney-disease',
   'chronic-kidney-disease': 'chronic-kidney-disease',
+  'kidney-disease': 'chronic-kidney-disease',
   'anaphylaxis': 'anaphylaxis',
   'otitis-media': 'otitis-media-acute',
   'dvt': 'deep-vein-thrombosis',
@@ -309,7 +318,7 @@ const CKS_SLUG_MAP: Record<string, string> = {
 function toConditionSlug(topic: string): string {
   const stripped = topic
     .replace(/\s*\([^)]*\)/g, '')                  // remove "(DVT)", "(COPD)", "(MI)", etc.
-    .replace(/\b(management|diagnosis|recognition|treatment|exacerbation|prevention|care|overview|approach|assessment|investigation|workup|acute|chronic)\b/gi, '')
+    .replace(/\b(management|diagnosis|recognition|treatment|exacerbation|prevention|care|overview|approach|assessment|investigation|workup|acute|chronic|mellitus|adults|in)\b/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
   return toSlug(stripped || topic);
