@@ -3311,8 +3311,8 @@ app.get("/api/test/questions", async (req, res) => {
               },
               {
                 title: "BNF Antimicrobial Guidance", 
-                url: "https://bnf.nice.org.uk/treatment-summaries/urinary-tract-infections/",
-                description: "British National Formulary - UTI treatment protocols"
+                url: "https://bnf.nice.org.uk/treatment-summaries/antibacterials-principles-of-therapy/",
+                description: "British National Formulary - antimicrobial prescribing principles"
               },
               {
                 title: "PHE Antimicrobial Guidelines",
@@ -3835,7 +3835,7 @@ app.get("/api/test/questions", async (req, res) => {
           links: {
             NICE: "https://www.nice.org.uk/guidance/ng136/chapter/Recommendations#choosing-antihypertensive-drug-treatment",
             CKS: "https://cks.nice.org.uk/topics/hypertension/management/initial-treatment/",
-            BNF: "https://bnf.nice.org.uk/treatment-summary/hypertension/"
+            BNF: "https://cks.nice.org.uk/topics/hypertension/"
           }
         },
         {
@@ -3862,7 +3862,7 @@ app.get("/api/test/questions", async (req, res) => {
           links: {
             NICE: "https://www.nice.org.uk/guidance/ng196/chapter/Recommendations#stroke-risk-assessment-and-antithrombotic-therapy",
             CKS: "https://cks.nice.org.uk/topics/atrial-fibrillation/management/oral-anticoagulation/",
-            BNF: "https://bnf.nice.org.uk/drug/apixaban.html"
+            BNF: "https://bnf.nice.org.uk/drugs/apixaban/"
           }
         }
       ];

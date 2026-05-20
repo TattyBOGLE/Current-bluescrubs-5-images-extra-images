@@ -370,8 +370,13 @@ function toNICEVisualUrl(topic: string): string | null {
 
 function toBNFUrl(topic: string): string | null {
   const base = toConditionSlug(topic);
-  const slug = BNF_TREATMENT_MAP[base];
-  return slug ? `https://bnf.nice.org.uk/treatment-summaries/${slug}/` : null;
+  // CKS covers condition-level management (asthma, COPD, hypertension…).
+  // BNF treatment summaries are reserved for drug-class topics (anticoagulation, analgesics…).
+  // Always prefer CKS for conditions so we avoid broken BNF condition pages.
+  const cksSlug = CKS_SLUG_MAP[base];
+  if (cksSlug) return `https://cks.nice.org.uk/topics/${cksSlug}/`;
+  const bnfSlug = BNF_TREATMENT_MAP[base];
+  return bnfSlug ? `https://bnf.nice.org.uk/treatment-summaries/${bnfSlug}/` : null;
 }
 
 function toESCUrl(topic: string): string | null {
@@ -428,9 +433,13 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   }
   if (/\bBNF\b|British National Formulary/i.test(text)) {
     const specific = hasT ? toBNFUrl(rawTopic) : null;
+    // When toBNFUrl resolved to CKS (condition topic), update the label accordingly.
+    const resolvedToCKS = specific?.includes('cks.nice.org.uk') ?? false;
     return {
       url: specific ?? (hasT ? `https://bnf.nice.org.uk/search/?q=${q}` : 'https://bnf.nice.org.uk/treatment-summaries/'),
-      label: hasT ? `BNF — ${rawTopic}` : 'BNF — British National Formulary',
+      label: hasT
+        ? (resolvedToCKS ? `CKS — ${rawTopic}` : `BNF — ${rawTopic}`)
+        : 'BNF — British National Formulary',
     };
   }
   if (/\bGMC\b|Good Medical Practice/i.test(text)) {

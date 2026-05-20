@@ -574,7 +574,7 @@ export const CLINICAL_GUIDES: ClinicalGuide[] = [
             "Avoid in pregnancy: trimethoprim (first trimester)",
             "Consider local resistance patterns"
           ],
-          url: "https://bnf.nice.org.uk/treatment-summary/urinary-tract-infections-utis/#uncomplicated-lower-uti-in-nonpregnant-wom"
+          url: "https://cks.nice.org.uk/topics/urinary-tract-infection-lower-women/"
         }
       ],
       mnemonics: [
