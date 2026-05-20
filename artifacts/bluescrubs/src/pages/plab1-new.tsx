@@ -2802,81 +2802,135 @@ export default function PLAB1New() {
                     <div className="h-3 bg-blue-100 rounded animate-pulse w-4/6" />
                   </div>
                 </div>
-              ) : aiExplanation && aiExplanation.source !== 'fallback' ? (
+              ) : aiExplanation ? (
                 <div className="space-y-5">
-                  {/* Why correct */}
-                  <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                    <div className="flex items-start gap-2 mb-2">
-                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <h4 className="font-semibold text-green-900">
-                        Why the correct answer fits
-                      </h4>
-                    </div>
-                    <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
-                      {aiExplanation.correctRationale}
-                    </p>
-                  </div>
+                  {aiExplanation.source === 'fallback' ? (
+                    /* Fallback: styled explanation panel with colour-coded option list */
+                    <>
+                      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-2 mb-2">
+                          <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                          <h4 className="font-semibold text-blue-900">Explanation</h4>
+                        </div>
+                        <div className="space-y-2">
+                          {aiExplanation.correctRationale.split(/\n\n+/).filter(s => s.trim()).map((para, i) => (
+                            <p key={i} className="text-sm text-gray-800 leading-relaxed">{para.trim()}</p>
+                          ))}
+                        </div>
+                      </div>
 
-                  {/* Per-option breakdown */}
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Option-by-option analysis:</h4>
-                    <div className="space-y-3">
-                      {aiExplanation.options.map((opt) => (
-                        <div
-                          key={opt.label}
-                          className={`border-l-4 p-3 rounded-r-lg ${
-                            opt.isCorrect
-                              ? 'border-green-500 bg-green-50'
-                              : opt.isSelected
-                              ? 'border-red-500 bg-red-50'
-                              : 'border-gray-300 bg-gray-50'
-                          }`}
-                        >
-                          <div className="flex items-start gap-2 mb-1">
-                            <span
-                              className={`font-bold text-sm px-2 py-0.5 rounded ${
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-3">Option-by-option analysis:</h4>
+                        <div className="space-y-3">
+                          {aiExplanation.options.map((opt) => (
+                            <div
+                              key={opt.label}
+                              className={`border-l-4 p-3 rounded-r-lg ${
                                 opt.isCorrect
-                                  ? 'bg-green-600 text-white'
+                                  ? 'border-green-500 bg-green-50'
                                   : opt.isSelected
-                                  ? 'bg-red-600 text-white'
-                                  : 'bg-gray-300 text-gray-800'
+                                  ? 'border-red-500 bg-red-50'
+                                  : 'border-gray-300 bg-gray-50'
                               }`}
                             >
-                              {opt.label}
-                            </span>
-                            <span className="font-medium text-sm text-gray-900">
-                              {opt.text}
-                            </span>
-                            {opt.isCorrect && (
-                              <Badge className="ml-auto bg-green-600 hover:bg-green-700 text-xs">Correct</Badge>
-                            )}
-                            {opt.isSelected && !opt.isCorrect && (
-                              <Badge variant="destructive" className="ml-auto text-xs">Your answer</Badge>
-                            )}
-                          </div>
-                          <p className="text-sm text-gray-700 leading-relaxed pl-9">
-                            {opt.why}
-                          </p>
+                              <div className="flex items-center gap-2">
+                                <span
+                                  className={`font-bold text-sm px-2 py-0.5 rounded ${
+                                    opt.isCorrect
+                                      ? 'bg-green-600 text-white'
+                                      : opt.isSelected
+                                      ? 'bg-red-600 text-white'
+                                      : 'bg-gray-300 text-gray-800'
+                                  }`}
+                                >
+                                  {opt.label}
+                                </span>
+                                <span className="font-medium text-sm text-gray-900">{opt.text}</span>
+                                {opt.isCorrect && (
+                                  <Badge className="ml-auto bg-green-600 hover:bg-green-700 text-xs">Correct</Badge>
+                                )}
+                                {opt.isSelected && !opt.isCorrect && (
+                                  <Badge variant="destructive" className="ml-auto text-xs">Your answer</Badge>
+                                )}
+                              </div>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                      </div>
 
-                  {/* Key learning point */}
-                  <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
-                    <div className="flex items-start gap-2 mb-1">
-                      <Award className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                      <h4 className="font-semibold text-amber-900">Key learning point</h4>
-                    </div>
-                    <p className="text-sm text-gray-800 leading-relaxed">
-                      {aiExplanation.keyLearningPoint}
-                    </p>
-                  </div>
+                      <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-2 mb-1">
+                          <Award className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                          <h4 className="font-semibold text-amber-900">Key learning point</h4>
+                        </div>
+                        <p className="text-sm text-gray-800 leading-relaxed">
+                          {aiExplanation.keyLearningPoint}
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    /* Full AI explanation */
+                    <>
+                      <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-2 mb-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <h4 className="font-semibold text-green-900">Why the correct answer fits</h4>
+                        </div>
+                        <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
+                          {aiExplanation.correctRationale}
+                        </p>
+                      </div>
 
-                  {aiExplanation.source === 'fallback' && (
-                    <p className="text-xs text-gray-500 italic">
-                      AI-generated explanation unavailable — showing the stored explanation. Try again later for a richer breakdown.
-                    </p>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-3">Option-by-option analysis:</h4>
+                        <div className="space-y-3">
+                          {aiExplanation.options.map((opt) => (
+                            <div
+                              key={opt.label}
+                              className={`border-l-4 p-3 rounded-r-lg ${
+                                opt.isCorrect
+                                  ? 'border-green-500 bg-green-50'
+                                  : opt.isSelected
+                                  ? 'border-red-500 bg-red-50'
+                                  : 'border-gray-300 bg-gray-50'
+                              }`}
+                            >
+                              <div className="flex items-start gap-2 mb-1">
+                                <span
+                                  className={`font-bold text-sm px-2 py-0.5 rounded ${
+                                    opt.isCorrect
+                                      ? 'bg-green-600 text-white'
+                                      : opt.isSelected
+                                      ? 'bg-red-600 text-white'
+                                      : 'bg-gray-300 text-gray-800'
+                                  }`}
+                                >
+                                  {opt.label}
+                                </span>
+                                <span className="font-medium text-sm text-gray-900">{opt.text}</span>
+                                {opt.isCorrect && (
+                                  <Badge className="ml-auto bg-green-600 hover:bg-green-700 text-xs">Correct</Badge>
+                                )}
+                                {opt.isSelected && !opt.isCorrect && (
+                                  <Badge variant="destructive" className="ml-auto text-xs">Your answer</Badge>
+                                )}
+                              </div>
+                              <p className="text-sm text-gray-700 leading-relaxed pl-9">{opt.why}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                        <div className="flex items-start gap-2 mb-1">
+                          <Award className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                          <h4 className="font-semibold text-amber-900">Key learning point</h4>
+                        </div>
+                        <p className="text-sm text-gray-800 leading-relaxed">
+                          {aiExplanation.keyLearningPoint}
+                        </p>
+                      </div>
+                    </>
                   )}
                 </div>
               ) : (
