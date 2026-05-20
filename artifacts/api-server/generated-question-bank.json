@@ -7592,5 +7592,215 @@
       "CKS": "https://cks.nice.org.uk/topics/heart-failure"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_0",
+    "topic": "Hypertension",
+    "category": "all",
+    "question": "A 52-year-old Caucasian male presents to your clinic for a routine check-up. His blood pressure readings over the past few months have averaged 152/94 mmHg. He has no significant past medical history and is not on any current medications. According to the latest NICE guidelines, what is the most appropriate first-line treatment for this patient?",
+    "options": [
+      "Amlodipine",
+      "Losartan",
+      "Indapamide",
+      "Spironolactone",
+      "Lisinopril"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is Lisinopril. According to NICE NG136 guidelines, for patients under 55 years old who are not of Black African or African-Caribbean family origin, an ACE inhibitor like Lisinopril is recommended as the first-line treatment for hypertension. The patient's age, ethnicity, and the absence of contraindications make Lisinopril the most appropriate choice. Amlodipine would be first-line if the patient were over 55 or of Black African or African-Caribbean origin. Losartan is an alternative if the patient cannot tolerate an ACE inhibitor. Indapamide is a thiazide-like diuretic used as a third-line option. Spironolactone is considered if blood pressure remains uncontrolled on triple therapy. Remember the ABCD rule: ACE inhibitors or ARBs for under 55/non-Black, CCBs for others.",
+    "mnemonic": "ABCD - ACE-i/ARB for Age below 55, CCB for Color (Black)",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_1",
+    "topic": "Asthma",
+    "category": "all",
+    "question": "A 30-year-old female with a history of mild asthma presents with worsening symptoms over the last few months. She uses her salbutamol inhaler daily. What change in her medication regimen is recommended according to the latest NICE guidelines?",
+    "options": [
+      "Continue salbutamol alone",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
+      "Start regular low-dose ICS with salbutamol as needed (Track 1)",
+      "Increase salbutamol frequency",
+      "Add a long-acting beta-agonist"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG245 (2024) recommends AIR therapy — as-needed low-dose ICS/formoterol — as the preferred treatment step for adults with asthma on SABA alone who have worsening or frequent symptoms.\n\nUsing salbutamol daily indicates poor asthma control and the patient needs anti-inflammatory cover. AIR therapy provides this in a single inhaler used only when symptoms occur, avoiding the need for a separate regular ICS.\n\nOption C (Track 1 — regular ICS + SABA as needed) is a valid alternative under NG245, but not the preferred first choice. It may be used when AIR therapy is unsuitable.\n\nContinuing salbutamol alone is explicitly discouraged by NG245 — SABA monotherapy is no longer recommended. Increasing salbutamol frequency does not address inflammation. Adding a LABA is a later step-up option for patients not controlled on first-line therapy.",
+    "mnemonic": "Daily SABA use = poor control → AIR therapy first (NG245). Never continue SABA alone.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_2",
+    "topic": "Diabetes Type 2",
+    "category": "all",
+    "question": "A 65-year-old male with type 2 diabetes and established cardiovascular disease is on metformin 1g BD. His latest HbA1c is 60 mmol/mol. What is the next step in his diabetes management according to NICE guidelines?",
+    "options": [
+      "Add sulfonylurea",
+      "Add SGLT-2 inhibitor",
+      "Switch to insulin",
+      "Add DPP-4 inhibitor",
+      "Add GLP-1 receptor agonist"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add an SGLT-2 inhibitor. NICE NG28 guidelines recommend adding an SGLT-2 inhibitor like empagliflozin in patients with type 2 diabetes and established cardiovascular disease to improve glycaemic control and reduce cardiovascular risk. Sulfonylureas increase hypoglycaemia risk, especially in the elderly. Switching to insulin is not the next step without trying oral agents. DPP-4 inhibitors are less effective for cardiovascular benefit. GLP-1 receptor agonists are alternatives if SGLT-2 inhibitors are unsuitable or BMI is ≥35. Remember: SGLT-2 for Sugar + Heart protection.",
+    "mnemonic": "SGLT-2 for Sweet & Safe Hearts",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/type-2-diabetes/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_3",
+    "topic": "Atrial Fibrillation",
+    "category": "all",
+    "question": "A 74-year-old woman presents to the emergency department with palpitations and is found to be in atrial fibrillation with a heart rate of 130 bpm and stable vitals. What is the most appropriate initial management according to NICE guidelines?",
+    "options": [
+      "Immediate cardioversion",
+      "Start warfarin",
+      "Start beta-blocker",
+      "Refer for ablation",
+      "Start digoxin"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to start a beta-blocker. NICE NG196 guidelines recommend rate control as the first-line treatment for new onset atrial fibrillation in stable patients, with a beta-blocker or rate-limiting calcium channel blocker as first-line agents. Immediate cardioversion is reserved for patients who are hemodynamically unstable. Warfarin is not initiated before rate control and is chosen based on CHA₂DS₂-VASc score for anticoagulation. Ablation is for rhythm control in symptomatic patients. Digoxin is used for rate control in sedentary patients. Remember: Rate first, Rhythm later.",
+    "mnemonic": "Beta for Beats - Beta-blockers for Atrial Fibrillation Beats",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_4",
+    "topic": "Stroke",
+    "category": "all",
+    "question": "A 68-year-old man with hypertension presents with sudden onset right-sided weakness and aphasia. CT scan confirms a left middle cerebral artery infarct. He arrived at the hospital 3 hours after symptom onset. What is the most appropriate initial management according to NICE guidelines?",
+    "options": [
+      "Aspirin 300 mg",
+      "Thrombolysis with alteplase",
+      "Clopidogrel 75 mg",
+      "Heparin infusion",
+      "Statin therapy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is thrombolysis with alteplase. According to NICE NG128 guidelines, thrombolysis with alteplase is indicated for ischemic strokes within 4.5 hours of symptom onset in the absence of contraindications. Aspirin 300 mg is given after 24 hours post-thrombolysis. Clopidogrel is not used acutely. Heparin is not recommended for acute ischemic stroke. Statins are for secondary prevention post-stroke. Remember: Time is Brain - act quickly for thrombolysis.",
+    "mnemonic": "FAST for Thrombolysis - Face, Arms, Speech, Time",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke-and-tia/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_5",
+    "topic": "COPD",
+    "category": "all",
+    "question": "A 67-year-old male smoker with a 40-pack-year history presents with worsening breathlessness. Spirometry confirms COPD with an FEV₁ of 60%. What is the most appropriate initial inhaler therapy according to NICE guidelines?",
+    "options": [
+      "SABA alone",
+      "LABA alone",
+      "LABA + LAMA",
+      "ICS + LABA",
+      "LAMA alone"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is LABA alone. According to NICE NG115 guidelines, patients with stable COPD and an FEV₁ between 50-80% predicted should start with a long-acting bronchodilator, either LABA or LAMA. A combination of LABA + LAMA is used if symptoms persist. ICS + LABA is for patients with a history of exacerbations. SABA alone is inadequate for moderate disease. Remember: LABA or LAMA for Lungs with Low FEV₁.",
+    "mnemonic": "LABA for Long-term Aid in Breathing",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/chronic-obstructive-pulmonary-disease/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_6",
+    "topic": "Heart Failure",
+    "category": "all",
+    "question": "A 72-year-old female with heart failure with reduced ejection fraction (HFrEF) is currently on ramipril and bisoprolol. She continues to be symptomatic. What is the next step in management as per NICE guidelines?",
+    "options": [
+      "Add digoxin",
+      "Add spironolactone",
+      "Switch ramipril to an ARNI",
+      "Add a calcium channel blocker",
+      "Increase bisoprolol dose"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add spironolactone. NICE NG106 guidelines recommend adding an MRA, such as spironolactone, for patients with HFrEF who remain symptomatic despite ACE inhibitor and beta-blocker therapy. Digoxin is used for rate control in AF or for symptom control if other treatments are inadequate. Switching to ARNI is considered if symptoms persist despite optimized therapy. Calcium channel blockers are not typically used in HFrEF. Increasing bisoprolol dose may be done, but adding an MRA is the recommended next step. Remember: MRA for More Relief in HF.",
+    "mnemonic": "Spironolactone as a Spironolift for Heart Failure",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_7",
+    "topic": "Sepsis",
+    "category": "all",
+    "question": "A 55-year-old male patient presents with fever, tachycardia, hypotension, and confusion. He is suspected to have sepsis. What is the immediate management step according to the NICE Sepsis-6 pathway?",
+    "options": [
+      "Administer IV fluids",
+      "Start oral antibiotics",
+      "Order MRI",
+      "Administer diuretics",
+      "Perform lumbar puncture"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to administer IV fluids. According to the NICE NG51 and the Surviving Sepsis Campaign guidelines, one of the key components of the Sepsis-6 bundle, to be completed within the first hour, is the administration of IV fluids to manage hypotension and improve perfusion. Antibiotics should be administered intravenously, not orally. MRI is not part of the immediate sepsis management. Diuretics are contraindicated in hypotension. Lumbar puncture is not urgent in sepsis unless meningitis is suspected. Remember: Fluids First in Sepsis.",
+    "mnemonic": "Sepsis Six: Blood cultures, Antibiotics, Fluids, Lactate, Urine, Oxygen",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_8",
+    "topic": "Hyperthyroidism",
+    "category": "all",
+    "question": "A 35-year-old woman presents with weight loss, heat intolerance, and palpitations. Her thyroid function tests show suppressed TSH and elevated free T4. What is the first-line treatment according to NICE guidelines?",
+    "options": [
+      "Methimazole",
+      "Carbimazole",
+      "Radioactive iodine",
+      "Propranolol",
+      "Thyroidectomy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Carbimazole. NICE NG145 guidelines recommend starting with an antithyroid drug like Carbimazole for initial management of hyperthyroidism. Methimazole is not used in the UK. Radioactive iodine and thyroidectomy are definitive treatments but not first-line. Propranolol is used for symptom control while awaiting effect from antithyroid drugs. Remember: Carbimazole for Control of Hyperthyroidism.",
+    "mnemonic": "Carbimazole Controls Thyroid",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301838637_9",
+    "topic": "Rheumatoid Arthritis",
+    "category": "all",
+    "question": "A 45-year-old female is newly diagnosed with rheumatoid arthritis. She has active synovitis in her wrists and fingers. What is the recommended initial treatment according to NICE guidelines?",
+    "options": [
+      "NSAIDs alone",
+      "Methotrexate",
+      "Prednisolone",
+      "Hydroxychloroquine",
+      "Biologics"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Methotrexate. NICE NG100 guidelines recommend starting a DMARD like Methotrexate as soon as possible, ideally within 3 months of diagnosis, to control disease activity in rheumatoid arthritis. NSAIDs are used for symptomatic relief but do not modify the disease. Prednisolone may be used as a short-term bridge. Hydroxychloroquine is less effective than Methotrexate in severe disease. Biologics are reserved for cases unresponsive to conventional DMARDs. Remember: Methotrexate to Manage RA.",
+    "mnemonic": "Methotrexate is the Master DMARD",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100",
+      "CKS": "https://cks.nice.org.uk/topics/rheumatoid-arthritis/"
+    },
+    "difficulty": "intermediate"
   }
 ]
