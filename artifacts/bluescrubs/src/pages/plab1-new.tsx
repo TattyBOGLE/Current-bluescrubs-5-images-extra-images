@@ -1373,6 +1373,25 @@ export default function PLAB1New() {
 
     setAiExplanationLoading(true);
     setAiExplanation(null);
+
+    const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+    const buildLocalFallback = (stored?: string): AIExplanation => ({
+      correctRationale: stored && stored.length > 30
+        ? stored
+        : `The correct answer is ${labels[correctIdx] ?? '?'}: ${optionsArr[correctIdx] ?? ''}. Review the question stem and relevant NICE/CKS guidance for the full rationale.`,
+      options: optionsArr.map((text, i) => ({
+        label: labels[i] ?? String(i + 1),
+        text,
+        isCorrect: i === correctIdx,
+        isSelected: selectedIdx === i,
+        why: i === correctIdx
+          ? 'This option best matches the clinical features described in the question stem.'
+          : 'This option does not best fit the features in the question stem.',
+      })),
+      keyLearningPoint: question.mnemonic || 'Anchor your reasoning in the patient demographics, symptoms, signs and investigations, then match to the most appropriate UK guideline step.',
+      source: 'fallback',
+    });
+
     try {
       const storedExplanation = typeof question.explanation === 'string'
         ? question.explanation
@@ -1390,12 +1409,21 @@ export default function PLAB1New() {
           storedExplanation,
         }),
       });
-      if (!resp.ok) return;
+      if (!resp.ok) {
+        const fallback = buildLocalFallback(storedExplanation);
+        aiExplanationCache.current.set(qid, fallback);
+        setAiExplanation(fallback);
+        return;
+      }
       const data: AIExplanation = await resp.json();
       aiExplanationCache.current.set(qid, data);
       setAiExplanation(data);
     } catch (err) {
       console.error('Failed to fetch AI explanation:', err);
+      const stored = typeof question.explanation === 'string' ? question.explanation : undefined;
+      const fallback = buildLocalFallback(stored);
+      aiExplanationCache.current.set(qid, fallback);
+      setAiExplanation(fallback);
     } finally {
       setAiExplanationLoading(false);
     }
