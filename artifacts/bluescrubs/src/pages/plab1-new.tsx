@@ -37,11 +37,10 @@ function toSlug(s: string) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').
 // NICE visual summary PDF resource IDs — confirmed from https://www.nice.org.uk/guidance/{code}/resources
 // Format: https://www.nice.org.uk/guidance/{code}/resources/visual-summary-pdf-{id}
 const NICE_VISUAL_SUMMARY_MAP: Record<string, string> = {
-  'ng136': '6899919517',   // Hypertension in adults
-  'ng28':  '6965793901',   // Type 2 diabetes in adults
-  'ng128': '11193380893',  // Stroke and TIA
-  'ng217': '11067088285',  // Epilepsies: diagnosis and management
-  'ng71':  '6544021069',   // Parkinson's disease in adults
+  'ng136': '6899919517',   // Hypertension in adults ✅ verified
+  'ng217': '11067088285',  // Epilepsies: diagnosis and management ✅ verified
+  'ng106': '6663137725',   // Chronic heart failure ✅ verified
+  'ng158': '11193380893',  // VTE / DVT / pulmonary embolism ✅ verified
 };
 
 const NICE_GUIDELINE_MAP: Record<string, string> = {
