@@ -33,14 +33,13 @@ function extractTopicFromLabel(text: string): string {
 function toQ(s: string) { return encodeURIComponent(s.trim()); }
 function toSlug(s: string) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
 
-// NICE guideline numbers for the most common PLAB 1 conditions
-// NICE visual summary PDF resource IDs — confirmed from https://www.nice.org.uk/guidance/{code}/resources
-// Format: https://www.nice.org.uk/guidance/{code}/resources/visual-summary-pdf-{id}
+// NICE visual summary PDF URLs — full URLs confirmed from each guideline's /resources page
 const NICE_VISUAL_SUMMARY_MAP: Record<string, string> = {
-  'ng136': '6899919517',   // Hypertension in adults ✅ verified
-  'ng217': '11067088285',  // Epilepsies: diagnosis and management ✅ verified
-  'ng106': '6663137725',   // Chronic heart failure ✅ verified
-  'ng158': '11193380893',  // VTE / DVT / pulmonary embolism ✅ verified
+  'ng136': 'https://www.nice.org.uk/guidance/ng136/resources/visual-summary-pdf-6899919517',
+  'ng217': 'https://www.nice.org.uk/guidance/ng217/resources/visual-summary-pdf-11067088285',
+  'ng106': 'https://www.nice.org.uk/guidance/ng106/resources/chronic-heart-failure-core-treatments-for-heart-failure-visual-summary-pdf-6663137725',
+  'ng158': 'https://www.nice.org.uk/guidance/ng158/resources/visual-summary-pdf-11193380893',
+  'ng28':  'https://www.nice.org.uk/guidance/ng28/resources/visual-summary-full-version-choosing-medicines-for-firstline-and-further-treatment-pdf-10956472093',
 };
 
 const NICE_GUIDELINE_MAP: Record<string, string> = {
@@ -352,8 +351,7 @@ function toNICEVisualUrl(topic: string): string | null {
   const base = toConditionSlug(topic);
   const code = NICE_GUIDELINE_MAP[base];
   if (!code) return null;
-  const resourceId = NICE_VISUAL_SUMMARY_MAP[code];
-  return resourceId ? `https://www.nice.org.uk/guidance/${code}/resources/visual-summary-pdf-${resourceId}` : null;
+  return NICE_VISUAL_SUMMARY_MAP[code] ?? null;
 }
 
 function toBNFUrl(topic: string): string | null {
