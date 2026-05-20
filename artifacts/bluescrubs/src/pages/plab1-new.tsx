@@ -3323,10 +3323,6 @@ export default function PLAB1New() {
               <h3 className="text-xl font-normal text-blue-600 mb-2">
                 {currentQuestion.category ? currentQuestion.category.charAt(0).toUpperCase() + currentQuestion.category.slice(1) : 'Medical Topic'}
               </h3>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-500">★</span>
-                <span className="text-sm text-gray-600">Reference material</span>
-              </div>
             </div>
 
             {/* CKS Clinical Knowledge Summaries */}
@@ -3721,9 +3717,11 @@ export default function PLAB1New() {
                 const l = buildDynamicLink('GMC Good Medical Practice', qTopic);
                 if (l) specialtyChips.push({ label: l.label, url: l.url });
               }
-              // BNF is always relevant as a core PLAB 1 drug reference
-              const bnfLink = buildDynamicLink('BNF', qTopic);
-              if (bnfLink) specialtyChips.push({ label: bnfLink.label, url: bnfLink.url });
+              // BNF chip — always links directly to bnf.nice.org.uk (not routed through CKS)
+              const bnfSearchUrl = qTopic
+                ? `https://bnf.nice.org.uk/search/?q=${encodeURIComponent(qTopic)}`
+                : 'https://bnf.nice.org.uk/';
+              specialtyChips.push({ label: qTopic ? `BNF — ${qTopic}` : 'BNF', url: bnfSearchUrl });
 
               // Fallback official refs (only used when getNICEReferencesForQuestion returns nothing)
               const officialRefs = niceRefs.length === 0 && currentQuestion.references
