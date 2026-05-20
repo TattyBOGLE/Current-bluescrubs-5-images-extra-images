@@ -3371,10 +3371,10 @@
       "Discharge with no treatment"
     ],
     "answer": 1,
-    "explanation": "The correct answer is inpatient treatment with co-amoxiclav and clarithromycin. According to NICE CG191 (2014), a CURB-65 score of 2 indicates moderate severity pneumonia, warranting hospital admission and treatment with antibiotics covering both typical and atypical pathogens, such as co-amoxiclav and clarithromycin. Outpatient treatment with amoxicillin or doxycycline is suitable for low-severity cases (CURB-65 score <2). Ceftriaxone is more appropriate for severe cases or when intravenous administration is essential. Discharging without treatment is inappropriate given her score and symptoms. Clinical pearl: 'CURB-65 two, admit and review'. For more details, see NICE CG191.",
+    "explanation": "The correct answer is inpatient treatment with co-amoxiclav and clarithromycin. According to NICE NG250, a CURB-65 score of 2 indicates moderate severity pneumonia, warranting hospital admission and treatment with antibiotics covering both typical and atypical pathogens, such as co-amoxiclav and clarithromycin. Outpatient treatment with amoxicillin or doxycycline is suitable for low-severity cases (CURB-65 score <2). Ceftriaxone is more appropriate for severe cases or when intravenous administration is essential. Discharging without treatment is inappropriate given her score and symptoms. Clinical pearl: 'CURB-65 two, admit and review'. For more details, see NICE NG250.",
     "mnemonic": "CURB-65 two, admit and review!",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
       "CKS": "https://cks.nice.org.uk/topics/pneumonia"
     },
     "difficulty": "intermediate"
@@ -3581,10 +3581,10 @@
       "Score 5: Hospital admission and oral amoxicillin"
     ],
     "answer": 2,
-    "explanation": "The correct answer is Score 3: Hospital admission and IV co-amoxiclav and clarithromycin. According to NICE CG191 (2014), the CURB-65 score assesses pneumonia severity: Confusion, Urea >7 mmol/L, Respiratory rate \u226530, Blood pressure <90 systolic or \u226460 diastolic, and age \u226565 years. This patient scores 3 (confusion, respiratory rate, age), indicating severe pneumonia requiring hospital admission. For severe pneumonia, NICE recommends IV antibiotics, specifically co-amoxiclav and clarithromycin, to cover atypical pathogens. Outpatient management is unsuitable for CURB-65 scores of 3 or higher due to the increased risk of mortality. Remember, CURB-65 score guides the setting and intensity of pneumonia treatment.",
+    "explanation": "The correct answer is Score 3: Hospital admission and IV co-amoxiclav and clarithromycin. According to NICE NG250, the CURB-65 score assesses pneumonia severity: Confusion, Urea >7 mmol/L, Respiratory rate \u226530, Blood pressure <90 systolic or \u226460 diastolic, and age \u226565 years. This patient scores 3 (confusion, respiratory rate, age), indicating severe pneumonia requiring hospital admission. For severe pneumonia, NICE recommends IV antibiotics, specifically co-amoxiclav and clarithromycin, to cover atypical pathogens. Outpatient management is unsuitable for CURB-65 scores of 3 or higher due to the increased risk of mortality. Remember, CURB-65 score guides the setting and intensity of pneumonia treatment.",
     "mnemonic": "CURB your enthusiasm for severe pneumonia",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/cg191"
+      "NICE": "https://www.nice.org.uk/guidance/ng250"
     },
     "difficulty": "intermediate"
   },
@@ -4069,7 +4069,7 @@
       "Levofloxacin"
     ],
     "answer": 3,
-    "explanation": "The correct answer is Amoxicillin and Clarithromycin. According to NICE guidelines (CG191/NG138), a CURB-65 score of 3 indicates a high severity pneumonia, warranting dual antibiotic therapy with amoxicillin and clarithromycin to cover typical and atypical pathogens. \n\nAmoxicillin alone is inadequate for high-severity cases. Clarithromycin alone does not cover all common pathogens. Co-amoxiclav is used in severe cases or if there is suspicion of a resistant organism. Levofloxacin is not first-line due to its side effect profile. 'Dual antibiotics for high CURB-65' is key.",
+    "explanation": "The correct answer is Amoxicillin and Clarithromycin. According to NICE guidelines (NG250), a CURB-65 score of 3 indicates a high severity pneumonia, warranting dual antibiotic therapy with amoxicillin and clarithromycin to cover typical and atypical pathogens. \n\nAmoxicillin alone is inadequate for high-severity cases. Clarithromycin alone does not cover all common pathogens. Co-amoxiclav is used in severe cases or if there is suspicion of a resistant organism. Levofloxacin is not first-line due to its side effect profile. 'Dual antibiotics for high CURB-65' is key.",
     "mnemonic": "Dual therapy for CURB-65",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng138",
@@ -4426,10 +4426,10 @@
       "Intravenous ceftriaxone"
     ],
     "answer": 1,
-    "explanation": "The correct answer is 'Amoxicillin + clarithromycin'. According to NICE CG191 (2014), a CURB-65 score of 2 indicates moderate severity community-acquired pneumonia, and dual therapy with amoxicillin plus clarithromycin is recommended to cover typical and atypical organisms. Amoxicillin alone is adequate for low-severity cases. Co-amoxiclav or IV antibiotics like ceftriaxone are reserved for high-severity pneumonia or if the patient cannot take oral medications. Doxycycline can be an alternative if there's a penicillin allergy, but it's not first-line in moderate severity. Remember: 'CURB the pneumonia with combo therapy at score 2.'",
+    "explanation": "The correct answer is 'Amoxicillin + clarithromycin'. According to NICE NG250, a CURB-65 score of 2 indicates moderate severity community-acquired pneumonia, and dual therapy with amoxicillin plus clarithromycin is recommended to cover typical and atypical organisms. Amoxicillin alone is adequate for low-severity cases. Co-amoxiclav or IV antibiotics like ceftriaxone are reserved for high-severity pneumonia or if the patient cannot take oral medications. Doxycycline can be an alternative if there's a penicillin allergy, but it's not first-line in moderate severity. Remember: 'CURB the pneumonia with combo therapy at score 2.'",
     "mnemonic": "CURB the pneumonia with combo therapy at score 2.",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
       "CKS": "https://cks.nice.org.uk/topics/chest-infections-adults"
     },
     "difficulty": "intermediate"
@@ -4930,10 +4930,10 @@
       "Levofloxacin"
     ],
     "answer": 0,
-    "explanation": "The correct answer is Amoxicillin. NICE CG191 (2014) states that for community-acquired pneumonia with a CURB-65 score of 0\u20131 (low severity), amoxicillin 500 mg TDS for 5 days is the recommended treatment. Co-amoxiclav is reserved for moderate to severe cases or if atypical pathogens are suspected. Clarithromycin is used if there's a penicillin allergy or for atypical coverage in moderate severity. Doxycycline is an alternative in penicillin allergy but not first-line. Levofloxacin is not routinely used due to potential side effects and is reserved for specific cases. Clinical pearl: CURB-65 guides admission and initial antibiotic choice. Reference: NICE CG191.",
+    "explanation": "The correct answer is Amoxicillin. NICE NG250 states that for community-acquired pneumonia with a CURB-65 score of 0\u20131 (low severity), amoxicillin 500 mg TDS for 5 days is the recommended treatment. Co-amoxiclav is reserved for moderate to severe cases or if atypical pathogens are suspected. Clarithromycin is used if there's a penicillin allergy or for atypical coverage in moderate severity. Doxycycline is an alternative in penicillin allergy but not first-line. Levofloxacin is not routinely used due to potential side effects and is reserved for specific cases. Clinical pearl: CURB-65 guides admission and initial antibiotic choice. Reference: NICE NG250.",
     "mnemonic": "CAP low risk: Amoxy is the trick!",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
       "CKS": "https://cks.nice.org.uk/topics/chest-infections-adult/"
     },
     "difficulty": "intermediate"
@@ -5119,10 +5119,10 @@
       "Co-amoxiclav and clarithromycin"
     ],
     "answer": 2,
-    "explanation": "According to NICE CG191 (2014) and NG138 (2019), a moderate-severity community-acquired pneumonia (CURB-65 score of 2) should be treated with a combination of amoxicillin and clarithromycin. This combination covers atypical pathogens. Amoxicillin alone is insufficient for moderate severity. Doxycycline alone may be used in low-severity cases. Co-amoxiclav alone does not cover atypicals effectively, and combining it with clarithromycin is reserved for high-severity cases. Remember 'Amox and Clarithro for the Moderate Blow' to guide moderate pneumonia treatment. More details: https://www.nice.org.uk/guidance/cg191",
+    "explanation": "According to NICE NG250 and NG138 (2019), a moderate-severity community-acquired pneumonia (CURB-65 score of 2) should be treated with a combination of amoxicillin and clarithromycin. This combination covers atypical pathogens. Amoxicillin alone is insufficient for moderate severity. Doxycycline alone may be used in low-severity cases. Co-amoxiclav alone does not cover atypicals effectively, and combining it with clarithromycin is reserved for high-severity cases. Remember 'Amox and Clarithro for the Moderate Blow' to guide moderate pneumonia treatment. More details: https://www.nice.org.uk/guidance/ng250",
     "mnemonic": "Amox and Clarithro for the Moderate Blow",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
       "CKS": "https://cks.nice.org.uk/topics/pneumonia-community-acquired"
     },
     "difficulty": "intermediate"
@@ -5288,10 +5288,10 @@
       "Observation and supportive care"
     ],
     "answer": 1,
-    "explanation": "The correct answer is inpatient treatment with co-amoxiclav and clarithromycin. According to NICE CG191 and NG138 guidelines, a CURB-65 score of 2 indicates moderate severity pneumonia, warranting hospital admission and dual antibiotic therapy. Co-amoxiclav and clarithromycin are commonly used for this purpose. Outpatient treatment with amoxicillin or clarithromycin alone is suitable for low severity cases (CURB-65 score 0-1). Observation without antibiotics is inappropriate for a CURB-65 score of 2. Always assess severity using CURB-65 and consider inpatient management for scores of 2 or higher.",
+    "explanation": "The correct answer is inpatient treatment with co-amoxiclav and clarithromycin. According to NICE NG250 guidelines, a CURB-65 score of 2 indicates moderate severity pneumonia, warranting hospital admission and dual antibiotic therapy. Co-amoxiclav and clarithromycin are commonly used for this purpose. Outpatient treatment with amoxicillin or clarithromycin alone is suitable for low severity cases (CURB-65 score 0-1). Observation without antibiotics is inappropriate for a CURB-65 score of 2. Always assess severity using CURB-65 and consider inpatient management for scores of 2 or higher.",
     "mnemonic": "Co-Amox + Clarithro for 'C'URB-65 'C'ases needing 'C'are.",
     "links": {
-      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
       "CKS": "https://cks.nice.org.uk/topics/pneumonia"
     },
     "difficulty": "intermediate"

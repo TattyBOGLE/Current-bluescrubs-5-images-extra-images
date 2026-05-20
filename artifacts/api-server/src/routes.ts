@@ -112,7 +112,7 @@ CARDIOVASCULAR:
 RESPIRATORY:
 - Asthma: NICE NG245 (November 2024) — REPLACES NG80 and old BTS/SIGN step ladder. NEW approach: all adults with asthma should have a regular low-dose ICS (e.g. beclometasone 200 mcg/day) prescribed alongside a SABA reliever from the outset. SABA-only as a complete regimen is NO LONGER recommended. Step 2: low-dose ICS + LABA. Step 3: increase ICS dose or add LTRA. Do NOT write options saying "SABA alone is adequate first-line".
 - COPD: NICE NG115 (2018) — GOLD staging by FEV₁. Inhaler therapy: SABA/SAMA for mild; LABA or LAMA for moderate+; dual LABA+LAMA or ICS+LABA if frequent exacerbations. Pulmonary rehab if MRC ≥3. Long-term oxygen if PaO₂ <7.3 kPa.
-- Pneumonia (community-acquired): NICE CG191 (2014) / NICE NG138 (2019 antimicrobials) — CURB-65 to guide admission (score ≥2 = admit). Low severity: amoxicillin 500 mg TDS 5 days. Moderate: amoxicillin + clarithromycin. High severity: co-amoxiclav + clarithromycin IV.
+- Pneumonia (community-acquired): NICE NG250 (2025, replaces CG191) — CURB-65 to guide admission (score ≥2 = admit). Low severity: amoxicillin 500 mg TDS 5 days. Moderate: amoxicillin + clarithromycin. High severity: co-amoxiclav + clarithromycin IV.
 - Pulmonary Embolism: NICE NG158 — see VTE above. Massive PE with haemodynamic compromise: thrombolysis (alteplase) or surgical embolectomy.
 - Pneumothorax: BTS 2023 — Primary spontaneous (<2 cm, asymptomatic): discharge and review. ≥2 cm or symptomatic: aspiration first; chest drain if fails. Secondary (any size): chest drain.
 
@@ -3759,8 +3759,8 @@ app.get("/api/test/questions", async (req, res) => {
           links: {
             primary: {
               title: "UK Guidance",
-              url: "https://www.nice.org.uk/guidance/cg181",
-              description: "NICE CG181: Familial hypercholesterolaemia - identification and management"
+              url: "https://www.nice.org.uk/guidance/ng238",
+              description: "NICE NG238: Cardiovascular disease: risk assessment and reduction, including lipid modification"
             },
             supplementary: [
               {
