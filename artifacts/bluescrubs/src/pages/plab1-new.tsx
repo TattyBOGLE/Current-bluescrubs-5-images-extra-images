@@ -3827,18 +3827,6 @@ export default function PLAB1New() {
               </div>
             )}
 
-            {/* Reference Material — collapsible panel */}
-            <ReferenceMaterialPanel question={currentQuestion} />
-
-            {/* Collapsible Revision Panel */}
-            {aiStudyTips && aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
-              <RevisionPanel
-                question={currentQuestion}
-                tips={aiStudyTips.tips}
-                niceRefs={getNICEReferencesForQuestion(currentQuestion)}
-              />
-            )}
-
             {/* Study Tips Section — AI-generated tips + mnemonics specific to this question */}
             <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
               {/* Header */}
@@ -3956,6 +3944,18 @@ export default function PLAB1New() {
                 )}
               </div>
             </div>
+
+            {/* Collapsible Revision Panel */}
+            {aiStudyTips && aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
+              <RevisionPanel
+                question={currentQuestion}
+                tips={aiStudyTips.tips}
+                niceRefs={getNICEReferencesForQuestion(currentQuestion)}
+              />
+            )}
+
+            {/* Reference Material — collapsible panel */}
+            <ReferenceMaterialPanel question={currentQuestion} />
           </div>
 
           {/* Prominent Next Question Button - Bottom of Explanation */}
