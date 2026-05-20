@@ -4601,5 +4601,845 @@
       "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 56-year-old Black man presents to your GP clinic for a routine health check. His blood pressure is 160/95 mmHg. He has no significant past medical history and does not take any regular medications. What is the most appropriate first-line treatment for his hypertension according to current NICE guidelines?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Thiazide diuretic",
+      "Beta-blocker",
+      "Spironolactone"
+    ],
+    "answer": 0,
+    "explanation": "According to NICE NG136 (2023 update), the first-line treatment for hypertension in patients over the age of 55 or in Black patients of any age is a calcium channel blocker, such as amlodipine. This is because these groups tend to have a lesser response to ACE inhibitors as a monotherapy. In this scenario, the patient is a 56-year-old Black man, making amlodipine the most appropriate choice. \n\nRamipril, an ACE inhibitor, is recommended for patients under 55 who are not Black. Thiazide diuretics are considered at step 3 of hypertension management. Beta-blockers are not first-line unless there are compelling indications such as heart failure or post-myocardial infarction status. Spironolactone is considered in resistant hypertension (step 4) if serum potassium is less than 4.5 mmol/L. Remember 'ABCD' for hypertension management: ACE inhibitors, Beta-blockers, Calcium channel blockers, Diuretics.",
+    "mnemonic": "ABCD for hypertension: ACE inhibitors, Beta-blockers, Calcium channel blockers, Diuretics",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_1",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 65-year-old male presents to the emergency department with chest pain lasting 30 minutes. An ECG shows ST-segment elevation in leads II, III, and aVF. He is 90 minutes from the nearest PCI-capable hospital. What is the most appropriate next step in management?",
+    "options": [
+      "Administer thrombolysis",
+      "Transfer for primary PCI",
+      "Administer aspirin only",
+      "Start a beta-blocker",
+      "Perform coronary artery bypass graft"
+    ],
+    "answer": 0,
+    "explanation": "In STEMI, if primary percutaneous coronary intervention (PCI) cannot be performed within 120 minutes of first medical contact, the next best option is thrombolysis. Since the patient is 90 minutes away from a PCI-capable hospital and the time to balloon would exceed 120 minutes, thrombolysis is indicated as per NICE NG185 (2020). \n\nPrimary PCI is the preferred method if achievable within the recommended timeframe. Administering aspirin is part of the initial management but not sufficient alone as definitive treatment. Beta-blockers are used post-stabilization unless contraindicated. Coronary artery bypass grafting is not an acute treatment for STEMI. Remember 'TIME IS MUSCLE' for prompt STEMI management.",
+    "mnemonic": "TIME IS MUSCLE: Treat STEMI promptly to save heart muscle",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_2",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with newly diagnosed asthma presents to her GP. She experiences symptoms twice a week but no nocturnal symptoms. Which medication regimen should be initiated according to the latest NICE guidelines?",
+    "options": [
+      "SABA alone",
+      "Low-dose ICS",
+      "Low-dose ICS + SABA",
+      "LABA alone",
+      "LTRA"
+    ],
+    "answer": 2,
+    "explanation": "NICE NG245 specifies that all adults with asthma should have a regular low-dose inhaled corticosteroid (ICS) prescribed alongside a short-acting beta-agonist (SABA) reliever from the outset. Even if symptoms are mild, this combination helps control inflammation and prevent exacerbations. \n\nA SABA alone is no longer recommended as a complete regimen. A low-dose ICS alone is incomplete because it does not provide immediate symptom relief. LABAs are not used as monotherapy due to the risk of severe asthma exacerbations. Leukotriene receptor antagonists (LTRAs) are considered add-on therapies if symptom control is inadequate. Remember 'ICS first for asthma control'.",
+    "mnemonic": "ICS first: Inhaled corticosteroids for initial asthma control",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_3",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 55-year-old man with type 2 diabetes and a history of myocardial infarction is on metformin. His HbA1c is 60 mmol/mol. What medication should be added to his regimen according to NICE guidelines?",
+    "options": [
+      "Sulfonylurea",
+      "DPP-4 inhibitor",
+      "SGLT-2 inhibitor",
+      "GLP-1 receptor agonist",
+      "Insulin"
+    ],
+    "answer": 2,
+    "explanation": "In patients with type 2 diabetes and established cardiovascular disease, NICE NG28 recommends adding an SGLT-2 inhibitor such as empagliflozin to metformin. This class of medications not only aids in glycaemic control but also provides cardiovascular protection. \n\nSulfonylureas can increase the risk of hypoglycaemia and are not preferred in this scenario. DPP-4 inhibitors are an option but lack the cardiovascular benefits of SGLT-2 inhibitors. GLP-1 receptor agonists are considered if weight loss is a priority or an SGLT-2 inhibitor is not suitable. Insulin is typically reserved for cases where oral agents are insufficient. Remember 'SGLT-2 for heart protection in diabetes'.",
+    "mnemonic": "SGLT-2 for heart: Empagliflozin for cardiovascular protection in diabetes",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_4",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 68-year-old man with COPD has an FEV₁ of 45% predicted and frequent exacerbations. He is currently on a SABA. What is the next step in his inhaler therapy according to NICE guidelines?",
+    "options": [
+      "LABA alone",
+      "LAMA alone",
+      "LABA + LAMA",
+      "ICS + LABA",
+      "Oral corticosteroids"
+    ],
+    "answer": 2,
+    "explanation": "According to NICE NG115, for patients with COPD and moderate airflow obstruction (FEV₁ 30-49% predicted) who experience frequent exacerbations, a combination of a long-acting beta-agonist (LABA) and a long-acting muscarinic antagonist (LAMA) is recommended. This combination helps improve lung function and reduce exacerbation frequency. \n\nA LABA or LAMA alone may not provide sufficient symptom control. An ICS + LABA combination is reserved for those with features of asthma or continued exacerbations despite LABA + LAMA. Oral corticosteroids are used short-term for acute exacerbations. Remember 'Dual therapy for moderate COPD'.",
+    "mnemonic": "Dual therapy: LABA + LAMA for moderate COPD",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_5",
+    "topic": "Pneumonia Management",
+    "category": "all",
+    "question": "A 72-year-old woman is admitted with a 2-day history of cough, fever, and dyspnoea. Her CURB-65 score is 3. What is the appropriate antibiotic regimen according to NICE guidelines?",
+    "options": [
+      "Amoxicillin alone",
+      "Doxycycline alone",
+      "Amoxicillin + clarithromycin",
+      "Co-amoxiclav + clarithromycin",
+      "Levofloxacin"
+    ],
+    "answer": 3,
+    "explanation": "For patients with community-acquired pneumonia and a CURB-65 score of 3, indicating severe pneumonia, NICE NG138 recommends the use of intravenous co-amoxiclav plus clarithromycin. This combination provides broad-spectrum coverage, including atypical pathogens. \n\nAmoxicillin alone is insufficient for severe cases due to limited coverage of atypical organisms. Doxycycline is not recommended for severe pneumonia. Amoxicillin + clarithromycin is used for moderate severity. Levofloxacin is not a standard first-line treatment due to resistance concerns. Remember 'Co-amoxiclav + clarithromycin for severe pneumonia'.",
+    "mnemonic": "Severe pneumonia: Co-amoxiclav + clarithromycin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng138",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_6",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 45-year-old woman with newly diagnosed primary hypothyroidism presents for treatment initiation. Her TSH is 12 mU/L and free T4 is low. What is the appropriate starting dose of levothyroxine according to NICE guidelines?",
+    "options": [
+      "25 mcg/day",
+      "50 mcg/day",
+      "75 mcg/day",
+      "100 mcg/day",
+      "125 mcg/day"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG145 recommends starting levothyroxine at a dose of 50 mcg/day in adults with primary hypothyroidism, unless there are concerns such as cardiovascular disease or older age, where a lower starting dose may be appropriate. This dose is designed to gradually normalize TSH levels while minimizing the risk of adverse effects. \n\nA starting dose of 25 mcg/day is appropriate for older patients or those with cardiac issues. Higher doses such as 75 mcg/day or more are typically used for younger, healthy individuals or as an adjustment after initial therapy. Remember '50 for starting hypothyroidism treatment'.",
+    "mnemonic": "50 to start: Begin levothyroxine at 50 mcg/day",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_7",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 30-year-old woman with focal epilepsy is planning pregnancy. What is the most appropriate first-line antiepileptic drug for her according to NICE guidelines?",
+    "options": [
+      "Sodium valproate",
+      "Carbamazepine",
+      "Lamotrigine",
+      "Levetiracetam",
+      "Phenytoin"
+    ],
+    "answer": 2,
+    "explanation": "NICE NG217 recommends lamotrigine as a first-line treatment for women with focal epilepsy, especially if pregnancy is planned, due to its favorable safety profile during pregnancy. Sodium valproate is contraindicated in women of childbearing potential due to teratogenic risks. \n\nCarbamazepine is also a first-line option but may not be preferred over lamotrigine in this scenario due to potential side effects and interactions. Levetiracetam is another alternative but is typically reserved for cases where lamotrigine is not tolerated or effective. Phenytoin is not a first-line option due to its side effect profile. Remember 'Lamotrigine for ladies: Safe in pregnancy'.",
+    "mnemonic": "Lamotrigine for ladies: Safe in pregnancy",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_8",
+    "topic": "Rheumatoid Arthritis Management",
+    "category": "all",
+    "question": "A 50-year-old woman with newly diagnosed rheumatoid arthritis is seen in the clinic. She has significant joint pain and swelling. What is the recommended initial treatment according to NICE guidelines?",
+    "options": [
+      "NSAID alone",
+      "Methotrexate",
+      "Sulfasalazine",
+      "Hydroxychloroquine",
+      "Prednisolone"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG100 recommends starting disease-modifying antirheumatic drugs (DMARDs) within 3 months of diagnosis for rheumatoid arthritis. Methotrexate is the first-line DMARD due to its efficacy in controlling disease activity and preventing joint damage. \n\nNSAIDs can be used for symptomatic relief but do not alter disease progression. Sulfasalazine and hydroxychloroquine are often added to methotrexate in combination therapies but are not first-line monotherapies. Prednisolone may be used for acute flares but is not a long-term solution due to potential side effects. Remember 'Methotrexate: First-line for RA'.",
+    "mnemonic": "Methotrexate: First-line for RA",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100",
+      "CKS": "https://cks.nice.org.uk/topics/rheumatoid-arthritis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277842457_9",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 70-year-old man presents with fever, confusion, and hypotension. His lactate is 4 mmol/L. What should be included in the initial management within the first hour according to the Sepsis-6 bundle?",
+    "options": [
+      "Blood cultures, IV antibiotics, IV fluids",
+      "Blood cultures, oral antibiotics, oxygen",
+      "IV fluids, oral antibiotics, lactate measurement",
+      "Oxygen, oral antibiotics, urine output monitoring",
+      "IV antibiotics, lactate measurement, oxygen"
+    ],
+    "answer": 0,
+    "explanation": "The Sepsis-6 bundle, as outlined by NICE NG51 and the Surviving Sepsis Campaign, includes taking blood cultures, administering intravenous antibiotics, and giving intravenous fluids within the first hour of recognizing sepsis. This approach aims to stabilize the patient and address the underlying infection promptly. \n\nOral antibiotics are inadequate for severe sepsis. Oxygen should be administered based on the patient's oxygen saturation levels, but urine output monitoring and lactate measurement are not part of the initial action bundle. Remember 'Sepsis-6: Cultures, Antibiotics, Fluids'.",
+    "mnemonic": "Sepsis-6: Cultures, Antibiotics, Fluids",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian male is diagnosed with hypertension. His clinic blood pressure readings average 150/95 mmHg. He has no other medical conditions. According to the latest NICE guidelines, what is the most appropriate initial treatment for him?",
+    "options": [
+      "Lisinopril",
+      "Amlodipine",
+      "Hydrochlorothiazide",
+      "Losartan",
+      "Bisoprolol"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Lisinopril. According to NICE NG136 (2023), the first-line treatment for hypertension in patients under 55 years old who are not of Black African or African-Caribbean family origin is an ACE inhibitor, such as lisinopril. This patient is 52 and Caucasian, making lisinopril the appropriate choice. Amlodipine would be preferred in those over 55 or of Black origin. Hydrochlorothiazide is not the first-line choice in the UK; thiazide-like diuretics like indapamide are preferred in step 3. Losartan, an ARB, is used if an ACE inhibitor is not tolerated. Bisoprolol is not recommended as initial therapy unless there's a specific indication like heart failure. Remember the guideline: Under 55 and non-Black, start with an ACE inhibitor. Reference: NICE NG136.",
+    "mnemonic": "Hypertension under 55: ACE is key!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 25-year-old female presents with a history of asthma and intermittent wheezing. She is currently using a salbutamol inhaler as needed. According to the latest NICE guidelines, what should be added to her treatment regimen?",
+    "options": [
+      "Montelukast",
+      "Salmeterol",
+      "Beclometasone",
+      "Theophylline",
+      "Ipratropium"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Beclometasone. NICE NG245 (2024) recommends that all adults with asthma should have a regular low-dose inhaled corticosteroid (ICS) prescribed alongside a SABA reliever from the outset. Beclometasone is an ICS and should be added to her regimen to control inflammation and prevent symptoms. Montelukast, a leukotriene receptor antagonist, is not first-line but may be considered if symptoms persist despite adequate ICS. Salmeterol, a long-acting beta-agonist, is added only if symptoms continue despite ICS. Theophylline is rarely used due to side effects and drug interactions. Ipratropium, a short-acting anticholinergic, is used in COPD rather than asthma. Remember: SABA + ICS is the new standard for all asthmatic patients. Reference: NICE NG245.",
+    "mnemonic": "Asthma care: SABA + ICS from the start!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_2",
+    "topic": "Diabetes Management",
+    "category": "all",
+    "question": "A 62-year-old man with type 2 diabetes and established cardiovascular disease is currently on metformin. His HbA1c is 58 mmol/mol. According to NICE guidelines, what medication should be added to his treatment?",
+    "options": [
+      "Sulfonylurea",
+      "DPP-4 inhibitor",
+      "SGLT-2 inhibitor",
+      "GLP-1 receptor agonist",
+      "Insulin"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is SGLT-2 inhibitor. According to NICE NG28 (2022), in patients with type 2 diabetes and established cardiovascular disease, an SGLT-2 inhibitor such as empagliflozin should be added to metformin to help reduce cardiovascular risk. Sulfonylureas increase the risk of hypoglycaemia and are not preferred in such cases. DPP-4 inhibitors are less effective in reducing cardiovascular events. GLP-1 receptor agonists can be considered, but they are more often used when there is a need for weight reduction. Insulin is typically reserved for later stages when oral agents fail to maintain glycaemic control. Remember: use SGLT-2 inhibitors for dual benefits in diabetes with CVD. Reference: NICE NG28.",
+    "mnemonic": "Diabetes with CVD: Metformin + SGLT-2!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_3",
+    "topic": "Heart Failure",
+    "category": "all",
+    "question": "A 68-year-old man with a history of heart failure presents with worsening shortness of breath and peripheral oedema. He is currently on an ACE inhibitor and a beta-blocker. Which medication should be added according to the latest NICE guidelines?",
+    "options": [
+      "Furosemide",
+      "Spironolactone",
+      "Digoxin",
+      "Ivabradine",
+      "Hydralazine"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Spironolactone. NICE NG106 (2023) recommends adding a mineralocorticoid receptor antagonist (MRA) like spironolactone to an ACE inhibitor and beta-blocker in patients with heart failure with reduced ejection fraction (HFrEF) to improve outcomes. Furosemide is used for symptomatic relief of congestion but does not improve survival. Digoxin is considered for symptomatic control in atrial fibrillation or as a last resort in heart failure. Ivabradine is used for heart rate control if beta-blockers are insufficient. Hydralazine with nitrates is an option in patients intolerant to both ACE inhibitors and ARBs. Clinical pearl: Quadruple therapy in heart failure includes ACE-i/ARB, beta-blocker, MRA, and SGLT-2 inhibitor. Reference: NICE NG106.",
+    "mnemonic": "HFrEF: ACE, Beta, Spiro, SGLT-2!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_4",
+    "topic": "Atrial Fibrillation",
+    "category": "all",
+    "question": "A 75-year-old woman with atrial fibrillation presents for a routine check-up. Her CHA₂DS₂-VASc score is 4. According to NICE guidelines, what is the most appropriate management for stroke prevention?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Rivaroxaban",
+      "Dabigatran",
+      "No anticoagulation"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Rivaroxaban. NICE NG196 (2021) recommends anticoagulation in patients with atrial fibrillation who have a CHA₂DS₂-VASc score of 2 or more in men, and 3 or more in women. Direct oral anticoagulants (DOACs) like rivaroxaban are preferred over warfarin due to better safety profiles and ease of use. Aspirin is no longer recommended for stroke prevention in atrial fibrillation. Dabigatran is another DOAC that could be considered, but rivaroxaban was chosen here for illustrative purposes. No anticoagulation would be inappropriate given her high risk of stroke. Remember: DOACs are the go-to for stroke prevention in AF with significant risk. Reference: NICE NG196.",
+    "mnemonic": "AF stroke prevention: DOACs before Warfarin!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_5",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 45-year-old male presents with a 3-day history of cough, fever, and dyspnoea. His CURB-65 score is 1. According to NICE guidelines, what is the most appropriate antibiotic treatment for him?",
+    "options": [
+      "Amoxicillin",
+      "Co-amoxiclav",
+      "Clarithromycin",
+      "Doxycycline",
+      "Levofloxacin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Amoxicillin. NICE CG191 (2014) states that for community-acquired pneumonia with a CURB-65 score of 0–1 (low severity), amoxicillin 500 mg TDS for 5 days is the recommended treatment. Co-amoxiclav is reserved for moderate to severe cases or if atypical pathogens are suspected. Clarithromycin is used if there's a penicillin allergy or for atypical coverage in moderate severity. Doxycycline is an alternative in penicillin allergy but not first-line. Levofloxacin is not routinely used due to potential side effects and is reserved for specific cases. Clinical pearl: CURB-65 guides admission and initial antibiotic choice. Reference: NICE CG191.",
+    "mnemonic": "CAP low risk: Amoxy is the trick!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "CKS": "https://cks.nice.org.uk/topics/chest-infections-adult/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_6",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 60-year-old man presents to the A&E with chest pain and an ECG showing ST-elevation in leads II, III, and aVF. He is 90 minutes away from the nearest PCI-capable hospital. According to NICE guidelines, what is the immediate management?",
+    "options": [
+      "Start thrombolysis",
+      "Transfer for PCI",
+      "Administer aspirin only",
+      "Monitor and reassess",
+      "Administer nitrates"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Start thrombolysis. According to NICE NG185 (2020), if a patient with STEMI cannot undergo primary PCI within 120 minutes of first medical contact, thrombolysis should be administered. This patient is 90 minutes away from a PCI centre, making thrombolysis the immediate treatment. Transfer for PCI would delay reperfusion. Aspirin should be given, but thrombolysis is the priority. Monitoring without intervention is inappropriate in STEMI. Nitrates may relieve pain but do not address the underlying coronary occlusion. Clinical pearl: PCI within 120 minutes or thrombolysis if delayed. Reference: NICE NG185.",
+    "mnemonic": "STEMI: PCI if nearby, thrombolyse if far away!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_7",
+    "topic": "Major Depressive Disorder",
+    "category": "all",
+    "question": "A 30-year-old woman presents with a 6-week history of low mood, anhedonia, and fatigue. She has no history of psychiatric illness and denies suicidal thoughts. What is the first-line pharmacological treatment according to NICE guidelines?",
+    "options": [
+      "Citalopram",
+      "Amitriptyline",
+      "Phenelzine",
+      "Lithium",
+      "Bupropion"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Citalopram. NICE NG222 (2022) recommends selective serotonin reuptake inhibitors (SSRIs) as first-line treatment for moderate to severe depression, with citalopram being a common choice. Amitriptyline, a tricyclic antidepressant, is not first-line due to side effects. Phenelzine, a monoamine oxidase inhibitor, is used for treatment-resistant depression. Lithium is an adjunct in severe cases or bipolar disorder. Bupropion is not commonly used in the UK for depression. Clinical pearl: Start with SSRIs for moderate to severe depression. Reference: NICE NG222.",
+    "mnemonic": "Depression: SSRIs are the session starters!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng222",
+      "CKS": "https://cks.nice.org.uk/topics/depression/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_8",
+    "topic": "Chronic Kidney Disease",
+    "category": "all",
+    "question": "A 70-year-old man with diabetes and hypertension has a recent eGFR of 45 mL/min/1.73m² and proteinuria. According to NICE guidelines, which medication should be optimized to reduce kidney progression?",
+    "options": [
+      "Calcium channel blocker",
+      "ACE inhibitor",
+      "Thiazide diuretic",
+      "Beta-blocker",
+      "Potassium-sparing diuretic"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is ACE inhibitor. NICE NG203 (2021) recommends ACE inhibitors or ARBs as the first-line treatment to reduce proteinuria and slow the progression of chronic kidney disease in patients with diabetes and hypertension. This patient has both conditions. Calcium channel blockers do not have the same renoprotective effects. Thiazide diuretics are used for hypertension but not specifically for renal protection. Beta-blockers are primarily for cardiac indications. Potassium-sparing diuretics are avoided due to the risk of hyperkalaemia. Clinical pearl: ACE inhibitors protect kidneys in diabetes with proteinuria. Reference: NICE NG203.",
+    "mnemonic": "CKD care: ACE is the base!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng203",
+      "CKS": "https://cks.nice.org.uk/topics/chronic-kidney-disease/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277879018_9",
+    "topic": "Rheumatoid Arthritis",
+    "category": "all",
+    "question": "A 55-year-old woman presents with joint pain and stiffness in the mornings lasting over an hour. She was diagnosed with rheumatoid arthritis 2 months ago. What is the first-line disease-modifying antirheumatic drug (DMARD) for her condition?",
+    "options": [
+      "Methotrexate",
+      "Sulfasalazine",
+      "Hydroxychloroquine",
+      "Leflunomide",
+      "Infliximab"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Methotrexate. NICE NG100 (2018) recommends starting methotrexate as the first-line DMARD for rheumatoid arthritis, ideally within 3 months of diagnosis. It is effective in controlling disease activity and preventing joint damage. Sulfasalazine and hydroxychloroquine can be added if methotrexate alone is insufficient. Leflunomide is an alternative if methotrexate is not tolerated. Infliximab, a biologic, is reserved for cases refractory to conventional DMARDs. Clinical pearl: Methotrexate is the cornerstone of RA management. Reference: NICE NG100.",
+    "mnemonic": "RA treatment: Methotrexate is great!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100",
+      "CKS": "https://cks.nice.org.uk/topics/rheumatoid-arthritis/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man is diagnosed with hypertension. His clinic BP readings average 154/96 mmHg. He has no significant past medical history and no family history of cardiovascular disease. Which is the most appropriate first-line antihypertensive treatment for him?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Atenolol",
+      "Indapamide",
+      "Spironolactone"
+    ],
+    "answer": 1,
+    "explanation": "According to NICE NG136 (2023), the first-line treatment for hypertension in patients under 55 who are not of Black African or African-Caribbean family origin is an ACE inhibitor or an ARB. In this case, ramipril, an ACE inhibitor, is the appropriate choice. Amlodipine, a calcium channel blocker, is preferred in patients over 55 or of Black African or African-Caribbean descent. Atenolol, a beta-blocker, is not recommended as first-line monotherapy for hypertension. Indapamide, a thiazide-like diuretic, is typically added at step 3 of management. Spironolactone is used at step 4 for resistant hypertension when potassium levels are below 4.5 mmol/L. Remember, 'Rami for the Young' refers to using Ramipril in younger, non-Black patients. More details: https://www.nice.org.uk/guidance/ng136",
+    "mnemonic": "Rami for the Young",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with asthma presents with worsening symptoms despite regular use of her salbutamol inhaler. She reports using her inhaler more than three times a week. What is the most appropriate next step in her management according to the latest guidelines?",
+    "options": [
+      "Continue salbutamol as needed",
+      "Introduce a low-dose inhaled corticosteroid",
+      "Add a leukotriene receptor antagonist",
+      "Switch to a long-acting beta agonist",
+      "Start oral theophylline"
+    ],
+    "answer": 1,
+    "explanation": "According to NICE NG245 (2024), all adults with asthma should have a regular low-dose inhaled corticosteroid (ICS) prescribed alongside a SABA reliever from the outset. The presentation of worsening symptoms and frequent SABA use indicates the need for an ICS to control her asthma. Continuing just a SABA is no longer recommended as a complete regimen. A leukotriene receptor antagonist or a long-acting beta agonist may be considered in later steps if control is not achieved with ICS. Theophylline is rarely used due to side effects and monitoring requirements. The phrase 'ICS as the base' helps recall that inhaled corticosteroids are foundational in asthma management. More details: https://www.nice.org.uk/guidance/ng245",
+    "mnemonic": "ICS as the base",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes and established cardiovascular disease is on metformin. His HbA1c remains above target at 60 mmol/mol. What additional medication is recommended?",
+    "options": [
+      "Sulfonylurea",
+      "DPP-4 inhibitor",
+      "SGLT-2 inhibitor",
+      "Insulin",
+      "GLP-1 receptor agonist"
+    ],
+    "answer": 2,
+    "explanation": "NICE NG28 (2022) recommends adding an SGLT-2 inhibitor, such as empagliflozin or dapagliflozin, for patients with type 2 diabetes and established cardiovascular disease who are not achieving HbA1c targets on metformin alone. SGLT-2 inhibitors provide cardiovascular benefits. Sulfonylureas risk hypoglycaemia and are not preferred in this scenario. DPP-4 inhibitors do not offer the same cardiovascular benefits. Insulin is considered later when oral options are exhausted. GLP-1 receptor agonists are recommended if the patient is obese (BMI ≥35) or unable to tolerate insulin. Remember: 'SGLT-2 for the heart too' highlights the cardiovascular advantage. More details: https://www.nice.org.uk/guidance/ng28",
+    "mnemonic": "SGLT-2 for the heart too",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_3",
+    "topic": "Acute Coronary Syndrome Management",
+    "category": "all",
+    "question": "A 68-year-old woman presents with chest pain and is diagnosed with an NSTEMI. What is the recommended initial antiplatelet therapy?",
+    "options": [
+      "Aspirin alone",
+      "Clopidogrel alone",
+      "Aspirin and ticagrelor",
+      "Aspirin and clopidogrel",
+      "Aspirin and prasugrel"
+    ],
+    "answer": 2,
+    "explanation": "NICE NG185 (2020) advises that for non-ST-elevation myocardial infarction (NSTEMI), patients should receive dual antiplatelet therapy consisting of aspirin and ticagrelor. This combination offers superior outcomes compared to aspirin and clopidogrel. Aspirin alone or clopidogrel alone lacks dual pathway inhibition and is suboptimal. Prasugrel is typically reserved for patients undergoing PCI. The mnemonic 'Ticagrelor for NSTEMI's core' reminds that ticagrelor is central to NSTEMI management. More details: https://www.nice.org.uk/guidance/ng185",
+    "mnemonic": "Ticagrelor for NSTEMI's core",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_4",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 72-year-old man with a CURB-65 score of 2 is admitted with community-acquired pneumonia. What is the appropriate antibiotic regimen?",
+    "options": [
+      "Amoxicillin alone",
+      "Doxycycline alone",
+      "Amoxicillin and clarithromycin",
+      "Co-amoxiclav alone",
+      "Co-amoxiclav and clarithromycin"
+    ],
+    "answer": 2,
+    "explanation": "According to NICE CG191 (2014) and NG138 (2019), a moderate-severity community-acquired pneumonia (CURB-65 score of 2) should be treated with a combination of amoxicillin and clarithromycin. This combination covers atypical pathogens. Amoxicillin alone is insufficient for moderate severity. Doxycycline alone may be used in low-severity cases. Co-amoxiclav alone does not cover atypicals effectively, and combining it with clarithromycin is reserved for high-severity cases. Remember 'Amox and Clarithro for the Moderate Blow' to guide moderate pneumonia treatment. More details: https://www.nice.org.uk/guidance/cg191",
+    "mnemonic": "Amox and Clarithro for the Moderate Blow",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia-community-acquired"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_5",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 75-year-old man with atrial fibrillation, hypertension, and type 2 diabetes has a CHA₂DS₂-VASc score of 4. What is the recommended anticoagulation strategy?",
+    "options": [
+      "Aspirin alone",
+      "Warfarin",
+      "Rivaroxaban",
+      "Dabigatran",
+      "Apixaban"
+    ],
+    "answer": 4,
+    "explanation": "NICE NG196 (2021) recommends that patients with atrial fibrillation and a CHA₂DS₂-VASc score of 2 or more in men should be anticoagulated. DOACs, such as apixaban, are preferred over warfarin due to better safety profiles. Aspirin alone is insufficient for stroke prevention in AF. While rivaroxaban and dabigatran are alternatives, apixaban is often preferred for its minimal bleeding risk. Use 'Apixaban for AF's plan' to remember apixaban's role in AF management. More details: https://www.nice.org.uk/guidance/ng196",
+    "mnemonic": "Apixaban for AF's plan",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_6",
+    "topic": "Chronic Obstructive Pulmonary Disease",
+    "category": "all",
+    "question": "A 65-year-old man with COPD has an FEV₁ of 50% predicted and experiences frequent exacerbations. What is the most appropriate inhaler therapy?",
+    "options": [
+      "SABA alone",
+      "ICS alone",
+      "LABA and LAMA",
+      "ICS and LABA",
+      "SAMA alone"
+    ],
+    "answer": 2,
+    "explanation": "NICE NG115 (2018) advises that patients with COPD who have an FEV₁ of less than 80% and frequent exacerbations should use a dual bronchodilator therapy, such as a LABA and a LAMA. A SABA or SAMA is inadequate for frequent exacerbations. ICS alone is not recommended due to the risk of pneumonia. ICS and LABA may be used if there are frequent exacerbations with eosinophilic inflammation. 'Dual Broncho for the Blow' is a reminder for LABA and LAMA use. More details: https://www.nice.org.uk/guidance/ng115",
+    "mnemonic": "Dual Broncho for the Blow",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_7",
+    "topic": "Rheumatoid Arthritis Management",
+    "category": "all",
+    "question": "A 45-year-old woman with newly diagnosed rheumatoid arthritis is to start treatment. What is the recommended first-line DMARD?",
+    "options": [
+      "Methotrexate",
+      "Sulfasalazine",
+      "Hydroxychloroquine",
+      "Leflunomide",
+      "Etanercept"
+    ],
+    "answer": 0,
+    "explanation": "NICE NG100 (2018) recommends methotrexate as the first-line DMARD for treating rheumatoid arthritis due to its efficacy and ability to slow disease progression. Sulfasalazine and hydroxychloroquine are used in combination therapy if methotrexate alone is inadequate. Leflunomide is an alternative if methotrexate is contraindicated. Etanercept, a biologic agent, is reserved for cases where two DMARDs have failed. 'Meth for the Meth' helps recall methotrexate's primary role. More details: https://www.nice.org.uk/guidance/ng100",
+    "mnemonic": "Meth for the Meth",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100",
+      "CKS": "https://cks.nice.org.uk/topics/rheumatoid-arthritis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_8",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 25-year-old woman with newly diagnosed focal epilepsy is to start treatment. What is the recommended first-line medication?",
+    "options": [
+      "Valproate",
+      "Carbamazepine",
+      "Phenytoin",
+      "Lamotrigine",
+      "Levetiracetam"
+    ],
+    "answer": 3,
+    "explanation": "NICE NG217 (2022) advises that the first-line treatment for focal epilepsy is either lamotrigine or carbamazepine. Lamotrigine is preferred in women of childbearing potential due to teratogenic risks associated with carbamazepine. Valproate is contraindicated in women of childbearing age. Phenytoin is not first-line due to side effects. Levetiracetam is considered if first-line agents are not tolerated. 'Lamo for Ladies' assists recall for lamotrigine in women. More details: https://www.nice.org.uk/guidance/ng217",
+    "mnemonic": "Lamo for Ladies",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779277907451_9",
+    "topic": "Type 1 Diabetes Management",
+    "category": "all",
+    "question": "A 22-year-old man with type 1 diabetes is struggling to maintain his HbA1c target. What is the recommended target HbA1c for him?",
+    "options": [
+      "42 mmol/mol",
+      "48 mmol/mol",
+      "53 mmol/mol",
+      "58 mmol/mol",
+      "64 mmol/mol"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG17 (2022) recommends a target HbA1c of 48 mmol/mol (6.5%) for adults with type 1 diabetes to reduce the risk of complications while minimizing hypoglycemia. A target of 42 mmol/mol is too low and increases hypoglycemia risk. 53 mmol/mol is used in type 2 diabetes on medication. 58 mmol/mol and above are too lenient and risk complications. 'Aim for the 48 State' helps remember the target for type 1 diabetes. More details: https://www.nice.org.uk/guidance/ng17",
+    "mnemonic": "Aim for the 48 State",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng17",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-1"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man with no significant medical history presents to the GP for a routine check-up. His blood pressure is consistently measured at 152/95 mmHg. According to the latest NICE guidelines, what is the most appropriate first-line treatment for this patient?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Bisoprolol",
+      "Hydrochlorothiazide",
+      "Spironolactone"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Ramipril. According to the NICE NG136 (2023 update), ACE inhibitors or ARBs are recommended as first-line treatment for hypertension in patients under 55 years of age who are not of Black African or African-Caribbean family origin. In this case, the patient is 52 years old and Caucasian, making Ramipril, an ACE inhibitor, the appropriate choice. Amlodipine would be first-line in patients over 55 or of Black African or African-Caribbean descent. Bisoprolol is not first-line unless there are specific indications such as heart failure. Hydrochlorothiazide is not specified in the guideline; instead, thiazide-like diuretics are used at later steps. Spironolactone is used at step 4 if potassium is less than 4.5 mmol/L. Remember, ACE inhibitors are preferred in younger, non-Black patients unless contraindicated.",
+    "mnemonic": "ACE for Caucasians <55: 'ACE' inhibitors for 'A'nglo-Caucasians 'C'ertainly.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 25-year-old woman with a diagnosis of asthma presents with increased frequency of symptoms despite using a salbutamol inhaler as needed. According to NICE NG245 guidelines, what should be the next step in her management?",
+    "options": [
+      "Start a low-dose ICS",
+      "Increase salbutamol dose",
+      "Add a LABA",
+      "Prescribe montelukast",
+      "Refer to a specialist"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to start a low-dose inhaled corticosteroid (ICS). NICE NG245 (November 2024) recommends that all adults with asthma should have a regular low-dose ICS, such as beclometasone 200 mcg/day, prescribed alongside a SABA reliever from the outset. This patient has been using salbutamol alone, which is no longer recommended as a complete regimen. Increasing the dose of salbutamol or adding a LABA without an ICS is not appropriate. Montelukast is considered later if symptoms persist. Specialist referral is not necessary at this stage. It's crucial to ensure proper inhaler technique and adherence.",
+    "mnemonic": "ICS for SABA reliance: 'I'nitiate 'C'orticosteroids 'S'oon.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_2",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 68-year-old man presents to the A&E with a cough, fever, and pleuritic chest pain. His CURB-65 score is 2. According to NICE guidelines, what is the most appropriate management for this patient?",
+    "options": [
+      "Outpatient treatment with amoxicillin",
+      "Inpatient treatment with co-amoxiclav and clarithromycin",
+      "Inpatient treatment with amoxicillin alone",
+      "Outpatient treatment with clarithromycin",
+      "Observation and supportive care"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is inpatient treatment with co-amoxiclav and clarithromycin. According to NICE CG191 and NG138 guidelines, a CURB-65 score of 2 indicates moderate severity pneumonia, warranting hospital admission and dual antibiotic therapy. Co-amoxiclav and clarithromycin are commonly used for this purpose. Outpatient treatment with amoxicillin or clarithromycin alone is suitable for low severity cases (CURB-65 score 0-1). Observation without antibiotics is inappropriate for a CURB-65 score of 2. Always assess severity using CURB-65 and consider inpatient management for scores of 2 or higher.",
+    "mnemonic": "Co-Amox + Clarithro for 'C'URB-65 'C'ases needing 'C'are.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg191",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_3",
+    "topic": "Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old woman with type 2 diabetes and a history of myocardial infarction is being reviewed. Her HbA1c is 65 mmol/mol. She is currently on metformin. According to NICE NG28, what is the most appropriate next step in her treatment?",
+    "options": [
+      "Add a sulfonylurea",
+      "Add an SGLT-2 inhibitor",
+      "Switch to insulin therapy",
+      "Add a GLP-1 receptor agonist",
+      "Increase metformin dose"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add an SGLT-2 inhibitor. NICE NG28 (2022 update) recommends adding an SGLT-2 inhibitor like empagliflozin or dapagliflozin for patients with type 2 diabetes who have established cardiovascular disease, such as a history of myocardial infarction. These medications provide cardiovascular benefits in addition to glycaemic control. Sulfonylureas are not preferred due to the risk of hypoglycaemia. Insulin therapy is not indicated at this stage unless HbA1c targets remain unmet. GLP-1 receptor agonists are considered if BMI ≥35 or insulin is not tolerated. Increasing metformin is not sufficient given her cardiovascular history.",
+    "mnemonic": "SGLT-2 for 'S'tudy-backed 'G'lycaemic & 'L'ife-saving 'T'reatment.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_4",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 75-year-old woman presents with palpitations and is diagnosed with atrial fibrillation. Her CHA₂DS₂-VASc score is 3. According to NICE guidelines, what is the most appropriate management?",
+    "options": [
+      "Start aspirin",
+      "Start warfarin",
+      "Start a DOAC",
+      "Perform electrical cardioversion",
+      "Monitor without treatment"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to start a DOAC. NICE NG196 (2021) recommends anticoagulation for atrial fibrillation patients with a CHA₂DS₂-VASc score of ≥2 in men or ≥3 in women, with a preference for a direct oral anticoagulant (DOAC) over warfarin. Aspirin is not recommended for stroke prevention in atrial fibrillation. Electrical cardioversion is indicated for rhythm control in symptomatic patients but does not replace the need for anticoagulation. Monitoring without treatment is inappropriate given the high stroke risk. DOACs have fewer monitoring requirements and a better safety profile compared to warfarin.",
+    "mnemonic": "DOAC for A-Fib: 'D'irect 'O'ptional 'A'nticoagulation 'C'hoice.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_5",
+    "topic": "Heart Failure Management",
+    "category": "all",
+    "question": "A 67-year-old man with heart failure with reduced ejection fraction presents for a review. He is currently on lisinopril and bisoprolol. According to NICE NG106, what should be the next step in optimizing his therapy?",
+    "options": [
+      "Add spironolactone",
+      "Add digoxin",
+      "Switch lisinopril to losartan",
+      "Add an SGLT-2 inhibitor",
+      "Increase bisoprolol dose"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is to add an SGLT-2 inhibitor. NICE NG106 (2023 update) recommends a quadruple therapy approach for heart failure with reduced ejection fraction, which includes an ACE inhibitor or ARB, a beta-blocker, a mineralocorticoid receptor antagonist, and an SGLT-2 inhibitor. The patient is already on an ACE inhibitor (lisinopril) and a beta-blocker (bisoprolol), so adding an SGLT-2 inhibitor such as dapagliflozin is the next step. Spironolactone is part of the recommended therapy but is not the immediate next step in this scenario. Digoxin is used for symptom control, particularly in atrial fibrillation. Switching lisinopril to losartan is unnecessary unless there is an intolerance to ACE inhibitors. Increasing the bisoprolol dose should be considered only if symptoms are not controlled.",
+    "mnemonic": "Quadruple Therapy for 'Q'uality Heart 'Q'uality Life",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_6",
+    "topic": "Type 1 Diabetes",
+    "category": "all",
+    "question": "A 19-year-old male with type 1 diabetes attends the clinic for a routine review. His HbA1c is 60 mmol/mol. What is the target HbA1c according to NICE NG17 guidelines?",
+    "options": [
+      "42 mmol/mol",
+      "48 mmol/mol",
+      "53 mmol/mol",
+      "60 mmol/mol",
+      "65 mmol/mol"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 48 mmol/mol. NICE NG17 (2022 update) advises that adults with type 1 diabetes should aim for an HbA1c target of 48 mmol/mol (6.5%) to reduce the risk of complications. This target helps balance the benefits of tight glycaemic control against the risk of hypoglycaemia. An HbA1c of 60 mmol/mol indicates suboptimal control, which may increase the risk of long-term complications. An HbA1c of 42 mmol/mol is more stringent and not typically recommended for type 1 diabetes. The other values are higher than the NICE target and suggest less stringent control.",
+    "mnemonic": "Type 1 Target: 'T'ight '1' Control at 48",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng17",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-1"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_7",
+    "topic": "Stroke/TIA Management",
+    "category": "all",
+    "question": "A 68-year-old man presents with a transient episode of right-sided weakness and aphasia lasting 30 minutes. He has a carotid ultrasound showing 70% stenosis of the left internal carotid artery. According to NICE NG128, what is the most appropriate management?",
+    "options": [
+      "Start aspirin and clopidogrel",
+      "Immediate carotid endarterectomy",
+      "Continue monitoring with lifestyle changes",
+      "Start warfarin",
+      "Refer for carotid stenting"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is immediate carotid endarterectomy. NICE NG128 (2019) recommends carotid endarterectomy for patients with 50-99% carotid artery stenosis who have experienced a TIA or non-disabling stroke within the last 2 weeks. Aspirin and clopidogrel are used for initial medical management, but surgical intervention is warranted with significant stenosis. Warfarin is not indicated unless there is atrial fibrillation. Carotid stenting is considered in certain cases but endarterectomy is preferred in symptomatic patients with suitable anatomy. Early intervention reduces the risk of subsequent strokes.",
+    "mnemonic": "Endarterectomy for 'E'ffective 'E'scape from Stroke",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke-tia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_8",
+    "topic": "Obstetrics - Pre-eclampsia",
+    "category": "all",
+    "question": "A 30-year-old pregnant woman at 34 weeks of gestation presents with elevated blood pressure readings of 160/100 mmHg and proteinuria of 1+. According to NICE NG133, what is the first-line antihypertensive treatment for her condition?",
+    "options": [
+      "Methyldopa",
+      "Labetalol",
+      "Nifedipine",
+      "Hydralazine",
+      "Atenolol"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Labetalol. NICE NG133 (2019) recommends Labetalol as the first-line antihypertensive for managing blood pressure in pregnant women with pre-eclampsia. Labetalol is preferred due to its efficacy and safety profile in pregnancy. Methyldopa and Nifedipine are alternatives if Labetalol is not tolerated or contraindicated. Hydralazine is typically used intravenously for acute severe hypertension in pregnancy. Atenolol is not recommended due to potential adverse effects on fetal growth. Early management of hypertension in pre-eclampsia is crucial to prevent complications for both mother and fetus.",
+    "mnemonic": "Labetalol for 'L'owering BP in 'L'abor",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng133",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension-in-pregnancy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779295044268_9",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 28-year-old woman with focal epilepsy wishes to become pregnant. She is currently on sodium valproate. According to NICE NG217, what is the most appropriate action regarding her medication?",
+    "options": [
+      "Continue sodium valproate",
+      "Switch to lamotrigine",
+      "Switch to carbamazepine",
+      "Add folic acid supplementation",
+      "Discontinue medication"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to switch to lamotrigine. NICE NG217 (2022) advises against the use of sodium valproate in women of childbearing potential due to the high risk of teratogenicity and developmental disorders. Lamotrigine is a safer alternative with a better safety profile during pregnancy. While folic acid supplementation is vital, it does not mitigate the risks associated with valproate. Carbamazepine is another option but switching to lamotrigine is preferred in this scenario. Discontinuing medication is not advisable due to the risk of seizure recurrence.",
+    "mnemonic": "Lamotrigine for 'L'owering Teratogenic Risk",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
   }
 ]
