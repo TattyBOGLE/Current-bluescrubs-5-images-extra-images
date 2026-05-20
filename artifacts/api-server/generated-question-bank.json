@@ -6492,5 +6492,215 @@
       "CKS": "https://cks.nice.org.uk/topics/sepsis"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man with newly diagnosed hypertension attends your clinic. His blood pressure is consistently recorded at 152/94 mmHg. He has no significant medical history and is not currently on any medication. What is the most appropriate initial pharmacological management according to current NICE guidelines?",
+    "options": [
+      "ACE inhibitor",
+      "Calcium channel blocker",
+      "Thiazide-like diuretic",
+      "Beta-blocker",
+      "Alpha-blocker"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'ACE inhibitor'. According to NICE NG136 (2023 update), the first-line treatment for hypertension in patients under 55 who are not of Black African or African-Caribbean family origin is an ACE inhibitor or an angiotensin II receptor blocker (ARB). This patient fits this demographic, making an ACE inhibitor the appropriate choice. Calcium channel blockers are recommended first-line for patients over 55 or those of Black African or African-Caribbean descent. Thiazide-like diuretics are typically added at Step 3 if further control is needed. Beta-blockers and alpha-blockers are not recommended as first-line treatments for hypertension without specific indications. Mnemonic: 'ACE the race' — ACE inhibitors for under 55s Caucasians.",
+    "mnemonic": "ACE the race",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_1",
+    "topic": "Asthma Management in Adults",
+    "category": "all",
+    "question": "A 28-year-old woman with known asthma is currently on salbutamol PRN only. She reports wheezing and breathlessness twice a week and occasional night waking. According to NICE NG245, what is the most appropriate next step?",
+    "options": [
+      "Continue salbutamol alone",
+      "Switch to as-needed ICS/formoterol combination (AIR therapy)",
+      "Add a regular low-dose ICS preventer (Track 1)",
+      "Start a LABA without ICS",
+      "Prescribe oral corticosteroids"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol combination (AIR therapy).\n\nNICE NG245 (November 2024) recommends that patients on SABA-only treatment step up by switching to anti-inflammatory reliever (AIR) therapy: a single low-dose ICS/formoterol inhaler taken as needed. This replaces both the salbutamol and the need for a separate daily preventer. AIR therapy simultaneously relieves symptoms and reduces airway inflammation with each use.\n\nNote: Option C (regular low-dose ICS + SABA as needed) is also clinically acceptable under NG245 Track 1, and in an exam question that only offered this choice it would be correct. However, when AIR therapy is an option alongside regular ICS, NG245 identifies AIR therapy as the preferred approach.\n\nOption A (continue salbutamol alone) is wrong — SABA-only management is no longer acceptable under NG245 at any step.\n\nOption D (start LABA without ICS) is contraindicated — LABA monotherapy in asthma carries a risk of severe exacerbations and asthma-related death. A LABA must only be introduced on top of established ICS.\n\nOption E (oral corticosteroids) is reserved for acute severe exacerbations or short-term rescue courses, not routine step-up management.",
+    "mnemonic": "ICS for inflammation control",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old man with newly diagnosed type 2 diabetes presents for management. His BMI is 32 kg/m², and he has a family history of cardiovascular disease. According to NICE guidelines, which medication should be considered first-line for glycaemic control?",
+    "options": [
+      "Metformin",
+      "Sulfonylurea",
+      "Thiazolidinedione",
+      "Insulin",
+      "SGLT-2 inhibitor"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Metformin'. NICE NG28 (2022) recommends metformin as the first-line treatment for type 2 diabetes due to its efficacy, safety profile, and cardiovascular benefits. This patient’s BMI and family history of CVD do not alter the first-line recommendation. Sulfonylureas are considered if metformin is not tolerated. Thiazolidinediones are less favored due to side effects. Insulin is not first-line except in severe cases. SGLT-2 inhibitors are considered in addition to metformin if there is established CVD or high risk. Mnemonic: 'Metformin for metabolism'.",
+    "mnemonic": "Metformin for metabolism",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_3",
+    "topic": "Hyperthyroidism Management",
+    "category": "all",
+    "question": "A 35-year-old woman presents with palpitations, weight loss, and heat intolerance. Blood tests confirm hyperthyroidism. What is the first-line antithyroid drug in the UK according to NICE guidelines?",
+    "options": [
+      "Methimazole",
+      "Propylthiouracil",
+      "Carbimazole",
+      "Levothyroxine",
+      "Radioactive iodine"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Carbimazole'. NICE NG145 (2019) recommends carbimazole as the first-line antithyroid drug in the UK for the treatment of hyperthyroidism. Methimazole is not used in the UK; carbimazole is its pro-drug. Propylthiouracil is reserved for specific circumstances like pregnancy in the first trimester. Levothyroxine is used for hypothyroidism, not hyperthyroidism. Radioactive iodine is a definitive treatment, not initial management. Mnemonic: 'Carbimazole is key for controlling thyroid'.",
+    "mnemonic": "Carbimazole is key for controlling thyroid",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_4",
+    "topic": "Chronic Heart Failure Management",
+    "category": "all",
+    "question": "A 68-year-old man with HFrEF is being optimised on quadruple therapy. Which drug should be added if he presents with evidence of fluid overload, despite being on an ACE inhibitor, beta-blocker, MRA, and SGLT-2 inhibitor?",
+    "options": [
+      "Thiazide diuretic",
+      "Loop diuretic",
+      "Ivabradine",
+      "Digoxin",
+      "Nitrates"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Loop diuretic'. NICE NG106 (2023) advises the use of loop diuretics like furosemide for managing fluid overload in heart failure, even when the patient is on optimal heart failure medications. Thiazide diuretics are less effective for significant fluid overload. Ivabradine is considered for heart rate control if beta-blockers are insufficient. Digoxin can be used in atrial fibrillation or persistent symptoms. Nitrates are for angina management. Mnemonic: 'Furosemide for fluid'.",
+    "mnemonic": "Furosemide for fluid",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_5",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 72-year-old woman with a history of hypertension presents with atrial fibrillation. Her CHA₂DS₂-VASc score is 4. What is the most appropriate anticoagulation strategy according to current NICE guidelines?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Rivaroxaban",
+      "No anticoagulation",
+      "Dual antiplatelet therapy"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Rivaroxaban'. NICE NG196 (2021) recommends the use of DOACs like rivaroxaban for anticoagulation in atrial fibrillation with a CHA₂DS₂-VASc score of ≥2 in men or ≥3 in women. This patient’s score of 4 indicates a high stroke risk, necessitating anticoagulation. Aspirin alone is not effective. Warfarin is used if DOACs are contraindicated. No anticoagulation or dual antiplatelet therapy would not be sufficient. Mnemonic: 'Rivaroxaban for regular rhythm'.",
+    "mnemonic": "Rivaroxaban for regular rhythm",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_6",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 45-year-old man presents with fever, cough, and pleuritic chest pain. His CURB-65 score is 1. What is the recommended treatment for low-severity community-acquired pneumonia according to NICE guidelines?",
+    "options": [
+      "Amoxicillin",
+      "Clarithromycin",
+      "Co-amoxiclav",
+      "Doxycycline",
+      "Levofloxacin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Amoxicillin'. NICE NG250 (2025) recommends amoxicillin 500 mg TDS for 5 days for low-severity community-acquired pneumonia (CURB-65 score 0-1). Clarithromycin is used if there is a penicillin allergy. Co-amoxiclav is reserved for moderate to severe infections. Doxycycline is an alternative if amoxicillin is not suitable. Levofloxacin is not first-line due to resistance concerns. Mnemonic: 'Amoxicillin for mild pneumonia'.",
+    "mnemonic": "Amoxicillin for mild pneumonia",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_7",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 30-year-old man with newly diagnosed focal epilepsy is commencing treatment. Which drug should be considered first-line according to NICE guidelines?",
+    "options": [
+      "Sodium valproate",
+      "Levetiracetam",
+      "Lamotrigine",
+      "Phenytoin",
+      "Topiramate"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Lamotrigine'. NICE NG217 (2022) recommends lamotrigine or carbamazepine as first-line treatments for focal epilepsy. Sodium valproate is preferred for generalized seizures, but not focal. Levetiracetam is an alternative if lamotrigine is unsuitable. Phenytoin is not first-line due to side effects. Topiramate is used if others are intolerable. Mnemonic: 'Lamotrigine for localization'.",
+    "mnemonic": "Lamotrigine for localization",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_8",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 75-year-old woman is admitted with suspected sepsis. She has a fever, tachycardia, and hypotension. According to NICE guidelines, what is the most appropriate management step to initiate within the first hour?",
+    "options": [
+      "Oral antibiotics",
+      "Blood cultures and IV antibiotics",
+      "CT scan",
+      "Antipyretics",
+      "Bed rest"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Blood cultures and IV antibiotics'. NICE NG51 (2016) and the Surviving Sepsis Campaign recommend the 'Sepsis-6' approach, which includes taking blood cultures and administering IV antibiotics within the first hour of recognising sepsis. Oral antibiotics are not rapid enough, and CT scans are not a priority in immediate management. Antipyretics and bed rest do not address the underlying infection. Mnemonic: 'Sepsis-6 to save'.",
+    "mnemonic": "Sepsis-6 to save",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299487566_9",
+    "topic": "Acute Coronary Syndrome Management",
+    "category": "all",
+    "question": "A 58-year-old man presents with chest pain, ST elevation on ECG, and elevated cardiac enzymes. He is diagnosed with STEMI. According to NICE guidelines, what is the most appropriate immediate management?",
+    "options": [
+      "Thrombolysis",
+      "Primary PCI",
+      "IV nitrate",
+      "Beta-blocker",
+      "Aspirin only"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Primary PCI'. NICE NG185 (2020) recommends that patients with STEMI should receive primary percutaneous coronary intervention (PCI) within 120 minutes of first medical contact. Thrombolysis is considered if PCI is not available within that timeframe. IV nitrates and beta-blockers are adjuncts but not the primary intervention. Aspirin is part of the dual antiplatelet therapy but not sufficient alone. Mnemonic: 'PCI for primary care in STEMI'.",
+    "mnemonic": "PCI for primary care in STEMI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
   }
 ]
