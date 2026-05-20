@@ -110,7 +110,7 @@ CARDIOVASCULAR:
 - Lipids: NICE NG238 (2023) — Statin for primary prevention if 10-yr CVD risk ≥10% (QRISK3); atorvastatin 20 mg. Secondary prevention: atorvastatin 80 mg. Target: >40% reduction in LDL-C.
 
 RESPIRATORY:
-- Asthma: NICE NG245 (November 2024) — REPLACES NG80 and old BTS/SIGN step ladder. NEW approach: all adults with asthma should have a regular low-dose ICS (e.g. beclometasone 200 mcg/day) prescribed alongside a SABA reliever from the outset. SABA-only as a complete regimen is NO LONGER recommended. Step 2: low-dose ICS + LABA. Step 3: increase ICS dose or add LTRA. Do NOT write options saying "SABA alone is adequate first-line".
+- Asthma: NICE NG245 (November 2024) — REPLACES NG80 and old BTS/SIGN step ladder. FUNDAMENTALLY DIFFERENT from previous guidelines. SABA monotherapy is NO LONGER recommended at any step. The new AIR/MART pathway: Step 1 (newly diagnosed OR currently SABA-only): switch to as-needed low-dose ICS/formoterol combination inhaler (AIR therapy — Anti-Inflammatory Reliever). Do NOT add a separate ICS to a SABA — that is the OLD 2019 approach and is WRONG. Step 2 (uncontrolled on as-needed AIR): low-dose MART (ICS/formoterol used both regularly AND as reliever). Step 3: moderate-dose MART. Step 4: add LTRA then LAMA before specialist referral. CRITICAL for question writing: "Add low-dose ICS to SABA", "add LABA to ICS", and "continue SABA + start regular ICS" are ALL old-pathway distractors — never mark these as correct. For every SABA-only or newly diagnosed adult asthma scenario, the correct answer is AIR therapy. Children aged 5–11 follow a different path (low-dose ICS BD + SABA first). Always cite NG245 (2024), never NG80 or BTS/SIGN 2019.
 - COPD: NICE NG115 (2018) — GOLD staging by FEV₁. Inhaler therapy: SABA/SAMA for mild; LABA or LAMA for moderate+; dual LABA+LAMA or ICS+LABA if frequent exacerbations. Pulmonary rehab if MRC ≥3. Long-term oxygen if PaO₂ <7.3 kPa.
 - Pneumonia (community-acquired): NICE NG250 (2025, replaces CG191) — CURB-65 to guide admission (score ≥2 = admit). Low severity: amoxicillin 500 mg TDS 5 days. Moderate: amoxicillin + clarithromycin. High severity: co-amoxiclav + clarithromycin IV.
 - Pulmonary Embolism: NICE NG158 — see VTE above. Massive PE with haemodynamic compromise: thrombolysis (alteplase) or surgical embolectomy.
@@ -1237,7 +1237,7 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
       const prompt = `You are a UK PLAB 1 medical examiner writing model answer explanations for international medical graduates. Reference UK guidance (NICE, CKS, BNF, GMC) where relevant.
 
 CURRENT UK GUIDELINE VERSIONS — always cite these, never superseded ones:
-• Asthma: NICE NG245 (2024) — NOT NG80. Regular low-dose ICS from diagnosis alongside SABA reliever.
+• Asthma: NICE NG245 (2024) — NOT NG80. AIR/MART pathway. Step 1 (SABA-only or new diagnosis): switch to as-needed low-dose ICS/formoterol (AIR therapy). "Add ICS to SABA" = OLD 2019 approach = WRONG. Step 2: low-dose MART. Step 3: moderate-dose MART. Step 4: LTRA/LAMA before referral.
 • Hypertension: NICE NG136 (2023 update) — ACE-i/ARB if <55/non-Black; CCB if >55/Black; add thiazide step 3.
 • AF: NICE NG196 (2021) — DOAC preferred. Rate control first-line for most.
 • ACS/STEMI: NICE NG185 (2020) — Primary PCI within 120 min; dual antiplatelet (aspirin + ticagrelor).
@@ -2617,17 +2617,17 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
         id: "resp1",
         topic: "Asthma Management",
         category: "respiratory", 
-        question: "A 28-year-old with asthma uses salbutamol 2-3 times per week and experiences night-time symptoms twice a month. What is the next step in management?",
+        question: "A 28-year-old with asthma uses salbutamol 2-3 times per week and experiences night-time symptoms twice a month. What is the next step in management according to the latest NICE guidelines?",
         options: {
-          A: "Continue current treatment",
-          B: "Add low-dose inhaled corticosteroid",
-          C: "Add LABA",
-          D: "Increase salbutamol dose",
+          A: "Continue current salbutamol treatment",
+          B: "Switch to as-needed low-dose ICS/formoterol combination inhaler (AIR therapy)",
+          C: "Add a separate low-dose ICS inhaler alongside the salbutamol",
+          D: "Add a long-acting beta-agonist (LABA) to the existing ICS",
           E: "Add oral prednisolone"
         },
         answer: "B",
-        explanation: "NICE NG245 (2024) — the current UK asthma guideline — recommends starting a regular low-dose inhaled corticosteroid (ICS) such as beclometasone when a patient uses their SABA reliever more than twice a week, has any night-time symptoms, or has had an exacerbation in the past two years. Adding ICS is the correct next step; LABA should only be added if symptoms remain uncontrolled on low-dose ICS alone. Increasing SABA dose or adding oral prednisolone is not appropriate for step-up in chronic management. Note: NG245 superseded the old BTS/SIGN step ladder (NG80) in November 2024 and now recommends ICS be prescribed alongside the SABA reliever from the outset for newly diagnosed adults.",
-        mnemonic: "NICE NG245 Asthma ladder: SABA reliever + ICS → add LABA → increase ICS → add-on therapies (LTRA/theophylline)",
+        explanation: "NICE NG245 (November 2024) replaced the old BTS/SIGN stepwise approach and fundamentally changed UK asthma management. For any adult or adolescent using a SABA alone (or using it more than twice per week), the correct step is to switch to as-needed low-dose ICS/formoterol — known as AIR (Anti-Inflammatory Reliever) therapy. The patient uses a single combination inhaler only when symptoms occur, providing both bronchodilation and anti-inflammatory cover without the need for a separate regular ICS.\n\nOption C ('add a separate low-dose ICS to salbutamol') reflects the OLD BTS/SIGN 2019 stepwise approach and is explicitly superseded by NG245 — do not mark this as correct. Option D (adding a LABA) is a step-up option for patients already uncontrolled on AIR therapy (Step 2: low-dose MART), not a first step. Option E (oral prednisolone) is only appropriate for acute exacerbations, not chronic step-up. Continuing salbutamol alone is no longer recommended at any step under NG245.",
+        mnemonic: "NG245 AIR pathway: SABA-only → switch to as-needed ICS/formoterol (AIR). Never just 'add an ICS'. Add = OLD, Switch = NEW.",
         links: {
           primary: {
             title: "NICE NG245 — Asthma (2024)",
