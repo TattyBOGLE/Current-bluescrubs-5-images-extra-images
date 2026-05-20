@@ -3721,6 +3721,9 @@ export default function PLAB1New() {
                 const l = buildDynamicLink('GMC Good Medical Practice', qTopic);
                 if (l) specialtyChips.push({ label: l.label, url: l.url });
               }
+              // BNF is always relevant as a core PLAB 1 drug reference
+              const bnfLink = buildDynamicLink('BNF', qTopic);
+              if (bnfLink) specialtyChips.push({ label: bnfLink.label, url: bnfLink.url });
 
               // Fallback official refs (only used when getNICEReferencesForQuestion returns nothing)
               const officialRefs = niceRefs.length === 0 && currentQuestion.references
