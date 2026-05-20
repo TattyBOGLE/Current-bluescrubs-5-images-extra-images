@@ -119,47 +119,44 @@ const ESC_GUIDELINE_MAP: Record<string, string> = {
   'chronic-heart-failure': 'Acute-and-Chronic-Heart-Failure',
   'atrial-fibrillation': 'Atrial-Fibrillation-Guidelines',
   'af': 'Atrial-Fibrillation-Guidelines',
-  'acute-coronary-syndromes': 'Acute-Coronary-Syndromes-STEMI-Guidelines',
-  'stemi': 'Acute-Coronary-Syndromes-STEMI-Guidelines',
-  'myocardial-infarction': 'Acute-Coronary-Syndromes-STEMI-Guidelines',
-  'dyslipidaemia': 'ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias',
-  'lipids': 'ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias',
-  'lipid': 'ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias',
-  'cholesterol': 'ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias',
-  'hypertension': 'ESC-ESH-Guidelines-for-the-management-of-arterial-hypertension',
-  'endocarditis': 'Infective-Endocarditis-Guidelines',
-  'pericarditis': 'Pericardial-Diseases-Guidelines',
-  'pericardial-disease': 'Pericardial-Diseases-Guidelines',
-  'cardiomyopathy': 'Cardiomyopathy-2023',
-  'valvular': 'Valvular-Heart-Disease',
-  'ventricular-arrhythmias': 'Ventricular-Arrhythmias',
-  'stroke': 'Stroke-and-Transient-Ischaemic-Attack',
-  'tia': 'Stroke-and-Transient-Ischaemic-Attack',
-  'diabetes': 'Diabetes,-Pre-Diabetes,-and-Cardiovascular-Disease-Guidelines',
+  'acute-coronary-syndromes': 'acute-coronary-syndromes-acs-guidelines',
+  'stemi': 'acute-coronary-syndromes-acs-guidelines',
+  'myocardial-infarction': 'acute-coronary-syndromes-acs-guidelines',
+  'nstemi': 'acute-coronary-syndromes-acs-guidelines',
+  'dyslipidaemia': 'dyslipidaemias',
+  'dyslipidaemias': 'dyslipidaemias',
+  'lipids': 'dyslipidaemias',
+  'lipid': 'dyslipidaemias',
+  'cholesterol': 'dyslipidaemias',
+  'hypertension': 'elevated-blood-pressure-and-hypertension',
+  'endocarditis': 'endocarditis-guidelines',
+  'pericarditis': 'myocarditis-and-pericarditis',
+  'pericardial-disease': 'myocarditis-and-pericarditis',
+  'myocarditis': 'myocarditis-and-pericarditis',
+  'cardiomyopathy': 'cardiomyopathy-guidelines',
+  'valvular': 'valvular-heart-disease',
+  'ventricular-arrhythmias': 'ventricular-arrhythmias-and-the-prevention-of-sudden-cardiac-death',
+  'diabetes': 'cvd-and-diabetes-guidelines',
 };
 
-// BTS guideline slugs — base: https://www.brit-thoracic.org.uk/quality-improvement/guidelines/{slug}/
+// BTS guideline slugs — base: https://www.brit-thoracic.org.uk/clinical-resources/guidelines/{slug}/
 const BTS_GUIDELINE_MAP: Record<string, string> = {
-  'asthma': 'asthma',
-  'copd': 'copd',
-  'chronic-obstructive-pulmonary-disease': 'copd',
-  'pneumonia': 'pneumonia',
-  'community-acquired-pneumonia': 'pneumonia',
-  'cap': 'pneumonia',
-  'bronchiectasis': 'bronchiectasis',
-  'ild': 'interstitial-lung-disease',
-  'interstitial-lung-disease': 'interstitial-lung-disease',
-  'pulmonary-fibrosis': 'interstitial-lung-disease',
+  'asthma': 'asthma-chronic',
+  'asthma-chronic': 'asthma-chronic',
+  'asthma-severe': 'asthma-severe',
+  'pneumonia': 'pneumonia-adults',
+  'community-acquired-pneumonia': 'pneumonia-adults',
+  'cap': 'pneumonia-adults',
+  'hospital-acquired-pneumonia': 'pneumonia-adults',
+  'bronchiectasis': 'bronchiectasis-in-adults',
+  'non-cf-bronchiectasis': 'bronchiectasis-in-adults',
   'pe': 'pulmonary-embolism',
   'pulmonary-embolism': 'pulmonary-embolism',
-  'lung-cancer': 'lung-cancer',
   'pleural-disease': 'pleural-disease',
   'pleural-effusion': 'pleural-disease',
-  'pneumothorax': 'spontaneous-pneumothorax',
-  'sleep': 'sleep-disordered-breathing',
-  'sleep-apnoea': 'sleep-disordered-breathing',
-  'oxygen': 'oxygen',
-  'smoking': 'smoking-cessation',
+  'oxygen': 'emergency-oxygen',
+  'smoking': 'tobacco-dependency',
+  'smoking-cessation': 'tobacco-dependency',
 };
 
 // BSG condition → category URL path
@@ -190,22 +187,19 @@ const BSG_GUIDELINE_MAP: Record<string, string> = {
 
 // RCOG green-top guideline URLs for the most common PLAB 2 / obstetrics topics
 const RCOG_GUIDELINE_MAP: Record<string, string> = {
-  'pre-eclampsia': 'hypertension-in-pregnancy-green-top-guideline-no-10a',
-  'eclampsia': 'hypertension-in-pregnancy-green-top-guideline-no-10a',
-  'hypertension-in-pregnancy': 'hypertension-in-pregnancy-green-top-guideline-no-10a',
-  'vte': 'the-acute-management-of-thrombosis-and-embolism-during-pregnancy-and-the-puerperium-green-top-guideline-no-37b',
-  'dvt': 'the-acute-management-of-thrombosis-and-embolism-during-pregnancy-and-the-puerperium-green-top-guideline-no-37b',
-  'thromboembolism': 'the-acute-management-of-thrombosis-and-embolism-during-pregnancy-and-the-puerperium-green-top-guideline-no-37b',
+  'vte': 'thrombosis-and-embolism-during-pregnancy-and-the-puerperium-acute-management-green-top-guideline-no-37b',
+  'dvt': 'thrombosis-and-embolism-during-pregnancy-and-the-puerperium-acute-management-green-top-guideline-no-37b',
+  'thromboembolism': 'thrombosis-and-embolism-during-pregnancy-and-the-puerperium-acute-management-green-top-guideline-no-37b',
   'postpartum-haemorrhage': 'prevention-and-management-of-postpartum-haemorrhage-green-top-guideline-no-52',
   'pph': 'prevention-and-management-of-postpartum-haemorrhage-green-top-guideline-no-52',
-  'ectopic': 'diagnosis-and-management-of-ectopic-pregnancy',
-  'ectopic-pregnancy': 'diagnosis-and-management-of-ectopic-pregnancy',
-  'miscarriage': 'the-management-of-early-pregnancy-loss-green-top-guideline-no-25',
-  'early-pregnancy-loss': 'the-management-of-early-pregnancy-loss-green-top-guideline-no-25',
-  'preterm-labour': 'tocolytic-drugs-for-women-in-preterm-labour-green-top-guideline-no-1b',
+  'ectopic': 'diagnosis-and-management-of-ectopic-pregnancy-green-top-guideline-no-21',
+  'ectopic-pregnancy': 'diagnosis-and-management-of-ectopic-pregnancy-green-top-guideline-no-21',
+  'miscarriage': 'early-pregnancy-loss-management-green-top-guideline-no-25',
+  'early-pregnancy-loss': 'early-pregnancy-loss-management-green-top-guideline-no-25',
+  'preterm-labour': 'preterm-labour-tocolytic-drugs-green-top-guideline-no-1b',
   'shoulder-dystocia': 'shoulder-dystocia-green-top-guideline-no-42',
   'cord-prolapse': 'umbilical-cord-prolapse-green-top-guideline-no-50',
-  'sepsis': 'bacterial-sepsis-in-pregnancy-green-top-guideline-no-64a',
+  'sepsis': 'bacterial-sepsis-following-pregnancy-green-top-guideline-no-64b',
 };
 
 // BNF treatment summary slugs for common conditions
@@ -383,13 +377,13 @@ function toBNFUrl(topic: string): string | null {
 function toESCUrl(topic: string): string | null {
   const base = toConditionSlug(topic);
   const slug = ESC_GUIDELINE_MAP[base];
-  return slug ? `https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/${slug}` : null;
+  return slug ? `https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/${slug}/` : null;
 }
 
 function toBTSUrl(topic: string): string | null {
   const base = toConditionSlug(topic);
   const slug = BTS_GUIDELINE_MAP[base];
-  return slug ? `https://www.brit-thoracic.org.uk/quality-improvement/guidelines/${slug}/` : null;
+  return slug ? `https://www.brit-thoracic.org.uk/clinical-resources/guidelines/${slug}/` : null;
 }
 
 function toBSGUrl(topic: string): string | null {
@@ -466,22 +460,22 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
     const specific = hasT ? toESCUrl(rawTopic) : null;
     if (specific) return { url: specific, label: hasT ? `ESC — ${rawTopic}` : 'ESC Clinical Practice Guidelines' };
     // keyword fallback when topic slug has no match
-    if (/atrial fibrillation|\bAF\b/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Atrial-Fibrillation-Guidelines', label: 'ESC — Atrial Fibrillation' };
-    if (/STEMI|acute coronary|myocardial infarction|\bMI\b/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Acute-Coronary-Syndromes-STEMI-Guidelines', label: 'ESC — ACS / STEMI' };
-    if (/dyslipidaemia|lipid|cholesterol/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias', label: 'ESC — Dyslipidaemia' };
-    if (/heart failure/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Acute-and-Chronic-Heart-Failure', label: 'ESC — Heart Failure' };
-    return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines', label: hasT ? `ESC — ${rawTopic}` : 'ESC Clinical Practice Guidelines' };
+    if (/atrial fibrillation|\bAF\b/i.test(text)) return { url: 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/atrial-fibrillation/', label: 'ESC — Atrial Fibrillation' };
+    if (/STEMI|acute coronary|myocardial infarction|\bMI\b/i.test(text)) return { url: 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-coronary-syndromes-acs-guidelines/', label: 'ESC — ACS / STEMI' };
+    if (/dyslipidaemia|lipid|cholesterol/i.test(text)) return { url: 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/dyslipidaemias/', label: 'ESC — Dyslipidaemia' };
+    if (/heart failure/i.test(text)) return { url: 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-and-chronic-heart-failure/', label: 'ESC — Heart Failure' };
+    return { url: 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/', label: hasT ? `ESC — ${rawTopic}` : 'ESC Clinical Practice Guidelines' };
   }
   if (/\bBTS\b|British Thoracic Society/i.test(text)) {
     const specific = hasT ? toBTSUrl(rawTopic) : null;
     if (specific) return { url: specific, label: hasT ? `BTS — ${rawTopic}` : 'BTS Guidelines' };
-    if (/asthma/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/asthma/', label: 'BTS — Asthma' };
-    if (/COPD|obstructive/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/copd/', label: 'BTS — COPD' };
-    if (/pneumonia|\bCAP\b/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/pneumonia/', label: 'BTS — Pneumonia' };
-    if (/bronchiectasis/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/bronchiectasis/', label: 'BTS — Bronchiectasis' };
-    if (/pleural|effusion/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/pleural-disease/', label: 'BTS — Pleural Disease' };
-    if (/pneumothorax/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/spontaneous-pneumothorax/', label: 'BTS — Pneumothorax' };
-    return { url: 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/', label: hasT ? `BTS — ${rawTopic}` : 'BTS Guidelines' };
+    if (/asthma/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/asthma-chronic/', label: 'BTS — Asthma' };
+    if (/COPD|obstructive/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/', label: 'BTS — COPD Guidelines' };
+    if (/pneumonia|\bCAP\b/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/pneumonia-adults/', label: 'BTS — Pneumonia' };
+    if (/bronchiectasis/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/bronchiectasis-in-adults/', label: 'BTS — Bronchiectasis' };
+    if (/pleural|effusion/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/pleural-disease/', label: 'BTS — Pleural Disease' };
+    if (/pneumothorax/i.test(text)) return { url: 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/', label: 'BTS — Guidelines' };
+    return { url: 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/', label: hasT ? `BTS — ${rawTopic}` : 'BTS Guidelines' };
   }
   if (/\bBSG\b|British Society of Gastroenterology/i.test(text)) {
     const specific = hasT ? toBSGUrl(rawTopic) : null;
@@ -497,12 +491,12 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   if (/\bRCOG\b|Royal College of Obstetricians/i.test(text)) {
     const specific = hasT ? toRCOGUrl(rawTopic) : null;
     if (specific) return { url: specific, label: hasT ? `RCOG — ${rawTopic}` : 'RCOG Green-top Guidelines' };
-    if (/pre.?eclampsia|hypertension in pregnancy/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/hypertension-in-pregnancy-green-top-guideline-no-10a/', label: 'RCOG — Hypertension in Pregnancy' };
-    if (/VTE|thromboembolism|\bDVT\b|pulmonary embolism/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/the-acute-management-of-thrombosis-and-embolism-during-pregnancy-and-the-puerperium-green-top-guideline-no-37b/', label: 'RCOG — VTE in Pregnancy' };
+    if (/pre.?eclampsia|hypertension in pregnancy/i.test(text)) return { url: 'https://www.nice.org.uk/guidance/ng133', label: 'NICE NG133 — Hypertension in Pregnancy' };
+    if (/VTE|thromboembolism|\bDVT\b|pulmonary embolism/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/thrombosis-and-embolism-during-pregnancy-and-the-puerperium-acute-management-green-top-guideline-no-37b/', label: 'RCOG — VTE in Pregnancy' };
     if (/postpartum|PPH|haemorrhage/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/prevention-and-management-of-postpartum-haemorrhage-green-top-guideline-no-52/', label: 'RCOG — Postpartum Haemorrhage' };
-    if (/ectopic/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/diagnosis-and-management-of-ectopic-pregnancy/', label: 'RCOG — Ectopic Pregnancy' };
-    if (/miscarriage|early pregnancy loss/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/the-management-of-early-pregnancy-loss-green-top-guideline-no-25/', label: 'RCOG — Miscarriage' };
-    if (/sepsis/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/bacterial-sepsis-in-pregnancy-green-top-guideline-no-64a/', label: 'RCOG — Sepsis in Pregnancy' };
+    if (/ectopic/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/diagnosis-and-management-of-ectopic-pregnancy-green-top-guideline-no-21/', label: 'RCOG — Ectopic Pregnancy' };
+    if (/miscarriage|early pregnancy loss/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/early-pregnancy-loss-management-green-top-guideline-no-25/', label: 'RCOG — Miscarriage' };
+    if (/sepsis/i.test(text)) return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/bacterial-sepsis-following-pregnancy-green-top-guideline-no-64b/', label: 'RCOG — Sepsis in Pregnancy' };
     return { url: 'https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/', label: hasT ? `RCOG — ${rawTopic}` : 'RCOG Green-top Guidelines' };
   }
   if (/\bADA\b|American Diabetes Association/i.test(text)) {
@@ -3064,7 +3058,7 @@ export default function PLAB1New() {
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            window.open(currentQuestion.esc_guidance.esc_url || 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines', '_blank');
+                            window.open(currentQuestion.esc_guidance.esc_url || 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/', '_blank');
                           }}
                           className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                         >
@@ -3259,7 +3253,7 @@ export default function PLAB1New() {
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            window.open(currentQuestion.bts_guidance.bts_url || 'https://www.brit-thoracic.org.uk/quality-improvement/guidelines/', '_blank');
+                            window.open(currentQuestion.bts_guidance.bts_url || 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/', '_blank');
                           }}
                           className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                         >
