@@ -8812,5 +8812,215 @@
       "CKS": "https://cks.nice.org.uk/topics/meningitis"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 50-year-old Caucasian man presents for a routine check-up. He has no significant past medical history and is not on any medication. His blood pressure is measured as 150/95 mmHg on two separate occasions. What is the most appropriate first-line treatment according to UK guidelines?",
+    "options": [
+      "Amlodipine",
+      "Lisinopril",
+      "Thiazide-like diuretic",
+      "Beta-blocker",
+      "Lifestyle changes only"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Lisinopril. According to the NICE NG136 (2023 update) guidelines, for patients under 55 years old who are not Black, an ACE inhibitor such as Lisinopril is recommended as first-line treatment for hypertension. This patient's age and ethnicity align with the guidelines indicating an ACE inhibitor. Amlodipine would be preferred if the patient were over 55 or Black. Thiazide-like diuretics and beta-blockers are not first-line options for this demographic. Lifestyle changes are always advised, but pharmacological treatment is necessary given the elevated blood pressure readings. Remember: 'Younger than 55, ACE-i thrives.'",
+    "mnemonic": "Younger than 55, ACE-i thrives.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_1",
+    "topic": "Asthma Management in Adults",
+    "category": "all",
+    "question": "A 30-year-old woman with newly diagnosed asthma currently uses a salbutamol inhaler as needed. According to the latest NICE guidelines, what is the most appropriate change to her treatment?",
+    "options": [
+      "Add low-dose ICS daily",
+      "Continue salbutamol and add ICS",
+      "Switch to as-needed low-dose ICS/formoterol",
+      "Add a LABA to her current regimen",
+      "No change needed"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to switch to as-needed low-dose ICS/formoterol. NICE NG245 (2024) guidelines state that SABA monotherapy is no longer recommended. Instead, newly diagnosed asthma should be managed with an Anti-Inflammatory Reliever (AIR) therapy, which is a combination of low-dose ICS and formoterol used as needed. Adding a LABA or continuing only with salbutamol would not address the inflammation. Regular low-dose ICS is an old approach and not as effective at preventing exacerbations as the ICS/formoterol strategy. 'ICS/formoterol for all' in new asthma fits all.",
+    "mnemonic": "ICS/formoterol for all in new asthma fits all.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_2",
+    "topic": "Type 2 Diabetes Initial Management",
+    "category": "all",
+    "question": "A 58-year-old man with a new diagnosis of type 2 diabetes has an HbA1c of 52 mmol/mol. He is overweight and has no other significant medical history or complications. According to NICE guidelines, what is the most appropriate initial treatment?",
+    "options": [
+      "Gliclazide",
+      "Empagliflozin",
+      "Metformin",
+      "Insulin",
+      "Lifestyle modification only"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Metformin. NICE NG28 (2022 update) recommends Metformin as the first-line treatment for type 2 diabetes, especially in overweight patients, due to its effectiveness in controlling blood glucose levels and its favorable effect on weight. Empagliflozin is added if there's established CVD or high risk, which this patient does not have. Gliclazide, an insulin secretagogue, is not first-line due to hypoglycemia risk. Insulin is reserved for more severe cases or when oral agents fail. Lifestyle modifications are important but insufficient alone at this HbA1c level. 'Metformin first, unless contraindicated, is the golden standard.'",
+    "mnemonic": "Metformin first, unless contraindicated, is the golden standard.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_3",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 65-year-old man with a history of hypertension presents with chest pain radiating to his left arm and shortness of breath. ECG shows ST-segment elevation in leads II, III, and aVF. What is the most appropriate immediate management step?",
+    "options": [
+      "Thrombolysis",
+      "Primary PCI",
+      "Aspirin only",
+      "Admit for observation",
+      "Medical therapy with beta-blockers"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Primary PCI. According to NICE NG185 (2020), in the case of ST-Elevation Myocardial Infarction (STEMI), primary PCI is the preferred treatment if it can be performed within 120 minutes of first medical contact. This patient presents with classic symptoms and ECG changes of an inferior STEMI, making immediate PCI the best option to restore coronary perfusion. Thrombolysis is used if PCI is unavailable within this timeframe. Aspirin is part of the therapy but not adequate alone. Observation and medical therapy without intervention risk worsening myocardial damage. 'STEMI? Do the PCI!'",
+    "mnemonic": "STEMI? Do the PCI!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_4",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 45-year-old man presents with a 3-day history of fever, productive cough, and pleuritic chest pain. His respiratory rate is 22/min, blood pressure is 115/70 mmHg, and he has a CURB-65 score of 1. What is the most appropriate antibiotic treatment?",
+    "options": [
+      "Amoxicillin",
+      "Co-amoxiclav",
+      "Clarithromycin",
+      "Doxycycline",
+      "Flucloxacillin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Amoxicillin. NICE NG250 (2025) guidelines recommend amoxicillin 500 mg TDS for 5 days as the first-line antibiotic for low-severity community-acquired pneumonia, defined by a CURB-65 score of 0-1. This patient's score and clinical presentation align with low-severity criteria. Co-amoxiclav is reserved for higher severity or specific pathogens. Clarithromycin or doxycycline could be alternatives if the patient has a penicillin allergy. Flucloxacillin is not suitable as it targets different pathogens primarily. 'Amoxicillin for simple pneumonia keeps things clear and clean.'",
+    "mnemonic": "Amoxicillin for simple pneumonia keeps things clear and clean.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_5",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 70-year-old woman with a history of hypertension and diabetes presents with palpitations. Her ECG shows atrial fibrillation with a ventricular rate of 130 bpm. What is the most appropriate initial management to control her heart rate?",
+    "options": [
+      "Digoxin",
+      "Amiodarone",
+      "Diltiazem",
+      "Warfarin",
+      "Electrical cardioversion"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Diltiazem. NICE NG196 (2021) guidelines recommend rate control as the initial management for atrial fibrillation, with a beta-blocker or a rate-limiting calcium channel blocker like Diltiazem. This patient’s rapid ventricular response necessitates immediate rate control. Digoxin is less effective as monotherapy in active patients. Amiodarone is typically reserved for rhythm control in specific cases. Warfarin is for anticoagulation, not immediate rate control. Electrical cardioversion is indicated for rhythm control after or alongside rate control, especially if the patient is symptomatic. 'For rate, calcium channel or beta-blocker; keep the rhythm shocker.'",
+    "mnemonic": "For rate, calcium channel or beta-blocker; keep the rhythm shocker.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_6",
+    "topic": "Chronic Obstructive Pulmonary Disease",
+    "category": "all",
+    "question": "A 68-year-old man with COPD has a post-bronchodilator FEV1 of 45% predicted and reports increasing breathlessness. What is the most appropriate next step in managing his condition?",
+    "options": [
+      "Add a SABA",
+      "Start a LAMA",
+      "Start inhaled corticosteroids",
+      "Refer for lung volume reduction surgery",
+      "Prescribe oral theophylline"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to start a LAMA. According to NICE NG115 (2018), for patients with moderate to severe COPD (FEV1 <50% predicted) and increasing symptoms, long-acting bronchodilator therapy is recommended. A LAMA (Long-Acting Muscarinic Antagonist) is preferred for improving lung function and reducing exacerbations. SABAs are for immediate relief, not regular control. Inhaled corticosteroids are considered for frequent exacerbations, usually in combination therapies. Lung volume reduction surgery is for very severe, specific cases. Theophylline is not first-line due to side effects and interactions. 'LAMA to lead; long-term breathe indeed.'",
+    "mnemonic": "LAMA to lead; long-term breathe indeed.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_7",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 60-year-old woman is brought to the emergency department with suspected sepsis. She is febrile, tachycardic, and hypotensive. What is the most appropriate immediate management step?",
+    "options": [
+      "Start broad-spectrum antibiotics",
+      "Administer IV fluids",
+      "Obtain blood cultures",
+      "Administer vasopressors",
+      "Conduct a CT scan"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to administer IV fluids. The Surviving Sepsis Campaign recommends the Sepsis-6 within the first hour: give IV fluids, take blood cultures, and start broad-spectrum antibiotics. In this scenario, fluid resuscitation is crucial to stabilize the patient’s hemodynamics due to hypotension. While blood cultures and antibiotics are also part of the Sepsis-6, immediate fluid administration addresses the critical circulatory compromise. Vasopressors follow if fluids are insufficient. CT scans are diagnostic, not immediate management. 'For sepsis, fluids flow first to fight the foe.'",
+    "mnemonic": "For sepsis, fluids flow first to fight the foe.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_8",
+    "topic": "Acute Heart Failure Management",
+    "category": "all",
+    "question": "A 72-year-old man with known heart failure presents with worsening dyspnoea and peripheral edema. His blood pressure is 150/85 mmHg, and his heart rate is 96 bpm. What is the most appropriate initial management?",
+    "options": [
+      "Increase beta-blocker dose",
+      "Administer loop diuretic IV",
+      "Start an ARNI",
+      "Perform urgent echocardiogram",
+      "Begin digoxin therapy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to administer a loop diuretic IV. NICE NG106 (2018, updated 2023) specifies that in acute heart failure with fluid overload, the priority is to relieve congestion. IV loop diuretics like furosemide rapidly reduce fluid overload and improve symptoms. Increasing beta-blockers or starting ARNI addresses long-term management, not acute decompensation. Urgent echocardiograms and digoxin do not address immediate fluid overload. 'For acute heart, loop diuretics play their part.'",
+    "mnemonic": "For acute heart, loop diuretics play their part.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779311293014_9",
+    "topic": "Anticoagulation in Stroke Prevention",
+    "category": "all",
+    "question": "A 75-year-old man with atrial fibrillation and a CHA₂DS₂-VASc score of 3 is being evaluated for stroke prevention. What is the most appropriate medication to initiate?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Apixaban",
+      "Clopidogrel",
+      "Dabigatran"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Apixaban. NICE NG196 (2021) advises using a DOAC, such as Apixaban, for stroke prevention in patients with atrial fibrillation and a CHA₂DS₂-VASc score of 2 or more in men (or 3 in women). Warfarin is less preferred due to monitoring requirements and interactions. Aspirin and clopidogrel are inadequate for stroke prevention in AF. Dabigatran is another DOAC option, but Apixaban is often favored for its safety profile. 'Score high in AF? Apixaban is the staff.'",
+    "mnemonic": "Score high in AF? Apixaban is the staff.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
   }
 ]
