@@ -2871,18 +2871,12 @@ export default function PLAB1New() {
                   const explanation = typeof rawExplanation === 'object' && rawExplanation !== null
                     ? Object.entries(rawExplanation).map(([k, v]) => `${k}: ${v}`).join('. ')
                     : (rawExplanation || '');
-                  const sentences = explanation.split('.').filter((s: string) => s.trim().length > 10);
+                  const paragraphs = explanation.split(/\n\n+/).filter((s: string) => s.trim().length > 0);
                   return (
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-900 mb-3">Explanation:</h4>
-                      <ul className="space-y-2 ml-4">
-                        {sentences.map((sentence: string, index: number) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-blue-600 mt-1">•</span>
-                            <span className="text-base leading-relaxed">{sentence.trim()}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {paragraphs.map((para: string, index: number) => (
+                        <p key={index} className="text-base leading-relaxed text-gray-800">{para.trim()}</p>
+                      ))}
                     </div>
                   );
                 })()
