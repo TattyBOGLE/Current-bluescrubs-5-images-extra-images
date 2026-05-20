@@ -9442,5 +9442,215 @@
       "CKS": "https://cks.nice.org.uk/topics/stemi/"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man presents to the GP for a routine check-up. His blood pressure is recorded at 152/94 mmHg. He has no significant past medical history and is not currently on any medication. What is the most appropriate initial management?",
+    "options": [
+      "Start an ACE inhibitor",
+      "Start a Calcium Channel Blocker",
+      "Lifestyle modification only",
+      "Start a Thiazide-like diuretic",
+      "Reassess in 6 months"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to start an ACE inhibitor. According to NICE NG136 (2023 update), for patients under 55 who are not of Black African or African-Caribbean family origin, an ACE inhibitor like ramipril is recommended as first-line treatment. This patient's blood pressure is in the hypertensive range, necessitating pharmacological intervention beyond lifestyle modifications alone. \n\nStarting a Calcium Channel Blocker would be more appropriate for those over 55 or of Black African or African-Caribbean family origin. Lifestyle modification is crucial but insufficient alone at this stage. A Thiazide-like diuretic is typically added at step 3. Reassessing in 6 months without intervention is inappropriate given the current blood pressure. Remember: ACE inhibitors are the cornerstone for younger, non-Black patients.",
+    "mnemonic": "ACE for under 55, CCB for above 55",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with newly diagnosed asthma presents to the clinic. She has been using a salbutamol inhaler as needed but continues to have symptoms twice a week. What is the next best step in managing her asthma according to the latest guidelines?",
+    "options": [
+      "Add a low-dose ICS to the salbutamol",
+      "Switch to as-needed low-dose ICS/formoterol inhaler",
+      "Start regular low-dose ICS",
+      "Add a LABA to the current treatment",
+      "Continue with current regimen and review in 4 weeks"
+    ],
+    "answer": 1,
+    "explanation": "The correct management step is to switch to an as-needed low-dose ICS/formoterol inhaler. According to NICE NG245 (2024), for newly diagnosed asthma or where current SABA-only therapy is insufficient, the guideline recommends using an Anti-Inflammatory Reliever (AIR) therapy, which involves a low-dose ICS/formoterol combination inhaler on an as-needed basis.\n\nAdding a low-dose ICS to salbutamol or starting a regular low-dose ICS does not align with the new guidelines, which emphasize the AIR approach. Adding a LABA without an ICS is inappropriate and continuing current treatment would not address her symptoms effectively. The new AIR pathway streamlines asthma therapy to improve control and adherence.",
+    "mnemonic": "AIR for Asthma: Anti-Inflammatory Reliever",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes and established cardiovascular disease is on metformin. His HbA1c is 58 mmol/mol. What medication should be added to his treatment regimen?",
+    "options": [
+      "Sulfonylurea",
+      "GLP-1 receptor agonist",
+      "SGLT-2 inhibitor",
+      "DPP-4 inhibitor",
+      "Insulin"
+    ],
+    "answer": 2,
+    "explanation": "The appropriate addition to this patient's regimen is an SGLT-2 inhibitor, such as empagliflozin. NICE NG28 (2022) recommends adding an SGLT-2 inhibitor for patients with type 2 diabetes who have established cardiovascular disease due to their benefits on cardiovascular outcomes and glycaemic control. \n\nSulfonylureas can cause hypoglycaemia and weight gain, making them less favorable in this context. A GLP-1 receptor agonist is beneficial but typically considered if BMI ≥35 or if the patient cannot tolerate insulin. A DPP-4 inhibitor is less effective in improving cardiovascular outcomes. Insulin is reserved for more advanced cases where oral agents fail. SGLT-2 inhibitors provide both glycaemic and cardiovascular benefits, making them ideal for this scenario.",
+    "mnemonic": "Sweet for Heart: SGLT-2 for CVD",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_3",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 68-year-old woman presents with palpitations and is diagnosed with atrial fibrillation. She has a CHA₂DS₂-VASc score of 3. What is the most appropriate initial management for stroke prevention?",
+    "options": [
+      "Start aspirin",
+      "Start a DOAC",
+      "Start warfarin",
+      "No anticoagulation needed",
+      "Start beta-blocker"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to start a DOAC (Direct Oral Anticoagulant). According to NICE NG196 (2021), a CHA₂DS₂-VASc score of 2 or more in men and 3 or more in women suggests the need for anticoagulation to reduce the risk of stroke in atrial fibrillation. DOACs are preferred over warfarin due to their improved safety profile and ease of use.\n\nAspirin is no longer recommended for stroke prevention in atrial fibrillation due to its limited efficacy. Warfarin, while effective, requires regular monitoring and has more dietary and drug interactions. No anticoagulation would be inappropriate given her high score. A beta-blocker is used for rate control but does not prevent strokes. DOACs ensure effective stroke prophylaxis in AF.",
+    "mnemonic": "DOAC for AF: Directly On Anticoagulation Course",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_4",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 45-year-old woman presents with fever, cough, and pleuritic chest pain. Her CURB-65 score is 1. What is the most appropriate antibiotic management?",
+    "options": [
+      "Amoxicillin 500 mg TDS for 5 days",
+      "Co-amoxiclav 625 mg TDS for 7 days",
+      "Doxycycline 100 mg OD for 7 days",
+      "Clarithromycin 500 mg BD for 5 days",
+      "Hospital admission for IV antibiotics"
+    ],
+    "answer": 0,
+    "explanation": "The correct management is to prescribe amoxicillin 500 mg TDS for 5 days. According to NICE NG250 (2025), for low-severity community-acquired pneumonia (CURB-65 score of 0–1), amoxicillin is the first-line antibiotic. \n\nCo-amoxiclav is reserved for moderate to severe cases or if atypical pathogens are suspected. Doxycycline is an alternative for those allergic to penicillin. Clarithromycin is used when atypical pathogens are suspected or in penicillin allergies. Hospital admission and IV antibiotics are not indicated for a CURB-65 score of 1. The straightforward regimen of amoxicillin addresses common causative organisms effectively.",
+    "mnemonic": "Amoxicillin for CAP: Clear Airway Protocol",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/chest-infections-adults/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_5",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 35-year-old woman with fatigue and weight gain is diagnosed with primary hypothyroidism. Her TSH is 12 mU/L, and free T4 is low. What is the most appropriate initial treatment?",
+    "options": [
+      "Start levothyroxine 25 mcg daily",
+      "Start levothyroxine 50 mcg daily",
+      "Start liothyronine",
+      "Reassess thyroid function in 3 months",
+      "Start carbimazole"
+    ],
+    "answer": 1,
+    "explanation": "The correct treatment is to start levothyroxine 50 mcg daily. NICE NG145 (2019) recommends starting levothyroxine at 50 mcg daily for most adults with primary hypothyroidism, adjusting based on TSH and symptoms. \n\nStarting at 25 mcg is usually reserved for older adults or those with cardiac issues. Liothyronine is not typically used for initial management due to its short half-life and lack of evidence for superiority. Reassessing without treatment would be inappropriate given her TSH and symptoms. Carbimazole is used for hyperthyroidism, not hypothyroidism. Levothyroxine replacement aims to normalize TSH and alleviate symptoms.",
+    "mnemonic": "Levothyroxine for Hypo: Low Energy, Vital Thyroxine",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_6",
+    "topic": "Acute Coronary Syndromes",
+    "category": "all",
+    "question": "A 58-year-old man presents with chest pain and ST-elevation myocardial infarction (STEMI) is confirmed. The hospital is 30 minutes away from a PCI-capable center. What is the most appropriate next step in management?",
+    "options": [
+      "Administer thrombolysis",
+      "Initiate aspirin and ticagrelor",
+      "Transfer for primary PCI",
+      "Administer morphine and nitrates",
+      "Start beta-blocker"
+    ],
+    "answer": 2,
+    "explanation": "The correct next step is to transfer for primary PCI. NICE NG185 (2020) recommends primary PCI within 120 minutes of first medical contact for patients with STEMI if a PCI-capable center is accessible. \n\nThrombolysis is considered if PCI cannot be achieved within this timeframe, which is not the case here. While initiating aspirin and ticagrelor, administering morphine and nitrates, and starting a beta-blocker are part of supportive management, transferring for PCI takes precedence as it directly addresses the occlusion. Prompt intervention with PCI significantly reduces morbidity and mortality in STEMI.",
+    "mnemonic": "STEMI: Speedy Transfer for Emergency Myocardial Intervention",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_7",
+    "topic": "Parkinson's Disease Management",
+    "category": "all",
+    "question": "A 70-year-old man with Parkinson's disease experiences bradykinesia and rigidity. Which medication is most appropriate to start for symptom control?",
+    "options": [
+      "Ropinirole",
+      "Rasagiline",
+      "Levodopa",
+      "Amantadine",
+      "Entacapone"
+    ],
+    "answer": 2,
+    "explanation": "The correct medication to start is levodopa, in combination with a dopa-decarboxylase inhibitor. NICE NG71 (2020) recommends levodopa as the most effective treatment for motor symptoms in Parkinson’s, especially in older patients. \n\nRopinirole, a dopamine agonist, and rasagiline, a MAO-B inhibitor, are suitable for younger patients or early-stage management to delay motor complications, but may be less effective for established symptoms. Amantadine is primarily for dyskinesia, and entacapone is an adjunct to levodopa for end-of-dose fluctuations. Levodopa remains the cornerstone for managing significant motor symptoms effectively.",
+    "mnemonic": "Levodopa Leads in Parkinson's",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng71",
+      "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_8",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 25-year-old woman presents with focal seizures. She plans to start a family soon. What is the most appropriate first-line antiepileptic drug?",
+    "options": [
+      "Sodium valproate",
+      "Carbamazepine",
+      "Lamotrigine",
+      "Levetiracetam",
+      "Phenytoin"
+    ],
+    "answer": 2,
+    "explanation": "The appropriate first-line antiepileptic drug is lamotrigine. NICE NG217 (2022) recommends lamotrigine as the first-line treatment for focal epilepsy, especially in women of childbearing potential, due to its favorable safety profile in pregnancy compared to other AEDs. \n\nSodium valproate is contraindicated due to teratogenicity. Carbamazepine and levetiracetam are alternatives but may not be as favorable as lamotrigine for women planning pregnancy. Phenytoin has a complex pharmacokinetic profile and potential teratogenic effects. Lamotrigine effectively manages focal seizures with safety considerations for future pregnancy.",
+    "mnemonic": "Lamotrigine for Ladies",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779315799495_9",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 65-year-old man presents to the emergency department with fever, confusion, and hypotension. Suspecting sepsis, what is the most appropriate initial management?",
+    "options": [
+      "Intravenous fluids and antibiotics",
+      "Blood cultures and wait for results",
+      "Start vasopressors immediately",
+      "Administer corticosteroids",
+      "Observe and reassess in 1 hour"
+    ],
+    "answer": 0,
+    "explanation": "The correct initial management is intravenous fluids and antibiotics. NICE NG51 (2016) and the Surviving Sepsis Campaign (2021) emphasize the importance of the 'Sepsis-6' bundle, which includes administering IV antibiotics and fluids within the first hour of recognition of sepsis. \n\nBlood cultures should be taken, but treatment should not be delayed for results. Vasopressors are reserved for resistant hypotension after fluid resuscitation. Corticosteroids are not first-line in sepsis management. Delaying intervention increases mortality risk. Early fluid resuscitation and antibiotics are critical to improving outcomes in sepsis.",
+    "mnemonic": "Sepsis-6: Fluids First, Cure Fast",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis/"
+    },
+    "difficulty": "intermediate"
   }
 ]

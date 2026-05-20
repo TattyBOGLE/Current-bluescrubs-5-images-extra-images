@@ -3688,154 +3688,163 @@ export default function PLAB1New() {
               </div>
             )}
 
-            {/* Specific Reference Section */}
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
-              <div className="flex items-start gap-2">
-                <BookOpen className="w-4 h-4 text-blue-600 flex-shrink-0 mt-1" />
-                <div className="w-full">
-                  <p className="text-sm font-medium text-blue-900 mb-2">{translateText('Official References:')}</p>
-                  <div className="text-sm text-blue-800 space-y-2">
-                    {currentQuestion.references && currentQuestion.references.length > 0 ? (
-                      currentQuestion.references
-                        .filter((reference: any, index: number) => {
-                          const title = typeof reference === 'string' ? reference : reference.title || reference.text || '';
-                          // Filter out CKS references that duplicate what's already in the CKS button
-                          return !title.toLowerCase().includes('cks:') && !title.toLowerCase().includes('clinical guideline: cks');
-                        })
-                        .map((reference: any, index: number) => {
-                          const refTitle = typeof reference === 'string' ? reference : reference.title || reference.text || '';
-                          const refTopic = currentQuestion.topic || currentQuestion.category;
-                          const builtLink = buildDynamicLink(refTitle, refTopic);
-                          const refUrl = (typeof reference === 'object' && reference.url) || builtLink?.url || null;
-                          const visualUrl = builtLink?.visualUrl ?? null;
-                          return (
-                            <div key={index} className="bg-white border border-blue-200 rounded-lg p-3 mb-3">
-                              <p className="text-blue-700 leading-relaxed mb-3 text-sm">{refTitle}</p>
-                              <div className="flex flex-wrap gap-2">
-                                {refUrl && (
-                                  <a
-                                    href={refUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium"
-                                  >
-                                    <ExternalLink className="w-4 h-4" />
-                                    View Full Guidelines
-                                  </a>
-                                )}
-                                {visualUrl && (
-                                  <a
-                                    href={visualUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-white border border-blue-400 hover:bg-blue-50 text-blue-700 text-sm font-medium"
-                                  >
-                                    <ExternalLink className="w-4 h-4" />
-                                    Visual Summary PDF
-                                  </a>
-                                )}
-                              </div>
-                            </div>
-                          );
-                        })
-                    ) : (
-                      <div className="space-y-2">
-                        {(() => {
-                          const qTopic = currentQuestion.topic || currentQuestion.category || '';
-                          const cat = (currentQuestion.category || '').toLowerCase();
-                          const topic = qTopic.toLowerCase();
-                          const isEthics = /ethics|consent|professionalism|communication|legal|capacity|safeguarding/i.test(cat + ' ' + topic);
-                          return (
-                            <>
-                              {/* Specialty-specific source — shown INSTEAD of duplicating below */}
-                              {cat.includes('cardio') && (
-                                <ReferenceLink text="ESC Guidelines" topic={qTopic} />
-                              )}
-                              {cat.includes('respiratory') && (
-                                <ReferenceLink text="BTS Guidelines" topic={qTopic} />
-                              )}
-                              {cat.includes('gastro') && (
-                                <ReferenceLink text="BSG Guidelines" topic={qTopic} />
-                              )}
-                              {(cat.includes('obstetric') || cat.includes('gynaecol')) && (
-                                <ReferenceLink text="RCOG Guidelines" topic={qTopic} />
-                              )}
-                              {/* Core PLAB 1 references — always relevant */}
-                              <ReferenceLink text="NICE Guidelines" topic={qTopic} />
-                              <ReferenceLink text="CKS Clinical Knowledge Summaries" topic={qTopic} />
-                              <ReferenceLink text="BNF" topic={qTopic} />
-                              {/* GMC only for ethics/consent/professional topics */}
-                              {isEthics && (
-                                <ReferenceLink text="GMC Good Medical Practice" topic={qTopic} />
-                              )}
-                            </>
-                          );
-                        })()}
-                      </div>
-                    )}
-                    
-                    {/* CKS Guidelines Button */}
-                    {currentQuestion.cks_guidance && (
-                      <div className="mt-4 pt-3 border-t border-blue-200">
-                        <Button
-                          size="sm"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            window.open(currentQuestion.cks_guidance.cks_url || 'https://cks.nice.org.uk/', '_blank');
-                          }}
-                          className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-1" />
-                          View NICE CKS Guidelines
-                        </Button>
-                        <p className="text-xs text-blue-600 mt-2 italic">
-                          Note: You will need to accept CKS terms and conditions for full access
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* NICE References Per Question */}
+            {/* Reference Material — merged panel */}
             {(() => {
               const niceRefs = getNICEReferencesForQuestion(currentQuestion);
-              if (niceRefs.length === 0) return null;
+              const qTopic = currentQuestion.topic || currentQuestion.category || '';
+              const cat = (currentQuestion.category || '').toLowerCase();
+              const isEthics = /ethics|consent|professionalism|communication|legal|capacity|safeguarding/i.test(cat + ' ' + qTopic.toLowerCase());
+
+              // Visual Summary PDF URL from the primary NICE link for this topic
+              const primaryNiceLink = buildDynamicLink('NICE', qTopic);
+              const visualSummaryUrl = primaryNiceLink?.visualUrl ?? null;
+
+              // Specialty chips shown below NICE refs (only when no NICE ref already covers them)
+              const specialtyChips: { label: string; url: string }[] = [];
+              if (cat.includes('cardio')) {
+                const l = buildDynamicLink('ESC Guidelines', qTopic);
+                if (l) specialtyChips.push({ label: l.label, url: l.url });
+              }
+              if (cat.includes('respiratory')) {
+                const l = buildDynamicLink('BTS Guidelines', qTopic);
+                if (l) specialtyChips.push({ label: l.label, url: l.url });
+              }
+              if (cat.includes('gastro')) {
+                const l = buildDynamicLink('BSG Guidelines', qTopic);
+                if (l) specialtyChips.push({ label: l.label, url: l.url });
+              }
+              if (cat.includes('obstetric') || cat.includes('gynaecol')) {
+                const l = buildDynamicLink('RCOG Guidelines', qTopic);
+                if (l) specialtyChips.push({ label: l.label, url: l.url });
+              }
+              if (isEthics) {
+                const l = buildDynamicLink('GMC Good Medical Practice', qTopic);
+                if (l) specialtyChips.push({ label: l.label, url: l.url });
+              }
+
+              // Fallback official refs (only used when getNICEReferencesForQuestion returns nothing)
+              const officialRefs = niceRefs.length === 0 && currentQuestion.references
+                ? (currentQuestion.references as any[]).filter((r: any) => {
+                    const t = typeof r === 'string' ? r : r.title || r.text || '';
+                    return !t.toLowerCase().includes('cks:') && !t.toLowerCase().includes('clinical guideline: cks');
+                  })
+                : [];
+
+              if (niceRefs.length === 0 && officialRefs.length === 0) return null;
+
               return (
-                <div className="rounded-xl border border-green-200 shadow-sm overflow-hidden">
-                  <div className="bg-gradient-to-r from-green-700 to-emerald-700 px-4 py-2.5 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-white flex-shrink-0" />
-                    <p className="text-sm font-semibold text-white tracking-wide">NICE References for This Question</p>
+                <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                  {/* Header */}
+                  <div className="bg-slate-700 px-4 py-2.5 flex items-center gap-2">
+                    <BookOpen className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                    <p className="text-sm font-semibold text-white tracking-wide">Reference Material</p>
                   </div>
-                  <div className="bg-green-50 p-3 space-y-2">
+
+                  <div className="bg-slate-50 p-3 space-y-2">
+                    {/* NICE / CKS refs — authoritative source */}
                     {niceRefs.map((ref, idx) => (
-                      <div key={idx} className={`bg-white rounded-lg border p-3 ${ref.primary ? 'border-green-400 ring-1 ring-green-200' : 'border-green-200'}`}>
-                        <div className="flex items-start gap-2">
-                          <div className="flex-1 min-w-0">
-                            <div className="flex flex-wrap items-center gap-1.5 mb-1">
-                              {ref.primary && (
-                                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-600 text-white uppercase tracking-wide">Primary Reference</span>
-                              )}
-                              <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium border ${ref.type === 'NICE Guideline' ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'}`}>
-                                {ref.type}
+                      <div
+                        key={idx}
+                        className={`bg-white rounded-lg border p-3 flex items-start justify-between gap-3 ${
+                          ref.primary ? 'border-green-400 ring-1 ring-green-100' : 'border-slate-200'
+                        }`}
+                      >
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-1.5 mb-1">
+                            {ref.primary && (
+                              <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-600 text-white uppercase tracking-wide">
+                                Primary
                               </span>
-                            </div>
+                            )}
+                            <span
+                              className={`px-1.5 py-0.5 rounded text-[10px] font-medium border ${
+                                ref.type === 'NICE Guideline'
+                                  ? 'bg-blue-50 text-blue-700 border-blue-200'
+                                  : 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                              }`}
+                            >
+                              {ref.type}
+                            </span>
+                          </div>
+                          <a
+                            href={ref.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2 inline-flex items-center gap-1"
+                          >
+                            {ref.title}
+                            <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                          </a>
+                          <p className="text-xs text-slate-500 mt-0.5 italic">{ref.relevance}</p>
+                        </div>
+                        {/* Visual Summary PDF — inline next to primary ref only */}
+                        {ref.primary && visualSummaryUrl && (
+                          <a
+                            href={visualSummaryUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 border border-amber-200 hover:bg-amber-100 text-amber-700 text-xs font-medium"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Visual Summary PDF
+                          </a>
+                        )}
+                      </div>
+                    ))}
+
+                    {/* Fallback: official refs when no NICE refs available */}
+                    {officialRefs.map((reference: any, index: number) => {
+                      const refTitle = typeof reference === 'string' ? reference : reference.title || reference.text || '';
+                      const builtLink = buildDynamicLink(refTitle, qTopic);
+                      const refUrl = (typeof reference === 'object' && reference.url) || builtLink?.url || null;
+                      const visualUrl = builtLink?.visualUrl ?? null;
+                      if (!refUrl) return null;
+                      return (
+                        <div key={index} className="bg-white rounded-lg border border-slate-200 p-3 flex items-start justify-between gap-3">
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs text-slate-500 mb-1">{refTitle}</p>
                             <a
-                              href={ref.url}
+                              href={refUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2 inline-flex items-center gap-1"
                             >
-                              {ref.title}
-                              <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                              View Guidelines
+                              <ExternalLink className="w-3 h-3 flex-shrink-0" />
                             </a>
-                            <p className="text-xs text-slate-500 mt-1 italic">{ref.relevance}</p>
                           </div>
+                          {visualUrl && (
+                            <a
+                              href={visualUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 border border-amber-200 hover:bg-amber-100 text-amber-700 text-xs font-medium"
+                            >
+                              <ExternalLink className="w-3 h-3" />
+                              Visual Summary PDF
+                            </a>
+                          )}
                         </div>
+                      );
+                    })}
+
+                    {/* Specialty chips — compact secondary refs */}
+                    {specialtyChips.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 pt-1">
+                        {specialtyChips.map((chip, i) => (
+                          <a
+                            key={i}
+                            href={chip.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white border border-slate-300 hover:border-slate-500 text-slate-600 hover:text-slate-900 text-xs font-medium transition-colors"
+                          >
+                            {chip.label}
+                            <ExternalLink className="w-2.5 h-2.5" />
+                          </a>
+                        ))}
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
               );
