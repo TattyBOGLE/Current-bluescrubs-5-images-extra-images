@@ -45,6 +45,11 @@ const NICE_VISUAL_SUMMARY_MAP: Record<string, string> = {
 const NICE_GUIDELINE_MAP: Record<string, string> = {
   'hypertension': 'ng136',
   'heart-failure': 'ng106',
+  'heart-failure-general-variant': 'ng106',
+  'heart-failure-with-reduced-ef-first-line-therapy': 'ng106',
+  'heart-failure-with-reduced-ejection-fraction': 'ng106',
+  'heart-failure-with-preserved-ejection-fraction': 'ng106',
+  'chronic-heart-failure': 'ng106',
   'atrial-fibrillation': 'ng196',
   'af': 'ng196',
   'acute-coronary-syndromes': 'ng185',
@@ -107,6 +112,11 @@ const NICE_GUIDELINE_MAP: Record<string, string> = {
 // ESC guideline URL path segments — base: https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/{slug}
 const ESC_GUIDELINE_MAP: Record<string, string> = {
   'heart-failure': 'Heart-Failure',
+  'heart-failure-general-variant': 'Heart-Failure',
+  'heart-failure-with-reduced-ef-first-line-therapy': 'Heart-Failure',
+  'heart-failure-with-reduced-ejection-fraction': 'Heart-Failure',
+  'heart-failure-with-preserved-ejection-fraction': 'Heart-Failure',
+  'chronic-heart-failure': 'Heart-Failure',
   'atrial-fibrillation': 'Atrial-Fibrillation-Guidelines',
   'af': 'Atrial-Fibrillation-Guidelines',
   'acute-coronary-syndromes': 'Acute-Coronary-Syndromes-STEMI-Guidelines',
@@ -201,6 +211,11 @@ const RCOG_GUIDELINE_MAP: Record<string, string> = {
 // BNF treatment summary slugs for common conditions
 const BNF_TREATMENT_MAP: Record<string, string> = {
   'heart-failure': 'chronic-heart-failure',
+  'heart-failure-general-variant': 'chronic-heart-failure',
+  'heart-failure-with-reduced-ef-first-line-therapy': 'chronic-heart-failure',
+  'heart-failure-with-reduced-ejection-fraction': 'chronic-heart-failure',
+  'heart-failure-with-preserved-ejection-fraction': 'chronic-heart-failure',
+  'chronic-heart-failure': 'chronic-heart-failure',
   'hypertension': 'hypertension',
   'atrial-fibrillation': 'arrhythmias',
   'af': 'arrhythmias',
@@ -257,6 +272,11 @@ const CKS_SLUG_MAP: Record<string, string> = {
   'obstructive-pulmonary-disease': 'chronic-obstructive-pulmonary-disease',
   'hypertension': 'hypertension',
   'heart-failure': 'heart-failure-chronic',
+  'heart-failure-general-variant': 'heart-failure-chronic',
+  'heart-failure-with-reduced-ef-first-line-therapy': 'heart-failure-chronic',
+  'heart-failure-with-reduced-ejection-fraction': 'heart-failure-chronic',
+  'heart-failure-with-preserved-ejection-fraction': 'heart-failure-chronic',
+  'chronic-heart-failure': 'heart-failure-chronic',
   'atrial-fibrillation': 'atrial-fibrillation',
   'af': 'atrial-fibrillation',
   'stroke': 'stroke-and-tia',

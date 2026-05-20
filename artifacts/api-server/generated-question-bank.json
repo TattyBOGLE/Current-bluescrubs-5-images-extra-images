@@ -1930,7 +1930,7 @@
     "mnemonic": "A-B-C-D",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -2122,7 +2122,7 @@
     "mnemonic": "Spironolactone Sustains the Struggling Heart.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -2314,7 +2314,7 @@
     "mnemonic": "ACE first in heart failure",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate",
     "specialty": "Cardiology"
@@ -2715,7 +2715,7 @@
     "mnemonic": "Furosemide for Fluid",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -2928,7 +2928,7 @@
     "mnemonic": "ACE in HEART failure",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -3417,7 +3417,7 @@
     "mnemonic": "Spironolactone saves lives!",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -3925,7 +3925,7 @@
     "mnemonic": "ACE, Beta, then Spiro.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -4346,7 +4346,7 @@
     "mnemonic": "Heart Failure Triple A: 'ACE, Androgen (spironolactone), Antagonist'",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -4514,7 +4514,7 @@
     "mnemonic": "SGLT-2 completes the heart failure quartet.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -4892,7 +4892,7 @@
     "mnemonic": "HFrEF: ACE, Beta, Spiro, SGLT-2!",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure/"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -5355,7 +5355,7 @@
     "mnemonic": "Quadruple Therapy for 'Q'uality Heart 'Q'uality Life",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -5544,7 +5544,7 @@
     "mnemonic": "ACE + BB + MRA is the heart's ABC",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -5733,7 +5733,7 @@
     "mnemonic": "EBMS for HF",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure/"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -6027,7 +6027,7 @@
     "mnemonic": "Frusemide for Fluid",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -6216,7 +6216,7 @@
     "mnemonic": "Spironolactone for HF: ACE + Beta + MRA.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure/"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -6468,7 +6468,7 @@
     "mnemonic": "MRA after ACE and BB: Mineralocorticoid for heart failure",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -6594,7 +6594,7 @@
     "mnemonic": "Furosemide for fluid",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
@@ -7116,7 +7116,7 @@
     "mnemonic": "Triple Therapy for HFrEF",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
-      "CKS": "https://cks.nice.org.uk/heart-failure"
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
     },
     "difficulty": "intermediate"
   },
