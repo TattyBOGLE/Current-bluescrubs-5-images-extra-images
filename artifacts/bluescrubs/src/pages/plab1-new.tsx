@@ -809,7 +809,7 @@ function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) {
     <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
       <button
         onClick={() => setOpen(prev => !prev)}
-        className="w-full bg-slate-800 hover:bg-slate-700 transition-colors px-4 py-3 flex items-center justify-between"
+        className="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 transition-colors px-4 py-3 flex items-center justify-between"
         aria-expanded={open}
       >
         <span className="text-white font-semibold text-sm flex items-center gap-2">
@@ -915,14 +915,14 @@ function ReferenceMaterialPanel({ question }: { question: any }) {
     <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
       <button
         onClick={() => setOpen(prev => !prev)}
-        className="w-full bg-slate-700 hover:bg-slate-600 transition-colors px-4 py-2.5 flex items-center justify-between"
+        className="w-full bg-gradient-to-r from-teal-700 to-cyan-700 hover:from-teal-600 hover:to-cyan-600 transition-colors px-4 py-2.5 flex items-center justify-between"
         aria-expanded={open}
       >
         <span className="text-white font-semibold text-sm flex items-center gap-2">
-          <BookOpen className="w-4 h-4 text-amber-400" />
+          <BookOpen className="w-4 h-4 text-cyan-200" />
           Reference Material
         </span>
-        <ChevronDown className={`w-4 h-4 text-slate-300 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-4 h-4 text-teal-200 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
       </button>
 
       {open && (
@@ -3842,7 +3842,7 @@ export default function PLAB1New() {
             {/* Study Tips Section — AI-generated tips + mnemonics specific to this question */}
             <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
               {/* Header */}
-              <div className="bg-gradient-to-r from-indigo-600 to-blue-600 px-4 py-2.5 flex items-center gap-2">
+              <div className="bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2.5 flex items-center gap-2">
                 <Lightbulb className="w-4 h-4 text-white flex-shrink-0" />
                 <p className="text-sm font-semibold text-white tracking-wide">High-Yield Tips &amp; Mnemonics</p>
               </div>
