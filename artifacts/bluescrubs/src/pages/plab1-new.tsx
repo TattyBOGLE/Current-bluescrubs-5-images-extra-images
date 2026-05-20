@@ -301,12 +301,16 @@ const CKS_SLUG_MAP: Record<string, string> = {
   'deep-vein-thrombosis': 'deep-vein-thrombosis',
   'venous-thromboembolism': 'deep-vein-thrombosis',
   'vte': 'deep-vein-thrombosis',
-  'pulmonary-embolism': 'pulmonary-embolism',
-  'pe': 'pulmonary-embolism',
+  'coronary-syndrome': 'acute-coronary-syndromes',
+  'acute-coronary-syndromes': 'acute-coronary-syndromes',
+  'nstemi': 'acute-coronary-syndromes',
+  'stemi': 'acute-coronary-syndromes',
+  'angina': 'stable-angina',
+  'anaemia': 'anaemia-iron-deficiency',
+  'iron-deficiency': 'anaemia-iron-deficiency',
   'meningitis': 'meningitis-bacterial',
   'copd-exacerbation': 'chronic-obstructive-pulmonary-disease',
   'chest-infection': 'chest-infections-adult',
-  'cellulitis': 'cellulitis-acute',
   'back-pain': 'back-pain-low-without-radiculopathy',
   'low-back-pain': 'back-pain-low-without-radiculopathy',
   'knee-pain': 'knee-pain',
@@ -334,9 +338,9 @@ function toConditionSlug(topic: string): string {
   return toSlug(stripped || topic);
 }
 
-function toCKSSlug(topic: string): string {
+function toCKSSlug(topic: string): string | null {
   const base = toConditionSlug(topic);
-  return CKS_SLUG_MAP[base] ?? base;
+  return CKS_SLUG_MAP[base] ?? null;
 }
 
 function toNICEUrl(topic: string): string | null {
@@ -405,7 +409,9 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   }
   if (/\bCKS\b|Clinical Knowledge Summaries/i.test(text)) {
     return {
-      url: hasT ? `https://cks.nice.org.uk/topics/${cksSlug}/` : 'https://cks.nice.org.uk/topics',
+      url: hasT
+        ? (cksSlug ? `https://cks.nice.org.uk/topics/${cksSlug}/` : `https://cks.nice.org.uk/search#q=${q}`)
+        : 'https://cks.nice.org.uk/topics',
       label: hasT ? `CKS — ${rawTopic}` : 'CKS Clinical Knowledge Summaries',
     };
   }
@@ -433,7 +439,9 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
   }
   if (/\bRCGP\b|Royal College of General Practitioners/i.test(text)) {
     return {
-      url: hasT ? `https://cks.nice.org.uk/topics/${cksSlug}/` : 'https://cks.nice.org.uk/topics',
+      url: hasT
+        ? (cksSlug ? `https://cks.nice.org.uk/topics/${cksSlug}/` : `https://cks.nice.org.uk/search#q=${q}`)
+        : 'https://cks.nice.org.uk/topics',
       label: hasT ? `CKS (RCGP) — ${rawTopic}` : 'CKS — RCGP-aligned Guidelines',
     };
   }
