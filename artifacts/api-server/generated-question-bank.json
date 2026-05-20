@@ -2045,13 +2045,12 @@
     "question": "A 22-year-old woman is newly diagnosed with asthma in clinic. She has daytime wheeze on most days and her GP wishes to start her on an inhaler. According to NICE NG245 (2024), which prescribing strategy is correct?",
     "options": [
       "Prescribe salbutamol inhaler alone and review in 3 months",
-      "Prescribe a regular low-dose ICS (e.g. beclometasone 200 mcg/day) alongside a salbutamol reliever inhaler from diagnosis",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Prescribe oral prednisolone for 5 days then review",
       "Prescribe a LABA/ICS combination inhaler immediately",
       "Refer to a respiratory specialist before starting any inhaler"
     ],
-    "correctAnswer": 1,
-    "explanation": "NICE NG245 (November 2024) fundamentally changed first-line asthma prescribing. The old BTS/SIGN step-ladder permitted SABA-alone at Step 1, but NG245 abolishes this: ALL adults newly diagnosed with asthma should be prescribed a regular low-dose ICS (e.g. beclometasone 200 mcg/day) alongside a SABA reliever from the very point of diagnosis. SABA-only prescribing is no longer an acceptable complete first-line regimen. Option A reflects the outdated pre-NG245 approach. ICS/LABA (Option D) is Step 2 — added only if low-dose ICS alone fails to control symptoms. The aim of immediate ICS is to reduce airway inflammation and exacerbation risk from the outset.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "topic": "Asthma — Initial Management (NICE NG245)",
     "specialty": "Respiratory",
     "difficulty": "medium",
@@ -2061,7 +2060,8 @@
       "ICS",
       "newly diagnosed",
       "initial prescribing"
-    ]
+    ],
+    "answer": 1
   },
   {
     "id": "generated_all_1779039924287_3",
@@ -2237,13 +2237,12 @@
     "question": "A 22-year-old female with asthma was prescribed salbutamol alone at diagnosis one year ago and has not had a preventer inhaler since. She reports waking three nights this week with wheeze. According to NICE NG245, which statement about her current management is correct?",
     "options": [
       "Salbutamol alone remains appropriate as her symptoms are mild",
-      "A regular low-dose ICS should have been co-prescribed at diagnosis — add it now",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Prescribe oral corticosteroids for 5 days then review",
       "Add a LABA before trying an ICS in this age group",
       "Refer to a respiratory specialist before prescribing any preventer"
     ],
-    "correctAnswer": 1,
-    "explanation": "NICE NG245 (November 2024) states that regular low-dose ICS must be co-prescribed alongside a SABA reliever from the point of diagnosis in ALL adults with asthma. Prescribing SABA alone at diagnosis and not reviewing for a year is now a prescribing error under current guidelines. The correct step is to add a regular low-dose ICS immediately (e.g. beclometasone 200 mcg/day). Night-time symptoms are one of the key NG245 triggers that should prompt ICS initiation. LABA is a Step 2 treatment added only after ICS has been tried and found insufficient. This represents a major paradigm shift from the old BTS/SIGN step-ladder where Step 1 was SABA alone.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "topic": "Asthma — NICE NG245 Paradigm Shift",
     "specialty": "Respiratory",
     "difficulty": "medium",
@@ -2253,7 +2252,8 @@
       "ICS",
       "SABA only",
       "prescribing principles"
-    ]
+    ],
+    "answer": 1
   },
   {
     "id": "generated_all_1779041298976_2",
@@ -3084,13 +3084,12 @@
     "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She is currently on salbutamol PRN only — she has never been prescribed a preventer inhaler. She reports using her salbutamol inhaler most days and wakes up at night with breathlessness twice a week. According to NICE NG245, what is the most appropriate next step?",
     "options": [
       "Increase the frequency of salbutamol use",
-      "Initiate a regular low-dose inhaled corticosteroid (ICS) alongside her salbutamol",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Add a long-acting beta-agonist (LABA)",
       "Prescribe oral corticosteroids",
       "Initiate leukotriene receptor antagonist (LTRA) therapy"
     ],
-    "correctAnswer": 1,
-    "explanation": "NICE NG245 (November 2024) states that ALL adults with asthma should be prescribed a regular low-dose ICS alongside their SABA reliever from the point of diagnosis. This patient has never had a preventer inhaler — this is non-compliant with NG245. Using SABA on most days and having night-time symptoms are both triggers that indicate a preventer is essential. The correct next step is to add a regular low-dose ICS (e.g. beclometasone 200 mcg/day). LABA (Option C) is Step 2 and is only added after ICS has been established and symptoms remain uncontrolled — it must NOT be given without ICS. SABA-only therapy is no longer an acceptable complete regimen under NG245.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "topic": "Asthma — Step 1: Initiating ICS (NICE NG245)",
     "specialty": "Respiratory",
     "difficulty": "easy",
@@ -3101,7 +3100,8 @@
       "SABA only",
       "step 1",
       "preventer inhaler"
-    ]
+    ],
+    "answer": 1
   },
   {
     "id": "generated_all_1779042522269_2",
@@ -3319,13 +3319,12 @@
     "question": "A 35-year-old woman is newly diagnosed with asthma in clinic today. She has symptoms twice a week and has been given a salbutamol inhaler for immediate relief. She has not yet been prescribed any preventer treatment. What is the most appropriate management strategy according to NICE NG245?",
     "options": [
       "Continue with salbutamol alone and review in 6 weeks",
-      "Prescribe a regular low-dose ICS today alongside the salbutamol",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Switch to a long-acting beta-agonist instead of salbutamol",
       "Add oral theophylline",
       "Introduce montelukast as the first preventer"
     ],
-    "correctAnswer": 1,
-    "explanation": "NICE NG245 (November 2024) requires that a regular low-dose ICS be prescribed alongside a SABA reliever at the point of asthma diagnosis — not at a later review. Option A (salbutamol alone with a 6-week wait) represents the outdated pre-NG245 approach and is now incorrect. Starting ICS from day one reduces airway inflammation, lowers exacerbation risk, and prevents the patient from becoming reliant on SABA alone. Beclometasone 200 mcg/day or equivalent is the standard starting dose. LABA is a Step 2 treatment added only if low-dose ICS + SABA fails to control symptoms. Montelukast (LTRA) is an alternative second-line preventer, not first-line.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "topic": "Asthma — Newly Diagnosed: ICS from Day One (NICE NG245)",
     "specialty": "Respiratory",
     "difficulty": "easy",
@@ -3335,7 +3334,8 @@
       "ICS",
       "newly diagnosed",
       "first-line preventer"
-    ]
+    ],
+    "answer": 1
   },
   {
     "id": "generated_all_1779042657723_3",
@@ -3693,13 +3693,12 @@
     "question": "A 38-year-old woman with asthma was prescribed salbutamol alone in 2021 under the then-current BTS/SIGN guidelines. She presents for a routine medication review. She uses salbutamol 3–4 times per week. Her asthma has never been formally stepped up. What change is required to bring her management in line with NICE NG245 (2024)?",
     "options": [
       "Continue salbutamol alone as she is clinically stable",
-      "Add a regular low-dose inhaled corticosteroid — NG245 requires ICS to be co-prescribed from the point of diagnosis",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Replace salbutamol with a LABA inhaler",
       "Add oral theophylline as step-up therapy",
       "No change required until her next acute exacerbation"
     ],
-    "correctAnswer": 1,
-    "explanation": "NICE NG245 (November 2024) introduced a fundamental change: all adults with asthma must have a regular low-dose ICS (e.g. beclometasone 200 mcg/day) prescribed alongside their SABA reliever from the point of diagnosis. Patients currently on SABA-only regimens prescribed under the old BTS/SIGN step-ladder should have their treatment updated at medication review. Using SABA 3–4 times per week indicates inadequate control and strongly supports adding ICS. Option A (continue SABA alone) is no longer compliant with NG245. LABA (Option C) is Step 2 and should only be added after ICS has been established and symptoms remain uncontrolled.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "topic": "Asthma — Medication Review (NICE NG245)",
     "specialty": "Respiratory",
     "difficulty": "medium",
@@ -3710,7 +3709,8 @@
       "ICS",
       "SABA only",
       "guideline update"
-    ]
+    ],
+    "answer": 1
   },
   {
     "id": "ng245_review_1779043390177_2",
@@ -3741,13 +3741,12 @@
     "question": "A 29-year-old man with asthma has been on salbutamol PRN since being diagnosed by his previous GP five years ago. He moves to a new practice and attends for a medication review. He reports mild wheeze on exertion twice weekly but no night symptoms. What is the MOST important action according to current UK guidelines?",
     "options": [
       "Reassure and continue salbutamol — symptoms are mild",
-      "Perform spirometry and initiate regular low-dose ICS immediately per NICE NG245",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Prescribe a LABA/ICS combination as he has had asthma for 5 years",
       "Refer to respiratory outpatients before prescribing any preventer inhaler",
       "Start montelukast as add-on therapy"
     ],
-    "correctAnswer": 1,
-    "explanation": "This patient has been on SABA alone (salbutamol PRN) since diagnosis — a non-compliant regimen under NICE NG245 (November 2024), which mandates co-prescribing a regular low-dose ICS from the point of asthma diagnosis. At medication review, the GP should confirm the diagnosis (spirometry if not already done) and immediately initiate regular low-dose ICS alongside the SABA reliever. SABA use twice weekly with exertional wheeze indicates ongoing suboptimal control. LABA/ICS (Option C) is Step 2 and premature without first establishing ICS. The five-year gap on SABA alone also warrants assessment of exacerbation history, atopy, and smoking status. Option A is incorrect — SABA-only prescribing is no longer acceptable under NG245 regardless of symptom severity.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "topic": "Asthma — Medication Review and NICE NG245 Compliance",
     "specialty": "Respiratory",
     "difficulty": "medium",
@@ -3758,7 +3757,8 @@
       "SABA only",
       "ICS",
       "GP review"
-    ]
+    ],
+    "answer": 1
   },
   {
     "id": "generated_all_1779043452703_0",
@@ -3788,13 +3788,13 @@
     "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She has never been prescribed a preventer inhaler and is currently on salbutamol PRN only. She reports using her salbutamol inhaler more frequently and wakes up at night due to breathlessness. According to NICE NG245, what is the most appropriate next step?",
     "options": [
       "Increase salbutamol use",
-      "Add a regular low-dose inhaled corticosteroid (ICS) alongside the salbutamol",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Prescribe a long-acting beta-agonist (LABA)",
       "Refer to a respiratory specialist",
       "Prescribe oral corticosteroids"
     ],
     "answer": 1,
-    "explanation": "NICE NG245 (November 2024) requires that a regular low-dose ICS be co-prescribed alongside a SABA reliever for all adults with asthma — SABA-only prescribing is no longer acceptable. This patient has been on salbutamol alone and has never had a preventer, which means her treatment needs updating to align with current guidelines. Using SABA more frequently and having night-time symptoms are both NG245 indicators that a preventer is essential. The correct next step is to add a regular low-dose ICS (e.g. beclometasone 200 mcg/day). LABA (Option C) is Step 2 — it is only added after ICS alone has been tried and symptoms remain uncontrolled; LABA must not be prescribed without ICS.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS is the base for asthma race.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -4462,13 +4462,13 @@
     "question": "A 30-year-old patient with newly diagnosed asthma has been experiencing symptoms three times a week. According to the latest UK guidelines, what is the most appropriate initial treatment strategy?",
     "options": [
       "SABA alone",
-      "Low-dose ICS",
-      "Low-dose ICS + SABA",
+      "Add a regular low-dose ICS preventer with SABA as needed (Track 1)",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "LABA alone",
       "Oral corticosteroids"
     ],
     "answer": 2,
-    "explanation": "The correct answer is 'Low-dose ICS + SABA'. NICE NG245 (2024) emphasizes starting all adults with asthma on a low-dose inhaled corticosteroid (ICS) alongside a short-acting beta-agonist (SABA) as a reliever. SABA alone is no longer recommended as a complete regimen. LABA is added only if control is not achieved with ICS. Oral corticosteroids are reserved for severe exacerbations. This reflects the shift towards regular ICS use to control inflammation. Key point: 'Start ICS to stabilize asthma from the start.'",
+    "explanation": "The correct answer is C — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "Start ICS to stabilize asthma from the start.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -4651,13 +4651,13 @@
     "question": "A 30-year-old woman with newly diagnosed asthma presents to her GP. She experiences symptoms twice a week but no nocturnal symptoms. Which medication regimen should be initiated according to the latest NICE guidelines?",
     "options": [
       "SABA alone",
-      "Low-dose ICS",
-      "Low-dose ICS + SABA",
+      "Add a regular low-dose ICS preventer with SABA as needed (Track 1)",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "LABA alone",
       "LTRA"
     ],
     "answer": 2,
-    "explanation": "NICE NG245 specifies that all adults with asthma should have a regular low-dose inhaled corticosteroid (ICS) prescribed alongside a short-acting beta-agonist (SABA) reliever from the outset. Even if symptoms are mild, this combination helps control inflammation and prevent exacerbations. \n\nA SABA alone is no longer recommended as a complete regimen. A low-dose ICS alone is incomplete because it does not provide immediate symptom relief. LABAs are not used as monotherapy due to the risk of severe asthma exacerbations. Leukotriene receptor antagonists (LTRAs) are considered add-on therapies if symptom control is inadequate. Remember 'ICS first for asthma control'.",
+    "explanation": "The correct answer is C — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS first: Inhaled corticosteroids for initial asthma control",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -5050,13 +5050,13 @@
     "question": "A 30-year-old woman with asthma presents with worsening symptoms despite regular use of her salbutamol inhaler. She reports using her inhaler more than three times a week. What is the most appropriate next step in her management according to the latest guidelines?",
     "options": [
       "Continue salbutamol as needed",
-      "Introduce a low-dose inhaled corticosteroid",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Add a leukotriene receptor antagonist",
       "Switch to a long-acting beta agonist",
       "Start oral theophylline"
     ],
     "answer": 1,
-    "explanation": "According to NICE NG245 (2024), all adults with asthma should have a regular low-dose inhaled corticosteroid (ICS) prescribed alongside a SABA reliever from the outset. The presentation of worsening symptoms and frequent SABA use indicates the need for an ICS to control her asthma. Continuing just a SABA is no longer recommended as a complete regimen. A leukotriene receptor antagonist or a long-acting beta agonist may be considered in later steps if control is not achieved with ICS. Theophylline is rarely used due to side effects and monitoring requirements. The phrase 'ICS as the base' helps recall that inhaled corticosteroids are foundational in asthma management. More details: https://www.nice.org.uk/guidance/ng245",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS as the base",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -5259,14 +5259,14 @@
     "category": "all",
     "question": "A 25-year-old woman with a confirmed diagnosis of asthma has been using salbutamol as needed for the past 3 months. She still has symptoms on most days. According to NICE NG245, what is the most appropriate next step in her management?",
     "options": [
-      "Start a low-dose ICS (e.g. beclometasone 200 mcg/day) and continue salbutamol as needed",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Increase the frequency of salbutamol use",
       "Add a LABA to her current salbutamol inhaler",
       "Prescribe montelukast as add-on therapy",
       "Refer immediately to a respiratory specialist"
     ],
     "answer": 0,
-    "explanation": "NICE NG245 (November 2024) states that all adults with confirmed asthma should receive a regular low-dose inhaled corticosteroid (ICS) — SABA-only treatment is no longer appropriate as a standalone regimen.\n\nThe correct next step is Option A: start a low-dose ICS such as beclometasone 200 mcg/day as a regular preventer, alongside salbutamol as a reliever (NICE NG245, Track 1, Step 1). This addresses the underlying airway inflammation rather than just relieving symptoms.\n\nNote: NICE NG245 also offers a Track 2 approach — MART (Maintenance and Reliever Therapy) using a combined low-dose ICS+formoterol inhaler (e.g. budesonide/formoterol) as both maintenance and reliever. This is an equally valid first-line option in practice, but is not listed here as a choice.\n\nOption B (increase salbutamol) is wrong — using more SABA without adding a preventer is explicitly discouraged by NG245 and is a safety concern.\n\nOption C (add a LABA without ICS) is contraindicated — LABA monotherapy in asthma increases the risk of severe exacerbations and asthma-related death. A LABA is only appropriate once ICS is already established.\n\nOption D (montelukast) is an add-on therapy considered at Step 2 or beyond, not as initial treatment.\n\nOption E (specialist referral) is not indicated at this stage of management.",
+    "explanation": "The correct answer is A — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS for SABA reliance: 'I'nitiate 'C'orticosteroids 'S'oon.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -5470,14 +5470,14 @@
     "category": "all",
     "question": "A 30-year-old woman with a history of mild asthma presents with increased breathlessness and wheezing. She uses her salbutamol inhaler more than three times a week. According to NICE guidelines, what is the next step in managing her asthma?",
     "options": [
-      "Continue salbutamol and add a regular low-dose ICS",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Switch to a LABA inhaler",
       "Increase the dose of salbutamol",
       "Add oral montelukast",
       "Refer for specialist review"
     ],
     "answer": 0,
-    "explanation": "NICE NG245 (2024) recommends that all adults with asthma should have a regular low-dose inhaled corticosteroid (ICS) alongside their short-acting beta-agonist (SABA) reliever. This patient has mild asthma but is using her SABA frequently, indicating inadequate control. Therefore, adding a regular low-dose ICS, such as beclometasone, is the appropriate step. LABA inhalers are added only if asthma is not controlled with low-dose ICS therapy. Increasing salbutamol use is not a solution as it does not address the underlying inflammation. Montelukast could be considered at a later stage if symptoms persist despite ICS use. Specialist review is generally reserved for uncontrolled asthma or diagnostic uncertainty. Remember: 'ICS for control, SABA for relief.'",
+    "explanation": "The correct answer is A — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS first, SABA second",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -5681,13 +5681,13 @@
     "question": "A 30-year-old woman with newly diagnosed asthma presents to your clinic. She experiences wheezing and shortness of breath approximately twice a week, mostly at night. According to the latest NICE guidelines, what is the most appropriate initial management for her asthma?",
     "options": [
       "Salbutamol inhaler only",
-      "Low-dose inhaled corticosteroid",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Salmeterol inhaler",
       "Oral theophylline",
       "Montelukast tablets"
     ],
     "answer": 1,
-    "explanation": "The correct answer is Low-dose inhaled corticosteroid. NICE NG245 (2024) recommends that all adults with asthma should start with a regular low-dose inhaled corticosteroid (ICS), such as beclometasone, alongside a SABA for symptom relief. This strategy is aimed at controlling inflammation and preventing exacerbations. Salbutamol (Option A) should not be used as a sole treatment. Salmeterol (Option C) is an add-on therapy after ICS if needed. Oral theophylline (Option D) and montelukast (Option E) are not first-line treatments. Remember, 'ICS first for control' is essential in asthma management.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS first for control",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -5933,13 +5933,13 @@
     "question": "A 30-year-old woman with a history of asthma presents with increasing frequency of symptoms despite using salbutamol inhaler as needed. What is the next step in management?",
     "options": [
       "Increase salbutamol use",
-      "Add a low-dose inhaled corticosteroid",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Add a long-acting beta-agonist",
       "Add oral prednisolone",
       "Switch to a leukotriene receptor antagonist"
     ],
     "answer": 1,
-    "explanation": "According to NICE NG245, the management of asthma now includes the use of a low-dose inhaled corticosteroid (ICS) like beclometasone as a regular therapy alongside a short-acting beta-agonist (SABA) such as salbutamol. Increasing SABA use is not advised as it does not treat underlying inflammation. LABAs are added after ICS is initiated. Oral prednisolone is reserved for acute exacerbations, and leukotriene receptor antagonists are considered if control is inadequate with ICS/LABA. Clinical Pearl: 'ICS First' emphasizes the critical role of inhaled corticosteroids in asthma management.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS First",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -6101,13 +6101,13 @@
     "question": "A 28-year-old woman with a known history of asthma is on salbutamol reliever inhaler only — she has never been prescribed a preventer. She reports using her salbutamol at least twice a week. According to NICE NG245, what is the most appropriate next step in her management?",
     "options": [
       "Continue Salbutamol alone",
-      "Add a low-dose inhaled corticosteroid",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Start a long-acting beta-agonist",
       "Add a leukotriene receptor antagonist",
       "Increase Salbutamol dosage"
     ],
     "answer": 1,
-    "explanation": "The correct answer is B — add a low-dose inhaled corticosteroid (ICS).\n\nNICE NG245 (November 2024) states that all adults with confirmed asthma should receive a regular low-dose ICS from the point of diagnosis. SABA-only treatment is no longer acceptable as a standalone regimen. Using a reliever inhaler ≥2 times per week is a clear indicator that regular anti-inflammatory (preventer) therapy is needed. An ICS such as beclometasone 200 mcg/day should be added alongside the salbutamol reliever.\n\nOption A (continue salbutamol alone) is incorrect — NG245 explicitly states that salbutamol-only management is inadequate and increases the risk of severe exacerbations.\n\nOption C (start a LABA) is incorrect and dangerous without ICS. LABA monotherapy in asthma is associated with increased risk of asthma-related death. A LABA is only added at Step 2 once ICS has been established and symptoms remain uncontrolled.\n\nOption D (add a leukotriene receptor antagonist) is incorrect at this stage. LTRAs (e.g. montelukast) are used as add-on therapy at Step 2 or beyond, not as the first preventer.\n\nOption E (increase salbutamol dosage) is incorrect — escalating SABA without adding a preventer is explicitly discouraged by NG245 and may mask worsening asthma.\n\nNote: NICE NG245 also offers a Track 2 (MART) approach using a combined low-dose ICS+formoterol inhaler (e.g. budesonide/formoterol) as both maintenance and reliever. This is an equally valid first-line option in practice, but is not listed here.",
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
     "mnemonic": "ICS before LABA: Control asthma with steroids first.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
@@ -6700,6 +6700,686 @@
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng185",
       "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761941_0",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761941_1",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 45-year-old female presents with 1-month history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Echocardiogram",
+      "ACE inhibitor",
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "Aspirin and clopidogrel"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_2",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset chest pain radiating to the left arm. An ECG shows ST-elevation in leads II, III, and aVF. What is the most appropriate initial management?",
+    "options": [
+      "Beta-blocker",
+      "Urgent cardiology referral",
+      "Aspirin",
+      "ACE inhibitor",
+      "Nitrates"
+    ],
+    "answer": 2,
+    "explanation": {
+      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
+      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
+      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
+      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
+      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
+    },
+    "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg94",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_3",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Acute Coronary Syndrome - general variant"
+  },
+  {
+    "question": "A 72-year-old female presents with a 2-week history of worsening ankle swelling and shortness of breath on exertion. On examination, she has pitting edema and a raised jugular venous pressure. What is the most appropriate initial investigation?",
+    "options": [
+      "Chest X-ray",
+      "Echocardiogram",
+      "ECG",
+      "Blood tests for BNP levels",
+      "CT pulmonary angiogram"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
+      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
+      "C": "ECG can show heart rhythm issues but not heart function.",
+      "D": "BNP levels can indicate heart failure but do not provide structural information.",
+      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
+    },
+    "mnemonic": "Echo for Edema and Exertional dyspnea",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_4",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Heart Failure - general variant"
+  },
+  {
+    "question": "A 65-year-old male presents with a sudden onset of severe headache and neck stiffness. His blood pressure is 190/110 mmHg. What is the most appropriate initial investigation?",
+    "options": [
+      "CT scan of the head",
+      "MRI of the brain",
+      "Lumbar puncture",
+      "Carotid Doppler ultrasound",
+      "EEG"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
+      "B": "MRI is useful but not the initial choice in acute settings.",
+      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
+      "D": "Not relevant to the acute presentation.",
+      "E": "Not indicated for headache and neck stiffness."
+    },
+    "mnemonic": "CT for Crisis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng127",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_5",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Neurology - general variant"
+  },
+  {
+    "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Radioactive iodine therapy",
+      "Thyroidectomy",
+      "Beta-blockers"
+    ],
+    "answer": 1,
+    "explanation": {
+      "A": "Used for hyperthyroidism, not indicated here.",
+      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
+      "C": "Used for hyperthyroidism, not indicated here.",
+      "D": "Considered in certain cases of hyperthyroidism.",
+      "E": "Used symptomatically in hyperthyroidism."
+    },
+    "mnemonic": "Levothyroxine for Low",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_6",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Endocrinology - general variant"
+  },
+  {
+    "question": "A 30-year-old male presents with abdominal pain and jaundice. Blood tests show elevated bilirubin and alkaline phosphatase. What is the most appropriate initial imaging?",
+    "options": [
+      "Abdominal ultrasound",
+      "CT scan of the abdomen",
+      "MRI of the liver",
+      "ERCP",
+      "Liver biopsy"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
+      "B": "CT is useful but usually not the first step for jaundice workup.",
+      "C": "MRI is more detailed but not typically first-line.",
+      "D": "Used for therapeutic as well as diagnostic purposes.",
+      "E": "Invasive and not first-line for initial evaluation."
+    },
+    "mnemonic": "U for Ultrasound in Uro",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng104",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_7",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology - general variant"
+  },
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_8",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": {
+      "A": "Clinical reasoning based on presentation and guidelines",
+      "B": "Consider differential diagnosis and risk factors",
+      "C": "Evaluate symptoms in clinical context",
+      "D": "Apply evidence-based medicine principles",
+      "E": "Follow established clinical protocols"
+    },
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_all_1779299761942_9",
+    "category": "all",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - general variant"
+  },
+  {
+    "id": "generated_all_1779299960417_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian male presents for a routine check-up. His blood pressure readings over the past three visits are 150/95 mmHg, 148/92 mmHg, and 152/94 mmHg. He has no significant past medical history and is not currently on any medication. According to the latest NICE guidelines, what is the most appropriate initial pharmacological treatment for him?",
+    "options": [
+      "Lisinopril",
+      "Amlodipine",
+      "Losartan",
+      "Bendroflumethiazide",
+      "Spironolactone"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Lisinopril, an ACE inhibitor, as the patient is under 55 years old and not of Black African or African-Caribbean family origin. According to NICE NG136, for patients under 55 years without any contraindications, an ACE inhibitor or an ARB is recommended as the first-line treatment. In this age group, calcium channel blockers like Amlodipine are reserved for those over 55 or of Black African or Caribbean descent. Losartan, while an ARB, is also a valid option, but ACE inhibitors are generally preferred first-line unless contraindicated. Thiazide-like diuretics (Bendroflumethiazide) are part of step 3 management, and Spironolactone is considered at step 4 if blood pressure remains uncontrolled and potassium is below 4.5 mmol/L. Clinical pearl: 'ACE inhibitors for the young, and CCBs for the seasoned.'",
+    "mnemonic": "ACE for ACE (Angiotensin Converting Enzyme for Age below 55)",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with a known diagnosis of asthma presents with increasing shortness of breath and wheezing over the past month. She uses a salbutamol inhaler as needed, which provides temporary relief. According to the latest NICE guidelines, what is the most appropriate next step in her long-term asthma management?",
+    "options": [
+      "Continue salbutamol alone",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
+      "Add a leukotriene receptor antagonist",
+      "Add a long-acting beta-agonist",
+      "Switch to a combination inhaler"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
+    "mnemonic": "ICS from the Start",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 62-year-old man with type 2 diabetes and a history of myocardial infarction presents for follow-up. His HbA1c is 60 mmol/mol (7.6%), and he is on metformin 1 g BD. According to the latest NICE guidelines, what is the most appropriate additional medication to prescribe?",
+    "options": [
+      "Sulfonylurea",
+      "SGLT-2 inhibitor",
+      "GLP-1 receptor agonist",
+      "DPP-4 inhibitor",
+      "Insulin"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is an SGLT-2 inhibitor. NICE NG28 recommends adding an SGLT-2 inhibitor, such as empagliflozin or dapagliflozin, for patients with type 2 diabetes who have established cardiovascular disease. This class of medication not only helps improve glycaemic control but also confers cardiovascular benefits, reducing the risk of further cardiovascular events. Sulfonylureas are associated with hypoglycaemia risk, particularly in the elderly. GLP-1 receptor agonists are an alternative when weight loss is desired or if BMI is ≥35. DPP-4 inhibitors and insulin are not first-line additions after metformin in this scenario. Clinical pearl: 'SGLT-2 for the heart too!'",
+    "mnemonic": "SGLT-2 for the Heart Too",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_3",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 76-year-old woman with a history of hypertension and diabetes presents with palpitations. An ECG confirms atrial fibrillation with a ventricular rate of 110 bpm. Her CHA₂DS₂-VASc score is 4. According to the latest NICE guidelines, what is the most appropriate initial step in her management?",
+    "options": [
+      "Initiate a DOAC",
+      "Initiate warfarin",
+      "Perform electrical cardioversion",
+      "Prescribe digoxin",
+      "Refer for catheter ablation"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to initiate a DOAC. NICE NG196 recommends anticoagulating patients with a CHA₂DS₂-VASc score of 2 or more in men, and 3 or more in women, to reduce the risk of stroke. DOACs are preferred over warfarin due to their ease of use and better safety profile. Electrical cardioversion is reserved for those with symptomatic AF not controlled by rate control. Digoxin is not appropriate first-line for rate control in active patients. Catheter ablation is considered for rhythm control if rate control is inadequate or not tolerated. Clinical pearl: 'DOACs are dynamic, warfarin is waning.'",
+    "mnemonic": "DOACs are Dynamic",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_4",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 68-year-old male presents with a 3-day history of fever, productive cough, and pleuritic chest pain. His CURB-65 score is 2. According to NICE guidelines, what is the most appropriate initial management?",
+    "options": [
+      "Oral amoxicillin",
+      "Oral doxycycline",
+      "Amoxicillin and clarithromycin",
+      "Intravenous co-amoxiclav",
+      "Oral levofloxacin"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Amoxicillin and clarithromycin. According to NICE NG250, a CURB-65 score of 2 indicates moderate severity pneumonia, for which dual antibiotic therapy (amoxicillin and clarithromycin) is recommended. This combination covers common pathogens, including atypicals. Oral amoxicillin alone is for low severity, while intravenous therapy is reserved for severe cases. Doxycycline can be an alternative if there is a penicillin allergy. Levofloxacin is not routinely recommended due to resistance concerns. Clinical pearl: 'Moderate needs a dual punch — amoxicillin and clarithromycin.'",
+    "mnemonic": "Dual Punch for Moderate Pneumonia",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_5",
+    "topic": "Stroke Management",
+    "category": "all",
+    "question": "A 70-year-old man presents to A&E with sudden right-sided weakness and aphasia. CT head confirms an ischaemic stroke. He arrived 3 hours after symptom onset. According to NICE guidelines, what is the most appropriate immediate management?",
+    "options": [
+      "Aspirin 300 mg stat",
+      "Thrombolysis with alteplase",
+      "Start clopidogrel",
+      "Mechanical thrombectomy",
+      "Carotid endarterectomy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is thrombolysis with alteplase. NICE NG128 recommends thrombolysis within 4.5 hours of symptom onset for eligible patients with acute ischaemic stroke. This intervention can significantly improve outcomes if given promptly. Aspirin is given after 24 hours unless thrombolysis is contraindicated. Clopidogrel is used after the acute phase. Mechanical thrombectomy is for large artery occlusions and is adjunctive to thrombolysis. Carotid endarterectomy is indicated in TIA or minor stroke with significant stenosis, not in acute major stroke. Clinical pearl: 'Time is brain, thrombolyse to gain.'",
+    "mnemonic": "Time is Brain",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/stroke"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_6",
+    "topic": "Heart Failure Management",
+    "category": "all",
+    "question": "A 75-year-old woman with known heart failure with reduced ejection fraction (HFrEF) presents for a routine follow-up. She is currently on ramipril and bisoprolol. According to NICE guidelines, what is the next step in optimizing her heart failure management?",
+    "options": [
+      "Add a thiazide diuretic",
+      "Add furosemide",
+      "Add spironolactone",
+      "Add digoxin",
+      "Add ivabradine"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to add spironolactone. NICE NG106 recommends adding a mineralocorticoid receptor antagonist (MRA), such as spironolactone, to the regimen of an ACE inhibitor and beta-blocker for heart failure with reduced ejection fraction. This combination reduces mortality and hospitalizations. Thiazide diuretics are not standard in HFrEF. Furosemide is used for symptomatic fluid overload, not for mortality benefit. Digoxin is considered if symptoms persist despite optimal therapy. Ivabradine is indicated if the heart rate remains elevated (>75 bpm) despite beta-blocker therapy. Clinical pearl: 'Triple therapy for heart failure: ACEi, beta-blocker, and MRA.'",
+    "mnemonic": "Triple Therapy for HFrEF",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_7",
+    "topic": "Rheumatoid Arthritis Management",
+    "category": "all",
+    "question": "A 45-year-old woman is newly diagnosed with rheumatoid arthritis. She has significant joint pain and stiffness affecting her daily activities. According to NICE guidelines, what is the most appropriate initial treatment?",
+    "options": [
+      "Paracetamol",
+      "Methotrexate",
+      "Sulfasalazine",
+      "Ibuprofen",
+      "Hydroxychloroquine"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Methotrexate. NICE NG100 recommends starting a DMARD like Methotrexate within 3 months of diagnosis for rheumatoid arthritis to modify disease progression and improve outcomes. Paracetamol and NSAIDs like Ibuprofen are for symptomatic relief but do not alter disease progression. Sulfasalazine and Hydroxychloroquine are additional DMARDs that might be used in combination therapy if Methotrexate alone is insufficient. Early DMARD initiation is crucial to achieve remission or low disease activity. Clinical pearl: 'Methotrexate makes RA wait.'",
+    "mnemonic": "Methotrexate Makes RA Wait",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100",
+      "CKS": "https://cks.nice.org.uk/rheumatoid-arthritis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_8",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 50-year-old woman presents with fatigue, weight gain, and cold intolerance. Her TSH is 10 mU/L and free T4 is low. According to NICE guidelines, what is the most appropriate initial treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Propylthiouracil",
+      "Liothyronine",
+      "Observation"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Levothyroxine. NICE NG145 recommends Levothyroxine as the first-line treatment for hypothyroidism, aiming to normalize TSH levels. The usual starting dose is 25–50 mcg/day, adjusted based on TSH levels. Carbimazole and Propylthiouracil are used for hyperthyroidism, not hypothyroidism. Liothyronine is not recommended for routine use due to a lack of evidence and higher cost. Observation is inappropriate as the patient is symptomatic and biochemically hypothyroid. Clinical pearl: 'Levothyroxine lifts the low thyroid state.'",
+    "mnemonic": "Levothyroxine Lifts",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779299960417_9",
+    "topic": "Acute Coronary Syndrome Management",
+    "category": "all",
+    "question": "A 60-year-old man presents with central chest pain radiating to his left arm. ECG shows ST elevation in the anterior leads. He is 90 minutes away from a PCI-capable hospital. According to NICE guidelines, what is the most appropriate immediate management step?",
+    "options": [
+      "Administer aspirin and transfer for PCI",
+      "Administer thrombolysis",
+      "Start intravenous nitroglycerin",
+      "Administer a beta-blocker",
+      "Give oxygen therapy"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to administer aspirin and transfer for PCI. NICE NG185 recommends primary PCI within 120 minutes of diagnosis for STEMI if feasible. Administering aspirin helps reduce clot formation. Thrombolysis is considered if PCI is not available within 120 minutes. Intravenous nitroglycerin and beta-blockers are part of adjunctive therapy but not immediate priorities. Oxygen is only recommended if the patient is hypoxic. Clinical pearl: 'Aspirin and PCI: the STEMI remedy.'",
+    "mnemonic": "Aspirin and PCI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 56-year-old Caucasian man presents to your clinic for blood pressure management. His blood pressure readings over the last three visits have been 150/95 mmHg, 148/92 mmHg, and 152/94 mmHg. He has no significant past medical history and is currently not on any medication. According to NICE guidelines, what is the most appropriate initial treatment for this patient?",
+    "options": [
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Calcium channel blocker",
+      "Thiazide-like diuretic",
+      "Lifestyle modification only"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'ACE inhibitor'. According to NICE NG136 (2023), for a Caucasian patient under 55 years old, the first-line treatment for hypertension is an ACE inhibitor or an ARB. This patient, being 56, falls just outside the age bracket where a CCB would be the first choice, but given he is Caucasian, ACE inhibitors are still considered appropriate. The elevated blood pressure readings confirm a diagnosis of hypertension, justifying pharmacological intervention. \nThe option 'Beta-blocker' is incorrect as they are not first-line for hypertension unless there are other indications such as angina or heart failure. 'Calcium channel blocker' is typically used in patients over 55 years or of Black African or Caribbean descent. 'Thiazide-like diuretic' is usually considered at step 3 unless contraindications to other drugs exist. 'Lifestyle modification only' would not be sufficient given his BP readings. Remember the mnemonic 'A-C-D': ACE-i for <55, CCB for >55, and Diuretic at step 3.",
+    "mnemonic": "A-C-D: ACE-i for <55, CCB for >55, Diuretic at step 3",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_1",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 65-year-old woman presents with central chest pain radiating to her left arm, which started 2 hours ago. ECG shows ST elevation in the inferior leads. She has no contraindications to medications. What is the next best step in her management?",
+    "options": [
+      "Thrombolysis",
+      "Aspirin 300 mg stat",
+      "Primary PCI",
+      "Beta-blocker",
+      "Morphine"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Primary PCI'. Based on NICE NG185 (2020), for a patient with a STEMI presenting within 12 hours of symptom onset, primary PCI is the preferred management if it can be performed within 120 minutes of first medical contact. This patient presented 2 hours ago, making her an ideal candidate for PCI. \n'Thrombolysis' is considered when PCI is not available within the recommended window. 'Aspirin 300 mg stat' is an essential part of the management but is not the next immediate step when PCI is available. 'Beta-blocker' and 'Morphine' are adjuncts in the management of myocardial infarction but are not the definitive treatment for restoring coronary perfusion. Always prioritize timely revascularization with PCI when available within the guideline-directed timeframe.",
+    "mnemonic": "PCI: Priority for Coronary Intervention in STEMI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_2",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 28-year-old woman with newly diagnosed asthma presents with wheezing and shortness of breath. She uses a salbutamol inhaler as needed. According to the latest NICE guidelines, what should be the next step in her management following her diagnosis?",
+    "options": [
+      "Continue salbutamol alone",
+      "Add a LABA",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
+      "Switch to oral corticosteroids",
+      "Add leukotriene receptor antagonist"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C — switch to as-needed ICS/formoterol (AIR therapy).\n\nNICE NG245 (November 2024) specifies that the preferred initial step for adults currently on SABA-only treatment is AIR (anti-inflammatory reliever) therapy: a combined low-dose ICS/formoterol inhaler taken as needed. With each use it provides both bronchodilation and anti-inflammatory protection, replacing the need for a separate salbutamol reliever. SABA-only treatment is explicitly no longer acceptable at any stage under NG245.\n\nNote: Adding a regular low-dose ICS preventer alongside SABA (Track 1 of NG245) is also clinically valid. However, when AIR therapy is an option it is the preferred NG245 approach — and the expected exam answer.\n\nLABA monotherapy is contraindicated in asthma without ICS cover. Oral corticosteroids are reserved for acute severe exacerbations, not for routine step-up management. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapy at Step 2 or beyond, not first-line preventers.",
+    "mnemonic": "ICS First: Inhaled Corticosteroids for Start",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_3",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes and established cardiovascular disease is on metformin. His HbA1c remains above target at 58 mmol/mol. According to NICE guidelines, what is the most appropriate medication to add to his regimen?",
+    "options": [
+      "Sulfonylurea",
+      "DPP-4 inhibitor",
+      "SGLT-2 inhibitor",
+      "GLP-1 receptor agonist",
+      "Thiazolidinedione"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'SGLT-2 inhibitor'. NICE NG28 (2022) advises the addition of an SGLT-2 inhibitor (e.g., empagliflozin) for patients with type 2 diabetes and established cardiovascular disease when HbA1c is not controlled with metformin alone. SGLT-2 inhibitors have shown benefits in both blood glucose control and cardiovascular outcomes. \n'Sulfonylurea' increases the risk of hypoglycemia and is not preferred when alternatives with cardiovascular benefits exist. 'DPP-4 inhibitor' does not provide the same level of cardiovascular protection. 'GLP-1 receptor agonist' is an option, particularly if BMI is ≥35, but SGLT-2 inhibitors are prioritized for cardiovascular disease. 'Thiazolidinedione' is not preferred due to side effects like weight gain and fluid retention. Remember the mnemonic 'SGLT-2: Sugar and Glycemia Lowering, Targets CV too'.",
+    "mnemonic": "SGLT-2: Sugar and Glycemia Lowering, Targets CV too",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_4",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 68-year-old man with moderate COPD presents with increasing breathlessness. He is currently on salbutamol inhaler as needed. Spirometry shows an FEV₁ of 60% predicted. What is the most appropriate next step in his management?",
+    "options": [
+      "Add a LABA",
+      "Add a LAMA",
+      "Switch to ICS + LABA",
+      "Start oral theophylline",
+      "Refer for pulmonary rehabilitation"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Add a LAMA'. According to NICE NG115 (2018), for patients with moderate COPD, if symptoms are not controlled with a SABA, a LAMA is recommended to improve symptoms and reduce exacerbations. This patient’s FEV₁ indicates moderate COPD, and breathlessness suggests the need for further pharmacological intervention. \n'Add a LABA' is not incorrect, but the choice between LABA or LAMA should consider the patient’s symptom profile and previous exacerbations. 'Switch to ICS + LABA' is considered if the patient has frequent exacerbations. 'Start oral theophylline' is not first-line due to side effects. 'Refer for pulmonary rehabilitation' is useful but does not replace the need for optimized pharmacotherapy. Remember, 'LAMA for Long-term Maintenance in COPD'.",
+    "mnemonic": "LAMA for Long-term Maintenance in COPD",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_5",
+    "topic": "Anticoagulation in Atrial Fibrillation",
+    "category": "all",
+    "question": "A 72-year-old man with a history of hypertension and recent onset of atrial fibrillation is evaluated for stroke prevention. His CHA₂DS₂-VASc score is 3. What is the most appropriate anticoagulation strategy?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Dabigatran",
+      "Clopidogrel",
+      "No anticoagulation"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Dabigatran'. According to NICE NG196 (2021), for patients with atrial fibrillation and a CHA₂DS₂-VASc score of ≥2 in men or ≥3 in women, anticoagulation is recommended. DOACs like dabigatran are preferred over warfarin due to their better safety profile and ease of use. \n'Aspirin' is no longer recommended for stroke prevention in AF due to insufficient efficacy. 'Warfarin' is an option but less favored unless there are contraindications to DOACs. 'Clopidogrel' is not effective for stroke prevention in AF unless there is co-existing coronary artery disease requiring dual antiplatelet therapy. 'No anticoagulation' would leave the patient at high risk for embolic stroke. Remember, 'DOACs are Directly Optimal Anticoagulants for Clots'.",
+    "mnemonic": "DOACs are Directly Optimal Anticoagulants for Clots",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_6",
+    "topic": "Community Acquired Pneumonia",
+    "category": "all",
+    "question": "A 45-year-old woman presents with fever, productive cough, and pleuritic chest pain. Her CURB-65 score is 1. What is the most appropriate antibiotic regimen for her pneumonia?",
+    "options": [
+      "Amoxicillin",
+      "Co-amoxiclav",
+      "Clarithromycin",
+      "Doxycycline",
+      "Levofloxacin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Amoxicillin'. NICE NG250 (2025) suggests that for low severity community-acquired pneumonia (CURB-65 score of 0-1), amoxicillin is the first-line treatment. This patient’s CURB-65 score of 1 indicates low severity, making amoxicillin appropriate. \n'Co-amoxiclav' is reserved for moderate to high severity or when atypical pathogens are suspected. 'Clarithromycin' is used if there is a penicillin allergy or for atypical pathogens. 'Doxycycline' can be an alternative if amoxicillin is unsuitable, but amoxicillin remains first-line. 'Levofloxacin' is not routinely recommended due to its broad spectrum and potential for resistance. Remember, 'Amoxicillin for Average Pneumonia'.",
+    "mnemonic": "Amoxicillin for Average Pneumonia",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_7",
+    "topic": "Hypothyroidism Treatment",
+    "category": "all",
+    "question": "A 50-year-old woman presents with fatigue, weight gain, and cold intolerance. Her TSH is 7.0 mU/L and free T4 is low. What is the most appropriate initial treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Radioactive iodine",
+      "Propranolol",
+      "Watchful waiting"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Levothyroxine'. NICE NG145 (2019) recommends levothyroxine as the first-line treatment for primary hypothyroidism. This patient’s symptoms and laboratory results confirm the diagnosis. Levothyroxine is started at a dose of 25–50 mcg/day, adjusted based on TSH and clinical response. \n'Carbimazole' is used for hyperthyroidism, not hypothyroidism. 'Radioactive iodine' is a treatment for hyperthyroidism or thyroid cancer. 'Propranolol' may alleviate some symptoms of hyperthyroidism, but has no role in hypothyroidism management. 'Watchful waiting' is not appropriate given the symptomatic and biochemical evidence of hypothyroidism. Remember the pearl: 'Levothyroxine for Low Thyroid'.",
+    "mnemonic": "Levothyroxine for Low Thyroid",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_8",
+    "topic": "Management of Rheumatoid Arthritis",
+    "category": "all",
+    "question": "A 38-year-old woman is diagnosed with rheumatoid arthritis. She has morning stiffness and symmetrical joint swelling. What is the most appropriate initial management?",
+    "options": [
+      "NSAIDs",
+      "Methotrexate",
+      "Sulfasalazine",
+      "Hydroxychloroquine",
+      "Prednisolone"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Methotrexate'. NICE NG100 (2018) recommends starting a DMARD such as methotrexate within 3 months of diagnosis to control symptoms and prevent joint damage. Methotrexate is usually the first-line DMARD due to its efficacy and safety profile. \n'NSAIDs' may help with pain but do not modify disease progression. 'Sulfasalazine' and 'Hydroxychloroquine' are also DMARDs but are often added if methotrexate alone is insufficient. 'Prednisolone' is used for short-term symptom control but is not a long-term solution. Remember, 'Methotrexate for Modifying Rheumatoid Arthritis'.",
+    "mnemonic": "Methotrexate for Modifying Rheumatoid Arthritis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779300184715_9",
+    "topic": "Management of Stroke",
+    "category": "all",
+    "question": "A 75-year-old man presents with sudden-onset right-sided weakness and aphasia. CT scan confirms an ischaemic stroke. He arrived at the hospital within 3 hours of symptom onset. What is the most appropriate initial treatment?",
+    "options": [
+      "Aspirin",
+      "Thrombolysis with alteplase",
+      "Clopidogrel",
+      "Heparin",
+      "Surgical thrombectomy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Thrombolysis with alteplase'. NICE NG128 (2019) recommends intravenous thrombolysis with alteplase for eligible patients with ischaemic stroke within 4.5 hours of symptom onset, provided there are no contraindications. This patient’s time of arrival and symptoms align with thrombolysis criteria. \n'Aspirin' is administered after thrombolysis if indicated, but not initially. 'Clopidogrel' is used for secondary prevention post-stroke. 'Heparin' is not recommended for acute ischaemic stroke. 'Surgical thrombectomy' is considered if large vessel occlusion is evident and within 6 hours of onset, but thrombolysis is prioritized initially. Remember, 'Alteplase for Acute stroke in Time'.",
+    "mnemonic": "Alteplase for Acute stroke in Time",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128"
     },
     "difficulty": "intermediate"
   }
