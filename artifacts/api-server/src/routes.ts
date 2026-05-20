@@ -1383,7 +1383,7 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
         : `  Correct: ${correctOption}`;
       const distractors = optionsArr.filter(o => o !== correctOption);
 
-      const prompt = `You are a UK PLAB 1 medical educator. Generate concise, high-yield study aids for this exact question.
+      const prompt = `You are an expert UK PLAB 1 medical educator. Generate concise, high-yield study aids for this EXACT question. Every tip must be SPECIFIC to this question — never generic.
 
 QUESTION: ${question}
 
@@ -1521,25 +1521,25 @@ MNEMONICS:
 TIPS — generate exactly 3, one of each type:
 
 type "pearl" — Clinical Pearl:
-  • Must cite a specific NICE guideline number (e.g. NICE NG136), a BNF drug/dose, or a named clinical threshold (e.g. "eGFR <30", "HbA1c >58 mmol/mol").
-  • State the concrete rule that makes the correct answer right. No vague generalisations.
-  • Example of GOOD: "NICE NG136 recommends amlodipine as step 1 for patients over 55 — ACE inhibitors are step 1 only for under-55s or those with diabetes."
-  • Example of BAD: "Follow NICE guidelines for hypertension management."
+  • MUST cite a specific NICE guideline number (e.g. NICE NG136), a specific BNF drug/dose, or a named clinical threshold (e.g. "eGFR <30", "HbA1c >58 mmol/mol", "PEFR <33%").
+  • State the CONCRETE rule or threshold that makes the correct answer right. Zero vague generalisations.
+  • GOOD example: "NICE NG136 recommends amlodipine as step 1 for patients over 55 — ACE inhibitors are step 1 only for under-55s or those with diabetes."
+  • BAD example: "Follow NICE guidelines for hypertension management." — never say this.
 
 type "exam" — Exam Technique:
-  • Quote or closely paraphrase the exact word(s) or phrase in the question stem that should trigger the correct answer.
-  • Then name the most tempting distractor from the options and explain the one feature that rules it out.
-  • Format: "The key phrase is '…'. Candidates often choose [specific wrong option] because …, but … rules it out."
+  • Quote the EXACT word(s) or phrase from the question stem that clinches the correct answer — use quotation marks around it.
+  • Then name the most tempting distractor from the provided options by its EXACT text and explain the ONE feature that rules it out.
+  • Format strictly: "The key phrase is '…'. Candidates often choose '[exact distractor text]' because …, but [specific feature] rules it out."
   ${distractors.length > 0 ? `The distractors for this question are: ${distractors.join('; ')}` : ''}
 
 type "pitfall" — Common Pitfall:
-  • Name the specific wrong answer option a candidate would likely select (use the exact option text from the list above).
-  • Explain WHY it is wrong — what feature of the stem or guideline makes it incorrect.
-  • Format: "Candidates often choose '[exact wrong option text]' because …, but … makes this incorrect."
+  • Name the single most likely wrong answer using its EXACT option text (do not paraphrase).
+  • Explain WHY it is wrong — the specific guideline clause, drug contraindication, or clinical feature that makes it incorrect.
+  • Format: "Candidates often choose '[exact wrong option text]' because …, but [specific reason with guideline/threshold] makes this incorrect."
 
-Keep each tip to 1-2 tight sentences. Never use phrases like "review the guidelines" or "check the BNF" — give the actual content instead.
+Keep each tip to 1-2 tight sentences. NEVER say "review the guidelines" or "check the BNF" — give the ACTUAL clinical content.
 
-Return STRICT JSON (no other text):
+Return STRICT JSON (no markdown, no other text):
 {
   "mnemonics": [
     { "title": "\\"ACRONYM\\"", "expansion": "A = ..., B = ..., C = ..." }

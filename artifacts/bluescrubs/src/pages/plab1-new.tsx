@@ -83,28 +83,52 @@ const NICE_GUIDELINE_MAP: Record<string, string> = {
   'urinary-tract-infection': 'ng109',
   'sepsis': 'ng51',
   'depression': 'ng222',
-  'anxiety': 'cg113',
-  'schizophrenia': 'cg178',
-  'bipolar': 'cg185',
+  'anxiety-old': 'cg113',
   'epilepsy': 'ng217',
   'parkinsons': 'ng71',
-  'multiple-sclerosis': 'cg186',
   'dementia': 'ng97',
-  'migraine': 'cg150',
-  'osteoporosis': 'cg146',
+  'migraine': 'ng150',
+  'osteoporosis': 'ng187',
   'rheumatoid-arthritis': 'ng100',
-  'gout': 'cg56',
-  'psoriasis': 'cg153',
-  'eczema': 'cg57',
-  'acne': 'ng198',
+  'gout': 'ng219',
+  'psoriasis': 'ng96',
+  'eczema': 'ng190',
+  'atopic-eczema': 'ng190',
+  'acne': 'ng98',
   'ckd': 'ng203',
   'kidney-disease': 'ng203',
-  'aki': 'cg169',
+  'aki': 'ng148',
+  'acute-kidney-injury': 'ng148',
   'appendicitis': 'cg141',
   'gord': 'cg184',
   'ibd': 'ng129',
   'crohns': 'ng129',
   'ulcerative-colitis': 'ng129',
+  'ibs': 'ng61',
+  'irritable-bowel': 'ng61',
+  'coeliac': 'ng20',
+  'coeliac-disease': 'ng20',
+  'upper-gi-bleed': 'ng141',
+  'gi-bleed': 'ng141',
+  'anxiety': 'ng197',
+  'generalised-anxiety': 'ng197',
+  'schizophrenia': 'ng185',
+  'adhd': 'ng87',
+  'eating-disorders': 'ng69',
+  'bipolar': 'ng185',
+  'multiple-sclerosis': 'ng220',
+  'ms': 'ng220',
+  'endometriosis': 'ng73',
+  'menopause': 'ng23',
+  'feverish-illness': 'ng143',
+  'uti-children': 'ng224',
+  'constipation': 'cg99',
+  'safeguarding': 'ng76',
+  'osteoarthritis': 'ng226',
+  'back-pain': 'ng59',
+  'low-back-pain': 'ng59',
+  'melanoma': 'ng14',
+  'prostate-cancer': 'ng131',
   'preeclampsia': 'ng133',
   'antenatal': 'ng201',
 };
@@ -368,15 +392,27 @@ function toNICEVisualUrl(topic: string): string | null {
   return NICE_VISUAL_SUMMARY_MAP[code] ?? null;
 }
 
+// Drug-class topics that have genuine BNF treatment-summary pages (not condition pages)
+const BNF_DRUG_CLASS_SLUGS = new Set([
+  'anticoagulation', 'analgesics', 'antibacterials-principles-of-therapy',
+  'lipid-regulating-drugs', 'antidepressant-drugs', 'hypnotics-and-anxiolytics',
+  'contraception-overview', 'prescribing-in-renal-impairment',
+  'respiratory-tract-infections', 'urinary-tract-infections',
+  'parkinsons-disease-and-related-disorders',
+]);
+
 function toBNFUrl(topic: string): string | null {
   const base = toConditionSlug(topic);
-  // CKS covers condition-level management (asthma, COPD, hypertension…).
-  // BNF treatment summaries are reserved for drug-class topics (anticoagulation, analgesics…).
-  // Always prefer CKS for conditions so we avoid broken BNF condition pages.
+  // Always prefer CKS for conditions — BNF treatment-summary condition pages return 404.
   const cksSlug = CKS_SLUG_MAP[base];
   if (cksSlug) return `https://cks.nice.org.uk/topics/${cksSlug}/`;
   const bnfSlug = BNF_TREATMENT_MAP[base];
-  return bnfSlug ? `https://bnf.nice.org.uk/treatment-summaries/${bnfSlug}/` : null;
+  if (!bnfSlug) return null;
+  // Only link to BNF treatment-summaries for drug-class topics (not condition pages)
+  if (BNF_DRUG_CLASS_SLUGS.has(bnfSlug)) return `https://bnf.nice.org.uk/treatment-summaries/${bnfSlug}/`;
+  // For everything else, fall back to CKS search — avoids broken BNF condition URLs
+  const q = toQ(base.replace(/-/g, ' '));
+  return `https://cks.nice.org.uk/search#q=${q}`;
 }
 
 function toESCUrl(topic: string): string | null {
@@ -555,6 +591,295 @@ const ReferenceLink = ({ text, topic }: { text: string; topic?: string }) => {
     </div>
   );
 };
+
+// ── NICE references per question ─────────────────────────────────────────────
+interface NICERef {
+  title: string;
+  url: string;
+  type: 'NICE Guideline' | 'NICE CKS';
+  guidelineId?: string;
+  relevance: string;
+  primary?: boolean;
+}
+
+function getNICEReferencesForQuestion(question: any): NICERef[] {
+  const cat = (question.category || question.topic || '').toLowerCase();
+  const topic = (question.topic || question.category || '').toLowerCase();
+  const combined = cat + ' ' + topic;
+
+  const refs: NICERef[] = [];
+
+  // Respiratory
+  if (/asthma/i.test(combined)) {
+    refs.push({ title: 'NICE NG80 — Asthma: diagnosis, monitoring and chronic asthma management', url: 'https://www.nice.org.uk/guidance/ng80', type: 'NICE Guideline', guidelineId: 'NG80', relevance: 'Primary guideline for asthma step therapy and diagnosis', primary: true });
+    refs.push({ title: 'NICE CKS — Asthma', url: 'https://cks.nice.org.uk/topics/asthma/', type: 'NICE CKS', relevance: 'Clinical summary of asthma management for primary care' });
+  }
+  if (/copd|obstructive pulmonary/i.test(combined)) {
+    refs.push({ title: 'NICE NG115 — Chronic obstructive pulmonary disease in over 16s', url: 'https://www.nice.org.uk/guidance/ng115', type: 'NICE Guideline', guidelineId: 'NG115', relevance: 'Covers diagnosis, GOLD staging, pharmacological and non-pharmacological management', primary: true });
+    refs.push({ title: 'NICE CKS — COPD', url: 'https://cks.nice.org.uk/topics/chronic-obstructive-pulmonary-disease/', type: 'NICE CKS', relevance: 'Practical prescribing and follow-up summary' });
+  }
+  if (/pneumonia/i.test(combined)) {
+    refs.push({ title: 'NICE NG138 — Pneumonia (community-acquired): antimicrobial prescribing', url: 'https://www.nice.org.uk/guidance/ng138', type: 'NICE Guideline', guidelineId: 'NG138', relevance: 'Antibiotic selection by CURB-65 severity for CAP', primary: true });
+    refs.push({ title: 'NICE CKS — Pneumonia', url: 'https://cks.nice.org.uk/topics/pneumonia/', type: 'NICE CKS', relevance: 'Clinical assessment, severity scoring and referral thresholds' });
+  }
+  if (/\bpe\b|pulmonary embolism|deep.vein|dvt|vte|thromboembolism/i.test(combined)) {
+    refs.push({ title: 'NICE NG158 — Venous thromboembolic diseases: diagnosis, management and thrombophilia testing', url: 'https://www.nice.org.uk/guidance/ng158', type: 'NICE Guideline', guidelineId: 'NG158', relevance: 'Covers Wells score, anticoagulation choice and duration for DVT/PE', primary: true });
+  }
+  if (/bronchiectasis/i.test(combined)) {
+    refs.push({ title: 'NICE NG117 — Bronchiectasis (non-cystic fibrosis)', url: 'https://www.nice.org.uk/guidance/ng117', type: 'NICE Guideline', guidelineId: 'NG117', relevance: 'Diagnosis criteria and airway clearance management', primary: true });
+  }
+
+  // Gastroenterology
+  if (/\bibs\b|irritable bowel/i.test(combined)) {
+    refs.push({ title: 'NICE NG61 — Irritable bowel syndrome in adults', url: 'https://www.nice.org.uk/guidance/ng61', type: 'NICE Guideline', guidelineId: 'NG61', relevance: 'Diagnostic criteria and pharmacological management of IBS', primary: true });
+    refs.push({ title: 'NICE CKS — IBS', url: 'https://cks.nice.org.uk/topics/irritable-bowel-syndrome/', type: 'NICE CKS', relevance: 'Practical prescribing summary for primary care' });
+  }
+  if (/\bibd\b|crohn|ulcerative colitis/i.test(combined)) {
+    refs.push({ title: 'NICE NG129 — Crohn\'s disease and ulcerative colitis', url: 'https://www.nice.org.uk/guidance/ng129', type: 'NICE Guideline', guidelineId: 'NG129', relevance: 'Induction and maintenance therapies for IBD', primary: true });
+  }
+  if (/gord|reflux|oesophageal/i.test(combined)) {
+    refs.push({ title: 'NICE CKS — Gastro-oesophageal reflux disease', url: 'https://cks.nice.org.uk/topics/gastro-oesophageal-reflux-disease/', type: 'NICE CKS', relevance: 'First-line PPI therapy, step-down approach and referral indications', primary: true });
+  }
+  if (/coeliac/i.test(combined)) {
+    refs.push({ title: 'NICE NG20 — Coeliac disease: recognition, assessment and management', url: 'https://www.nice.org.uk/guidance/ng20', type: 'NICE Guideline', guidelineId: 'NG20', relevance: 'Serological testing, biopsy criteria and dietary management', primary: true });
+  }
+  if (/upper gi bleed|gi bleed|haematemesis|melaena/i.test(combined)) {
+    refs.push({ title: 'NICE NG141 — Acute upper gastrointestinal bleeding in over 16s', url: 'https://www.nice.org.uk/guidance/ng141', type: 'NICE Guideline', guidelineId: 'NG141', relevance: 'Rockford/Blatchford scoring, endoscopy timing and resuscitation', primary: true });
+  }
+
+  // Neurology
+  if (/migraine|headache/i.test(combined)) {
+    refs.push({ title: 'NICE NG150 — Headaches in over 12s: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng150', type: 'NICE Guideline', guidelineId: 'NG150', relevance: 'Step therapy for acute migraine treatment and prophylaxis', primary: true });
+    refs.push({ title: 'NICE CKS — Migraine', url: 'https://cks.nice.org.uk/topics/migraine/', type: 'NICE CKS', relevance: 'Acute and preventive treatment options' });
+  }
+  if (/epilepsy|seizure/i.test(combined)) {
+    refs.push({ title: 'NICE NG217 — Epilepsies: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng217', type: 'NICE Guideline', guidelineId: 'NG217', relevance: 'AED selection, monitoring and specialist referral', primary: true });
+  }
+  if (/stroke|\btia\b/i.test(combined)) {
+    refs.push({ title: 'NICE NG128 — Stroke and transient ischaemic attack in over 16s', url: 'https://www.nice.org.uk/guidance/ng128', type: 'NICE Guideline', guidelineId: 'NG128', relevance: 'Acute management, secondary prevention and rehabilitation', primary: true });
+  }
+  if (/multiple sclerosis|\bms\b/i.test(combined)) {
+    refs.push({ title: 'NICE NG220 — Multiple sclerosis in adults', url: 'https://www.nice.org.uk/guidance/ng220', type: 'NICE Guideline', guidelineId: 'NG220', relevance: 'Disease-modifying therapies and relapse management', primary: true });
+  }
+  if (/parkinson/i.test(combined)) {
+    refs.push({ title: 'NICE NG71 — Parkinson\'s disease in adults', url: 'https://www.nice.org.uk/guidance/ng71', type: 'NICE Guideline', guidelineId: 'NG71', relevance: 'First-line dopaminergic therapy and non-motor feature management', primary: true });
+  }
+
+  // Psychiatry
+  if (/depression/i.test(combined)) {
+    refs.push({ title: 'NICE NG222 — Depression in adults: treatment and management', url: 'https://www.nice.org.uk/guidance/ng222', type: 'NICE Guideline', guidelineId: 'NG222', relevance: 'Antidepressant choice, monitoring and stepped-care model', primary: true });
+  }
+  if (/anxiety|gad|generalised anxiety/i.test(combined)) {
+    refs.push({ title: 'NICE NG197 — Generalised anxiety disorder and panic disorder in adults', url: 'https://www.nice.org.uk/guidance/ng197', type: 'NICE Guideline', guidelineId: 'NG197', relevance: 'Stepped-care approach, SSRI/SNRI prescribing and CBT referral', primary: true });
+  }
+  if (/schizophrenia|psychosis/i.test(combined)) {
+    refs.push({ title: 'NICE NG185 — Psychosis and schizophrenia in adults', url: 'https://www.nice.org.uk/guidance/ng185', type: 'NICE Guideline', guidelineId: 'NG185', relevance: 'Antipsychotic choice, clozapine criteria and monitoring', primary: true });
+  }
+  if (/adhd/i.test(combined)) {
+    refs.push({ title: 'NICE NG87 — Attention deficit hyperactivity disorder: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng87', type: 'NICE Guideline', guidelineId: 'NG87', relevance: 'Medication thresholds, stimulant use and follow-up intervals', primary: true });
+  }
+  if (/eating disorder|anorexia|bulimia/i.test(combined)) {
+    refs.push({ title: 'NICE NG69 — Eating disorders: recognition and treatment', url: 'https://www.nice.org.uk/guidance/ng69', type: 'NICE Guideline', guidelineId: 'NG69', relevance: 'Assessment, medical monitoring and psychological intervention', primary: true });
+  }
+
+  // Obstetrics & Gynaecology
+  if (/antenatal|prenatal|pregnancy care/i.test(combined)) {
+    refs.push({ title: 'NICE NG201 — Antenatal care', url: 'https://www.nice.org.uk/guidance/ng201', type: 'NICE Guideline', guidelineId: 'NG201', relevance: 'Routine antenatal schedule, screening and folic acid supplementation', primary: true });
+  }
+  if (/pre.?eclampsia|hypertension in pregnancy/i.test(combined)) {
+    refs.push({ title: 'NICE NG133 — Hypertension in pregnancy: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng133', type: 'NICE Guideline', guidelineId: 'NG133', relevance: 'BP thresholds, labetalol/nifedipine use and eclampsia prevention', primary: true });
+  }
+  if (/endometriosis/i.test(combined)) {
+    refs.push({ title: 'NICE NG73 — Endometriosis: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng73', type: 'NICE Guideline', guidelineId: 'NG73', relevance: 'Hormonal management and surgical referral criteria', primary: true });
+  }
+  if (/menopause/i.test(combined)) {
+    refs.push({ title: 'NICE NG23 — Menopause: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng23', type: 'NICE Guideline', guidelineId: 'NG23', relevance: 'HRT prescribing, contraindications and monitoring', primary: true });
+  }
+  if (/ectopic/i.test(combined)) {
+    refs.push({ title: 'NICE CKS — Ectopic pregnancy', url: 'https://cks.nice.org.uk/topics/ectopic-pregnancy/', type: 'NICE CKS', relevance: 'Diagnosis algorithm, methotrexate and surgical management', primary: true });
+  }
+
+  // Paediatrics
+  if (/fever|feverish|pyrexia/i.test(combined)) {
+    refs.push({ title: 'NICE NG143 — Fever in under 5s: assessment and initial management', url: 'https://www.nice.org.uk/guidance/ng143', type: 'NICE Guideline', guidelineId: 'NG143', relevance: 'Traffic-light system for fever assessment and referral', primary: true });
+  }
+  if (/uti.*child|urinary.*child|child.*uti/i.test(combined)) {
+    refs.push({ title: 'NICE NG224 — Urinary tract infection in under 16s', url: 'https://www.nice.org.uk/guidance/ng224', type: 'NICE Guideline', guidelineId: 'NG224', relevance: 'Antibiotic choice, imaging criteria and follow-up after childhood UTI', primary: true });
+  }
+  if (/constipation.*child|child.*constipation/i.test(combined)) {
+    refs.push({ title: 'NICE CG99 — Constipation in children and young people', url: 'https://www.nice.org.uk/guidance/cg99', type: 'NICE Guideline', guidelineId: 'CG99', relevance: 'Osmotic laxative dosing (Movicol) and disimpaction regimen', primary: true });
+  }
+  if (/safeguarding/i.test(combined)) {
+    refs.push({ title: 'NICE NG76 — Child abuse and neglect', url: 'https://www.nice.org.uk/guidance/ng76', type: 'NICE Guideline', guidelineId: 'NG76', relevance: 'Recognition, referral pathways and documentation requirements', primary: true });
+  }
+
+  // Musculoskeletal
+  if (/osteoporosis|fragility fracture/i.test(combined)) {
+    refs.push({ title: 'NICE NG187 — Osteoporosis: assessing the risk of fragility fracture', url: 'https://www.nice.org.uk/guidance/ng187', type: 'NICE Guideline', guidelineId: 'NG187', relevance: 'FRAX/QFracture thresholds, bisphosphonate prescribing and monitoring', primary: true });
+  }
+  if (/rheumatoid arthritis/i.test(combined)) {
+    refs.push({ title: 'NICE NG100 — Rheumatoid arthritis in adults', url: 'https://www.nice.org.uk/guidance/ng100', type: 'NICE Guideline', guidelineId: 'NG100', relevance: 'DMARD initiation, treat-to-target strategy and biologics criteria', primary: true });
+  }
+  if (/osteoarthritis/i.test(combined)) {
+    refs.push({ title: 'NICE NG226 — Osteoarthritis in over 16s', url: 'https://www.nice.org.uk/guidance/ng226', type: 'NICE Guideline', guidelineId: 'NG226', relevance: 'Exercise, weight management and analgesic step-up in OA', primary: true });
+  }
+  if (/low back|back pain/i.test(combined)) {
+    refs.push({ title: 'NICE NG59 — Low back pain and sciatica in over 16s', url: 'https://www.nice.org.uk/guidance/ng59', type: 'NICE Guideline', guidelineId: 'NG59', relevance: 'Exercise programme, imaging indications and surgical referral', primary: true });
+  }
+  if (/\bgout\b/i.test(combined)) {
+    refs.push({ title: 'NICE NG219 — Gout: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng219', type: 'NICE Guideline', guidelineId: 'NG219', relevance: 'Colchicine for acute attack, allopurinol initiation and urate targets', primary: true });
+  }
+
+  // Dermatology
+  if (/\bacne\b/i.test(combined)) {
+    refs.push({ title: 'NICE NG98 — Acne vulgaris: management', url: 'https://www.nice.org.uk/guidance/ng98', type: 'NICE Guideline', guidelineId: 'NG98', relevance: 'Topical/systemic antibiotic choice and isotretinoin referral', primary: true });
+  }
+  if (/eczema|atopic dermatitis/i.test(combined)) {
+    refs.push({ title: 'NICE NG190 — Eczema in under 12s: atopic eczema', url: 'https://www.nice.org.uk/guidance/ng190', type: 'NICE Guideline', guidelineId: 'NG190', relevance: 'Emollient-first approach and topical corticosteroid potency ladder', primary: true });
+    refs.push({ title: 'NICE CKS — Eczema — atopic', url: 'https://cks.nice.org.uk/topics/eczema-atopic/', type: 'NICE CKS', relevance: 'Management across all ages including adults' });
+  }
+  if (/psoriasis/i.test(combined)) {
+    refs.push({ title: 'NICE NG96 — Psoriasis: assessment and management', url: 'https://www.nice.org.uk/guidance/ng96', type: 'NICE Guideline', guidelineId: 'NG96', relevance: 'PASI scoring, topical/systemic therapy and biologic criteria', primary: true });
+  }
+  if (/melanoma/i.test(combined)) {
+    refs.push({ title: 'NICE NG14 — Melanoma: assessment and management', url: 'https://www.nice.org.uk/guidance/ng14', type: 'NICE Guideline', guidelineId: 'NG14', relevance: 'Two-week-wait referral criteria, staging and adjuvant therapy', primary: true });
+  }
+  if (/scabies/i.test(combined)) {
+    refs.push({ title: 'NICE CKS — Scabies', url: 'https://cks.nice.org.uk/topics/scabies/', type: 'NICE CKS', relevance: 'Permethrin application, household treatment and crusted scabies', primary: true });
+  }
+
+  // Renal & Urology
+  if (/\bckd\b|chronic kidney disease/i.test(combined)) {
+    refs.push({ title: 'NICE NG203 — Chronic kidney disease: assessment and management', url: 'https://www.nice.org.uk/guidance/ng203', type: 'NICE Guideline', guidelineId: 'NG203', relevance: 'eGFR/ACR staging, ACE inhibitor use and referral thresholds', primary: true });
+  }
+  if (/\baki\b|acute kidney injury/i.test(combined)) {
+    refs.push({ title: 'NICE NG148 — Acute kidney injury: prevention, detection and management', url: 'https://www.nice.org.uk/guidance/ng148', type: 'NICE Guideline', guidelineId: 'NG148', relevance: 'KDIGO staging, nephrotoxin avoidance and fluid resuscitation', primary: true });
+  }
+  if (/\buti\b|urinary tract infection/i.test(combined) && !/child/i.test(combined)) {
+    refs.push({ title: 'NICE NG109 — Urinary tract infection (lower) — women', url: 'https://www.nice.org.uk/guidance/ng109', type: 'NICE Guideline', guidelineId: 'NG109', relevance: 'Nitrofurantoin/trimethoprim first-line and culture indications', primary: true });
+  }
+  if (/prostate cancer/i.test(combined)) {
+    refs.push({ title: 'NICE NG131 — Prostate cancer: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng131', type: 'NICE Guideline', guidelineId: 'NG131', relevance: 'PSA interpretation, biopsy criteria and staging', primary: true });
+  }
+  if (/nephrotic/i.test(combined)) {
+    refs.push({ title: 'NICE CKS — Nephrotic syndrome', url: 'https://cks.nice.org.uk/topics/nephrotic-syndrome/', type: 'NICE CKS', relevance: 'Steroid therapy, oedema management and specialist referral', primary: true });
+  }
+
+  // General fallback for common categories
+  if (refs.length === 0) {
+    if (/cardio/i.test(combined)) {
+      refs.push({ title: 'NICE — Cardiovascular guidelines', url: 'https://www.nice.org.uk/search#q=cardiovascular&ndt=Guidance', type: 'NICE Guideline', relevance: 'All NICE cardiovascular guidance', primary: true });
+    } else {
+      const qTopic = question.topic || question.category || '';
+      const niceUrl = toNICEUrl(qTopic);
+      const cksSlug2 = toCKSSlug(qTopic);
+      if (niceUrl) refs.push({ title: `NICE — ${qTopic}`, url: niceUrl, type: 'NICE Guideline', relevance: 'Most relevant NICE guideline for this topic', primary: true });
+      if (cksSlug2) refs.push({ title: `NICE CKS — ${qTopic}`, url: `https://cks.nice.org.uk/topics/${cksSlug2}/`, type: 'NICE CKS', relevance: 'Clinical Knowledge Summary for primary care management' });
+    }
+  }
+
+  // Ensure only the first one with primary=true is marked as primary
+  let foundPrimary = false;
+  return refs.map(r => {
+    if (r.primary && !foundPrimary) { foundPrimary = true; return r; }
+    return { ...r, primary: false };
+  });
+}
+
+// ── Collapsible Revision Panel ────────────────────────────────────────────────
+interface RevisionPanelProps {
+  question: any;
+  tips: { type: string; text: string }[];
+  niceRefs: NICERef[];
+}
+
+function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) {
+  const [open, setOpen] = useState(false);
+
+  const pearl = tips.find(t => t.type === 'pearl');
+  const pitfall = tips.find(t => t.type === 'pitfall');
+  const exam = tips.find(t => t.type === 'exam');
+  const primaryRef = niceRefs.find(r => r.primary) ?? niceRefs[0];
+
+  // Derive the key clue from the exam tip (text after "The key phrase is '")
+  const keyClueMatch = exam?.text.match(/['"](.*?)['"]/);
+  const keyClue = keyClueMatch ? keyClueMatch[1] : null;
+
+  return (
+    <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <button
+        onClick={() => setOpen(prev => !prev)}
+        className="w-full bg-slate-800 hover:bg-slate-700 transition-colors px-4 py-3 flex items-center justify-between"
+        aria-expanded={open}
+      >
+        <span className="text-white font-semibold text-sm flex items-center gap-2">
+          📚 Revision Panel
+        </span>
+        <svg
+          className={`w-4 h-4 text-white transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="bg-white divide-y divide-slate-100">
+          {/* What to Read */}
+          <div className="p-4 border-l-4 border-l-amber-400">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-amber-600 mb-2">📖 What to Read</p>
+            {primaryRef ? (
+              <div className="space-y-1.5">
+                <a
+                  href={primaryRef.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
+                >
+                  {primaryRef.title}
+                  <ExternalLink className="w-3 h-3 flex-shrink-0" />
+                </a>
+                {pearl && (
+                  <>
+                    <p className="text-xs text-slate-600">
+                      <span className="font-medium">Navigate to:</span> the section covering {
+                        pearl.text.match(/NICE (NG|CG|QS)\d+/i)?.[0]
+                          ? `the guidance referenced in ${pearl.text.match(/NICE (NG|CG|QS)\d+/i)![0]}`
+                          : 'the relevant management section'
+                      }
+                    </p>
+                    <p className="text-xs text-slate-700 italic leading-relaxed">
+                      {pearl.text.split('.')[0]}.
+                    </p>
+                  </>
+                )}
+              </div>
+            ) : (
+              <p className="text-xs text-slate-500 italic">No specific guideline reference available for this question.</p>
+            )}
+          </div>
+
+          {/* Common Mistake */}
+          <div className="p-4 border-l-4 border-l-rose-400">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-rose-600 mb-2">⚠️ Common Mistake</p>
+            {pitfall ? (
+              <div className="space-y-1.5">
+                <p className="text-sm text-slate-700 leading-relaxed">{pitfall.text}</p>
+                {keyClue && (
+                  <p className="text-xs text-slate-600 mt-1">
+                    The clue is <strong className="text-slate-900">"{keyClue}"</strong> — this phrase in the stem points directly to the correct answer.
+                  </p>
+                )}
+              </div>
+            ) : (
+              <p className="text-xs text-slate-500 italic">Study tip unavailable — check the explanation above for common errors.</p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function PLAB1New() {
   const { toast } = useToast();
@@ -3474,6 +3799,57 @@ export default function PLAB1New() {
               </div>
             </div>
 
+            {/* NICE References Per Question */}
+            {(() => {
+              const niceRefs = getNICEReferencesForQuestion(currentQuestion);
+              if (niceRefs.length === 0) return null;
+              return (
+                <div className="rounded-xl border border-green-200 shadow-sm overflow-hidden">
+                  <div className="bg-gradient-to-r from-green-700 to-emerald-700 px-4 py-2.5 flex items-center gap-2">
+                    <BookOpen className="w-4 h-4 text-white flex-shrink-0" />
+                    <p className="text-sm font-semibold text-white tracking-wide">NICE References for This Question</p>
+                  </div>
+                  <div className="bg-green-50 p-3 space-y-2">
+                    {niceRefs.map((ref, idx) => (
+                      <div key={idx} className={`bg-white rounded-lg border p-3 ${ref.primary ? 'border-green-400 ring-1 ring-green-200' : 'border-green-200'}`}>
+                        <div className="flex items-start gap-2">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex flex-wrap items-center gap-1.5 mb-1">
+                              {ref.primary && (
+                                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-600 text-white uppercase tracking-wide">Primary Reference</span>
+                              )}
+                              <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium border ${ref.type === 'NICE Guideline' ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'}`}>
+                                {ref.type}
+                              </span>
+                            </div>
+                            <a
+                              href={ref.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2 inline-flex items-center gap-1"
+                            >
+                              {ref.title}
+                              <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                            </a>
+                            <p className="text-xs text-slate-500 mt-1 italic">{ref.relevance}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Collapsible Revision Panel */}
+            {aiStudyTips && aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
+              <RevisionPanel
+                question={currentQuestion}
+                tips={aiStudyTips.tips}
+                niceRefs={getNICEReferencesForQuestion(currentQuestion)}
+              />
+            )}
+
             {/* Study Tips Section — AI-generated tips + mnemonics specific to this question */}
             <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
               {/* Header */}
@@ -3500,11 +3876,43 @@ export default function PLAB1New() {
                 )}
 
                 {aiStudyTips && (() => {
-                  type TipCfg = { label: string; Icon: React.ElementType; iconBg: string; iconColor: string; borderL: string; textColor: string };
+                  type TipCfg = {
+                    label: string;
+                    Icon: React.ElementType;
+                    iconBg: string;
+                    iconColor: string;
+                    borderL: string;
+                    headerBg: string;
+                    textColor: string;
+                  };
                   const tipConfig: Record<string, TipCfg> = {
-                    pearl:   { label: 'Clinical Pearl',  Icon: Star,          iconBg: 'bg-amber-100',   iconColor: 'text-amber-600',  borderL: 'border-l-amber-400',   textColor: 'text-slate-700' },
-                    exam:    { label: 'Exam Technique',  Icon: Target,        iconBg: 'bg-emerald-100', iconColor: 'text-emerald-600',borderL: 'border-l-emerald-400', textColor: 'text-slate-700' },
-                    pitfall: { label: 'Common Pitfall',  Icon: AlertTriangle, iconBg: 'bg-rose-100',    iconColor: 'text-rose-600',   borderL: 'border-l-rose-400',    textColor: 'text-slate-700' },
+                    pearl: {
+                      label: 'Clinical Pearl',
+                      Icon: Star,
+                      iconBg: 'bg-amber-500',
+                      iconColor: 'text-white',
+                      borderL: 'border-l-amber-500',
+                      headerBg: 'text-amber-700',
+                      textColor: 'text-slate-800',
+                    },
+                    exam: {
+                      label: 'Exam Technique',
+                      Icon: Target,
+                      iconBg: 'bg-emerald-500',
+                      iconColor: 'text-white',
+                      borderL: 'border-l-emerald-500',
+                      headerBg: 'text-emerald-700',
+                      textColor: 'text-slate-800',
+                    },
+                    pitfall: {
+                      label: 'Common Pitfall',
+                      Icon: AlertTriangle,
+                      iconBg: 'bg-rose-500',
+                      iconColor: 'text-white',
+                      borderL: 'border-l-rose-500',
+                      headerBg: 'text-rose-700',
+                      textColor: 'text-slate-800',
+                    },
                   };
                   return (
                     <>
@@ -3513,12 +3921,12 @@ export default function PLAB1New() {
                         const cfg = tipConfig[tip.type] ?? tipConfig['pearl'];
                         const { Icon } = cfg;
                         return (
-                          <div key={i} className={`bg-white rounded-lg border border-slate-100 border-l-4 ${cfg.borderL} shadow-sm flex gap-3 p-3`}>
-                            <div className={`flex-shrink-0 w-7 h-7 rounded-md ${cfg.iconBg} flex items-center justify-center mt-0.5`}>
-                              <Icon className={`w-3.5 h-3.5 ${cfg.iconColor}`} />
+                          <div key={i} className={`bg-white rounded-xl border border-slate-100 border-l-4 ${cfg.borderL} shadow-md flex gap-3 p-3.5`}>
+                            <div className={`flex-shrink-0 w-8 h-8 rounded-lg ${cfg.iconBg} flex items-center justify-center mt-0.5 shadow-sm`}>
+                              <Icon className={`w-4 h-4 ${cfg.iconColor}`} />
                             </div>
-                            <div className="min-w-0">
-                              <p className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${cfg.iconColor}`}>{cfg.label}</p>
+                            <div className="min-w-0 flex-1">
+                              <p className={`text-[10px] font-black uppercase tracking-widest mb-1.5 ${cfg.headerBg}`}>{cfg.label}</p>
                               <p className={`text-sm leading-relaxed ${cfg.textColor}`}>{tip.text}</p>
                             </div>
                           </div>
@@ -3529,16 +3937,16 @@ export default function PLAB1New() {
                       {aiStudyTips.mnemonics.length > 0 && (
                         <>
                           {aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
-                            <div className="border-t border-slate-200 my-1" />
+                            <div className="border-t border-slate-200 my-1.5" />
                           )}
                           {aiStudyTips.mnemonics.map((m, i) => (
-                            <div key={i} className="bg-white rounded-lg border border-slate-100 border-l-4 border-l-violet-400 shadow-sm flex gap-3 p-3">
-                              <div className="flex-shrink-0 w-7 h-7 rounded-md bg-violet-100 flex items-center justify-center mt-0.5">
-                                <Brain className="w-3.5 h-3.5 text-violet-600" />
+                            <div key={i} className="bg-white rounded-xl border border-slate-100 border-l-4 border-l-violet-500 shadow-md flex gap-3 p-3.5">
+                              <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-violet-500 flex items-center justify-center mt-0.5 shadow-sm">
+                                <Brain className="w-4 h-4 text-white" />
                               </div>
-                              <div className="min-w-0">
-                                <p className="text-[10px] font-bold uppercase tracking-widest text-violet-600 mb-1">Mnemonic</p>
-                                <p className="text-sm font-semibold text-slate-900 mb-0.5">
+                              <div className="min-w-0 flex-1">
+                                <p className="text-[10px] font-black uppercase tracking-widest text-violet-700 mb-1.5">Mnemonic</p>
+                                <p className="text-sm font-bold text-slate-900 mb-1">
                                   {m.title.replace(/^(Topic|Mnemonic|Tip):\s*/i, '').replace(/^"|"$/g, '')}
                                 </p>
                                 <p className="text-sm text-slate-600 leading-relaxed">{m.expansion}</p>
