@@ -4209,15 +4209,15 @@
     "category": "all",
     "question": "A 30-year-old woman with newly diagnosed asthma is being seen in the clinic. She reports using her salbutamol inhaler three times weekly for symptom relief. She has no other medical conditions and is a non-smoker. What is the appropriate first-line management for her asthma according to the latest NICE guidelines?",
     "options": [
-      "Salbutamol inhaler alone",
-      "Beclometasone inhaler",
-      "Beclometasone + Salbutamol inhaler",
+      "Salbutamol inhaler alone (SABA only)",
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
+      "Regular low-dose beclometasone with salbutamol as needed (Track 1)",
       "Montelukast",
       "Theophylline"
     ],
-    "answer": 2,
-    "explanation": "The NICE NG245 guideline states that all adults with asthma should be started on a regular low-dose inhaled corticosteroid (ICS), such as beclometasone, alongside a SABA reliever like salbutamol. The patient uses her reliever frequently, indicating the need for regular ICS use to control inflammation. Starting beclometasone alone is inadequate as it doesn't address acute relief needs.\n\nMontelukast or theophylline are not first-line therapies and are considered in more complex cases or as add-ons if control is poor. The combination of ICS and SABA from the outset helps manage both prevention and relief effectively.",
-    "mnemonic": "ICS with SABA is a must: 'Asthma = ICS + SABA'",
+    "answer": 1,
+    "explanation": "NICE NG245 (2024) recommends AIR therapy — as-needed low-dose ICS/formoterol — as the preferred initial treatment for newly diagnosed adults with asthma who are currently on SABA alone and have symptoms three or more times a week.\n\nThe previous standard of prescribing regular ICS + SABA (Track 1, Option C) is still clinically valid under NG245, but AIR therapy is now preferred because it combines symptom relief with anti-inflammatory treatment in a single inhaler used only when needed.\n\nSABA-only therapy (Option A) is explicitly discouraged by NG245 due to the risk of over-reliance without inflammation control.\n\nMontelukast and theophylline are add-on therapies used at later steps when first-line treatment fails.",
+    "mnemonic": "Newly diagnosed + SABA >2×/week → AIR first (NG245). Track 1 is an alternative, not preferred.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
       "CKS": "https://cks.nice.org.uk/topics/asthma"
@@ -4841,13 +4841,13 @@
     "options": [
       "Montelukast",
       "Salmeterol",
-      "Beclometasone",
-      "Theophylline",
-      "Ipratropium"
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
+      "Regular low-dose beclometasone with salbutamol as needed (Track 1)",
+      "Theophylline"
     ],
     "answer": 2,
-    "explanation": "The correct answer is Beclometasone. NICE NG245 (2024) recommends that all adults with asthma should have a regular low-dose inhaled corticosteroid (ICS) prescribed alongside a SABA reliever from the outset. Beclometasone is an ICS and should be added to her regimen to control inflammation and prevent symptoms. Montelukast, a leukotriene receptor antagonist, is not first-line but may be considered if symptoms persist despite adequate ICS. Salmeterol, a long-acting beta-agonist, is added only if symptoms continue despite ICS. Theophylline is rarely used due to side effects and drug interactions. Ipratropium, a short-acting anticholinergic, is used in COPD rather than asthma.\n\nRemember: SABA + ICS is the new standard for all asthmatic patients. Reference: NICE NG245.",
-    "mnemonic": "Asthma care: SABA + ICS from the start!",
+    "explanation": "NICE NG245 (2024) recommends AIR therapy — as-needed low-dose ICS/formoterol — as the preferred first-line treatment for adults with asthma currently on SABA alone.\n\nAIR therapy provides both bronchodilation and anti-inflammatory cover in a single inhaler, used only when symptoms occur. This removes the need for a separate regular ICS inhaler and improves adherence compared to the older approach.\n\nOption D (Track 1 — regular beclometasone + salbutamol as needed) is a clinically valid alternative under NG245, but it is not the preferred first step. Use Track 1 when AIR therapy is unsuitable or not tolerated.\n\nSalmeterol (a LABA) is added only if symptoms persist despite initial therapy — it must never be used as a monotherapy. Montelukast is an add-on at a later step. Theophylline is rarely used and not first-line.",
+    "mnemonic": "NG245: SABA-only → AIR first. Track 1 is the backup, not the default.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
       "CKS": "https://cks.nice.org.uk/topics/asthma/"
@@ -7380,6 +7380,216 @@
     "mnemonic": "Alteplase for Acute stroke in Time",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng128"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man presents to your clinic with a blood pressure of 150/95 mmHg on two separate occasions. He has no significant past medical history and does not take any regular medications. According to the latest NICE guidelines, what is the most appropriate first-line treatment for his hypertension?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Indapamide",
+      "Spironolactone",
+      "Losartan"
+    ],
+    "answer": 1,
+    "explanation": "According to NICE NG136, for patients under 55 years old and who are not of Black African or Caribbean origin, the first-line treatment for hypertension is an ACE inhibitor, such as Ramipril. This is because ACE inhibitors are effective in reducing blood pressure and have additional benefits, such as renal protection, particularly in diabetic patients. In this scenario, the patient fits the criteria for initiating Ramipril as the first-line treatment. \n\nAmlodipine, a calcium channel blocker, is recommended for patients over 55 or of Black African or Caribbean origin. Indapamide, a thiazide-like diuretic, is considered at step 3 of treatment. Spironolactone is used at step 4 if potassium levels allow. Losartan, an ARB, is an alternative to ACE inhibitors if they are not tolerated. Remember: ACE inhibitors are 'A' for 'ACE and under 55'.",
+    "mnemonic": "Under 55? ACE it with Ramipril!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with a history of asthma presents with increased wheezing and shortness of breath. She uses her salbutamol inhaler more than three times a week. She is not currently on any other medications. What is the most appropriate next step in her management according to the latest NICE guidelines?",
+    "options": [
+      "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
+      "Increase the dose of salbutamol",
+      "Start regular low-dose ICS with salbutamol as needed (Track 1)",
+      "Prescribe an oral corticosteroid",
+      "Add a leukotriene receptor antagonist"
+    ],
+    "answer": 0,
+    "explanation": "NICE NG245 (2024) recommends AIR therapy (as-needed low-dose ICS/formoterol) as the preferred first-line treatment for adults on SABA-only therapy who have symptoms more than twice a week.\n\nThis replaces the older approach of prescribing regular ICS + SABA. AIR therapy ensures the patient only uses ICS when they need it, reducing over-reliance on SABA and improving adherence.\n\nOption C (Track 1 — regular ICS + SABA) is still a valid alternative under NG245 but is not the preferred first step. It is used when AIR therapy is unsuitable or not tolerated.\n\nIncreasing salbutamol dose does not address the underlying airway inflammation. Oral corticosteroids are reserved for acute severe exacerbations. Leukotriene receptor antagonists (e.g. montelukast) are add-on therapies at a later step.",
+    "mnemonic": "NG245: SABA-only → AIR first (ICS/formoterol as-needed). Track 1 is backup.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes and a BMI of 32 kg/m² is on metformin. His HbA1c remains elevated at 58 mmol/mol. He has no history of cardiovascular disease. What is the next step in his management according to NICE guidelines?",
+    "options": [
+      "Add a DPP-4 inhibitor",
+      "Add an SGLT-2 inhibitor",
+      "Add a GLP-1 receptor agonist",
+      "Switch to insulin therapy",
+      "Increase the dose of metformin"
+    ],
+    "answer": 1,
+    "explanation": "In patients with type 2 diabetes who have an inadequate response to metformin, NICE NG28 recommends adding an SGLT-2 inhibitor, particularly if there is a need for weight management and cardiovascular risk reduction. This is especially relevant given the patient's elevated BMI. SGLT-2 inhibitors, such as empagliflozin or dapagliflozin, are effective in reducing glucose levels and promoting weight loss.\n\nDPP-4 inhibitors are used when SGLT-2 inhibitors are contraindicated. GLP-1 receptor agonists are considered if BMI is ≥35 kg/m² or insulin is not an option. Insulin is not indicated at this stage. Increasing metformin is inappropriate as his HbA1c remains high. A clinical pearl: 'SGLT-2 for sugar and slimming.'",
+    "mnemonic": "SGLT-2 for sugar and slimming.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_3",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 67-year-old woman presents with palpitations and is found to be in atrial fibrillation. She has a CHA₂DS₂-VASc score of 3. What is the most appropriate management to prevent stroke according to NICE guidelines?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Apixaban",
+      "Clopidogrel",
+      "No anticoagulation"
+    ],
+    "answer": 2,
+    "explanation": "NICE NG196 recommends anticoagulation in atrial fibrillation for stroke prevention if the CHA₂DS₂-VASc score is ≥2 for men or ≥3 for women. In this case, the patient has a score of 3, indicating a high risk of stroke. A direct oral anticoagulant (DOAC) such as apixaban is preferred over warfarin due to better safety and efficacy profiles.\n\nAspirin is no longer recommended for stroke prevention in AF. Warfarin is used when DOACs are contraindicated or not tolerated. Clopidogrel is not indicated in AF. 'Apixaban for AF, avoid aspirin.'",
+    "mnemonic": "Apixaban for AF, avoid aspirin.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_4",
+    "topic": "Community-acquired Pneumonia Management",
+    "category": "all",
+    "question": "A 45-year-old man presents with fever, cough, and pleuritic chest pain. His CURB-65 score is 1. What is the recommended antibiotic treatment according to the latest NICE guidelines?",
+    "options": [
+      "Amoxicillin",
+      "Co-amoxiclav",
+      "Doxycycline",
+      "Flucloxacillin",
+      "Levofloxacin"
+    ],
+    "answer": 0,
+    "explanation": "NICE NG250 advises that for low-severity community-acquired pneumonia (CURB-65 score of 0-1), amoxicillin 500 mg TDS for 5 days is the first-line treatment. This recommendation reflects the typical pathogens involved, such as Streptococcus pneumoniae, and the effectiveness of amoxicillin against these bacteria.\n\nCo-amoxiclav is reserved for moderate to high-severity cases. Doxycycline can be used if the patient is allergic to penicillin. Flucloxacillin is used for suspected staphylococcal infections. Levofloxacin is not first-line due to its broad-spectrum coverage. 'Amoxicillin for low CURB.'",
+    "mnemonic": "Amoxicillin for low CURB.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_5",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 35-year-old woman presents with fatigue, weight gain, and dry skin. Her thyroid function tests show TSH 10 mU/L and free T4 8 pmol/L. What is the most appropriate initial treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Liothyronine",
+      "Radioactive iodine",
+      "Propranolol"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG145 recommends levothyroxine as the first-line treatment for primary hypothyroidism. This patient presents with symptoms of hypothyroidism and abnormal thyroid function tests, indicating the need for levothyroxine therapy. The dose is typically started at 25–50 mcg/day and adjusted based on TSH levels.\n\nCarbimazole and radioactive iodine are treatments for hyperthyroidism. Liothyronine is not recommended due to lack of evidence. Propranolol is used for symptom control in hyperthyroidism. 'Levothyroxine for low T4, high TSH.'",
+    "mnemonic": "Levothyroxine for low T4, high TSH.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_6",
+    "topic": "Peptic Ulcer Bleeding",
+    "category": "all",
+    "question": "A 60-year-old man presents with hematemesis and melena. Endoscopy reveals a bleeding duodenal ulcer. What is the next step in management after endoscopic hemostasis?",
+    "options": [
+      "Start oral omeprazole",
+      "Start IV omeprazole",
+      "Administer terlipressin",
+      "Administer oral sucralfate",
+      "Prescribe ranitidine"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG141 recommends initiating high-dose intravenous proton pump inhibitor (PPI) therapy following endoscopic hemostasis for bleeding peptic ulcers to reduce rebleeding risk. IV omeprazole is typically given as an 80 mg bolus followed by 8 mg/hour infusion for 72 hours.\n\nOral omeprazole is not immediately effective. Terlipressin is used for variceal bleeding. Sucralfate is not indicated for acute bleeding. Ranitidine, an H2 antagonist, is less effective than PPIs. 'IV PPI post-endoscopy for ulcer bleed.'",
+    "mnemonic": "IV PPI post-endoscopy for ulcer bleed.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng141",
+      "CKS": "https://cks.nice.org.uk/topics/peptic-ulcer"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_7",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 70-year-old woman is admitted with fever, tachycardia, and confusion. Her blood pressure is 85/55 mmHg. According to the Surviving Sepsis Campaign, what is the immediate management step in the first hour?",
+    "options": [
+      "Administer broad-spectrum antibiotics",
+      "Administer vasopressors",
+      "Perform a lumbar puncture",
+      "Give oral fluids",
+      "Arrange for a CT scan"
+    ],
+    "answer": 0,
+    "explanation": "The Surviving Sepsis Campaign recommends administering broad-spectrum intravenous antibiotics as part of the 'Sepsis Six' within the first hour of recognizing sepsis. Early antibiotic administration is critical in reducing mortality. In this case, the patient's hypotension and confusion suggest septic shock, necessitating immediate antibiotic therapy.\n\nVasopressors are used if hypotension persists after fluid resuscitation. A lumbar puncture is unnecessary initially. Oral fluids are inadequate; IV fluids are required. A CT scan is not prioritized over antibiotics. 'Antibiotics ASAP for sepsis survival.'",
+    "mnemonic": "Antibiotics ASAP for sepsis survival.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_8",
+    "topic": "Acute Coronary Syndrome Management",
+    "category": "all",
+    "question": "A 58-year-old man presents with chest pain and ST elevation in leads II, III, and aVF. He is in a hospital without PCI facilities. What is the most appropriate immediate management?",
+    "options": [
+      "Administer aspirin and transfer for PCI",
+      "Administer thrombolysis",
+      "Administer clopidogrel and await PCI",
+      "Administer sublingual GTN",
+      "Start a beta-blocker"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG185 recommends thrombolysis for ST-elevation myocardial infarction (STEMI) if primary percutaneous coronary intervention (PCI) cannot be performed within 120 minutes of first medical contact. In this scenario, the patient is in a non-PCI hospital, making thrombolysis the most appropriate immediate treatment.\n\nAspirin and transfer for PCI apply if PCI can be arranged within 120 minutes. Clopidogrel is part of dual antiplatelet therapy but does not address the occlusion. GTN and beta-blockers are adjunctive treatments but not first-line for reperfusion. 'Thrombolysis if PCI's not nearby.'",
+    "mnemonic": "Thrombolysis if PCI's not nearby.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779301419236_9",
+    "topic": "Chronic Heart Failure Management",
+    "category": "all",
+    "question": "A 75-year-old man with a history of heart failure with reduced ejection fraction (HFrEF) is on an ACE inhibitor and a beta-blocker but continues to have symptoms. According to the latest NICE guidelines, what is the next step in his management?",
+    "options": [
+      "Add spironolactone",
+      "Add digoxin",
+      "Increase the dose of beta-blocker",
+      "Add an SGLT-2 inhibitor",
+      "Start ivabradine"
+    ],
+    "answer": 0,
+    "explanation": "NICE NG106 recommends adding a mineralocorticoid receptor antagonist (MRA) such as spironolactone for patients with HFrEF who remain symptomatic despite optimal doses of an ACE inhibitor and a beta-blocker. Spironolactone helps in reducing mortality and hospitalisation.\n\nDigoxin is considered later, primarily in patients with atrial fibrillation or persistent symptoms. Increasing beta-blocker dosage is not indicated here. SGLT-2 inhibitors are considered after MRAs in the current guideline. Ivabradine is used if heart rate remains >75 bpm despite beta-blocker therapy. 'Spironolactone for steps in HFrEF.'",
+    "mnemonic": "Spironolactone for steps in HFrEF.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
     },
     "difficulty": "intermediate"
   }
