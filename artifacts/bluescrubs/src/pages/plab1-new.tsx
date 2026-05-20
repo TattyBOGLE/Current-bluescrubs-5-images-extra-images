@@ -111,12 +111,12 @@ const NICE_GUIDELINE_MAP: Record<string, string> = {
 
 // ESC guideline URL path segments — base: https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/{slug}
 const ESC_GUIDELINE_MAP: Record<string, string> = {
-  'heart-failure': 'Heart-Failure',
-  'heart-failure-general-variant': 'Heart-Failure',
-  'heart-failure-with-reduced-ef-first-line-therapy': 'Heart-Failure',
-  'heart-failure-with-reduced-ejection-fraction': 'Heart-Failure',
-  'heart-failure-with-preserved-ejection-fraction': 'Heart-Failure',
-  'chronic-heart-failure': 'Heart-Failure',
+  'heart-failure': 'Acute-and-Chronic-Heart-Failure',
+  'heart-failure-general-variant': 'Acute-and-Chronic-Heart-Failure',
+  'heart-failure-with-reduced-ef-first-line-therapy': 'Acute-and-Chronic-Heart-Failure',
+  'heart-failure-with-reduced-ejection-fraction': 'Acute-and-Chronic-Heart-Failure',
+  'heart-failure-with-preserved-ejection-fraction': 'Acute-and-Chronic-Heart-Failure',
+  'chronic-heart-failure': 'Acute-and-Chronic-Heart-Failure',
   'atrial-fibrillation': 'Atrial-Fibrillation-Guidelines',
   'af': 'Atrial-Fibrillation-Guidelines',
   'acute-coronary-syndromes': 'Acute-Coronary-Syndromes-STEMI-Guidelines',
@@ -469,7 +469,7 @@ function buildDynamicLink(text: string, contextTopic?: string): RefLink | null {
     if (/atrial fibrillation|\bAF\b/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Atrial-Fibrillation-Guidelines', label: 'ESC — Atrial Fibrillation' };
     if (/STEMI|acute coronary|myocardial infarction|\bMI\b/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Acute-Coronary-Syndromes-STEMI-Guidelines', label: 'ESC — ACS / STEMI' };
     if (/dyslipidaemia|lipid|cholesterol/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/ESC-EAS-Guidelines-for-the-management-of-dyslipidaemias', label: 'ESC — Dyslipidaemia' };
-    if (/heart failure/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Heart-Failure', label: 'ESC — Heart Failure' };
+    if (/heart failure/i.test(text)) return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Acute-and-Chronic-Heart-Failure', label: 'ESC — Heart Failure' };
     return { url: 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines', label: hasT ? `ESC — ${rawTopic}` : 'ESC Clinical Practice Guidelines' };
   }
   if (/\bBTS\b|British Thoracic Society/i.test(text)) {
