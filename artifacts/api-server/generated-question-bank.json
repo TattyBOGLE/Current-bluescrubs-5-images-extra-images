@@ -9,13 +9,7 @@
       "Urgent cardiology referral"
     ],
     "answer": 3,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -36,13 +30,7 @@
       "Echocardiogram"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -63,13 +51,7 @@
       "Aspirin and clopidogrel"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is B: ACE inhibitor.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to ACE inhibitor as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Echocardiogram) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Urgent cardiology referral) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -90,13 +72,7 @@
       "Nitrates"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
-      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
-      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
-      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
-      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
-    },
+    "explanation": "The correct answer is C: Aspirin.\n\nThis question tests management of a common cardiovascular presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Aspirin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Beta-blocker) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Urgent cardiology referral) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Aspirin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Nitrates) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg94",
@@ -117,13 +93,7 @@
       "CT pulmonary angiogram"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
-      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
-      "C": "ECG can show heart rhythm issues but not heart function.",
-      "D": "BNP levels can indicate heart failure but do not provide structural information.",
-      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
-    },
+    "explanation": "The correct answer is B: Echocardiogram.\n\nThis question tests management of a common cardiovascular presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Chest X-ray) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (ECG) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Blood tests for BNP levels) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (CT pulmonary angiogram) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Echo for Edema and Exertional dyspnea",
     "mnemonic": "Echo for Edema and Exertional dyspnea",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
@@ -144,13 +114,7 @@
       "EEG"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
-      "B": "MRI is useful but not the initial choice in acute settings.",
-      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
-      "D": "Not relevant to the acute presentation.",
-      "E": "Not indicated for headache and neck stiffness."
-    },
+    "explanation": "The correct answer is A: CT scan of the head.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the head as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (CT scan of the head) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Lumbar puncture) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Carotid Doppler ultrasound) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (EEG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT for Crisis",
     "mnemonic": "CT for Crisis",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng127",
@@ -171,13 +135,7 @@
       "Beta-blockers"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Used for hyperthyroidism, not indicated here.",
-      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
-      "C": "Used for hyperthyroidism, not indicated here.",
-      "D": "Considered in certain cases of hyperthyroidism.",
-      "E": "Used symptomatically in hyperthyroidism."
-    },
+    "explanation": "The correct answer is B: Levothyroxine.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Levothyroxine as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Carbimazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Levothyroxine) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Radioactive iodine therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Thyroidectomy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Beta-blockers) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Levothyroxine for Low",
     "mnemonic": "Levothyroxine for Low",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng145",
@@ -198,13 +156,7 @@
       "Liver biopsy"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
-      "B": "CT is useful but usually not the first step for jaundice workup.",
-      "C": "MRI is more detailed but not typically first-line.",
-      "D": "Used for therapeutic as well as diagnostic purposes.",
-      "E": "Invasive and not first-line for initial evaluation."
-    },
+    "explanation": "The correct answer is A: Abdominal ultrasound.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Abdominal ultrasound as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Abdominal ultrasound) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (CT scan of the abdomen) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (MRI of the liver) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (ERCP) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Liver biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: U for Ultrasound in Uro",
     "mnemonic": "U for Ultrasound in Uro",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng104",
@@ -225,13 +177,7 @@
       "Vancomycin"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Amoxicillin is commonly used for community-acquired pneumonia.",
-      "B": "Ciprofloxacin is not first-line for pneumonia.",
-      "C": "Metronidazole targets anaerobes, not typically used in pneumonia.",
-      "D": "Erythromycin can be used if there is penicillin allergy.",
-      "E": "Vancomycin is used for MRSA, not typical cases."
-    },
+    "explanation": "The correct answer is A: Amoxicillin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Amoxicillin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Amoxicillin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Ciprofloxacin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Metronidazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Erythromycin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Vancomycin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Amoxicillin for Airway",
     "mnemonic": "Amoxicillin for Airway",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng138",
@@ -252,13 +198,7 @@
       "Dietary modification"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Metformin is not appropriate for acute management of hyperglycemia.",
-      "B": "Insulin is necessary for immediate control of high blood glucose.",
-      "C": "Sulfonylureas are not used in acute scenarios.",
-      "D": "Thiazolidinediones are not used in acute management.",
-      "E": "Dietary changes are part of long-term management."
-    },
+    "explanation": "The correct answer is B: Insulin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Insulin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Metformin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Insulin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Sulfonylureas) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Thiazolidinediones) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Dietary modification) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Insulin for Immediate",
     "mnemonic": "Insulin for Immediate",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng17",
@@ -279,13 +219,7 @@
       "Urgent PCI"
     ],
     "answer": 4,
-    "explanation": {
-      "A": "Antiplatelets are part of management but not immediate intervention.",
-      "B": "Thrombolysis is an option if PCI is not available.",
-      "C": "Used in management but not immediate intervention for STEMI.",
-      "D": "Used symptomatically but not as immediate definitive management.",
-      "E": "Urgent PCI is the most effective immediate management for STEMI."
-    },
+    "explanation": "The correct answer is E: Urgent PCI.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent PCI as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Thrombolysis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Nitrate infusion) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Urgent PCI) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nClinical pearl: PCI for Prompt Coronary Intervention",
     "mnemonic": "PCI for Prompt Coronary Intervention",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng94",
@@ -306,13 +240,7 @@
       "Corticosteroids"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Paracetamol is recommended for fever and pain in dengue.",
-      "B": "NSAIDs can increase bleeding risk in dengue.",
-      "C": "Aspirin is contraindicated due to bleeding risk.",
-      "D": "Antibiotics are not effective against viral infections.",
-      "E": "Steroids are not indicated in uncomplicated dengue."
-    },
+    "explanation": "The correct answer is A: Paracetamol.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Paracetamol as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Paracetamol) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Ibuprofen) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Aspirin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Antibiotics) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Corticosteroids) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Tylenol for Tropics",
     "mnemonic": "Tylenol for Tropics",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -333,13 +261,7 @@
       "Chest X-ray"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "CT scan is the initial investigation to rule out hemorrhagic stroke.",
-      "B": "MRI provides more detail but is not usually the first step.",
-      "C": "Carotid imaging is useful but not first-line in acute stroke.",
-      "D": "EEG is not indicated in acute stroke settings.",
-      "E": "Chest X-ray is not relevant to the acute neurological presentation."
-    },
+    "explanation": "The correct answer is A: CT scan of the brain.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the brain as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (CT scan of the brain) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Carotid Doppler ultrasound) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Electroencephalogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Chest X-ray) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT for Clot Check",
     "mnemonic": "CT for Clot Check",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng128",
@@ -360,13 +282,7 @@
       "Intravenous fluids"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Steroids are used but not the immediate first step.",
-      "B": "High-flow oxygen can suppress respiratory drive in COPD patients.",
-      "C": "Bronchodilator nebulization provides immediate relief.",
-      "D": "Antibiotics may be needed but not the immediate action.",
-      "E": "IV fluids are not indicated as immediate management for respiratory distress."
-    },
+    "explanation": "The correct answer is C: Bronchodilator nebulization.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Bronchodilator nebulization as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Oral corticosteroids) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (High-flow oxygen therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Bronchodilator nebulization) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (Antibiotic therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Intravenous fluids) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Nebulizers for Narrow Airways",
     "mnemonic": "Nebulizers for Narrow Airways",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng115",
@@ -387,13 +303,7 @@
       "Troponin I levels"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Chest X-ray may show mediastinal widening but is not the most sensitive test.",
-      "B": "CT Angiography is the investigation of choice for suspected aortic dissection.",
-      "C": "Echocardiogram can provide information on cardiac function but not for initial diagnosis of aortic dissection.",
-      "D": "ECG can rule out myocardial infarction but is not specific for aortic dissection.",
-      "E": "Troponin is useful for myocardial infarction, not for diagnosing aortic dissection."
-    },
+    "explanation": "The correct answer is B: CT Angiography.\n\nThis question tests management of a common cardiovascular presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT Angiography as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Chest X-ray) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (CT Angiography) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Echocardiogram) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Electrocardiogram) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Troponin I levels) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT for Crisis Tear (CT for Aortic Dissection)",
     "mnemonic": "CT for Crisis Tear (CT for Aortic Dissection)",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -414,13 +324,7 @@
       "Compression stockings"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Aspirin is not effective for acute management of DVT.",
-      "B": "Warfarin is used for long-term anticoagulation but not for initial treatment.",
-      "C": "Low-molecular-weight heparin is the initial treatment of choice for DVT.",
-      "D": "Thrombolysis is reserved for massive DVT or pulmonary embolism with hemodynamic instability.",
-      "E": "Compression stockings are used as adjunctive therapy, not initial treatment."
-    },
+    "explanation": "The correct answer is C: Low-molecular-weight heparin.\n\nThis question tests management of a common cardiovascular presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Low-molecular-weight heparin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Warfarin) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Low-molecular-weight heparin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (Thrombolysis) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Compression stockings) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Heparin for Help (Heparin for acute DVT)",
     "mnemonic": "Heparin for Help (Heparin for acute DVT)",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -441,13 +345,7 @@
       "Urgent cardiology referral"
     ],
     "answer": 3,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -468,13 +366,7 @@
       "Echocardiogram"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -495,13 +387,7 @@
       "Aspirin and clopidogrel"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is B: ACE inhibitor.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to ACE inhibitor as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -522,13 +408,7 @@
       "Nitrates"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
-      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
-      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
-      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
-      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
-    },
+    "explanation": "The correct answer is C: Aspirin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Aspirin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Aspirin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Nitrates) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg94",
@@ -549,13 +429,7 @@
       "CT pulmonary angiogram"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
-      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
-      "C": "ECG can show heart rhythm issues but not heart function.",
-      "D": "BNP levels can indicate heart failure but do not provide structural information.",
-      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
-    },
+    "explanation": "The correct answer is B: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Chest X-ray) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (ECG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Blood tests for BNP levels) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (CT pulmonary angiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Echo for Edema and Exertional dyspnea",
     "mnemonic": "Echo for Edema and Exertional dyspnea",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
@@ -576,13 +450,7 @@
       "EEG"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
-      "B": "MRI is useful but not the initial choice in acute settings.",
-      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
-      "D": "Not relevant to the acute presentation.",
-      "E": "Not indicated for headache and neck stiffness."
-    },
+    "explanation": "The correct answer is A: CT scan of the head.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the head as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (CT scan of the head) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Lumbar puncture) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Carotid Doppler ultrasound) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (EEG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT for Crisis",
     "mnemonic": "CT for Crisis",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng127",
@@ -603,13 +471,7 @@
       "Beta-blockers"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Used for hyperthyroidism, not indicated here.",
-      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
-      "C": "Used for hyperthyroidism, not indicated here.",
-      "D": "Considered in certain cases of hyperthyroidism.",
-      "E": "Used symptomatically in hyperthyroidism."
-    },
+    "explanation": "The correct answer is B: Levothyroxine.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Levothyroxine as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Carbimazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Levothyroxine) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Radioactive iodine therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Thyroidectomy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Beta-blockers) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Levothyroxine for Low",
     "mnemonic": "Levothyroxine for Low",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng145",
@@ -630,13 +492,7 @@
       "Liver biopsy"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
-      "B": "CT is useful but usually not the first step for jaundice workup.",
-      "C": "MRI is more detailed but not typically first-line.",
-      "D": "Used for therapeutic as well as diagnostic purposes.",
-      "E": "Invasive and not first-line for initial evaluation."
-    },
+    "explanation": "The correct answer is A: Abdominal ultrasound.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Abdominal ultrasound as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Abdominal ultrasound) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (CT scan of the abdomen) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (MRI of the liver) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (ERCP) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Liver biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: U for Ultrasound in Uro",
     "mnemonic": "U for Ultrasound in Uro",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng104",
@@ -657,13 +513,7 @@
       "Urgent cardiology referral"
     ],
     "answer": 3,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -684,13 +534,7 @@
       "Echocardiogram"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -711,13 +555,7 @@
       "Aspirin and clopidogrel"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is B: ACE inhibitor.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to ACE inhibitor as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -738,13 +576,7 @@
       "Nitrates"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
-      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
-      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
-      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
-      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
-    },
+    "explanation": "The correct answer is C: Aspirin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Aspirin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Aspirin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Nitrates) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg94",
@@ -765,13 +597,7 @@
       "CT pulmonary angiogram"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
-      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
-      "C": "ECG can show heart rhythm issues but not heart function.",
-      "D": "BNP levels can indicate heart failure but do not provide structural information.",
-      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
-    },
+    "explanation": "The correct answer is B: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Chest X-ray) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (ECG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Blood tests for BNP levels) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (CT pulmonary angiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Echo for Edema and Exertional dyspnea",
     "mnemonic": "Echo for Edema and Exertional dyspnea",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
@@ -792,13 +618,7 @@
       "EEG"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
-      "B": "MRI is useful but not the initial choice in acute settings.",
-      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
-      "D": "Not relevant to the acute presentation.",
-      "E": "Not indicated for headache and neck stiffness."
-    },
+    "explanation": "The correct answer is A: CT scan of the head.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the head as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (CT scan of the head) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Lumbar puncture) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Carotid Doppler ultrasound) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (EEG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT for Crisis",
     "mnemonic": "CT for Crisis",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng127",
@@ -819,13 +639,7 @@
       "Beta-blockers"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Used for hyperthyroidism, not indicated here.",
-      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
-      "C": "Used for hyperthyroidism, not indicated here.",
-      "D": "Considered in certain cases of hyperthyroidism.",
-      "E": "Used symptomatically in hyperthyroidism."
-    },
+    "explanation": "The correct answer is B: Levothyroxine.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Levothyroxine as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Carbimazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Levothyroxine) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Radioactive iodine therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Thyroidectomy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Beta-blockers) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Levothyroxine for Low",
     "mnemonic": "Levothyroxine for Low",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng145",
@@ -846,13 +660,7 @@
       "Liver biopsy"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
-      "B": "CT is useful but usually not the first step for jaundice workup.",
-      "C": "MRI is more detailed but not typically first-line.",
-      "D": "Used for therapeutic as well as diagnostic purposes.",
-      "E": "Invasive and not first-line for initial evaluation."
-    },
+    "explanation": "The correct answer is A: Abdominal ultrasound.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Abdominal ultrasound as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Abdominal ultrasound) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (CT scan of the abdomen) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (MRI of the liver) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (ERCP) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Liver biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: U for Ultrasound in Uro",
     "mnemonic": "U for Ultrasound in Uro",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng104",
@@ -873,13 +681,7 @@
       "Urgent cardiology referral"
     ],
     "answer": 3,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -900,13 +702,7 @@
       "Echocardiogram"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -927,13 +723,7 @@
       "Aspirin and clopidogrel"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is B: ACE inhibitor.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to ACE inhibitor as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -954,13 +744,7 @@
       "Nitrates"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
-      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
-      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
-      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
-      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
-    },
+    "explanation": "The correct answer is C: Aspirin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Aspirin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Aspirin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Nitrates) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg94",
@@ -981,13 +765,7 @@
       "Beta-blocker"
     ],
     "answer": 3,
-    "explanation": {
-      "A": "Aspirin is important but not the immediate life-saving procedure.",
-      "B": "Nitroglycerin can relieve pain but doesn't address the underlying issue.",
-      "C": "Morphine alleviates pain but doesn't open the occluded artery.",
-      "D": "Primary PCI is the gold standard in managing ST-elevation myocardial infarction.",
-      "E": "Beta-blockers are used for rate control, not immediate intervention."
-    },
+    "explanation": "The correct answer is D: Primary percutaneous coronary intervention.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Primary percutaneous coronary intervention as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Oral aspirin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Sublingual nitroglycerin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Intravenous morphine) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Primary percutaneous coronary intervention) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: MONA-B: Morphine, Oxygen, Nitroglycerin, Aspirin, Beta-blocker",
     "mnemonic": "MONA-B: Morphine, Oxygen, Nitroglycerin, Aspirin, Beta-blocker",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg167",
@@ -1008,13 +786,7 @@
       "CT angiography"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Mannitol is used for raised intracranial pressure but not immediately indicated here.",
-      "B": "Nimodipine is used to prevent vasospasm but not the first step.",
-      "C": "Immediate neurosurgical evaluation is crucial for potential intervention.",
-      "D": "Labetalol is for hypertension control, not direct treatment of hemorrhage.",
-      "E": "CT angiography is diagnostic, not therapeutic."
-    },
+    "explanation": "The correct answer is C: Immediate neurosurgical referral.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Immediate neurosurgical referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Intravenous mannitol) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Oral nimodipine) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Immediate neurosurgical referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (Intravenous labetalol) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (CT angiography) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: SAH = Neurosurgery ASAP",
     "mnemonic": "SAH = Neurosurgery ASAP",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng127",
@@ -1035,13 +807,7 @@
       "Metastatic carcinoma"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Non-Hodgkin's lymphoma presents similarly but has different histological findings.",
-      "B": "Hodgkin's lymphoma often presents with these symptoms and characteristic lymphadenopathy.",
-      "C": "Tuberculosis could cause similar symptoms but usually with more systemic signs.",
-      "D": "Sarcoidosis could cause lymphadenopathy but typically with pulmonary involvement.",
-      "E": "Metastatic carcinoma is less likely without a primary tumor history."
-    },
+    "explanation": "The correct answer is B: Hodgkin's lymphoma.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Hodgkin's lymphoma as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Non-Hodgkin's lymphoma) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Hodgkin's lymphoma) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Tuberculosis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Sarcoidosis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Metastatic carcinoma) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: B symptoms: Fever, Night sweats, Weight loss = Hodgkin's",
     "mnemonic": "B symptoms: Fever, Night sweats, Weight loss = Hodgkin's",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng52",
@@ -1062,13 +828,7 @@
       "Urine culture"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Trimethoprim can be used but is not the first-line in some regions due to resistance.",
-      "B": "Nitrofurantoin is a first-line treatment for uncomplicated UTIs.",
-      "C": "Ceftriaxone is reserved for severe cases or when oral treatment is not possible.",
-      "D": "Ciprofloxacin is not first-line due to resistance concerns.",
-      "E": "Urine culture is useful but not immediate management."
-    },
+    "explanation": "The correct answer is B: Oral nitrofurantoin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Oral nitrofurantoin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Oral trimethoprim) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Oral nitrofurantoin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Intravenous ceftriaxone) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Oral ciprofloxacin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Urine culture) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Nitro for Nitrofurantoin = First-line for UTI",
     "mnemonic": "Nitro for Nitrofurantoin = First-line for UTI",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng109",
@@ -1089,13 +849,7 @@
       "PET scan"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Bronchoscopy is diagnostic but not the immediate next investigation.",
-      "B": "CT scan is used to further characterize the mass and assess for metastasis.",
-      "C": "Sputum cytology can be used but is less definitive and not the next step.",
-      "D": "MRI is not typically used for initial lung mass investigation.",
-      "E": "PET scan is for staging rather than initial investigation."
-    },
+    "explanation": "The correct answer is B: CT scan of the chest.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the chest as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Bronchoscopy with biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (CT scan of the chest) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Sputum cytology) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (MRI of the chest) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (PET scan) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT first for Chest Tumors",
     "mnemonic": "CT first for Chest Tumors",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng122",
@@ -1116,13 +870,7 @@
       "Chronic kidney disease"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Microcytic anemia is most commonly due to iron deficiency.",
-      "B": "Vitamin B12 deficiency leads to macrocytic anemia.",
-      "C": "Folate deficiency also leads to macrocytic anemia.",
-      "D": "Thalassemia minor can cause microcytic anemia but is less common.",
-      "E": "Chronic kidney disease usually causes normocytic anemia."
-    },
+    "explanation": "The correct answer is A: Iron deficiency anemia.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Iron deficiency anemia as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Iron deficiency anemia) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Vitamin B12 deficiency) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Folate deficiency) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Thalassemia minor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Chronic kidney disease) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Iron Deficiency = Microcytic",
     "mnemonic": "Iron Deficiency = Microcytic",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng8",
@@ -1143,13 +891,7 @@
       "Chronic kidney disease"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Type 1 diabetes presents at a younger age, often with more acute symptoms.",
-      "B": "Type 2 diabetes is common in older adults with gradual onset symptoms.",
-      "C": "Diabetes insipidus presents with similar symptoms but normal blood glucose.",
-      "D": "Hyperthyroidism might cause polyuria but not elevated glucose.",
-      "E": "Chronic kidney disease would not cause elevated glucose."
-    },
+    "explanation": "The correct answer is B: Diabetes mellitus type 2.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Diabetes mellitus type 2 as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Diabetes mellitus type 1) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Diabetes mellitus type 2) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Diabetes insipidus) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Hyperthyroidism) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Chronic kidney disease) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: 2x Poly = Type 2 Diabetes",
     "mnemonic": "2x Poly = Type 2 Diabetes",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng28",
@@ -1170,13 +912,7 @@
       "Supportive care only"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Ciprofloxacin is effective against Salmonella and used for severe cases.",
-      "B": "Metronidazole is not effective against Salmonella.",
-      "C": "Amoxicillin is not the preferred treatment for Salmonella.",
-      "D": "Azithromycin is an alternative but not first-line.",
-      "E": "Supportive care is important but antibiotics are needed for severe infection."
-    },
+    "explanation": "The correct answer is A: Oral ciprofloxacin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Oral ciprofloxacin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Oral ciprofloxacin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Oral metronidazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Oral amoxicillin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Oral azithromycin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Supportive care only) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Cipro for Salmonella",
     "mnemonic": "Cipro for Salmonella",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng103",
@@ -1197,13 +933,7 @@
       "Corticosteroid injection"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "MRI is useful for ligamentous injury but not first-line.",
-      "B": "Arthroscopy is invasive and not initial management for acute injury.",
-      "C": "RICE is the best initial management for acute soft tissue injury.",
-      "D": "NSAIDs can help with pain but are part of conservative management.",
-      "E": "Steroid injection is not indicated in acute traumatic injuries."
-    },
+    "explanation": "The correct answer is C: Rest, ice, compression, elevation (RICE).\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Rest, ice, compression, elevation (RICE) as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (MRI of the knee) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Knee arthroscopy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Rest, ice, compression, elevation (RICE)) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (Oral nonsteroidal anti-inflammatory drugs) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Corticosteroid injection) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: RICE for Acute Injury",
     "mnemonic": "RICE for Acute Injury",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng39",
@@ -1224,13 +954,7 @@
       "Heparin infusion"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Alteplase is the treatment of choice for ischemic stroke within the therapeutic window.",
-      "B": "Aspirin is used for secondary prevention, not acute treatment.",
-      "C": "Warfarin is for long-term anticoagulation, not acute treatment.",
-      "D": "Endarterectomy is for carotid stenosis, not acute ischemic stroke.",
-      "E": "Heparin is not used acutely in ischemic stroke due to risk of bleeding."
-    },
+    "explanation": "The correct answer is A: Intravenous alteplase.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Intravenous alteplase as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Intravenous alteplase) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Aspirin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Oral warfarin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Carotid endarterectomy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Heparin infusion) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: tPA for Stroke ASAP",
     "mnemonic": "tPA for Stroke ASAP",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng128",
@@ -1251,13 +975,7 @@
       "Electroencephalogram"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "A CT scan is the initial investigation of choice to rule out a subarachnoid hemorrhage.",
-      "B": "Lumbar puncture is performed if CT scan is negative and suspicion remains.",
-      "C": "MRI is not the first-line investigation in acute settings for this presentation.",
-      "D": "Blood cultures are indicated for suspected infections, not primary investigation here.",
-      "E": "EEG is used for seizure evaluation, not for acute headache with neck stiffness."
-    },
+    "explanation": "The correct answer is A: CT scan of the head.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the head as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (CT scan of the head) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Lumbar puncture) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Blood cultures) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Electroencephalogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT first for SAH",
     "mnemonic": "CT first for SAH",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg176",
@@ -1278,13 +996,7 @@
       "Bronchoscopy with biopsy"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Empirical antibiotics are not appropriate without confirmed bacterial infection.",
-      "B": "Surgical resection is not first line for infectious causes.",
-      "C": "Anti-tuberculous therapy should be started based on the high suspicion of TB.",
-      "D": "CT scan may provide more detail but is not the immediate step in management.",
-      "E": "Bronchoscopy can be useful but not the initial management step."
-    },
+    "explanation": "The correct answer is C: Initiate anti-tuberculous therapy.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Initiate anti-tuberculous therapy as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Start empirical antibiotics) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Refer for surgical resection) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Initiate anti-tuberculous therapy) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (Request CT scan of the chest) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Bronchoscopy with biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Cavitating TB needs therapy",
     "mnemonic": "Cavitating TB needs therapy",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng33",
@@ -1305,13 +1017,7 @@
       "Revascularization surgery"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Intravenous heparin is crucial to prevent further thromboembolism.",
-      "B": "Warfarin is used for long-term anticoagulation, not immediate management.",
-      "C": "CT angiography is diagnostic but not the immediate management in acute ischemia.",
-      "D": "Doppler ultrasound can confirm diagnosis but does not address acute management.",
-      "E": "Revascularization may be needed but requires anticoagulation first."
-    },
+    "explanation": "The correct answer is A: Intravenous heparin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Intravenous heparin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Intravenous heparin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Oral warfarin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (CT angiography) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Doppler ultrasound) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Revascularization surgery) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Heparin for acute limb ischemia",
     "mnemonic": "Heparin for acute limb ischemia",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg180",
@@ -1332,13 +1038,7 @@
       "Cefalexin"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Trimethoprim is effective but not the first choice for complicated UTIs in diabetes.",
-      "B": "Ciprofloxacin is reserved for more severe cases due to resistance issues.",
-      "C": "Nitrofurantoin is appropriate for uncomplicated UTIs and is safe in diabetes.",
-      "D": "Amoxicillin is not the first choice due to resistance patterns.",
-      "E": "Cefalexin is used but not preferred first-line in uncomplicated cases."
-    },
+    "explanation": "The correct answer is C: Nitrofurantoin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Nitrofurantoin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Trimethoprim) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Ciprofloxacin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Nitrofurantoin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (Amoxicillin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Cefalexin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Nitrofurantoin for UTIs",
     "mnemonic": "Nitrofurantoin for UTIs",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng109",
@@ -1359,13 +1059,7 @@
       "Serum folate"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Serum ferritin is key to assess iron deficiency as a cause of microcytic anemia.",
-      "B": "Vitamin B12 is assessed for macrocytic anemia, not microcytic.",
-      "C": "Bone marrow biopsy is invasive and not first-line for microcytic anemia.",
-      "D": "Hemoglobin electrophoresis is used for thalassemia and sickle cell disease.",
-      "E": "Folate is assessed for macrocytic anemia, not microcytic."
-    },
+    "explanation": "The correct answer is A: Serum ferritin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Serum ferritin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Serum ferritin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Serum vitamin B12) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Bone marrow biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Hemoglobin electrophoresis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Serum folate) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Ferritin first for iron deficiency",
     "mnemonic": "Ferritin first for iron deficiency",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng8",
@@ -1386,13 +1080,7 @@
       "Albumin infusion"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Lactulose is used to treat hepatic encephalopathy by reducing ammonia levels.",
-      "B": "Rifaximin is an adjunct to lactulose but not initial treatment.",
-      "C": "IV fluids may support but do not address the underlying encephalopathy.",
-      "D": "Vitamin K is used for coagulopathy, not encephalopathy.",
-      "E": "Albumin is used for ascites or hepatorenal syndrome, not encephalopathy."
-    },
+    "explanation": "The correct answer is A: Lactulose.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Lactulose as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Lactulose) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Rifaximin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Intravenous fluids) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Vitamin K) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Albumin infusion) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Lactulose for liver confusion",
     "mnemonic": "Lactulose for liver confusion",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng50",
@@ -1413,13 +1101,7 @@
       "Giant cell arteritis"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Retinal detachment presents with floaters and a shadow over vision, not cherry-red spot.",
-      "B": "Central retinal artery occlusion presents with a pale retina and cherry-red spot.",
-      "C": "Vein occlusion leads to a 'blood and thunder' fundus, not a cherry-red spot.",
-      "D": "Acute glaucoma presents with painful red eye, not pale retina.",
-      "E": "Giant cell arteritis can cause vision loss but not with a cherry-red spot."
-    },
+    "explanation": "The correct answer is B: Central retinal artery occlusion.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Central retinal artery occlusion as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Retinal detachment) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Central retinal artery occlusion) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Central retinal vein occlusion) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Acute angle-closure glaucoma) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Giant cell arteritis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Cherry-red spot in CRAO",
     "mnemonic": "Cherry-red spot in CRAO",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng81",
@@ -1440,13 +1122,7 @@
       "Co-amoxiclav"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Amoxicillin is often first-line for COPD exacerbations with bacterial infection.",
-      "B": "Clarithromycin can be used but is not first-line in this scenario.",
-      "C": "Ciprofloxacin is reserved for more severe infections due to resistance.",
-      "D": "Doxycycline is an alternative but not the first choice.",
-      "E": "Co-amoxiclav is used for more severe exacerbations or resistance."
-    },
+    "explanation": "The correct answer is A: Amoxicillin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Amoxicillin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Amoxicillin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Clarithromycin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Ciprofloxacin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Doxycycline) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Co-amoxiclav) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Amoxicillin for COPD exacerbation",
     "mnemonic": "Amoxicillin for COPD exacerbation",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng114",
@@ -1467,13 +1143,7 @@
       "Osteoarthritis"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Rheumatoid arthritis involves symmetric joint pain, not crystals.",
-      "B": "Gout is characterized by needle-shaped crystals with negative birefringence.",
-      "C": "Pseudogout shows positively birefringent rhomboid crystals.",
-      "D": "Septic arthritis involves infection signs, not crystals.",
-      "E": "Osteoarthritis does not present with crystals in synovial fluid."
-    },
+    "explanation": "The correct answer is B: Gout.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Gout as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Rheumatoid arthritis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Gout) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Pseudogout) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Septic arthritis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Osteoarthritis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Gout: Needle crystals, negative birefringence",
     "mnemonic": "Gout: Needle crystals, negative birefringence",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng65",
@@ -1494,13 +1164,7 @@
       "Diverticulitis"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Ulcerative colitis involves continuous colonic inflammation, not skip lesions.",
-      "B": "Crohn's disease is characterized by transmural inflammation and skip lesions.",
-      "C": "IBS involves functional symptoms without inflammatory changes.",
-      "D": "Celiac disease affects the small intestine, not with skip lesions.",
-      "E": "Diverticulitis involves localized inflammation, not transmural."
-    },
+    "explanation": "The correct answer is B: Crohn's disease.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Crohn's disease as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Ulcerative colitis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Crohn's disease) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Irritable bowel syndrome) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Celiac disease) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Diverticulitis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Crohn's: Transmural, skip lesions",
     "mnemonic": "Crohn's: Transmural, skip lesions",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng129",
@@ -1521,13 +1185,7 @@
       "Urgent neurology referral"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "MRI may be considered later if diagnosis remains unclear.",
-      "B": "Lumbar puncture is indicated to rule out subarachnoid hemorrhage.",
-      "C": "Antibiotics are not indicated without evidence of infection.",
-      "D": "CT angiography is not the initial step after a normal CT scan.",
-      "E": "Referral is not immediate unless further intervention is required."
-    },
+    "explanation": "The correct answer is B: Lumbar puncture.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Lumbar puncture as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Lumbar puncture) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Intravenous antibiotics) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (CT angiography) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Urgent neurology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Headache-Neck-Lumbar",
     "mnemonic": "Headache-Neck-Lumbar",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg150"
@@ -1547,13 +1205,7 @@
       "Age-related macular degeneration"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Characteristic pale retina with cherry-red spot indicates CRAO.",
-      "B": "Retinal detachment usually presents with visual field loss or shadow.",
-      "C": "Vitreous hemorrhage presents with floaters and blurred vision.",
-      "D": "Acute glaucoma involves eye pain and redness, not specific findings.",
-      "E": "AMD involves gradual loss, not sudden vision loss."
-    },
+    "explanation": "The correct answer is A: Central retinal artery occlusion.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Central retinal artery occlusion as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Central retinal artery occlusion) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Retinal detachment) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Vitreous hemorrhage) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Acute glaucoma) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Age-related macular degeneration) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Cherry-CRAO",
     "mnemonic": "Cherry-CRAO",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng81"
@@ -1573,13 +1225,7 @@
       "Cefalexin"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Ciprofloxacin is reserved for complicated infections.",
-      "B": "Nitrofurantoin is first-line for uncomplicated UTI in women.",
-      "C": "Trimethoprim can be used but resistance is an issue.",
-      "D": "Amoxicillin is not typically first choice due to resistance.",
-      "E": "Cefalexin is not first-line for simple UTIs."
-    },
+    "explanation": "The correct answer is B: Nitrofurantoin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Nitrofurantoin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Ciprofloxacin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Nitrofurantoin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Trimethoprim) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Amoxicillin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Cefalexin) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Nitrate-Nitrofurantoin",
     "mnemonic": "Nitrate-Nitrofurantoin",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng109"
@@ -1599,13 +1245,7 @@
       "Haloperidol"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Thiamine is crucial in Wernicke's encephalopathy due to alcohol use.",
-      "B": "Diazepam is used for alcohol withdrawal but not for this condition.",
-      "C": "Glucose should not be given before thiamine.",
-      "D": "Lorazepam is used for withdrawal symptoms.",
-      "E": "Haloperidol is not used for acute Wernicke's encephalopathy."
-    },
+    "explanation": "The correct answer is A: Thiamine.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Thiamine as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Thiamine) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Diazepam) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Glucose) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Lorazepam) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Haloperidol) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Ataxia-Alcohol-Thiamine",
     "mnemonic": "Ataxia-Alcohol-Thiamine",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/qs11"
@@ -1625,13 +1265,7 @@
       "Pulmonary rehabilitation"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Inhaled corticosteroids are used in more severe or frequent exacerbations.",
-      "B": "LABAs are appropriate for moderate COPD to improve symptoms.",
-      "C": "Short-acting agents are for immediate symptom relief.",
-      "D": "Oral steroids are for acute exacerbations, not maintenance.",
-      "E": "Pulmonary rehab is part of comprehensive management but not first-line."
-    },
+    "explanation": "The correct answer is B: Long-acting beta agonists.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Long-acting beta agonists as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Inhaled corticosteroids) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Long-acting beta agonists) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Short-acting anticholinergics) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Oral corticosteroids) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Pulmonary rehabilitation) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: COPD-LABA",
     "mnemonic": "COPD-LABA",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng115"
@@ -1651,13 +1285,7 @@
       "Propylthiouracil"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Liothyronine is not typically first-line for hypothyroidism.",
-      "B": "Levothyroxine is the standard treatment for hypothyroidism.",
-      "C": "Radioiodine is used for hyperthyroidism.",
-      "D": "Carbimazole is used for hyperthyroidism, not hypothyroidism.",
-      "E": "Propylthiouracil is used for hyperthyroidism, not hypothyroidism."
-    },
+    "explanation": "The correct answer is B: Levothyroxine.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Levothyroxine as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Liothyronine) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Levothyroxine) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Radioiodine therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Carbimazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Propylthiouracil) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Hypo-Levo",
     "mnemonic": "Hypo-Levo",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng145"
@@ -1677,13 +1305,7 @@
       "Corticosteroids"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "NSAIDs are first-line for relieving pain in pericarditis.",
-      "B": "Beta-blockers are not indicated for pericarditis.",
-      "C": "ACE inhibitors are used for heart failure, not pericarditis.",
-      "D": "Aspirin and clopidogrel are for ACS, not pericarditis.",
-      "E": "Corticosteroids are reserved for refractory cases."
-    },
+    "explanation": "The correct answer is A: NSAIDs.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to NSAIDs as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (NSAIDs) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blockers) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitors) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Corticosteroids) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Pericarditis-NSAIDs",
     "mnemonic": "Pericarditis-NSAIDs",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg95"
@@ -1703,13 +1325,7 @@
       "Coeliac disease"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Ulcerative colitis affects the colon with uniform inflammation.",
-      "B": "Cobblestone appearance is characteristic of Crohn's disease.",
-      "C": "IBS does not cause structural changes like cobblestone mucosa.",
-      "D": "Diverticulitis involves pouches, not cobblestone.",
-      "E": "Coeliac disease affects the small intestine, not colon with cobblestone."
-    },
+    "explanation": "The correct answer is B: Crohn's disease.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Crohn's disease as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Ulcerative colitis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Crohn's disease) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Irritable bowel syndrome) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Diverticulitis) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Coeliac disease) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Cobblestone-Crohn's",
     "mnemonic": "Cobblestone-Crohn's",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng129"
@@ -1729,13 +1345,7 @@
       "Transthoracic needle biopsy"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Bronchoscopy is used for central lesions, not peripheral.",
-      "B": "CT scan is crucial for further characterizing the nodule.",
-      "C": "Sputum cytology is less sensitive for peripheral lesions.",
-      "D": "PET scan is used for staging rather than initial assessment.",
-      "E": "Biopsy may follow after imaging confirms suspicious features."
-    },
+    "explanation": "The correct answer is B: CT scan of the chest.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the chest as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Bronchoscopy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (CT scan of the chest) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Sputum cytology) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (PET scan) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Transthoracic needle biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Nodule-CT-Chest",
     "mnemonic": "Nodule-CT-Chest",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng122"
@@ -6713,13 +6323,7 @@
       "Urgent cardiology referral"
     ],
     "answer": 3,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -6740,13 +6344,7 @@
       "Echocardiogram"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -6767,13 +6365,7 @@
       "Aspirin and clopidogrel"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is B: ACE inhibitor.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to ACE inhibitor as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -6794,13 +6386,7 @@
       "Nitrates"
     ],
     "answer": 2,
-    "explanation": {
-      "A": "Beta-blockers are used in myocardial infarction, but not as the initial management.",
-      "B": "An urgent cardiology referral is important, but aspirin administration is more immediate.",
-      "C": "Aspirin is given immediately to reduce mortality in acute myocardial infarction.",
-      "D": "ACE inhibitors are useful in long-term management post-MI but not immediately.",
-      "E": "Nitrates can relieve chest pain but do not address the underlying issue directly."
-    },
+    "explanation": "The correct answer is C: Aspirin.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Aspirin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Aspirin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Nitrates) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg94",
@@ -6821,13 +6407,7 @@
       "CT pulmonary angiogram"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Chest X-ray can show signs of heart failure but is not as diagnostic as an echocardiogram.",
-      "B": "Echocardiogram is the best initial test to assess heart function and structure in suspected heart failure.",
-      "C": "ECG can show heart rhythm issues but not heart function.",
-      "D": "BNP levels can indicate heart failure but do not provide structural information.",
-      "E": "CT pulmonary angiogram is used for suspected pulmonary embolism, not heart failure."
-    },
+    "explanation": "The correct answer is B: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Chest X-ray) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (ECG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Blood tests for BNP levels) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (CT pulmonary angiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Echo for Edema and Exertional dyspnea",
     "mnemonic": "Echo for Edema and Exertional dyspnea",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
@@ -6848,13 +6428,7 @@
       "EEG"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and the need to exclude subarachnoid hemorrhage.",
-      "B": "MRI is useful but not the initial choice in acute settings.",
-      "C": "Performed if CT is negative and suspicion for subarachnoid hemorrhage remains.",
-      "D": "Not relevant to the acute presentation.",
-      "E": "Not indicated for headache and neck stiffness."
-    },
+    "explanation": "The correct answer is A: CT scan of the head.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the head as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (CT scan of the head) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Lumbar puncture) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Carotid Doppler ultrasound) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (EEG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT for Crisis",
     "mnemonic": "CT for Crisis",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng127",
@@ -6875,13 +6449,7 @@
       "Beta-blockers"
     ],
     "answer": 1,
-    "explanation": {
-      "A": "Used for hyperthyroidism, not indicated here.",
-      "B": "Levothyroxine is the treatment of choice for hypothyroidism.",
-      "C": "Used for hyperthyroidism, not indicated here.",
-      "D": "Considered in certain cases of hyperthyroidism.",
-      "E": "Used symptomatically in hyperthyroidism."
-    },
+    "explanation": "The correct answer is B: Levothyroxine.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Levothyroxine as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Carbimazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Levothyroxine) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Radioactive iodine therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Thyroidectomy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Beta-blockers) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Levothyroxine for Low",
     "mnemonic": "Levothyroxine for Low",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng145",
@@ -6902,13 +6470,7 @@
       "Liver biopsy"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Abdominal ultrasound is the initial imaging modality for jaundice.",
-      "B": "CT is useful but usually not the first step for jaundice workup.",
-      "C": "MRI is more detailed but not typically first-line.",
-      "D": "Used for therapeutic as well as diagnostic purposes.",
-      "E": "Invasive and not first-line for initial evaluation."
-    },
+    "explanation": "The correct answer is A: Abdominal ultrasound.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Abdominal ultrasound as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Abdominal ultrasound) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (CT scan of the abdomen) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (MRI of the liver) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (ERCP) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Liver biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: U for Ultrasound in Uro",
     "mnemonic": "U for Ultrasound in Uro",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng104",
@@ -6929,13 +6491,7 @@
       "Urgent cardiology referral"
     ],
     "answer": 3,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
@@ -6956,13 +6512,7 @@
       "Echocardiogram"
     ],
     "answer": 0,
-    "explanation": {
-      "A": "Clinical reasoning based on presentation and guidelines",
-      "B": "Consider differential diagnosis and risk factors",
-      "C": "Evaluate symptoms in clinical context",
-      "D": "Apply evidence-based medicine principles",
-      "E": "Follow established clinical protocols"
-    },
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
     "mnemonic": "Clinical reasoning approach",
     "links": {
       "NICE": "https://www.nice.org.uk",
