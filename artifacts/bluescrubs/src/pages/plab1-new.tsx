@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch";
 import { 
   Clock, CheckCircle, XCircle, BookOpen, Target, Brain, 
-  ArrowRight, ArrowLeft, RotateCcw, Award, TrendingUp, Home, Globe, Languages, ExternalLink, Volume2, Lightbulb, Plus, MessageCircle, FileText, X, Star, Flame, Trophy
+  ArrowRight, ArrowLeft, RotateCcw, Award, TrendingUp, Home, Globe, Languages, ExternalLink, Volume2, Lightbulb, Plus, MessageCircle, FileText, X, Star, Flame, Trophy, AlertTriangle
 } from "lucide-react";
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { apiRequest } from "@/lib/queryClient";
@@ -1463,6 +1463,7 @@ export default function PLAB1New() {
           question: question.question || question.question_scenario || '',
           category: question.category || question.topic,
           correctOption,
+          options: optionsArr,
           questionId: qid,
         }),
       });
@@ -3465,72 +3466,85 @@ export default function PLAB1New() {
             </div>
 
             {/* Study Tips Section — AI-generated tips + mnemonics specific to this question */}
-            <div className="rounded-xl border border-blue-200 overflow-hidden">
+            <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
               {/* Header */}
-              <div className="bg-blue-600 px-4 py-2.5 flex items-center gap-2">
+              <div className="bg-gradient-to-r from-indigo-600 to-blue-600 px-4 py-2.5 flex items-center gap-2">
                 <Lightbulb className="w-4 h-4 text-white flex-shrink-0" />
-                <p className="text-sm font-semibold text-white tracking-wide">Study Tips &amp; Mnemonics</p>
+                <p className="text-sm font-semibold text-white tracking-wide">High-Yield Tips &amp; Mnemonics</p>
               </div>
 
-              <div className="bg-blue-50 p-4 space-y-3">
+              <div className="bg-slate-50 p-3 space-y-2.5">
                 {/* Loading skeleton */}
                 {aiStudyTipsLoading && !aiStudyTips && (
-                  <div className="space-y-3 animate-pulse">
+                  <div className="space-y-2.5 animate-pulse">
                     {[1, 2, 3, 4].map(i => (
-                      <div key={i} className="bg-white border border-blue-100 rounded-lg p-3">
-                        <div className="h-3 bg-blue-200 rounded w-1/3 mb-2" />
-                        <div className="h-2.5 bg-blue-100 rounded w-full mb-1" />
-                        <div className="h-2.5 bg-blue-100 rounded w-3/4" />
+                      <div key={i} className="bg-white border border-slate-100 rounded-lg p-3 flex gap-3 shadow-sm">
+                        <div className="w-7 h-7 bg-slate-200 rounded-md flex-shrink-0" />
+                        <div className="flex-1">
+                          <div className="h-2.5 bg-slate-200 rounded w-1/3 mb-2" />
+                          <div className="h-2 bg-slate-100 rounded w-full mb-1" />
+                          <div className="h-2 bg-slate-100 rounded w-4/5" />
+                        </div>
                       </div>
                     ))}
                   </div>
                 )}
 
                 {aiStudyTips && (() => {
-                  const tipConfig: Record<string, { label: string; icon: string; bg: string; border: string; labelColor: string; textColor: string }> = {
-                    pearl:   { label: 'Clinical Pearl',  icon: '⭐', bg: 'bg-amber-50',  border: 'border-amber-300', labelColor: 'text-amber-700', textColor: 'text-amber-900' },
-                    exam:    { label: 'Exam Technique',  icon: '🎯', bg: 'bg-green-50',  border: 'border-green-300', labelColor: 'text-green-700', textColor: 'text-green-900' },
-                    pitfall: { label: 'Common Pitfall',  icon: '⚠️', bg: 'bg-red-50',    border: 'border-red-300',   labelColor: 'text-red-700',   textColor: 'text-red-900'   },
+                  type TipCfg = { label: string; Icon: React.ElementType; iconBg: string; iconColor: string; borderL: string; textColor: string };
+                  const tipConfig: Record<string, TipCfg> = {
+                    pearl:   { label: 'Clinical Pearl',  Icon: Star,          iconBg: 'bg-amber-100',   iconColor: 'text-amber-600',  borderL: 'border-l-amber-400',   textColor: 'text-slate-700' },
+                    exam:    { label: 'Exam Technique',  Icon: Target,        iconBg: 'bg-emerald-100', iconColor: 'text-emerald-600',borderL: 'border-l-emerald-400', textColor: 'text-slate-700' },
+                    pitfall: { label: 'Common Pitfall',  Icon: AlertTriangle, iconBg: 'bg-rose-100',    iconColor: 'text-rose-600',   borderL: 'border-l-rose-400',    textColor: 'text-slate-700' },
                   };
                   return (
                     <>
                       {/* Tips (pearl / exam / pitfall) */}
                       {aiStudyTips.tips && aiStudyTips.tips.length > 0 && aiStudyTips.tips.map((tip, i) => {
                         const cfg = tipConfig[tip.type] ?? tipConfig['pearl'];
+                        const { Icon } = cfg;
                         return (
-                          <div key={i} className={`rounded-lg border ${cfg.bg} ${cfg.border} p-3`}>
-                            <p className={`text-xs font-bold uppercase tracking-wide mb-1 ${cfg.labelColor}`}>
-                              {cfg.icon} {cfg.label}
-                            </p>
-                            <p className={`text-sm leading-relaxed ${cfg.textColor}`}>{tip.text}</p>
+                          <div key={i} className={`bg-white rounded-lg border border-slate-100 border-l-4 ${cfg.borderL} shadow-sm flex gap-3 p-3`}>
+                            <div className={`flex-shrink-0 w-7 h-7 rounded-md ${cfg.iconBg} flex items-center justify-center mt-0.5`}>
+                              <Icon className={`w-3.5 h-3.5 ${cfg.iconColor}`} />
+                            </div>
+                            <div className="min-w-0">
+                              <p className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${cfg.iconColor}`}>{cfg.label}</p>
+                              <p className={`text-sm leading-relaxed ${cfg.textColor}`}>{tip.text}</p>
+                            </div>
                           </div>
                         );
                       })}
 
-                      {/* Divider before mnemonics if both present */}
-                      {aiStudyTips.mnemonics.length > 0 && aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
-                        <div className="border-t border-blue-200 pt-1" />
-                      )}
-
                       {/* Mnemonics */}
-                      {aiStudyTips.mnemonics.length > 0 && aiStudyTips.mnemonics.map((m, i) => (
-                        <div key={i} className="bg-white border border-yellow-300 rounded-lg p-3 border-l-4 border-l-yellow-400">
-                          <p className="text-xs font-bold uppercase tracking-wide text-yellow-700 mb-1">
-                            🧠 Mnemonic
-                          </p>
-                          <p className="text-sm font-semibold text-gray-900 mb-0.5">
-                            {m.title.replace(/^(Topic|Mnemonic|Tip):\s*/i, '').replace(/^"|"$/g, '')}
-                          </p>
-                          <p className="text-sm text-gray-700 leading-relaxed">{m.expansion}</p>
-                        </div>
-                      ))}
+                      {aiStudyTips.mnemonics.length > 0 && (
+                        <>
+                          {aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
+                            <div className="border-t border-slate-200 my-1" />
+                          )}
+                          {aiStudyTips.mnemonics.map((m, i) => (
+                            <div key={i} className="bg-white rounded-lg border border-slate-100 border-l-4 border-l-violet-400 shadow-sm flex gap-3 p-3">
+                              <div className="flex-shrink-0 w-7 h-7 rounded-md bg-violet-100 flex items-center justify-center mt-0.5">
+                                <Brain className="w-3.5 h-3.5 text-violet-600" />
+                              </div>
+                              <div className="min-w-0">
+                                <p className="text-[10px] font-bold uppercase tracking-widest text-violet-600 mb-1">Mnemonic</p>
+                                <p className="text-sm font-semibold text-slate-900 mb-0.5">
+                                  {m.title.replace(/^(Topic|Mnemonic|Tip):\s*/i, '').replace(/^"|"$/g, '')}
+                                </p>
+                                <p className="text-sm text-slate-600 leading-relaxed">{m.expansion}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </>
+                      )}
                     </>
                   );
                 })()}
 
                 {/* Shown only if AI is unavailable and tips never loaded */}
                 {!aiStudyTipsLoading && (!aiStudyTips || (aiStudyTips.mnemonics.length === 0 && (!aiStudyTips.tips || aiStudyTips.tips.length === 0))) && (
-                  <p className="text-xs text-blue-500 italic text-center py-2">
+                  <p className="text-xs text-slate-400 italic text-center py-3">
                     Study tips will appear here once generated.
                   </p>
                 )}

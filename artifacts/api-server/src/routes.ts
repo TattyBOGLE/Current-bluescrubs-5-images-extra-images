@@ -1354,7 +1354,7 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
   const studyTipsCache = new Map<string, any>();
 
   app.post('/api/study-tips', async (req, res) => {
-    const { question, category, correctOption, questionId } = req.body || {};
+    const { question, category, correctOption, options, questionId } = req.body || {};
     if (!question || !correctOption) {
       return res.status(400).json({ error: 'question and correctOption are required' });
     }
@@ -1376,10 +1376,20 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
         baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
       });
 
-      const prompt = `You are a UK PLAB 1 medical educator. Generate 2-3 mnemonics to help a student remember the key concept in this question.
+      const labels = ['A', 'B', 'C', 'D', 'E'];
+      const optionsArr: string[] = Array.isArray(options) ? options : [];
+      const optionsBlock = optionsArr.length > 0
+        ? optionsArr.map((o, i) => `  ${labels[i] ?? i}: ${o}${o === correctOption ? ' ✓ CORRECT' : ''}`).join('\n')
+        : `  Correct: ${correctOption}`;
+      const distractors = optionsArr.filter(o => o !== correctOption);
+
+      const prompt = `You are a UK PLAB 1 medical educator. Generate concise, high-yield study aids for this exact question.
 
 QUESTION: ${question}
-CORRECT ANSWER: ${correctOption}
+
+OPTIONS:
+${optionsBlock}
+
 SPECIALTY: ${category || 'General Medicine'}
 
 ════════════════════════════════════
@@ -1500,6 +1510,7 @@ ESTABLISHED MNEMONICS — USE THESE EXACTLY IF RELEVANT. DO NOT MODIFY THEM.
 ════════════════════════════════════
 
 STRICT RULES — FOLLOW PRECISELY:
+MNEMONICS:
 1. CHECK the bank above first. If an established mnemonic applies to this question's topic, USE IT verbatim. Do not paraphrase.
 2. NEVER build a mnemonic using a drug name as one of the letters (e.g. R = Rivaroxaban, M = Metformin, W = Warfarin). Drug-name acronyms are useless.
 3. NEVER invent a mnemonic where the letters do not give a genuine memory hook. Return FEWER mnemonics (even just 1) rather than inventing something worthless.
@@ -1507,12 +1518,26 @@ STRICT RULES — FOLLOW PRECISELY:
 5. Title format: acronym/score name in double quotes — e.g. "FAST" or "CURB-65". No prefix labels.
 6. Expansion: one short phrase per letter/element, separated by commas.
 
-Also generate exactly 3 study tips of DIFFERENT types:
-- type "pearl": the single most important clinical fact to memorise about this topic (a concrete, specific rule — e.g. a threshold number, a first-line drug, a key investigation)
-- type "exam": a specific test-taking insight — what clue in the stem should trigger the correct answer, or how to distinguish this condition from the most common distractor
-- type "pitfall": the most common mistake candidates make on this topic and why it is wrong
+TIPS — generate exactly 3, one of each type:
 
-Keep each tip to 1-2 concise sentences. Be specific — avoid generic advice like "read the guidelines".
+type "pearl" — Clinical Pearl:
+  • Must cite a specific NICE guideline number (e.g. NICE NG136), a BNF drug/dose, or a named clinical threshold (e.g. "eGFR <30", "HbA1c >58 mmol/mol").
+  • State the concrete rule that makes the correct answer right. No vague generalisations.
+  • Example of GOOD: "NICE NG136 recommends amlodipine as step 1 for patients over 55 — ACE inhibitors are step 1 only for under-55s or those with diabetes."
+  • Example of BAD: "Follow NICE guidelines for hypertension management."
+
+type "exam" — Exam Technique:
+  • Quote or closely paraphrase the exact word(s) or phrase in the question stem that should trigger the correct answer.
+  • Then name the most tempting distractor from the options and explain the one feature that rules it out.
+  • Format: "The key phrase is '…'. Candidates often choose [specific wrong option] because …, but … rules it out."
+  ${distractors.length > 0 ? `The distractors for this question are: ${distractors.join('; ')}` : ''}
+
+type "pitfall" — Common Pitfall:
+  • Name the specific wrong answer option a candidate would likely select (use the exact option text from the list above).
+  • Explain WHY it is wrong — what feature of the stem or guideline makes it incorrect.
+  • Format: "Candidates often choose '[exact wrong option text]' because …, but … makes this incorrect."
+
+Keep each tip to 1-2 tight sentences. Never use phrases like "review the guidelines" or "check the BNF" — give the actual content instead.
 
 Return STRICT JSON (no other text):
 {
@@ -1534,7 +1559,7 @@ Return STRICT JSON (no other text):
         ],
         temperature: 0.4,
         response_format: { type: 'json_object' },
-        max_tokens: 600,
+        max_tokens: 750,
       });
 
       const raw = completion.choices?.[0]?.message?.content || '{}';
