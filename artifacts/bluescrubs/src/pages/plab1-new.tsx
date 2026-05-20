@@ -1081,6 +1081,7 @@ export default function PLAB1New() {
   };
   const [aiStudyTips, setAiStudyTips] = useState<AIStudyTips | null>(null);
   const [aiStudyTipsLoading, setAiStudyTipsLoading] = useState(false);
+  const [tipsOpen, setTipsOpen] = useState(true);
   // Cache by question id so tips are ready when the explanation section appears
   const studyTipsCache = useRef<Map<string, AIStudyTips>>(new Map());
   const sessionTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -3829,13 +3830,20 @@ export default function PLAB1New() {
 
             {/* Study Tips Section — AI-generated tips + mnemonics specific to this question */}
             <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-              {/* Header */}
-              <div className="bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2.5 flex items-center gap-2">
-                <Lightbulb className="w-4 h-4 text-white flex-shrink-0" />
-                <p className="text-sm font-semibold text-white tracking-wide">High-Yield Tips &amp; Mnemonics</p>
-              </div>
+              {/* Header — collapsible toggle */}
+              <button
+                onClick={() => setTipsOpen(prev => !prev)}
+                className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 transition-colors px-4 py-2.5 flex items-center justify-between"
+                aria-expanded={tipsOpen}
+              >
+                <span className="text-white font-semibold text-sm flex items-center gap-2">
+                  <Lightbulb className="w-4 h-4 text-white flex-shrink-0" />
+                  High-Yield Tips &amp; Mnemonics
+                </span>
+                <ChevronDown className={`w-4 h-4 text-violet-200 transition-transform duration-200 ${tipsOpen ? 'rotate-180' : ''}`} />
+              </button>
 
-              <div className="bg-slate-50 p-3 space-y-2.5">
+              {tipsOpen && <div className="bg-slate-50 p-3 space-y-2.5">
                 {/* Loading skeleton */}
                 {aiStudyTipsLoading && !aiStudyTips && (
                   <div className="space-y-2.5 animate-pulse">
@@ -3942,7 +3950,7 @@ export default function PLAB1New() {
                     Study tips will appear here once generated.
                   </p>
                 )}
-              </div>
+              </div>}
             </div>
 
             {/* Collapsible Revision Panel */}
