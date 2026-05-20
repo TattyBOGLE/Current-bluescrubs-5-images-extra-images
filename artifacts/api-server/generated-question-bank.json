@@ -5255,18 +5255,18 @@
   },
   {
     "id": "generated_all_1779295044268_1",
-    "topic": "Asthma \u2014 Step 1: ICS from Diagnosis (NICE NG245 Track 1 vs Track 2)",
+    "topic": "Asthma \u2014 Step 1: ICS from Diagnosis (NICE NG245)",
     "category": "all",
-    "question": "A 25-year-old woman with a diagnosis of asthma has been using salbutamol as needed for the past 3 months. She is still experiencing symptoms on most days. According to NICE NG245 (Track 1), what is the most appropriate next step?",
+    "question": "A 25-year-old woman with a confirmed diagnosis of asthma has been using salbutamol as needed for the past 3 months. She still has symptoms on most days. According to NICE NG245, what is the most appropriate next step in her management?",
     "options": [
       "Start a low-dose ICS (e.g. beclometasone 200 mcg/day) and continue salbutamol as needed",
-      "Start low-dose ICS+formoterol as both maintenance and reliever (MART, Track 2)",
+      "Increase the frequency of salbutamol use",
       "Add a LABA to her current salbutamol inhaler",
       "Prescribe montelukast as add-on therapy",
       "Refer immediately to a respiratory specialist"
     ],
     "answer": 0,
-    "explanation": "Under NICE NG245 (November 2024), all adults with confirmed asthma should be on an inhaled corticosteroid (ICS) from the outset \u2014 SABA-only treatment is no longer recommended as a standalone regimen.\n\nNG245 offers two first-line tracks:\n\u2022 Track 1 (this question): Low-dose ICS (e.g. beclometasone 200 mcg/day) as a regular preventer, plus salbutamol as a reliever as needed.\n\u2022 Track 2 \u2014 MART: Low-dose ICS+formoterol (e.g. budesonide/formoterol) used as BOTH maintenance AND reliever in a single inhaler. MART is an equally valid first-line option and may be preferred for patients who benefit from a single inhaler or who have variable symptoms.\n\nOption A is correct for Track 1. Option B (MART) is also clinically valid as a first-line choice under NG245 Track 2 \u2014 both A and B represent appropriate NG245-compliant Step 1 treatment. In a PLAB 1 question specifying 'Track 1', Option A is the expected answer.\n\nOption C (Add a LABA without ICS) is contraindicated in asthma \u2014 LABA monotherapy without ICS carries a risk of severe exacerbations and death. Option D (montelukast) is only considered as add-on therapy at Step 2 or beyond. Option E (specialist referral) is not indicated at this stage.",
+    "explanation": "NICE NG245 (November 2024) states that all adults with confirmed asthma should receive a regular low-dose inhaled corticosteroid (ICS) \u2014 SABA-only treatment is no longer appropriate as a standalone regimen.\n\nThe correct next step is Option A: start a low-dose ICS such as beclometasone 200 mcg/day as a regular preventer, alongside salbutamol as a reliever (NICE NG245, Track 1, Step 1). This addresses the underlying airway inflammation rather than just relieving symptoms.\n\nNote: NICE NG245 also offers a Track 2 approach \u2014 MART (Maintenance and Reliever Therapy) using a combined low-dose ICS+formoterol inhaler (e.g. budesonide/formoterol) as both maintenance and reliever. This is an equally valid first-line option in practice, but is not listed here as a choice.\n\nOption B (increase salbutamol) is wrong \u2014 using more SABA without adding a preventer is explicitly discouraged by NG245 and is a safety concern.\n\nOption C (add a LABA without ICS) is contraindicated \u2014 LABA monotherapy in asthma increases the risk of severe exacerbations and asthma-related death. A LABA is only appropriate once ICS is already established.\n\nOption D (montelukast) is an add-on therapy considered at Step 2 or beyond, not as initial treatment.\n\nOption E (specialist referral) is not indicated at this stage of management.",
     "mnemonic": "ICS for SABA reliance: 'I'nitiate 'C'orticosteroids 'S'oon.",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng245",
