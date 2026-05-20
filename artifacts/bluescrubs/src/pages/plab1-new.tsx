@@ -1375,22 +1375,25 @@ export default function PLAB1New() {
     setAiExplanation(null);
 
     const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-    const buildLocalFallback = (stored?: string): AIExplanation => ({
-      correctRationale: stored && stored.length > 30
-        ? stored
-        : `The correct answer is ${labels[correctIdx] ?? '?'}: ${optionsArr[correctIdx] ?? ''}. Review the question stem and relevant NICE/CKS guidance for the full rationale.`,
-      options: optionsArr.map((text, i) => ({
-        label: labels[i] ?? String(i + 1),
-        text,
-        isCorrect: i === correctIdx,
-        isSelected: selectedIdx === i,
-        why: i === correctIdx
-          ? 'This option best matches the clinical features described in the question stem.'
-          : 'This option does not best fit the features in the question stem.',
-      })),
-      keyLearningPoint: question.mnemonic || 'Anchor your reasoning in the patient demographics, symptoms, signs and investigations, then match to the most appropriate UK guideline step.',
-      source: 'fallback',
-    });
+    const buildLocalFallback = (stored?: string): AIExplanation => {
+      const correctText = optionsArr[correctIdx] ?? '';
+      return {
+        correctRationale: stored && stored.length > 30
+          ? stored
+          : `The correct answer is ${labels[correctIdx] ?? '?'}: ${correctText}. Review the question stem and relevant NICE/CKS guidance for the full rationale.`,
+        options: optionsArr.map((text, i) => ({
+          label: labels[i] ?? String(i + 1),
+          text,
+          isCorrect: i === correctIdx,
+          isSelected: selectedIdx === i,
+          why: i === correctIdx
+            ? `${text} is the correct choice here. It directly matches the clinical scenario described and aligns with current UK guidelines. See the explanation above for the full rationale.`
+            : `${text} is not the best answer for this scenario. While it may be appropriate in other contexts, the specific features of this case (patient history, symptom pattern, relevant guidelines) point away from this option — compare it against the correct answer above.`,
+        })),
+        keyLearningPoint: question.mnemonic || 'Anchor your reasoning in the patient demographics, symptoms, signs and investigations, then match to the most appropriate UK guideline step.',
+        source: 'fallback',
+      };
+    };
 
     try {
       const storedExplanation = typeof question.explanation === 'string'
@@ -2861,9 +2864,9 @@ export default function PLAB1New() {
                                   : 'border-gray-300 bg-gray-50'
                               }`}
                             >
-                              <div className="flex items-center gap-2">
+                              <div className="flex items-start gap-2 mb-1">
                                 <span
-                                  className={`font-bold text-sm px-2 py-0.5 rounded ${
+                                  className={`font-bold text-sm px-2 py-0.5 rounded flex-shrink-0 ${
                                     opt.isCorrect
                                       ? 'bg-green-600 text-white'
                                       : opt.isSelected
@@ -2881,6 +2884,7 @@ export default function PLAB1New() {
                                   <Badge variant="destructive" className="ml-auto text-xs">Your answer</Badge>
                                 )}
                               </div>
+                              <p className="text-sm text-gray-700 leading-relaxed pl-9">{opt.why}</p>
                             </div>
                           ))}
                         </div>
