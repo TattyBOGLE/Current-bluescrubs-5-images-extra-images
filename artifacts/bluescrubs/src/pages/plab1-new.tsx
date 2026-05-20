@@ -3717,11 +3717,11 @@ export default function PLAB1New() {
                 const l = buildDynamicLink('GMC Good Medical Practice', qTopic);
                 if (l) specialtyChips.push({ label: l.label, url: l.url });
               }
-              // BNF chip — always links directly to bnf.nice.org.uk (not routed through CKS)
-              const bnfSearchUrl = qTopic
+              // BNF — rendered as a card (not a chip), built below the niceRefs map
+              const bnfCardUrl = qTopic
                 ? `https://bnf.nice.org.uk/search/?q=${encodeURIComponent(qTopic)}`
                 : 'https://bnf.nice.org.uk/';
-              specialtyChips.push({ label: qTopic ? `BNF — ${qTopic}` : 'BNF', url: bnfSearchUrl });
+              const bnfCardTitle = qTopic ? `BNF — ${qTopic}` : 'BNF';
 
               // Fallback official refs (only used when getNICEReferencesForQuestion returns nothing)
               const officialRefs = niceRefs.length === 0 && currentQuestion.references
@@ -3792,6 +3792,27 @@ export default function PLAB1New() {
                         )}
                       </div>
                     ))}
+
+                    {/* BNF card — same style as NICE/CKS cards */}
+                    <div className="bg-white rounded-lg border border-slate-200 p-3 flex items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-1.5 mb-1">
+                          <span className="px-1.5 py-0.5 rounded text-[10px] font-medium border bg-indigo-50 text-indigo-700 border-indigo-200">
+                            BNF
+                          </span>
+                        </div>
+                        <a
+                          href={bnfCardUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2 inline-flex items-center gap-1"
+                        >
+                          {bnfCardTitle}
+                          <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                        </a>
+                        <p className="text-xs text-slate-500 mt-0.5 italic">Drug dosing, interactions and prescribing information</p>
+                      </div>
+                    </div>
 
                     {/* Fallback: official refs when no NICE refs available */}
                     {officialRefs.map((reference: any, index: number) => {
