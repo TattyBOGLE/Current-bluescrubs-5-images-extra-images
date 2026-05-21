@@ -1588,7 +1588,7 @@ Return STRICT JSON (no markdown, no other text):
         ],
         temperature: 0.4,
         response_format: { type: 'json_object' },
-        max_tokens: 750,
+        max_tokens: 1200,
       });
 
       const raw = completion.choices?.[0]?.message?.content || '{}';
@@ -1610,7 +1610,7 @@ Return STRICT JSON (no markdown, no other text):
       return res.json(result);
     } catch (err) {
       console.error('Study tips error:', err);
-      return res.json({ mnemonics: [], source: 'error' });
+      return res.json({ mnemonics: [], tips: [], source: 'error' });
     }
   });
 

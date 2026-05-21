@@ -964,7 +964,7 @@ export default function PLAB1New() {
           questionId: qid,
         }),
       });
-      if (!resp.ok) return;
+      if (!resp.ok) { setAiStudyTipsLoading(false); return; }
       const data: AIStudyTips = await resp.json();
       studyTipsCache.current.set(qid, data);
       setAiStudyTips(data);
