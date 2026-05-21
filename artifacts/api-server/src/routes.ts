@@ -1,3 +1,4 @@
+import rateLimit, { ipKeyGenerator } from 'express-rate-limit';
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
@@ -516,6 +517,54 @@ async function getLeaderboard(period: string, category: string, limit: number) {
   return leaderboardData.slice(0, limit);
 }
 
+const keyFromRequest = (req: any) =>
+  (req.headers['x-forwarded-for'] as string)
+    ?.split(',')[0]?.trim() || ipKeyGenerator(req);
+
+const jsonHandler = (msg: string) => (req: any, res: any) => {
+  const retryAfter = Math.ceil(
+    (req.rateLimit.resetTime.getTime() - Date.now()) / 1000
+  );
+  res.status(429).json({
+    error: 'rate_limited',
+    message: msg,
+    retryAfter,
+  });
+};
+
+const expensiveLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  max: 5,
+  keyGenerator: keyFromRequest,
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: jsonHandler(
+    'Question generation limit reached. Please wait before generating more questions.'
+  ),
+});
+
+const standardLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 30,
+  keyGenerator: keyFromRequest,
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: jsonHandler(
+    'Too many requests. Please slow down.'
+  ),
+});
+
+const lightLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 60,
+  keyGenerator: keyFromRequest,
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: jsonHandler(
+    'Too many messages. Please wait a moment.'
+  ),
+});
+
 export async function registerRoutes(app: Express): Promise<Server> {
   
   // AI Status endpoint
@@ -528,7 +577,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Batch generate 5000 questions endpoint
-  app.post("/api/generate-5000-questions", async (req, res) => {
+  app.post("/api/generate-5000-questions", expensiveLimiter, async (req, res) => {
     if (!isAIEnabled()) {
       return res.status(503).json({ 
         error: "AI services unavailable", 
@@ -858,7 +907,7 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
   });
 
   // PLAB 2 Station Bank Generation Endpoint
-  app.post("/api/generate-plab2-5000-stations", async (req, res) => {
+  app.post("/api/generate-plab2-5000-stations", expensiveLimiter, async (req, res) => {
     if (!isAIEnabled()) {
       return res.status(503).json({ 
         error: "AI services unavailable", 
@@ -1034,7 +1083,7 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
   };
 
   // Single batch generation endpoint (for smaller requests)
-  app.post("/api/generate-questions", async (req, res) => {
+  app.post("/api/generate-questions", expensiveLimiter, async (req, res) => {
     const { category, difficulty = "mixed", count = 50 } = req.body;
     const requestedCount = parseInt(String(count)) || 50;
 
@@ -1155,26 +1204,8 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
     };
   };
 
-  // Simple in-memory rate limit for the AI explanation endpoint
-  // (60 requests per IP per 5 minutes — generous for normal study, blocks scripted abuse)
-  const explainRateBuckets = new Map<string, { count: number; resetAt: number }>();
-  const EXPLAIN_RATE_WINDOW_MS = 5 * 60 * 1000;
-  const EXPLAIN_RATE_MAX = 60;
-
-  app.post("/api/explain-answer", async (req, res) => {
+  app.post("/api/explain-answer", standardLimiter, async (req, res) => {
     try {
-      const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || req.ip || 'unknown';
-      const now = Date.now();
-      const bucket = explainRateBuckets.get(ip);
-      if (bucket && bucket.resetAt > now) {
-        if (bucket.count >= EXPLAIN_RATE_MAX) {
-          return res.status(429).json({ error: 'Too many explanation requests. Please slow down.' });
-        }
-        bucket.count++;
-      } else {
-        explainRateBuckets.set(ip, { count: 1, resetAt: now + EXPLAIN_RATE_WINDOW_MS });
-      }
-
       const {
         question,
         options,
@@ -1382,7 +1413,7 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
   // Per-question study tips: AI-generated mnemonics specific to this question's topic
   const studyTipsCache = new Map<string, any>();
 
-  app.post('/api/study-tips', async (req, res) => {
+  app.post('/api/study-tips', standardLimiter, async (req, res) => {
     const { question, category, correctOption, options, questionId } = req.body || {};
     if (!question || !correctOption) {
       return res.status(400).json({ error: 'question and correctOption are required' });
@@ -1615,7 +1646,7 @@ Return STRICT JSON (no markdown, no other text):
   });
 
   // AI NHS Prep endpoint
-  app.post("/api/ask-nhs-prep", async (req, res) => {
+  app.post("/api/ask-nhs-prep", lightLimiter, async (req, res) => {
     if (!isAIEnabled()) {
       return res.status(503).json({ 
         error: "AI services unavailable", 
@@ -1643,7 +1674,7 @@ Return STRICT JSON (no markdown, no other text):
   });
 
   // Translation endpoint - simple fallback without AI
-  app.post("/api/translate-question", async (req, res) => {
+  app.post("/api/translate-question", standardLimiter, async (req, res) => {
     try {
       const { question, targetLanguage } = req.body;
       
@@ -1659,14 +1690,14 @@ Return STRICT JSON (no markdown, no other text):
     }
   });
 
-  app.post("/api/tutor", async (req, res) => {
+  app.post("/api/tutor", lightLimiter, async (req, res) => {
     res.status(503).json({ 
       error: "AI services suspended", 
       message: getAIStatus()
     });
   });
 
-  app.post("/api/ai-analysis", async (req, res) => {
+  app.post("/api/ai-analysis", standardLimiter, async (req, res) => {
     res.status(503).json({ 
       error: "AI services suspended", 
       message: getAIStatus()
@@ -1755,7 +1786,7 @@ Return STRICT JSON (no markdown, no other text):
   });
 
   // Comprehensive OSCE Generation Routes
-  app.post("/api/generate-comprehensive-osce", async (req, res) => {
+  app.post("/api/generate-comprehensive-osce", expensiveLimiter, async (req, res) => {
     try {
       const { targetCount = 150 } = req.body;
       
@@ -1957,7 +1988,7 @@ Return STRICT JSON (no markdown, no other text):
   initializeAdaptiveAI();
 
   // Adaptive AI Engine routes
-  app.post('/api/adaptive/start-session', async (req, res) => {
+  app.post('/api/adaptive/start-session', lightLimiter, async (req, res) => {
     try {
       const { userId, existingPerformance } = req.body;
       const sessionId = AdaptiveAIEngine.startSession(userId, existingPerformance);
@@ -1967,7 +1998,7 @@ Return STRICT JSON (no markdown, no other text):
     }
   });
 
-  app.post('/api/adaptive/process-answer', async (req, res) => {
+  app.post('/api/adaptive/process-answer', lightLimiter, async (req, res) => {
     try {
       const { sessionId, questionId, selectedAnswer, timeSpent } = req.body;
       const response = AdaptiveAIEngine.processAnswer(sessionId, questionId, selectedAnswer, timeSpent);
@@ -1987,7 +2018,7 @@ Return STRICT JSON (no markdown, no other text):
     }
   });
 
-  app.post('/api/adaptive/weakness-check', async (req, res) => {
+  app.post('/api/adaptive/weakness-check', lightLimiter, async (req, res) => {
     try {
       const { sessionId, currentAnswer } = req.body;
       const check = AdaptiveAIEngine.getRealTimeWeaknessCheck(sessionId, currentAnswer);
@@ -4016,7 +4047,7 @@ app.get("/api/test/questions", async (req, res) => {
     res.json(stations);
   });
 
-  app.post('/api/generate-user-format-3000-stations', async (req, res) => {
+  app.post('/api/generate-user-format-3000-stations', expensiveLimiter, async (req, res) => {
     if (!isAIEnabled()) {
       return res.status(503).json({ 
         error: "AI services unavailable", 
@@ -4093,7 +4124,7 @@ app.get("/api/test/questions", async (req, res) => {
     res.json(stations);
   });
 
-  app.post('/api/generate-international-stations', async (req, res) => {
+  app.post('/api/generate-international-stations', expensiveLimiter, async (req, res) => {
     if (!isAIEnabled()) {
       return res.status(503).json({ 
         error: "AI services unavailable", 
@@ -4318,7 +4349,7 @@ app.get("/api/test/questions", async (req, res) => {
     }
   });
 
-  app.post('/api/independent-translations/translate', (req, res) => {
+  app.post('/api/independent-translations/translate', standardLimiter, (req, res) => {
     try {
       const { stationData, targetLanguages = ['ar', 'zh', 'hi', 'es', 'fr'] } = req.body;
       
@@ -4345,7 +4376,7 @@ app.get("/api/test/questions", async (req, res) => {
     }
   });
 
-  app.post('/api/independent-translations/batch', (req, res) => {
+  app.post('/api/independent-translations/batch', standardLimiter, (req, res) => {
     try {
       const { examType, targetLanguages = ['ar', 'zh', 'hi', 'es', 'fr'] } = req.body;
       
@@ -4397,7 +4428,7 @@ app.get("/api/test/questions", async (req, res) => {
   });
 
   // Independent Analysis API (Replaces all AI-powered analysis)
-  app.post('/api/independent-analysis/video', (req, res) => {
+  app.post('/api/independent-analysis/video', standardLimiter, (req, res) => {
     try {
       const { stationTitle, stationCategory, learningObjectives = [], recordingDuration = 480 } = req.body;
       
@@ -4419,7 +4450,7 @@ app.get("/api/test/questions", async (req, res) => {
     }
   });
 
-  app.post('/api/independent-analysis/feedback', (req, res) => {
+  app.post('/api/independent-analysis/feedback', standardLimiter, (req, res) => {
     try {
       const { topic, userResponse } = req.body;
       
@@ -4435,7 +4466,7 @@ app.get("/api/test/questions", async (req, res) => {
     }
   });
 
-  app.post('/api/independent-analysis/image', (req, res) => {
+  app.post('/api/independent-analysis/image', standardLimiter, (req, res) => {
     try {
       const { imagePath, context } = req.body;
       
@@ -4505,7 +4536,7 @@ app.get("/api/test/questions", async (req, res) => {
   });
 
   // Enhanced AI-powered endpoints (when AI is available)
-  app.post('/api/hybrid/video-analysis', async (req, res) => {
+  app.post('/api/hybrid/video-analysis', standardLimiter, async (req, res) => {
     try {
       const { stationTitle, stationCategory, learningObjectives = [], recordingDuration = 480, useAI = true } = req.body;
       
@@ -4527,7 +4558,7 @@ app.get("/api/test/questions", async (req, res) => {
     }
   });
 
-  app.post('/api/hybrid/feedback', async (req, res) => {
+  app.post('/api/hybrid/feedback', standardLimiter, async (req, res) => {
     try {
       const { topic, userResponse, useAI = true } = req.body;
       

@@ -1,0 +1,196 @@
+This is the third time this task has been requested. Previous attempts 
+only applied a hand-rolled rate limiter to /api/explain-answer. This 
+time apply it properly to ALL GPT-4o endpoints using express-rate-limit.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1 — INSTALL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In api-server/, run:
+  pnpm add express-rate-limit
+
+Confirm it appears in api-server/package.json dependencies 
+before proceeding.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2 — ADD IMPORT AT TOP OF routes.ts
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+At the very top of api-server/src/routes.ts, add:
+
+  import rateLimit from 'express-rate-limit';
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3 — CREATE THREE LIMITERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Add these three limiters immediately after the import, 
+before the registerRoutes function. This is module-level 
+code — not inside any function.
+
+const keyFromRequest = (req: any) =>
+  (req.headers['x-forwarded-for'] as string)
+    ?.split(',')[0]?.trim() || req.ip || 'unknown';
+
+const jsonHandler = (msg: string) => (req: any, res: any) => {
+  const retryAfter = Math.ceil(
+    (req.rateLimit.resetTime.getTime() - Date.now()) / 1000
+  );
+  res.status(429).json({
+    error: 'rate_limited',
+    message: msg,
+    retryAfter,
+  });
+};
+
+// EXPENSIVE — question generation (~8000 tokens per call)
+const expensiveLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  max: 5,
+  keyGenerator: keyFromRequest,
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: jsonHandler(
+    'Question generation limit reached. Please wait before generating more questions.'
+  ),
+});
+
+// STANDARD — explanations, study tips, analysis (~750-1500 tokens)
+const standardLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 30,
+  keyGenerator: keyFromRequest,
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: jsonHandler(
+    'Too many requests. Please slow down.'
+  ),
+});
+
+// LIGHT — tutor, NHS prep, adaptive chat
+const lightLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 60,
+  keyGenerator: keyFromRequest,
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: jsonHandler(
+    'Too many messages. Please wait a moment.'
+  ),
+});
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4 — APPLY TO EVERY AI ENDPOINT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Find each route below in routes.ts and add the limiter 
+as the SECOND argument (between the path and the handler).
+Do not change anything else about the route.
+
+EXPENSIVE — app.post('/api/ROUTE', expensiveLimiter, async...
+  /api/generate-questions
+  /api/generate-5000-questions
+  /api/generate-plab2-5000-stations
+  /api/generate-comprehensive-osce
+  /api/generate-user-format-3000-stations
+  /api/generate-international-stations
+
+STANDARD — app.post('/api/ROUTE', standardLimiter, async...
+  /api/explain-answer        ← already has hand-rolled limiter;
+                               REMOVE the old explainRateBuckets 
+                               Map and manual bucket logic entirely,
+                               replace with standardLimiter
+  /api/study-tips
+  /api/translate-question
+  /api/ai-analysis
+  /api/hybrid/video-analysis
+  /api/hybrid/feedback
+  /api/independent-analysis/video
+  /api/independent-analysis/feedback
+  /api/independent-analysis/image
+  /api/independent-translations/translate
+  /api/independent-translations/batch
+
+LIGHT — app.post('/api/ROUTE', lightLimiter, async...
+  /api/ask-nhs-prep
+  /api/tutor
+  /api/adaptive/start-session
+  /api/adaptive/process-answer
+  /api/adaptive/weakness-check
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5 — REMOVE THE OLD HAND-ROLLED LIMITER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Search routes.ts for:
+  explainRateBuckets
+  EXPLAIN_RATE_WINDOW_MS
+  EXPLAIN_RATE_MAX
+
+Delete the Map declaration, the two constants, and every 
+reference to them inside /api/explain-answer. The 
+standardLimiter now handles this endpoint instead.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 6 — HANDLE 429 IN THE FRONTEND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In plab1-new.tsx, find the three AI fetch functions:
+  fetchStudyTips
+  fetchAIExplanation
+  and the question generation fetch
+
+In each one, add a 429 check immediately after the 
+fetch call, before processing the response:
+
+  if (resp.status === 429) {
+    const data = await resp.json().catch(() => ({}));
+    toast({
+      title: 'Slow down a little',
+      description: data.message ?? 'Too many requests. Please wait.',
+      variant: 'destructive',
+    });
+    return;
+  }
+
+For the question generation fetch, show a more specific 
+toast since it blocks the whole session starting:
+
+  if (resp.status === 429) {
+    const data = await resp.json().catch(() => ({}));
+    toast({
+      title: 'Generation limit reached',
+      description: data.message ?? 
+        'You have generated too many question sets this hour. Please wait before starting a new session.',
+      variant: 'destructive',
+    });
+    setIsGenerating(false);
+    return;
+  }
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 7 — VERIFY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After making the changes, confirm:
+
+1. express-rate-limit appears in api-server/package.json
+2. The import is at the top of routes.ts
+3. The three limiter constants exist at module level
+4. grep for 'expensiveLimiter' returns at least 6 matches
+5. grep for 'standardLimiter' returns at least 11 matches
+6. grep for 'lightLimiter' returns at least 5 matches
+7. grep for 'explainRateBuckets' returns zero matches
+8. The app still builds without TypeScript errors
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DO NOT CHANGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Any GET endpoint — read-only routes need no limiting
+- /api/leaderboard/submit — not an AI call
+- /api/ai/status — health check must always respond
+- /api/analytics/* — tracking endpoints must not be blocked
+- /api/gamification/* — UI data must always be available
+- The actual handler logic inside any route — only the 
+  middleware argument is being added, nothing else

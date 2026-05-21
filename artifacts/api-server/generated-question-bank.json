@@ -26181,5 +26181,215 @@
       "CKS": "https://cks.nice.org.uk/topics/peptic-ulcer-disease"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man presents to the GP for a routine check-up. His blood pressure readings over the past three months have consistently been around 150/95 mmHg. He has no significant past medical history and is not on any medications. According to the latest NICE guidelines, what is the most appropriate first-line treatment for this patient?",
+    "options": [
+      "Lisinopril",
+      "Amlodipine",
+      "Thiazide diuretic",
+      "Beta-blocker",
+      "Lifestyle modification only"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Lisinopril. According to NICE NG136 (2023 update), for patients under 55 years who are not of Black African or African-Caribbean family origin, an ACE inhibitor like Lisinopril is recommended as the first-line treatment for hypertension. The patient's age and ethnicity are key factors in determining the most appropriate antihypertensive therapy. \nAmlodipine is incorrect as it is first-line for patients over 55 or of Black African or African-Caribbean origin. Thiazide diuretics are added at step 3 if the blood pressure is not controlled with an ACE inhibitor and a calcium channel blocker. Beta-blockers are not recommended as first-line therapy due to less favorable outcomes. Lifestyle modification is important but not sufficient alone at this stage. \nRemember, 'ACE before CCB if young and non-Black'.",
+    "mnemonic": "ACE before CCB if young and non-Black",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman with newly diagnosed asthma presents to the clinic. She currently uses a salbutamol inhaler as needed. According to the latest NICE guidelines, what is the most appropriate change to her medication regimen?",
+    "options": [
+      "Add low-dose ICS",
+      "Continue SABA and add regular ICS",
+      "Switch to as-needed low-dose ICS/formoterol",
+      "Add LABA to ICS",
+      "Increase SABA frequency"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to switch to as-needed low-dose ICS/formoterol. NICE NG245 (2024) recommends the Anti-Inflammatory Reliever (AIR) therapy approach for newly diagnosed or SABA-only patients, which involves using an ICS/formoterol combination inhaler as needed. This approach provides both immediate relief and anti-inflammatory action. \nAdding low-dose ICS or LABA to ICS is part of the old management pathway and is not recommended in the new guidelines. Continuing SABA and increasing its frequency without ICS is ineffective for long-term control. \nFor newly diagnosed adult asthma, 'AIR is the answer'.",
+    "mnemonic": "AIR is the answer for newly diagnosed asthma",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes and established cardiovascular disease presents for a medication review. He is currently on metformin. According to NICE NG28, what additional medication should be considered?",
+    "options": [
+      "Sulfonylurea",
+      "DPP-4 inhibitor",
+      "SGLT-2 inhibitor",
+      "GLP-1 receptor agonist",
+      "Insulin"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is SGLT-2 inhibitor. NICE NG28 (2022 update) recommends adding an SGLT-2 inhibitor like empagliflozin or dapagliflozin for patients with type 2 diabetes who have established cardiovascular disease or are at high risk. These agents provide cardiovascular benefits beyond glycaemic control. \nSulfonylureas can increase the risk of hypoglycaemia and are not preferred in this scenario. DPP-4 inhibitors do not provide the same cardiovascular benefits. GLP-1 receptor agonists are considered when BMI is ≥35 or insulin is not acceptable. Insulin is typically used later in the treatment pathway. \nFor T2DM with CVD, 'SGLT-2 leads the way'.",
+    "mnemonic": "SGLT-2 leads the way in T2DM with CVD",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_3",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 65-year-old man is admitted to the hospital with symptoms of cough, fever, and breathlessness. His CURB-65 score is 3. According to NICE NG250, what is the most appropriate antibiotic regimen?",
+    "options": [
+      "Amoxicillin 500 mg TDS",
+      "Amoxicillin + Clarithromycin",
+      "Co-amoxiclav + Clarithromycin",
+      "Flucloxacillin",
+      "Doxycycline"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Co-amoxiclav + Clarithromycin. NICE NG250 (2025) states that for severe community-acquired pneumonia, indicated by a CURB-65 score of 3 or more, co-amoxiclav combined with clarithromycin is recommended for adequate coverage. \nAmoxicillin alone is suitable for low-severity pneumonia. Amoxicillin + clarithromycin is for moderate severity. Flucloxacillin is not used for pneumonia as it doesn't cover atypical organisms. Doxycycline is an alternative for less severe cases or penicillin allergy. \nIn severe CAP, 'combine to cover'.",
+    "mnemonic": "Combine to cover in severe CAP",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_4",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 70-year-old woman with a history of hypertension and atrial fibrillation presents for anticoagulation management. Her CHA₂DS₂-VASc score is 4. According to NICE NG196, what is the appropriate anticoagulation strategy?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "Rivaroxaban",
+      "No anticoagulation",
+      "Clopidogrel"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Rivaroxaban. NICE NG196 (2021) recommends using a DOAC like rivaroxaban for stroke prevention in atrial fibrillation with a CHA₂DS₂-VASc score ≥2 in men and ≥3 in women. DOACs are preferred over warfarin due to fewer monitoring requirements and a better safety profile. \nAspirin and clopidogrel are no longer recommended solely for stroke prevention in atrial fibrillation. Warfarin is an alternative if DOACs are contraindicated. With a score of 4, anticoagulation is necessary. \nFor AF with high stroke risk, 'DOAC is dynamic'.",
+    "mnemonic": "DOAC is dynamic for AF stroke prevention",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_5",
+    "topic": "Hyperthyroidism Management",
+    "category": "all",
+    "question": "A 45-year-old woman presents with symptoms of weight loss, palpitations, and heat intolerance. Her thyroid function tests show suppressed TSH and elevated free T4. According to NICE NG145, what is the first-line treatment?",
+    "options": [
+      "Methimazole",
+      "Radioactive iodine",
+      "Carbimazole",
+      "Propranolol",
+      "Thyroidectomy"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Carbimazole. NICE NG145 (2019) recommends Carbimazole as the first-line treatment for hyperthyroidism. It effectively reduces thyroid hormone levels. \nMethimazole is not used in the UK. Radioactive iodine and thyroidectomy are definitive treatments but not first-line. Propranolol is used for symptomatic relief of palpitations and anxiety while awaiting the effect of antithyroid drugs. \nFor hyperthyroidism, 'Carbimazole comes first'.",
+    "mnemonic": "Carbimazole comes first for hyperthyroidism",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_6",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 58-year-old man with a history of COPD presents to the A&E with fever, confusion, and hypotension. His lactate level is 4 mmol/L. According to NICE NG51, what is the immediate management step?",
+    "options": [
+      "Blood cultures",
+      "IV antibiotics",
+      "IV fluids",
+      "Oxygen therapy",
+      "Urine output monitoring"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is IV fluids. NICE NG51 (2016) and the Surviving Sepsis Campaign recommend starting the Sepsis-6 bundle within 1 hour, which includes administering IV fluids as a priority to address hypotension and hypoperfusion. \nBlood cultures and antibiotics are crucial but follow after initial fluid resuscitation. Oxygen therapy is also part of the bundle but secondary to fluids in immediate management. Urine output monitoring is important for ongoing assessment, not the initial step. \nIn sepsis, 'Fluids First to Fight'.",
+    "mnemonic": "Fluids First to Fight Sepsis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_7",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 68-year-old man with COPD presents with worsening breathlessness. His FEV₁ is 45% of predicted. According to NICE NG115, what is the most appropriate inhaler therapy?",
+    "options": [
+      "SABA",
+      "SAMA",
+      "LABA",
+      "ICS + LABA",
+      "LABA + LAMA"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is LABA + LAMA. NICE NG115 (2018) recommends dual bronchodilation with a LABA + LAMA inhaler for patients with moderate to severe COPD (FEV₁ < 50%) who remain breathless despite monotherapy. \nSABA and SAMA are for short-term relief. LABA alone may not provide adequate symptom control. ICS + LABA is reserved for patients with frequent exacerbations or asthmatic features. \nFor moderate COPD, 'Dual is the deal'.",
+    "mnemonic": "Dual is the deal in moderate COPD",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_8",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 62-year-old man with chest pain and ST-elevation on ECG arrives at the hospital. According to NICE NG185, what is the preferred management approach if PCI is available within 120 minutes?",
+    "options": [
+      "Thrombolysis",
+      "Primary PCI",
+      "Dual antiplatelet therapy",
+      "Coronary artery bypass grafting",
+      "Medical management"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Primary PCI. NICE NG185 (2020) recommends primary PCI as the preferred reperfusion strategy for STEMI if it can be performed within 120 minutes of the first medical contact. PCI provides superior outcomes compared to thrombolysis. \nThrombolysis is considered if PCI is not available in the desired timeframe. Dual antiplatelet therapy is part of the medical management but not a standalone treatment for acute STEMI. CABG is not an emergency treatment for STEMI. \nFor STEMI, 'PCI is prime within time'.",
+    "mnemonic": "PCI is prime within time for STEMI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779395401161_9",
+    "topic": "Parkinson's Disease Management",
+    "category": "all",
+    "question": "A 75-year-old man with newly diagnosed Parkinson's disease presents with bradykinesia and rigidity. According to NICE NG71, what is the most effective initial treatment?",
+    "options": [
+      "Levodopa",
+      "Dopamine agonist",
+      "MAO-B inhibitor",
+      "COMT inhibitor",
+      "Amantadine"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Levodopa. NICE NG71 (2020) suggests Levodopa as the most effective treatment for motor symptoms in Parkinson's, especially in older patients. It provides the best symptomatic relief for bradykinesia and rigidity. \nDopamine agonists and MAO-B inhibitors are options for younger patients to delay motor complications. COMT inhibitors are adjuncts to Levodopa. Amantadine is primarily for dyskinesia. \nIn older Parkinson's, 'Levodopa leads the way'.",
+    "mnemonic": "Levodopa leads the way in older Parkinson's",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng71",
+      "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease"
+    },
+    "difficulty": "intermediate"
   }
 ]

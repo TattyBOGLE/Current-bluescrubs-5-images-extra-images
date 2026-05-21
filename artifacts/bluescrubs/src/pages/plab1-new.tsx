@@ -544,7 +544,16 @@ export default function PLAB1New() {
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        if (response.status === 429) {
+          toast({
+            title: 'Generation limit reached',
+            description: (err as any).message ?? 'You have generated too many question sets this hour. Please wait before starting a new session.',
+            variant: 'destructive',
+          });
+        } else {
+          toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        }
+        setIsGeneratingQuestions(false);
         return;
       }
 
@@ -597,7 +606,16 @@ export default function PLAB1New() {
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        if (response.status === 429) {
+          toast({
+            title: 'Generation limit reached',
+            description: (err as any).message ?? 'You have generated too many question sets this hour. Please wait before starting a new session.',
+            variant: 'destructive',
+          });
+        } else {
+          toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        }
+        setIsGeneratingQuestions(false);
         return;
       }
 
@@ -651,7 +669,16 @@ export default function PLAB1New() {
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        if (response.status === 429) {
+          toast({
+            title: 'Generation limit reached',
+            description: (err as any).message ?? 'You have generated too many question sets this hour. Please wait before starting a new session.',
+            variant: 'destructive',
+          });
+        } else {
+          toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        }
+        setIsGeneratingQuestions(false);
         return;
       }
 
@@ -707,7 +734,16 @@ export default function PLAB1New() {
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        if (response.status === 429) {
+          toast({
+            title: 'Generation limit reached',
+            description: (err as any).message ?? 'You have generated too many question sets this hour. Please wait before starting a new session.',
+            variant: 'destructive',
+          });
+        } else {
+          toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        }
+        setIsGeneratingQuestions(false);
         return;
       }
 
@@ -762,7 +798,16 @@ export default function PLAB1New() {
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        if (response.status === 429) {
+          toast({
+            title: 'Generation limit reached',
+            description: (err as any).message ?? 'You have generated too many question sets this hour. Please wait before starting a new session.',
+            variant: 'destructive',
+          });
+        } else {
+          toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        }
+        setIsGeneratingQuestions(false);
         return;
       }
 
@@ -952,6 +997,16 @@ export default function PLAB1New() {
           storedExplanation,
         }),
       });
+      if (resp.status === 429) {
+        const data = await resp.json().catch(() => ({}));
+        toast({
+          title: 'Slow down a little',
+          description: (data as any).message ?? 'Too many requests. Please wait.',
+          variant: 'destructive',
+        });
+        setAiExplanationLoading(false);
+        return;
+      }
       if (!resp.ok) {
         const fallback = buildLocalFallback(storedExplanation);
         aiExplanationCache.current.set(qid, fallback);
@@ -1006,6 +1061,16 @@ export default function PLAB1New() {
           questionId: qid,
         }),
       });
+      if (resp.status === 429) {
+        const data = await resp.json().catch(() => ({}));
+        toast({
+          title: 'Slow down a little',
+          description: (data as any).message ?? 'Too many requests. Please wait.',
+          variant: 'destructive',
+        });
+        setAiStudyTipsLoading(false);
+        return;
+      }
       if (!resp.ok) { setAiStudyTipsLoading(false); return; }
       const data: AIStudyTips = await resp.json();
       studyTipsCache.current.set(qid, data);
