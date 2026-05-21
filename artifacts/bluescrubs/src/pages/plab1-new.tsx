@@ -3949,24 +3949,6 @@ export default function PLAB1New() {
             <ReferenceMaterialPanel question={currentQuestion} />
           </div>
 
-          {/* Prominent Next Question Button - Bottom of Explanation */}
-          <div className="mt-8 pt-6 border-t border-gray-200 text-center">
-            <Button 
-              onClick={handleNextQuestion}
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-16 py-4 rounded-lg font-semibold text-xl flex items-center gap-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-              disabled={currentQuestionIndex >= generatedQuestions.length - 1}
-            >
-              {currentQuestionIndex >= generatedQuestions.length - 1 ? (
-                <>Complete Session <CheckCircle className="w-6 h-6" /></>
-              ) : (
-                <>Next Question <ArrowRight className="w-6 h-6" /></>
-              )}
-            </Button>
-            <p className="text-sm text-gray-500 mt-3">
-              Question {currentQuestionIndex + 1} of {generatedQuestions.length}
-            </p>
-          </div>
           </>
         )}
       </div>
