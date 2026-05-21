@@ -7,6 +7,8 @@
     "hello": "tsx ./src/hello.ts",
     "check-links": "tsx ./src/check-links.ts",
     "seed-spotdx": "tsx ./src/seed-spotdx.ts",
+    "seed-spotdx-2": "tsx ./src/seed-spotdx-2.ts",
+    "seed-spotdx-3": "tsx ./src/seed-spotdx-3.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
