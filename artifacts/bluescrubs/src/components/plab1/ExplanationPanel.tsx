@@ -4,17 +4,22 @@ import { CheckCircle, Award, Brain, BookOpen } from "lucide-react";
 import type { AIExplanation } from "@/lib/quiz-utils";
 import { ExternalLink } from "@/components/ui/external-link";
 import { useToast } from "@/hooks/use-toast";
+import { FlashcardsFromQuestion } from "./FlashcardsFromQuestion";
 
 interface ExplanationPanelProps {
   currentQuestion: any;
   aiExplanation: AIExplanation | null;
   aiExplanationLoading: boolean;
+  selectedAnswer?: string;
+  isCorrect?: boolean;
 }
 
 export function ExplanationPanel({
   currentQuestion,
   aiExplanation,
   aiExplanationLoading,
+  selectedAnswer,
+  isCorrect,
 }: ExplanationPanelProps) {
   const { toast } = useToast();
 
@@ -32,6 +37,17 @@ export function ExplanationPanel({
 
   return (
     <div className="space-y-6 mb-8">
+      {/* Generate Flashcards button */}
+      {selectedAnswer !== undefined && selectedAnswer !== "" && (
+        <div className="flex justify-end">
+          <FlashcardsFromQuestion
+            question={currentQuestion}
+            selectedAnswerIndex={selectedAnswer}
+            isCorrect={isCorrect ?? false}
+          />
+        </div>
+      )}
+
       {/* Structured AI explanation (or fallback to legacy bullet list) */}
       <div className="text-gray-800 leading-relaxed space-y-4">
         {aiExplanationLoading && !aiExplanation ? (

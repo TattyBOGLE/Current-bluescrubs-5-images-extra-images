@@ -1088,6 +1088,11 @@ export default function PLAB1New() {
               currentQuestion={currentQuestion}
               aiExplanation={aiExplanation}
               aiExplanationLoading={aiExplanationLoading}
+              selectedAnswer={selectedAnswer}
+              isCorrect={(() => {
+                const correctIdx = currentQuestion?.correctAnswer ?? currentQuestion?.correct_answer ?? currentQuestion?.answer;
+                return parseInt(selectedAnswer) === (typeof correctIdx === 'string' ? correctIdx.charCodeAt(0) - 65 : correctIdx);
+              })()}
             />
 
             <StudyTipsPanel

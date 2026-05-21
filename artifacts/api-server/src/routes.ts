@@ -4590,6 +4590,214 @@ app.get("/api/test/questions", async (req, res) => {
     }
   });
 
+  // ─── AI Flashcard Generation from MCQ Question ───────────────────────────
+  app.post('/api/study-tools/flashcards/from-question', async (req, res) => {
+    try {
+      const {
+        questionId,
+        questionStem,
+        options,
+        userAnswerText,
+        correctAnswerText,
+        isCorrect,
+        explanation,
+        category,
+        difficulty,
+        references,
+      } = req.body as {
+        questionId?: string;
+        questionStem: string;
+        options?: string[];
+        userAnswerText: string;
+        correctAnswerText: string;
+        isCorrect: boolean;
+        explanation: string;
+        category?: string;
+        difficulty?: string;
+        references?: Record<string, unknown>;
+      };
+
+      if (!questionStem || !explanation) {
+        res.status(400).json({ error: 'questionStem and explanation are required' });
+        return;
+      }
+
+      const { default: OpenAI } = await import('openai');
+      const openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY || 'placeholder-configure-openai-key',
+        baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
+      });
+
+      const systemPrompt = `You are an expert UK medical educator and adaptive learning AI for Blue Scrubs Prep.
+
+Your task is to generate HIGH-YIELD personalised flashcards from:
+1. the question stem,
+2. the user's selected answer,
+3. the explanation,
+4. and the clinical references provided.
+
+The goal is to improve retention, clinical reasoning, and spaced repetition learning for PLAB/UKMLA learners.
+
+IMPORTANT RULES:
+- Generate ORIGINAL educational content.
+- Do NOT copy references verbatim.
+- Simplify complex concepts into memorable learning points.
+- Focus on exam-relevant facts and clinical reasoning.
+- Flashcards must feel concise, high-yield, and revision-friendly.
+- Prioritise active recall over passive reading.
+
+PERSONALISATION LOGIC:
+Adapt flashcards based on:
+- whether the user answered correctly,
+- confidence level,
+- weak topics,
+- previous mistakes,
+- learning preferences.
+
+If the user answered incorrectly:
+- focus on misconceptions,
+- clarify differentiating features,
+- reinforce diagnostic clues.
+
+If the user answered correctly:
+- reinforce higher-order reasoning,
+- include extension knowledge,
+- test pattern recognition.
+
+OUTPUT FORMAT:
+Return valid JSON only. No markdown fences. No extra commentary.
+
+JSON structure:
+
+{
+  "source_question_id": "",
+  "topic": "",
+  "subtopic": "",
+  "difficulty": "",
+  "user_answer_correct": true,
+  "personalisation_focus": "",
+  "flashcards": [
+    {
+      "type": "basic",
+      "front": "",
+      "back": "",
+      "memory_tip": "",
+      "tags": ["", ""]
+    },
+    {
+      "type": "cloze",
+      "front": "",
+      "back": "",
+      "memory_tip": "",
+      "tags": ["", ""]
+    },
+    {
+      "type": "clinical_reasoning",
+      "front": "",
+      "back": "",
+      "memory_tip": "",
+      "tags": ["", ""]
+    }
+  ],
+  "spaced_repetition": {
+    "priority": "",
+    "review_interval_days": 0
+  },
+  "learning_objectives": ["", "", ""],
+  "high_yield_summary": "",
+  "common_exam_traps": ["", ""]
+}
+
+FLASHCARD TYPES:
+1. BASIC — Simple question-answer recall.
+2. CLOZE — Fill-in-the-blank style. Example: "Psoriasis commonly affects the {{extensor}} surfaces."
+3. CLINICAL_REASONING — Pattern recognition and differentiation.
+
+FLASHCARD RULES:
+- Maximum 1–2 key facts per card.
+- Keep answers concise.
+- Use memorable wording.
+- Prioritise common PLAB presentations.
+- Include differentiating features.
+- Avoid excessive detail.
+
+HIGH-YIELD PRIORITIES:
+Focus on: red flags, classic presentations, first-line management, diagnostic clues, NICE guideline principles, common exam traps, distinguishing conditions.
+
+SPACED REPETITION LOGIC:
+- Incorrect answer → shorter review interval (1–3 days).
+- Correct but on easy topic → longer interval (7–14 days).
+- Correct on hard topic → moderate interval (3–7 days).
+
+MEMORY TIPS:
+Include concise mnemonics, visual associations, or pattern-recognition tips where useful.
+
+TONE: concise, intelligent, clinically accurate, encouraging, exam-focused.
+
+Generate 5–8 flashcards depending on topic complexity.`;
+
+      const refsText = references
+        ? Object.entries(references)
+            .filter(([, v]) => v)
+            .map(([k, v]) => `${k.toUpperCase()}: ${JSON.stringify(v).substring(0, 400)}`)
+            .join('\n')
+        : 'None provided';
+
+      const optionsText = options && options.length
+        ? options.map((o, i) => `${String.fromCharCode(65 + i)}. ${o}`).join('\n')
+        : 'Not provided';
+
+      const userMessage = `QUESTION STEM:
+${questionStem}
+
+OPTIONS:
+${optionsText}
+
+USER'S ANSWER: ${userAnswerText}
+CORRECT ANSWER: ${correctAnswerText}
+USER WAS CORRECT: ${isCorrect ? 'YES' : 'NO'}
+
+EXPLANATION:
+${explanation}
+
+TOPIC/CATEGORY: ${category || 'General Medicine'}
+DIFFICULTY: ${difficulty || 'intermediate'}
+
+CLINICAL REFERENCES:
+${refsText}`;
+
+      const completion = await openai.chat.completions.create({
+        model: 'gpt-4o',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userMessage },
+        ],
+        temperature: 0.7,
+        max_tokens: 3000,
+        response_format: { type: 'json_object' },
+      });
+
+      const raw = completion.choices[0]?.message?.content ?? '{}';
+      let parsed: Record<string, unknown>;
+      try {
+        parsed = JSON.parse(raw);
+      } catch {
+        res.status(500).json({ error: 'AI returned invalid JSON', raw });
+        return;
+      }
+
+      if (questionId) {
+        (parsed as Record<string, unknown>).source_question_id = questionId;
+      }
+
+      res.json(parsed);
+    } catch (error: unknown) {
+      console.error('Flashcard generation error:', error);
+      const msg = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: 'Failed to generate flashcards', details: msg });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
