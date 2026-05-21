@@ -1,0 +1,77 @@
+Yes — looking at the screenshot you have both "NICE CKS" and "CKS" cards showing the same Hypertension Management link with slightly different descriptions. That's a duplicate. Here's the prompt:
+
+---
+
+**Paste this into Replit AI:**
+
+```
+In ReferenceMaterialPanel (in plab1-new.tsx or ReferenceMaterialPanel.tsx), 
+the reference cards are generating duplicates — for example "NICE CKS" and 
+"CKS" both appear as separate cards pointing to the same URL for the same 
+topic.
+
+Fix this in two parts:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FIX 1 — DEDUPLICATE BY URL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before rendering the list of reference cards, filter out any entries 
+that share the same resolved URL. Keep only the first occurrence:
+
+  const seen = new Set<string>();
+  const deduped = refs.filter(ref => {
+    if (seen.has(ref.url)) return false;
+    seen.add(ref.url);
+    return true;
+  });
+
+Use deduped instead of refs when rendering the cards.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FIX 2 — DEDUPLICATE BY SOURCE LABEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Also check where the reference list is built — in buildDynamicLink(), 
+getNICEReferencesForQuestion(), or wherever refs are assembled for 
+the panel. 
+
+Look for cases where the same source is added more than once under 
+different label variants, for example:
+  - "NICE CKS" and "CKS" resolving to the same cks.nice.org.uk URL
+  - "NICE Guideline" and "NICE" resolving to the same nice.org.uk URL
+  - Any other source that appears under two different badge labels
+
+Consolidate these so each source only has one canonical label:
+  CKS     → always labelled "NICE CKS"
+  NICE    → always labelled "NICE Guideline"  
+  BNF     → always labelled "BNF"
+  SIGN    → always labelled "SIGN"
+  RCGP    → always labelled "RCGP"
+  ESC     → always labelled "ESC"
+  BTS     → always labelled "BTS"
+  BSG     → always labelled "BSG"
+  RCOG    → always labelled "RCOG"
+
+Remove any alias entries that were creating the duplicates.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FIX 3 — ENFORCE MAXIMUM 4 CARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After deduplication, cap the displayed cards at 4. The PRIMARY 
+card always shows first, then the next 3 most relevant sources.
+This prevents the panel becoming an overwhelming wall of links:
+
+  const displayed = deduped.slice(0, 4);
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DO NOT CHANGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- The URL resolution logic in buildDynamicLink() and the 
+  topic slug helpers — only the deduplication and labelling
+- The card styling, badge colours, or panel layout
+- The PRIMARY badge logic — whichever card is marked primary 
+  must still always appear first after deduplication
+```
