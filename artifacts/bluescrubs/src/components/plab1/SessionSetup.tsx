@@ -10,7 +10,7 @@ import {
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { availableCategories } from "@/lib/quiz-utils";
 
-type SessionMode = 'practice' | 'timed' | 'unlimited' | 'plab' | 'adaptive' | 'incorrect-only';
+type SessionMode = 'practice' | 'timed' | 'unlimited' | 'plab' | 'adaptive' | 'incorrect-only' | 'spot-diagnosis';
 
 const MODE_TABS: { id: SessionMode; label: string; description: string }[] = [
   {
@@ -42,6 +42,11 @@ const MODE_TABS: { id: SessionMode; label: string; description: string }[] = [
     id: 'incorrect-only',
     label: 'Incorrect Only',
     description: 'Revisit only the questions you have previously answered incorrectly',
+  },
+  {
+    id: 'spot-diagnosis',
+    label: 'Spot Diagnosis',
+    description: 'Identify conditions from clinical images — ECGs, X-rays, dermatology, and more',
   },
 ];
 
@@ -97,6 +102,7 @@ interface SessionSetupProps {
   onStartAuthenticTimedPractice: (count: number) => void;
   onStartAdaptivePractice: (count: number) => void;
   onStartIncorrectOnlyPractice: (count: number) => void;
+  onStartSpotDiagnosis: () => void;
 }
 
 export function SessionSetup({
@@ -125,6 +131,7 @@ export function SessionSetup({
   onStartAuthenticTimedPractice,
   onStartAdaptivePractice,
   onStartIncorrectOnlyPractice,
+  onStartSpotDiagnosis,
 }: SessionSetupProps) {
   const [selectedMode, setSelectedMode] = useState<SessionMode>('practice');
   const [selectedCount, setSelectedCount] = useState<number>(10);
@@ -150,10 +157,12 @@ export function SessionSetup({
       onStartAdaptivePractice(selectedCount);
     } else if (selectedMode === 'incorrect-only') {
       onStartIncorrectOnlyPractice(selectedCount);
+    } else if (selectedMode === 'spot-diagnosis') {
+      onStartSpotDiagnosis();
     }
   };
 
-  const canStart = selectedMode === 'unlimited' || selectedCount > 0;
+  const canStart = selectedMode === 'unlimited' || selectedMode === 'spot-diagnosis' || selectedCount > 0;
 
   const currentMode = MODE_TABS.find(m => m.id === selectedMode)!;
 
@@ -355,7 +364,7 @@ export function SessionSetup({
             </div>
 
             {/* Step 2 — Count / Duration pills */}
-            {selectedMode !== 'unlimited' && (
+            {selectedMode !== 'unlimited' && selectedMode !== 'spot-diagnosis' && (
               <div>
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
                   Step 2 — {selectedMode === 'timed' ? 'Select Duration' : 'Select Question Count'}
@@ -401,7 +410,7 @@ export function SessionSetup({
                 ) : (
                   <>
                     <ArrowRight className="w-4 h-4 mr-2" />
-                    {selectedMode === 'unlimited' ? 'Start Unlimited Practice' : 'Start Session'}
+                    {selectedMode === 'unlimited' ? 'Start Unlimited Practice' : selectedMode === 'spot-diagnosis' ? 'Open Spot Diagnosis' : 'Start Session'}
                   </>
                 )}
               </Button>

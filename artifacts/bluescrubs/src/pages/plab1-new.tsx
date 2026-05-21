@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -38,6 +39,7 @@ import { useAuth } from "@/hooks/use-auth";
 export default function PLAB1New() {
   const { toast } = useToast();
   const { user } = useAuth();
+  const [, navigate] = useLocation();
 
   // Hero image loading state
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
@@ -798,6 +800,11 @@ export default function PLAB1New() {
     }
   };
 
+  // Navigate to the Spot Diagnosis gallery page
+  const startSpotDiagnosis = () => {
+    navigate('/spot-diagnosis');
+  };
+
   // Get current question
   const currentQuestion = generatedQuestions[currentQuestionIndex];
 
@@ -1195,6 +1202,7 @@ export default function PLAB1New() {
           onStartAuthenticTimedPractice={startAuthenticTimedPractice}
           onStartAdaptivePractice={startAdaptivePractice}
           onStartIncorrectOnlyPractice={startIncorrectOnlyPractice}
+          onStartSpotDiagnosis={startSpotDiagnosis}
         />
       </QuizErrorBoundary>
     );
