@@ -6,10 +6,16 @@
   "scripts": {
     "hello": "tsx ./src/hello.ts",
     "check-links": "tsx ./src/check-links.ts",
+    "seed-spotdx": "tsx ./src/seed-spotdx.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "drizzle-orm": "catalog:",
+    "pg": "^8.20.0"
   },
   "devDependencies": {
     "@types/node": "catalog:",
+    "@types/pg": "^8.11.6",
     "tsx": "catalog:"
   }
 }

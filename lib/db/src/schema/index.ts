@@ -43,6 +43,8 @@ export const questions = pgTable("questions", {
   correctAnswer: text("correct_answer").notNull(),
   explanation: text("explanation").notNull(),
   examType: text("exam_type").notNull(), // plab1, plab2
+  imageUrl: text("image_url"), // optional clinical image for spot diagnosis
+  tags: jsonb("tags"), // array of string tags e.g. ["spot-diagnosis", "dermatology"]
 });
 
 export const userProgress = pgTable("user_progress", {
@@ -427,6 +429,8 @@ export const insertQuestionSchema = createInsertSchema(questions).pick({
   correctAnswer: true,
   explanation: true,
   examType: true,
+  imageUrl: true,
+  tags: true,
 });
 
 export const insertUserProgressSchema = createInsertSchema(userProgress).pick({
