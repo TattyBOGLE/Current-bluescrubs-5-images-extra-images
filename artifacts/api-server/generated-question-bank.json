@@ -12592,5 +12592,215 @@
       "CKS": "https://cks.nice.org.uk/topics/copd/"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779367530357_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man presents to your clinic for a follow-up on his hypertension management. His blood pressure today is 145/95 mmHg. He is currently on amlodipine 5 mg daily. According to the latest NICE guidelines, what is the next step in his treatment?",
+    "options": [
+      "Increase amlodipine to 10 mg daily",
+      "Add an ACE inhibitor",
+      "Switch to a thiazide-like diuretic",
+      "Add a beta-blocker",
+      "Suggest lifestyle modifications only"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add an ACE inhibitor. According to NICE NG136, for someone under 55 years old who is not Black, the first-line treatment is an ACE inhibitor or ARB, and the next step if their blood pressure is not controlled on a calcium channel blocker (CCB) is to add an ACE inhibitor. In this case, the patient is on amlodipine, a CCB, and his BP is not controlled, so adding an ACE inhibitor is appropriate. Increasing amlodipine is incorrect because it's not the recommended step if BP is not controlled. Switching to a thiazide-like diuretic is the third step. Adding a beta-blocker is not standard unless there are other indications. Lifestyle changes are always recommended but not sufficient alone here. Remember: 'ABCD' approach - ACE/ARB + CCB/Diuretic. \nMnemonic: \"ACE for Amlodipine Add-on\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 35-year-old woman with asthma presents with worsening symptoms. She is currently using a salbutamol inhaler as needed. According to the latest NICE guidelines, what is the appropriate next step in managing her asthma?",
+    "options": [
+      "Start regular low-dose ICS therapy",
+      "Switch to as-needed low-dose ICS/formoterol",
+      "Add a leukotriene receptor antagonist",
+      "Continue with salbutamol and monitor",
+      "Add a long-acting beta-agonist"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to switch to as-needed low-dose ICS/formoterol. NICE NG245 (2024) emphasizes that SABA monotherapy is no longer recommended. For new or worsening asthma, the step is to initiate Anti-Inflammatory Reliever (AIR) therapy with as-needed low-dose ICS/formoterol. Starting regular ICS alone, adding a leukotriene receptor antagonist, or a LABA are not consistent with current guidance for initial therapy. Continuing salbutamol alone fails to address inflammation. The correct pathway involves immediate symptom control and underlying inflammation management. Clinical pearl: AIR therapy combines anti-inflammatory and bronchodilator actions in one inhaler, simplifying management. \nMnemonic: \"AIR for Asthma\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 62-year-old man with newly diagnosed type 2 diabetes and a history of myocardial infarction presents for treatment advice. His HbA1c is 58 mmol/mol. What is the most appropriate first-line pharmacological treatment?",
+    "options": [
+      "Metformin",
+      "Sulfonylurea",
+      "SGLT-2 inhibitor",
+      "GLP-1 receptor agonist",
+      "Insulin"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to start an SGLT-2 inhibitor. According to NICE NG28 (2022), in patients with type 2 diabetes and established cardiovascular disease, an SGLT-2 inhibitor like empagliflozin is recommended first-line due to its cardiovascular benefits. Metformin is normally first-line for type 2 diabetes without specific comorbidities. A sulfonylurea is not preferred due to hypoglycemia risk. GLP-1 receptor agonists are considered for obesity or if other agents are inappropriate. Insulin is not first-line unless there are specific indications like severe hyperglycemia. Clinical pearl: SGLT-2 inhibitors are beneficial for both glycemic control and cardiovascular protection. \nMnemonic: \"SGLT-2 for the Heart and Sugar\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_3",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 68-year-old woman with COPD (FEV1 50% predicted) has frequent exacerbations despite using a salbutamol inhaler. What is the most appropriate next step in her management?",
+    "options": [
+      "Add a long-acting beta-agonist (LABA)",
+      "Add a long-acting muscarinic antagonist (LAMA)",
+      "Switch to dual LABA/LAMA therapy",
+      "Add an inhaled corticosteroid",
+      "Prescribe theophylline"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to switch to dual LABA/LAMA therapy. According to NICE NG115 (2018), for COPD patients with moderate disease and frequent exacerbations, dual bronchodilator therapy is recommended. A LABA or LAMA alone may be insufficient. An inhaled corticosteroid is only indicated if there is evidence of asthma features or high eosinophil count. Theophylline is not typically used due to side effects and interaction potential. Clinical pearl: In COPD management, optimizing bronchodilation with dual therapy can significantly improve quality of life and reduce exacerbations. \nMnemonic: \"Double the Bronchodilation for COPD\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_4",
+    "topic": "Stroke Management",
+    "category": "all",
+    "question": "A 70-year-old woman presents with sudden weakness on her right side and slurred speech for the past 2 hours. She has a history of hypertension and atrial fibrillation. What is the immediate management step?",
+    "options": [
+      "Administer aspirin 300 mg",
+      "Arrange for urgent CT head",
+      "Start IV alteplase",
+      "Give a loading dose of warfarin",
+      "Prescribe clopidogrel 75 mg daily"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to start IV alteplase. According to NICE NG128, patients presenting with acute ischaemic stroke within 4.5 hours of symptom onset without contraindications should receive thrombolysis with alteplase. Urgent CT is necessary but does not precede thrombolysis initiation if time is critical and no contraindications exist. Aspirin is given post-thrombolysis if indicated. Warfarin or other anticoagulants are long-term management for atrial fibrillation, not acute stroke. Clopidogrel is not part of acute management. Clinical pearl: Time is brain – rapid thrombolysis can drastically improve outcomes in acute stroke. \nMnemonic: \"Alteplase in the Golden 4.5 Hours\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_5",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 45-year-old woman presents with fatigue, weight gain, and cold intolerance. Her thyroid function tests show: TSH 8.5 mU/L, free T4 9 pmol/L. What is the most appropriate initial treatment?",
+    "options": [
+      "Levothyroxine 25 mcg daily",
+      "Thyroxine 100 mcg daily",
+      "Carbimazole",
+      "Radioactive iodine therapy",
+      "Observation only"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Levothyroxine 25 mcg daily. According to NICE NG145, patients with hypothyroidism should be started on Levothyroxine, with a typical starting dose of 25–50 mcg daily, adjusted based on age, weight, and cardiac status. Thyroxine 100 mcg is too high for initial dosing. Carbimazole is for hyperthyroidism. Radioactive iodine is not used for hypothyroidism. Observation is not suitable given her symptoms and abnormal TFTs. Clinical pearl: Start low and go slow – adjust levothyroxine based on TSH levels and clinical response. \nMnemonic: \"Levothyroxine for Lethargy and Low T4\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_6",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 60-year-old man with atrial fibrillation and a CHA₂DS₂-VASc score of 2 presents for anticoagulation advice. He has no contraindications to any medications. What is the most appropriate anticoagulant to start?",
+    "options": [
+      "Warfarin",
+      "Aspirin",
+      "Rivaroxaban",
+      "Clopidogrel",
+      "Dabigatran"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Rivaroxaban. NICE NG196 recommends a DOAC like rivaroxaban over warfarin for stroke prevention in atrial fibrillation patients with a CHA₂DS₂-VASc score of 2 or more. Aspirin is not sufficient for stroke prevention in AF. Clopidogrel is not used for AF anticoagulation. Dabigatran is an alternative DOAC but requires twice-daily dosing, whereas rivaroxaban is once daily. Clinical pearl: DOACs offer a more convenient and safer profile than warfarin for many patients with AF. \nMnemonic: \"Rivaroxaban for Rhythm Protection\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_7",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 55-year-old man presents with a cough, fever, and pleuritic chest pain. His CURB-65 score is 1. What is the most appropriate antibiotic treatment?",
+    "options": [
+      "Amoxicillin 500 mg TDS",
+      "Co-amoxiclav",
+      "Ceftriaxone IV",
+      "Azithromycin",
+      "Clarithromycin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Amoxicillin 500 mg TDS. According to NICE NG250, low-severity community-acquired pneumonia (CURB-65 score of 0-1) should be treated with amoxicillin. Co-amoxiclav or ceftriaxone are reserved for higher severity or hospital-acquired cases. Azithromycin and clarithromycin are alternatives if the patient is allergic to penicillin. Clinical pearl: CURB-65 helps guide antibiotic choice and treatment setting for pneumonia. \nMnemonic: \"Amoxicillin for Atypical CAP Cases\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_8",
+    "topic": "Parkinson's Disease Management",
+    "category": "all",
+    "question": "A 72-year-old man with newly diagnosed Parkinson's disease presents with significant motor symptoms. What is the most appropriate initial treatment?",
+    "options": [
+      "Levodopa with a dopa-decarboxylase inhibitor",
+      "Dopamine agonist",
+      "MAO-B inhibitor",
+      "COMT inhibitor",
+      "Amantadine"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Levodopa with a dopa-decarboxylase inhibitor. According to NICE NG71, Levodopa is the most effective treatment for motor symptoms in older patients with Parkinson's disease. Dopamine agonists and MAO-B inhibitors are used more in younger patients to delay the onset of motor complications. COMT inhibitors and amantadine are adjuncts in later stages. Clinical pearl: Levodopa is the gold standard for symptomatic relief in Parkinson's. \nMnemonic: \"Levodopa Leads in Parkinson’s\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng71",
+      "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779367530357_9",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 24-year-old woman presents with focal seizures. She is considering pregnancy. What is the most appropriate first-line antiepileptic drug according to NICE guidelines?",
+    "options": [
+      "Sodium valproate",
+      "Lamotrigine",
+      "Carbamazepine",
+      "Phenytoin",
+      "Topiramate"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Lamotrigine. NICE NG217 recommends Lamotrigine as a first-line treatment for focal seizures, especially in women of childbearing potential, due to its favorable side effect profile and lack of teratogenicity compared to sodium valproate, which is contraindicated. Carbamazepine is also effective but has more side effects. Phenytoin and topiramate are not first-line. Clinical pearl: Always consider teratogenic risks when prescribing AEDs to women of reproductive age. \nMnemonic: \"Lamotrigine for Ladies\".",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate",
+    "mnemonic": "Remember the key clinical signs"
   }
 ]

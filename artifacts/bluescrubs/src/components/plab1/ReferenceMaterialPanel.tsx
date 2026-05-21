@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BookOpen, ChevronDown } from "lucide-react";
-import { buildDynamicLink, getNICEReferencesForQuestion } from "@/lib/clinical-links";
+import { buildDynamicLink, getNICEReferencesForQuestion, toCKSSlug } from "@/lib/clinical-links";
 
 interface ReferenceMaterialPanelProps {
   question: any;
@@ -67,10 +67,14 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
     });
   }
 
-  // 2. CKS hardcoded card (canonical label "NICE CKS")
-  const cksUrl = qTopic
-    ? `https://cks.nice.org.uk/search/?q=${encodeURIComponent(qTopic)}`
-    : 'https://cks.nice.org.uk/';
+  // 2. CKS hardcoded card — use the canonical topic URL (same as getNICEReferencesForQuestion)
+  //    so URL-based dedup fires correctly. Fall back to search only when no slug exists.
+  const cksTopicSlug = qTopic ? toCKSSlug(qTopic) : null;
+  const cksUrl = cksTopicSlug
+    ? `https://cks.nice.org.uk/topics/${cksTopicSlug}/`
+    : (qTopic
+        ? `https://cks.nice.org.uk/search/?q=${encodeURIComponent(qTopic)}`
+        : 'https://cks.nice.org.uk/');
   candidates.push({
     url: cksUrl,
     title: qTopic ? `NICE CKS — ${qTopic}` : 'NICE Clinical Knowledge Summaries',
@@ -139,12 +143,16 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
   // Sort: primary first
   candidates.sort((a, b) => (b.primary ? 1 : 0) - (a.primary ? 1 : 0));
 
-  // Deduplicate by URL (keep first occurrence)
+  // Deduplicate by URL first (normalised), then also by label+URL together
+  // as a belt-and-braces guard against same-label/different-URL duplicates.
   const seenUrls = new Set<string>();
+  const seenLabelUrl = new Set<string>();
   const deduped = candidates.filter(ref => {
-    const key = ref.url.replace(/\/+$/, '').toLowerCase();
-    if (seenUrls.has(key)) return false;
-    seenUrls.add(key);
+    const urlKey = ref.url.replace(/\/+$/, '').toLowerCase();
+    const labelUrlKey = `${ref.title.trim().toLowerCase()}||${urlKey}`;
+    if (seenUrls.has(urlKey) || seenLabelUrl.has(labelUrlKey)) return false;
+    seenUrls.add(urlKey);
+    seenLabelUrl.add(labelUrlKey);
     return true;
   });
 
