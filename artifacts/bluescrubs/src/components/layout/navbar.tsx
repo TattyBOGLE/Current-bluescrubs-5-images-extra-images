@@ -21,7 +21,6 @@ export default function Navbar() {
   const navItems = [
     { href: "/dashboard", label: "Dashboard", icon: "🏠" },
     { href: "/plab1", label: "PLAB 1", icon: "📚" },
-    { href: "/plab2", label: "PLAB 2", icon: "🏥" },
     { href: "/community", label: "Community", icon: "👥" },
     { href: "/resources", label: "NHS Prep", icon: "🎯" },
   ];

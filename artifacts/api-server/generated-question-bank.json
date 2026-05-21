@@ -25761,5 +25761,215 @@
       "CKS": "https://cks.nice.org.uk/topics/depression"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man presents to the clinic for a routine check-up. He has no significant past medical history and no known allergies. His blood pressure readings over the past three visits are 152/94 mmHg, 148/92 mmHg, and 150/95 mmHg. His BMI is 28.3 kg/m². What is the most appropriate first-line antihypertensive medication for this patient?",
+    "options": [
+      "Ramipril",
+      "Amlodipine",
+      "Hydrochlorothiazide",
+      "Atenolol",
+      "Lisinopril"
+    ],
+    "answer": 0,
+    "explanation": "This patient is under 55 and not of Black African or African-Caribbean family origin, which makes an ACE inhibitor like Ramipril the most appropriate first-line treatment according to NICE NG136 (2023 update). His consistent blood pressure readings confirm a diagnosis of hypertension. Amlodipine would be first-line if he were over 55 or of Black African or African-Caribbean descent. Hydrochlorothiazide and Atenolol are not recommended as first-line agents under current guidelines. Lisinopril is also an ACE inhibitor, but Ramipril is more commonly used in the UK. Remember: ACE inhibitors are preferred for younger, non-Black patients.",
+    "mnemonic": "ACE for Under-55: ACE inhibitors are the first line for under 55.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 25-year-old woman, recently diagnosed with asthma, presents to the surgery with worsening symptoms despite using her salbutamol inhaler multiple times a day. She is otherwise well. What is the most appropriate next step in her management?",
+    "options": [
+      "Add a low-dose ICS inhaler",
+      "Switch to a low-dose ICS/formoterol inhaler",
+      "Increase salbutamol frequency",
+      "Add a leukotriene receptor antagonist",
+      "Refer to a respiratory specialist"
+    ],
+    "answer": 1,
+    "explanation": "According to the updated NICE NG245 (2024) guidelines, newly diagnosed asthma patients or those inadequately controlled on SABA alone should transition to as-needed low-dose ICS/formoterol inhaler, known as AIR therapy. This approach provides both anti-inflammatory and bronchodilator effects. Adding a separate ICS to SABA represents an outdated guideline. Increasing salbutamol frequency without ICS is not recommended due to lack of anti-inflammatory control. A leukotriene receptor antagonist or specialist referral is considered later in management. This scenario exemplifies the shift from SABA monotherapy to combination therapy for better control.",
+    "mnemonic": "AIR therapy first: As-needed ICS/Formoterol for new or uncontrolled asthma.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_2",
+    "topic": "Type 2 Diabetes",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes and established cardiovascular disease is currently on metformin 1000 mg BD. His HbA1c is 64 mmol/mol. What is the most appropriate additional medication?",
+    "options": [
+      "Sulfonylurea",
+      "SGLT-2 inhibitor",
+      "Insulin",
+      "GLP-1 receptor agonist",
+      "DPP-4 inhibitor"
+    ],
+    "answer": 1,
+    "explanation": "For patients with type 2 diabetes and established cardiovascular disease, NICE NG28 (2022 update) recommends adding an SGLT-2 inhibitor like empagliflozin to metformin. This choice can provide cardiovascular protection and aid in glycaemic control. A sulfonylurea may increase hypoglycemia risk, while insulin is not first-line unless HbA1c targets are unmet with oral therapy. GLP-1 receptor agonists are an option if SGLT-2 inhibitors are not tolerated or if BMI criteria are met, and DPP-4 inhibitors do not confer cardiovascular benefits. This highlights the importance of SGLT-2 inhibitors in diabetic patients with CVD.",
+    "mnemonic": "SGLT-2 for CVD: SGLT-2 inhibitors benefit heart and sugar in diabetes with CVD.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_3",
+    "topic": "Atrial Fibrillation",
+    "category": "all",
+    "question": "A 70-year-old woman with a history of hypertension and atrial fibrillation presents with palpitations and a heart rate of 120 bpm. Her CHA₂DS₂-VASc score is 3. What is the most appropriate initial management strategy?",
+    "options": [
+      "Start a beta-blocker",
+      "Initiate rhythm control with amiodarone",
+      "Start warfarin",
+      "Initiate a DOAC",
+      "Immediate cardioversion"
+    ],
+    "answer": 0,
+    "explanation": "The NICE NG196 (2021) guidelines recommend rate control as the first-line management for atrial fibrillation, typically using beta-blockers like bisoprolol, especially in this patient with a CHA₂DS₂-VASc score indicating high stroke risk. Rhythm control is reserved for symptomatic relief or heart failure. While anticoagulation is necessary due to the high CHA₂DS₂-VASc score, starting rate control is the priority in this scenario. DOACs are preferred over warfarin for long-term anticoagulation but are not the immediate intervention. Cardioversion is not first-line without heart failure or severe symptoms.",
+    "mnemonic": "Beta-block for Rate: Beta-blockers first for atrial rate control.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_4",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 65-year-old man with a CURB-65 score of 2 is diagnosed with moderate community-acquired pneumonia. What is the most appropriate antibiotic regimen?",
+    "options": [
+      "Amoxicillin",
+      "Amoxicillin plus clarithromycin",
+      "Co-amoxiclav",
+      "Ceftriaxone",
+      "Doxycycline"
+    ],
+    "answer": 1,
+    "explanation": "For moderate severity pneumonia with a CURB-65 score of 2, NICE NG250 (2025) guidelines recommend dual therapy with amoxicillin and clarithromycin. This combination covers both typical and atypical pathogens. Monotherapy with amoxicillin is adequate for low severity. Co-amoxiclav is reserved for high severity or hospital-acquired infections. Ceftriaxone is for severe cases requiring IV therapy, and doxycycline is an alternative in cases of penicillin allergy. The dual oral regimen is appropriate for moderate community-acquired pneumonia managed in an outpatient setting.",
+    "mnemonic": "Dual Rx for Moderate: Amoxicillin + Clarithromycin for moderate CAP.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia-community-acquired"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_5",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 35-year-old woman presents with fatigue, weight gain, and dry skin. Her TSH is 8.5 mU/L, and free T4 is 10 pmol/L. What is the most appropriate initial treatment?",
+    "options": [
+      "Levothyroxine 25 mcg daily",
+      "Levothyroxine 50 mcg daily",
+      "Carbimazole",
+      "Liothyronine",
+      "No treatment, recheck in 6 months"
+    ],
+    "answer": 1,
+    "explanation": "NICE NG145 (2019) recommends starting levothyroxine at 50 mcg daily for adults with primary hypothyroidism, adjusting based on TSH levels. This patient's elevated TSH and low free T4 indicate subclinical hypothyroidism, justifying treatment. Carbimazole is for hyperthyroidism, and liothyronine is not recommended for routine use due to short half-life. Monitoring without treatment is appropriate only if TSH is borderline or symptoms are absent. Initial treatment with levothyroxine is correct, aiming to normalize TSH and alleviate symptoms.",
+    "mnemonic": "Levothyroxine for Low: Start levothyroxine when TSH is high and T4 is low.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_6",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 75-year-old woman presents with confusion, fever, and hypotension (BP 85/60 mmHg). Lactate is 4.2 mmol/L. What is the most appropriate immediate management step?",
+    "options": [
+      "Administer IV antibiotics",
+      "Administer IV fluids",
+      "Obtain blood cultures",
+      "Administer vasopressors",
+      "Perform a CT scan"
+    ],
+    "answer": 1,
+    "explanation": "According to the Surviving Sepsis Campaign 2021 and NICE NG51 (2016), immediate fluid resuscitation with crystalloid fluids is crucial in managing sepsis with hypotension and elevated lactate. This should be part of the sepsis-six bundle. Antibiotics are also urgent but fluids address hemodynamic instability. Blood cultures should be obtained before antibiotics, but fluids are prioritized to stabilize blood pressure. Vasopressors are considered if fluids are insufficient, and CT scans are not an immediate step in sepsis management. Early fluid resuscitation is key to improving outcomes.",
+    "mnemonic": "Fluids First in Sepsis: Stabilize BP with fluids promptly.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_7",
+    "topic": "Osteoporosis Management",
+    "category": "all",
+    "question": "A 68-year-old postmenopausal woman has a DEXA scan showing a T-score of -2.8. She has a history of a wrist fracture. What is the most appropriate initial management?",
+    "options": [
+      "Alendronate",
+      "Raloxifene",
+      "Calcium and vitamin D",
+      "Teriparatide",
+      "Denosumab"
+    ],
+    "answer": 0,
+    "explanation": "NICE NG187 recommends alendronate as the first-line treatment for osteoporosis in postmenopausal women with a T-score ≤-2.5 and a history of fracture. Alendronate reduces the risk of vertebral and hip fractures. Raloxifene is not first-line due to limited fracture prevention data. Calcium and vitamin D should be supplemental but not sole treatment. Teriparatide and denosumab are options if bisphosphonates are contraindicated or not tolerated. Alendronate is preferred for its efficacy and cost-effectiveness in reducing fracture risk.",
+    "mnemonic": "Alendronate for Osteoporosis: First-line for fracture prevention.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ta160",
+      "CKS": "https://cks.nice.org.uk/topics/osteoporosis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_8",
+    "topic": "Upper GI Bleed",
+    "category": "all",
+    "question": "A 58-year-old man with liver cirrhosis presents with hematemesis. His blood pressure is 90/60 mmHg, and heart rate is 110 bpm. What is the most appropriate initial management?",
+    "options": [
+      "Endoscopic band ligation",
+      "Start a PPI infusion",
+      "Administer terlipressin",
+      "Perform urgent endoscopy",
+      "Transfuse packed red cells"
+    ],
+    "answer": 2,
+    "explanation": "In a suspected variceal bleed due to liver cirrhosis, NICE NG141 (2016) and BSG guidelines recommend administering terlipressin immediately to control bleeding and reduce mortality. Endoscopic band ligation is the definitive treatment but requires stabilization first. PPI infusion is for non-variceal bleeds. Urgent endoscopy is needed but follows initial stabilization with terlipressin and fluids. Blood transfusion is indicated for severe anemia, targeting a Hb of 70-80 g/L, but terlipressin should not be delayed.",
+    "mnemonic": "Terlipressin for Varices: First step in variceal bleed control.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng141",
+      "CKS": "https://cks.nice.org.uk/topics/gastrointestinal-bleeding"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779380384532_9",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 63-year-old man with chest pain radiating to the left arm and ST elevation in leads II, III, and aVF on ECG is brought to the hospital. What is the most appropriate immediate management?",
+    "options": [
+      "Start aspirin and clopidogrel",
+      "Administer morphine and oxygen",
+      "Perform primary PCI",
+      "Administer thrombolysis",
+      "Start a beta-blocker"
+    ],
+    "answer": 2,
+    "explanation": "In the case of an ST-elevation myocardial infarction (STEMI), NICE NG185 (2020) guidelines prioritize primary percutaneous coronary intervention (PCI) within 120 minutes of first medical contact. This approach is associated with better outcomes compared to thrombolysis. While aspirin and clopidogrel are part of management, they don't substitute revascularization. Morphine and oxygen are supportive but not definitive. Thrombolysis is reserved if PCI is unavailable. Beta-blockers are used after stabilization unless contraindicated. Immediate PCI is the gold standard for revascularization in STEMI.",
+    "mnemonic": "PCI is Key for STEMI: Immediate revascularization with PCI.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
   }
 ]

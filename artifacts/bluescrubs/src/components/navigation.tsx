@@ -19,7 +19,6 @@ export function Navigation({ user }: NavigationProps) {
   const navigation = [
     { name: "Dashboard", href: "/dashboard", icon: Home, current: location === "/dashboard" },
     { name: "PLAB 1", href: "/plab1-new", icon: BookOpen, current: location === "/plab1-new" },
-    { name: "PLAB 2", href: "/plab2-osce", icon: Video, current: location === "/plab2-osce" },
     { name: "Analytics", href: "/analytics", icon: BarChart3, current: location === "/analytics" },
     { name: "Adaptive AI", href: "/adaptive-learning", icon: Zap, current: location === "/adaptive-learning" },
     { name: "Spaced Learning", href: "/spaced-repetition", icon: Brain, current: location === "/spaced-repetition" },
