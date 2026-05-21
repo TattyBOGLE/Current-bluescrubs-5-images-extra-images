@@ -536,6 +536,13 @@ export const insertUserCulturalProgressSchema = createInsertSchema(userCulturalP
   score: true,
 });
 
+// Persistent cache for AI-generated question explanations
+export const questionExplanationCache = pgTable("question_explanation_cache", {
+  cacheKey: text("cache_key").primaryKey(),
+  data: jsonb("data").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
 // Global Scoreboard System
 export const globalScoreboard = pgTable("global_scoreboard", {
   id: serial("id").primaryKey(),

@@ -1,6 +1,9 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { db } from "./db";
+import { questionExplanationCache } from "@shared/schema";
+import { eq } from "drizzle-orm";
 import { isAIEnabled, getAIStatus, suspendAI } from "./ai-config";
 import { BNF_MEDICATIONS } from "./shared/bnf-integration";
 import { 
@@ -1223,6 +1226,22 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
         });
       }
 
+      // Check persistent DB cache before hitting OpenAI
+      try {
+        const dbRow = await db.select().from(questionExplanationCache).where(eq(questionExplanationCache.cacheKey, cacheKey)).limit(1);
+        if (dbRow.length > 0) {
+          const cached = dbRow[0].data as any;
+          explanationCache.set(cacheKey, cached);
+          return res.json({
+            ...cached,
+            options: cached.options.map((o: any, i: number) => ({ ...o, isSelected: selectedIndex === i })),
+            cached: true,
+          });
+        }
+      } catch (_dbErr) {
+        // DB unavailable — fall through to AI generation
+      }
+
       if (!isAIEnabled() || (!process.env.OPENAI_API_KEY && !process.env.AI_INTEGRATIONS_OPENAI_API_KEY)) {
         return res.json(buildFallbackExplanation(question, options, correctIndex, selectedIndex, safeStored));
       }
@@ -1334,11 +1353,17 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
       };
 
       explanationCache.set(cacheKey, result);
-      // Cap cache size to avoid runaway memory
+      // Cap in-memory cache size to avoid runaway memory
       if (explanationCache.size > 2000) {
         const firstKey = explanationCache.keys().next().value;
         if (firstKey) explanationCache.delete(firstKey);
       }
+
+      // Persist to DB asynchronously (fire-and-forget — don't block the response)
+      db.insert(questionExplanationCache)
+        .values({ cacheKey, data: result })
+        .onConflictDoUpdate({ target: questionExplanationCache.cacheKey, set: { data: result } })
+        .catch(() => { /* non-fatal */ });
 
       return res.json(result);
     } catch (error) {
