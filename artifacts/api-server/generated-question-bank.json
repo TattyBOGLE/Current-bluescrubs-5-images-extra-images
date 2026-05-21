@@ -15054,5 +15054,215 @@
       "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_0",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 65-year-old man presents to the emergency department with a 2-hour history of severe central chest pain radiating to his left arm. He is diaphoretic and nauseous. His ECG shows ST elevation in leads II, III, and aVF. His blood pressure is 140/90 mmHg, and heart rate is 90 bpm. What is the most appropriate next step in management?",
+    "options": [
+      "Primary PCI",
+      "Thrombolysis",
+      "Aspirin 300 mg",
+      "Ticagrelor",
+      "Oxygen therapy"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Primary PCI. Immediate primary percutaneous coronary intervention (PCI) is the gold standard treatment for ST-elevation myocardial infarction (STEMI) if it can be performed within 120 minutes of first medical contact, as per NICE NG185 guidelines. This patient presented with a classic STEMI pattern on the ECG and is within the time frame for PCI. Thrombolysis would be considered if PCI is not available within the recommended time. Aspirin and ticagrelor are part of the antiplatelet therapy regimen but are supportive measures rather than definitive acute interventions. Oxygen therapy is only indicated if the patient is hypoxic. Remember: 'Time is Muscle', so expedite PCI for STEMI patients.",
+    "mnemonic": "STEMI: 'Time is Muscle, PCI within 120 min'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_1",
+    "topic": "Hypertension",
+    "category": "all",
+    "question": "A 52-year-old Caucasian woman with a history of hypertension presents for follow-up. She is currently on amlodipine 10 mg once daily. Her blood pressure today is 158/94 mmHg. According to NICE guidelines, what is the most appropriate next step in her management?",
+    "options": [
+      "Increase amlodipine dose",
+      "Add an ACE inhibitor",
+      "Add a thiazide-like diuretic",
+      "Add a beta-blocker",
+      "Switch to a different CCB"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add an ACE inhibitor. According to NICE NG136 guidelines for hypertension management, if a patient's blood pressure is not adequately controlled with a calcium channel blocker (CCB) like amlodipine, the next step is to add an ACE inhibitor (or an ARB if an ACE inhibitor is not tolerated). Increasing the dose of amlodipine is not advised as 10 mg is already the maximum recommended dose. Thiazide-like diuretics are considered at step 3, after a combination of CCB and ACE inhibitor or ARB. Beta-blockers are not first-line in hypertension management unless there are specific indications like heart failure or atrial fibrillation. Switching CCBs is not recommended. Remember: 'Amlodipine + ACE inhibitor = Step 2'.",
+    "mnemonic": "Hypertension Step 2: 'Amlodipine + ACE'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_2",
+    "topic": "Type 2 Diabetes",
+    "category": "all",
+    "question": "A 58-year-old man with type 2 diabetes and a BMI of 31 kg/m² is on metformin 1 g twice daily. His HbA1c is 60 mmol/mol (7.6%). He has a history of myocardial infarction. What is the most appropriate next step in his management?",
+    "options": [
+      "Add a sulfonylurea",
+      "Add an SGLT-2 inhibitor",
+      "Add a GLP-1 receptor agonist",
+      "Switch to insulin therapy",
+      "Increase metformin dose"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add an SGLT-2 inhibitor. According to NICE NG28, an SGLT-2 inhibitor such as empagliflozin or dapagliflozin is recommended for patients with type 2 diabetes who have established cardiovascular disease or are at high risk. This is especially relevant given the patient's history of myocardial infarction. Sulfonylureas are generally avoided due to the risk of hypoglycaemia. A GLP-1 receptor agonist is considered if there is a high BMI (≥35 kg/m²) or if insulin is not acceptable. Insulin therapy is usually reserved for cases where oral therapy is inadequate or contraindicated. Metformin is already at the maximum effective dose. Remember: 'Heart history? Add SGLT-2'.",
+    "mnemonic": "Diabetes + Heart: 'Add SGLT-2'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_3",
+    "topic": "Asthma",
+    "category": "all",
+    "question": "A 30-year-old woman with a history of asthma is currently using a salbutamol inhaler as needed. She reports increased use of her inhaler over the past month and waking up at night due to asthma symptoms twice a week. According to the latest NICE guidelines, what is the most appropriate next step in her management?",
+    "options": [
+      "Add a low-dose ICS",
+      "Switch to as-needed low-dose ICS/formoterol",
+      "Add a LABA",
+      "Continue current treatment",
+      "Add a LTRA"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to switch to as-needed low-dose ICS/formoterol, following NICE NG245 guidelines. The new asthma management strategy recommends using a combination inhaler containing low-dose ICS and formoterol as needed (Anti-Inflammatory Reliever therapy) for newly diagnosed adults or those currently on SABA-only, like this patient. Adding a separate ICS to a SABA is part of the outdated management pathway and is no longer recommended. LABAs or LTRAs are considered step 3 or later in the pathway, respectively. Continuing with SABA alone is inadequate given her symptoms, indicating poor control. Remember: 'Asthma AIR therapy for SABA-only'.",
+    "mnemonic": "Asthma AIR: 'ICS/formoterol as-needed'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_4",
+    "topic": "Atrial Fibrillation",
+    "category": "all",
+    "question": "A 72-year-old man with atrial fibrillation presents with palpitations. He denies any chest pain or shortness of breath. His CHA₂DS₂-VASc score is 3. His heart rate is 110 bpm. What is the most appropriate initial management?",
+    "options": [
+      "Electrical cardioversion",
+      "Rate control with a beta-blocker",
+      "Start a DOAC",
+      "Rhythm control with amiodarone",
+      "Antiplatelet therapy with aspirin"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is rate control with a beta-blocker, in accordance with NICE NG196 guidelines for atrial fibrillation. Rate control is the first-line strategy for most patients with atrial fibrillation, and a beta-blocker is commonly used unless contraindicated. Anticoagulation with a DOAC is indicated given his CHA₂DS₂-VASc score, but rhythm control is not prioritized initially unless the patient is symptomatic despite rate control or has heart failure. Electrical cardioversion is typically reserved for acute cases or specific scenarios. Aspirin monotherapy is no longer recommended for stroke prevention in atrial fibrillation. Remember: 'AF: Control the Rate First'.",
+    "mnemonic": "AF: 'Rate first, Rhythm later'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_5",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 34-year-old woman presents with a 4-day history of cough, fever, and pleuritic chest pain. Her temperature is 38.5°C, pulse 96 bpm, respiratory rate 24/min, and blood pressure 110/70 mmHg. CURB-65 score is 1. What is the most appropriate antibiotic treatment?",
+    "options": [
+      "Amoxicillin",
+      "Co-amoxiclav",
+      "Clarithromycin",
+      "Doxycycline",
+      "Levofloxacin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is amoxicillin. According to NICE NG250 guidelines for community-acquired pneumonia, low severity cases with a CURB-65 score of 0 or 1 are managed with oral amoxicillin 500 mg TDS for 5 days as first-line treatment. Co-amoxiclav and clarithromycin would be considered in cases of moderate to high severity or if the patient is allergic to penicillin. Doxycycline is an alternative for those with penicillin allergy but not first-line for this severity. Levofloxacin is rarely used due to its side effect profile. Remember: 'CAP low severity: Start with Amoxicillin'.",
+    "mnemonic": "CAP: 'Amoxicillin for low severity'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_6",
+    "topic": "Depression",
+    "category": "all",
+    "question": "A 29-year-old woman presents with symptoms of depression. She reports feeling low most of the day, nearly every day, for the past two months. She has lost interest in her usual activities and has difficulty sleeping. What is the most appropriate initial treatment according to NICE guidelines?",
+    "options": [
+      "Sertraline",
+      "Amitriptyline",
+      "Fluoxetine",
+      "Cognitive Behavioural Therapy",
+      "Electroconvulsive Therapy"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is Cognitive Behavioural Therapy (CBT). According to NICE NG222 guidelines, psychological therapies such as CBT are recommended as first-line treatment for mild depression, especially in patients who are open to this approach. Sertraline or fluoxetine could also be considered, particularly if the depression is moderate to severe or if psychological interventions are not effective. Amitriptyline is not first-line due to its side effect profile. Electroconvulsive therapy is reserved for severe depression or treatment-resistant cases. Remember: 'Mild depression: Try CBT first'.",
+    "mnemonic": "Mild Depression: 'CBT First'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng222",
+      "CKS": "https://cks.nice.org.uk/topics/depression"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_7",
+    "topic": "Epilepsy",
+    "category": "all",
+    "question": "A 40-year-old man with newly diagnosed focal epilepsy presents for advice on starting medication. He has no significant past medical history and is otherwise healthy. What is the most appropriate first-line treatment?",
+    "options": [
+      "Lamotrigine",
+      "Sodium valproate",
+      "Levetiracetam",
+      "Carbamazepine",
+      "Topiramate"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is lamotrigine. NICE NG217 guidelines recommend lamotrigine or carbamazepine as first-line treatment options for newly diagnosed focal epilepsy. Levetiracetam is often used but may not be first-line unless there are specific reasons to avoid other options. Sodium valproate is not preferred for focal epilepsy and is also avoided in women of childbearing potential. Topiramate is not typically first-line for focal epilepsy. Remember: 'Focal epilepsy: Lamotrigine or Carbamazepine'.",
+    "mnemonic": "Focal Epilepsy: 'Lamotrigine First'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_8",
+    "topic": "Acute Kidney Injury",
+    "category": "all",
+    "question": "A 70-year-old woman with a history of hypertension is admitted with dehydration and acute kidney injury (AKI). Her creatinine on admission is 250 μmol/L (baseline 80 μmol/L). What is the most appropriate initial management step?",
+    "options": [
+      "Start IV fluids",
+      "Stop antihypertensive medication",
+      "Initiate dialysis",
+      "Administer diuretics",
+      "Give sodium bicarbonate"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to start IV fluids. In AKI, especially when due to dehydration as in this case, the first step is to ensure adequate renal perfusion by administering intravenous fluids. NICE CG169 guidelines recommend stopping nephrotoxic drugs such as NSAIDs and adjusting antihypertensive therapy only if clinically indicated based on blood pressure. Dialysis is reserved for severe cases meeting specific criteria (AEIOU). Diuretics are not used to treat volume depletion. Sodium bicarbonate is not indicated unless there is severe acidosis. Remember: 'Dehydration + AKI: Hydrate First'.",
+    "mnemonic": "AKI: 'Hydrate First'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg169",
+      "CKS": "https://cks.nice.org.uk/topics/acute-kidney-injury"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779376325462_9",
+    "topic": "Rheumatoid Arthritis",
+    "category": "all",
+    "question": "A 55-year-old woman is diagnosed with rheumatoid arthritis. She has significant joint pain and swelling. What is the most appropriate initial management to control her disease activity?",
+    "options": [
+      "NSAIDs",
+      "Methotrexate",
+      "Sulfasalazine",
+      "Hydroxychloroquine",
+      "Prednisolone"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is methotrexate. NICE NG100 guidelines recommend starting a DMARD like methotrexate within 3 months of diagnosis to control disease activity in rheumatoid arthritis. NSAIDs can be used for symptomatic relief but do not alter disease progression. Sulfasalazine and hydroxychloroquine are considered if methotrexate is contraindicated or in combination therapy. Prednisolone is used for short-term flares but is not a long-term solution. Remember: 'RA: Methotrexate within 3 months'.",
+    "mnemonic": "RA: 'Methotrexate First'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng100",
+      "CKS": "https://cks.nice.org.uk/topics/rheumatoid-arthritis"
+    },
+    "difficulty": "intermediate"
   }
 ]
