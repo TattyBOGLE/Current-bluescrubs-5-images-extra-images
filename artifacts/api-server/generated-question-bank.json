@@ -25971,5 +25971,215 @@
       "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329325_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man with a history of hypertension presents for a routine check-up. His blood pressure is consistently measured at 155/95 mmHg in the clinic. He has no other medical conditions and is not on any medication. According to the latest NICE guidelines, what is the most appropriate initial treatment for his hypertension?",
+    "options": [
+      "Start amlodipine 5 mg daily",
+      "Start candesartan 8 mg daily",
+      "Start indapamide 2.5 mg daily",
+      "Lifestyle modification only",
+      "Start bisoprolol 5 mg daily"
+    ],
+    "answer": 1,
+    "explanation": "In this scenario, the patient is under 55 years old and Caucasian, which according to NICE NG136 (2023), recommends starting an ACE inhibitor or an ARB as the first-line treatment. Candesartan, an ARB, is an appropriate choice. Amlodipine, a calcium channel blocker, is recommended first-line for patients over 55 or of Black African or African-Caribbean family origin. Indapamide, a thiazide-like diuretic, is considered at step 3. Lifestyle modifications are important but not sufficient alone given his hypertension stage. Bisoprolol is not first-line according to the guidelines. Remember, ACE inhibitors or ARBs are preferred for younger non-Black patients. Clinical pearl: 'Caucasian <55, ACE or ARB.'",
+    "mnemonic": "Young Caucasian Hypertension: ACE or ARB",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_1",
+    "topic": "Asthma Management in Adults",
+    "category": "all",
+    "question": "A 30-year-old woman with newly diagnosed asthma presents with symptoms of wheezing and shortness of breath occurring twice weekly. She has been using a salbutamol inhaler as needed but seeks further advice. According to the latest NICE guidelines, what is the most appropriate next step in her management?",
+    "options": [
+      "Add low-dose beclometasone inhaler",
+      "Switch to as-needed low-dose ICS/formoterol combination inhaler",
+      "Continue salbutamol and add oral montelukast",
+      "Start regular low-dose ICS inhaler",
+      "Add a long-acting beta agonist inhaler"
+    ],
+    "answer": 1,
+    "explanation": "For adults with newly diagnosed asthma, the NICE NG245 (2024) guidelines recommend switching from a SABA-only regime to as-needed low-dose ICS/formoterol combination inhaler, known as AIR therapy. This approach provides both anti-inflammatory and bronchodilation effects. Adding a regular ICS to a SABA or starting a LABA is outdated. Montelukast is not preferred at this stage. The goal is to control symptoms and reduce exacerbations with minimal medication. Clinical pearl: 'New asthma, AIR therapy is a breath of fresh air!'",
+    "mnemonic": "New Asthma: AIR Therapy",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_2",
+    "topic": "Diabetes Type 2 Management",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes and a BMI of 32 kg/m² is on metformin 1 g twice daily. His latest HbA1c is 60 mmol/mol. He has a history of myocardial infarction. According to NICE guidelines, what is the most appropriate next step in his diabetes management?",
+    "options": [
+      "Add a sulfonylurea",
+      "Add a DPP-4 inhibitor",
+      "Add an SGLT-2 inhibitor",
+      "Add a GLP-1 receptor agonist",
+      "Switch to insulin therapy"
+    ],
+    "answer": 2,
+    "explanation": "Given the patient's history of cardiovascular disease, NICE NG28 (2022) recommends adding an SGLT-2 inhibitor like empagliflozin, which provides cardiovascular benefits. A sulfonylurea might increase hypoglycemia risk, especially with existing heart disease. DPP-4 inhibitors are less effective in reducing cardiovascular risk. GLP-1 receptor agonists are considered if BMI is ≥35 or insulin is unacceptable. Insulin is not the next step here. Clinical pearl: 'Heart and diabetes, SGLT-2 leads the way!'",
+    "mnemonic": "Heart History: SGLT-2 for Diabetes",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_3",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 75-year-old man with a history of hypertension presents with new-onset atrial fibrillation. He is symptomatic with palpitations and shortness of breath. His CHA₂DS₂-VASc score is 3. What is the most appropriate initial step in his management according to NICE guidelines?",
+    "options": [
+      "Start bisoprolol for rate control",
+      "Initiate rhythm control with amiodarone",
+      "Start aspirin for anticoagulation",
+      "Refer for immediate electrical cardioversion",
+      "Start warfarin for anticoagulation"
+    ],
+    "answer": 0,
+    "explanation": "In symptomatic atrial fibrillation, NICE NG196 (2021) suggests starting with rate control using a beta-blocker like bisoprolol. Rhythm control is considered if symptoms persist despite rate control. Anticoagulation with a DOAC is preferred; aspirin alone is inadequate. Immediate cardioversion is not indicated unless hemodynamically unstable. Warfarin is less preferred than DOACs for stroke prevention. Clinical pearl: 'AF rate control, beta-blocker is the goal!'",
+    "mnemonic": "AF Rate Control: Beta-Blocker First",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_4",
+    "topic": "Acute Coronary Syndromes",
+    "category": "all",
+    "question": "A 62-year-old woman presents with chest pain and an ECG showing ST-segment elevation in leads II, III, and aVF. She arrived at the hospital 90 minutes after the onset of symptoms. According to NICE guidelines, what is the most appropriate next step in her management?",
+    "options": [
+      "Administer aspirin and refer for thrombolysis",
+      "Start fondaparinux and admit to coronary care",
+      "Refer for primary percutaneous coronary intervention (PCI)",
+      "Prescribe a beta-blocker and observe",
+      "Administer nitroglycerin and monitor"
+    ],
+    "answer": 2,
+    "explanation": "The patient presents with a STEMI and is within the 120-minute window for primary PCI as per NICE NG185 (2020). PCI is preferred over thrombolysis due to better outcomes. Fondaparinux is used in NSTEMI. Beta-blockers and nitroglycerin are part of medical management but do not replace revascularization. Clinical pearl: 'STEMI? PCI within 120 minutes!'",
+    "mnemonic": "STEMI: PCI in 120",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acs"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_5",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 68-year-old man presents with cough, fever, and dyspnea. His CURB-65 score is 1. According to NICE guidelines, what is the most appropriate antibiotic treatment for his pneumonia?",
+    "options": [
+      "Amoxicillin 500 mg TDS for 5 days",
+      "Doxycycline 100 mg OD for 7 days",
+      "Co-amoxiclav 625 mg TDS for 7 days",
+      "Clarithromycin 500 mg BD for 5 days",
+      "Levofloxacin 500 mg OD for 10 days"
+    ],
+    "answer": 0,
+    "explanation": "For low-severity community-acquired pneumonia (CURB-65 score 0-1), NICE NG250 (2025) recommends amoxicillin 500 mg TDS for 5 days as first-line treatment. Doxycycline is an alternative for penicillin allergy. Co-amoxiclav and levofloxacin are for more severe cases. Clarithromycin is added for atypical coverage in moderate severity. Clinical pearl: 'Low CURB, Amoxicillin is superb!'",
+    "mnemonic": "Low CURB: Amoxicillin First",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_6",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 45-year-old woman with newly diagnosed primary hypothyroidism is to start treatment. Her TSH level is 15 mU/L. According to NICE guidelines, what is the most appropriate initial dose of levothyroxine?",
+    "options": [
+      "25 mcg daily",
+      "50 mcg daily",
+      "75 mcg daily",
+      "100 mcg daily",
+      "125 mcg daily"
+    ],
+    "answer": 1,
+    "explanation": "For a newly diagnosed hypothyroid patient, NICE NG145 (2019) suggests starting levothyroxine at 25-50 mcg daily, depending on the patient's age, size, and cardiac status. Given her age and lack of cardiac issues, 50 mcg is appropriate. Higher doses could risk overtreatment. Clinical pearl: 'Start low, go slow with levothyroxine!'",
+    "mnemonic": "Levothyroxine: Start Low, Go Slow",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_7",
+    "topic": "Parkinson's Disease Management",
+    "category": "all",
+    "question": "A 70-year-old man with Parkinson's disease presents with worsening tremors and bradykinesia. He is not currently on any medication. According to NICE guidelines, what is the most effective initial treatment for his symptoms?",
+    "options": [
+      "Pramipexole",
+      "Rasagiline",
+      "Levodopa",
+      "Amantadine",
+      "Benztropine"
+    ],
+    "answer": 2,
+    "explanation": "For older patients with Parkinson's disease and significant motor symptoms, NICE NG71 (2020) recommends levodopa with a dopa-decarboxylase inhibitor as the most effective initial treatment. Pramipexole and rasagiline can delay motor complications but are not as effective for immediate symptom control. Amantadine and benztropine are less commonly used first-line. Clinical pearl: 'Parkinson's tremors, levodopa delivers!'",
+    "mnemonic": "Parkinson's: Levodopa Leads",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng71",
+      "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_8",
+    "topic": "Gout Management",
+    "category": "all",
+    "question": "A 55-year-old man presents with a red, swollen, and painful right big toe. He has been diagnosed with gout. According to NICE guidelines, what is the most appropriate acute treatment?",
+    "options": [
+      "Aspirin",
+      "Indomethacin",
+      "Colchicine",
+      "Allopurinol",
+      "Ibuprofen"
+    ],
+    "answer": 2,
+    "explanation": "For acute gout attacks, NICE CG56 (2012) suggests colchicine or NSAIDs like ibuprofen. Colchicine is preferred if NSAIDs are contraindicated. Aspirin can worsen gout. Allopurinol is for long-term urate management, not acute attacks. Indomethacin is an alternative NSAID but not preferred due to side effects. Clinical pearl: 'Gout attack, colchicine on track!'",
+    "mnemonic": "Acute Gout: Colchicine First",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg56",
+      "CKS": "https://cks.nice.org.uk/topics/gout"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779394329326_9",
+    "topic": "Peptic Ulcer Bleeding",
+    "category": "all",
+    "question": "A 58-year-old man is admitted with hematemesis. His blood pressure is 100/60 mmHg and heart rate is 110 bpm. After stabilization, an endoscopy confirms a bleeding gastric ulcer. According to NICE guidelines, what is the most appropriate management following endoscopy?",
+    "options": [
+      "Start oral omeprazole",
+      "Start PPI infusion",
+      "Administer oral sucralfate",
+      "Prescribe H2 antagonist",
+      "Observe without intervention"
+    ],
+    "answer": 1,
+    "explanation": "Post-endoscopy management for bleeding peptic ulcers, as per NICE NG141 (2016), involves PPI infusion to reduce re-bleeding risk. Oral PPIs are less effective immediately. H2 antagonists and sucralfate are not recommended for acute bleeding. Observation alone is inadequate. Clinical pearl: 'Bleeding ulcer, PPI infusion is the answer!'",
+    "mnemonic": "Bleeding Ulcer: Infuse PPI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng141",
+      "CKS": "https://cks.nice.org.uk/topics/peptic-ulcer-disease"
+    },
+    "difficulty": "intermediate"
   }
 ]
