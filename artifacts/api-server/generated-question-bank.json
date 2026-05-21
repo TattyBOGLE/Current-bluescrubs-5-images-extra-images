@@ -25551,5 +25551,215 @@
       "CKS": "https://cks.nice.org.uk/topics"
     },
     "difficulty": "mixed"
+  },
+  {
+    "id": "generated_all_1779378564747_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 48-year-old Caucasian male presents to the clinic with a blood pressure of 155/95 mmHg on two separate occasions. He has no significant medical history and is not on any medication. What is the most appropriate initial management?",
+    "options": [
+      "Start amlodipine",
+      "Start lisinopril",
+      "Start bendroflumethiazide",
+      "Start atenolol",
+      "Lifestyle modifications only"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Start lisinopril'. According to the NICE NG136 guidelines (2023), for patients under 55 years of age who are Caucasian, an ACE inhibitor like lisinopril is recommended as the first-line treatment for hypertension. The patient's blood pressure readings confirm hypertension, and medication is indicated alongside lifestyle modifications. Amlodipine is recommended if the patient is over 55 or Black. Bendroflumethiazide is part of the older guidelines and not recommended as first-line. Atenolol, a beta-blocker, is not routinely used for primary hypertension. Lifestyle modifications alone are insufficient given the confirmed elevated readings. Remember: 'ACE for under 55'.",
+    "mnemonic": "ACE for Under 55",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 32-year-old woman with newly diagnosed asthma presents with shortness of breath occurring once a week. She is currently using a salbutamol inhaler as needed. According to the latest guidelines, what is the most appropriate change to her treatment?",
+    "options": [
+      "Continue salbutamol and add low-dose ICS",
+      "Switch to as-needed ICS/formoterol",
+      "Add a LABA to current therapy",
+      "Start montelukast",
+      "Increase salbutamol frequency"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Switch to as-needed ICS/formoterol'. The NICE NG245 guidelines (2024) for asthma emphasize that the initial management should now include as-needed low-dose ICS/formoterol (Anti-Inflammatory Reliever therapy) instead of SABA monotherapy. Continuing salbutamol and adding ICS or adding LABA to the current therapy reflects outdated practices. Montelukast is not indicated as first-line in new asthma diagnoses. Increasing salbutamol frequency does not address inflammation. This shift aims to better control inflammation and reduce exacerbations. Remember: 'AIR for Asthma' indicates Anti-Inflammatory Reliever therapy for new or SABA-only asthma patients.",
+    "mnemonic": "AIR for Asthma",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 58-year-old man with type 2 diabetes and established cardiovascular disease is currently on metformin. His HbA1c is 60 mmol/mol. What medication should be added next?",
+    "options": [
+      "Add gliclazide",
+      "Add empagliflozin",
+      "Add sitagliptin",
+      "Add insulin",
+      "Add pioglitazone"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Add empagliflozin'. NICE NG28 (2022) guidelines recommend adding an SGLT-2 inhibitor like empagliflozin for patients with type 2 diabetes and established cardiovascular disease to reduce cardiovascular risk. Gliclazide and sitagliptin are not preferred in this scenario due to their limited cardiovascular benefits. Insulin is not indicated at this stage given reasonable control and lack of insulin deficiency. Pioglitazone is not preferred due to potential side effects and lower cardiovascular benefits compared to SGLT-2 inhibitors. Remember: 'SGLT-2 for Heart too'.",
+    "mnemonic": "SGLT-2 for Heart too",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_3",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 67-year-old man presents with chest pain radiating to the left arm. ECG shows ST elevation in leads II, III, and aVF. What is the immediate management?",
+    "options": [
+      "Administer thrombolysis",
+      "Administer aspirin and refer for PCI",
+      "Administer fondaparinux",
+      "Administer ticagrelor",
+      "Administer atenolol"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Administer aspirin and refer for PCI'. NICE NG185 (2020) guidelines state that for STEMI, the priority is to administer aspirin and arrange for primary PCI within 120 minutes for reperfusion therapy. Thrombolysis is considered if PCI is not available within the time frame. Fondaparinux is used in NSTEMI. Ticagrelor is part of dual therapy but not the immediate first step. Atenolol is not indicated as an immediate intervention. Immediate PCI is crucial for myocardial salvage. Remember: 'STEMI Needs PCI'.",
+    "mnemonic": "STEMI Needs PCI",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndromes"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_4",
+    "topic": "Stroke Management",
+    "category": "all",
+    "question": "A 72-year-old woman presents with sudden onset of right-sided weakness and slurred speech. CT scan confirms an ischaemic stroke. What is the appropriate initial treatment?",
+    "options": [
+      "Start aspirin 300 mg",
+      "Administer alteplase",
+      "Start clopidogrel 75 mg",
+      "Administer mannitol",
+      "Start heparin"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Administer alteplase'. According to NICE NG128 (2019), patients presenting with an ischaemic stroke within 4.5 hours of symptom onset and without contraindications should receive thrombolysis with alteplase. Aspirin is given after 24 hours post-thrombolysis. Clopidogrel is for secondary prevention post-aspirin. Mannitol is for raised intracranial pressure, not initial stroke treatment. Heparin is not used in acute ischaemic stroke. Timely thrombolysis significantly improves outcomes. Remember: 'Act Fast for Stroke'.",
+    "mnemonic": "Act Fast for Stroke",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_5",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 65-year-old man with a 40-pack-year smoking history is diagnosed with moderate COPD. He experiences daily dyspnoea and has been using a salbutamol inhaler. What is the most appropriate next step in management?",
+    "options": [
+      "Add a LABA inhaler",
+      "Start an ICS inhaler",
+      "Add a LAMA inhaler",
+      "Refer for pulmonary rehabilitation",
+      "Prescribe oral theophylline"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Add a LAMA inhaler'. NICE NG115 (2018) recommends adding a LAMA for patients with moderate COPD who are symptomatic on SABA alone. LABA can also be considered, but LAMA is often preferred for its effect on airflow and exacerbation reduction. ICS is reserved for patients with frequent exacerbations. Pulmonary rehabilitation is beneficial but does not replace pharmacotherapy. Theophylline is not first-line due to side effects. Remember: 'LAMA for Lungs'.",
+    "mnemonic": "LAMA for Lungs",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_6",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 25-year-old woman with focal epilepsy is currently on sodium valproate but wishes to conceive. What is the most appropriate management change?",
+    "options": [
+      "Switch to levetiracetam",
+      "Continue sodium valproate",
+      "Switch to phenobarbital",
+      "Switch to carbamazepine",
+      "Start lamotrigine"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Switch to levetiracetam'. NICE NG217 (2022) advises against sodium valproate in women of childbearing potential due to teratogenic risks. Levetiracetam is preferred due to its safer profile in pregnancy. Continuing valproate risks fetal harm. Phenobarbital is not preferred due to sedation and cognitive effects. Carbamazepine is less favourable compared to levetiracetam. Lamotrigine can be considered but requires careful monitoring during pregnancy. The key is to minimize risk while maintaining seizure control. Remember: 'Levetiracetam for Ladies'.",
+    "mnemonic": "Levetiracetam for Ladies",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_7",
+    "topic": "VTE Prophylaxis",
+    "category": "all",
+    "question": "A 45-year-old woman undergoes elective hip replacement surgery. What is the recommended thromboprophylaxis post-operatively?",
+    "options": [
+      "Warfarin",
+      "Aspirin",
+      "Rivaroxaban",
+      "Fondaparinux",
+      "Compression stockings only"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Rivaroxaban'. According to NICE NG158 (2020), DOACs like rivaroxaban are recommended for VTE prophylaxis in patients undergoing major orthopedic surgery. Warfarin is not used for prophylaxis. Aspirin alone is insufficient. Fondaparinux can be used, but rivaroxaban is preferred for its ease of use. Compression stockings are adjuncts, not sole prophylaxis. Effective thromboprophylaxis is crucial to prevent post-operative VTE. Remember: 'Riva for Replacement'.",
+    "mnemonic": "Riva for Replacement",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/vte-prophylaxis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_8",
+    "topic": "Bacterial Meningitis Treatment",
+    "category": "all",
+    "question": "A 19-year-old university student presents with fever, headache, neck stiffness, and a non-blanching rash. What is the most appropriate initial treatment?",
+    "options": [
+      "Ceftriaxone IV",
+      "Benzylpenicillin IM",
+      "Amoxicillin IV",
+      "Doxycycline IV",
+      "Gentamicin IV"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Ceftriaxone IV'. NICE NG125 (2018) recommends immediate administration of ceftriaxone for suspected bacterial meningitis, especially with a rash suggestive of meningococcal disease. Benzylpenicillin is used in the community setting pre-hospital. Amoxicillin is not appropriate for meningitis. Doxycycline and gentamicin are not used in this context. Rapid antibiotic administration is critical to reduce morbidity and mortality. Remember: 'Cephalosporin for Cerebrospinal'.",
+    "mnemonic": "Cephalosporin for Cerebrospinal",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng125",
+      "CKS": "https://cks.nice.org.uk/topics/meningitis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779378564747_9",
+    "topic": "Antidepressant Use in Depression",
+    "category": "all",
+    "question": "A 35-year-old woman with moderate depression and no significant medical history is reviewed after 4 weeks on fluoxetine 20 mg daily, reporting no improvement. What is the most appropriate next step?",
+    "options": [
+      "Increase fluoxetine dose",
+      "Switch to sertraline",
+      "Add lithium",
+      "Switch to mirtazapine",
+      "Continue current dose for 2 more weeks"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is 'Continue current dose for 2 more weeks'. NICE NG222 (2022) advises that SSRIs like fluoxetine can take 6-8 weeks for a full response. If no improvement after this period, dose increase or switching antidepressants can be considered. Immediate dose changes or switching are premature at 4 weeks. Adding lithium is for treatment-resistant cases. Mirtazapine switch is premature without trying full fluoxetine regimen. Patience and monitoring are key in managing antidepressant therapy. Remember: 'Persistence for Prozac'.",
+    "mnemonic": "Persistence for Prozac",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng222",
+      "CKS": "https://cks.nice.org.uk/topics/depression"
+    },
+    "difficulty": "intermediate"
   }
 ]
