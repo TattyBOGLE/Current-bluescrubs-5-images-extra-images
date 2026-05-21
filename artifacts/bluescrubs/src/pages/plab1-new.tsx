@@ -14,9 +14,11 @@ import {
   shuffleArray,
   applyOptionShuffle,
   selectAdaptiveQuestions,
+  selectAdaptiveQuestionsWithStats,
   filterIncorrectOnlyQuestions,
   recordQuestionAttempt,
   addToRecentHistory,
+  type QuestionStatsMap,
 } from "@/lib/question-randomisation";
 import { GamificationBar } from "@/components/plab1/GamificationBar";
 import { QuizQuestion } from "@/components/plab1/QuizQuestion";
@@ -124,6 +126,7 @@ export default function PLAB1New() {
   // Translation cache
   const [translatedQuestions, setTranslatedQuestions] = useState<Record<string, any>>({});
   const [translationLoading, setTranslationLoading] = useState<Record<string, boolean>>({});
+  const [questionStatsMap, setQuestionStatsMap] = useState<QuestionStatsMap>({});
 
   // Scoring submission function for block-based leaderboards
   const submitToBlockLeaderboard = async (sessionData: {
@@ -155,6 +158,23 @@ export default function PLAB1New() {
       // leaderboard submission is best-effort
     }
   };
+
+  // Fetch server-side question stats when a session's questions are loaded
+  useEffect(() => {
+    if (generatedQuestions.length === 0) return;
+    const ids = generatedQuestions
+      .map(q => String(q.id))
+      .filter(Boolean)
+      .slice(0, 200)
+      .join(',');
+    if (!ids) return;
+    fetch(`/api/questions/stats?ids=${encodeURIComponent(ids)}`)
+      .then(r => r.json())
+      .then((data: { stats?: QuestionStatsMap }) => {
+        if (data.stats) setQuestionStatsMap(data.stats);
+      })
+      .catch(() => {});
+  }, [generatedQuestions]);
 
   // Initialize available voices on component mount
   useEffect(() => {
@@ -698,7 +718,7 @@ export default function PLAB1New() {
         return;
       }
 
-      const selected = selectAdaptiveQuestions(pool, questionCount);
+      const selected = selectAdaptiveQuestionsWithStats(pool, questionCount, questionStatsMap);
       const sessionQuestions = applyOptionShuffle(selected);
       setGeneratedQuestions(sessionQuestions);
       if (sessionQuestions.length > 0) {
@@ -820,6 +840,16 @@ export default function PLAB1New() {
       if (q?.id) {
         recordQuestionAttempt(String(q.id), isCorrect);
         addToRecentHistory(String(q.id));
+        void fetch('/api/questions/attempt', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            questionId: String(q.id),
+            correct: isCorrect,
+            selectedOptionIndex: parseInt(selectedAnswer),
+            timeSpent: timeForQuestion,
+          }),
+        }).catch(() => {});
       }
 
       const newStreak = isCorrect ? currentStreak + 1 : 0;
@@ -1278,6 +1308,7 @@ export default function PLAB1New() {
                   const correctIdx = currentQuestion?.correctAnswer ?? currentQuestion?.correct_answer ?? currentQuestion?.answer;
                   return parseInt(selectedAnswer) === (typeof correctIdx === 'string' ? correctIdx.charCodeAt(0) - 65 : correctIdx);
                 })()}
+                questionStats={questionStatsMap[String(currentQuestion?.id)]}
               />
             </QuizErrorBoundary>
 

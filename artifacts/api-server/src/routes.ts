@@ -2,8 +2,8 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { db } from "./db";
-import { questionExplanationCache, block1Leaderboard, block2Leaderboard, block3Leaderboard } from "@shared/schema";
-import { eq } from "drizzle-orm";
+import { questionExplanationCache, block1Leaderboard, block2Leaderboard, block3Leaderboard, questionStats } from "@shared/schema";
+import { eq, inArray } from "drizzle-orm";
 import { isAIEnabled, getAIStatus, suspendAI } from "./ai-config";
 import { BNF_MEDICATIONS } from "./shared/bnf-integration";
 import { 
@@ -4591,6 +4591,69 @@ app.get("/api/test/questions", async (req, res) => {
     } catch (error) {
       console.error('Failed to award points:', error);
       res.status(500).json({ error: 'Failed to award points' });
+    }
+  });
+
+  app.post('/api/questions/attempt', async (req, res) => {
+    const { questionId, correct, selectedOptionIndex, timeSpent: ts } = req.body || {};
+    try {
+      if (typeof questionId === 'string' && questionId.trim()) {
+        const qid = questionId.trim();
+        const existing = await db.select().from(questionStats).where(eq(questionStats.questionId, qid)).limit(1);
+        if (existing.length === 0) {
+          const counts: Record<string, number> = {};
+          if (!correct && typeof selectedOptionIndex === 'number') counts[String(selectedOptionIndex)] = 1;
+          await db.insert(questionStats).values({
+            questionId: qid,
+            timesAnswered: 1,
+            correctAnswers: correct ? 1 : 0,
+            totalTimeSpent: typeof ts === 'number' ? ts : 0,
+            incorrectOptionCounts: counts,
+            discriminationIndex: 0.5,
+          });
+        } else {
+          const row = existing[0];
+          const counts = (row.incorrectOptionCounts as Record<string, number>) ?? {};
+          if (!correct && typeof selectedOptionIndex === 'number') {
+            const k = String(selectedOptionIndex);
+            counts[k] = (counts[k] ?? 0) + 1;
+          }
+          await db.update(questionStats)
+            .set({
+              timesAnswered: row.timesAnswered + 1,
+              correctAnswers: row.correctAnswers + (correct ? 1 : 0),
+              totalTimeSpent: row.totalTimeSpent + (typeof ts === 'number' ? ts : 0),
+              incorrectOptionCounts: counts,
+              updatedAt: new Date(),
+            })
+            .where(eq(questionStats.questionId, qid));
+        }
+      }
+      res.json({ success: true });
+    } catch (_err) {
+      res.json({ success: false });
+    }
+  });
+
+  app.get('/api/questions/stats', async (req, res) => {
+    try {
+      const rawIds = typeof req.query.ids === 'string' ? req.query.ids : '';
+      const ids = rawIds.split(',').map(s => s.trim()).filter(Boolean).slice(0, 200);
+      if (ids.length === 0) return res.json({ stats: {} });
+      const rows = await db.select().from(questionStats).where(inArray(questionStats.questionId, ids));
+      const stats: Record<string, unknown> = {};
+      for (const row of rows) {
+        stats[row.questionId] = {
+          timesAnswered: row.timesAnswered,
+          accuracyRate: row.timesAnswered > 0 ? Math.round((row.correctAnswers / row.timesAnswered) * 100) : null,
+          averageTimeSpent: row.timesAnswered > 0 ? Math.round(row.totalTimeSpent / row.timesAnswered / 1000) : null,
+          discriminationIndex: row.discriminationIndex,
+          incorrectOptionCounts: row.incorrectOptionCounts,
+        };
+      }
+      res.json({ stats });
+    } catch (_err) {
+      res.json({ stats: {} });
     }
   });
 

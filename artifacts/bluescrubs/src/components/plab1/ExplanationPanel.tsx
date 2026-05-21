@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Award, Brain, BookOpen } from "lucide-react";
+import { CheckCircle, Award, Brain, BookOpen, Target, TrendingUp, Users, Sparkles, ShieldCheck, AlertTriangle } from "lucide-react";
 import type { AIExplanation } from "@/lib/quiz-utils";
+import type { QuestionServerStats } from "@/lib/question-randomisation";
 import { ExternalLink } from "@/components/ui/external-link";
 import { useToast } from "@/hooks/use-toast";
 import { FlashcardsFromQuestion } from "./FlashcardsFromQuestion";
@@ -12,6 +13,7 @@ interface ExplanationPanelProps {
   aiExplanationLoading: boolean;
   selectedAnswer?: string;
   isCorrect?: boolean;
+  questionStats?: QuestionServerStats;
 }
 
 export function ExplanationPanel({
@@ -20,6 +22,7 @@ export function ExplanationPanel({
   aiExplanationLoading,
   selectedAnswer,
   isCorrect,
+  questionStats,
 }: ExplanationPanelProps) {
   const { toast } = useToast();
 
@@ -114,6 +117,42 @@ export function ExplanationPanel({
                     {aiExplanation.keyLearningPoint}
                   </p>
                 </div>
+
+                {/* Common distractors from aggregated attempt data */}
+                {questionStats && questionStats.timesAnswered >= 5 && (() => {
+                  const counts = questionStats.incorrectOptionCounts;
+                  const topDistractors = Object.entries(counts)
+                    .filter(([, c]) => (c as number) > 0)
+                    .sort(([, a], [, b]) => (b as number) - (a as number))
+                    .slice(0, 3);
+                  if (topDistractors.length === 0) return null;
+                  return (
+                    <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                      <p className="text-xs font-semibold text-orange-900 mb-2 flex items-center gap-1.5">
+                        <AlertTriangle className="w-3.5 h-3.5" />Most commonly confused options
+                      </p>
+                      <div className="space-y-1.5">
+                        {topDistractors.map(([optIdx, count]) => {
+                          const labels = ['A','B','C','D','E'];
+                          const label = labels[parseInt(optIdx)] ?? optIdx;
+                          const optData = aiExplanation.options?.[parseInt(optIdx)];
+                          const pct = Math.round(((count as number) / questionStats.timesAnswered) * 100);
+                          return (
+                            <div key={optIdx} className="text-xs text-orange-800 flex items-start gap-1.5">
+                              <span className="font-bold bg-orange-200 text-orange-900 px-1.5 py-0.5 rounded flex-shrink-0">{label}</span>
+                              <span>
+                                {optData?.text
+                                  ? `${optData.text.slice(0, 70)}${optData.text.length > 70 ? '…' : ''}`
+                                  : `Option ${label}`}
+                                <span className="text-orange-600 ml-1">— chosen by {pct}% of users</span>
+                              </span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })()}
               </>
             ) : (
               <>
@@ -174,6 +213,42 @@ export function ExplanationPanel({
                     {aiExplanation.keyLearningPoint}
                   </p>
                 </div>
+
+                {/* Common distractors from aggregated attempt data */}
+                {questionStats && questionStats.timesAnswered >= 5 && (() => {
+                  const counts = questionStats.incorrectOptionCounts;
+                  const topDistractors = Object.entries(counts)
+                    .filter(([, c]) => (c as number) > 0)
+                    .sort(([, a], [, b]) => (b as number) - (a as number))
+                    .slice(0, 3);
+                  if (topDistractors.length === 0) return null;
+                  return (
+                    <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                      <p className="text-xs font-semibold text-orange-900 mb-2 flex items-center gap-1.5">
+                        <AlertTriangle className="w-3.5 h-3.5" />Most commonly confused options
+                      </p>
+                      <div className="space-y-1.5">
+                        {topDistractors.map(([optIdx, count]) => {
+                          const labels = ['A','B','C','D','E'];
+                          const label = labels[parseInt(optIdx)] ?? optIdx;
+                          const optData = aiExplanation.options?.[parseInt(optIdx)];
+                          const pct = Math.round(((count as number) / questionStats.timesAnswered) * 100);
+                          return (
+                            <div key={optIdx} className="text-xs text-orange-800 flex items-start gap-1.5">
+                              <span className="font-bold bg-orange-200 text-orange-900 px-1.5 py-0.5 rounded flex-shrink-0">{label}</span>
+                              <span>
+                                {optData?.text
+                                  ? `${optData.text.slice(0, 70)}${optData.text.length > 70 ? '…' : ''}`
+                                  : `Option ${label}`}
+                                <span className="text-orange-600 ml-1">— chosen by {pct}% of users</span>
+                              </span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })()}
               </>
             )}
           </div>
@@ -195,13 +270,93 @@ export function ExplanationPanel({
         )}
       </div>
 
-      {/* Topic heading like PassMedicine */}
+      {/* Question metadata strip */}
       <div className="pt-4 border-t border-gray-200">
-        <h3 className="text-xl font-normal text-blue-600 mb-2">
-          {currentQuestion.category
-            ? currentQuestion.category.charAt(0).toUpperCase() + currentQuestion.category.slice(1)
-            : 'Medical Topic'}
-        </h3>
+        {/* Specialty / topic / quality badges */}
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 text-xs font-medium border-0">
+            {currentQuestion.specialty
+              || (currentQuestion.category
+                ? currentQuestion.category.charAt(0).toUpperCase() + currentQuestion.category.slice(1)
+                : 'Medicine')}
+          </Badge>
+          {currentQuestion.topic && (
+            <Badge variant="outline" className="text-xs text-gray-700">
+              {currentQuestion.topic}
+            </Badge>
+          )}
+          {currentQuestion.subtopic && (
+            <Badge variant="outline" className="text-xs text-gray-500">
+              {currentQuestion.subtopic}
+            </Badge>
+          )}
+          {currentQuestion.difficulty && (
+            <Badge className={`text-xs border-0 ${
+              currentQuestion.difficulty === 'easy' || currentQuestion.difficulty === 'foundation'
+                ? 'bg-green-100 text-green-800'
+                : currentQuestion.difficulty === 'hard' || currentQuestion.difficulty === 'advanced'
+                ? 'bg-red-100 text-red-800'
+                : 'bg-amber-100 text-amber-800'
+            }`}>
+              {currentQuestion.difficulty.charAt(0).toUpperCase() + currentQuestion.difficulty.slice(1)}
+            </Badge>
+          )}
+          {currentQuestion.clinicallyReviewed ? (
+            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 text-xs border-0 flex items-center gap-1">
+              <ShieldCheck className="w-3 h-3" />Clinically Reviewed
+            </Badge>
+          ) : (
+            <Badge className="bg-amber-50 text-amber-700 hover:bg-amber-50 text-xs border border-amber-200 flex items-center gap-1">
+              <Sparkles className="w-3 h-3" />AI Generated
+            </Badge>
+          )}
+        </div>
+
+        {/* Tags */}
+        {Array.isArray(currentQuestion.tags) && currentQuestion.tags.length > 0 && (
+          <div className="flex flex-wrap gap-1 mb-3">
+            {(currentQuestion.tags as string[]).map((tag: string) => (
+              <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full border border-gray-200">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Learning objectives */}
+        {Array.isArray(currentQuestion.learningObjectives) && currentQuestion.learningObjectives.length > 0 && (
+          <div className="mb-3 bg-blue-50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-blue-900 mb-1.5 flex items-center gap-1">
+              <Target className="w-3.5 h-3.5" /> Learning objectives
+            </p>
+            <ul className="space-y-1">
+              {(currentQuestion.learningObjectives as string[]).map((obj: string, i: number) => (
+                <li key={i} className="text-xs text-blue-800 flex items-start gap-1.5">
+                  <span className="text-blue-400 mt-0.5 flex-shrink-0">•</span>{obj}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Community stats */}
+        {questionStats && questionStats.timesAnswered > 0 && (
+          <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-3 bg-gray-50 rounded-lg px-3 py-2">
+            <span className="flex items-center gap-1">
+              <Users className="w-3.5 h-3.5" />
+              {questionStats.timesAnswered.toLocaleString()} attempt{questionStats.timesAnswered !== 1 ? 's' : ''}
+            </span>
+            {questionStats.accuracyRate !== null && (
+              <span className="flex items-center gap-1">
+                <TrendingUp className="w-3.5 h-3.5" />
+                {questionStats.accuracyRate}% correct
+              </span>
+            )}
+            {questionStats.averageTimeSpent !== null && (
+              <span>~{questionStats.averageTimeSpent}s avg time</span>
+            )}
+          </div>
+        )}
       </div>
 
       {/* CKS Clinical Knowledge Summaries */}

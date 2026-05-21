@@ -543,6 +543,17 @@ export const questionExplanationCache = pgTable("question_explanation_cache", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
+// Per-question analytics — updated as users submit answers
+export const questionStats = pgTable("question_stats", {
+  questionId: text("question_id").primaryKey(),
+  timesAnswered: integer("times_answered").notNull().default(0),
+  correctAnswers: integer("correct_answers").notNull().default(0),
+  totalTimeSpent: integer("total_time_spent").notNull().default(0), // ms
+  incorrectOptionCounts: jsonb("incorrect_option_counts").notNull().default('{}'), // { optionIndex: attemptCount }
+  discriminationIndex: real("discrimination_index").notNull().default(0.5),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
 // Global Scoreboard System
 export const globalScoreboard = pgTable("global_scoreboard", {
   id: serial("id").primaryKey(),

@@ -25,6 +25,16 @@ export interface WeightedQuestion<T> {
   weight: number;
 }
 
+export interface QuestionServerStats {
+  timesAnswered: number;
+  accuracyRate: number | null;
+  averageTimeSpent: number | null;
+  discriminationIndex: number;
+  incorrectOptionCounts: Record<string, number>;
+}
+
+export type QuestionStatsMap = Record<string, QuestionServerStats>;
+
 // ---------------------------------------------------------------------------
 // Core shuffle
 // ---------------------------------------------------------------------------
@@ -154,11 +164,15 @@ export function weightedQuestionSelection<T>(
  *  - Accuracy 50–79 % → weight 2.0  (partial — medium priority)
  *  - Accuracy ≥ 80 %  → weight 0.3  (mastered — deprioritise)
  *  - In recent history → weight × 0.1  (prevent immediate repeat)
+ *  - High discriminationIndex (>0.7) at mid-accuracy → weight × 1.4
+ *    (most diagnostic questions for revealing skill gaps)
+ *  - Low discriminationIndex (<0.3) → weight × 0.8 (poor differentiator)
  */
 function computeWeight(
   questionId: string,
   performance: Record<string, QuestionPerformance>,
-  recentIdSet: Set<string>
+  recentIdSet: Set<string>,
+  discriminationIndex?: number
 ): number {
   const p = performance[questionId];
   let weight: number;
@@ -170,6 +184,13 @@ function computeWeight(
     if (accuracy < 0.5) weight = 4.0;
     else if (accuracy < 0.8) weight = 2.0;
     else weight = 0.3;
+
+    // Boost high-discrimination questions in the mid-accuracy band — they
+    // are the most diagnostic for identifying genuine skill gaps.
+    if (discriminationIndex !== undefined && accuracy >= 0.3 && accuracy < 0.8) {
+      if (discriminationIndex > 0.7) weight *= 1.4;
+      else if (discriminationIndex < 0.3) weight *= 0.8;
+    }
   }
 
   if (recentIdSet.has(questionId)) weight *= 0.1;
@@ -192,6 +213,29 @@ export function selectAdaptiveQuestions<T extends { id: string | number }>(
     question: q,
     weight: computeWeight(String(q.id), performance, recentIdSet),
   }));
+
+  return weightedQuestionSelection(weighted, count);
+}
+
+/**
+ * Like selectAdaptiveQuestions but also factors in server-side
+ * discrimination indices from the question_stats DB table.
+ */
+export function selectAdaptiveQuestionsWithStats<T extends { id: string | number }>(
+  pool: T[],
+  count: number,
+  serverStats: QuestionStatsMap = {}
+): T[] {
+  const performance = getStoredPerformance();
+  const recentIdSet = new Set(getRecentQuestionIds(50));
+
+  const weighted: WeightedQuestion<T>[] = pool.map((q) => {
+    const qid = String(q.id);
+    return {
+      question: q,
+      weight: computeWeight(qid, performance, recentIdSet, serverStats[qid]?.discriminationIndex),
+    };
+  });
 
   return weightedQuestionSelection(weighted, count);
 }
