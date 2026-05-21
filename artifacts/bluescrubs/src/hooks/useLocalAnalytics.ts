@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export interface QuestionAttempt {
   questionId: string;
@@ -66,7 +66,6 @@ class LocalAnalyticsEngine {
   private storageKey = 'bluescrubsprep-analytics';
   private scheduleKey = 'bluescrubsprep-schedules';
   
-  // Store question attempt
   recordAttempt(attempt: Omit<QuestionAttempt, 'timestamp'>) {
     const attempts = this.getAttempts();
     const newAttempt: QuestionAttempt = {
@@ -77,22 +76,18 @@ class LocalAnalyticsEngine {
     attempts.push(newAttempt);
     localStorage.setItem(this.storageKey, JSON.stringify(attempts));
     
-    // Update study session
     this.updateStudySession(newAttempt);
   }
 
-  // Get all attempts
   getAttempts(): QuestionAttempt[] {
     const stored = localStorage.getItem(this.storageKey);
     return stored ? JSON.parse(stored) : [];
   }
 
-  // Calculate category performance
   getCategoryPerformance(): CategoryPerformance[] {
     const attempts = this.getAttempts();
     const categoryMap = new Map<string, QuestionAttempt[]>();
 
-    // Group attempts by category
     attempts.forEach(attempt => {
       if (!categoryMap.has(attempt.category)) {
         categoryMap.set(attempt.category, []);
@@ -107,14 +102,12 @@ class LocalAnalyticsEngine {
       const averageTime = categoryAttempts.reduce((sum, a) => sum + a.timeSpent, 0) / totalAttempts;
       const lastAttempt = Math.max(...categoryAttempts.map(a => a.timestamp));
 
-      // Calculate weakness score (higher = weaker)
       const recentAttempts = categoryAttempts.filter(a => a.timestamp > Date.now() - 7 * 24 * 60 * 60 * 1000);
       const recentAccuracy = recentAttempts.length > 0 
         ? recentAttempts.filter(a => a.isCorrect).length / recentAttempts.length 
         : accuracy;
       const weaknessScore = Math.round((1 - recentAccuracy) * 100);
 
-      // Calculate improvement trend
       const oldAttempts = categoryAttempts.filter(a => a.timestamp < Date.now() - 7 * 24 * 60 * 60 * 1000);
       const oldAccuracy = oldAttempts.length > 0 
         ? oldAttempts.filter(a => a.isCorrect).length / oldAttempts.length 
@@ -134,12 +127,11 @@ class LocalAnalyticsEngine {
     }).sort((a, b) => b.weaknessScore - a.weaknessScore);
   }
 
-  // Get weak area recommendations
   getWeakAreaRecommendations(): WeakAreaRecommendation[] {
     const performance = this.getCategoryPerformance();
     
     return performance
-      .filter(p => p.totalAttempts >= 3) // Only categories with sufficient data
+      .filter(p => p.totalAttempts >= 3)
       .map(p => {
         let priority: 'high' | 'medium' | 'low' = 'low';
         let reason = '';
@@ -178,7 +170,6 @@ class LocalAnalyticsEngine {
       });
   }
 
-  // Calculate adaptive difficulty adjustments
   getDifficultyAdjustments(): DifficultyAdjustment[] {
     const performance = this.getCategoryPerformance();
     
@@ -201,14 +192,13 @@ class LocalAnalyticsEngine {
 
       return {
         category: p.category,
-        currentLevel: 'basic', // This would be tracked separately
+        currentLevel: 'basic',
         recommendedLevel,
         confidence
       };
     });
   }
 
-  // Study session management
   private updateStudySession(attempt: QuestionAttempt) {
     const today = new Date().toISOString().split('T')[0];
     const sessions = this.getStudySessions();
@@ -232,7 +222,6 @@ class LocalAnalyticsEngine {
       todaySession.categories.push(attempt.category);
     }
 
-    // Recalculate accuracy for today
     const todayAttempts = this.getAttempts().filter(a => {
       const attemptDate = new Date(a.timestamp).toISOString().split('T')[0];
       return attemptDate === today;
@@ -247,7 +236,6 @@ class LocalAnalyticsEngine {
     return stored ? JSON.parse(stored) : [];
   }
 
-  // Study schedule management
   createStudySchedule(schedule: Omit<StudySchedule, 'id' | 'progress'>) {
     const schedules = this.getStudySchedules();
     const newSchedule: StudySchedule = {
@@ -264,7 +252,6 @@ class LocalAnalyticsEngine {
     schedules.push(newSchedule);
     localStorage.setItem(this.scheduleKey, JSON.stringify(schedules));
     
-    // Set up notification if enabled
     if (newSchedule.enabled) {
       this.scheduleNotification(newSchedule);
     }
@@ -324,7 +311,6 @@ class LocalAnalyticsEngine {
     }
   }
 
-  // Request notification permission
   async requestNotificationPermission(): Promise<boolean> {
     if ('Notification' in window) {
       const permission = await Notification.requestPermission();
@@ -333,7 +319,6 @@ class LocalAnalyticsEngine {
     return false;
   }
 
-  // Clear all data (for testing/reset)
   clearAllData() {
     localStorage.removeItem(this.storageKey);
     localStorage.removeItem(this.scheduleKey);
@@ -349,32 +334,40 @@ export function useLocalAnalytics() {
   const [sessions, setSessions] = useState<StudySession[]>([]);
   const [schedules, setSchedules] = useState<StudySchedule[]>([]);
 
-  const refreshData = () => {
+  const refreshData = useCallback(() => {
     setPerformance(localAnalytics.getCategoryPerformance());
     setRecommendations(localAnalytics.getWeakAreaRecommendations());
     setSessions(localAnalytics.getStudySessions());
     setSchedules(localAnalytics.getStudySchedules());
-  };
+  }, []);
 
   useEffect(() => {
     refreshData();
-  }, []);
+  }, [refreshData]);
 
-  const recordAttempt = (attempt: Omit<QuestionAttempt, 'timestamp'>) => {
+  const recordAttempt = useCallback((attempt: Omit<QuestionAttempt, 'timestamp'>) => {
     localAnalytics.recordAttempt(attempt);
     refreshData();
-  };
+  }, [refreshData]);
 
-  const createSchedule = (schedule: Omit<StudySchedule, 'id' | 'progress'>) => {
+  const recordSession = useCallback((_session?: Partial<StudySession>) => {
+    refreshData();
+  }, [refreshData]);
+
+  const getWeakAreas = useCallback((): WeakAreaRecommendation[] => {
+    return localAnalytics.getWeakAreaRecommendations();
+  }, []);
+
+  const createSchedule = useCallback((schedule: Omit<StudySchedule, 'id' | 'progress'>) => {
     const newSchedule = localAnalytics.createStudySchedule(schedule);
     refreshData();
     return newSchedule;
-  };
+  }, [refreshData]);
 
-  const updateProgress = (scheduleId: string, questionsCompleted: number) => {
+  const updateProgress = useCallback((scheduleId: string, questionsCompleted: number) => {
     localAnalytics.updateScheduleProgress(scheduleId, questionsCompleted);
     refreshData();
-  };
+  }, [refreshData]);
 
   return {
     performance,
@@ -382,6 +375,8 @@ export function useLocalAnalytics() {
     sessions,
     schedules,
     recordAttempt,
+    recordSession,
+    getWeakAreas,
     createSchedule,
     updateProgress,
     refreshData,

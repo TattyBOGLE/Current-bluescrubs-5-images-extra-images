@@ -29,6 +29,10 @@ import { SessionNavBar } from "@/components/plab1/SessionNavBar";
 import { SessionSetup } from "@/components/plab1/SessionSetup";
 import { SessionComplete } from "@/components/plab1/SessionComplete";
 import { QuizErrorBoundary } from "@/components/plab1/QuizErrorBoundary";
+import { useTextToSpeech } from "@/hooks/useTextToSpeech";
+import { useQuestionStopwatch } from "@/hooks/use-quiz";
+import { useProgress } from "@/hooks/use-progress";
+import { useLocalAnalytics } from "@/hooks/useLocalAnalytics";
 
 export default function PLAB1New() {
   const { toast } = useToast();
@@ -54,10 +58,12 @@ export default function PLAB1New() {
   const [isTranslationMode, setIsTranslationMode] = useState(false);
   const [translateQuestions, setTranslateQuestions] = useState(false);
 
-  // Text-to-Speech state
-  const [speechEnabled, setSpeechEnabled] = useState(false);
-  const [selectedVoice, setSelectedVoice] = useState<string>('');
-  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+  // Text-to-Speech (voices, toggle, and voice selection managed by hook)
+  const {
+    speechEnabled, setSpeechEnabled,
+    selectedVoice, setSelectedVoice,
+    availableVoices,
+  } = useTextToSpeech();
   const [isSpeaking, setIsSpeaking] = useState(false);
 
   // Session state
@@ -89,10 +95,19 @@ export default function PLAB1New() {
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [sessionComplete, setSessionComplete] = useState(false);
 
-  // Stopwatch and timing state
-  const [questionTimer, setQuestionTimer] = useState(0);
-  const [isTimerRunning, setIsTimerRunning] = useState(false);
-  const [questionTimes, setQuestionTimes] = useState<number[]>([]);
+  // Per-question stopwatch (managed by hook)
+  const {
+    questionTimer,
+    isTimerRunning, setIsTimerRunning,
+    questionTimes, setQuestionTimes,
+    resetQuestionTimer,
+  } = useQuestionStopwatch();
+
+  // Progress saving
+  const { saveProgress } = useProgress();
+
+  // Local analytics
+  const { recommendations: weakAreaRecommendations, getWeakAreas } = useLocalAnalytics();
 
   // AI Tutor state
   const [showAITutor, setShowAITutor] = useState(false);
@@ -176,69 +191,10 @@ export default function PLAB1New() {
       .catch(() => {});
   }, [generatedQuestions]);
 
-  // Initialize available voices on component mount
-  useEffect(() => {
-    const loadVoices = () => {
-      const voices = speechSynthesis.getVoices();
-      if (voices.length > 0) {
-        const qualityVoices = voices.filter(voice =>
-          !voice.name.toLowerCase().includes('robot') &&
-          !voice.name.toLowerCase().includes('synthetic') &&
-          !voice.name.toLowerCase().includes('compact')
-        );
-
-        const englishVoices = qualityVoices.filter(voice => voice.lang.startsWith('en'));
-        const otherLanguageVoices = qualityVoices.filter(voice =>
-          !voice.lang.startsWith('en') &&
-          ['ar', 'hi', 'es', 'fr', 'de', 'pt', 'it', 'ru', 'zh', 'ja', 'ko'].some(lang =>
-            voice.lang.startsWith(lang)
-          )
-        );
-
-        const allVoices = [...englishVoices, ...otherLanguageVoices].slice(0, 15);
-        setAvailableVoices(allVoices);
-
-        if (allVoices.length > 0 && !selectedVoice) {
-          const preferredVoice = allVoices.find(voice =>
-            voice.name.toLowerCase().includes('enhanced') ||
-            voice.name.toLowerCase().includes('premium') ||
-            voice.name.toLowerCase().includes('neural') ||
-            voice.name.toLowerCase().includes('natural') ||
-            voice.name.toLowerCase().includes('samantha') ||
-            voice.name.toLowerCase().includes('alex') ||
-            voice.name.toLowerCase().includes('susan') ||
-            voice.name.toLowerCase().includes('daniel') ||
-            voice.name.toLowerCase().includes('karen') ||
-            voice.name.toLowerCase().includes('moira')
-          ) || allVoices[0];
-          setSelectedVoice(preferredVoice.name);
-        }
-      }
-    };
-
-    loadVoices();
-    speechSynthesis.addEventListener('voiceschanged', loadVoices);
-
-    return () => {
-      speechSynthesis.removeEventListener('voiceschanged', loadVoices);
-    };
-  }, [selectedVoice]);
-
-  // Timer effects
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isTimerRunning) {
-      interval = setInterval(() => {
-        setQuestionTimer(prev => prev + 100);
-      }, 100);
-    }
-    return () => clearInterval(interval);
-  }, [isTimerRunning]);
-
   // Start timer when new question is shown (only in timed practice modes)
   useEffect(() => {
     if (sessionStarted && !showExplanation && isTimedSession) {
-      setQuestionTimer(0);
+      resetQuestionTimer();
       setIsTimerRunning(true);
     } else {
       setIsTimerRunning(false);
@@ -572,7 +528,7 @@ export default function PLAB1New() {
       setQuestionStartTime(Date.now());
       setSessionStarted(true);
       setIsTimedSession(true);
-      setQuestionTimer(0);
+      resetQuestionTimer();
       setIsTimerRunning(true);
 
       sessionTimeoutRef.current = setTimeout(() => {
@@ -634,7 +590,7 @@ export default function PLAB1New() {
       setQuestionStartTime(Date.now());
       setSessionStarted(true);
       setIsTimedSession(true);
-      setQuestionTimer(0);
+      resetQuestionTimer();
       setIsTimerRunning(true);
 
       const totalTimeMs = exactQuestions.length * 60 * 1000;
@@ -1109,7 +1065,7 @@ export default function PLAB1New() {
       setAiStudyTipsLoading(false);
       setQuestionStartTime(Date.now());
       if (isTimedSession) {
-        setQuestionTimer(0);
+        resetQuestionTimer();
         setIsTimerRunning(true);
       }
     } else {

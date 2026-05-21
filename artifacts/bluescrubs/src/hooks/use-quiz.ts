@@ -39,7 +39,6 @@ export function useQuiz(questions: McqQuestion[], userId: number, timeLimit: num
         }));
       }, 1000);
     } else if (quizState.timeRemaining <= 0 && quizState.isActive) {
-      // Auto-submit when time runs out
       handleSubmitAnswer();
     }
 
@@ -72,7 +71,6 @@ export function useQuiz(questions: McqQuestion[], userId: number, timeLimit: num
       const isCorrect = selectedAnswer === currentQ.correctAnswer;
       const timeTaken = timeLimit - quizState.timeRemaining;
 
-      // Submit progress to backend
       await submitProgressMutation.mutateAsync({
         userId,
         questionId: currentQ.id,
@@ -80,7 +78,6 @@ export function useQuiz(questions: McqQuestion[], userId: number, timeLimit: num
         timeTaken,
       });
 
-      // Update local state
       setQuizState(prev => ({
         ...prev,
         score: isCorrect ? prev.score + 1 : prev.score,
@@ -96,7 +93,6 @@ export function useQuiz(questions: McqQuestion[], userId: number, timeLimit: num
         timeRemaining: timeLimit,
       }));
     } else {
-      // Quiz completed
       setQuizState(prev => ({
         ...prev,
         isActive: false,
@@ -143,5 +139,33 @@ export function useQuiz(questions: McqQuestion[], userId: number, timeLimit: num
     previousQuestion,
     resetQuiz,
     isSubmitting: submitProgressMutation.isPending,
+  };
+}
+
+export function useQuestionStopwatch() {
+  const [questionTimer, setQuestionTimer] = useState(0);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const [questionTimes, setQuestionTimes] = useState<number[]>([]);
+
+  useEffect(() => {
+    if (!isTimerRunning) return;
+    const interval = setInterval(() => {
+      setQuestionTimer(prev => prev + 100);
+    }, 100);
+    return () => clearInterval(interval);
+  }, [isTimerRunning]);
+
+  const resetQuestionTimer = useCallback(() => setQuestionTimer(0), []);
+
+  const pauseQuestionTimer = useCallback(() => setIsTimerRunning(false), []);
+
+  return {
+    questionTimer,
+    isTimerRunning,
+    setIsTimerRunning,
+    questionTimes,
+    setQuestionTimes,
+    resetQuestionTimer,
+    pauseQuestionTimer,
   };
 }
