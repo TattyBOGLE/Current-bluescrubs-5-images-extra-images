@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Clock, ArrowRight, ArrowLeft, Award, CheckCircle, ExternalLink,
-  BookOpen, Target, Brain, Lightbulb, X, MessageCircle, Flame
+  BookOpen, Target, Brain, Lightbulb, X, MessageCircle, Flame, AlertTriangle
 } from "lucide-react";
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { apiRequest } from "@/lib/queryClient";
@@ -26,6 +26,7 @@ import { StudyTipsPanel } from "@/components/plab1/StudyTipsPanel";
 import { SessionNavBar } from "@/components/plab1/SessionNavBar";
 import { SessionSetup } from "@/components/plab1/SessionSetup";
 import { SessionComplete } from "@/components/plab1/SessionComplete";
+import { QuizErrorBoundary } from "@/components/plab1/QuizErrorBoundary";
 
 export default function PLAB1New() {
   const { toast } = useToast();
@@ -930,7 +931,8 @@ export default function PLAB1New() {
       const data: AIExplanation = await resp.json();
       aiExplanationCache.current.set(qid, data);
       setAiExplanation(data);
-    } catch (_err) {
+    } catch (err) {
+      console.error('Failed to fetch explanation:', err);
       const stored = typeof question.explanation === 'string' ? question.explanation : undefined;
       const fallback = buildLocalFallback(stored);
       aiExplanationCache.current.set(qid, fallback);
@@ -978,8 +980,9 @@ export default function PLAB1New() {
       const data: AIStudyTips = await resp.json();
       studyTipsCache.current.set(qid, data);
       setAiStudyTips(data);
-    } catch (_err) {
-      // study tips are best-effort
+    } catch (err) {
+      console.error('Failed to fetch study tips:', err);
+      setAiStudyTips({ mnemonics: [], tips: [], source: 'error' });
     } finally {
       setAiStudyTipsLoading(false);
     }
@@ -1112,33 +1115,35 @@ export default function PLAB1New() {
   // If no session started, show the landing page
   if (!sessionStarted && !isGeneratingQuestions) {
     return (
-      <SessionSetup
-        heroImageLoaded={heroImageLoaded}
-        setHeroImageLoaded={setHeroImageLoaded}
-        isTranslationMode={isTranslationMode}
-        setIsTranslationMode={setIsTranslationMode}
-        selectedLanguage={selectedLanguage}
-        setSelectedLanguage={setSelectedLanguage}
-        speechEnabled={speechEnabled}
-        setSpeechEnabled={setSpeechEnabled}
-        selectedVoice={selectedVoice}
-        setSelectedVoice={setSelectedVoice}
-        availableVoices={availableVoices}
-        isSpeaking={isSpeaking}
-        stopSpeaking={stopSpeaking}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        selectedDifficulty={selectedDifficulty}
-        setSelectedDifficulty={setSelectedDifficulty}
-        isGeneratingQuestions={isGeneratingQuestions}
-        translateText={translateText}
-        onStartPractice={startPractice}
-        onStartTimedPractice={startTimedPractice}
-        onStartUnlimitedPractice={startUnlimitedPractice}
-        onStartAuthenticTimedPractice={startAuthenticTimedPractice}
-        onStartAdaptivePractice={startAdaptivePractice}
-        onStartIncorrectOnlyPractice={startIncorrectOnlyPractice}
-      />
+      <QuizErrorBoundary context="session setup" onHome={() => setSessionStarted(false)}>
+        <SessionSetup
+          heroImageLoaded={heroImageLoaded}
+          setHeroImageLoaded={setHeroImageLoaded}
+          isTranslationMode={isTranslationMode}
+          setIsTranslationMode={setIsTranslationMode}
+          selectedLanguage={selectedLanguage}
+          setSelectedLanguage={setSelectedLanguage}
+          speechEnabled={speechEnabled}
+          setSpeechEnabled={setSpeechEnabled}
+          selectedVoice={selectedVoice}
+          setSelectedVoice={setSelectedVoice}
+          availableVoices={availableVoices}
+          isSpeaking={isSpeaking}
+          stopSpeaking={stopSpeaking}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          selectedDifficulty={selectedDifficulty}
+          setSelectedDifficulty={setSelectedDifficulty}
+          isGeneratingQuestions={isGeneratingQuestions}
+          translateText={translateText}
+          onStartPractice={startPractice}
+          onStartTimedPractice={startTimedPractice}
+          onStartUnlimitedPractice={startUnlimitedPractice}
+          onStartAuthenticTimedPractice={startAuthenticTimedPractice}
+          onStartAdaptivePractice={startAdaptivePractice}
+          onStartIncorrectOnlyPractice={startIncorrectOnlyPractice}
+        />
+      </QuizErrorBoundary>
     );
   }
 
@@ -1177,32 +1182,33 @@ export default function PLAB1New() {
     const topicBreakdown = Array.from(topicMap.entries()).map(([topic, stats]) => ({ topic, ...stats }));
 
     return (
-      <SessionComplete
-        totalQuestions={totalAnswered}
-        correctAnswers={correctCount}
-        percentage={percentage}
-        avgTimePerQuestion={avgTimePerQuestion}
-        timeSpent={timeSpent}
-        selectedCategory={selectedCategory}
-        topicBreakdown={topicBreakdown}
-        onRestart={() => window.location.reload()}
-        onHome={() => setSessionStarted(false)}
-      />
+      <QuizErrorBoundary context="results" onReset={() => setSessionStarted(false)}>
+        <SessionComplete
+          totalQuestions={totalAnswered}
+          correctAnswers={correctCount}
+          percentage={percentage}
+          avgTimePerQuestion={avgTimePerQuestion}
+          timeSpent={timeSpent}
+          selectedCategory={selectedCategory}
+          topicBreakdown={topicBreakdown}
+          onRestart={() => window.location.reload()}
+          onHome={() => setSessionStarted(false)}
+        />
+      </QuizErrorBoundary>
     );
   }
 
   // No question fallback
   if (!currentQuestion) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Card>
-          <CardContent className="p-8 text-center">
-            <p className="text-gray-600">No questions available</p>
-            <Button onClick={() => setSessionStarted(false)} className="mt-4">
-              Back to Home
-            </Button>
-          </CardContent>
-        </Card>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+        <div className="text-center">
+          <AlertTriangle className="w-8 h-8 text-amber-400 mx-auto mb-3" />
+          <p className="text-gray-600 mb-4">
+            Question data is missing. This can happen if generation was interrupted.
+          </p>
+          <Button onClick={() => setSessionStarted(false)}>Return to setup</Button>
+        </div>
       </div>
     );
   }
@@ -1211,61 +1217,82 @@ export default function PLAB1New() {
     <div className="min-h-screen bg-gray-50 p-4 pb-24">
       <div className="max-w-4xl mx-auto mb-16">
 
-        <GamificationBar
-          currentQuestionIndex={currentQuestionIndex}
-          totalQuestions={generatedQuestions.length}
-          sessionPoints={sessionPoints}
-          showPointsAnimation={showPointsAnimation}
-          lastPointsEarned={lastPointsEarned}
-          currentStreak={currentStreak}
-          timeSpent={timeSpent}
-          isTimedSession={isTimedSession}
-          questionTimer={questionTimer}
-          isTimerRunning={isTimerRunning}
-          formatTime={formatTime}
-        />
+        <QuizErrorBoundary context="gamification">
+          <GamificationBar
+            currentQuestionIndex={currentQuestionIndex}
+            totalQuestions={generatedQuestions.length}
+            sessionPoints={sessionPoints}
+            showPointsAnimation={showPointsAnimation}
+            lastPointsEarned={lastPointsEarned}
+            currentStreak={currentStreak}
+            timeSpent={timeSpent}
+            isTimedSession={isTimedSession}
+            questionTimer={questionTimer}
+            isTimerRunning={isTimerRunning}
+            formatTime={formatTime}
+          />
+        </QuizErrorBoundary>
 
-        <QuizQuestion
-          currentQuestion={currentQuestion}
-          selectedAnswer={selectedAnswer}
-          showExplanation={showExplanation}
-          translateQuestions={translateQuestions}
-          setTranslateQuestions={setTranslateQuestions}
-          selectedLanguage={selectedLanguage}
-          setSelectedLanguage={setSelectedLanguage}
-          translatedQuestions={translatedQuestions}
-          speechEnabled={speechEnabled}
-          setSpeechEnabled={setSpeechEnabled}
-          selectedVoice={selectedVoice}
-          setSelectedVoice={setSelectedVoice}
-          availableVoices={availableVoices}
-          isSpeaking={isSpeaking}
-          speakText={speakText}
-          stopSpeaking={stopSpeaking}
-          speakCurrentQuestion={speakCurrentQuestion}
-          onAnswerSelect={handleAnswerSelect}
-        />
+        <QuizErrorBoundary
+          context="question"
+          onReset={() => {
+            setSelectedAnswer("");
+            setShowExplanation(false);
+          }}
+          onHome={() => setSessionStarted(false)}
+        >
+          <QuizQuestion
+            currentQuestion={currentQuestion}
+            selectedAnswer={selectedAnswer}
+            showExplanation={showExplanation}
+            translateQuestions={translateQuestions}
+            setTranslateQuestions={setTranslateQuestions}
+            selectedLanguage={selectedLanguage}
+            setSelectedLanguage={setSelectedLanguage}
+            translatedQuestions={translatedQuestions}
+            speechEnabled={speechEnabled}
+            setSpeechEnabled={setSpeechEnabled}
+            selectedVoice={selectedVoice}
+            setSelectedVoice={setSelectedVoice}
+            availableVoices={availableVoices}
+            isSpeaking={isSpeaking}
+            speakText={speakText}
+            stopSpeaking={stopSpeaking}
+            speakCurrentQuestion={speakCurrentQuestion}
+            onAnswerSelect={handleAnswerSelect}
+          />
+        </QuizErrorBoundary>
 
         {showExplanation && (
           <>
-            <ExplanationPanel
-              currentQuestion={currentQuestion}
-              aiExplanation={aiExplanation}
-              aiExplanationLoading={aiExplanationLoading}
-              selectedAnswer={selectedAnswer}
-              isCorrect={(() => {
-                const correctIdx = currentQuestion?.correctAnswer ?? currentQuestion?.correct_answer ?? currentQuestion?.answer;
-                return parseInt(selectedAnswer) === (typeof correctIdx === 'string' ? correctIdx.charCodeAt(0) - 65 : correctIdx);
-              })()}
-            />
+            <QuizErrorBoundary
+              context="explanation"
+              onReset={() => setAiExplanation(null)}
+            >
+              <ExplanationPanel
+                currentQuestion={currentQuestion}
+                aiExplanation={aiExplanation}
+                aiExplanationLoading={aiExplanationLoading}
+                selectedAnswer={selectedAnswer}
+                isCorrect={(() => {
+                  const correctIdx = currentQuestion?.correctAnswer ?? currentQuestion?.correct_answer ?? currentQuestion?.answer;
+                  return parseInt(selectedAnswer) === (typeof correctIdx === 'string' ? correctIdx.charCodeAt(0) - 65 : correctIdx);
+                })()}
+              />
+            </QuizErrorBoundary>
 
-            <StudyTipsPanel
-              currentQuestion={currentQuestion}
-              aiStudyTips={aiStudyTips}
-              aiStudyTipsLoading={aiStudyTipsLoading}
-              tipsOpen={tipsOpen}
-              setTipsOpen={setTipsOpen}
-            />
+            <QuizErrorBoundary
+              context="study tips"
+              onReset={() => setAiStudyTips(null)}
+            >
+              <StudyTipsPanel
+                currentQuestion={currentQuestion}
+                aiStudyTips={aiStudyTips}
+                aiStudyTipsLoading={aiStudyTipsLoading}
+                tipsOpen={tipsOpen}
+                setTipsOpen={setTipsOpen}
+              />
+            </QuizErrorBoundary>
           </>
         )}
       </div>

@@ -1,0 +1,254 @@
+The quiz flow in plab1-new.tsx has no error boundary. If any 
+sub-component throws an uncaught error (failed API call, null 
+question data, bad JSON from GPT-4o) the entire page goes blank 
+with no feedback to the user. Add a proper React Error Boundary.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1 — CREATE THE ERROR BOUNDARY COMPONENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create a new file: src/components/plab1/QuizErrorBoundary.tsx
+
+  import React from "react";
+  import { Button } from "@/components/ui/button";
+  import { AlertTriangle, RotateCcw, Home } from "lucide-react";
+
+  interface Props {
+    children: React.ReactNode;
+    onReset?: () => void;
+    onHome?: () => void;
+    context?: string; // which panel threw — for the error message
+  }
+
+  interface State {
+    hasError: boolean;
+    error: Error | null;
+    errorInfo: React.ErrorInfo | null;
+  }
+
+  export class QuizErrorBoundary extends React.Component<Props, State> {
+    constructor(props: Props) {
+      super(props);
+      this.state = { hasError: false, error: null, errorInfo: null };
+    }
+
+    static getDerivedStateFromError(error: Error): Partial<State> {
+      return { hasError: true, error };
+    }
+
+    componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+      this.setState({ errorInfo });
+      // Log for debugging without exposing to the user
+      console.error(
+        `[QuizErrorBoundary] Error in ${this.props.context ?? 'quiz'}:`,
+        error,
+        errorInfo
+      );
+    }
+
+    handleReset = () => {
+      this.setState({ hasError: false, error: null, errorInfo: null });
+      this.props.onReset?.();
+    };
+
+    render() {
+      if (!this.state.hasError) return this.props.children;
+
+      return (
+        <div className="rounded-xl border border-red-200 bg-red-50 
+                        p-6 text-center my-4">
+          <AlertTriangle className="w-8 h-8 text-red-400 mx-auto mb-3" />
+          <h3 className="font-medium text-red-800 mb-1">
+            Something went wrong
+            {this.props.context ? ` in ${this.props.context}` : ''}
+          </h3>
+          <p className="text-sm text-red-600 mb-4">
+            This section couldn't load. Your progress is safe —
+            you can continue or restart.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <Button
+              size="sm"
+              variant="outline"
+              className="border-red-300 text-red-700 hover:bg-red-100"
+              onClick={this.handleReset}
+            >
+              <RotateCcw className="w-3.5 h-3.5 mr-1.5" />
+              Try again
+            </Button>
+            {this.props.onHome && (
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-red-300 text-red-700 hover:bg-red-100"
+                onClick={this.props.onHome}
+              >
+                <Home className="w-3.5 h-3.5 mr-1.5" />
+                Back to home
+              </Button>
+            )}
+          </div>
+        </div>
+      );
+    }
+  }
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2 — WRAP EACH PANEL INDIVIDUALLY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Do NOT use a single boundary around the whole quiz — that 
+would blank the entire screen for one panel failing. Instead 
+wrap each sub-component independently so a failure in one 
+section leaves the rest of the quiz working.
+
+In plab1-new.tsx, wrap each sub-component like this:
+
+  EXPLANATION PANEL:
+    <QuizErrorBoundary
+      context="explanation"
+      onReset={() => setAiExplanation(null)}
+    >
+      <ExplanationPanel ... />
+    </QuizErrorBoundary>
+
+  STUDY TIPS PANEL:
+    <QuizErrorBoundary
+      context="study tips"
+      onReset={() => setAiStudyTips(null)}
+    >
+      <StudyTipsPanel ... />
+    </QuizErrorBoundary>
+
+  REVISION PANEL:
+    <QuizErrorBoundary context="revision panel">
+      <RevisionPanel ... />
+    </QuizErrorBoundary>
+
+  REFERENCE MATERIAL PANEL:
+    <QuizErrorBoundary context="reference material">
+      <ReferenceMaterialPanel ... />
+    </QuizErrorBoundary>
+
+  QUIZ QUESTION (the question + answer options):
+    <QuizErrorBoundary
+      context="question"
+      onReset={() => {
+        setSelectedAnswer("");
+        setShowExplanation(false);
+      }}
+      onHome={() => setSessionStarted(false)}
+    >
+      <QuizQuestion ... />
+    </QuizErrorBoundary>
+
+  GAMIFICATION BAR:
+    <QuizErrorBoundary context="gamification">
+      <GamificationBar ... />
+    </QuizErrorBoundary>
+
+  SESSION SETUP (pre-session screen):
+    <QuizErrorBoundary
+      context="session setup"
+      onHome={() => setSessionStarted(false)}
+    >
+      <SessionSetup ... />
+    </QuizErrorBoundary>
+
+  SESSION COMPLETE:
+    <QuizErrorBoundary
+      context="results"
+      onReset={() => setSessionStarted(false)}
+    >
+      <SessionComplete ... />
+    </QuizErrorBoundary>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3 — GUARD AGAINST NULL QUESTION DATA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The most common crash is a null or malformed question object 
+coming back from GPT-4o. Add a guard in plab1-new.tsx before 
+rendering the quiz:
+
+  const currentQuestion = generatedQuestions[currentQuestionIndex];
+
+  if (sessionStarted && !currentQuestion) {
+    return (
+      <div className="min-h-screen flex items-center justify-center 
+                      bg-gray-50 p-4">
+        <div className="text-center">
+          <AlertTriangle className="w-8 h-8 text-amber-400 
+                                    mx-auto mb-3" />
+          <p className="text-gray-600 mb-4">
+            Question data is missing. This can happen if generation 
+            was interrupted.
+          </p>
+          <Button onClick={() => setSessionStarted(false)}>
+            Return to setup
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4 — ADD TRY/CATCH TO AI FETCH CALLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The three AI fetch functions in plab1-new.tsx 
+(fetchStudyTips, fetchAIExplanation, and question generation) 
+currently have catch blocks that silently swallow errors. 
+Update each catch block to set a visible error state rather 
+than failing silently:
+
+  For fetchStudyTips:
+    } catch (err) {
+      console.error('Failed to fetch study tips:', err);
+      setAiStudyTips({ 
+        mnemonics: [], 
+        tips: [], 
+        source: 'error' 
+      });
+    }
+
+  For fetchAIExplanation:
+    } catch (err) {
+      console.error('Failed to fetch explanation:', err);
+      setAiExplanation(buildLocalFallback(
+        typeof currentQuestion?.explanation === 'string'
+          ? currentQuestion.explanation
+          : undefined
+      ));
+    }
+
+  Both already have the fallback functions available —
+  just make sure the catch blocks call them instead of 
+  doing nothing.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5 — ADD ALSO TO App.tsx OUTER BOUNDARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The ChunkErrorBoundary added in the code-splitting prompt 
+catches chunk load failures. Ensure it is still in place 
+wrapping the entire app. If it was not added yet, add it now.
+
+The two boundaries serve different purposes and should 
+both exist:
+
+  ChunkErrorBoundary (App.tsx)     — catches failed lazy imports
+  QuizErrorBoundary (plab1-new.tsx) — catches runtime errors 
+                                      inside quiz sub-components
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DO NOT CHANGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Any quiz logic, state, or API calls
+- The appearance of any panel when working correctly —
+  the error UI only shows when something throws
+- SessionNavBar — it sits outside all the error 
+  boundaries so navigation always remains accessible 
+  even when a panel fails
+- Any other pages or components outside plab1
