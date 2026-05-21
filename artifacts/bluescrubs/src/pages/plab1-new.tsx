@@ -3066,23 +3066,6 @@ export default function PLAB1New() {
               })()}
             </div>
 
-            {/* Submit Answer Button - Appears after selecting an option */}
-            {selectedAnswer !== "" && !showExplanation && (
-              <div className="mb-6 text-center">
-                <Button 
-                  onClick={handleSubmitAnswer}
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-3 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-                >
-                  Submit Answer
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                <p className="text-sm text-gray-500 mt-2">
-                  Click to view explanation and continue
-                </p>
-              </div>
-            )}
-
             {/* Answer Options - PassMedicine Style */}
             <div className="space-y-2 mb-8">
               {(() => {
