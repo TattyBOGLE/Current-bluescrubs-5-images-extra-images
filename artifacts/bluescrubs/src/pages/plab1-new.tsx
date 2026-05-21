@@ -3234,48 +3234,6 @@ export default function PLAB1New() {
           </CardContent>
         </Card>
 
-        {/* Desktop Navigation - Between Content Sections */}
-        {showExplanation && (
-          <div className="hidden md:block mb-6">
-            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border">
-              <Button
-                onClick={() => {
-                  if (currentQuestionIndex > 0) {
-                    setCurrentQuestionIndex(prev => prev - 1);
-                    setSelectedAnswer("");
-                    setShowExplanation(false);
-                    setQuestionStartTime(Date.now());
-                  }
-                }}
-                disabled={currentQuestionIndex === 0}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold disabled:bg-gray-300 disabled:text-gray-500 flex items-center gap-2"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Previous
-              </Button>
-              
-              <div className="text-center">
-                <div className="text-sm font-medium text-gray-700">
-                  Question {currentQuestionIndex + 1} of {generatedQuestions.length}
-                </div>
-                {isTimedSession && (
-                  <div className="text-xs text-gray-500 mt-1">
-                    {formatTime(questionTimer)}
-                  </div>
-                )}
-              </div>
-              
-              <Button
-                onClick={handleNextQuestion}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2"
-              >
-                {currentQuestionIndex === generatedQuestions.length - 1 ? "Complete" : "Next"}
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </div>
-          </div>
-        )}
-
         {/* Answer Explanation - PassMedicine Style */}
         {showExplanation && (
           <>
