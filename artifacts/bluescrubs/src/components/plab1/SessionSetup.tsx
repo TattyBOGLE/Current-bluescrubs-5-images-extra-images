@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import {
-  Clock, BookOpen, Target, Brain, ArrowRight, Award, Globe, Volume2
+  Clock, ArrowRight, Globe, Volume2
 } from "lucide-react";
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { availableCategories } from "@/lib/quiz-utils";
@@ -291,27 +291,6 @@ export function SessionSetup({
               </div>
             )}
           </div>
-        </div>
-
-        {/* Stats row */}
-        <div className="grid grid-cols-4 gap-3 mb-6">
-          {[
-            { icon: <BookOpen className="w-4 h-4 text-blue-600" />, value: '75', label: '25 specialties × 3 levels', title: 'Categories' },
-            { icon: <Target className="w-4 h-4 text-green-600" />, value: '3', label: 'Basic · Intermediate · Advanced', title: 'Difficulty Levels' },
-            { icon: <Brain className="w-4 h-4 text-purple-600" />, value: '30+', label: 'NICE, CKS, BTS, ESC, ADA', title: 'Guidelines' },
-            { icon: <Award className="w-4 h-4 text-yellow-600" />, value: '70+', label: 'Multi-language support', title: 'Languages' },
-          ].map(({ icon, value, label, title }) => (
-            <Card key={title} className="shadow-sm">
-              <CardContent className="p-3">
-                <div className="flex items-center gap-1.5 mb-1">
-                  {icon}
-                  <span className="text-xs font-medium text-gray-600 truncate">{title}</span>
-                </div>
-                <p className="text-xl font-bold text-gray-900">{value}</p>
-                <p className="text-[11px] text-gray-500 leading-tight">{label}</p>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* Main setup panel */}
