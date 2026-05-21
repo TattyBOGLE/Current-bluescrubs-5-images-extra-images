@@ -2,6 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Award, Brain, BookOpen } from "lucide-react";
 import type { AIExplanation } from "@/lib/quiz-utils";
+import { ExternalLink } from "@/components/ui/external-link";
+import { useToast } from "@/hooks/use-toast";
 
 interface ExplanationPanelProps {
   currentQuestion: any;
@@ -14,6 +16,20 @@ export function ExplanationPanel({
   aiExplanation,
   aiExplanationLoading,
 }: ExplanationPanelProps) {
+  const { toast } = useToast();
+
+  function openLink(url: string) {
+    const win = window.open(url, "_blank", "noopener,noreferrer");
+    if (!win) {
+      navigator.clipboard.writeText(url).catch(() => {});
+      toast({
+        title: "Link copied",
+        description: "Paste the URL into a new browser tab to open it.",
+        duration: 4000,
+      });
+    }
+  }
+
   return (
     <div className="space-y-6 mb-8">
       {/* Structured AI explanation (or fallback to legacy bullet list) */}
@@ -237,14 +253,12 @@ export function ExplanationPanel({
                                 <p className="text-xs text-green-700 italic">{ref.subsection}</p>
                               )}
                             </div>
-                            <a
+                            <ExternalLink
                               href={ref.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
                               className="inline-flex items-center justify-center rounded-md text-xs font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-green-300 text-green-700 hover:bg-green-50 h-6 px-2"
                             >
                               View
-                            </a>
+                            </ExternalLink>
                           </div>
                           <p className="text-xs text-green-800 leading-relaxed mb-1">
                             {ref.text}
@@ -320,11 +334,7 @@ export function ExplanationPanel({
                   <p className="text-xs text-red-700">ESC Clinical Practice Guidelines</p>
                   <Button
                     size="sm"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      window.open(currentQuestion.esc_guidance.esc_url || 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/', '_blank');
-                    }}
+                    onClick={() => openLink(currentQuestion.esc_guidance.esc_url || 'https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/')}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
                     View ESC Guidelines
@@ -378,11 +388,7 @@ export function ExplanationPanel({
                   <p className="text-xs text-purple-700">ADA Standards of Care</p>
                   <Button
                     size="sm"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      window.open(currentQuestion.ada_guidance.ada_url || 'https://www.nice.org.uk/guidance/ng28', '_blank');
-                    }}
+                    onClick={() => openLink(currentQuestion.ada_guidance.ada_url || 'https://www.nice.org.uk/guidance/ng28')}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
                     View ADA Standards
@@ -436,11 +442,7 @@ export function ExplanationPanel({
                   <p className="text-xs text-indigo-700">SIGN Clinical Guidelines</p>
                   <Button
                     size="sm"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      window.open(currentQuestion.sign_guidance.sign_url || 'https://www.sign.ac.uk/our-guidelines/', '_blank');
-                    }}
+                    onClick={() => openLink(currentQuestion.sign_guidance.sign_url || 'https://www.sign.ac.uk/our-guidelines/')}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
                     View SIGN Guidelines
@@ -494,11 +496,7 @@ export function ExplanationPanel({
                   <p className="text-xs text-teal-700">BTS Clinical Guidelines</p>
                   <Button
                     size="sm"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      window.open(currentQuestion.bts_guidance.bts_url || 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/', '_blank');
-                    }}
+                    onClick={() => openLink(currentQuestion.bts_guidance.bts_url || 'https://www.brit-thoracic.org.uk/clinical-resources/guidelines/')}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
                     View BTS Guidelines

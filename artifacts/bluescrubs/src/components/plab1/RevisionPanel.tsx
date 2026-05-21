@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { buildDynamicLink } from "@/lib/clinical-links";
 import type { NICERef } from "@/lib/clinical-links";
+import { ExternalLink } from "@/components/ui/external-link";
 
 interface RevisionPanelProps {
   question: any;
@@ -46,14 +47,12 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
             <p className="text-[10px] font-bold uppercase tracking-widest text-amber-600 mb-2">📖 What to Read</p>
             {primaryRef ? (
               <div className="space-y-1.5">
-                <a
+                <ExternalLink
                   href={primaryRef.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
                 >
                   {primaryRef.title}
-                </a>
+                </ExternalLink>
                 {pearl && (
                   <>
                     <p className="text-xs text-slate-600">
@@ -69,14 +68,12 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                   </>
                 )}
                 {visualSummaryUrl && (
-                  <a
+                  <ExternalLink
                     href={visualSummaryUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="text-xs text-blue-600 hover:text-blue-800 hover:underline mt-1"
                   >
                     📄 Visual Summary PDF
-                  </a>
+                  </ExternalLink>
                 )}
               </div>
             ) : (

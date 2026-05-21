@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BookOpen, ChevronDown } from "lucide-react";
 import { buildDynamicLink, getNICEReferencesForQuestion, toCKSSlug } from "@/lib/clinical-links";
+import { ExternalLink } from "@/components/ui/external-link";
 
 interface ReferenceMaterialPanelProps {
   question: any;
@@ -192,14 +193,12 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
                   {ref.badge}
                 </span>
               </div>
-              <a
+              <ExternalLink
                 href={ref.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
               >
                 {ref.title}
-              </a>
+              </ExternalLink>
               {ref.relevance && (
                 <p className="text-xs text-slate-500 mt-0.5 italic">{ref.relevance}</p>
               )}
