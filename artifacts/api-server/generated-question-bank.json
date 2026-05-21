@@ -26811,5 +26811,425 @@
       "CKS": "https://cks.nice.org.uk/topics/bipolar-disorder"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_0",
+    "topic": "Psoriasis",
+    "category": "dermatology",
+    "question": "A 35-year-old man presents with well-demarcated, scaly plaques on his elbows and knees. He reports that his father also had similar skin lesions. On examination, you notice silvery scales and Auspitz’s sign is positive. Which is the first-line topical treatment for this condition according to NICE guidelines?",
+    "options": [
+      "Topical corticosteroids",
+      "Topical calcipotriol",
+      "Coal tar",
+      "Topical salicylic acid",
+      "Methotrexate"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Topical calcipotriol'. According to NICE guidelines, vitamin D analogues like calcipotriol are recommended as the first-line topical treatment for plaque psoriasis. This patient's presentation of well-demarcated, scaly plaques with a family history is typical of psoriasis. The positive Auspitz sign, where bleeding points appear when scales are scraped off, supports this diagnosis. Topical corticosteroids can also be used, but vitamin D analogues are preferred for initial management due to their long-term safety profile. Coal tar and salicylic acid are less commonly used due to local irritation and staining issues. Methotrexate is reserved for more severe cases not responsive to topical treatments. For a quick recall, remember the mnemonic 'Calm Psoriasis with Calcipotriol'.",
+    "mnemonic": "Calm Psoriasis with Calcipotriol",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/psoriasis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_1",
+    "topic": "Atopic Dermatitis",
+    "category": "dermatology",
+    "question": "A 5-year-old boy is brought to the GP by his mother due to an itchy rash on his flexural areas. The rash is erythematous with some excoriations. His mother mentions a family history of asthma and hay fever. What is the recommended initial management for this condition?",
+    "options": [
+      "Oral antihistamines",
+      "Topical corticosteroids",
+      "Oral antibiotics",
+      "Topical calcineurin inhibitors",
+      "Coal tar preparations"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Topical corticosteroids'. Atopic dermatitis, also known as eczema, typically presents with itchy, erythematous rashes in flexural areas and is associated with other atopic conditions like asthma and hay fever. NICE recommends the use of emollients and topical corticosteroids as the first-line treatment to reduce inflammation and control flare-ups. Oral antihistamines can help with itch but are not a primary treatment. Oral antibiotics are only indicated if there is secondary bacterial infection. Topical calcineurin inhibitors are used for sensitive skin areas or if steroids are ineffective. Coal tar is not commonly used due to its irritative properties. A useful mnemonic is 'Eczema: Emollients and Corticosteroids'.",
+    "mnemonic": "Eczema: Emollients and Corticosteroids",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/eczema"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_2",
+    "topic": "Acne Vulgaris",
+    "category": "dermatology",
+    "question": "A 17-year-old girl presents with comedones, papules, and pustules on her face. She has tried over-the-counter benzoyl peroxide with minimal improvement. What is the next step in management according to NICE guidelines?",
+    "options": [
+      "Topical retinoids",
+      "Oral isotretinoin",
+      "Topical antibiotics",
+      "Oral contraceptive pill",
+      "Oral antibiotics"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Topical retinoids'. For patients with mild to moderate acne that doesn't respond to over-the-counter treatments, NICE recommends topical retinoids as the next step. They help by unblocking plugged follicles and normalizing skin cell turnover. Oral isotretinoin is reserved for severe acne due to its potential side effects. Topical antibiotics should be combined with benzoyl peroxide to prevent resistance, but retinoids are preferred initially. Oral contraceptives can help in females with hormonal acne, but they're not the first-line treatment. Oral antibiotics are considered if topical treatments fail. The mnemonic 'Acne: Act with Topical Retinoids' can help remember this step.",
+    "mnemonic": "Acne: Act with Topical Retinoids",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/acne-vulgaris"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_3",
+    "topic": "Urticaria",
+    "category": "dermatology",
+    "question": "A 28-year-old woman presents with a sudden onset of itchy, raised, red welts on her skin, which appear to come and go. She denies any new medications or foods. What is the first-line treatment for her condition according to NICE guidelines?",
+    "options": [
+      "Oral corticosteroids",
+      "Topical antihistamines",
+      "Oral antihistamines",
+      "Epinephrine auto-injector",
+      "Topical corticosteroids"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Oral antihistamines'. Urticaria is characterized by transient wheals and itchiness. NICE guidelines recommend oral antihistamines as the first-line treatment to control symptoms. They work by blocking histamine receptors, reducing itch and swelling. Oral corticosteroids are not recommended for routine management due to side effects. Topical antihistamines are less effective than oral forms. An epinephrine auto-injector is reserved for anaphylaxis, not isolated urticaria. Topical corticosteroids are ineffective against urticaria as it is not an inflammatory dermatosis. Remember the mnemonic 'Urticaria: Use Oral Antihistamines'.",
+    "mnemonic": "Urticaria: Use Oral Antihistamines",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/urticaria"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_4",
+    "topic": "Basal Cell Carcinoma",
+    "category": "dermatology",
+    "question": "A 65-year-old man presents with a pearly, nodular lesion on his nose that has been slowly growing over a few years. It has a rolled border with telangiectasia. What is the most appropriate management for this condition?",
+    "options": [
+      "Cryotherapy",
+      "Topical imiquimod",
+      "Surgical excision",
+      "Radiotherapy",
+      "Photodynamic therapy"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Surgical excision'. Basal cell carcinoma (BCC) is the most common type of skin cancer, often presenting as a pearly nodule with telangiectasia. Surgical excision is the preferred treatment, offering the highest cure rate with histological margin control. Cryotherapy and topical imiquimod are options for superficial BCCs, not nodular types. Radiotherapy is reserved for patients who cannot undergo surgery. Photodynamic therapy is less effective for nodular BCCs. The mnemonic 'BCC: Best Cut with Care' helps remember that surgical excision is the treatment of choice.",
+    "mnemonic": "BCC: Best Cut with Care",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/skin-cancer-non-melanoma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_5",
+    "topic": "Contact Dermatitis",
+    "category": "dermatology",
+    "question": "A 42-year-old woman presents with an itchy rash on her hands. She works as a hairdresser and reports that the rash worsens after work. What is the most likely diagnosis?",
+    "options": [
+      "Psoriasis",
+      "Atopic dermatitis",
+      "Contact dermatitis",
+      "Scabies",
+      "Tinea manuum"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Contact dermatitis'. This condition is common in occupations with frequent exposure to irritants or allergens, such as hairdressing. The presentation of an itchy rash on the hands that worsens with work exposure suggests contact dermatitis. Psoriasis typically presents with silvery scales, often on extensor surfaces. Atopic dermatitis usually affects flexural areas and is associated with personal or family history of atopy. Scabies presents with intense itching and burrows, often between fingers. Tinea manuum is a fungal infection presenting with annular lesions and scaling, typically unilateral. The mnemonic 'Contact with Chemicals Causes Contact Dermatitis' highlights the occupational link.",
+    "mnemonic": "Contact with Chemicals Causes Contact Dermatitis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/contact-dermatitis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_6",
+    "topic": "Melanoma",
+    "category": "dermatology",
+    "question": "A 55-year-old woman presents with a mole on her back that has changed in size and color over the past few months. On examination, it is asymmetrical with irregular borders and multiple colors. What is the next step in management?",
+    "options": [
+      "Reassurance and observation",
+      "Punch biopsy",
+      "Excisional biopsy",
+      "Cryotherapy",
+      "Topical chemotherapy"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Excisional biopsy'. Changes in size, color, and border of a mole raise suspicion for melanoma, and an excisional biopsy is the appropriate next step to obtain a full-thickness specimen for histopathological examination. This approach ensures accurate diagnosis and staging. Reassurance and observation are inappropriate for suspicious lesions. Punch biopsy is inadequate for assessing depth, which is crucial for melanoma. Cryotherapy and topical chemotherapy are not suitable for melanoma diagnosis. The mnemonic 'Melanoma: Measure with Excision' emphasizes the importance of excisional biopsy in diagnosis.",
+    "mnemonic": "Melanoma: Measure with Excision",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/melanoma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_7",
+    "topic": "Vitiligo",
+    "category": "dermatology",
+    "question": "A 30-year-old man presents with depigmented patches on his hands and face. He is concerned about the cosmetic appearance. What is the first-line treatment option recommended by NICE?",
+    "options": [
+      "Topical corticosteroids",
+      "Topical calcineurin inhibitors",
+      "Phototherapy",
+      "Oral corticosteroids",
+      "Skin camouflage"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Topical corticosteroids'. Vitiligo presents with depigmented patches due to loss of melanocytes, and topical corticosteroids are recommended by NICE as the first-line treatment to help repigment the skin, especially if started early. Topical calcineurin inhibitors are second-line options for sensitive areas like the face. Phototherapy is considered for more extensive or refractory cases. Oral corticosteroids are not used due to systemic side effects. Skin camouflage can help with cosmetic concerns but does not address the underlying condition. The mnemonic 'Vitiligo: Vanish with Corticosteroids' helps recall the first-line treatment.",
+    "mnemonic": "Vitiligo: Vanish with Corticosteroids",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/vitiligo"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_8",
+    "topic": "Rosacea",
+    "category": "dermatology",
+    "question": "A 45-year-old woman presents with persistent facial erythema and flushing, particularly on her cheeks and nose. She also reports small red bumps and visible blood vessels. What is the most appropriate initial treatment?",
+    "options": [
+      "Topical metronidazole",
+      "Oral doxycycline",
+      "Topical steroids",
+      "Oral isotretinoin",
+      "Laser therapy"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Topical metronidazole'. Rosacea often presents with facial erythema, flushing, papules, and telangiectasia. NICE recommends topical metronidazole as the initial treatment, especially for mild to moderate cases. Oral doxycycline is used for more severe or ocular involvement. Topical steroids can worsen rosacea through rebound flaring. Oral isotretinoin is reserved for severe cases unresponsive to other treatments. Laser therapy is effective for telangiectasia but is not a first-line treatment. The mnemonic 'Rosacea: Redness Reduced with Metronidazole' highlights the initial management strategy.",
+    "mnemonic": "Rosacea: Redness Reduced with Metronidazole",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/rosacea"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401824315_9",
+    "topic": "Herpes Zoster",
+    "category": "dermatology",
+    "question": "A 60-year-old man presents with a painful, vesicular rash in a dermatomal distribution on his right chest. He also reports tingling and burning sensations. What is the most appropriate first-line treatment?",
+    "options": [
+      "Oral aciclovir",
+      "Topical aciclovir",
+      "Oral corticosteroids",
+      "Antihistamines",
+      "Topical antibiotics"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Oral aciclovir'. Herpes zoster, or shingles, presents with a painful vesicular rash following a dermatome. NICE guidelines recommend oral antiviral treatment, such as aciclovir, to reduce the severity and duration of symptoms if started within 72 hours of rash onset. Topical aciclovir is ineffective for herpes zoster. Oral corticosteroids are not routinely recommended due to potential side effects. Antihistamines can help with itch but do not treat the infection. Topical antibiotics are unnecessary unless there is secondary bacterial infection. The mnemonic 'Zoster: Zap with Oral Aciclovir' aids in recalling the treatment.",
+    "mnemonic": "Zoster: Zap with Oral Aciclovir",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/shingles"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_0",
+    "topic": "Psoriasis Management",
+    "category": "dermatology",
+    "question": "A 28-year-old woman presents with well-demarcated, erythematous plaques covered with silvery scales on her elbows and knees. She reports that her symptoms worsen during the winter. What is the most appropriate first-line topical treatment for her condition?",
+    "options": [
+      "Topical corticosteroids",
+      "Topical retinoids",
+      "Topical antibiotics",
+      "Topical antifungals",
+      "Topical calcineurin inhibitors"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is topical corticosteroids. Psoriasis is characterized by erythematous plaques with silvery scales, commonly found on extensor surfaces such as elbows and knees. According to NICE guidelines, topical treatments are first-line for mild to moderate psoriasis, with corticosteroids being the initial treatment of choice due to their anti-inflammatory properties. Topical retinoids and calcineurin inhibitors are used in specific cases but are not first-line. Antibiotics and antifungals are inappropriate as psoriasis is not an infectious process. Remember, 'Corticosteroids Calm the Scales' is a helpful mnemonic.",
+    "mnemonic": "Corticosteroids Calm the Scales",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_1",
+    "topic": "Atopic Dermatitis in Children",
+    "category": "dermatology",
+    "question": "A 6-year-old boy presents with itchy, erythematous patches on his cheeks and flexural areas. His mother mentions that the symptoms improve with emollients but flare up frequently. What is the most appropriate step in managing his condition?",
+    "options": [
+      "Oral antihistamines",
+      "Topical corticosteroids",
+      "Systemic corticosteroids",
+      "Topical antifungals",
+      "Ultraviolet therapy"
+    ],
+    "answer": 1,
+    "explanation": "Topical corticosteroids are the most appropriate treatment for controlling flare-ups in atopic dermatitis, especially in children. This condition typically presents with pruritic, erythematous patches in areas such as the cheeks and flexural regions. NICE guidelines recommend the use of topical corticosteroids for exacerbations, while emollients should be used regularly to maintain skin hydration. Oral antihistamines can relieve itching but do not address inflammation. Systemic corticosteroids are reserved for severe cases due to potential side effects. Antifungals and ultraviolet therapy are not indicated in atopic dermatitis. To recall, 'Steroids Soothe the Skin' is a useful mnemonic.",
+    "mnemonic": "Steroids Soothe the Skin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_2",
+    "topic": "Acne Vulgaris Treatment",
+    "category": "dermatology",
+    "question": "A 17-year-old girl presents with moderate acne vulgaris, characterized by comedones, papules, and pustules on her face. She has been using benzoyl peroxide with minimal improvement. What is the next appropriate step in her management?",
+    "options": [
+      "Oral isotretinoin",
+      "Topical antibiotics",
+      "Oral antibiotics",
+      "Topical retinoids",
+      "Hormonal therapy"
+    ],
+    "answer": 3,
+    "explanation": "For moderate acne vulgaris, the next step after benzoyl peroxide is adding a topical retinoid, which helps with comedones and inflammation. NICE guidelines suggest combining treatments to target different acne lesions. Oral isotretinoin is reserved for severe cases due to potential side effects. Oral antibiotics are an option for more extensive acne. Topical antibiotics alone are not recommended due to resistance risk. Hormonal therapy, such as oral contraceptives, can be considered in females with hormonal acne. Remember: 'Retinoids Refine the Skin' for acne management.",
+    "mnemonic": "Retinoids Refine the Skin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_3",
+    "topic": "Melanoma Risk Factors",
+    "category": "dermatology",
+    "question": "A 45-year-old man presents with a new pigmented lesion on his back. It is asymmetric, has an irregular border, and is varying in color. He has a history of blistering sunburns in childhood. Which of the following is the most significant risk factor for melanoma in this patient?",
+    "options": [
+      "Age",
+      "Childhood sunburns",
+      "Family history",
+      "Use of tanning beds",
+      "Fair skin"
+    ],
+    "answer": 1,
+    "explanation": "Childhood sunburns are a significant risk factor for melanoma, especially blistering sunburns. They indicate intense, intermittent sun exposure, which is particularly harmful. NICE guidelines underscore the importance of sun protection to reduce melanoma risk. While age, fair skin, and family history are also risk factors, the history of sunburns is crucial in this scenario. Tanning beds are a recognized risk factor, but less relevant here. The mnemonic 'Burns Bring Melanoma' helps recall this critical risk factor.",
+    "mnemonic": "Burns Bring Melanoma",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_4",
+    "topic": "Rosacea Management",
+    "category": "dermatology",
+    "question": "A 52-year-old woman presents with facial flushing, telangiectasia, and papules on her cheeks. She reports worsening symptoms with hot drinks and sun exposure. What is the first-line treatment for her condition?",
+    "options": [
+      "Topical metronidazole",
+      "Topical corticosteroids",
+      "Oral isotretinoin",
+      "Topical retinoids",
+      "Oral antibiotics"
+    ],
+    "answer": 0,
+    "explanation": "Topical metronidazole is the first-line treatment for rosacea, particularly effective for papulopustular lesions. Rosacea presents with facial flushing, telangiectasia, and sometimes papules and pustules. NICE guidelines recommend topical metronidazole for mild to moderate cases. Oral antibiotics are used for more severe or resistant cases. Topical corticosteroids are not indicated due to potential worsening of symptoms. Oral isotretinoin is reserved for severe cases. Remember, 'Metronidazole Manages Rosacea' as a mnemonic.",
+    "mnemonic": "Metronidazole Manages Rosacea",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_5",
+    "topic": "Seborrheic Dermatitis",
+    "category": "dermatology",
+    "question": "A 30-year-old man presents with flaky, greasy scales on his scalp and eyebrows. He also has mild erythema around his nasolabial folds. What is the most appropriate first-line treatment?",
+    "options": [
+      "Topical antifungals",
+      "Topical steroids",
+      "Oral antibiotics",
+      "Coal tar shampoo",
+      "Oral antifungals"
+    ],
+    "answer": 0,
+    "explanation": "The first-line treatment for seborrheic dermatitis involves topical antifungals like ketoconazole, which target the Malassezia yeast contributing to the condition. Seborrheic dermatitis is characterized by flaky, greasy scales and erythema, often affecting the scalp, eyebrows, and nasolabial folds. NICE guidelines suggest topical antifungals as the initial treatment. Topical steroids may be added for inflammation but are not first-line. Oral antibiotics and antifungals are not indicated for this condition. Coal tar shampoo is less commonly used. Remember, 'Antifungals Alleviate the Flakes' helps in recalling the treatment.",
+    "mnemonic": "Antifungals Alleviate the Flakes",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_6",
+    "topic": "Urticaria Management",
+    "category": "dermatology",
+    "question": "A 34-year-old woman presents with an acute episode of widespread, pruritic wheals on her trunk and limbs. She reports no known allergies. What is the most appropriate initial management for her condition?",
+    "options": [
+      "Topical corticosteroids",
+      "Oral antihistamines",
+      "Oral corticosteroids",
+      "Topical antihistamines",
+      "Adrenaline injection"
+    ],
+    "answer": 1,
+    "explanation": "Oral antihistamines are the first-line treatment for acute urticaria, addressing the histamine-mediated wheals and pruritus. Urticaria is characterized by sudden onset of wheals and itching, often without an identifiable trigger. NICE guidelines recommend oral antihistamines as initial management. Topical corticosteroids and antihistamines are less effective for widespread urticaria. Oral corticosteroids are reserved for severe cases. Adrenaline is used in anaphylaxis, not isolated urticaria. The mnemonic 'Antihistamines Halt Hives' helps remember the treatment approach.",
+    "mnemonic": "Antihistamines Halt Hives",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_7",
+    "topic": "Basal Cell Carcinoma",
+    "category": "dermatology",
+    "question": "A 65-year-old man presents with a pearly, telangiectatic papule on his nose. It has been slowly growing over the past year. What is the most appropriate management for this lesion?",
+    "options": [
+      "Cryotherapy",
+      "Topical 5-fluorouracil",
+      "Surgical excision",
+      "Radiotherapy",
+      "Topical imiquimod"
+    ],
+    "answer": 2,
+    "explanation": "Surgical excision is the treatment of choice for basal cell carcinoma (BCC), particularly for lesions on cosmetically sensitive areas like the face. BCC typically appears as a pearly, telangiectatic papule and is the most common skin cancer. NICE guidelines recommend excision to ensure complete removal and histological examination. Cryotherapy and topical treatments are less effective for facial BCC. Radiotherapy is reserved for non-surgical candidates. Remember, 'Excision Ensures Elimination' as a mnemonic for BCC management.",
+    "mnemonic": "Excision Ensures Elimination",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_8",
+    "topic": "Lichen Planus",
+    "category": "dermatology",
+    "question": "A 42-year-old woman presents with pruritic, violaceous, flat-topped papules on her wrists. She has no other systemic symptoms. What is the initial treatment of choice for her condition?",
+    "options": [
+      "Topical corticosteroids",
+      "Oral corticosteroids",
+      "Topical antifungals",
+      "Oral antifungals",
+      "Phototherapy"
+    ],
+    "answer": 0,
+    "explanation": "Topical corticosteroids are the first-line treatment for lichen planus, an inflammatory condition presenting with pruritic, violaceous papules. NICE guidelines recommend topical corticosteroids to reduce inflammation and pruritus. Oral corticosteroids are considered for extensive or resistant cases. Antifungals are not indicated as lichen planus is not a fungal infection. Phototherapy may be used for widespread lichen planus but is not first-line. The mnemonic 'Planus Purples Need Potent Corticosteroids' helps recall the treatment.",
+    "mnemonic": "Planus Purples Need Potent Corticosteroids",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779401911073_9",
+    "topic": "Vitiligo Management",
+    "category": "dermatology",
+    "question": "A 29-year-old woman presents with depigmented patches on her hands and face. She is concerned about the cosmetic appearance. What is the first-line treatment option to consider?",
+    "options": [
+      "Topical corticosteroids",
+      "Topical calcineurin inhibitors",
+      "Systemic corticosteroids",
+      "Phototherapy",
+      "Skin camouflage"
+    ],
+    "answer": 1,
+    "explanation": "Topical calcineurin inhibitors are often used in sensitive areas like the face for vitiligo, due to their efficacy and safety profile. Vitiligo presents as depigmented patches and can be distressing due to cosmetic concerns. NICE guidelines suggest topical calcineurin inhibitors for facial involvement as they are less likely to cause skin thinning compared to corticosteroids. Systemic corticosteroids are not first-line due to potential side effects. Phototherapy is another option but less practical as initial treatment. Skin camouflage can be used for cosmetic improvement but does not treat the condition. The mnemonic 'Calcineurin Calms Color Changes' is useful for remembering this treatment.",
+    "mnemonic": "Calcineurin Calms Color Changes",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
   }
 ]
