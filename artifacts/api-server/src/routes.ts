@@ -47,6 +47,7 @@ import {
   createIndependentAlternatives,
   exportCompleteIndependentSystem 
 } from './independent-content';
+import { sanitizeQuestionStem, sanitizeQuestion } from './lib/sanitize-question';
 import { 
   analyzeVideoPerformanceIndependently, 
   generateIndependentFeedback,
@@ -273,7 +274,7 @@ async function createFallbackQuestions(templates: any[], category: string, diffi
 }
 
 async function generateMedicalGuidanceResponse(question: string, context: any) {
-  return `Based on current UK medical guidelines:\n\n${question}\n\nRefer to NICE guidelines for evidence-based recommendations.`;
+  return `Clinical guidance:\n\n${question}`;
 }
 
 // AI enabled for question generation
@@ -331,7 +332,7 @@ const normalizeStoredQuestion = (q: any): any => {
 
   return {
     ...q,
-    question: questionText,
+    question: sanitizeQuestionStem(questionText),
     options,
     correctAnswer,
     correct_answer: correctAnswer,

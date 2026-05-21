@@ -109,16 +109,20 @@ export class HybridAISystem {
       const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL });
 
-      const prompt = `Generate ${count} high-quality PLAB 1 medical exam questions for ${category} specialty.
+      const prompt = `Generate ${count} high-quality PLAB 1 / UKMLA medical exam questions for ${category} specialty.
+
+CRITICAL STYLE RULES — follow exactly:
+- Question stems must read as natural clinical scenarios. NEVER start or end a question with phrases like "According to NICE guidelines", "Based on NICE guidance", "As per guidelines", "According to NG245", or any guideline citation.
+- Correct phrasing: "What is the most appropriate next step?", "Which investigation should be performed next?", "What is the best initial management?"
+- UK guideline-aligned answers are expected internally — do NOT state the guideline name in the question itself.
 
 Create authentic UK medical scenarios with:
-- Realistic patient presentations
-- 5 multiple choice options (A-E)
-- Detailed explanations for each option
-- Relevant mnemonics
-- NICE/GMC guideline references
+- Realistic patient presentations (age, sex, setting, vital signs, investigation results)
+- 5 multiple choice options (A-E), one clearly correct
+- Detailed explanations for each option (why correct/incorrect)
+- A relevant clinical mnemonic
 
-Format as JSON array with: question, options, answer (index), explanation (object with A-E keys), mnemonic, links`;
+Format as JSON array with fields: question, options (array of 5 strings), answer (0-based index of correct option), explanation (object with keys A-E), mnemonic`;
 
       const response = await openai.chat.completions.create({
         model: 'gpt-4o',
