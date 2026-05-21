@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import {
-  Clock, BookOpen, Target, Brain, ArrowRight, Award, Globe, Volume2, FileText
+  Clock, BookOpen, Target, Brain, ArrowRight, Award, Globe, Volume2
 } from "lucide-react";
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { availableCategories } from "@/lib/quiz-utils";
@@ -296,31 +296,6 @@ export function SessionSetup({
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* NICE Guide banner */}
-        <div className="mb-6 p-px bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg shadow-sm">
-          <Card className="cursor-pointer hover:shadow-md transition-all duration-200 border-0 rounded-lg" onClick={() => setShowNiceGuide(true)}>
-            <CardHeader className="bg-white hover:bg-green-50 transition-colors p-4 rounded-lg">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-green-100 rounded-full">
-                    <FileText className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-green-800 text-base font-bold">NICE NG136 + PLAB MCQ Format</CardTitle>
-                    <CardDescription className="text-green-700 text-xs mt-0.5">
-                      Clinical scenario framework, risk assessment tools &amp; structured learning
-                    </CardDescription>
-                  </div>
-                </div>
-                <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white border-0">
-                  <BookOpen className="w-4 h-4 mr-1.5" />
-                  View Guide
-                </Button>
-              </div>
-            </CardHeader>
-          </Card>
         </div>
 
         {/* Main setup panel */}
