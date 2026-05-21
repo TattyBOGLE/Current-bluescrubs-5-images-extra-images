@@ -22,14 +22,14 @@ export function Navigation({ user }: NavigationProps) {
     { name: "PLAB 2", href: "/plab2-osce", icon: Video, current: location === "/plab2-osce" },
     { name: "Analytics", href: "/analytics", icon: BarChart3, current: location === "/analytics" },
     { name: "Adaptive AI", href: "/adaptive-learning", icon: Zap, current: location === "/adaptive-learning" },
-    { name: "Leaderboards", href: "/leaderboard", icon: Trophy, current: location === "/leaderboard" },
     { name: "Spaced Learning", href: "/spaced-repetition", icon: Brain, current: location === "/spaced-repetition" },
-    { name: "Placements", href: "/placements", icon: Building, current: location === "/placements" },
-    { name: "Clinical Guides", href: "/clinical-guides", icon: FileText, current: location === "/clinical-guides" },
     { name: "AI Study Tools", href: "/ai-study-tools", icon: Brain, current: location === "/ai-study-tools" },
     { name: "Smart Planner", href: "/smart-planner", icon: Calendar, current: location === "/smart-planner" },
-    { name: "Community", href: "/community", icon: Users, current: location === "/community" },
+    { name: "Clinical Guides", href: "/clinical-guides", icon: FileText, current: location === "/clinical-guides" },
+    { name: "Leaderboards", href: "/leaderboard", icon: Trophy, current: location === "/leaderboard" },
     { name: "NHS Prep", href: "/nhs-prep", icon: GraduationCap, current: location === "/nhs-prep" },
+    { name: "Placements", href: "/placements", icon: Building, current: location === "/placements" },
+    { name: "Community", href: "/community", icon: Users, current: location === "/community" },
   ];
 
   return (

@@ -14634,5 +14634,215 @@
       "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man presents to your clinic for a routine check-up. He has a history of hypertension and is currently not on any medication. His blood pressure readings over the past month have averaged 155/95 mmHg. According to NICE guidelines, what is the most appropriate initial treatment for this patient?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Losartan",
+      "Hydrochlorothiazide",
+      "Spironolactone"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Ramipril. According to NICE NG136 (2023 update), for patients under 55 years old who are non-Black, the first-line treatment for hypertension is an ACE inhibitor, such as Ramipril. This is due to its efficacy in reducing cardiovascular events and blood pressure in this demographic. Amlodipine would be the preferred choice if the patient were over 55 or of Black African or Caribbean descent. Losartan is an ARB and may be used if the patient is intolerant to ACE inhibitors. Hydrochlorothiazide and spironolactone are typically added in later stages of hypertension management. A mnemonic to remember is 'Younger and white, ACE is right'.",
+    "mnemonic": "Younger and white, ACE is right",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 34-year-old woman with newly diagnosed asthma presents with symptoms of wheezing, shortness of breath, and occasional cough. She has been using salbutamol as needed. Based on the latest NICE guidelines, what should be her next step in management?",
+    "options": [
+      "Add daily low-dose ICS",
+      "Switch to as-needed ICS/formoterol",
+      "Add LABA to her regimen",
+      "Continue with salbutamol and review in 3 months",
+      "Start oral montelukast"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to switch to as-needed ICS/formoterol. According to NICE NG245 (2024), for adults with newly diagnosed asthma or those currently on SABA monotherapy, the recommended first step is to switch to an as-needed low-dose ICS/formoterol inhaler, known as Anti-Inflammatory Reliever (AIR) therapy. This is a significant shift from previous guidelines, where adding a regular low-dose ICS to SABA was recommended. Adding LABA or montelukast is appropriate in later stages if control is not achieved. Continuing with salbutamol alone is outdated and does not address the underlying inflammation.",
+    "mnemonic": "Inhale ICS, control asthma's mess",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 62-year-old man with type 2 diabetes and a history of myocardial infarction is on metformin. His HbA1c is 58 mmol/mol. What additional medication should be considered according to the NICE guidelines?",
+    "options": [
+      "Sulfonylurea",
+      "GLP-1 receptor agonist",
+      "SGLT-2 inhibitor",
+      "DPP-4 inhibitor",
+      "Insulin"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is to add an SGLT-2 inhibitor, such as empagliflozin or dapagliflozin. NICE NG28 (2022 update) recommends adding an SGLT-2 inhibitor in patients with type 2 diabetes who have established cardiovascular disease due to its cardiovascular benefits and ability to lower HbA1c. Sulfonylureas and DPP-4 inhibitors are alternatives but lack the same cardiovascular advantage. GLP-1 agonists are also useful, particularly for weight loss, but the primary emphasis here is on cardiovascular protection. Insulin is considered when oral medications do not achieve glycaemic targets.",
+    "mnemonic": "SGLT-2 for heart too",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_3",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 70-year-old man with a history of hypertension presents with palpitations. An ECG confirms atrial fibrillation. His CHA₂DS₂-VASc score is 3. What is the most appropriate management to reduce his risk of stroke?",
+    "options": [
+      "Aspirin",
+      "Warfarin",
+      "No anticoagulation needed",
+      "Beta-blocker",
+      "Dabigatran"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is Dabigatran. NICE NG196 (2021) recommends anticoagulation for patients with atrial fibrillation and a CHA₂DS₂-VASc score of 2 or more in men, or 3 or more in women. DOACs like Dabigatran are preferred over warfarin due to their better safety profile and ease of use. Aspirin is no longer recommended for stroke prevention in atrial fibrillation. A beta-blocker is appropriate for rate control but does not reduce stroke risk. Warfarin is an alternative if DOACs are contraindicated.",
+    "mnemonic": "DOAC for stroke block",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_4",
+    "topic": "Community-Acquired Pneumonia Treatment",
+    "category": "all",
+    "question": "A 45-year-old man presents with a fever, cough, and difficulty breathing. Chest X-ray confirms a right lower lobe pneumonia. His CURB-65 score is 1. What is the appropriate antibiotic treatment according to NICE guidelines?",
+    "options": [
+      "Amoxicillin",
+      "Doxycycline",
+      "Clarithromycin",
+      "Co-amoxiclav",
+      "Levofloxacin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Amoxicillin. According to NICE NG250 (2025), for low-severity community-acquired pneumonia (CURB-65 score of 0 or 1), amoxicillin 500 mg TDS for 5 days is recommended as the first-line treatment. If the patient has a penicillin allergy, doxycycline or clarithromycin can be used. Co-amoxiclav and levofloxacin are reserved for more severe cases or specific indications. Ensuring the correct choice of antibiotic helps reduce resistance and optimize patient outcomes.",
+    "mnemonic": "Amoxicillin for pneumonia chillin'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_5",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 38-year-old woman presents with fatigue, weight gain, and dry skin. Her blood tests reveal a TSH of 10 mU/L and a low free T4. What is the recommended treatment according to NICE guidelines?",
+    "options": [
+      "Carbimazole",
+      "Propylthiouracil",
+      "Levothyroxine",
+      "Liothyronine",
+      "Radioiodine"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Levothyroxine. NICE NG145 (2019) recommends levothyroxine as the treatment for hypothyroidism to normalize the TSH level, typically starting with a dose of 25–50 mcg daily, titrated to maintain TSH within the reference range (0.5–2.5 mU/L). Carbimazole and propylthiouracil are used for hyperthyroidism, not hypothyroidism. Liothyronine is not routinely recommended due to a lack of evidence for its benefit over levothyroxine. Radioiodine is used for hyperthyroid states.",
+    "mnemonic": "Low T4, levothyroxine more",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_6",
+    "topic": "Heart Failure Management",
+    "category": "all",
+    "question": "A 65-year-old man with a history of heart failure with reduced ejection fraction (HFrEF) presents with worsening shortness of breath. He is currently on an ACE inhibitor and beta-blocker. What additional medication should be considered according to NICE guidelines?",
+    "options": [
+      "Aldosterone antagonist",
+      "Calcium channel blocker",
+      "Digoxin",
+      "Loop diuretic",
+      "SGLT-2 inhibitor"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is SGLT-2 inhibitor. NICE NG106 (2023 update) recommends the addition of an SGLT-2 inhibitor, such as dapagliflozin, for patients with HFrEF as part of the quadruple therapy, along with an ACE inhibitor, beta-blocker, and aldosterone antagonist. This combination has been shown to improve survival and reduce hospitalizations. Calcium channel blockers are not typically used in HFrEF as they do not improve outcomes. Digoxin is used for symptom control in specific circumstances. Loop diuretics are used for fluid overload but do not modify disease progression.",
+    "mnemonic": "Quad therapy, SGLT-2 for heart steady",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_7",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 24-year-old woman with newly diagnosed focal epilepsy is seeking treatment. She is planning to start a family soon. Which antiepileptic drug is recommended as first-line treatment according to NICE guidelines?",
+    "options": [
+      "Sodium valproate",
+      "Carbamazepine",
+      "Lamotrigine",
+      "Levetiracetam",
+      "Phenytoin"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Lamotrigine. NICE NG217 (2022) recommends lamotrigine as the first-line treatment for focal epilepsy, especially in women of childbearing age due to its more favorable safety profile regarding teratogenicity compared to other antiepileptic drugs. Sodium valproate is avoided in women of childbearing potential due to its high risk of causing congenital malformations. Carbamazepine is an alternative but not preferred in this population. Levetiracetam is another option with a safer profile, but lamotrigine remains the first choice. Phenytoin is not typically used first-line due to its side effect profile.",
+    "mnemonic": "Lamotrigine for ladies and focus",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_8",
+    "topic": "Venous Thromboembolism Management",
+    "category": "all",
+    "question": "A 60-year-old woman presents with a swollen, painful left leg. Doppler ultrasound confirms a deep vein thrombosis (DVT). She has no significant comorbidities. What is the first-line treatment according to NICE guidelines?",
+    "options": [
+      "Warfarin",
+      "Heparin",
+      "Rivaroxaban",
+      "Aspirin",
+      "Compression stockings"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Rivaroxaban. NICE NG158 (2020) recommends a direct oral anticoagulant (DOAC) such as rivaroxaban or apixaban as the first-line treatment for a confirmed DVT in patients without contraindications. This recommendation is based on their efficacy and ease of use compared to warfarin, which requires frequent INR monitoring. Heparin is typically used in hospital settings or in cases with contraindications to DOACs. Aspirin is not used for DVT treatment. Compression stockings are advised to prevent post-thrombotic syndrome but are not a treatment for the DVT itself.",
+    "mnemonic": "Riva for the river of clots",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/deep-vein-thrombosis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373281556_9",
+    "topic": "Acute Coronary Syndrome Management",
+    "category": "all",
+    "question": "A 58-year-old man presents with chest pain and is diagnosed with an ST-elevation myocardial infarction (STEMI). He is 90 minutes away from a PCI-capable hospital. What is the recommended immediate treatment according to NICE guidelines?",
+    "options": [
+      "Thrombolysis",
+      "Primary PCI",
+      "Coronary artery bypass grafting",
+      "Beta-blocker",
+      "Aspirin alone"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Primary PCI. NICE NG185 (2020) recommends primary percutaneous coronary intervention (PCI) within 120 minutes of first medical contact for patients presenting with STEMI, as it is the most effective treatment in reducing mortality and preserving cardiac function. If PCI cannot be achieved within this time frame, thrombolysis is considered. Coronary artery bypass grafting is not an acute treatment for STEMI. Beta-blockers and aspirin are part of the overall management but are not definitive treatments for the occlusion causing the STEMI.",
+    "mnemonic": "PCI for the heart's cry",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndromes"
+    },
+    "difficulty": "intermediate"
   }
 ]
