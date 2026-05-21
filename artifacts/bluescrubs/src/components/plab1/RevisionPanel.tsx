@@ -50,6 +50,7 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                   href={primaryRef.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={e => e.stopPropagation()}
                   className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
                 >
                   {primaryRef.title}
@@ -73,6 +74,7 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                     href={visualSummaryUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={e => e.stopPropagation()}
                     className="text-xs text-blue-600 hover:text-blue-800 hover:underline mt-1"
                   >
                     📄 Visual Summary PDF

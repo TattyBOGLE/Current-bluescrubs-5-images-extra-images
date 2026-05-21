@@ -196,6 +196,7 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
                 href={ref.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={e => e.stopPropagation()}
                 className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
               >
                 {ref.title}
