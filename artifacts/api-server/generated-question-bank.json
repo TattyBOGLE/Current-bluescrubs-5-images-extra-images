@@ -13476,7 +13476,8 @@
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg153",
       "CKS": "https://cks.nice.org.uk/topics/psoriasis/"
-    }
+    },
+    "imageUrl": "/derm-images/psoriasis-plaque.png"
   },
   {
     "id": "derm-plab-002",
@@ -13512,7 +13513,8 @@
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng190",
       "CKS": "https://cks.nice.org.uk/topics/eczema-atopic/"
-    }
+    },
+    "imageUrl": "/derm-images/atopic-eczema.png"
   },
   {
     "id": "derm-plab-003",
@@ -13547,7 +13549,8 @@
     "distribution_pattern": "Scalp, eyebrows, nasolabial folds, retroauricular areas, central chest",
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/seborrhoeic-dermatitis/"
-    }
+    },
+    "imageUrl": "/derm-images/seborrhoeic-dermatitis.png"
   },
   {
     "id": "derm-plab-004",
@@ -13582,7 +13585,8 @@
     "distribution_pattern": "Trunk, limbs \u2014 any site except scalp/groin/feet",
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/fungal-skin-infection-body-and-groin/"
-    }
+    },
+    "imageUrl": "/derm-images/tinea-corporis.png"
   },
   {
     "id": "derm-plab-005",
@@ -13617,7 +13621,8 @@
     "distribution_pattern": "Trunk \u2014 oval plaques along skin tension lines; spares face and limbs",
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/pityriasis-rosea/"
-    }
+    },
+    "imageUrl": "/derm-images/pityriasis-rosea.png"
   },
   {
     "id": "derm-plab-006",
@@ -13652,7 +13657,8 @@
     "distribution_pattern": "Finger web spaces, wrists, waist, axillae, genitalia; spares face in adults",
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/scabies/"
-    }
+    },
+    "imageUrl": "/derm-images/scabies-burrows.png"
   },
   {
     "id": "derm-plab-007",
@@ -13687,7 +13693,8 @@
     "distribution_pattern": "Unilateral dermatomal \u2014 thoracic (most common), facial (V1), lumbar",
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/shingles/"
-    }
+    },
+    "imageUrl": "/derm-images/herpes-zoster.png"
   },
   {
     "id": "derm-plab-008",
@@ -13722,7 +13729,8 @@
     "distribution_pattern": "Perioral and perinasal regions; may spread to any exposed site",
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/impetigo/"
-    }
+    },
+    "imageUrl": "/derm-images/impetigo.png"
   },
   {
     "id": "derm-plab-009",
@@ -13757,7 +13765,8 @@
     "distribution_pattern": "Widespread \u2014 trunk and limbs; each lesion migratory and transient",
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/urticaria/"
-    }
+    },
+    "imageUrl": "/derm-images/urticaria.png"
   },
   {
     "id": "derm-plab-010",
@@ -13793,6 +13802,7 @@
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng12",
       "CKS": "https://cks.nice.org.uk/topics/basal-cell-carcinoma/"
-    }
+    },
+    "imageUrl": "/derm-images/basal-cell-carcinoma.png"
   }
 ]

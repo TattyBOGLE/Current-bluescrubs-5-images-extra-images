@@ -208,6 +208,21 @@ export function QuizQuestion({
           </div>
         </div>
 
+        {/* Clinical Image (dermatology spot diagnosis) */}
+        {currentQuestion.imageUrl && (
+          <div className="mb-5 rounded-lg overflow-hidden border border-slate-200 bg-slate-50">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 border-b border-slate-200">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Clinical Image</span>
+            </div>
+            <img
+              src={currentQuestion.imageUrl}
+              alt={`Clinical image: ${currentQuestion.title || currentQuestion.topic || 'dermatology'}`}
+              className="w-full max-h-72 object-cover"
+              loading="lazy"
+            />
+          </div>
+        )}
+
         {/* Clinical Scenario */}
         {currentQuestion.scenario && (
           <div className="mb-6 bg-blue-50 rounded-lg p-4 border border-blue-200">
