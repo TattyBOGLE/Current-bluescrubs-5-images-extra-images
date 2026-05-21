@@ -49,6 +49,7 @@ const HowTo = lazy(() => import("@/pages/how-to"));
 const Security = lazy(() => import("@/pages/security"));
 const Settings = lazy(() => import("@/pages/settings"));
 const Team = lazy(() => import("@/pages/team"));
+const SpotDiagnosis = lazy(() => import("@/pages/spot-diagnosis"));
 
 function PageLoader() {
   return (
@@ -511,6 +512,15 @@ function Router() {
             <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Team />
+            </div>
+          </div>
+        </Route>
+
+        <Route path="/spot-diagnosis">
+          <div className="flex flex-col min-h-screen">
+            <Navigation user={navUser} />
+            <div className="flex-1 pb-16 md:pb-0">
+              <SpotDiagnosis />
             </div>
           </div>
         </Route>

@@ -27231,5 +27231,215 @@
       "CKS": "https://cks.nice.org.uk/topics"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_0",
+    "topic": "Psoriasis Management",
+    "category": "dermatology",
+    "question": "A 35-year-old man presents with well-demarcated, scaly plaques on his elbows and knees. He has a family history of psoriasis. On examination, you notice the lesions are erythematous with silver scales. What is the first-line treatment for this condition according to NICE guidelines?",
+    "options": [
+      "Topical corticosteroids",
+      "Oral methotrexate",
+      "Phototherapy",
+      "Topical vitamin D analogues",
+      "Oral acitretin"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is topical vitamin D analogues. According to NICE guidelines, the first-line treatment for psoriasis involves topical therapies, with vitamin D analogues recommended for mild to moderate cases. This patient's presentation is classic for psoriasis, characterized by erythematous plaques with silvery scales, often found on extensor surfaces. Topical corticosteroids can also be used, but vitamin D analogues are preferred for longer-term management due to a better safety profile.\n\nOral methotrexate and acitretin are systemic treatments reserved for more severe cases or when topical treatments fail, making them inappropriate first-line choices. Phototherapy is another option for more extensive psoriasis but is not first-line. This scenario emphasizes the importance of recognizing typical psoriasis presentations and understanding the hierarchical approach to treatment based on NICE guidelines.\n\nMnemonic: 'Psoriasis = Plaques, Prefer Vitamin D'.",
+    "mnemonic": "Psoriasis = Plaques, Prefer Vitamin D",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_1",
+    "topic": "Eczema Management",
+    "category": "dermatology",
+    "question": "A 6-year-old girl presents with itchy, dry skin in the flexural areas of her elbows and knees. Her mother reports a similar history in herself. What is the most appropriate first-line treatment for this condition?",
+    "options": [
+      "Oral antibiotics",
+      "Topical corticosteroids",
+      "Emollients",
+      "Antihistamines",
+      "Topical calcineurin inhibitors"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is emollients. For atopic eczema, emollients are the cornerstone of maintenance therapy and first-line treatment to restore skin barrier function and alleviate dryness. NICE guidelines recommend their regular use to manage mild eczema. This child's symptoms are typical of atopic eczema, characterized by pruritic, dry skin in flexural areas and a family history of atopic conditions.\n\nTopical corticosteroids are used for flare-ups but are not the initial treatment. Oral antibiotics are only indicated if there is evidence of secondary bacterial infection. Antihistamines can help with sleep if itching is severe but are not first-line. Topical calcineurin inhibitors are used as a second-line therapy when corticosteroids are contraindicated or ineffective. Remember: consistent emollient use is crucial for managing eczema.\n\nMnemonic: 'Eczema? Emollients Every day'.",
+    "mnemonic": "Eczema? Emollients Every day",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_2",
+    "topic": "Acne Vulgaris Treatment",
+    "category": "dermatology",
+    "question": "A 17-year-old female presents with comedones and inflammatory papules on her face and back. She has tried over-the-counter products without improvement. What is the first-line prescription treatment recommended by NICE for moderate acne?",
+    "options": [
+      "Oral isotretinoin",
+      "Topical benzoyl peroxide",
+      "Topical retinoids",
+      "Oral tetracycline antibiotics",
+      "Topical azelaic acid"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is topical benzoyl peroxide. NICE guidelines recommend topical benzoyl peroxide as a first-line treatment for moderate acne, which helps reduce both comedones and inflammatory lesions. This patient's persistent acne, despite over-the-counter treatments, suggests the need for prescription strength options. Topical benzoyl peroxide is effective against both inflammation and bacterial colonization.\n\nOral isotretinoin is reserved for severe acne and refractory cases due to its potential side effects. Topical retinoids can be combined with benzoyl peroxide for enhanced efficacy but are not first-line alone. Oral tetracycline antibiotics are an option for more widespread or nodular acne. Topical azelaic acid is more commonly used when benzoyl peroxide is not tolerated. The key is the dual action of benzoyl peroxide on acne lesions.\n\nMnemonic: 'Banish Acne with Benzoyl'.",
+    "mnemonic": "Banish Acne with Benzoyl",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_3",
+    "topic": "Contact Dermatitis",
+    "category": "dermatology",
+    "question": "A 28-year-old woman develops an itchy rash on her hands after switching to a new brand of dishwashing liquid. The rash is erythematous with vesicles and scaling. What is the primary management step for her condition?",
+    "options": [
+      "Oral antihistamines",
+      "Avoidance of irritant",
+      "Topical calcineurin inhibitors",
+      "Systemic corticosteroids",
+      "Topical antibiotics"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is avoidance of irritant. In contact dermatitis, identification and avoidance of the offending agent are crucial. This patient's rash, which developed after exposure to a new dishwashing liquid, is typical for irritant contact dermatitis. Removing the irritant often resolves the condition without further intervention.\n\nOral antihistamines may provide symptomatic relief from itching but don't address the underlying cause. Topical calcineurin inhibitors are more suitable for chronic cases or when corticosteroids are contraindicated. Systemic corticosteroids are unnecessary for localized irritant dermatitis and can have significant side effects. Topical antibiotics are not indicated unless there's a secondary bacterial infection. The primary goal is to eliminate exposure to the irritant.\n\nMnemonic: 'Contact Dermatitis? Cut the Cause'.",
+    "mnemonic": "Contact Dermatitis? Cut the Cause",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_4",
+    "topic": "Melanoma Identification",
+    "category": "dermatology",
+    "question": "A 45-year-old man presents with a new pigmented lesion on his back, which he noticed a few months ago. It measures 8 mm, has an irregular border, and varies in color from brown to black. What is the most appropriate next step in management?",
+    "options": [
+      "Reassurance and review in 6 months",
+      "Excision biopsy",
+      "Topical imiquimod",
+      "Cryotherapy",
+      "Shave biopsy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is excision biopsy. A new pigmented lesion with irregular borders and color variation raises suspicion for melanoma, especially given its size over 6 mm. According to NICE guidelines, the recommended approach for suspected melanoma is an excision biopsy with a 2 mm margin to allow for histological examination and accurate diagnosis.\n\nReassurance and review are inappropriate given the suspicious characteristics of the lesion. Topical treatments like imiquimod are not used for suspected melanoma. Cryotherapy is unsuitable and may obscure histological evaluation. Shave biopsy is contraindicated as it may not provide full thickness skin for accurate pathologic assessment. Early recognition and excision are critical for melanoma.\n\nMnemonic: 'Melanoma? Must Excise'.",
+    "mnemonic": "Melanoma? Must Excise",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_5",
+    "topic": "Tinea Corporis Treatment",
+    "category": "dermatology",
+    "question": "A 21-year-old male presents with an itchy, annular lesion on his forearm, with a clear center and raised erythematous border. KOH examination of skin scrapings reveals hyphae. What is the most appropriate treatment?",
+    "options": [
+      "Oral terbinafine",
+      "Topical hydrocortisone",
+      "Topical clotrimazole",
+      "Oral griseofulvin",
+      "Topical acyclovir"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is topical clotrimazole. This patient has tinea corporis, commonly referred to as ringworm, confirmed by KOH examination showing hyphae. NICE guidelines recommend topical antifungals, such as clotrimazole, as the first-line treatment for localized dermatophyte infections like tinea corporis.\n\nOral terbinafine and griseofulvin are reserved for extensive or resistant cases. Topical hydrocortisone would not treat the fungal infection and could exacerbate it by suppressing the immune response. Topical acyclovir is for viral infections, such as herpes simplex, and is ineffective against fungal infections. Effective management requires antifungal treatment.\n\nMnemonic: 'Tinea? Try Topical Treatment'.",
+    "mnemonic": "Tinea? Try Topical Treatment",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_6",
+    "topic": "Rosacea Management",
+    "category": "dermatology",
+    "question": "A 50-year-old woman presents with persistent facial erythema and papules on her cheeks and nose. She reports episodes of flushing triggered by sunlight and hot drinks. What is the first-line treatment for her condition?",
+    "options": [
+      "Topical metronidazole",
+      "Oral isotretinoin",
+      "Topical retinoids",
+      "Oral doxycycline",
+      "Topical steroids"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is topical metronidazole. According to NICE guidelines, the first-line treatment for rosacea, characterized by facial erythema and papules, is topical metronidazole. It is effective in reducing inflammatory lesions and erythema associated with rosacea.\n\nOral isotretinoin is used for severe, treatment-resistant cases due to its side effect profile. Topical retinoids are not typically used for rosacea. Oral doxycycline can be considered for moderate to severe cases with significant inflammatory lesions but is not first-line. Topical steroids are contraindicated as they can worsen rosacea. Management focuses on reducing inflammation and avoiding triggers.\n\nMnemonic: 'Rosacea? Reach for Metronidazole'.",
+    "mnemonic": "Rosacea? Reach for Metronidazole",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_7",
+    "topic": "Urticaria Treatment",
+    "category": "dermatology",
+    "question": "A 30-year-old man develops widespread, itchy wheals on his skin after taking ibuprofen for a headache. What is the most appropriate immediate treatment?",
+    "options": [
+      "Oral corticosteroids",
+      "Topical antihistamines",
+      "Oral antihistamines",
+      "Epinephrine injection",
+      "Topical corticosteroids"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is oral antihistamines. Acute urticaria, characterized by itchy wheals, is typically treated with oral antihistamines, which are effective in controlling symptoms by blocking histamine receptors. This patient's urticaria appears to be drug-induced following ibuprofen use.\n\nOral corticosteroids are reserved for severe, persistent cases and are not immediate first-line treatment. Topical antihistamines are less effective and not suitable for widespread urticaria. Epinephrine is indicated for anaphylaxis, not isolated urticaria. Topical corticosteroids are ineffective for urticaria as it is a systemic allergic reaction rather than localized inflammation. Prompt antihistamine administration is key for symptom relief.\n\nMnemonic: 'Urticaria? Use Oral Antihistamines'.",
+    "mnemonic": "Urticaria? Use Oral Antihistamines",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_8",
+    "topic": "Basal Cell Carcinoma Management",
+    "category": "dermatology",
+    "question": "A 65-year-old man presents with a slowly growing, pearly nodule on his nose. It has a central depression and telangiectasia. What is the most appropriate management for this lesion?",
+    "options": [
+      "Cryotherapy",
+      "Mohs micrographic surgery",
+      "Topical 5-fluorouracil",
+      "Electrodessication and curettage",
+      "Radiotherapy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Mohs micrographic surgery. For basal cell carcinoma (BCC), particularly on the face, Mohs surgery offers the highest cure rate and tissue conservation, which is crucial for cosmetically sensitive areas like the nose. This patient's lesion is characteristic of BCC with its pearly appearance and telangiectasia.\n\nCryotherapy is less effective for BCC, especially in cosmetically sensitive areas. Topical 5-fluorouracil is generally used for superficial BCCs but not nodular types. Electrodessication and curettage are options for small, non-facial BCCs. Radiotherapy is an alternative for non-surgical candidates. Mohs surgery provides precise excision with minimal healthy tissue loss.\n\nMnemonic: 'Basal Cell? Best with Mohs'.",
+    "mnemonic": "Basal Cell? Best with Mohs",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_dermatology_1779403564290_9",
+    "topic": "Impetigo Treatment",
+    "category": "dermatology",
+    "question": "A 4-year-old boy presents with crusted, golden-yellow lesions around his mouth and nose. There is no fever or systemic involvement. What is the most appropriate treatment?",
+    "options": [
+      "Oral flucloxacillin",
+      "Topical mupirocin",
+      "Oral amoxicillin",
+      "Topical acyclovir",
+      "Oral erythromycin"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is topical mupirocin. For localized impetigo, characterized by honey-colored crusts, topical antibiotics such as mupirocin are recommended by NICE guidelines. This approach minimizes systemic antibiotic use and effectively treats localized infections.\n\nOral flucloxacillin is used for more extensive cases or when topical treatment fails. Oral amoxicillin is not appropriate for impetigo. Topical acyclovir is for viral infections, not bacterial like impetigo. Oral erythromycin can be used if flucloxacillin is contraindicated but is not first-line for localized cases. Topical treatment is preferred for limited disease to reduce antibiotic resistance.\n\nMnemonic: 'Impetigo? Initiate with Mupirocin'.",
+    "mnemonic": "Impetigo? Initiate with Mupirocin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
   }
 ]
