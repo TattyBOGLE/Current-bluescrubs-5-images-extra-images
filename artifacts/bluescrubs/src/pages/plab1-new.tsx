@@ -903,10 +903,7 @@ function ReferenceMaterialPanel({ question }: { question: any }) {
   const bnfCardTitle = qTopic ? `BNF — ${qTopic}` : 'BNF';
 
   const officialRefs = niceRefs.length === 0 && question.references
-    ? (question.references as any[]).filter((r: any) => {
-        const t = typeof r === 'string' ? r : r.title || r.text || '';
-        return !t.toLowerCase().includes('cks:') && !t.toLowerCase().includes('clinical guideline: cks');
-      })
+    ? (question.references as any[])
     : [];
 
   if (niceRefs.length === 0 && officialRefs.length === 0) return null;
@@ -977,6 +974,24 @@ function ReferenceMaterialPanel({ question }: { question: any }) {
                 <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
               </a>
               <p className="text-xs text-slate-500 mt-0.5 italic">Drug dosing, interactions and prescribing information</p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg border border-slate-200 p-3 flex items-start justify-between gap-3">
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-wrap items-center gap-1.5 mb-1">
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-medium border bg-sky-50 text-sky-700 border-sky-200">
+                  CKS
+                </span>
+              </div>
+              <a
+                href={qTopic ? `https://cks.nice.org.uk/search/?q=${encodeURIComponent(qTopic)}` : 'https://cks.nice.org.uk/'}
+                target="_blank" rel="noopener noreferrer"
+                className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2 inline-flex items-center gap-1">
+                {qTopic ? `CKS — ${qTopic}` : 'NICE Clinical Knowledge Summaries'}
+                <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+              </a>
+              <p className="text-xs text-slate-500 mt-0.5 italic">Primary care clinical guidance and management summaries</p>
             </div>
           </div>
 
