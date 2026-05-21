@@ -1297,7 +1297,7 @@ Return STRICT JSON in exactly this shape (no extra keys, no commentary):
         ],
         temperature: 0.3,
         response_format: { type: "json_object" },
-        max_tokens: 1400,
+        max_tokens: 2500,
       });
 
       const raw = completion.choices?.[0]?.message?.content || '{}';
