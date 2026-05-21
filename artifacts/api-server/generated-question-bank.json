@@ -13804,5 +13804,425 @@
       "CKS": "https://cks.nice.org.uk/topics/basal-cell-carcinoma/"
     },
     "imageUrl": "/derm-images/basal-cell-carcinoma.png"
+  },
+  {
+    "id": "spotdx-001",
+    "title": "Inferior STEMI",
+    "specialty": "Cardiology",
+    "subspecialty": "ECG Interpretation",
+    "category": "cardiovascular",
+    "difficulty": "intermediate",
+    "topic": "STEMI ECG",
+    "clinical_vignette": "A 58-year-old male smoker presents to A&E with crushing central chest pain radiating to the jaw, diaphoresis, and nausea for 90 minutes. BP 100/70, HR 92. An ECG is performed immediately.",
+    "question": "The ECG shows ST elevation in leads II, III, and aVF with reciprocal ST depression in I and aVL. What is the most likely diagnosis?",
+    "options": [
+      "Anterior STEMI",
+      "Inferior STEMI",
+      "Pericarditis",
+      "Right bundle branch block",
+      "Hyperkalaemia"
+    ],
+    "answer": 1,
+    "correct_answer": "Inferior STEMI",
+    "explanation": "ST elevation in the inferior leads (II, III, aVF) with reciprocal depression in the lateral leads (I, aVL) is classic for inferior STEMI, caused by occlusion of the right coronary artery (RCA) in most cases. Anterior STEMI shows ST elevation in V1\u2013V4. Pericarditis causes saddle-shaped ST elevation in all leads without reciprocal changes. RBBB causes RSR' pattern in V1. Hyperkalaemia causes peaked T waves and wide QRS.\n\nPLAB Pearl: Inferior STEMI = ST elevation in II, III, aVF. Always check right-sided leads (V3R/V4R) to exclude RV infarction, especially if hypotensive \u2014 nitrates are contraindicated in RV infarct.",
+    "key_learning_points": [
+      "Inferior STEMI: ST elevation in II, III, aVF with reciprocal depression in I and aVL",
+      "Caused by RCA occlusion in ~80% of cases",
+      "Check right-sided leads; nitrates contraindicated if RV involvement"
+    ],
+    "common_exam_traps": [
+      "Confusing inferior with anterior STEMI \u2014 always check which leads are elevated",
+      "Missing RV infarct \u2014 causes haemodynamic collapse with nitrates"
+    ],
+    "tags": [
+      "STEMI",
+      "ECG",
+      "cardiology",
+      "ACS"
+    ],
+    "image_findings": [
+      "ST elevation in II, III, aVF",
+      "Reciprocal ST depression in I and aVL",
+      "Pathological Q waves may be developing in inferior leads"
+    ],
+    "imageUrl": "/spotdx-images/inferior-stemi-ecg.png"
+  },
+  {
+    "id": "spotdx-002",
+    "title": "Tension Pneumothorax",
+    "specialty": "Respiratory",
+    "subspecialty": "Radiology",
+    "category": "respiratory",
+    "difficulty": "foundation",
+    "topic": "Pneumothorax",
+    "clinical_vignette": "A 22-year-old tall, thin male presents with sudden onset right-sided pleuritic chest pain and breathlessness after lifting heavy weights. He is tachycardic (HR 108) with reduced breath sounds on the right. A chest X-ray is taken.",
+    "question": "The chest X-ray shows a visible pleural line on the right with absence of lung markings beyond it, and a partially collapsed right lung. What is the most likely diagnosis?",
+    "options": [
+      "Right-sided pleural effusion",
+      "Right-sided pneumothorax",
+      "Consolidation",
+      "Haemothorax",
+      "Pulmonary embolism"
+    ],
+    "answer": 1,
+    "correct_answer": "Right-sided pneumothorax",
+    "explanation": "A pneumothorax on CXR shows a visible pleural white line with absent vascular markings peripheral to it and a partially or fully collapsed lung. Tall thin young men are at risk of primary spontaneous pneumothorax due to apical blebs. Pleural effusion causes a homogeneous white-out with meniscus sign and tracheal deviation away. Consolidation causes opacification with air bronchograms. PE has no specific CXR finding.\n\nPLAB Pearl: BTS guidelines \u2014 if rim >2cm on CXR and breathless, aspirate or insert chest drain. If small and asymptomatic, discharge with follow-up. Never miss tension pneumothorax (trachea deviates away, haemodynamic compromise) \u2014 treat immediately without waiting for CXR.",
+    "key_learning_points": [
+      "Pneumothorax: visible pleural line with absent peripheral lung markings",
+      "Tall thin young males: primary spontaneous pneumothorax from apical blebs",
+      "Tension pneumothorax is a clinical emergency \u2014 treat before imaging"
+    ],
+    "common_exam_traps": [
+      "Confusing consolidation (opaque) with pneumothorax (lucent)",
+      "Missing tension pneumothorax if tracheal deviation subtle"
+    ],
+    "tags": [
+      "pneumothorax",
+      "chest X-ray",
+      "respiratory",
+      "emergency"
+    ],
+    "image_findings": [
+      "Visible pleural line on right",
+      "Absent lung markings peripheral to the pleural line",
+      "Partial collapse of right lung"
+    ],
+    "imageUrl": "/spotdx-images/pneumothorax-cxr.png"
+  },
+  {
+    "id": "spotdx-003",
+    "title": "Bell's Palsy",
+    "specialty": "Neurology",
+    "subspecialty": "Cranial Nerve",
+    "category": "neurology",
+    "difficulty": "foundation",
+    "topic": "Bell's Palsy",
+    "clinical_vignette": "A 35-year-old woman wakes up with the right side of her face drooping. She cannot close her right eye or raise her right eyebrow. Her smile is asymmetric. There is no limb weakness, no ear pain, and no rash. Examination confirms complete right-sided facial weakness affecting both upper and lower face.",
+    "question": "Examination shows complete right-sided facial weakness affecting the forehead and the lower face equally. What is the most likely diagnosis?",
+    "options": [
+      "Right MCA stroke",
+      "Bell's palsy",
+      "Ramsay Hunt syndrome",
+      "Acoustic neuroma",
+      "Multiple sclerosis"
+    ],
+    "answer": 1,
+    "correct_answer": "Bell's palsy",
+    "explanation": "Bell's palsy is a lower motor neurone (LMN) facial nerve (CN VII) palsy causing complete unilateral facial weakness, including the forehead. In an upper motor neurone (UMN) lesion (e.g. MCA stroke), the forehead is spared because it has bilateral cortical representation. The absence of ear pain, vesicles, or hearing loss distinguishes Bell's from Ramsay Hunt syndrome (herpes zoster oticus). Acoustic neuroma causes sensorineural hearing loss and facial palsy.\n\nPLAB Pearl: Forehead involved = LMN lesion (Bell's palsy). Forehead spared = UMN lesion (stroke). Treat Bell's palsy with prednisolone 50mg for 10 days within 72 hours of onset. Eye care is essential to prevent corneal damage.",
+    "key_learning_points": [
+      "LMN facial palsy: forehead AND lower face affected (Bell's palsy)",
+      "UMN facial palsy: forehead spared (stroke)",
+      "Treatment: prednisolone 50mg for 10 days within 72h; protect the eye"
+    ],
+    "common_exam_traps": [
+      "Confusing LMN and UMN VII palsy \u2014 forehead sparing is the key differentiator",
+      "Missing Ramsay Hunt \u2014 always check ear for vesicles and ask about hearing loss"
+    ],
+    "tags": [
+      "Bell's palsy",
+      "facial nerve",
+      "neurology",
+      "LMN"
+    ],
+    "image_findings": [
+      "Complete right-sided facial drooping",
+      "Inability to close the right eye (lagophthalmos)",
+      "Loss of right nasolabial fold, droop of right mouth corner"
+    ],
+    "imageUrl": "/spotdx-images/bells-palsy.png"
+  },
+  {
+    "id": "spotdx-004",
+    "title": "Acute Angle Closure Glaucoma",
+    "specialty": "Ophthalmology",
+    "subspecialty": "Emergency Ophthalmology",
+    "category": "emergency-medicine",
+    "difficulty": "intermediate",
+    "topic": "Acute Angle Closure Glaucoma",
+    "clinical_vignette": "A 65-year-old woman presents with sudden severe right eye pain, headache, nausea, and blurred vision with halos around lights. The eye is red with a mid-dilated fixed pupil and the cornea appears hazy. She was recently given a nasal decongestant.",
+    "question": "A 65-year-old woman presents with sudden severe eye pain, red eye, fixed mid-dilated pupil, hazy cornea, and coloured halos around lights. What is the most likely diagnosis?",
+    "options": [
+      "Anterior uveitis",
+      "Acute conjunctivitis",
+      "Acute angle closure glaucoma",
+      "Corneal abrasion",
+      "Optic neuritis"
+    ],
+    "answer": 2,
+    "correct_answer": "Acute angle closure glaucoma",
+    "explanation": "Acute angle closure glaucoma is caused by sudden obstruction of aqueous outflow, causing rapid intraocular pressure rise (>21 mmHg, often >40 mmHg). Classic features: severe eye pain, red eye, hazy/steamy cornea, fixed mid-dilated pupil, decreased visual acuity, and coloured halos around lights. Anterior uveitis causes a small irregular pupil (posterior synechiae), not fixed mid-dilated. Conjunctivitis doesn't affect vision or pupil size.\n\nPLAB Pearl: Fixed mid-dilated pupil + hazy cornea + severe pain = acute angle closure glaucoma. It is an emergency \u2014 urgent ophthalmology referral. First-line: IV acetazolamide, topical timolol, pilocarpine drops. Avoid mydriatics.",
+    "key_learning_points": [
+      "Fixed mid-dilated pupil + hazy cornea + halos = acute angle closure glaucoma",
+      "Intraocular pressure acutely elevated (often >40mmHg)",
+      "Emergency: IV acetazolamide + topical timolol + pilocarpine; urgent ophthalmology referral"
+    ],
+    "common_exam_traps": [
+      "Confusing with uveitis (small irregular pupil) vs AACG (fixed mid-dilated)",
+      "Giving mydriatics (e.g. atropine) \u2014 worsens acute angle closure"
+    ],
+    "tags": [
+      "glaucoma",
+      "ophthalmology",
+      "emergency",
+      "eye"
+    ],
+    "image_findings": [
+      "Red eye (conjunctival injection)",
+      "Hazy/steamy cornea",
+      "Fixed mid-dilated pupil"
+    ],
+    "imageUrl": "/spotdx-images/acute-angle-closure-glaucoma.png"
+  },
+  {
+    "id": "spotdx-005",
+    "title": "Meningococcal Septicaemia",
+    "specialty": "Infectious Diseases",
+    "subspecialty": "Emergency",
+    "category": "infectious-diseases",
+    "difficulty": "foundation",
+    "topic": "Meningococcal rash",
+    "clinical_vignette": "A 19-year-old university student is brought to A&E by his flatmates. He has a 6-hour history of high fever, severe headache, and vomiting. On examination, he is drowsy and unwell. You notice a widespread rash that is dark red/purple, does not blanch under a glass, and has some areas of confluent bruising.",
+    "question": "A 19-year-old has fever, headache, and a widespread non-blanching petechial/purpuric rash. What is the immediate management?",
+    "options": [
+      "Take blood cultures and await results before treating",
+      "Lumbar puncture to confirm meningitis",
+      "IV benzylpenicillin immediately",
+      "CT head before any treatment",
+      "Reassure and give paracetamol"
+    ],
+    "answer": 2,
+    "correct_answer": "IV benzylpenicillin immediately",
+    "explanation": "A non-blanching petechial or purpuric rash with fever and systemic illness is meningococcal septicaemia until proven otherwise \u2014 this is a life-threatening emergency. IV benzylpenicillin must be given immediately without waiting for cultures or imaging. Do not delay for LP or CT. Every hour of delay worsens outcome. Neisseria meningitidis causes rapid deterioration, DIC, and multi-organ failure.\n\nPLAB Pearl: Non-blanching rash + fever = meningococcal septicaemia = EMERGENCY. Give IV benzylpenicillin (or IV cefotaxime/ceftriaxone) IMMEDIATELY. Do not delay for investigations. Use the 'glass test' \u2014 non-blanching = does not fade under pressure.",
+    "key_learning_points": [
+      "Non-blanching petechial/purpuric rash + fever = meningococcal septicaemia",
+      "Immediate IV benzylpenicillin \u2014 do not delay for investigations",
+      "Glass test: press a glass on rash \u2014 if visible through glass, it is non-blanching"
+    ],
+    "common_exam_traps": [
+      "Ordering LP before antibiotics \u2014 never delay antibiotics for LP",
+      "Confusing blanching viral rash with non-blanching meningococcal rash"
+    ],
+    "tags": [
+      "meningococcal",
+      "septicaemia",
+      "non-blanching",
+      "emergency"
+    ],
+    "image_findings": [
+      "Widespread petechial dots",
+      "Larger purpuric patches",
+      "Non-blanching under glass test"
+    ],
+    "imageUrl": "/spotdx-images/meningococcal-rash.png"
+  },
+  {
+    "id": "spotdx-006",
+    "title": "Rheumatoid Arthritis \u2014 Hands",
+    "specialty": "Rheumatology",
+    "subspecialty": "Musculoskeletal",
+    "category": "rheumatology",
+    "difficulty": "foundation",
+    "topic": "Rheumatoid hands",
+    "clinical_vignette": "A 52-year-old woman presents with a 5-year history of bilateral painful hand swelling, worse in the morning for over an hour. Examination shows swollen MCPJs and PIPJs, ulnar deviation of the fingers at the MCPJs, and swan-neck deformities bilaterally. Her RF and anti-CCP are positive.",
+    "question": "A 52-year-old woman has symmetrical MCPJ and PIPJ swelling with ulnar deviation and swan-neck deformities, positive RF and anti-CCP. What is the most likely diagnosis?",
+    "options": [
+      "Osteoarthritis",
+      "Gout",
+      "Psoriatic arthritis",
+      "Rheumatoid arthritis",
+      "Reactive arthritis"
+    ],
+    "answer": 3,
+    "correct_answer": "Rheumatoid arthritis",
+    "explanation": "Rheumatoid arthritis causes symmetrical inflammatory polyarthritis affecting small joints (MCPJs, PIPJs) with characteristic deformities: ulnar deviation, swan-neck (PIPJ hyperextension, DIPJ flexion), and Boutonni\u00e8re (PIPJ flexion, DIPJ hyperextension). Prolonged morning stiffness (>1 hour) is hallmark of inflammatory arthritis. OA affects DIPJs and is asymmetric with Heberden's nodes. Gout is typically monoarticular affecting the first MTP. Psoriatic arthritis causes DIP involvement and asymmetric oligoarthritis.\n\nPLAB Pearl: MCPJs + PIPJs + ulnar deviation + morning stiffness >1hr + RF/anti-CCP = rheumatoid arthritis. DIPJs + Heberden's nodes + no morning stiffness = osteoarthritis.",
+    "key_learning_points": [
+      "RA: symmetrical MCPJ/PIPJ involvement, ulnar deviation, swan-neck deformity",
+      "Morning stiffness >1 hour is characteristic of inflammatory arthritis",
+      "OA affects DIPJs; RA spares DIPJs"
+    ],
+    "common_exam_traps": [
+      "Confusing RA and OA \u2014 key: joint distribution and morning stiffness duration",
+      "Missing psoriatic arthritis \u2014 always check skin and nails"
+    ],
+    "tags": [
+      "rheumatoid arthritis",
+      "hands",
+      "joint deformity",
+      "rheumatology"
+    ],
+    "image_findings": [
+      "Symmetrical MCPJ and PIPJ swelling",
+      "Ulnar deviation of fingers",
+      "Swan-neck deformities"
+    ],
+    "imageUrl": "/spotdx-images/rheumatoid-hands.png"
+  },
+  {
+    "id": "spotdx-007",
+    "title": "Graves' Disease",
+    "specialty": "Endocrinology",
+    "subspecialty": "Thyroid",
+    "category": "endocrinology",
+    "difficulty": "foundation",
+    "topic": "Graves Disease",
+    "clinical_vignette": "A 34-year-old woman presents with a 4-month history of weight loss despite increased appetite, heat intolerance, palpitations, and irritability. On examination, she has a smooth diffuse goitre, lid lag, lid retraction, and bilateral proptosis (exophthalmos). Her TSH is suppressed and free T4 is elevated.",
+    "question": "A 34-year-old woman has weight loss, palpitations, diffuse goitre, lid lag, and bilateral exophthalmos. TSH is suppressed, free T4 elevated. What is the most likely diagnosis?",
+    "options": [
+      "Toxic multinodular goitre",
+      "Hashimoto's thyroiditis",
+      "Graves' disease",
+      "De Quervain's thyroiditis",
+      "Toxic adenoma"
+    ],
+    "answer": 2,
+    "correct_answer": "Graves' disease",
+    "explanation": "Graves' disease is an autoimmune condition caused by TSH receptor-stimulating antibodies (TRAb), causing hyperthyroidism with a diffuse smooth goitre. The key distinguishing feature is thyroid eye disease (exophthalmos, lid lag, lid retraction, ophthalmoplegia) \u2014 this occurs ONLY in Graves', not other causes of hyperthyroidism. Toxic multinodular goitre and toxic adenoma lack eye signs. Hashimoto's causes hypothyroidism. De Quervain's is painful and self-limiting.\n\nPLAB Pearl: Diffuse goitre + exophthalmos + hyperthyroidism = Graves' disease. First-line treatment in UK: carbimazole (not methimazole). Beta-blockers (propranolol) for symptom relief. Radioiodine or surgery for definitive management.",
+    "key_learning_points": [
+      "Graves': diffuse smooth goitre + exophthalmos + hyperthyroidism (TRAb positive)",
+      "Exophthalmos is specific to Graves' \u2014 not seen in other hyperthyroid states",
+      "First-line: carbimazole. Beta-blockers for symptomatic relief."
+    ],
+    "common_exam_traps": [
+      "Confusing Graves' with toxic MNG \u2014 eye signs distinguish them",
+      "Using methimazole (US) instead of carbimazole (UK) in answers"
+    ],
+    "tags": [
+      "Graves disease",
+      "hyperthyroidism",
+      "exophthalmos",
+      "endocrinology"
+    ],
+    "image_findings": [
+      "Bilateral proptosis/exophthalmos",
+      "Lid retraction and lid lag",
+      "Diffuse smooth neck swelling (goitre)"
+    ],
+    "imageUrl": "/spotdx-images/graves-disease.png"
+  },
+  {
+    "id": "spotdx-008",
+    "title": "Kawasaki Disease",
+    "specialty": "Paediatrics",
+    "subspecialty": "Vasculitis",
+    "category": "paediatrics",
+    "difficulty": "intermediate",
+    "topic": "Kawasaki Disease",
+    "clinical_vignette": "A 3-year-old boy presents with 6 days of high fever unresponsive to paracetamol. His mother notes he has had red eyes, a swollen red tongue, a rash on his trunk, and swollen hands and feet. Examination confirms bilateral non-purulent conjunctivitis, strawberry tongue, a polymorphous truncal rash, and cervical lymphadenopathy.",
+    "question": "A 3-year-old has 6 days of fever with strawberry tongue, bilateral non-purulent conjunctivitis, polymorphous rash, hand/foot oedema, and cervical lymphadenopathy. What is the most likely diagnosis?",
+    "options": [
+      "Scarlet fever",
+      "Measles",
+      "Kawasaki disease",
+      "Toxic shock syndrome",
+      "Juvenile idiopathic arthritis"
+    ],
+    "answer": 2,
+    "correct_answer": "Kawasaki disease",
+    "explanation": "Kawasaki disease is diagnosed by fever \u22655 days plus \u22654 of 5 criteria: bilateral non-purulent conjunctivitis, changes of lips/oral cavity (strawberry tongue, cracked lips), polymorphous truncal rash, changes of extremities (erythema/oedema of hands/feet, later desquamation), and cervical lymphadenopathy. This case has all 5 features. The main risk is coronary artery aneurysms (20-25% untreated). Scarlet fever has sandpaper rash and responds to amoxicillin. Measles has Koplik's spots.\n\nPLAB Pearl: Fever >5 days + strawberry tongue + non-purulent conjunctivitis + rash + hand/foot changes = Kawasaki disease. Treat urgently with IV immunoglobulin (IVIG) and high-dose aspirin to prevent coronary artery aneurysms.",
+    "key_learning_points": [
+      "Kawasaki: fever \u22655d + \u22654/5 criteria (conjunctivitis, oral changes, rash, extremity changes, lymphadenopathy)",
+      "Main complication: coronary artery aneurysms in up to 25% untreated",
+      "Treatment: IV immunoglobulin + high-dose aspirin (rare paediatric aspirin indication)"
+    ],
+    "common_exam_traps": [
+      "Missing Kawasaki by confusing with scarlet fever or viral illness",
+      "Forgetting coronary artery aneurysm as the serious complication"
+    ],
+    "tags": [
+      "Kawasaki",
+      "paediatrics",
+      "vasculitis",
+      "fever"
+    ],
+    "image_findings": [
+      "Strawberry tongue (bright red with prominent papillae)",
+      "Bilateral conjunctival injection (non-purulent)",
+      "Polymorphous erythematous truncal rash"
+    ],
+    "imageUrl": "/spotdx-images/kawasaki-disease.png"
+  },
+  {
+    "id": "spotdx-009",
+    "title": "Bowel Obstruction",
+    "specialty": "Surgery",
+    "subspecialty": "Radiology",
+    "category": "surgery",
+    "difficulty": "intermediate",
+    "topic": "Bowel obstruction",
+    "clinical_vignette": "A 70-year-old man with a history of previous abdominal surgery presents with 2 days of colicky abdominal pain, vomiting, abdominal distension, and absolute constipation. His abdomen is distended and tympanic. An abdominal X-ray is taken.",
+    "question": "An abdominal X-ray in a 70-year-old with distension and vomiting shows multiple dilated loops of small bowel centrally placed, with a 'step-ladder' pattern and valvulae conniventes visible. What is the most likely diagnosis?",
+    "options": [
+      "Large bowel obstruction",
+      "Small bowel obstruction",
+      "Paralytic ileus",
+      "Gastric outlet obstruction",
+      "Pneumoperitoneum"
+    ],
+    "answer": 1,
+    "correct_answer": "Small bowel obstruction",
+    "explanation": "Small bowel obstruction (SBO) on AXR shows dilated centrally placed loops of bowel with valvulae conniventes (complete folds crossing the full width) and a step-ladder pattern. Diameter >3cm is abnormal for small bowel. Large bowel obstruction shows peripheral loops with haustral folds (incomplete) and diameter >6cm (or >9cm for caecum). Paralytic ileus causes diffuse dilatation of both small and large bowel without a transition point. Previous abdominal surgery causing adhesions is the most common cause of SBO.\n\nPLAB Pearl: SBO on AXR = central loops, valvulae conniventes, step-ladder, diameter >3cm. LBO = peripheral loops, haustral folds, diameter >6cm. Most common cause of SBO = adhesions (post-surgical).",
+    "key_learning_points": [
+      "SBO: central dilated loops, valvulae conniventes, step-ladder pattern on AXR",
+      "LBO: peripheral loops, haustral folds, sigmoid/caecal dilatation",
+      "Most common cause of SBO: adhesions from prior surgery"
+    ],
+    "common_exam_traps": [
+      "Confusing SBO and LBO \u2014 location and fold appearance distinguishes them",
+      "Forgetting to ask about prior abdominal surgery"
+    ],
+    "tags": [
+      "bowel obstruction",
+      "AXR",
+      "surgery",
+      "radiology"
+    ],
+    "image_findings": [
+      "Multiple centrally-placed dilated bowel loops",
+      "Valvulae conniventes (complete transverse folds)",
+      "Step-ladder configuration"
+    ],
+    "imageUrl": "/spotdx-images/small-bowel-obstruction-axr.png"
+  },
+  {
+    "id": "spotdx-010",
+    "title": "Atrial Fibrillation ECG",
+    "specialty": "Cardiology",
+    "subspecialty": "ECG Interpretation",
+    "category": "cardiovascular",
+    "difficulty": "foundation",
+    "topic": "Atrial Fibrillation",
+    "clinical_vignette": "A 72-year-old woman with hypertension and type 2 diabetes presents with palpitations, mild breathlessness, and feeling 'off' for 3 days. Pulse is irregularly irregular at 98 bpm. An ECG is performed.",
+    "question": "The ECG shows an irregularly irregular rhythm with no discernible P waves, a variable ventricular rate of 80\u2013120 bpm, and a narrow QRS complex. What is the most likely diagnosis?",
+    "options": [
+      "Atrial flutter",
+      "SVT",
+      "Atrial fibrillation",
+      "Multifocal atrial tachycardia",
+      "Ventricular tachycardia"
+    ],
+    "answer": 2,
+    "correct_answer": "Atrial fibrillation",
+    "explanation": "Atrial fibrillation (AF) shows: irregularly irregular rhythm (pathognomonic), absent P waves replaced by fibrillatory baseline (chaotic atrial activity), narrow QRS (unless aberrant conduction), and variable ventricular rate. Atrial flutter shows regular sawtooth P waves at 300bpm with typically 2:1 block (rate ~150bpm). SVT is regular with retrograde P waves. MAT has \u22653 distinct P-wave morphologies but a identifiable P before each QRS. VT has a wide QRS.\n\nPLAB Pearl: Irregularly irregular + absent P waves + narrow QRS = AF. In this patient (hypertension + T2DM, CHA\u2082DS\u2082-VASc \u22653), anticoagulation with a DOAC is mandatory. Rate control with beta-blocker or rate-limiting CCB is first-line per NICE NG196.",
+    "key_learning_points": [
+      "AF: irregularly irregular rhythm, absent P waves, narrow QRS, variable rate",
+      "CHA\u2082DS\u2082-VASc score determines anticoagulation need \u2014 DOAC preferred over warfarin",
+      "Rate control first-line (beta-blocker or rate-limiting CCB) per NICE NG196"
+    ],
+    "common_exam_traps": [
+      "Confusing AF (irregular) with flutter (regular at ~150bpm with sawtooth P waves)",
+      "Forgetting to calculate CHA\u2082DS\u2082-VASc and prescribe anticoagulation"
+    ],
+    "tags": [
+      "atrial fibrillation",
+      "ECG",
+      "cardiology",
+      "arrhythmia"
+    ],
+    "image_findings": [
+      "Absent P waves \u2014 fibrillatory baseline",
+      "Irregularly irregular QRS complexes",
+      "Variable ventricular rate with narrow QRS"
+    ],
+    "imageUrl": "/spotdx-images/atrial-fibrillation-ecg.png"
   }
 ]
