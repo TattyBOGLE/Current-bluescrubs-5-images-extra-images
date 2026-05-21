@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { db } from "./db";
-import { questionExplanationCache } from "@shared/schema";
+import { questionExplanationCache, block1Leaderboard, block2Leaderboard, block3Leaderboard } from "@shared/schema";
 import { eq } from "drizzle-orm";
 import { isAIEnabled, getAIStatus, suspendAI } from "./ai-config";
 import { BNF_MEDICATIONS } from "./shared/bnf-integration";
@@ -4591,6 +4591,61 @@ app.get("/api/test/questions", async (req, res) => {
     } catch (error) {
       console.error('Failed to award points:', error);
       res.status(500).json({ error: 'Failed to award points' });
+    }
+  });
+
+  app.post('/api/leaderboard/submit', async (req, res) => {
+    const { username, score, totalQuestions, percentage, category, blockType: bType, timeSpent: ts } = req.body || {};
+    try {
+      if (typeof score === 'number' && typeof totalQuestions === 'number' && totalQuestions > 0) {
+        const accuracy = percentage ?? Math.round((score / totalQuestions) * 100);
+        const calculatedScore = Math.round(score * 10 + (accuracy * 0.5));
+        const safeName = (typeof username === 'string' && username.trim()) ? username.trim().slice(0, 50) : 'Guest';
+        const safeCategory = (typeof category === 'string' && category.trim()) ? category.trim().slice(0, 50) : 'general';
+        const safeTime = typeof ts === 'number' ? ts : 0;
+
+        if (bType === 'block2') {
+          const minutes = safeTime > 0 ? safeTime / 60000 : 1;
+          await db.insert(block2Leaderboard).values({
+            userId: 0,
+            username: safeName,
+            timeLimit: Math.round(minutes),
+            questionsCompleted: totalQuestions,
+            correctAnswers: score,
+            accuracy,
+            questionsPerMinute: totalQuestions / Math.max(minutes, 0.1),
+            score: calculatedScore,
+            category: safeCategory,
+            difficulty: 'intermediate',
+          });
+        } else if (bType === 'block3') {
+          await db.insert(block3Leaderboard).values({
+            userId: 0,
+            username: safeName,
+            totalQuestionsAnswered: totalQuestions,
+            totalCorrectAnswers: score,
+            overallAccuracy: accuracy,
+            studyStreak: 0,
+            sessionsCompleted: 1,
+            score: calculatedScore,
+          });
+        } else {
+          await db.insert(block1Leaderboard).values({
+            userId: 0,
+            username: safeName,
+            questionCount: totalQuestions,
+            correctAnswers: score,
+            totalTime: safeTime,
+            accuracy,
+            score: calculatedScore,
+            category: safeCategory,
+            difficulty: 'intermediate',
+          });
+        }
+      }
+      res.json({ success: true });
+    } catch (_err) {
+      res.json({ success: false });
     }
   });
 

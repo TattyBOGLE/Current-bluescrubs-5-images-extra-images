@@ -133,14 +133,24 @@ export default function PLAB1New() {
     difficulty: string;
   }) => {
     try {
-      if (blockType === 'block1') {
-        // Block 1 leaderboard submission
-      } else if (blockType === 'block2' && isTimedSession) {
-        // Block 2 leaderboard submission
-      } else if (blockType === 'block3') {
-        // Block 3 leaderboard submission
-      }
-    } catch (error) {
+      const percentage = sessionData.totalQuestions > 0
+        ? Math.round((sessionData.correctAnswers / sessionData.totalQuestions) * 100)
+        : 0;
+      await fetch('/api/leaderboard/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: 'Guest',
+          score: sessionData.correctAnswers,
+          totalQuestions: sessionData.totalQuestions,
+          percentage,
+          category: sessionData.category,
+          blockType,
+          timeSpent: sessionData.totalTime,
+          isTimedSession,
+        }),
+      });
+    } catch (_error) {
       // leaderboard submission is best-effort
     }
   };
@@ -1149,11 +1159,32 @@ export default function PLAB1New() {
 
   // Session complete
   if (sessionComplete) {
+    const correctCount = sessionResults.filter(r => r.correct).length;
+    const totalAnswered = sessionResults.length;
+    const percentage = totalAnswered > 0 ? Math.round((correctCount / totalAnswered) * 100) : 0;
+    const avgTimePerQuestion = totalAnswered > 0
+      ? Math.round(sessionResults.reduce((sum, r) => sum + r.timeSpent, 0) / totalAnswered / 1000)
+      : 0;
+    const topicMap = new Map<string, { correct: number; total: number }>();
+    sessionResults.forEach((r, i) => {
+      const q = generatedQuestions[i];
+      const topic = q?.topic || q?.category || 'General';
+      const entry = topicMap.get(topic) || { correct: 0, total: 0 };
+      entry.total++;
+      if (r.correct) entry.correct++;
+      topicMap.set(topic, entry);
+    });
+    const topicBreakdown = Array.from(topicMap.entries()).map(([topic, stats]) => ({ topic, ...stats }));
+
     return (
       <SessionComplete
-        totalQuestions={generatedQuestions.length}
+        totalQuestions={totalAnswered}
+        correctAnswers={correctCount}
+        percentage={percentage}
+        avgTimePerQuestion={avgTimePerQuestion}
         timeSpent={timeSpent}
         selectedCategory={selectedCategory}
+        topicBreakdown={topicBreakdown}
         onRestart={() => window.location.reload()}
         onHome={() => setSessionStarted(false)}
       />

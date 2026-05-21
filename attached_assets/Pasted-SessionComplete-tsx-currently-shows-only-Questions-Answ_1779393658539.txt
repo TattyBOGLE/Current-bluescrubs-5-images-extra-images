@@ -1,0 +1,140 @@
+SessionComplete.tsx currently shows only Questions Answered, Time Spent, 
+and Category — no correct/incorrect count and no percentage score. A 
+student finishing a session has no idea how they performed. Fix this.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1 — PASS SCORE DATA FROM PARENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In plab1-new.tsx, find where SessionComplete is rendered and trace 
+back to where session results are tracked. The data already exists:
+
+  - sessionResults: Array<{ correct: boolean; timeSpent: number; 
+                            questionId: string }>
+  - userAnswers: string[]
+  - generatedQuestions: the question array
+
+Calculate these values before passing to SessionComplete:
+
+  const correctCount = sessionResults.filter(r => r.correct).length;
+  const totalAnswered = sessionResults.length;
+  const percentage = totalAnswered > 0 
+    ? Math.round((correctCount / totalAnswered) * 100) 
+    : 0;
+  const avgTimePerQuestion = totalAnswered > 0
+    ? Math.round(sessionResults.reduce((sum, r) => sum + r.timeSpent, 0) 
+        / totalAnswered / 1000)
+    : 0;
+
+Pass them as props to SessionComplete:
+  <SessionComplete
+    totalQuestions={totalAnswered}
+    correctAnswers={correctCount}
+    percentage={percentage}
+    avgTimePerQuestion={avgTimePerQuestion}
+    timeSpent={timeSpent}
+    selectedCategory={selectedCategory}
+    onRestart={onRestart}
+    onHome={onHome}
+  />
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2 — UPDATE SessionComplete PROPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Update the SessionCompleteProps interface:
+
+  interface SessionCompleteProps {
+    totalQuestions: number;
+    correctAnswers: number;
+    percentage: number;
+    avgTimePerQuestion: number;
+    timeSpent: number;
+    selectedCategory: string;
+    onRestart: () => void;
+    onHome: () => void;
+  }
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3 — REDESIGN THE RESULTS SCREEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Replace the current 3-card grid with this layout:
+
+TOP — Large score circle:
+  A centred circle showing the percentage score in large text,
+  colour-coded by performance:
+    ≥ 80%  → green  (bg-green-100, text-green-700)
+    60–79% → amber  (bg-amber-100, text-amber-700)
+    < 60%  → red    (bg-red-100, text-red-700)
+
+  Below the circle, one line of feedback text:
+    ≥ 80%  → "Excellent — you're well prepared for PLAB 1"
+    60–79% → "Good effort — review the topics you missed"
+    < 60%  → "Keep practising — focus on your weak areas"
+
+MIDDLE — 4 stat cards in a 2×2 grid:
+  1. Correct answers   → "{correctAnswers} / {totalQuestions}"
+  2. Score             → "{percentage}%"
+  3. Avg time/question → "{avgTimePerQuestion}s per question"
+  4. Category          → "{selectedCategory}"
+
+BOTTOM — Category breakdown (if available):
+  Show a simple list of how many questions were from each topic,
+  and how many were correct per topic. Derive this from 
+  sessionResults cross-referenced with generatedQuestions. 
+  Only show this section if there are 2+ distinct topics.
+  Label it "Topic breakdown".
+
+ACTIONS — two buttons, same as before:
+  [Start New Session]  [Back to Home]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4 — PERSIST SCORE TO LEADERBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In plab1-new.tsx, find submitToBlockLeaderboard(). It currently 
+only calls console.log(). Wire it to actually POST to the API:
+
+  const response = await fetch('/api/leaderboard/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      username: 'Guest',        // placeholder until auth exists
+      score: correctCount,
+      totalQuestions: totalAnswered,
+      percentage,
+      category: selectedCategory,
+      blockType,
+      timeSpent: totalTime,
+      isTimedSession,
+    }),
+  });
+
+If the endpoint does not exist in routes.ts, create it:
+
+  app.post('/api/leaderboard/submit', async (req, res) => {
+    const { username, score, totalQuestions, percentage, 
+            category, blockType, timeSpent } = req.body;
+    
+    try {
+      // Write to the appropriate block leaderboard table
+      // using the existing storage layer and schema
+      // (block1Leaderboard / block2Leaderboard / block3Leaderboard)
+      // For now if DB write fails, return success anyway so the 
+      // UI never shows an error to the student
+      res.json({ success: true });
+    } catch (err) {
+      console.error('Leaderboard submit error:', err);
+      res.json({ success: false });
+    }
+  });
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DO NOT CHANGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- The restart and home button behaviour
+- Any other part of the quiz flow
+- The SessionNavBar or bottom navigation
+- The existing leaderboard display pages
