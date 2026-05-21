@@ -12802,5 +12802,215 @@
     },
     "difficulty": "intermediate",
     "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_all_1779369457116_0",
+    "topic": "Diabetes Management",
+    "category": "all",
+    "question": "A 56-year-old man with type 2 diabetes presents for a routine check-up. He is currently on metformin. His recent HbA1c is 60 mmol/mol, and he has a history of myocardial infarction. What is the most appropriate medication to add to his regimen?",
+    "options": [
+      "Empagliflozin",
+      "Sulfonylurea",
+      "Insulin",
+      "Pioglitazone",
+      "DPP-4 inhibitor"
+    ],
+    "answer": 0,
+    "explanation": "Empagliflozin is the appropriate choice because it is an SGLT-2 inhibitor recommended for patients with type 2 diabetes who have established cardiovascular disease, as per NICE NG28. The patient's history of myocardial infarction suggests he would benefit from the cardioprotective effects of empagliflozin. The other options are less suitable: sulfonylureas can cause hypoglycemia, insulin is not first-line unless HbA1c targets are unmet with oral agents, pioglitazone has an increased risk of heart failure, and DPP-4 inhibitors do not have the same cardiovascular benefits. Remember 'Empa for the heart' for patients with CVD.",
+    "mnemonic": "Empa for the heart",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_1",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 62-year-old Black Caribbean woman presents with a new diagnosis of hypertension. Her blood pressure is consistently 150/95 mmHg. What is the most appropriate first-line treatment according to current guidelines?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Thiazide diuretic",
+      "Beta-blocker",
+      "Spironolactone"
+    ],
+    "answer": 0,
+    "explanation": "Amlodipine, a calcium channel blocker (CCB), is the first-line treatment for hypertension in patients over 55 or of Black African or Caribbean descent, as per NICE NG136. This recommendation is based on the reduced efficacy of ACE inhibitors like ramipril in this population. Thiazide diuretics might be added later if needed. Beta-blockers are not first-line for uncomplicated hypertension, and spironolactone is typically added at step 4 if resistant hypertension is confirmed. Using 'CCB for Caribbean' helps remember the guideline for Black patients.",
+    "mnemonic": "CCB for Caribbean",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_2",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 28-year-old woman has recently been diagnosed with asthma. She currently uses a salbutamol inhaler when needed. According to the latest guidelines, what is the most appropriate next step in her management?",
+    "options": [
+      "Switch to as-needed low-dose ICS/formoterol",
+      "Add low-dose ICS to salbutamol",
+      "Start regular low-dose ICS",
+      "Add LABA to salbutamol",
+      "Continue current treatment"
+    ],
+    "answer": 0,
+    "explanation": "According to NICE NG245, the recommended management for newly diagnosed asthma is to switch from a SABA-only regimen to as-needed low-dose ICS/formoterol, known as AIR therapy. The option of adding low-dose ICS to salbutamol or starting regular ICS is outdated. Continuing salbutamol monotherapy is also inappropriate per current guidelines. Remember 'AIR for Asthma Initiation' to recall the switch to anti-inflammatory reliever therapy.",
+    "mnemonic": "AIR for Asthma Initiation",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_3",
+    "topic": "Chronic Heart Failure",
+    "category": "all",
+    "question": "A 70-year-old man with heart failure with reduced ejection fraction (HFrEF) is currently on an ACE inhibitor and a beta-blocker. He continues to have symptoms. According to NICE guidelines, what medication should be added next?",
+    "options": [
+      "Mineralocorticoid receptor antagonist",
+      "Thiazide diuretic",
+      "Digoxin",
+      "Ivabradine",
+      "Loop diuretic"
+    ],
+    "answer": 0,
+    "explanation": "The next step in managing HFrEF, as per NICE NG106, is to add a mineralocorticoid receptor antagonist (MRA) like spironolactone, which helps reduce mortality and hospitalisation risk. Thiazide diuretics are not typically used in HFrEF, and digoxin is reserved for symptomatic control in atrial fibrillation. Ivabradine is considered only if patients remain symptomatic with a heart rate >75 bpm despite beta-blocker therapy. Loop diuretics are used for symptomatic relief of fluid overload but not as part of the core HFrEF regimen.",
+    "mnemonic": "Add MRA in HFrEF",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_4",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 76-year-old man with newly diagnosed atrial fibrillation presents to the clinic. His CHA₂DS₂-VASc score is 4. What is the appropriate management for stroke prevention?",
+    "options": [
+      "Apixaban",
+      "Aspirin",
+      "Warfarin",
+      "Clopidogrel",
+      "No anticoagulation"
+    ],
+    "answer": 0,
+    "explanation": "Apixaban, a DOAC, is recommended for stroke prevention in atrial fibrillation with a CHA₂DS₂-VASc score ≥2 in men or ≥3 in women, as per NICE NG196. Aspirin and clopidogrel are ineffective for stroke prevention in AF. Warfarin is an alternative if DOACs are contraindicated. No anticoagulation is inappropriate given the high stroke risk. Remember 'Apixaban in AF' for high-risk patients needing anticoagulation.",
+    "mnemonic": "Apixaban in AF",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_5",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 35-year-old woman presents with fever, productive cough, and pleuritic chest pain. Her CURB-65 score is 1. What is the most appropriate antibiotic treatment?",
+    "options": [
+      "Amoxicillin 500 mg TDS",
+      "Co-amoxiclav",
+      "Clarithromycin",
+      "Doxycycline",
+      "Levofloxacin"
+    ],
+    "answer": 0,
+    "explanation": "For a low-severity pneumonia with a CURB-65 score of 0-1, amoxicillin 500 mg TDS for 5 days is recommended, per NICE NG250. Co-amoxiclav is reserved for severe cases, while clarithromycin or doxycycline might be alternatives in penicillin allergy. Levofloxacin is not routinely used due to potential adverse effects. Remember 'Amoxicillin for low CURB' for mild community-acquired pneumonia.",
+    "mnemonic": "Amoxicillin for low CURB",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_6",
+    "topic": "Stroke Management",
+    "category": "all",
+    "question": "A 68-year-old woman presents with an acute ischemic stroke. She arrived at the hospital 3 hours after symptom onset. What is the most appropriate initial management?",
+    "options": [
+      "Thrombolysis with alteplase",
+      "Aspirin 300 mg stat",
+      "Clopidogrel 75 mg",
+      "Carotid endarterectomy",
+      "Dabigatran"
+    ],
+    "answer": 0,
+    "explanation": "Thrombolysis with alteplase is indicated for acute ischemic stroke within 4.5 hours of symptom onset, per NICE NG128. This patient, arriving at 3 hours, is within the treatment window. Aspirin is given after 24 hours if no thrombolysis is performed. Clopidogrel and dabigatran are not used initially. Carotid endarterectomy is for significant stenosis after stabilization. Remember 'Alteplase within 4.5' for thrombolysis timing.",
+    "mnemonic": "Alteplase within 4.5",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_7",
+    "topic": "Hypothyroidism Treatment",
+    "category": "all",
+    "question": "A 45-year-old woman is diagnosed with hypothyroidism. Her TSH is 10 mU/L and FT4 is low. She is started on levothyroxine. What is the appropriate starting dose?",
+    "options": [
+      "25 mcg daily",
+      "50 mcg daily",
+      "75 mcg daily",
+      "100 mcg daily",
+      "150 mcg daily"
+    ],
+    "answer": 1,
+    "explanation": "For most adults with hypothyroidism, a starting dose of levothyroxine 50 mcg daily is appropriate, as per NICE NG145. This dose may be adjusted based on age, weight, and cardiac status. The dose is titrated based on TSH levels every 8–12 weeks. Lower doses are used in elderly or cardiac patients, while higher doses are not initially recommended due to the risk of overtreatment. Remember '50 for First' for the initial levothyroxine dose.",
+    "mnemonic": "50 for First",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_8",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 30-year-old woman presents with newly diagnosed focal epilepsy. What is the first-line treatment according to NICE guidelines?",
+    "options": [
+      "Lamotrigine",
+      "Sodium valproate",
+      "Carbamazepine",
+      "Levetiracetam",
+      "Topiramate"
+    ],
+    "answer": 0,
+    "explanation": "Lamotrigine is the first-line treatment for newly diagnosed focal epilepsy, as recommended by NICE NG217. It is preferred due to its favorable side-effect profile. Sodium valproate is effective but avoided in women of childbearing potential due to teratogenicity. Carbamazepine is also first-line but not preferred over lamotrigine in females due to side effects. Levetiracetam and topiramate are alternatives if first-line treatments are not suitable. Remember 'Lamotrigine for Ladies' in focal epilepsy.",
+    "mnemonic": "Lamotrigine for Ladies",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779369457116_9",
+    "topic": "Management of DVT",
+    "category": "all",
+    "question": "A 45-year-old woman with a recent DVT confirmed by Doppler ultrasound is being discharged. What is the most appropriate anticoagulation therapy?",
+    "options": [
+      "Rivaroxaban",
+      "Warfarin",
+      "Aspirin",
+      "Heparin",
+      "Dabigatran"
+    ],
+    "answer": 0,
+    "explanation": "Rivaroxaban, a DOAC, is the first-line anticoagulant for DVT as per NICE NG158 due to its ease of use and fewer monitoring requirements. Warfarin requires regular INR monitoring and dietary restrictions. Aspirin is not an anticoagulant. Heparin is used initially in hospital settings, not for long-term outpatient management. Dabigatran is also a DOAC but is not the first choice. Remember 'Riva for DVT' for initial outpatient anticoagulation.",
+    "mnemonic": "Riva for DVT",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/venous-thromboembolism"
+    },
+    "difficulty": "intermediate"
   }
 ]
