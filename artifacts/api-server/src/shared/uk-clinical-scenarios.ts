@@ -28,7 +28,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'GP',
     title: 'Acute Chest Pain Assessment',
     scenario: "A 58-year-old taxi driver presents to your GP surgery with sudden onset crushing central chest pain that started 45 minutes ago while driving. The pain radiates to his left arm and jaw. He is sweating profusely and appears grey. He has a history of type 2 diabetes and hypertension. His current medications include metformin 1g BD and amlodipine 5mg OD. On examination: pulse 110/min irregular, BP 90/60 mmHg, oxygen saturation 94% on air.",
-    question: "According to NICE guidelines, what is the most appropriate immediate management?",
+    question: "What is the most appropriate immediate management?",
     options: [
       "Give sublingual GTN and arrange routine cardiology referral",
       "Call 999 immediately, give aspirin 300mg and obtain 12-lead ECG",
@@ -56,7 +56,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'Emergency',
     title: 'Acute Asthma Exacerbation',
     scenario: "A 23-year-old university student presents to A&E with severe breathlessness that started 2 hours ago. She has a history of asthma usually well-controlled with salbutamol PRN and beclometasone 200mcg BD. Today she was exposed to cats at a friend's house. On examination: she can only speak in single words, respiratory rate 35/min, pulse 130/min, peak flow 150 L/min (personal best 450 L/min), oxygen saturation 91% on air, widespread wheeze audible, accessory muscle use evident.",
-    question: "According to BTS/SIGN guidelines, what defines this as life-threatening asthma?",
+    question: "What defines this presentation as life-threatening asthma?",
     options: [
       "Peak flow <33% of personal best and oxygen saturation <92%",
       "Inability to complete sentences and tachycardia >120 bpm",
@@ -84,7 +84,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'GP',
     title: 'Type 2 Diabetes Diagnosis',
     scenario: "A 52-year-old office worker attends for routine health screening. She mentions feeling more tired recently and having to urinate frequently, especially at night. Her BMI is 32 kg/m². Family history includes mother with type 2 diabetes. Random plasma glucose today is 13.2 mmol/L. She is asymptomatic apart from polyuria and fatigue. Blood pressure is 145/88 mmHg. She takes no regular medications.",
-    question: "According to NICE NG28, what is the most appropriate next step for diabetes diagnosis?",
+    question: "What is the most appropriate next step for diabetes diagnosis?",
     options: [
       "Repeat random plasma glucose on another day",
       "Arrange oral glucose tolerance test (OGTT)",
@@ -112,7 +112,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'Emergency',
     title: 'Acute Stroke Recognition',
     scenario: "A 74-year-old retired teacher is brought to A&E by her daughter after sudden onset of speech difficulty and right-sided weakness 90 minutes ago. She was previously well and independent. On examination: NIHSS score 8, blood pressure 180/95 mmHg, glucose 8.2 mmol/L, temperature 36.8°C. She has left facial droop, right arm and leg weakness (power 2/5), and expressive dysphasia. CT head shows no hemorrhage. She takes warfarin for atrial fibrillation (INR 2.1 yesterday).",
-    question: "According to NICE CG68, what is the most appropriate immediate treatment?",
+    question: "What is the most appropriate immediate treatment?",
     options: [
       "Start aspirin 300mg immediately and arrange rehabilitation",
       "Reverse anticoagulation with vitamin K and fresh frozen plasma",
@@ -140,7 +140,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'GP',
     title: 'Depression Assessment and Management',
     scenario: "A 35-year-old teacher presents feeling 'down' for the past 6 weeks. She describes low mood, loss of interest in activities she previously enjoyed, difficulty sleeping, poor concentration affecting her work, and feelings of worthlessness. She has lost 3kg weight unintentionally. She denies suicidal ideation but feels 'life isn't worth living sometimes'. PHQ-9 score is 16. No past psychiatric history. She mentions her father died by suicide 10 years ago.",
-    question: "According to NICE CG90, what is the most appropriate initial management?",
+    question: "What is the most appropriate initial management?",
     options: [
       "Prescribe sertraline 50mg daily and review in 2 weeks",
       "Refer for urgent psychiatric assessment due to family history",
@@ -168,7 +168,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'GP',
     title: 'Antenatal Care - Gestational Diabetes',
     scenario: "A 28-year-old woman at 28 weeks gestation attends for routine antenatal appointment. Her BMI is 34 kg/m² and she has a family history of type 2 diabetes (mother). She mentions increased thirst and urination recently. Oral glucose tolerance test (OGTT) results: fasting glucose 5.8 mmol/L, 2-hour glucose 9.2 mmol/L. Previous pregnancy was complicated by macrosomia (birth weight 4.2kg). Blood pressure today is 125/78 mmHg, urinalysis shows glucose ++.",
-    question: "According to NICE NG3, how should this gestational diabetes be managed?",
+    question: "How should this gestational diabetes be managed?",
     options: [
       "Dietary advice only and recheck glucose in 2 weeks",
       "Start metformin immediately and monitor with home glucose testing",
@@ -196,7 +196,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'Emergency',
     title: 'Febrile Child Assessment',
     scenario: "A 15-month-old girl is brought to A&E by worried parents. She has had fever for 18 hours (maximum 39.8°C), is irritable, and has reduced oral intake. She has a non-blanching rash on her legs that appeared 2 hours ago. She is lethargic but rousable. Observations: temperature 39.2°C, heart rate 160/min, respiratory rate 35/min, capillary refill time 3 seconds centrally. She received paracetamol 1 hour ago. She is up to date with vaccinations including MenB.",
-    question: "According to NICE NG51, what is the most appropriate immediate management?",
+    question: "What is the most appropriate immediate management for this child?",
     options: [
       "Observe for 4 hours and discharge if fever settles",
       "Give IV antibiotics immediately and arrange urgent pediatric assessment",
@@ -224,7 +224,7 @@ export const UK_CLINICAL_SCENARIOS: UKClinicalScenario[] = [
     setting: 'GP',
     title: 'Capacity and Consent Assessment',
     scenario: "An 82-year-old man with mild dementia attends with his daughter for routine review. He lives independently with daily support from his daughter. His MMSE score is 22/30. He mentions he doesn't want to take his medications anymore as they 'make him feel sick'. His daughter is concerned and wants you to 'make him understand he needs them'. Current medications include donepezil, atorvastatin, ramipril, and aspirin. He can explain why each medication was prescribed but says 'I'd rather feel well now than worry about the future'.",
-    question: "According to the Mental Capacity Act 2005, what is the most appropriate approach?",
+    question: "What is the most appropriate approach to this situation?",
     options: [
       "Respect his decision as he has capacity to make this choice",
       "Override his decision due to his dementia diagnosis",

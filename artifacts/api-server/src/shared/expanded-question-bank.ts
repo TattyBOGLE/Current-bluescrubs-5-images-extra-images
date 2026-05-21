@@ -10,7 +10,7 @@ export const EXPANDED_QUESTION_BANK: GMCQuestion[] = [
     difficulty: 'intermediate',
     clinicalSetting: 'Cardiology Clinic',
     ageGroup: 'Elderly',
-    stem: "A 74-year-old retired teacher presents with 3-month history of progressive breathlessness on exertion, ankle swelling, and orthopnea. Past medical history includes myocardial infarction 6 months ago. Examination shows elevated JVP, bilateral fine crackles, and ankle edema. Echocardiogram shows ejection fraction 35%. BNP 850 pg/ml. According to NICE guidelines, what is the most appropriate first-line treatment?",
+    stem: "A 74-year-old retired teacher presents with 3-month history of progressive breathlessness on exertion, ankle swelling, and orthopnea. Past medical history includes myocardial infarction 6 months ago. Examination shows elevated JVP, bilateral fine crackles, and ankle edema. Echocardiogram shows ejection fraction 35%. BNP 850 pg/ml. What is the most appropriate first-line treatment?",
     options: [
       "Furosemide 40mg daily and lifestyle advice",
       "ACE inhibitor ramipril and beta-blocker bisoprolol",

@@ -1944,7 +1944,7 @@ Return STRICT JSON (no markdown, no other text):
             topic: "Urinary Tract Infection Management",
             category: "Infectious Diseases",
             difficulty: "medium",
-            question: "A 28-year-old non-pregnant woman presents with a 2-day history of dysuria, urinary frequency, and suprapubic discomfort. Urine dipstick shows positive nitrites and leucocytes. What is the most appropriate first-line antibiotic treatment according to current UK guidelines?",
+            question: "A 28-year-old non-pregnant woman presents with a 2-day history of dysuria, urinary frequency, and suprapubic discomfort. Urine dipstick shows positive nitrites and leucocytes. What is the most appropriate first-line antibiotic treatment?",
             options: ["Nitrofurantoin 100mg modified-release twice daily for 3 days", "Trimethoprim 200mg twice daily for 3 days", "Ciprofloxacin 500mg twice daily for 3 days", "Amoxicillin 500mg three times daily for 5 days", "Co-trimoxazole 960mg twice daily for 3 days"],
             correctAnswer: "Nitrofurantoin 100mg modified-release twice daily for 3 days",
             explanation: "Nitrofurantoin remains the first-line treatment for uncomplicated UTIs in non-pregnant women according to NICE guidelines, with excellent E. coli coverage and minimal resistance."
@@ -2702,7 +2702,7 @@ function getSampleQuestionsForCategory(category: string, count: number = 10) {
         id: "resp1",
         topic: "Asthma Management",
         category: "respiratory", 
-        question: "A 28-year-old with asthma uses salbutamol 2-3 times per week and experiences night-time symptoms twice a month. What is the next step in management according to the latest NICE guidelines?",
+        question: "A 28-year-old with asthma uses salbutamol 2-3 times per week and experiences night-time symptoms twice a month. What is the next step in management?",
         options: {
           A: "Continue current salbutamol treatment",
           B: "Switch to as-needed low-dose ICS/formoterol combination inhaler (AIR therapy)",
