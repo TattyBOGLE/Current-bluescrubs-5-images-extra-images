@@ -1022,7 +1022,11 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
       if (filtered.length >= 5) pool = filtered;
     }
 
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    const shuffled = [...pool];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
     return shuffled.slice(0, requestedCount).map(normalizeStoredQuestion);
   };
 

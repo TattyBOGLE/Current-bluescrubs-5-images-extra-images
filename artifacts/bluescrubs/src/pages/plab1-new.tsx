@@ -10,6 +10,14 @@ import { apiRequest } from "@/lib/queryClient";
 import { AITutor } from "@/components/ai-tutor";
 import { useToast } from "@/hooks/use-toast";
 import { formatTime, calculatePoints, type AIExplanation, type AIStudyTips } from "@/lib/quiz-utils";
+import {
+  shuffleArray,
+  applyOptionShuffle,
+  selectAdaptiveQuestions,
+  filterIncorrectOnlyQuestions,
+  recordQuestionAttempt,
+  addToRecentHistory,
+} from "@/lib/question-randomisation";
 import { GamificationBar } from "@/components/plab1/GamificationBar";
 import { QuizQuestion } from "@/components/plab1/QuizQuestion";
 import { ExplanationPanel } from "@/components/plab1/ExplanationPanel";
@@ -465,8 +473,10 @@ export default function PLAB1New() {
 
       if (response.ok) {
         const data = await response.json();
-        setGeneratedQuestions(data.questions || []);
-        if (data.questions && data.questions.length > 0) {
+        const rawQuestions = data.questions || [];
+        const sessionQuestions = applyOptionShuffle(shuffleArray(rawQuestions));
+        setGeneratedQuestions(sessionQuestions);
+        if (sessionQuestions.length > 0) {
           setSessionStarted(true);
           setQuestionStartTime(Date.now());
           setIsTimedSession(false);
@@ -508,12 +518,13 @@ export default function PLAB1New() {
       }
 
       const data = await response.json();
-      const questions = Array.isArray(data.questions) ? data.questions : [];
-      if (questions.length === 0) {
+      const rawQuestions = Array.isArray(data.questions) ? data.questions : [];
+      if (rawQuestions.length === 0) {
         toast({ title: "No questions found", description: "No questions matched your selection. Try a different category.", variant: "destructive" });
         return;
       }
 
+      const questions = applyOptionShuffle(shuffleArray(rawQuestions));
       setGeneratedQuestions(questions);
       setCurrentQuestionIndex(0);
       setSelectedAnswer("");
@@ -560,13 +571,13 @@ export default function PLAB1New() {
       }
 
       const data = await response.json();
-      const questions = Array.isArray(data.questions) ? data.questions : [];
-      if (questions.length === 0) {
+      const rawQuestions = Array.isArray(data.questions) ? data.questions : [];
+      if (rawQuestions.length === 0) {
         toast({ title: "No questions found", description: "No questions matched your selection. Try a different category.", variant: "destructive" });
         return;
       }
 
-      const exactQuestions = questions.slice(0, questionCount);
+      const exactQuestions = applyOptionShuffle(shuffleArray(rawQuestions)).slice(0, questionCount);
       setGeneratedQuestions(exactQuestions);
       setCurrentQuestionIndex(0);
       setSelectedAnswer("");
@@ -614,13 +625,13 @@ export default function PLAB1New() {
       }
 
       const data = await response.json();
-      const questions = Array.isArray(data.questions) ? data.questions : [];
-      if (questions.length === 0) {
+      const rawQuestions = Array.isArray(data.questions) ? data.questions : [];
+      if (rawQuestions.length === 0) {
         toast({ title: "No questions found", description: "No questions matched your selection. Try a different category.", variant: "destructive" });
         return;
       }
 
-      setGeneratedQuestions(questions);
+      setGeneratedQuestions(applyOptionShuffle(shuffleArray(rawQuestions)));
       setCurrentQuestionIndex(0);
       setSelectedAnswer("");
       setShowExplanation(false);
@@ -629,6 +640,123 @@ export default function PLAB1New() {
       setIsTimedSession(false);
       setIsTimerRunning(false);
 
+    } catch (_error) {
+      toast({ title: "Connection error", description: "Could not reach the server. Please refresh and try again.", variant: "destructive" });
+    } finally {
+      setIsGeneratingQuestions(false);
+    }
+  };
+
+  // Start adaptive practice — fetches a larger pool then uses weighted selection
+  const startAdaptivePractice = async (questionCount: number) => {
+    clearSessionTimeout();
+    setIsGeneratingQuestions(true);
+    setGeneratedQuestions([]);
+    setSessionStarted(false);
+    setShowExplanation(false);
+    setCurrentQuestionIndex(0);
+    setSessionResults([]);
+    setUserAnswers([]);
+    setLastMilestone(0);
+    setShowPauseModal(false);
+    setSessionComplete(false);
+    setBlockType('block1');
+
+    try {
+      const fetchCount = Math.min(Math.max(questionCount * 4, 100), 300);
+      const response = await fetch('/api/generate-questions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          category: selectedCategory,
+          count: fetchCount,
+          difficulty: selectedDifficulty,
+        }),
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        return;
+      }
+
+      const data = await response.json();
+      const pool = data.questions || [];
+      if (pool.length === 0) {
+        toast({ title: "No questions found", description: "No questions matched your selection. Try a different category.", variant: "destructive" });
+        return;
+      }
+
+      const selected = selectAdaptiveQuestions(pool, questionCount);
+      const sessionQuestions = applyOptionShuffle(selected);
+      setGeneratedQuestions(sessionQuestions);
+      if (sessionQuestions.length > 0) {
+        setSessionStarted(true);
+        setQuestionStartTime(Date.now());
+        setIsTimedSession(false);
+        setIsTimerRunning(false);
+      }
+    } catch (_error) {
+      toast({ title: "Connection error", description: "Could not reach the server. Please refresh and try again.", variant: "destructive" });
+    } finally {
+      setIsGeneratingQuestions(false);
+    }
+  };
+
+  // Start incorrect-only mode — filters to questions previously answered wrong
+  const startIncorrectOnlyPractice = async (questionCount: number) => {
+    clearSessionTimeout();
+    setIsGeneratingQuestions(true);
+    setGeneratedQuestions([]);
+    setSessionStarted(false);
+    setShowExplanation(false);
+    setCurrentQuestionIndex(0);
+    setSessionResults([]);
+    setUserAnswers([]);
+    setLastMilestone(0);
+    setShowPauseModal(false);
+    setSessionComplete(false);
+    setBlockType('block1');
+
+    try {
+      const response = await fetch('/api/generate-questions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          category: selectedCategory,
+          count: 300,
+          difficulty: selectedDifficulty,
+        }),
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        toast({ title: "Could not load questions", description: (err as any).message || "Please try again.", variant: "destructive" });
+        return;
+      }
+
+      const data = await response.json();
+      const pool = data.questions || [];
+      const incorrectQuestions = filterIncorrectOnlyQuestions(pool);
+
+      if (incorrectQuestions.length === 0) {
+        toast({
+          title: "No incorrect questions yet",
+          description: "You haven't answered any questions incorrectly in this category. Try Practice mode first.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const selected = shuffleArray(incorrectQuestions).slice(0, questionCount);
+      const sessionQuestions = applyOptionShuffle(selected);
+      setGeneratedQuestions(sessionQuestions);
+      if (sessionQuestions.length > 0) {
+        setSessionStarted(true);
+        setQuestionStartTime(Date.now());
+        setIsTimedSession(false);
+        setIsTimerRunning(false);
+      }
     } catch (_error) {
       toast({ title: "Connection error", description: "Could not reach the server. Please refresh and try again.", variant: "destructive" });
     } finally {
@@ -677,6 +805,11 @@ export default function PLAB1New() {
         timeSpent: timeForQuestion,
         questionId: q?.id || `q_${currentQuestionIndex}`
       }]);
+
+      if (q?.id) {
+        recordQuestionAttempt(String(q.id), isCorrect);
+        addToRecentHistory(String(q.id));
+      }
 
       const newStreak = isCorrect ? currentStreak + 1 : 0;
       setCurrentStreak(newStreak);
@@ -993,6 +1126,8 @@ export default function PLAB1New() {
         onStartTimedPractice={startTimedPractice}
         onStartUnlimitedPractice={startUnlimitedPractice}
         onStartAuthenticTimedPractice={startAuthenticTimedPractice}
+        onStartAdaptivePractice={startAdaptivePractice}
+        onStartIncorrectOnlyPractice={startIncorrectOnlyPractice}
       />
     );
   }

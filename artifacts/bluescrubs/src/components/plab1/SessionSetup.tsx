@@ -10,7 +10,7 @@ import {
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { availableCategories } from "@/lib/quiz-utils";
 
-type SessionMode = 'practice' | 'timed' | 'unlimited' | 'plab';
+type SessionMode = 'practice' | 'timed' | 'unlimited' | 'plab' | 'adaptive' | 'incorrect-only';
 
 const MODE_TABS: { id: SessionMode; label: string; description: string }[] = [
   {
@@ -32,6 +32,16 @@ const MODE_TABS: { id: SessionMode; label: string; description: string }[] = [
     id: 'plab',
     label: 'PLAB Exam',
     description: 'Real exam conditions — exactly 1 minute per question',
+  },
+  {
+    id: 'adaptive',
+    label: 'Adaptive',
+    description: 'Smart mode: prioritises your weak areas and recently missed questions',
+  },
+  {
+    id: 'incorrect-only',
+    label: 'Incorrect Only',
+    description: 'Revisit only the questions you have previously answered incorrectly',
   },
 ];
 
@@ -85,6 +95,8 @@ interface SessionSetupProps {
   onStartTimedPractice: (minutes: number) => void;
   onStartUnlimitedPractice: () => void;
   onStartAuthenticTimedPractice: (count: number) => void;
+  onStartAdaptivePractice: (count: number) => void;
+  onStartIncorrectOnlyPractice: (count: number) => void;
 }
 
 export function SessionSetup({
@@ -111,6 +123,8 @@ export function SessionSetup({
   onStartTimedPractice,
   onStartUnlimitedPractice,
   onStartAuthenticTimedPractice,
+  onStartAdaptivePractice,
+  onStartIncorrectOnlyPractice,
 }: SessionSetupProps) {
   const [selectedMode, setSelectedMode] = useState<SessionMode>('practice');
   const [selectedCount, setSelectedCount] = useState<number>(10);
@@ -132,6 +146,10 @@ export function SessionSetup({
       onStartUnlimitedPractice();
     } else if (selectedMode === 'plab') {
       onStartAuthenticTimedPractice(selectedCount);
+    } else if (selectedMode === 'adaptive') {
+      onStartAdaptivePractice(selectedCount);
+    } else if (selectedMode === 'incorrect-only') {
+      onStartIncorrectOnlyPractice(selectedCount);
     }
   };
 
