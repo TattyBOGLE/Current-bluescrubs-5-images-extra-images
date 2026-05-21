@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
+import { buildDynamicLink } from "@/lib/clinical-links";
 import type { NICERef } from "@/lib/clinical-links";
 
 interface RevisionPanelProps {
@@ -18,6 +19,9 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
 
   const keyClueMatch = exam?.text.match(/['"](.*?)['"]/);
   const keyClue = keyClueMatch ? keyClueMatch[1] : null;
+
+  const qTopic = question?.topic || question?.category || '';
+  const visualSummaryUrl = buildDynamicLink('NICE', qTopic)?.visualUrl ?? null;
 
   return (
     <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
@@ -65,6 +69,17 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                       {pearl.text.split('.')[0]}.
                     </p>
                   </>
+                )}
+                {visualSummaryUrl && (
+                  <a
+                    href={visualSummaryUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 hover:underline mt-1"
+                  >
+                    📄 Visual Summary PDF
+                    <ExternalLink size={12} aria-hidden="true" />
+                  </a>
                 )}
               </div>
             ) : (

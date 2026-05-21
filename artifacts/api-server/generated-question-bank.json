@@ -12382,5 +12382,215 @@
       "CKS": "https://cks.nice.org.uk/topics/sepsis"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian male presents to the clinic for a routine check-up. His blood pressure is consistently measured at 150/95 mmHg. He has no significant past medical history and is not currently on any medication. According to current UK guidelines, what is the most appropriate first-line treatment for this patient?",
+    "options": [
+      "Lisinopril",
+      "Amlodipine",
+      "Hydrochlorothiazide",
+      "Losartan",
+      "Bisoprolol"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Lisinopril. According to NICE NG136 (2023), for a patient under 55 years of age who is not of Black African or African Caribbean family origin, an ACE inhibitor such as Lisinopril is recommended as the first-line treatment for hypertension. This patient's age and ethnicity fit this criterion. Amlodipine is preferred in patients over 55 or those of Black African or African Caribbean descent. Hydrochlorothiazide is a thiazide-like diuretic, typically added at step 3 of the treatment plan. Losartan is an ARB, used if ACE inhibitors are not tolerated. Bisoprolol is a beta-blocker, not recommended first-line unless there are other indications such as heart failure. Remember: 'ACE <55, Amlodipine >55' for initial hypertension management.",
+    "mnemonic": "ACE <55, Amlodipine >55",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 30-year-old woman presents with a history of asthma managed solely with a salbutamol inhaler. She reports increasing symptoms and uses her inhaler more than three times a week. According to the latest UK asthma guidelines, what is the most appropriate next step in management?",
+    "options": [
+      "Start low-dose ICS with SABA",
+      "Switch to as-needed low-dose ICS/formoterol",
+      "Add LABA to SABA",
+      "Continue SABA and start regular low-dose ICS",
+      "Refer to a specialist"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to switch to as-needed low-dose ICS/formoterol, as per the NICE NG245 (2024) guidelines. This new approach recommends Anti-Inflammatory Reliever (AIR) therapy for adults newly diagnosed or currently on SABA-only treatment. The guideline emphasizes not using SABA monotherapy and instead recommends an ICS/formoterol combination inhaler to both prevent and relieve symptoms. Starting a low-dose ICS with SABA or adding LABA to SABA are considered outdated strategies. Continuing SABA and starting regular low-dose ICS is also not advised under the new guidelines. Specialist referral is unnecessary at this stage. Remember: 'AIR for adults'—as-needed ICS/formoterol replaces SABA.",
+    "mnemonic": "AIR for adults",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 55-year-old man with type 2 diabetes and a BMI of 36 kg/m² has an HbA1c of 60 mmol/mol despite being on maximum dose metformin. He has no history of cardiovascular disease. What is the most appropriate next step in his management according to UK guidelines?",
+    "options": [
+      "Add a sulfonylurea",
+      "Add an SGLT-2 inhibitor",
+      "Start insulin therapy",
+      "Add a GLP-1 receptor agonist",
+      "Switch to a DPP-4 inhibitor"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is to add a GLP-1 receptor agonist. According to NICE NG28 (2022), for a patient with type 2 diabetes who has a BMI ≥35 kg/m² and is inadequately controlled on metformin, adding a GLP-1 receptor agonist is appropriate. This option provides weight loss benefits and improved glycemic control. Adding a sulfonylurea is not favored due to the risk of hypoglycemia. SGLT-2 inhibitors are more suitable if there is established CVD or high risk. Insulin therapy is generally reserved for later stages if other treatments fail. Switching to a DPP-4 inhibitor would not address the patient's weight issues. Remember: 'GLP-1 for BMI ≥35'.",
+    "mnemonic": "GLP-1 for BMI ≥35",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_3",
+    "topic": "Stroke Management",
+    "category": "all",
+    "question": "A 68-year-old woman is brought to the emergency department with sudden onset of right-sided weakness and aphasia. CT scan confirms an ischaemic stroke. She presents within 3 hours of symptom onset. What is the most appropriate initial treatment?",
+    "options": [
+      "Aspirin 300 mg stat",
+      "Alteplase IV",
+      "Clopidogrel 75 mg",
+      "Endovascular thrombectomy",
+      "Dual antiplatelet therapy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Alteplase IV. According to NICE NG128 (2019), thrombolysis with alteplase is indicated for patients presenting with ischaemic stroke within 4.5 hours of symptom onset, provided there are no contraindications. This patient fits the criteria for thrombolysis due to her early presentation. Aspirin is given after 24 hours of thrombolysis if no haemorrhage is present. Clopidogrel and dual antiplatelet therapy are not first-line in acute settings. Endovascular thrombectomy is considered if large artery occlusion is present and within 6 hours. Remember: 'Thrombolyse within 4.5 hours'.",
+    "mnemonic": "Thrombolyse within 4.5 hours",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_4",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 68-year-old man presents with fever, cough, and dyspnea. His CURB-65 score is 2. Chest X-ray shows left lower lobe consolidation. What is the most appropriate antibiotic treatment for this patient?",
+    "options": [
+      "Amoxicillin",
+      "Co-amoxiclav",
+      "Amoxicillin and clarithromycin",
+      "Levofloxacin",
+      "Doxycycline"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Amoxicillin and clarithromycin. According to NICE NG250 (2025), a CURB-65 score of 2 suggests moderate severity pneumonia, which requires dual antibiotic therapy with amoxicillin and clarithromycin to cover typical and atypical pathogens. Amoxicillin alone is suitable for mild cases. Co-amoxiclav is reserved for severe cases or if there is suspicion of resistant pathogens. Levofloxacin and doxycycline are alternatives in penicillin allergy, not first-line here. Remember: 'CURB 2: Amox+Clari'.",
+    "mnemonic": "CURB 2: Amox+Clari",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_5",
+    "topic": "CKD Management",
+    "category": "all",
+    "question": "A 65-year-old woman with chronic kidney disease stage 3b (eGFR 40 mL/min/1.73m²) and hypertension is currently on lisinopril 10 mg daily. Her BP is 150/90 mmHg. What is the most appropriate next step in management?",
+    "options": [
+      "Increase lisinopril dose",
+      "Add indapamide",
+      "Add amlodipine",
+      "Start spironolactone",
+      "Switch to losartan"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to add indapamide. According to NICE NG203 (2021) and NG136 (2023), in patients with CKD and hypertension who are not at target blood pressure despite ACE inhibitor therapy, adding a thiazide-like diuretic such as indapamide is appropriate. Increasing lisinopril dose is possible, but adding a diuretic is often preferred to enhance effect. Amlodipine can be used, but diuretics are prioritized in CKD stages. Spironolactone is not recommended due to hyperkalemia risk in CKD. Switching to losartan achieves similar effects as lisinopril. Remember: 'ACE + Indapamide for CKD HTN'.",
+    "mnemonic": "ACE + Indapamide for CKD HTN",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng203",
+      "CKS": "https://cks.nice.org.uk/topics/chronic-kidney-disease/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_6",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 25-year-old woman with focal epilepsy is planning pregnancy. She is currently on carbamazepine. What is the most appropriate management option regarding her medication?",
+    "options": [
+      "Continue carbamazepine",
+      "Switch to sodium valproate",
+      "Switch to lamotrigine",
+      "Add folic acid 400 mcg daily",
+      "Discontinue all antiepileptics"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to continue carbamazepine. NICE NG217 (2022) guidelines suggest that carbamazepine is a suitable choice for women of childbearing potential as it poses less teratogenic risk than sodium valproate, which is contraindicated in pregnancy due to high risk of fetal malformations. Switching to lamotrigine could be considered, but carbamazepine is appropriate if it effectively controls seizures. Adding folic acid is necessary, but the recommended dose pre-conception for women on antiepileptics is 5 mg, not 400 mcg. Discontinuing antiepileptics is not advised due to seizure risk. Remember: 'Carbamazepine is safer in pregnancy'.",
+    "mnemonic": "Carbamazepine is safer in pregnancy",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_7",
+    "topic": "Heart Failure Management",
+    "category": "all",
+    "question": "A 70-year-old man with heart failure with reduced ejection fraction (HFrEF) is on lisinopril, bisoprolol, and furosemide. He still experiences exertional dyspnea. What is the next step in optimizing his treatment?",
+    "options": [
+      "Add spironolactone",
+      "Increase furosemide dose",
+      "Switch bisoprolol to carvedilol",
+      "Add digoxin",
+      "Start ivabradine"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to add spironolactone. NICE NG106 (2018, updated 2023) recommends adding a mineralocorticoid receptor antagonist (MRA) like spironolactone for patients with HFrEF who remain symptomatic despite being on an ACE inhibitor and beta-blocker. Increasing furosemide dose is primarily for fluid overload, not chronic management. Switching beta-blockers is not advised unless intolerant. Digoxin is used in atrial fibrillation or as a last resort. Ivabradine is considered if heart rate >75 bpm on maximum beta-blocker. Remember: 'ACEi, BB, MRA, SGLT2: The Quad for HFrEF'.",
+    "mnemonic": "ACEi, BB, MRA, SGLT2: The Quad for HFrEF",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_8",
+    "topic": "Migraine Management",
+    "category": "all",
+    "question": "A 40-year-old woman suffers from frequent debilitating migraines. She has tried paracetamol and ibuprofen with little relief. What is the most appropriate acute treatment for her migraines?",
+    "options": [
+      "Amitriptyline",
+      "Sumatriptan",
+      "Propranolol",
+      "Topiramate",
+      "Morphine"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Sumatriptan. According to NICE CG150 (2012), triptans are the recommended treatment for acute migraine attacks, particularly when NSAIDs or simple analgesics are ineffective. Amitriptyline and propranolol are for prophylaxis, not acute management. Topiramate is also a prophylactic agent. Morphine and other opioids are not recommended for migraines due to the risk of medication overuse headache. Remember: 'Trip before you trip — Triptan for migraine'.",
+    "mnemonic": "Trip before you trip — Triptan for migraine",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg150",
+      "CKS": "https://cks.nice.org.uk/topics/migraine/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779366432974_9",
+    "topic": "COPD Management",
+    "category": "all",
+    "question": "A 68-year-old man with a 40-pack-year smoking history presents with worsening breathlessness. His FEV₁ is 45% of predicted. He is currently using a salbutamol inhaler. What is the most appropriate next step in managing his COPD?",
+    "options": [
+      "Add a long-acting muscarinic antagonist (LAMA)",
+      "Add a long-acting beta-agonist (LABA)",
+      "Start inhaled corticosteroid (ICS)",
+      "Add LABA + LAMA",
+      "Initiate oxygen therapy"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is to add LABA + LAMA. NICE NG115 (2018) guidelines recommend dual bronchodilator therapy for patients with moderate COPD and frequent symptoms, like this patient with FEV₁ 45%. A LAMA or LABA alone is insufficient. ICS is reserved for patients with frequent exacerbations and eosinophilic inflammation. Oxygen therapy is for patients with chronic hypoxemia. Remember: 'Double up for moderate COPD — LABA + LAMA'.",
+    "mnemonic": "Double up for moderate COPD — LABA + LAMA",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd/"
+    },
+    "difficulty": "intermediate"
   }
 ]

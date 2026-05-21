@@ -14,9 +14,6 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
   const cat = (question.category || '').toLowerCase();
   const isEthics = /ethics|consent|professionalism|communication|legal|capacity|safeguarding/i.test(cat + ' ' + qTopic.toLowerCase());
 
-  const primaryNiceLink = buildDynamicLink('NICE', qTopic);
-  const visualSummaryUrl = primaryNiceLink?.visualUrl ?? null;
-
   const specialtyChips: { label: string; url: string }[] = [];
   if (cat.includes('cardio')) { const l = buildDynamicLink('ESC Guidelines', qTopic); if (l) specialtyChips.push({ label: l.label, url: l.url }); }
   if (cat.includes('respiratory')) { const l = buildDynamicLink('BTS Guidelines', qTopic); if (l) specialtyChips.push({ label: l.label, url: l.url }); }
@@ -76,13 +73,6 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
                 </a>
                 <p className="text-xs text-slate-500 mt-0.5 italic">{ref.relevance}</p>
               </div>
-              {ref.primary && visualSummaryUrl && (
-                <a href={visualSummaryUrl} target="_blank" rel="noopener noreferrer"
-                  className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 border border-amber-200 hover:bg-amber-100 text-amber-700 text-xs font-medium">
-                  <ExternalLink className="w-3 h-3" />
-                  Visual Summary PDF
-                </a>
-              )}
             </div>
           ))}
 
@@ -124,25 +114,15 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
             const refTitle = typeof reference === 'string' ? reference : reference.title || reference.text || '';
             const builtLink = buildDynamicLink(refTitle, qTopic);
             const refUrl = (typeof reference === 'object' && reference.url) || builtLink?.url || null;
-            const visualUrl = builtLink?.visualUrl ?? null;
             if (!refUrl) return null;
             return (
-              <div key={index} className="bg-white rounded-lg border border-slate-200 p-3 flex items-start justify-between gap-3">
-                <div className="flex-1 min-w-0">
-                  <p className="text-xs text-slate-500 mb-1">{refTitle}</p>
-                  <a href={refUrl} target="_blank" rel="noopener noreferrer"
-                    className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2 inline-flex items-center gap-1">
-                    View Guidelines
-                    <ExternalLink className="w-3 h-3 flex-shrink-0" />
-                  </a>
-                </div>
-                {visualUrl && (
-                  <a href={visualUrl} target="_blank" rel="noopener noreferrer"
-                    className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 border border-amber-200 hover:bg-amber-100 text-amber-700 text-xs font-medium">
-                    <ExternalLink className="w-3 h-3" />
-                    Visual Summary PDF
-                  </a>
-                )}
+              <div key={index} className="bg-white rounded-lg border border-slate-200 p-3">
+                <p className="text-xs text-slate-500 mb-1">{refTitle}</p>
+                <a href={refUrl} target="_blank" rel="noopener noreferrer"
+                  className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2 inline-flex items-center gap-1">
+                  View Guidelines
+                  <ExternalLink className="w-3 h-3 flex-shrink-0" />
+                </a>
               </div>
             );
           })}
