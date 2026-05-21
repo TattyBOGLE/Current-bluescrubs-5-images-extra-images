@@ -8,6 +8,7 @@ import { I18nProvider } from "@/hooks/useI18n";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import NotFound from "@/pages/not-found";
+import { useAuth } from "@/hooks/use-auth";
 
 const Landing = lazy(() => import("@/pages/landing"));
 const Home = lazy(() => import("@/pages/home"));
@@ -49,18 +50,36 @@ const Security = lazy(() => import("@/pages/security"));
 const Settings = lazy(() => import("@/pages/settings"));
 const Team = lazy(() => import("@/pages/team"));
 
-// Mock user for demo - in real app this would come from auth context
-const DEMO_USER = {
-  username: "Dr. Sarah Ahmed",
-  studyStreak: 12
-};
-
 function PageLoader() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="flex flex-col items-center gap-3">
         <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
         <p className="text-sm text-gray-500">Loading...</p>
+      </div>
+    </div>
+  );
+}
+
+function LoginScreen({ onLogin }: { onLogin: () => void }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center gap-6 max-w-sm w-full mx-4">
+        <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center">
+          <svg className="w-9 h-9 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.82,11.69,4.82,12s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+          </svg>
+        </div>
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900">BlueScrubs</h1>
+          <p className="text-gray-500 mt-1 text-sm">PLAB exam preparation platform</p>
+        </div>
+        <button
+          onClick={onLogin}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+        >
+          Log in
+        </button>
       </div>
     </div>
   );
@@ -100,17 +119,34 @@ class ChunkErrorBoundary extends React.Component<
 }
 
 function Router() {
+  const { user, isLoading, isAuthenticated, login } = useAuth();
+
   useEffect(() => {
     import("@/pages/plab1-new");
     import("@/pages/dashboard");
   }, []);
+
+  if (isLoading) {
+    return <PageLoader />;
+  }
+
+  if (!isAuthenticated) {
+    return <LoginScreen onLogin={login} />;
+  }
+
+  const navUser = {
+    username: user?.firstName
+      ? `${user.firstName} ${user.lastName ?? ""}`.trim()
+      : (user?.username ?? user?.email ?? "User"),
+    studyStreak: user?.studyStreak ?? 0,
+  };
 
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
         <Route path="/">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <PLAB1New />
             </div>
@@ -119,7 +155,7 @@ function Router() {
         <Route path="/landing" component={Landing} />
         <Route path="/home">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Home />
             </div>
@@ -127,7 +163,7 @@ function Router() {
         </Route>
         <Route path="/dashboard">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Dashboard />
             </div>
@@ -136,7 +172,7 @@ function Router() {
 
         <Route path="/plab1">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <PLAB1New />
             </div>
@@ -144,7 +180,7 @@ function Router() {
         </Route>
         <Route path="/plab1-new">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <PLAB1New />
             </div>
@@ -152,7 +188,7 @@ function Router() {
         </Route>
         <Route path="/flashcards">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <InteractiveFlashcards />
             </div>
@@ -160,7 +196,7 @@ function Router() {
         </Route>
         <Route path="/clinical-guides">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <ClinicalGuides />
             </div>
@@ -168,7 +204,7 @@ function Router() {
         </Route>
         <Route path="/analytics/live">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <LiveAnalytics />
             </div>
@@ -177,7 +213,7 @@ function Router() {
 
         <Route path="/leaderboards">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Leaderboards />
             </div>
@@ -185,7 +221,7 @@ function Router() {
         </Route>
         <Route path="/plab2-osce">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Plab2Osce />
             </div>
@@ -193,7 +229,7 @@ function Router() {
         </Route>
         <Route path="/user-format-stations">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <UserFormatStations />
             </div>
@@ -201,7 +237,7 @@ function Router() {
         </Route>
         <Route path="/premium">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Premium />
             </div>
@@ -210,7 +246,7 @@ function Router() {
 
         <Route path="/ask-ai">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <AskAI />
             </div>
@@ -220,7 +256,7 @@ function Router() {
 
         <Route path="/ai-study-tools">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <AIStudyTools />
             </div>
@@ -229,7 +265,7 @@ function Router() {
 
         <Route path="/adaptive-learning">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <AdaptiveLearning />
             </div>
@@ -238,7 +274,7 @@ function Router() {
 
         <Route path="/community">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Community />
             </div>
@@ -247,7 +283,7 @@ function Router() {
 
         <Route path="/pricing">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Pricing />
             </div>
@@ -256,7 +292,7 @@ function Router() {
 
         <Route path="/interactive-patient">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <InteractivePatientPage />
             </div>
@@ -265,7 +301,7 @@ function Router() {
 
         <Route path="/personalized-paths">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <PersonalisedPaths />
             </div>
@@ -274,7 +310,7 @@ function Router() {
 
         <Route path="/video-osce">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <VideoOSCE />
             </div>
@@ -283,7 +319,7 @@ function Router() {
 
         <Route path="/more">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <More />
             </div>
@@ -292,7 +328,7 @@ function Router() {
 
         <Route path="/smart-planner">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <SmartPlanner />
             </div>
@@ -301,7 +337,7 @@ function Router() {
 
         <Route path="/cultural-training">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <CulturalTraining />
             </div>
@@ -310,7 +346,7 @@ function Router() {
 
         <Route path="/mentors">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Mentors />
             </div>
@@ -319,7 +355,7 @@ function Router() {
 
         <Route path="/gamification">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Gamification />
             </div>
@@ -328,7 +364,7 @@ function Router() {
 
         <Route path="/international-exams">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <InternationalExamsPage />
             </div>
@@ -337,7 +373,7 @@ function Router() {
 
         <Route path="/plab-independence">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <PLABIndependence />
             </div>
@@ -346,7 +382,7 @@ function Router() {
 
         <Route path="/translation-dashboard">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <TranslationDashboard />
             </div>
@@ -355,7 +391,7 @@ function Router() {
 
         <Route path="/content-independence">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <ContentIndependence />
             </div>
@@ -364,7 +400,7 @@ function Router() {
 
         <Route path="/complete-independence">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <CompleteIndependence />
             </div>
@@ -373,7 +409,7 @@ function Router() {
 
         <Route path="/hybrid-ai">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <HybridAIDashboard />
             </div>
@@ -382,7 +418,7 @@ function Router() {
 
         <Route path="/leaderboard">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Leaderboards />
             </div>
@@ -391,7 +427,7 @@ function Router() {
 
         <Route path="/analytics">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Analytics />
             </div>
@@ -400,7 +436,7 @@ function Router() {
 
         <Route path="/spaced-repetition">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <SpacedRepetition />
             </div>
@@ -409,7 +445,7 @@ function Router() {
 
         <Route path="/placements">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Placements />
             </div>
@@ -418,7 +454,7 @@ function Router() {
 
         <Route path="/offline-mode">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Dashboard />
             </div>
@@ -427,7 +463,7 @@ function Router() {
 
         <Route path="/generation">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <GenerationStatus />
             </div>
@@ -436,7 +472,7 @@ function Router() {
 
         <Route path="/cost-calculator">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <CostCalculator />
             </div>
@@ -445,7 +481,7 @@ function Router() {
 
         <Route path="/how-to">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <HowTo />
             </div>
@@ -454,7 +490,7 @@ function Router() {
 
         <Route path="/security">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Security />
             </div>
@@ -463,7 +499,7 @@ function Router() {
 
         <Route path="/settings">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Settings />
             </div>
@@ -472,7 +508,7 @@ function Router() {
 
         <Route path="/team">
           <div className="flex flex-col min-h-screen">
-            <Navigation user={DEMO_USER} />
+            <Navigation user={navUser} />
             <div className="flex-1 pb-16 md:pb-0">
               <Team />
             </div>

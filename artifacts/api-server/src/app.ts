@@ -1,7 +1,10 @@
 import express, { type Express, type Request, type Response, type NextFunction } from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import pinoHttp from "pino-http";
 import { logger } from "./lib/logger";
+import { authMiddleware } from "./middlewares/authMiddleware";
+import router from "./routes/index";
 import { registerRoutes } from "./routes";
 
 const app: Express = express();
@@ -25,9 +28,13 @@ app.use(
     },
   }),
 );
-app.use(cors());
+app.use(cors({ credentials: true, origin: true }));
+app.use(cookieParser());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
+app.use(authMiddleware);
+
+app.use("/api", router);
 
 // Register all BlueScrubsPrep routes (async init at startup)
 registerRoutes(app).catch((err) => {

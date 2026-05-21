@@ -1,0 +1,353 @@
+Implement Replit Auth so the app has real user identity instead 
+of the current localStorage-only mock with hardcoded userId: 1.
+Replit provides a built-in auth system that works out of the box
+in the Replit environment.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BEFORE YOU START — READ THIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Check if @replit/repl-auth is already in api-server/package.json.
+If not, install it:
+  pnpm add @replit/repl-auth
+
+Also check if the sessions table already exists in 
+shared/schema.ts — it does, so do not recreate it.
+
+The database schema already has:
+  - sessions table (for session storage)
+  - users table with: id (varchar), email, firstName, 
+    lastName, username, profileImageUrl, currentStage, 
+    studyStreak, totalPoints, country, flagEmoji
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1 — BACKEND: SESSION MIDDLEWARE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In api-server/src/index.ts (or wherever Express is 
+initialised), add session middleware before routes:
+
+  import session from 'express-session';
+  import connectPgSimple from 'connect-pg-simple';
+  import { pool } from './db';
+
+  const PgSession = connectPgSimple(session);
+
+  app.use(session({
+    store: new PgSession({
+      pool,
+      tableName: 'sessions',
+      createTableIfMissing: false,
+    }),
+    secret: process.env.SESSION_SECRET || 'bluescrubs-dev-secret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: process.env.NODE_ENV === 'production',
+      httpOnly: true,
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    },
+  }));
+
+Install the required packages if not present:
+  pnpm add express-session connect-pg-simple
+  pnpm add -D @types/express-session @types/connect-pg-simple
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2 — BACKEND: AUTH ROUTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In routes.ts, add these four auth endpoints near the 
+top of registerRoutes(), before any other routes:
+
+  import { getUserByReplit } from '@replit/repl-auth';
+
+  // GET /api/auth/user — returns current session user
+  app.get('/api/auth/user', async (req, res) => {
+    try {
+      const replUser = getUserByReplit(req);
+      if (!replUser) {
+        return res.json({ user: null });
+      }
+
+      // Find or create user in DB
+      let user = await storage.getUserByReplitId(replUser.id);
+      if (!user) {
+        user = await storage.createUser({
+          id: replUser.id,
+          username: replUser.name || replUser.id,
+          email: null,
+          firstName: replUser.name?.split(' ')[0] || null,
+          lastName: replUser.name?.split(' ')[1] || null,
+          profileImageUrl: replUser.profileImage || null,
+          currentStage: 'plab1',
+          studyStreak: 0,
+          totalPoints: 0,
+        });
+      }
+
+      // Store in session
+      (req.session as any).userId = user.id;
+      res.json({ user });
+    } catch (err) {
+      console.error('Auth error:', err);
+      res.json({ user: null });
+    }
+  });
+
+  // POST /api/auth/logout — clear session
+  app.post('/api/auth/logout', (req, res) => {
+    req.session.destroy(() => {
+      res.json({ success: true });
+    });
+  });
+
+  // GET /api/auth/me — returns session user from DB
+  app.get('/api/auth/me', async (req, res) => {
+    const userId = (req.session as any)?.userId;
+    if (!userId) return res.status(401).json({ error: 'Not authenticated' });
+    try {
+      const user = await storage.getUser(userId);
+      if (!user) return res.status(401).json({ error: 'User not found' });
+      res.json({ user });
+    } catch (err) {
+      res.status(500).json({ error: 'Server error' });
+    }
+  });
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3 — BACKEND: STORAGE METHODS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In api-server/src/storage.ts, add these methods to 
+the IStorage interface and DatabaseStorage class 
+if they do not already exist:
+
+  getUserByReplitId(replitId: string): Promise<User | undefined>
+  
+  Implementation:
+    return db.select().from(users)
+      .where(eq(users.id, replitId))
+      .limit(1)
+      .then(rows => rows[0]);
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4 — BACKEND: AUTH MIDDLEWARE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create a reusable middleware for protected routes:
+
+  export function requireAuth(req: any, res: any, next: any) {
+    const userId = req.session?.userId;
+    if (!userId) {
+      return res.status(401).json({ 
+        error: 'Authentication required' 
+      });
+    }
+    req.userId = userId;
+    next();
+  }
+
+Apply requireAuth to endpoints that should be 
+user-specific:
+  POST /api/leaderboard/submit
+  POST /api/analytics/test-completion
+  GET  /api/adaptive/analytics/:userId
+  POST /api/adaptive/start-session
+  POST /api/adaptive/process-answer
+
+Do NOT apply to question generation, study tips, 
+explanations, or reference endpoints — these should 
+remain accessible without login.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5 — FRONTEND: AUTH HOOK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Replace src/hooks/use-auth.ts entirely with:
+
+  import { useState, useEffect } from 'react';
+
+  export interface AuthUser {
+    id: string;
+    username: string;
+    firstName?: string | null;
+    lastName?: string | null;
+    profileImageUrl?: string | null;
+    totalPoints: number;
+    studyStreak: number;
+    currentStage: string;
+  }
+
+  interface AuthState {
+    user: AuthUser | null;
+    isLoading: boolean;
+    isAuthenticated: boolean;
+  }
+
+  export function useAuth(): AuthState {
+    const [state, setState] = useState<AuthState>({
+      user: null,
+      isLoading: true,
+      isAuthenticated: false,
+    });
+
+    useEffect(() => {
+      fetch('/api/auth/user', { credentials: 'include' })
+        .then(r => r.json())
+        .then(data => {
+          setState({
+            user: data.user ?? null,
+            isLoading: false,
+            isAuthenticated: !!data.user,
+          });
+        })
+        .catch(() => {
+          setState({ user: null, isLoading: false, isAuthenticated: false });
+        });
+    }, []);
+
+    return state;
+  }
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 6 — FRONTEND: LOGIN GATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create src/components/AuthGate.tsx:
+
+  import { useAuth } from '@/hooks/use-auth';
+
+  export function AuthGate({ children }: { children: React.ReactNode }) {
+    const { user, isLoading } = useAuth();
+
+    if (isLoading) {
+      return (
+        <div className="min-h-screen flex items-center 
+                        justify-center bg-gray-50">
+          <div className="w-8 h-8 border-2 border-blue-600 
+                          border-t-transparent rounded-full 
+                          animate-spin" />
+        </div>
+      );
+    }
+
+    if (!user) {
+      return (
+        <div className="min-h-screen flex items-center 
+                        justify-center bg-gray-50 p-4">
+          <div className="bg-white rounded-2xl shadow-sm border 
+                          border-gray-100 p-8 max-w-sm w-full 
+                          text-center">
+            <div className="w-16 h-16 bg-blue-600 rounded-2xl 
+                            flex items-center justify-center 
+                            mx-auto mb-4">
+              <span className="text-white text-2xl font-bold">B</span>
+            </div>
+            <h1 className="text-xl font-bold text-gray-900 mb-2">
+              BlueScrubs
+            </h1>
+            <p className="text-gray-500 text-sm mb-6">
+              Sign in with your Replit account to access 
+              your personalised PLAB preparation.
+            </p>
+            
+              href="https://replit.com/auth_with_repl_site?domain=YOUR_REPLIT_DOMAIN"
+              className="block w-full bg-blue-600 hover:bg-blue-700 
+                         text-white font-medium py-2.5 px-4 
+                         rounded-lg transition-colors text-sm"
+            >
+              Sign in with Replit
+            </a>
+          </div>
+        </div>
+      );
+    }
+
+    return <>{children}</>;
+  }
+
+  Replace YOUR_REPLIT_DOMAIN with the actual Replit 
+  deployment domain from process.env.REPL_SLUG and 
+  process.env.REPL_OWNER — or hardcode it from the 
+  Replit project URL.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 7 — WIRE AUTH INTO APP.tsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Wrap the Router in App.tsx with AuthGate:
+
+  import { AuthGate } from '@/components/AuthGate';
+
+  export default function App() {
+    return (
+      <ChunkErrorBoundary>
+        <QueryClientProvider client={queryClient}>
+          <I18nProvider>
+            <TooltipProvider>
+              <Toaster />
+              <AuthGate>
+                <Router />
+              </AuthGate>
+            </TooltipProvider>
+          </I18nProvider>
+        </QueryClientProvider>
+      </ChunkErrorBoundary>
+    );
+  }
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 8 — REPLACE HARDCODED userId: 1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In plab1-new.tsx:
+
+1. Import useAuth at the top:
+     import { useAuth } from '@/hooks/use-auth';
+
+2. Inside the PLAB1New component, add:
+     const { user } = useAuth();
+
+3. Find the two places with userId: 1 (lines ~1041 
+   and ~1082) and replace with:
+     userId: user?.id ?? 'guest'
+
+4. In the Navigation component (navigation.tsx), 
+   replace the hardcoded DEMO_USER object in App.tsx 
+   with the real user from useAuth():
+     const { user } = useAuth();
+     const navUser = user 
+       ? { username: user.username, studyStreak: user.studyStreak }
+       : null;
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 9 — UPDATE LEADERBOARD SUBMIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In plab1-new.tsx where /api/leaderboard/submit is 
+called, replace the username: 'Guest' placeholder 
+with the real user:
+
+  body: JSON.stringify({
+    username: user?.username ?? 'Guest',
+    userId: user?.id ?? null,
+    score: correctCount,
+    totalQuestions: totalAnswered,
+    percentage,
+    category: selectedCategory,
+    blockType,
+    timeSpent: totalTime,
+    isTimedSession,
+  })
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DO NOT CHANGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Any quiz logic, question generation, or AI endpoints
+- The database schema — users and sessions tables 
+  already exist, do not run migrations that alter them
+- Rate limiting added in the previous prompt
+- Any page other than those explicitly mentioned above
+- The existing Drizzle db connection and pool setup

@@ -33,9 +33,11 @@ import { useTextToSpeech } from "@/hooks/useTextToSpeech";
 import { useQuestionStopwatch } from "@/hooks/use-quiz";
 import { useProgress } from "@/hooks/use-progress";
 import { useLocalAnalytics } from "@/hooks/useLocalAnalytics";
+import { useAuth } from "@/hooks/use-auth";
 
 export default function PLAB1New() {
   const { toast } = useToast();
+  const { user } = useAuth();
 
   // Hero image loading state
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
@@ -159,7 +161,7 @@ export default function PLAB1New() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          username: 'Guest',
+          username: user?.firstName ?? 'Guest',
           score: sessionData.correctAnswers,
           totalQuestions: sessionData.totalQuestions,
           percentage,
@@ -1089,7 +1091,7 @@ export default function PLAB1New() {
 
       try {
         await apiRequest('POST', '/api/gamification/award-points', {
-          userId: 1,
+          userId: user?.id ?? 'guest',
           points: sessionPoints,
           reason: 'session_complete',
           sessionData: {
@@ -1130,7 +1132,7 @@ export default function PLAB1New() {
 
     try {
       await apiRequest('POST', '/api/gamification/award-points', {
-        userId: 1,
+        userId: user?.id ?? 'guest',
         points: sessionPoints,
         reason: 'session_paused',
         sessionData: {
