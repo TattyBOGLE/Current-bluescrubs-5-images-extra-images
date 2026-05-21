@@ -80,7 +80,6 @@ interface SessionSetupProps {
   selectedDifficulty: string;
   setSelectedDifficulty: (v: string) => void;
   isGeneratingQuestions: boolean;
-  setShowNiceGuide: (v: boolean) => void;
   translateText: (text: string) => string;
   onStartPractice: (count: number) => void;
   onStartTimedPractice: (minutes: number) => void;
@@ -107,7 +106,6 @@ export function SessionSetup({
   selectedDifficulty,
   setSelectedDifficulty,
   isGeneratingQuestions,
-  setShowNiceGuide,
   translateText,
   onStartPractice,
   onStartTimedPractice,

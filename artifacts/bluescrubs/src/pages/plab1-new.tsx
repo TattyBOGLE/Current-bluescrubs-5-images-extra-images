@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
-  Clock, ArrowRight, ArrowLeft, Award, CheckCircle, FileText, ExternalLink,
+  Clock, ArrowRight, ArrowLeft, Award, CheckCircle, ExternalLink,
   BookOpen, Target, Brain, Lightbulb, X, MessageCircle, Flame
 } from "lucide-react";
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
@@ -13,6 +13,7 @@ import { formatTime, calculatePoints, type AIExplanation, type AIStudyTips } fro
 import { GamificationBar } from "@/components/plab1/GamificationBar";
 import { QuizQuestion } from "@/components/plab1/QuizQuestion";
 import { ExplanationPanel } from "@/components/plab1/ExplanationPanel";
+import { FlashcardsFromQuestion } from "@/components/plab1/FlashcardsFromQuestion";
 import { StudyTipsPanel } from "@/components/plab1/StudyTipsPanel";
 import { SessionNavBar } from "@/components/plab1/SessionNavBar";
 import { SessionSetup } from "@/components/plab1/SessionSetup";
@@ -85,8 +86,6 @@ export default function PLAB1New() {
   // AI Tutor state
   const [showAITutor, setShowAITutor] = useState(false);
 
-  // NICE NG136 Guide state
-  const [showNiceGuide, setShowNiceGuide] = useState(false);
 
   // Session results tracking
   const [sessionResults, setSessionResults] = useState<Array<{
@@ -989,7 +988,6 @@ export default function PLAB1New() {
         selectedDifficulty={selectedDifficulty}
         setSelectedDifficulty={setSelectedDifficulty}
         isGeneratingQuestions={isGeneratingQuestions}
-        setShowNiceGuide={setShowNiceGuide}
         translateText={translateText}
         onStartPractice={startPractice}
         onStartTimedPractice={startTimedPractice}
@@ -1130,14 +1128,20 @@ export default function PLAB1New() {
         </Button>
       )}
 
-      {/* NICE NG136 Guide Floating Button */}
-      <Button
-        onClick={() => setShowNiceGuide(true)}
-        className="fixed bottom-40 right-4 w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 shadow-lg z-50 flex items-center justify-center"
-        title="NICE NG136 + PLAB MCQ"
-      >
-        <FileText className="w-6 h-6 text-white" />
-      </Button>
+      {/* AI Flashcard Generator Floating Button */}
+      {showExplanation && selectedAnswer && currentQuestion && (
+        <div className="fixed bottom-40 right-4 z-50">
+          <FlashcardsFromQuestion
+            question={currentQuestion}
+            selectedAnswerIndex={selectedAnswer}
+            isCorrect={(() => {
+              const correctIdx = currentQuestion?.correctAnswer ?? currentQuestion?.correct_answer ?? currentQuestion?.answer;
+              return parseInt(selectedAnswer) === (typeof correctIdx === 'string' ? correctIdx.charCodeAt(0) - 65 : correctIdx);
+            })()}
+            floating
+          />
+        </div>
+      )}
 
       {/* AI Tutor Modal */}
       <AITutor
@@ -1218,17 +1222,16 @@ export default function PLAB1New() {
         </div>
       )}
 
-      {/* NICE NG136 + PLAB MCQ Guide Overlay */}
-      {showNiceGuide && (
+      {/* NICE NG136 overlay removed — replaced by AI Flashcard Generator */}
+      {false && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <FileText className="w-6 h-6 text-green-600" />
                 <h2 className="text-2xl font-bold text-gray-900">NICE NG136 + PLAB MCQ Format</h2>
               </div>
               <Button
-                onClick={() => setShowNiceGuide(false)}
+                onClick={() => {}}
                 variant="outline"
                 size="sm"
                 className="hover:bg-gray-100"

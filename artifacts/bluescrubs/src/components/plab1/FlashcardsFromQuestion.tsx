@@ -65,6 +65,7 @@ interface FlashcardsFromQuestionProps {
   };
   selectedAnswerIndex: string;
   isCorrect: boolean;
+  floating?: boolean;
 }
 
 function getTypeStyle(type: string) {
@@ -117,6 +118,7 @@ export function FlashcardsFromQuestion({
   question,
   selectedAnswerIndex,
   isCorrect,
+  floating = false,
 }: FlashcardsFromQuestionProps) {
   const { toast } = useToast();
   const [open, setOpen] = useState(false);
@@ -221,20 +223,35 @@ export function FlashcardsFromQuestion({
 
   return (
     <>
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={handleGenerate}
-        disabled={loading}
-        className="gap-2 border-indigo-200 text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300"
-      >
-        {loading ? (
-          <Loader2 className="w-4 h-4 animate-spin" />
-        ) : (
-          <Sparkles className="w-4 h-4" />
-        )}
-        Generate Flashcards
-      </Button>
+      {floating ? (
+        <button
+          onClick={handleGenerate}
+          disabled={loading}
+          title="Generate AI Flashcards"
+          className="w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 disabled:bg-green-400 shadow-lg flex items-center justify-center transition-colors"
+        >
+          {loading ? (
+            <Loader2 className="w-6 h-6 text-white animate-spin" />
+          ) : (
+            <Sparkles className="w-6 h-6 text-white" />
+          )}
+        </button>
+      ) : (
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleGenerate}
+          disabled={loading}
+          className="gap-2 border-indigo-200 text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300"
+        >
+          {loading ? (
+            <Loader2 className="w-4 h-4 animate-spin" />
+          ) : (
+            <Sparkles className="w-4 h-4" />
+          )}
+          Generate Flashcards
+        </Button>
+      )}
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0">

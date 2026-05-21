@@ -37,17 +37,6 @@ export function ExplanationPanel({
 
   return (
     <div className="space-y-6 mb-8">
-      {/* Generate Flashcards button */}
-      {selectedAnswer !== undefined && selectedAnswer !== "" && (
-        <div className="flex justify-end">
-          <FlashcardsFromQuestion
-            question={currentQuestion}
-            selectedAnswerIndex={selectedAnswer}
-            isCorrect={isCorrect ?? false}
-          />
-        </div>
-      )}
-
       {/* Structured AI explanation (or fallback to legacy bullet list) */}
       <div className="text-gray-800 leading-relaxed space-y-4">
         {aiExplanationLoading && !aiExplanation ? (

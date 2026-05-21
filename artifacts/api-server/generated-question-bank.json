@@ -14424,5 +14424,215 @@
       "NICE": "https://www.nice.org.uk/guidance/ng141"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian male with newly diagnosed hypertension presents to your clinic. His blood pressure readings over the past month have consistently been around 158/94 mmHg. He has no other significant medical history. According to the latest NICE guidelines, which is the most appropriate initial management option for this patient?",
+    "options": [
+      "Start an ACE inhibitor",
+      "Start a calcium channel blocker",
+      "Start a thiazide-like diuretic",
+      "Lifestyle modification only",
+      "Start a beta-blocker"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to start an ACE inhibitor. For patients under 55 years of age and not of Black African or African-Caribbean family origin, the NICE guidelines recommend an ACE inhibitor as the first-line treatment for hypertension (NICE NG136). This patient is 52 years old and Caucasian, fitting the criteria for starting an ACE inhibitor. Calcium channel blockers are recommended for those over 55 or of Black descent. Thiazide-like diuretics are typically added at step 3 of management. Lifestyle modification alone is insufficient given the sustained high readings. Beta-blockers are generally not first-line due to less favorable outcomes compared to other options.",
+    "mnemonic": "Under 55 and not Black, ACE-inhibitor track!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_1",
+    "topic": "Asthma Management in Adults",
+    "category": "all",
+    "question": "A 34-year-old woman with asthma presents with increasing episodes of wheezing and breathlessness. She is currently using a salbutamol inhaler as needed. According to the latest NICE guidelines, what should be the next step in her asthma management?",
+    "options": [
+      "Add a regular low-dose ICS inhaler",
+      "Switch to an as-needed low-dose ICS/formoterol inhaler",
+      "Add a LABA to her current inhaler regimen",
+      "Continue with salbutamol and review in 3 months",
+      "Start a leukotriene receptor antagonist"
+    ],
+    "answer": 1,
+    "explanation": "The answer is to switch to an as-needed low-dose ICS/formoterol inhaler. NICE NG245 (2024) outlines the new approach for asthma management using Anti-Inflammatory Reliever (AIR) therapy. For adults currently using a SABA like salbutamol, the recommendation is to switch to an as-needed low-dose combination inhaler of ICS/formoterol. This approach addresses both inflammation and bronchodilation. Adding a regular low-dose ICS or LABA to SABA is part of the outdated guidelines and is not recommended. Continuing with SABA alone is inappropriate due to the risk of uncontrolled asthma. Leukotriene receptor antagonists are considered later in therapy if needed.",
+    "mnemonic": "For asthma's new aim, AIR is the name!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 60-year-old man with type 2 diabetes, hypertension, and a BMI of 32 kg/m² is on metformin 1g BD. His recent HbA1c is 65 mmol/mol. He has no history of cardiovascular disease. According to NICE guidelines, what is the next best step in his management?",
+    "options": [
+      "Add a sulfonylurea",
+      "Add a DPP-4 inhibitor",
+      "Add an SGLT-2 inhibitor",
+      "Add a GLP-1 receptor agonist",
+      "Start insulin therapy"
+    ],
+    "answer": 3,
+    "explanation": "The correct option is to add a GLP-1 receptor agonist. NICE NG28 (2022) recommends considering a GLP-1 receptor agonist for type 2 diabetes patients with a BMI ≥ 35 kg/m² when insulin is not acceptable or to manage weight. Although the patient’s BMI is slightly below 35, his uncontrolled HbA1c and need for additional therapy make a GLP-1 receptor agonist appropriate. SGLT-2 inhibitors are recommended primarily if there is established cardiovascular disease or high cardiovascular risk. Sulfonylureas, while effective, increase hypoglycemia risk and weight gain, which is undesirable in this patient. DPP-4 inhibitors and insulin are less favored as the next step in this context.",
+    "mnemonic": "For weight and sugar decline, GLP-1 works fine!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_3",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 68-year-old woman presents with fever, cough, and pleuritic chest pain. Her CURB-65 score is 1, and her CRP is 45 mg/L. What is the most appropriate antibiotic treatment according to NICE guidelines?",
+    "options": [
+      "Amoxicillin 500 mg TDS for 5 days",
+      "Co-amoxiclav 625 mg TDS for 7 days",
+      "Clarithromycin 500 mg BD for 5 days",
+      "Doxycycline 100 mg OD for 7 days",
+      "Levofloxacin 500 mg OD for 5 days"
+    ],
+    "answer": 0,
+    "explanation": "Amoxicillin 500 mg TDS for 5 days is the correct answer for treating low-severity community-acquired pneumonia, as per NICE NG250 (2025). The patient's CURB-65 score of 1 indicates low severity, making amoxicillin appropriate. Co-amoxiclav is reserved for more severe infections or if amoxicillin resistance is suspected. Clarithromycin is typically added in cases of moderate severity or atypical pathogens. Doxycycline is an alternative if the patient is allergic to penicillin. Levofloxacin is not routinely recommended due to potential side effects and should be reserved for specific indications.",
+    "mnemonic": "Low CURB, aim for the 'cillin curb with amoxi!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_4",
+    "topic": "Heart Failure Management",
+    "category": "all",
+    "question": "A 72-year-old man with heart failure with reduced ejection fraction (HFrEF) is currently on ramipril 5 mg OD and bisoprolol 2.5 mg OD. He continues to experience symptoms of breathlessness and fatigue. According to NICE guidelines, which medication should be added next to optimize his heart failure treatment?",
+    "options": [
+      "Add furosemide",
+      "Add spironolactone",
+      "Add digoxin",
+      "Increase ramipril dosage",
+      "Add ivabradine"
+    ],
+    "answer": 1,
+    "explanation": "Adding spironolactone is the correct step for this patient, according to NICE NG106 (2023). The guidelines recommend the addition of a mineralocorticoid receptor antagonist (MRA) such as spironolactone for patients with HFrEF who remain symptomatic despite ACE inhibitor and beta-blocker therapy. Furosemide is used primarily for symptom control of fluid overload but does not improve mortality. Increasing the ramipril dosage or adding ivabradine could be considered later if symptoms persist. Digoxin is typically reserved for patients with heart failure and concurrent atrial fibrillation or as a last-line therapy.",
+    "mnemonic": "For HFrEF's relentless moan, reach for spironolactone!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_5",
+    "topic": "Management of DKA",
+    "category": "all",
+    "question": "A 25-year-old woman with type 1 diabetes presents to A&E with nausea, vomiting, and abdominal pain. Blood gas analysis reveals pH 7.2, bicarbonate 14 mmol/L, and ketones 6 mmol/L. What is the most appropriate initial management step?",
+    "options": [
+      "Start IV insulin at a fixed rate infusion",
+      "Administer subcutaneous insulin",
+      "Give oral fluids and monitor",
+      "Start IV bicarbonate therapy",
+      "Administer IM glucagon"
+    ],
+    "answer": 0,
+    "explanation": "The appropriate initial step in managing diabetic ketoacidosis (DKA), as per JBDS 2023 guidelines, is to start an intravenous insulin infusion at a fixed rate of 0.1 units/kg/hr. This approach ensures a consistent reduction in blood glucose and ketone levels. Subcutaneous insulin is not appropriate in acute DKA management. Oral fluids are insufficient due to the severity of dehydration and acidosis. Bicarbonate therapy is not routinely recommended due to potential complications unless there is severe acidosis. IM glucagon is used for hypoglycemia, not DKA.",
+    "mnemonic": "In DKA's urgent fix, IV insulin does the tricks!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-1"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_6",
+    "topic": "Atrial Fibrillation Management",
+    "category": "all",
+    "question": "A 68-year-old man with a history of hypertension presents with palpitations and shortness of breath. ECG confirms atrial fibrillation with a ventricular rate of 110 bpm. He has a CHA₂DS₂-VASc score of 3. According to NICE guidelines, what is the most appropriate initial management?",
+    "options": [
+      "Start a beta-blocker and consider anticoagulation",
+      "Cardioversion",
+      "Rate control with digoxin",
+      "Initiate rhythm control",
+      "No treatment necessary"
+    ],
+    "answer": 0,
+    "explanation": "The correct step is to start a beta-blocker for rate control and consider anticoagulation, as per NICE NG196 (2021). Beta-blockers are first-line for rate control in atrial fibrillation. Given the patient's CHA₂DS₂-VASc score of 3, anticoagulation is necessary to reduce stroke risk, with DOACs preferred over warfarin. Cardioversion is considered if the patient remains symptomatic despite rate control. Digoxin is not first-line for rate control unless in sedentary patients. Rhythm control is not initially prioritized unless symptoms are severe or refractory.",
+    "mnemonic": "For AF's racing spree, beta-blocker and bleed-free!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_7",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 45-year-old woman presents with fatigue, weight gain, and cold intolerance. Her TSH is 10 mU/L and free T4 is 8 pmol/L. According to NICE guidelines, what is the most appropriate initial treatment?",
+    "options": [
+      "Levothyroxine 25 mcg daily",
+      "Levothyroxine 50 mcg daily",
+      "Carbimazole",
+      "Propranolol",
+      "No treatment required"
+    ],
+    "answer": 1,
+    "explanation": "The correct treatment is levothyroxine 50 mcg daily. NICE NG145 (2019) recommends starting levothyroxine for patients with primary hypothyroidism, adjusting the dose based on TSH to a target range of 0.5–2.5 mU/L. The initial dose of 50 mcg is appropriate for those under 65 without significant cardiac risk. Levothyroxine 25 mcg or no treatment would be insufficient given her symptoms and lab results. Carbimazole is for hyperthyroidism, not hypothyroidism. Propranolol is used for symptom control in hyperthyroidism.",
+    "mnemonic": "For hypo's weary scene, levothyroxine intervenes!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_8",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 55-year-old man presents with fever, hypotension, and tachycardia. He is suspected of having sepsis. What is the most appropriate immediate management step according to NICE guidelines?",
+    "options": [
+      "Start IV antibiotics immediately",
+      "Take blood cultures and wait for results",
+      "Administer oral antibiotics",
+      "Provide oral rehydration",
+      "Monitor closely without intervention"
+    ],
+    "answer": 0,
+    "explanation": "The correct step in sepsis management is to start intravenous antibiotics immediately, as stated in NICE NG51 (2016) guidelines. Early administration of IV antibiotics is crucial to improve outcomes. Blood cultures should be taken before antibiotics, but treatment should not be delayed while awaiting results. Oral antibiotics and rehydration are insufficient for sepsis. Close monitoring without intervention would be inappropriate due to the risk of rapid deterioration.",
+    "mnemonic": "In sepsis, act fast with IV blast!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779373246360_9",
+    "topic": "Parkinson's Disease Management",
+    "category": "all",
+    "question": "A 68-year-old man with Parkinson’s disease is experiencing worsening bradykinesia and rigidity. He is currently on ropinirole. According to NICE guidelines, what is the next step in his treatment?",
+    "options": [
+      "Add levodopa",
+      "Increase ropinirole dose",
+      "Switch to another dopamine agonist",
+      "Add a MAO-B inhibitor",
+      "No change in treatment"
+    ],
+    "answer": 0,
+    "explanation": "Adding levodopa is the correct step for worsening motor symptoms in Parkinson’s disease, especially in older patients, according to NICE NG71 (2020). Levodopa is the most effective treatment for motor symptoms and is typically added when symptoms are not controlled with dopamine agonists like ropinirole. Increasing the ropinirole dose might be considered, but levodopa offers superior symptom relief. Switching dopamine agonists or adding a MAO-B inhibitor are less likely to provide the needed improvement. No change in treatment is not advisable given the symptom progression.",
+    "mnemonic": "For Parkinson's motor woe, levodopa is the go-to!",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng71",
+      "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease"
+    },
+    "difficulty": "intermediate"
   }
 ]
