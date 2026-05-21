@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Award, Brain, ExternalLink, BookOpen } from "lucide-react";
+import { CheckCircle, Award, Brain, BookOpen } from "lucide-react";
 import type { AIExplanation } from "@/lib/quiz-utils";
 
 interface ExplanationPanelProps {
@@ -243,7 +243,6 @@ export function ExplanationPanel({
                               rel="noopener noreferrer"
                               className="inline-flex items-center justify-center rounded-md text-xs font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-green-300 text-green-700 hover:bg-green-50 h-6 px-2"
                             >
-                              <ExternalLink className="w-2 h-2 mr-1" />
                               View
                             </a>
                           </div>
@@ -328,7 +327,6 @@ export function ExplanationPanel({
                     }}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
-                    <ExternalLink className="w-4 h-4 mr-1" />
                     View ESC Guidelines
                   </Button>
                 </div>
@@ -387,7 +385,6 @@ export function ExplanationPanel({
                     }}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
-                    <ExternalLink className="w-4 h-4 mr-1" />
                     View ADA Standards
                   </Button>
                 </div>
@@ -446,7 +443,6 @@ export function ExplanationPanel({
                     }}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
-                    <ExternalLink className="w-4 h-4 mr-1" />
                     View SIGN Guidelines
                   </Button>
                 </div>
@@ -505,7 +501,6 @@ export function ExplanationPanel({
                     }}
                     className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 hover:border-blue-700"
                   >
-                    <ExternalLink className="w-4 h-4 mr-1" />
                     View BTS Guidelines
                   </Button>
                 </div>

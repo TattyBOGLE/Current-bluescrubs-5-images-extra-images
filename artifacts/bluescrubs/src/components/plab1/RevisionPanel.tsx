@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ExternalLink } from "lucide-react";
 import { buildDynamicLink } from "@/lib/clinical-links";
 import type { NICERef } from "@/lib/clinical-links";
 
@@ -51,10 +50,9 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                   href={primaryRef.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
+                  className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
                 >
                   {primaryRef.title}
-                  <ExternalLink className="w-3 h-3 flex-shrink-0" />
                 </a>
                 {pearl && (
                   <>
@@ -75,10 +73,9 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                     href={visualSummaryUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 hover:underline mt-1"
+                    className="text-xs text-blue-600 hover:text-blue-800 hover:underline mt-1"
                   >
                     📄 Visual Summary PDF
-                    <ExternalLink size={12} aria-hidden="true" />
                   </a>
                 )}
               </div>
