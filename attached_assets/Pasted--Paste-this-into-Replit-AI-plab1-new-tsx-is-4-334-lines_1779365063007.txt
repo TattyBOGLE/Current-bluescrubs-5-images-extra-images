@@ -1,0 +1,186 @@
+**Paste this into Replit AI:**
+
+```
+plab1-new.tsx is 4,334 lines and doing the work of ~8 separate concerns 
+in one component with 58 hooks. Split it into focused sub-components 
+without changing any visible behaviour or UI.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BEFORE YOU START
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Read the entire plab1-new.tsx first. Map out every piece of state and 
+which JSX sections use it before moving a single line. Do not guess — 
+trace each useState and useRef to its consumers.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TARGET FILE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create these new files inside src/components/plab1/:
+
+  QuizEngine.tsx          — question generation, answer selection,
+                            session flow, scoring, handleNextQuestion,
+                            proceedToNextQuestion, submitToBlockLeaderboard
+
+  QuizQuestion.tsx        — renders the question stem, answer option 
+                            radio buttons, selected state styling.
+                            Pure presentational — no fetch calls.
+
+  ExplanationPanel.tsx    — "Why the correct answer fits", 
+                            option-by-option analysis, AI explanation 
+                            fetch (fetchAIExplanation), aiExplanation 
+                            state, aiExplanationLoading state,
+                            aiExplanationCache ref
+
+  StudyTipsPanel.tsx      — mnemonics, clinical pearls, exam technique, 
+                            pitfall tips. fetchStudyTips, aiStudyTips 
+                            state, aiStudyTipsLoading, studyTipsCache ref.
+                            Wire to buildDynamicLink() for topic-specific 
+                            reference links (currently broken — fix this 
+                            during the split)
+
+  ReferenceMaterialPanel.tsx — already a function in the file, just move 
+                               it to its own file. Keep all URL-builder 
+                               helpers it depends on (buildDynamicLink, 
+                               toNICEUrl, toCKSSlug, toBNFUrl, toESCUrl, 
+                               toBTSUrl, toBSGUrl, toRCOGUrl, 
+                               getNICEReferencesForQuestion, 
+                               NICE_GUIDELINE_MAP, CKS_SLUG_MAP, 
+                               BNF_TREATMENT_MAP) in a separate file:
+                               src/lib/clinical-links.ts
+
+  RevisionPanel.tsx        — already a function in the file, move it to 
+                             its own file
+
+  SessionNavBar.tsx        — the fixed bottom bar only: Previous button, 
+                             Question X of Y counter, Submit/Next button. 
+                             No duplicate nav anywhere else (this was 
+                             the bug fixed in the previous prompts)
+
+  GamificationBar.tsx      — session points, streak counter, points 
+                             animation overlay
+
+  TTSControls.tsx          — text-to-speech toggle, voice selector, 
+                             speak/stop logic, availableVoices state, 
+                             selectedVoice state, isSpeaking state
+
+  TranslationControls.tsx  — language selector, translateQuestions toggle, 
+                             isTranslationMode state, translation fetch
+
+  SessionSetup.tsx         — the pre-session config screen: category 
+                             selector, difficulty selector, question count, 
+                             block type, timed session toggle
+
+  SessionComplete.tsx      — the end-of-session results screen, score 
+                             summary, leaderboard submission UI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT STAYS IN plab1-new.tsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After the split, plab1-new.tsx should only contain:
+
+  - Imports of the new sub-components
+  - Top-level state that is genuinely shared across multiple 
+    sub-components (currentQuestionIndex, generatedQuestions, 
+    sessionStarted, showExplanation, selectedAnswer)
+  - Shared state passed down as props
+  - The top-level layout JSX that composes the sub-components together
+  - The hero image and background
+
+Target: under 300 lines.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STATE OWNERSHIP RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Follow these rules strictly when deciding where state lives:
+
+1. If state is only read and written inside one component, move it 
+   INTO that component — do not pass it as a prop.
+
+2. If state is shared between two or more components, keep it in 
+   the nearest common ancestor and pass it down as props.
+
+3. Do not use React Context for this refactor — props are sufficient 
+   and easier to trace for a codebase of this size.
+
+4. Callback props follow the pattern: onAnswerSelect, onSubmit, 
+   onNext, onPrevious — passed from QuizEngine down to the 
+   presentational components.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXTRACT HELPERS TO SHARED FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Move these out of plab1-new.tsx into their own files so any future 
+page can use them:
+
+  src/lib/clinical-links.ts
+    — buildDynamicLink, toNICEUrl, toCKSSlug, toConditionSlug,
+      toBNFUrl, toESCUrl, toBTSUrl, toBSGUrl, toRCOGUrl,
+      toNICEVisualUrl, getNICEReferencesForQuestion, extractTopicFromLabel,
+      NICE_GUIDELINE_MAP, CKS_SLUG_MAP, BNF_TREATMENT_MAP,
+      toQ, toSlug helper functions
+
+  src/lib/quiz-utils.ts
+    — buildLocalFallback, any pure scoring/calculation functions,
+      category label mappings
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXECUTION ORDER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Do this in the following order to avoid breaking the app mid-way:
+
+Step 1: Create src/lib/clinical-links.ts and src/lib/quiz-utils.ts. 
+        Move helpers. Update imports in plab1-new.tsx. Verify app 
+        still runs before proceeding.
+
+Step 2: Move ReferenceMaterialPanel and RevisionPanel to their own 
+        files (they are already self-contained functions). Update 
+        imports. Verify.
+
+Step 3: Extract SessionNavBar.tsx. This is low-risk as it is 
+        presentational only. Verify.
+
+Step 4: Extract GamificationBar, TTSControls, TranslationControls 
+        one at a time. Verify after each.
+
+Step 5: Extract StudyTipsPanel and ExplanationPanel — these own 
+        their own fetch logic and cache refs. Verify.
+
+Step 6: Extract SessionSetup and SessionComplete. Verify.
+
+Step 7: Extract QuizQuestion (presentational). Verify.
+
+Step 8: Extract QuizEngine with the remaining session logic. Verify.
+
+Step 9: Clean up plab1-new.tsx to be the thin orchestrator only. 
+        Final verify.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STRICT RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Zero behaviour changes. Every feature must work identically after 
+  the split — question generation, AI explanations, study tips, TTS, 
+  translation, gamification, leaderboard UI, navigation bar.
+
+- Do not rename any functions, state variables, or props during this 
+  refactor. Rename is a separate task for later.
+
+- Do not convert class components to functional or vice versa.
+
+- Do not add, remove, or redesign any UI elements during this refactor.
+
+- Every new file must have explicit TypeScript prop types defined — 
+  no 'any' for component props.
+
+- Remove the 17 debug console.log statements found in plab1-new.tsx 
+  as you move each section — do not carry them into the new files.
+
+- After the full split, run TypeScript typecheck 
+  (pnpm typecheck) and fix all type errors before finishing.
+```
