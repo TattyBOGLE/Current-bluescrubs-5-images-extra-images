@@ -1,0 +1,92 @@
+The current Herpes Zoster (Shingles) image is clinically inaccurate. 
+Regenerate it with strict adherence to the following requirements.
+
+─────────────────────────────────────────
+WHAT IS CURRENTLY WRONG
+─────────────────────────────────────────
+- Lesions are not following a dermatomal distribution
+- Rash is crossing the midline (this NEVER happens in shingles)
+- Distribution looks bilateral (also wrong — shingles is always unilateral)
+
+─────────────────────────────────────────
+EXACT DALL-E 3 PROMPT TO USE
+─────────────────────────────────────────
+Use this prompt verbatim for regeneration:
+
+"Clinical medical photograph of Herpes Zoster (Shingles) affecting the 
+left thoracic dermatome T6. Unilateral band of grouped vesicles and 
+pustules on an erythematous base, wrapping around the left side of the 
+torso from the spine toward the umbilicus, strictly following the T6 
+dermatome. The rash stops precisely at the anterior midline of the 
+abdomen and does NOT cross to the right side. Right side of torso 
+completely clear. Lesions are clustered, not scattered — tight groups 
+of 3-8 vesicles at varying stages (some clear fluid-filled, some 
+umbilicated, some beginning to crust). Surrounding skin shows 
+erythema and mild oedema. Photographed on a standing adult patient. 
+Sharp clinical focus. Professional medical photography. 
+No text. No watermarks. Educational reference quality."
+
+─────────────────────────────────────────
+GENERATION SETTINGS
+─────────────────────────────────────────
+  model: "dall-e-3"
+  quality: "hd"
+  size: "1024x1024"
+  style: "natural"
+
+─────────────────────────────────────────
+CLINICAL ACCURACY CHECKLIST
+─────────────────────────────────────────
+Before caching this image, validate ALL of the following are visible:
+
+  ✓ Lesions on ONE side of the body only
+  ✓ Rash follows a band/stripe pattern (dermatomal)
+  ✓ Rash stops at the midline — does not cross
+  ✓ Contralateral side is completely clear
+  ✓ Grouped vesicles (not scattered individual spots)
+  ✓ Vesicles on erythematous base
+  ✓ Mixed stages of lesions (vesicles + crusting)
+
+  IF any of the above are missing → regenerate with this note appended:
+  "CRITICAL: The rash must be strictly unilateral. It must stop exactly 
+  at the body midline. The opposite side must be completely clear. 
+  This is the most important diagnostic feature of Herpes Zoster."
+
+─────────────────────────────────────────
+ALTERNATIVE PROMPTS IF FIRST ATTEMPT FAILS
+─────────────────────────────────────────
+Attempt 2 — Try trigeminal distribution instead (often clearer):
+
+"Clinical photograph of Herpes Zoster affecting the right ophthalmic 
+division of the trigeminal nerve (V1). Unilateral grouped vesicles 
+on erythematous base covering the right forehead, upper eyelid, and 
+scalp, following the V1 dermatome exactly. Left side of face 
+completely unaffected. Clear demarcation at the midline of the 
+forehead. Hutchinson's sign present — vesicle visible on the tip 
+of the nose indicating nasociliary involvement. Right eye showing 
+mild periorbital oedema. Sharp clinical focus. Professional medical 
+photography. No text or watermarks."
+
+Attempt 3 — Lumbar dermatome:
+
+"Clinical photograph of Herpes Zoster affecting the right L1 dermatome. 
+Unilateral band of grouped vesicles on erythematous base extending 
+from the right lower back, around the right flank, to the right 
+inguinal region. Distribution follows the L1 dermatome precisely. 
+Stops completely at the midline — left side entirely clear. 
+Lesions in mixed stages including vesicles, pustules, and early 
+crusting. Sharp focus. Professional medical photography. 
+No text or watermarks."
+
+─────────────────────────────────────────
+CLINICAL NOTES TO ADD TO THE QUESTION CARD
+─────────────────────────────────────────
+Update the Herpes Zoster question card to include these teaching points 
+so students know what to look for in the image:
+
+  Key diagnostic features shown:
+  • Strictly unilateral dermatomal rash
+  • Does NOT cross the midline — pathognomonic
+  • Grouped vesicles on erythematous base
+  • Mixed lesion stages (vesicles → pustules → crusting)
+  • Caused by reactivation of VZV in dorsal root ganglion
