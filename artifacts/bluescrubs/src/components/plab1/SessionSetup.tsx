@@ -272,11 +272,11 @@ export function SessionSetup({
           return (
           <section className="mt-4">
             <div className="px-6 mb-3 flex items-baseline justify-between">
-              <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">
+              <h2 className="text-base font-semibold text-slate-900">
                 {translateText(isStarter ? 'Suggested Topics' : 'Recommended Focus')}
               </h2>
               {isStarter && (
-                <span className="text-[10px] text-slate-400 normal-case tracking-normal">
+                <span className="text-[11px] text-slate-400">
                   {translateText('Personalised as you practise')}
                 </span>
               )}
@@ -332,7 +332,7 @@ export function SessionSetup({
         })()}
 
         {/* Chip rows — single-line horizontal scrollers */}
-        <section className="space-y-5 mt-2">
+        <section className="space-y-6 mt-4">
           <ChipRow
             label="Topic"
             items={availableCategories.map(c => ({ value: c.value, label: c.label }))}
@@ -426,7 +426,7 @@ interface ChipRowProps {
 function ChipRow({ label, items, value, onChange, testIdPrefix }: ChipRowProps) {
   return (
     <div>
-      <h2 className="text-sm font-semibold text-slate-800 mb-3 px-6">{label}</h2>
+      <h2 className="text-base font-semibold text-slate-900 mb-2.5 px-6">{label}</h2>
       <div className="flex overflow-x-auto px-6 gap-2 plab1-no-scrollbar snap-x">
         {items.map(item => {
           const active = value === item.value;
@@ -438,9 +438,9 @@ function ChipRow({ label, items, value, onChange, testIdPrefix }: ChipRowProps) 
               aria-checked={active}
               aria-label={`${label}: ${item.label}${item.note ? ` (${item.note})` : ''}`}
               onClick={() => onChange(item.value)}
-              className={`snap-start shrink-0 px-4 py-2.5 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
+              className={`snap-start shrink-0 px-3.5 py-1.5 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                 active
-                  ? 'bg-teal-600 text-white shadow-md shadow-teal-200'
+                  ? 'bg-teal-600 text-white shadow-sm shadow-teal-200'
                   : 'bg-white text-slate-600 border border-slate-200 hover:border-teal-300 hover:bg-teal-50'
               }`}
               data-testid={`chip-${testIdPrefix}-${item.value}`}
