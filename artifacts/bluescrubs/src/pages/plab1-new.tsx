@@ -1361,18 +1361,20 @@ export default function PLAB1New() {
         )}
       </div>
 
-      <SessionNavBar
-        currentQuestionIndex={currentQuestionIndex}
-        totalQuestions={generatedQuestions.length}
-        showExplanation={showExplanation}
-        selectedAnswer={selectedAnswer}
-        isTimedSession={isTimedSession}
-        questionTimer={questionTimer}
-        formatTime={formatTime}
-        onPrevious={handlePreviousQuestion}
-        onSubmit={handleSubmitAnswer}
-        onNext={handleNextQuestion}
-      />
+      {sessionStarted && (
+        <SessionNavBar
+          currentQuestionIndex={currentQuestionIndex}
+          totalQuestions={generatedQuestions.length}
+          showExplanation={showExplanation}
+          selectedAnswer={selectedAnswer}
+          isTimedSession={isTimedSession}
+          questionTimer={questionTimer}
+          formatTime={formatTime}
+          onPrevious={handlePreviousQuestion}
+          onSubmit={handleSubmitAnswer}
+          onNext={handleNextQuestion}
+        />
+      )}
 
       {/* Tutor Floating Button */}
       {sessionStarted && (
