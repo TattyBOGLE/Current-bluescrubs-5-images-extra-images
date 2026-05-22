@@ -54,11 +54,13 @@ export function useAuth(): AuthState {
   }, []);
 
   const login = useCallback(() => {
-    window.location.href = "/api/login?returnTo=/";
+    const target = window.top ?? window;
+    target.location.href = "/api/login?returnTo=/";
   }, []);
 
   const logout = useCallback(() => {
-    window.location.href = "/api/logout";
+    const target = window.top ?? window;
+    target.location.href = "/api/logout";
   }, []);
 
   return {
