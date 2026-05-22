@@ -3,37 +3,46 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 
 const IMAGES = [
-  { file: "inferior-stemi-ecg.png", label: "Inferior STEMI", specialty: "Cardiology", type: "ECG" },
-  { file: "atrial-fibrillation-ecg.png", label: "Atrial Fibrillation", specialty: "Cardiology", type: "ECG" },
-  { file: "hyperkalaemia-ecg.png", label: "Hyperkalaemia", specialty: "Cardiology", type: "ECG" },
-  { file: "pericarditis-ecg.png", label: "Pericarditis", specialty: "Cardiology", type: "ECG" },
-  { file: "pneumothorax-cxr.png", label: "Pneumothorax", specialty: "Respiratory", type: "CXR" },
-  { file: "pleural-effusion-cxr.png", label: "Pleural Effusion", specialty: "Respiratory", type: "CXR" },
-  { file: "pulmonary-embolism-ctpa.png", label: "Pulmonary Embolism", specialty: "Respiratory", type: "CTPA" },
-  { file: "bells-palsy.png", label: "Bell's Palsy", specialty: "Neurology", type: "Clinical" },
-  { file: "pancoast-horner-syndrome.png", label: "Pancoast + Horner", specialty: "Neurology", type: "Clinical" },
-  { file: "acute-angle-closure-glaucoma.png", label: "Acute Angle-Closure Glaucoma", specialty: "Ophthalmology", type: "Clinical" },
-  { file: "chlamydial-conjunctivitis.png", label: "Chlamydial Conjunctivitis", specialty: "Ophthalmology", type: "Clinical" },
-  { file: "meningococcal-rash.png", label: "Meningococcal Rash", specialty: "Infectious Diseases", type: "Clinical" },
-  { file: "chickenpox.png", label: "Chickenpox", specialty: "Infectious Diseases", type: "Clinical" },
-  { file: "slapped-cheek-erythema-infectiosum.png", label: "Slapped Cheek (Parvovirus B19)", specialty: "Infectious Diseases", type: "Clinical" },
-  { file: "scarlet-fever.png", label: "Scarlet Fever", specialty: "Infectious Diseases", type: "Clinical" },
-  { file: "psoriasis.png", label: "Psoriasis", specialty: "Dermatology", type: "Clinical" },
-  { file: "atopic-eczema.png", label: "Atopic Eczema", specialty: "Dermatology", type: "Clinical" },
-  { file: "melanoma.png", label: "Melanoma", specialty: "Dermatology", type: "Clinical" },
-  { file: "herpes-zoster-shingles.png", label: "Herpes Zoster (Shingles)", specialty: "Dermatology", type: "Clinical" },
-  { file: "rheumatoid-hands.png", label: "Rheumatoid Arthritis", specialty: "Rheumatology", type: "Clinical" },
-  { file: "gout-foot.png", label: "Acute Gout", specialty: "Rheumatology", type: "Clinical" },
-  { file: "graves-disease.png", label: "Graves' Disease", specialty: "Endocrinology", type: "Clinical" },
-  { file: "neuropathic-diabetic-ulcer.png", label: "Neuropathic Diabetic Ulcer", specialty: "Endocrinology", type: "Clinical" },
-  { file: "kawasaki-disease.png", label: "Kawasaki Disease", specialty: "Paediatrics", type: "Clinical" },
-  { file: "croup-laryngotracheobronchitis.png", label: "Croup (Steeple Sign)", specialty: "Paediatrics", type: "CXR" },
-  { file: "otitis-externa.png", label: "Otitis Externa", specialty: "ENT", type: "Clinical" },
-  { file: "peritonsillar-abscess-quinsy.png", label: "Peritonsillar Abscess (Quinsy)", specialty: "ENT", type: "Clinical" },
-  { file: "obstructive-jaundice-pancreatic-cancer.png", label: "Obstructive Jaundice", specialty: "Gastroenterology", type: "Clinical" },
-  { file: "cirrhosis-stigmata.png", label: "Liver Cirrhosis Stigmata", specialty: "Gastroenterology", type: "Clinical" },
-  { file: "small-bowel-obstruction-axr.png", label: "Small Bowel Obstruction", specialty: "Radiology", type: "AXR" },
-  { file: "ventricular-tachycardia-ecg.png", label: "Ventricular Tachycardia", specialty: "Cardiology", type: "ECG" },
+  { dir: "spotdx-images", file: "inferior-stemi-ecg.png", label: "Inferior STEMI", specialty: "Cardiology", type: "ECG" },
+  { dir: "spotdx-images", file: "atrial-fibrillation-ecg.png", label: "Atrial Fibrillation", specialty: "Cardiology", type: "ECG" },
+  { dir: "spotdx-images", file: "hyperkalaemia-ecg.png", label: "Hyperkalaemia ECG", specialty: "Cardiology", type: "ECG" },
+  { dir: "spotdx-images", file: "pericarditis-ecg.png", label: "Pericarditis ECG", specialty: "Cardiology", type: "ECG" },
+  { dir: "spotdx-images", file: "ventricular-tachycardia-ecg.png", label: "Ventricular Tachycardia", specialty: "Cardiology", type: "ECG" },
+  { dir: "spotdx-images", file: "pneumothorax-cxr.png", label: "Pneumothorax", specialty: "Respiratory", type: "CXR" },
+  { dir: "spotdx-images", file: "pleural-effusion-cxr.png", label: "Pleural Effusion", specialty: "Respiratory", type: "CXR" },
+  { dir: "spotdx-images", file: "pulmonary-embolism-ctpa.png", label: "Pulmonary Embolism", specialty: "Respiratory", type: "CTPA" },
+  { dir: "spotdx-images", file: "pancoast-horner-syndrome.png", label: "Pancoast + Horner Syndrome", specialty: "Respiratory", type: "Clinical" },
+  { dir: "spotdx-images", file: "bells-palsy.png", label: "Bell's Palsy", specialty: "Neurology", type: "Clinical" },
+  { dir: "spotdx-images", file: "acute-angle-closure-glaucoma.png", label: "Acute Angle-Closure Glaucoma", specialty: "Ophthalmology", type: "Clinical" },
+  { dir: "spotdx-images", file: "chlamydial-conjunctivitis.png", label: "Chlamydial Conjunctivitis", specialty: "Ophthalmology", type: "Clinical" },
+  { dir: "spotdx-images", file: "meningococcal-rash.png", label: "Meningococcal Rash", specialty: "Infectious Diseases", type: "Clinical" },
+  { dir: "spotdx-images", file: "chickenpox.png", label: "Chickenpox (Varicella)", specialty: "Infectious Diseases", type: "Clinical" },
+  { dir: "spotdx-images", file: "slapped-cheek-erythema-infectiosum.png", label: "Slapped Cheek (Parvovirus B19)", specialty: "Infectious Diseases", type: "Clinical" },
+  { dir: "spotdx-images", file: "scarlet-fever.png", label: "Scarlet Fever", specialty: "Infectious Diseases", type: "Clinical" },
+  { dir: "spotdx-images", file: "psoriasis.png", label: "Psoriasis (Body)", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "psoriasis-plaque.png", label: "Plaque Psoriasis (Close-up)", specialty: "Dermatology", type: "Clinical" },
+  { dir: "spotdx-images", file: "melanoma.png", label: "Malignant Melanoma", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "basal-cell-carcinoma.png", label: "Basal Cell Carcinoma", specialty: "Dermatology", type: "Clinical" },
+  { dir: "spotdx-images", file: "atopic-eczema.png", label: "Atopic Eczema", specialty: "Dermatology", type: "Clinical" },
+  { dir: "spotdx-images", file: "herpes-zoster-shingles.png", label: "Herpes Zoster (Shingles)", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "impetigo.png", label: "Impetigo", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "urticaria.png", label: "Urticaria (Hives)", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "scabies-burrows.png", label: "Scabies (Burrows)", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "pityriasis-rosea.png", label: "Pityriasis Rosea", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "tinea-corporis.png", label: "Tinea Corporis (Ringworm)", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "seborrhoeic-dermatitis.png", label: "Seborrhoeic Dermatitis", specialty: "Dermatology", type: "Clinical" },
+  { dir: "derm-images", file: "herpes-zoster.png", label: "Herpes Zoster (Dermatomal)", specialty: "Dermatology", type: "Clinical" },
+  { dir: "spotdx-images", file: "rheumatoid-hands.png", label: "Rheumatoid Arthritis (Hands)", specialty: "Rheumatology", type: "Clinical" },
+  { dir: "spotdx-images", file: "gout-foot.png", label: "Acute Gout (Podagra)", specialty: "Rheumatology", type: "Clinical" },
+  { dir: "spotdx-images", file: "graves-disease.png", label: "Graves' Disease", specialty: "Endocrinology", type: "Clinical" },
+  { dir: "spotdx-images", file: "neuropathic-diabetic-ulcer.png", label: "Neuropathic Diabetic Ulcer", specialty: "Endocrinology", type: "Clinical" },
+  { dir: "spotdx-images", file: "kawasaki-disease.png", label: "Kawasaki Disease", specialty: "Paediatrics", type: "Clinical" },
+  { dir: "spotdx-images", file: "croup-laryngotracheobronchitis.png", label: "Croup (Steeple Sign)", specialty: "Paediatrics", type: "CXR" },
+  { dir: "spotdx-images", file: "otitis-externa.png", label: "Otitis Externa", specialty: "ENT", type: "Clinical" },
+  { dir: "spotdx-images", file: "peritonsillar-abscess-quinsy.png", label: "Peritonsillar Abscess (Quinsy)", specialty: "ENT", type: "Clinical" },
+  { dir: "spotdx-images", file: "obstructive-jaundice-pancreatic-cancer.png", label: "Obstructive Jaundice", specialty: "Gastroenterology", type: "Clinical" },
+  { dir: "spotdx-images", file: "cirrhosis-stigmata.png", label: "Liver Cirrhosis Stigmata", specialty: "Gastroenterology", type: "Clinical" },
+  { dir: "spotdx-images", file: "small-bowel-obstruction-axr.png", label: "Small Bowel Obstruction", specialty: "Radiology", type: "AXR" },
 ];
 
 const SPECIALTY_COLORS: Record<string, string> = {
@@ -133,7 +142,7 @@ export default function SpotDiagnosis() {
             >
               <div className="aspect-square bg-gray-100 overflow-hidden">
                 <img
-                  src={`/spotdx-images/${img.file}`}
+                  src={`/${img.dir}/${img.file}`}
                   alt={img.label}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
@@ -170,7 +179,7 @@ export default function SpotDiagnosis() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={`/spotdx-images/${lightbox.file}`}
+              src={`/${lightbox.dir}/${lightbox.file}`}
               alt={lightbox.label}
               className="w-full object-contain max-h-[70vh]"
             />
