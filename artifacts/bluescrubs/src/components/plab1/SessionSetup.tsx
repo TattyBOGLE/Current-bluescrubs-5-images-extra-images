@@ -186,7 +186,7 @@ export function SessionSetup({
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans">
-      <div className="max-w-[680px] mx-auto pb-44">
+      <div className="max-w-[680px] mx-auto pb-28">
         {/* Header */}
         <header className="flex items-center justify-between px-6 pt-8 pb-4 bg-white">
           <div>
