@@ -94,7 +94,7 @@ export default function MCQQuestion({
         <CardContent className="p-8">
           <div className="mb-8">
             <div className="flex items-center space-x-2 mb-4">
-              <Badge variant="secondary" className="bg-medical-blue/10 text-medical-blue">
+              <Badge variant="secondary" className="bg-teal-600/10 text-teal-600">
                 {question.category}
               </Badge>
               <Badge 
@@ -107,7 +107,7 @@ export default function MCQQuestion({
             
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
               <div className="flex items-start space-x-3">
-                <BookOpen className="w-5 h-5 text-medical-blue mt-1 flex-shrink-0" />
+                <BookOpen className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
                 <p className="text-gray-700 leading-relaxed">{question.question}</p>
               </div>
             </div>
@@ -129,13 +129,13 @@ export default function MCQQuestion({
                     "w-full text-left p-4 rounded-lg border-2 transition-all group",
                     isAnswered
                       ? isCorrect
-                        ? "border-mint-green bg-mint-green/10"
+                        ? "border-emerald-500 bg-emerald-500/10"
                         : isSelected && !isCorrect
-                        ? "border-deep-rose bg-deep-rose/10"
+                        ? "border-rose-500 bg-rose-500/10"
                         : "border-gray-200 bg-gray-50"
                       : isSelected
-                      ? "border-medical-blue bg-medical-blue/5"
-                      : "border-gray-200 hover:border-medical-blue hover:bg-medical-blue/5"
+                      ? "border-teal-600 bg-teal-600/5"
+                      : "border-gray-200 hover:border-teal-600 hover:bg-teal-600/5"
                   )}
                 >
                   <div className="flex items-center space-x-3">
@@ -151,8 +151,8 @@ export default function MCQQuestion({
 
           {/* Explanation (shown after answering) */}
           {isAnswered && (
-            <div className="mb-8 p-6 bg-blue-50 border-l-4 border-medical-blue rounded-lg animate-fade-in">
-              <h4 className="font-semibold text-medical-blue mb-2">Explanation</h4>
+            <div className="mb-8 p-6 bg-blue-50 border-l-4 border-teal-600 rounded-lg animate-fade-in">
+              <h4 className="font-semibold text-teal-600 mb-2">Explanation</h4>
               <p className="text-gray-700 leading-relaxed">{question.explanation}</p>
             </div>
           )}
@@ -207,14 +207,14 @@ export default function MCQQuestion({
               <Button
                 onClick={handleSubmit}
                 disabled={!selectedAnswer}
-                className="bg-medical-blue hover:bg-medical-blue/90 min-w-[100px] h-12"
+                className="bg-teal-600 hover:bg-teal-600/90 min-w-[100px] h-12"
               >
                 Submit
               </Button>
             ) : (
               <Button
                 onClick={onNext}
-                className="bg-medical-blue hover:bg-medical-blue/90 min-w-[100px] h-12"
+                className="bg-teal-600 hover:bg-teal-600/90 min-w-[100px] h-12"
               >
                 {questionNumber === totalQuestions ? "Complete" : "Next"}
               </Button>

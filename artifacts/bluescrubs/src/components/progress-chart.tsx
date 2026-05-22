@@ -26,9 +26,9 @@ export function ProgressChart({ userStats, progressData }: ProgressChartProps) {
   }, [userStats.categoryStats]);
 
   const getPerformanceColor = (accuracy: number) => {
-    if (accuracy >= 85) return "text-mint-green";
-    if (accuracy >= 70) return "text-amber-warning";
-    return "text-deep-rose";
+    if (accuracy >= 85) return "text-emerald-500";
+    if (accuracy >= 70) return "text-amber-500";
+    return "text-rose-500";
   };
 
   const getPerformanceBadge = (accuracy: number) => {
@@ -86,8 +86,8 @@ export function ProgressChart({ userStats, progressData }: ProgressChartProps) {
 
             {/* Questions Completed */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-medical-blue/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl font-bold text-medical-blue">{userStats.totalAnswered}</span>
+              <div className="w-16 h-16 bg-teal-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl font-bold text-teal-600">{userStats.totalAnswered}</span>
               </div>
               <h3 className="font-semibold text-gray-900">Questions Completed</h3>
               <p className="text-sm text-gray-600">{userStats.correctAnswers} correct answers</p>
@@ -95,8 +95,8 @@ export function ProgressChart({ userStats, progressData }: ProgressChartProps) {
 
             {/* Average Time */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-lg font-bold text-purple-accent">
+              <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-lg font-bold text-purple-500">
                   {Math.round(userStats.averageTime)}s
                 </span>
               </div>
@@ -117,7 +117,7 @@ export function ProgressChart({ userStats, progressData }: ProgressChartProps) {
             {categoryPerformance.map(({ category, accuracy, total, correct }) => (
               <div key={category} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-medical-blue/10 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-teal-600/10 rounded-lg flex items-center justify-center">
                     <span className="text-lg">
                       {category === 'cardiology' ? '❤️' :
                        category === 'respiratory' ? '🫁' :
@@ -140,9 +140,9 @@ export function ProgressChart({ userStats, progressData }: ProgressChartProps) {
                   <div className="w-20 bg-gray-200 rounded-full h-2 mt-1">
                     <div
                       className={`h-2 rounded-full transition-all duration-500 ${
-                        accuracy >= 85 ? 'bg-mint-green' :
-                        accuracy >= 70 ? 'bg-amber-warning' :
-                        'bg-deep-rose'
+                        accuracy >= 85 ? 'bg-emerald-500' :
+                        accuracy >= 70 ? 'bg-amber-500' :
+                        'bg-rose-500'
                       }`}
                       style={{ width: `${accuracy}%` }}
                     />
@@ -181,9 +181,9 @@ export function ProgressChart({ userStats, progressData }: ProgressChartProps) {
                     <div key={day} className="text-center">
                       <div className="text-xs font-medium text-gray-600 mb-2">{day}</div>
                       <div className={`h-20 rounded-lg flex items-end justify-center text-xs font-medium text-white ${
-                        dayAccuracy >= 85 ? 'bg-mint-green' :
-                        dayAccuracy >= 70 ? 'bg-amber-warning' :
-                        dayData.total > 0 ? 'bg-deep-rose' :
+                        dayAccuracy >= 85 ? 'bg-emerald-500' :
+                        dayAccuracy >= 70 ? 'bg-amber-500' :
+                        dayData.total > 0 ? 'bg-rose-500' :
                         'bg-gray-200'
                       }`}>
                         {dayData.total > 0 && (

@@ -129,13 +129,13 @@ export function MCQInterface({ questions, onAnswerSubmit, onQuizComplete, timeLi
         <CardContent className="p-8">
           <div className="mb-8">
             <div className="flex items-center space-x-2 mb-4">
-              <Badge variant="secondary" className="bg-medical-blue/10 text-medical-blue">
+              <Badge variant="secondary" className="bg-teal-600/10 text-teal-600">
                 {currentQuestion.category}
               </Badge>
               <Badge variant="outline" className={
-                currentQuestion.difficulty === 'easy' ? 'border-mint-green text-mint-green' :
-                currentQuestion.difficulty === 'medium' ? 'border-amber-warning text-amber-warning' :
-                'border-deep-rose text-deep-rose'
+                currentQuestion.difficulty === 'easy' ? 'border-emerald-500 text-emerald-500' :
+                currentQuestion.difficulty === 'medium' ? 'border-amber-500 text-amber-500' :
+                'border-rose-500 text-rose-500'
               }>
                 {currentQuestion.difficulty}
               </Badge>
@@ -164,13 +164,13 @@ export function MCQInterface({ questions, onAnswerSubmit, onQuizComplete, timeLi
                   className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
                     showExplanation
                       ? isCorrect
-                        ? 'border-mint-green bg-green-50'
+                        ? 'border-emerald-500 bg-green-50'
                         : isIncorrect
                         ? 'border-red-500 bg-red-50'
                         : 'border-gray-200'
                       : isSelected
-                      ? 'border-medical-blue bg-blue-50'
-                      : 'border-gray-200 hover:border-medical-blue hover:bg-blue-50'
+                      ? 'border-teal-600 bg-blue-50'
+                      : 'border-gray-200 hover:border-teal-600 hover:bg-blue-50'
                   } ${showExplanation ? 'cursor-default' : 'cursor-pointer'}`}
                 >
                   <div className="flex items-center space-x-3">
@@ -192,7 +192,7 @@ export function MCQInterface({ questions, onAnswerSubmit, onQuizComplete, timeLi
 
           {/* Explanation */}
           {showExplanation && (
-            <div className="mb-8 p-6 bg-blue-50 border-l-4 border-medical-blue rounded-lg">
+            <div className="mb-8 p-6 bg-blue-50 border-l-4 border-teal-600 rounded-lg">
               <h4 className="font-semibold text-gray-900 mb-2">Explanation</h4>
               <p className="text-gray-700">{currentQuestion.explanation}</p>
               <div className="mt-3 text-sm text-gray-600">

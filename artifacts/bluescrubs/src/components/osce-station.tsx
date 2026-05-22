@@ -183,7 +183,7 @@ export function OsceStationComponent({ station, onStationComplete }: OsceStation
             {/* Marking Criteria Preview */}
             <div className="bg-blue-50 rounded-lg p-4 mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                <Clock className="w-4 h-4 mr-2 text-medical-blue" />
+                <Clock className="w-4 h-4 mr-2 text-teal-600" />
                 Assessment Criteria
               </h4>
               <div className="space-y-2 text-sm">
@@ -196,7 +196,7 @@ export function OsceStationComponent({ station, onStationComplete }: OsceStation
                           key={i}
                           className={`w-3 h-3 rounded-full ${
                             (selfAssessment[category] || 0) >= i 
-                              ? 'bg-mint-green' 
+                              ? 'bg-emerald-500' 
                               : 'bg-gray-300'
                           }`}
                         />

@@ -33331,5 +33331,89 @@
       "CKS": "https://cks.nice.org.uk/topics/epilepsy/"
     },
     "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493274997_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 52-year-old Caucasian man is diagnosed with hypertension during a routine check-up. His clinic blood pressure readings are 155/95 mmHg, confirmed on ambulatory monitoring. He has no history of diabetes or cardiovascular disease. What is the most appropriate first-line treatment for him according to UK guidelines?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Indapamide",
+      "Bisoprolol",
+      "Losartan"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Ramipril. According to NICE NG136 (2023), for patients under 55 years of age who are not of Black African or African-Caribbean descent, an ACE inhibitor like Ramipril is the first-line treatment for hypertension. This is based on the patient’s age and ethnicity, as ACE inhibitors are more effective in this demographic. Amlodipine (a calcium channel blocker) would be first-line if the patient were over 55 or of Black ethnicity. Indapamide is a thiazide-like diuretic and is used at Step 3 of the treatment pathway. Bisoprolol is not routinely recommended for primary hypertension unless there is another indication (e.g., heart failure). Losartan, an angiotensin receptor blocker (ARB), is an alternative to ACE inhibitors if the patient cannot tolerate them due to side effects like cough. Clinical pearl: ACE inhibitors are contraindicated in pregnancy and renal artery stenosis.",
+    "mnemonic": "ACE inhibitors for younger patients: 'ACE for Age <55'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493274997_1",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 28-year-old woman with no previous asthma diagnosis presents with wheezing and intermittent shortness of breath. She reports using a salbutamol inhaler occasionally, which provides temporary relief. According to NICE NG245 (2024), what is the most appropriate next step in her treatment?",
+    "options": [
+      "Start as-needed low-dose ICS/formoterol combination inhaler",
+      "Add low-dose ICS to her current salbutamol inhaler",
+      "Prescribe regular low-dose ICS inhaler and continue salbutamol as needed",
+      "Switch to a high-dose ICS/LABA combination inhaler",
+      "Refer to a respiratory specialist"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to start as-needed low-dose ICS/formoterol combination inhaler. NICE NG245 (2024) introduced a fundamental change in asthma management, prioritizing Anti-Inflammatory Reliever (AIR) therapy for newly diagnosed or SABA-only patients. This involves a combination of a low-dose ICS (e.g., budesonide) with a fast-acting LABA (e.g., formoterol), used both as maintenance and reliever. Adding a separate ICS to a SABA or continuing SABA with regular ICS are outdated approaches. High-dose ICS/LABA is reserved for patients uncontrolled on moderate-dose therapy. Specialist referral is only needed if treatment fails after stepwise escalation. Clinical pearl: AIR therapy reduces the risk of exacerbations by addressing airway inflammation early.",
+    "mnemonic": "AIR for Asthma: Anti-Inflammatory Reliever",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493274997_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 64-year-old man with newly diagnosed type 2 diabetes has an HbA1c of 58 mmol/mol. He has a history of myocardial infarction two years ago. Lifestyle advice has been provided, but his HbA1c remains elevated. According to NICE NG28 (2022), which drug should be started?",
+    "options": [
+      "Metformin",
+      "Gliclazide",
+      "Dapagliflozin",
+      "Pioglitazone",
+      "Exenatide"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is Dapagliflozin. NICE NG28 (2022) recommends starting an SGLT-2 inhibitor like dapagliflozin in patients with type 2 diabetes who have a history of cardiovascular disease due to its proven cardiovascular benefits. Metformin, while the usual first-line therapy, would have been appropriate if the patient did not have established CVD. Gliclazide, a sulfonylurea, is not preferred due to its risk of hypoglycaemia. Pioglitazone has cardiovascular risks, and exenatide (a GLP-1 receptor agonist) is reserved for those with a BMI ≥35 or as a later-line option. Clinical pearl: SGLT-2 inhibitors offer dual benefits for glycaemic control and cardiovascular protection.",
+    "mnemonic": "SGLT-2 for Sugar and Heart Too",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493274997_3",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 60-year-old man presents to the ED with chest pain for the past 2 hours. ECG shows ST-elevation in leads II, III, and aVF. According to NICE NG185 (2020), what is the most appropriate immediate management?",
+    "options": [
+      "Administer aspirin 300 mg and refer for primary PCI",
+      "Administer thrombolysis with alteplase and transfer to coronary care",
+      "Start dual antiplatelet therapy and arrange an angiography within 24 hours",
+      "Administer fondaparinux and start IV nitrate infusion",
+      "Provide oxygen therapy and monitor"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is to administer aspirin 300 mg and refer for primary PCI. NICE NG185 (2020) recommends urgent primary percutaneous coronary intervention (PCI) within 120 minutes for patients presenting with ST-elevation myocardial infarction (STEMI). Thrombolysis is only recommended if PCI is unavailable within this time frame. Dual antiplatelet therapy and angiography within 24 hours are appropriate for NSTEMI, not STEMI. Fondaparinux is used in NSTEMI but not as an initial STEMI management step. Oxygen is only required if SpO₂ <94%. Clinical pearl: Always prioritize PCI for STEMI when feasible.",
+    "mnemonic": "STEMI: Stent Time Emergency",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics"
+    },
+    "difficulty": "intermediate"
   }
 ]

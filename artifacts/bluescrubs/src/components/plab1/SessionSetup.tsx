@@ -376,7 +376,7 @@ export function SessionSetup({
       </div>
 
       {/* Floating CTA */}
-      <div className="fixed bottom-0 left-0 right-0 px-4 pb-5 pt-6 pointer-events-none z-40
+      <div className="fixed bottom-16 md:bottom-0 left-0 right-0 px-4 pb-3 pt-6 pointer-events-none z-30
                       bg-gradient-to-t from-slate-50 via-slate-50/95 to-transparent">
         <div className="max-w-[680px] mx-auto pointer-events-auto">
           <Button

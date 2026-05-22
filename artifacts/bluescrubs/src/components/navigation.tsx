@@ -40,7 +40,7 @@ export function Navigation({ user }: NavigationProps) {
             {/* Logo */}
             <div className="flex items-center space-x-4">
               <Link href="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center shadow-sm shadow-teal-200">
                   <Stethoscope className="w-5 h-5 text-white" />
                 </div>
                 <Logo size="lg" />
@@ -55,8 +55,8 @@ export function Navigation({ user }: NavigationProps) {
                   href={item.href}
                   className={`font-medium transition-colors text-xs lg:text-sm whitespace-nowrap px-2 lg:px-3 py-2 rounded-md ${
                     item.current
-                      ? "text-blue-600 bg-blue-50 border border-blue-200"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "text-teal-700 bg-teal-50 border border-teal-200"
+                      : "text-gray-700 hover:text-teal-700 hover:bg-slate-50"
                   }`}
                 >
                   {item.name}
@@ -69,7 +69,7 @@ export function Navigation({ user }: NavigationProps) {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="font-medium transition-colors text-xs lg:text-sm whitespace-nowrap px-2 lg:px-3 py-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 flex items-center gap-1"
+                    className="font-medium transition-colors text-xs lg:text-sm whitespace-nowrap px-2 lg:px-3 py-2 rounded-md text-gray-700 hover:text-teal-700 hover:bg-slate-50 flex items-center gap-1"
                   >
                     More
                     <ChevronDown className="w-3 h-3" />
@@ -82,8 +82,8 @@ export function Navigation({ user }: NavigationProps) {
                         href={item.href}
                         className={`flex items-center gap-2 w-full px-2 py-2 text-sm cursor-pointer ${
                           item.current
-                            ? "text-blue-600 bg-blue-50"
-                            : "text-gray-700 hover:text-blue-600"
+                            ? "text-teal-700 bg-teal-50"
+                            : "text-gray-700 hover:text-teal-700"
                         }`}
                       >
                         <item.icon className="w-4 h-4" />
@@ -99,8 +99,8 @@ export function Navigation({ user }: NavigationProps) {
             <div className="flex items-center space-x-2">
               {/* Notifications - Hidden on small screens */}
               <Button variant="ghost" size="sm" className="relative hidden lg:flex">
-                <Bell className="w-5 h-5 text-gray-600 hover:text-medical-blue" />
-                <Badge className="absolute -top-1 -right-1 w-3 h-3 p-0 bg-deep-rose" />
+                <Bell className="w-5 h-5 text-gray-600 hover:text-teal-700" />
+                <Badge className="absolute -top-1 -right-1 w-3 h-3 p-0 bg-rose-500" />
               </Button>
 
               {/* Mobile Menu Trigger */}
@@ -120,7 +120,7 @@ export function Navigation({ user }: NavigationProps) {
                     {/* Header - iPhone Style */}
                     <div className="flex items-center justify-between pb-6 pt-2 border-b border-gray-100">
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-200">
                           <Stethoscope className="w-6 h-6 text-white" />
                         </div>
                         <div>
@@ -138,7 +138,7 @@ export function Navigation({ user }: NavigationProps) {
                           href={item.href}
                           className={`flex items-center space-x-4 p-4 mx-2 rounded-2xl transition-all duration-200 ${
                             item.current
-                              ? "bg-blue-600 text-white shadow-lg shadow-blue-200 scale-[0.98]"
+                              ? "bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-lg shadow-teal-200 scale-[0.98]"
                               : "text-gray-700 hover:bg-gray-100/80 active:scale-[0.96]"
                           }`}
                           onClick={() => setIsMobileMenuOpen(false)}
@@ -178,7 +178,7 @@ export function Navigation({ user }: NavigationProps) {
               href="/dashboard"
               className={`flex flex-col items-center justify-center py-2 px-1 rounded-md transition-all duration-200 flex-1 ${
                 location === "/dashboard"
-                  ? "text-blue-600 bg-blue-100/80"
+                  ? "text-teal-700 bg-teal-50"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
@@ -190,7 +190,7 @@ export function Navigation({ user }: NavigationProps) {
               href="/plab1-new"
               className={`flex flex-col items-center justify-center py-2 px-1 rounded-md transition-all duration-200 flex-1 ${
                 location === "/plab1-new"
-                  ? "text-blue-600 bg-blue-100/80"
+                  ? "text-teal-700 bg-teal-50"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
@@ -202,7 +202,7 @@ export function Navigation({ user }: NavigationProps) {
               href="/plab2-osce"
               className={`flex flex-col items-center justify-center py-2 px-1 rounded-md transition-all duration-200 flex-1 ${
                 location === "/plab2-osce"
-                  ? "text-blue-600 bg-blue-100/80"
+                  ? "text-teal-700 bg-teal-50"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
@@ -214,19 +214,19 @@ export function Navigation({ user }: NavigationProps) {
               href="/adaptive-learning"
               className={`flex flex-col items-center justify-center py-2 px-1 rounded-md transition-all duration-200 flex-1 ${
                 location === "/adaptive-learning"
-                  ? "text-blue-600 bg-blue-100/80"
+                  ? "text-teal-700 bg-teal-50"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
               <Brain className={`w-5 h-5 mb-0.5 ${location === "/adaptive-learning" ? "scale-110" : ""}`} />
-              <span className="text-xs font-medium">AI</span>
+              <span className="text-xs font-medium">Smart</span>
             </Link>
 
             <Link
               href="/more"
               className={`flex flex-col items-center justify-center py-2 px-1 rounded-md transition-all duration-200 flex-1 ${
                 location === "/more"
-                  ? "text-blue-600 bg-blue-100/80"
+                  ? "text-teal-700 bg-teal-50"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
