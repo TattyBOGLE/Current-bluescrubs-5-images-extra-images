@@ -79,6 +79,12 @@ const WEAK_AREA_ICON = [
   { Icon: Brain,      color: 'text-purple-500', bg: 'bg-purple-50', ring: 'stroke-purple-400' },
 ];
 
+const STARTER_RECOMMENDATIONS: WeakAreaRecommendation[] = [
+  { category: 'cardiovascular',  priority: 'high',   reason: 'High-yield PLAB topic', suggestedAction: 'Start with 10 questions',  estimatedStudyTime: 60 },
+  { category: 'respiratory',     priority: 'medium', reason: 'Common exam area',      suggestedAction: 'Quick warm-up set',         estimatedStudyTime: 45 },
+  { category: 'endocrinology',   priority: 'medium', reason: 'Frequently tested',     suggestedAction: 'Build core knowledge',      estimatedStudyTime: 70 },
+];
+
 interface SessionSetupProps {
   heroImageLoaded: boolean;
   setHeroImageLoaded: (v: boolean) => void;
@@ -259,16 +265,24 @@ export function SessionSetup({
           </div>
         )}
 
-        {/* Weak Areas — top horizontal scroller */}
-        {weakAreas && weakAreas.length > 0 && (
+        {/* Recommended Focus — real weak areas if available, otherwise starter suggestions */}
+        {(() => {
+          const items = (weakAreas && weakAreas.length > 0) ? weakAreas : STARTER_RECOMMENDATIONS;
+          const isStarter = !weakAreas || weakAreas.length === 0;
+          return (
           <section className="mt-4">
-            <div className="px-6 mb-3">
+            <div className="px-6 mb-3 flex items-baseline justify-between">
               <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">
-                {translateText('Recommended Focus')}
+                {translateText(isStarter ? 'Suggested Topics' : 'Recommended Focus')}
               </h2>
+              {isStarter && (
+                <span className="text-[10px] text-slate-400 normal-case tracking-normal">
+                  {translateText('Personalised as you practise')}
+                </span>
+              )}
             </div>
             <div className="flex overflow-x-auto px-6 pb-4 gap-3 plab1-no-scrollbar snap-x">
-              {weakAreas.slice(0, 6).map((area, i) => {
+              {items.slice(0, 6).map((area, i) => {
                 const visual = WEAK_AREA_ICON[i % WEAK_AREA_ICON.length];
                 const Icon = visual.Icon;
                 const label =
@@ -314,7 +328,8 @@ export function SessionSetup({
               })}
             </div>
           </section>
-        )}
+          );
+        })()}
 
         {/* Chip rows — single-line horizontal scrollers */}
         <section className="space-y-5 mt-2">
