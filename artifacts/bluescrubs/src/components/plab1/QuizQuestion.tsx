@@ -67,18 +67,18 @@ export function QuizQuestion({
   const options = getOptions();
 
   return (
-    <Card className="mb-6">
+    <Card className="mb-6 rounded-2xl border-slate-200">
       <CardContent className="p-6">
         {/* Controls - Translation and Voice */}
-        <div className="flex justify-between items-start mb-4 gap-4">
+        <div className="flex justify-between items-start mb-4 gap-4 flex-wrap">
           {/* Translation Controls */}
-          <div className="bg-gray-50 rounded-lg p-3 border">
+          <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200">
             <div className="flex items-center gap-3">
-              <Languages className="w-4 h-4 text-blue-600" />
+              <Languages className="w-4 h-4 text-teal-600" />
               <Switch
                 checked={translateQuestions}
                 onCheckedChange={setTranslateQuestions}
-                className="data-[state=checked]:bg-blue-600"
+                className="data-[state=checked]:bg-teal-600"
               />
               <span className="text-sm text-gray-700">Translate</span>
               {translateQuestions && (
@@ -151,16 +151,16 @@ export function QuizQuestion({
           </div>
 
           {/* Voice Controls */}
-          <div className="bg-gray-50 rounded-lg p-3 border">
+          <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200">
             <div className="flex items-center gap-3">
-              <Volume2 className="w-4 h-4 text-green-600" />
+              <Volume2 className="w-4 h-4 text-teal-600" />
               <Switch
                 checked={speechEnabled}
                 onCheckedChange={(checked) => {
                   setSpeechEnabled(checked);
                   if (!checked) stopSpeaking();
                 }}
-                className="data-[state=checked]:bg-green-600"
+                className="data-[state=checked]:bg-teal-600"
               />
               <span className="text-sm text-gray-700">Voice</span>
               {speechEnabled && (
@@ -187,7 +187,7 @@ export function QuizQuestion({
                             <div className="flex items-center gap-2">
                               <span>{flagEmoji}</span>
                               <span className="text-xs">{voiceName}</span>
-                              {isEnglish && <span className="text-xs text-blue-600">★</span>}
+                              {isEnglish && <span className="text-xs text-teal-600">★</span>}
                             </div>
                           </SelectItem>
                         );
@@ -225,13 +225,13 @@ export function QuizQuestion({
 
         {/* Clinical Scenario */}
         {currentQuestion.scenario && (
-          <div className="mb-6 bg-blue-50 rounded-lg p-4 border border-blue-200">
+          <div className="mb-6 bg-teal-50/70 rounded-2xl p-4 border border-teal-100">
             <div className="flex items-start gap-3">
-              <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-0.5">
+              <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mt-0.5">
                 <span className="text-white text-xs font-bold">📋</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-sm font-semibold text-blue-900 mb-2">Clinical Scenario</h3>
+                <h3 className="text-sm font-semibold text-teal-900 mb-2">Clinical Scenario</h3>
                 {(() => {
                   if (translateQuestions && selectedLanguage !== 'en' && translatedQ?.scenario) {
                     return (
@@ -240,8 +240,8 @@ export function QuizQuestion({
                           <p className="text-xs text-gray-500 mb-1">English:</p>
                           <p className="text-gray-700 leading-relaxed">{currentQuestion.scenario}</p>
                         </div>
-                        <div className="bg-blue-100 p-3 rounded border border-blue-300">
-                          <p className="text-xs text-blue-600 mb-1">Translation:</p>
+                        <div className="bg-white p-3 rounded-lg border border-teal-200">
+                          <p className="text-xs text-teal-700 mb-1 font-semibold">Translation</p>
                           <p className="text-gray-700 leading-relaxed">{translatedQ.scenario}</p>
                         </div>
                       </div>
@@ -266,8 +266,8 @@ export function QuizQuestion({
                       {currentQuestion.question || currentQuestion.stem}
                     </h2>
                   </div>
-                  <div className="bg-blue-100 p-3 rounded border border-blue-300">
-                    <p className="text-xs text-blue-600 mb-1">Translation:</p>
+                  <div className="bg-white p-3 rounded-lg border border-teal-200">
+                    <p className="text-xs text-teal-700 mb-1 font-semibold">Translation</p>
                     <h2 className="text-lg font-semibold text-gray-900 leading-relaxed">
                       {translatedQ.question}
                     </h2>
@@ -297,16 +297,16 @@ export function QuizQuestion({
             return (
               <label
                 key={index}
-                className={`flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${
+                className={`flex items-center p-4 border-2 rounded-2xl cursor-pointer transition-all duration-200 ${
                   showExplanation
                     ? isCorrectAnswer
-                      ? 'border-green-500 bg-green-100 shadow-lg shadow-green-200'
+                      ? 'border-teal-500 bg-teal-50 shadow-md shadow-teal-100'
                       : isIncorrectlySelected
-                      ? 'border-red-500 bg-red-50'
-                      : 'border-gray-200 bg-gray-50 opacity-60'
+                      ? 'border-rose-400 bg-rose-50'
+                      : 'border-slate-200 bg-slate-50 opacity-60'
                     : isSelectedAnswer
-                    ? 'border-blue-500 bg-blue-50'
-                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+                    ? 'border-teal-500 bg-teal-50 shadow-sm shadow-teal-100'
+                    : 'border-slate-200 bg-white hover:border-teal-300 hover:bg-teal-50/40'
                 }`}
               >
                 <input
@@ -316,10 +316,20 @@ export function QuizQuestion({
                   checked={selectedAnswer === index.toString()}
                   onChange={() => !showExplanation && onAnswerSelect(index.toString())}
                   disabled={showExplanation}
-                  className="w-4 h-4 mr-3 text-blue-600"
+                  className="w-4 h-4 mr-3 accent-teal-600"
                 />
 
-                <div className="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center mr-3 font-bold text-sm">
+                <div
+                  className={`w-8 h-8 rounded-full flex items-center justify-center mr-3 font-bold text-sm transition-colors ${
+                    showExplanation && isCorrectAnswer
+                      ? 'bg-teal-600 text-white'
+                      : showExplanation && isIncorrectlySelected
+                      ? 'bg-rose-500 text-white'
+                      : isSelectedAnswer
+                      ? 'bg-teal-600 text-white'
+                      : 'bg-slate-100 text-slate-600'
+                  }`}
+                >
                   {String.fromCharCode(65 + index)}
                 </div>
 
@@ -330,34 +340,34 @@ export function QuizQuestion({
                         <div className="space-y-2">
                           {showExplanation && isCorrectAnswer && (
                             <span className="inline-flex items-center gap-1 mb-2">
-                              <span className="text-green-700 font-bold text-lg">✓ CORRECT:</span>
+                              <span className="text-teal-700 font-bold text-sm">✓ Correct</span>
                             </span>
                           )}
                           {showExplanation && isIncorrectlySelected && (
                             <span className="inline-flex items-center gap-1 mb-2">
-                              <span className="text-red-600 font-bold">✗ YOUR CHOICE:</span>
+                              <span className="text-rose-600 font-bold text-sm">✗ Your choice</span>
                             </span>
                           )}
                           <div className="bg-white/70 p-2 rounded border border-gray-200">
                             <p className="text-xs text-gray-500 mb-1">English:</p>
                             <span className={`text-base leading-relaxed ${
                               showExplanation && isCorrectAnswer
-                                ? 'text-green-900 font-bold'
+                                ? 'text-teal-900 font-bold'
                                 : showExplanation && isIncorrectlySelected
-                                ? 'text-red-800'
-                                : 'text-gray-800'
+                                ? 'text-rose-800'
+                                : 'text-slate-800'
                             }`}>
                               {originalOption}
                             </span>
                           </div>
-                          <div className="bg-blue-50 p-2 rounded border border-blue-200">
-                            <p className="text-xs text-blue-600 mb-1">Translation:</p>
+                          <div className="bg-teal-50 p-2 rounded-lg border border-teal-200">
+                            <p className="text-xs text-teal-700 mb-1 font-semibold">Translation</p>
                             <span className={`text-base leading-relaxed ${
                               showExplanation && isCorrectAnswer
-                                ? 'text-green-900 font-bold'
+                                ? 'text-teal-900 font-bold'
                                 : showExplanation && isIncorrectlySelected
-                                ? 'text-red-800'
-                                : 'text-gray-800'
+                                ? 'text-rose-800'
+                                : 'text-slate-800'
                             }`}>
                               {option}
                             </span>
@@ -368,22 +378,22 @@ export function QuizQuestion({
                     return (
                       <span className={`text-base leading-relaxed ${
                         showExplanation && isCorrectAnswer
-                          ? 'text-green-900 font-bold'
+                          ? 'text-teal-900 font-bold'
                           : showExplanation && isIncorrectlySelected
-                          ? 'text-red-800'
-                          : 'text-gray-800'
+                          ? 'text-rose-800'
+                          : 'text-slate-800'
                       }`}>
                         {showExplanation && isCorrectAnswer && (
                           <span className="inline-flex items-center gap-1 mr-2">
-                            <span className="text-green-700 font-bold text-lg">✓ CORRECT:</span>
+                            <span className="text-teal-700 font-bold text-sm">✓ Correct</span>
                           </span>
                         )}
                         {showExplanation && isIncorrectlySelected && (
                           <span className="inline-flex items-center gap-1 mr-2">
-                            <span className="text-red-600 font-bold">✗ YOUR CHOICE:</span>
+                            <span className="text-rose-600 font-bold text-sm">✗ Your choice</span>
                           </span>
                         )}
-                        <span className={showExplanation && isCorrectAnswer ? 'text-green-900 font-bold' : ''}>
+                        <span className={showExplanation && isCorrectAnswer ? 'text-teal-900 font-bold' : ''}>
                           {option}
                         </span>
                       </span>
@@ -399,17 +409,17 @@ export function QuizQuestion({
                       e.stopPropagation();
                       speakText(option);
                     }}
-                    className="h-8 w-8 p-0 text-gray-500 hover:text-blue-600 ml-2"
+                    className="h-8 w-8 p-0 text-slate-400 hover:text-teal-600 ml-2"
                   >
                     <Volume2 className="w-3 h-3" />
                   </Button>
                 )}
 
                 {showExplanation && isCorrectAnswer && (
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 ml-2" />
+                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 ml-2" />
                 )}
                 {showExplanation && isIncorrectlySelected && (
-                  <XCircle className="w-5 h-5 text-red-600 flex-shrink-0 ml-2" />
+                  <XCircle className="w-5 h-5 text-rose-500 flex-shrink-0 ml-2" />
                 )}
               </label>
             );

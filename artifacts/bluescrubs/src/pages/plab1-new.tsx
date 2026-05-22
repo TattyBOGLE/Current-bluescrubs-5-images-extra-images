@@ -1213,10 +1213,10 @@ export default function PLAB1New() {
   // Loading state
   if (isGeneratingQuestions) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center pb-24">
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center pb-24">
         <Card className="w-full max-w-md mb-16">
           <CardContent className="p-8 text-center">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-16 h-16 border-4 border-teal-100 border-t-teal-600 rounded-full animate-spin mx-auto mb-4"></div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Generating AI Medical Questions</h3>
             <p className="text-gray-600">Creating personalized questions for {selectedCategory} practice...</p>
           </CardContent>
@@ -1264,7 +1264,7 @@ export default function PLAB1New() {
   // No question fallback
   if (!currentQuestion) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
         <div className="text-center">
           <AlertTriangle className="w-8 h-8 text-amber-400 mx-auto mb-3" />
           <p className="text-gray-600 mb-4">
@@ -1277,7 +1277,7 @@ export default function PLAB1New() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 pb-24">
+    <div className="min-h-screen bg-slate-50 p-4 pb-24">
       <div className="max-w-4xl mx-auto mb-16">
 
         <QuizErrorBoundary context="gamification">
@@ -1378,7 +1378,7 @@ export default function PLAB1New() {
       {sessionStarted && (
         <Button
           onClick={() => setShowAITutor(true)}
-          className="fixed bottom-24 right-4 w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg z-50 flex items-center justify-center"
+          className="fixed bottom-24 right-4 w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 shadow-lg shadow-teal-200/60 z-50 flex items-center justify-center border-none"
           title="Ask AI Tutor"
         >
           <MessageCircle className="w-6 h-6 text-white" />

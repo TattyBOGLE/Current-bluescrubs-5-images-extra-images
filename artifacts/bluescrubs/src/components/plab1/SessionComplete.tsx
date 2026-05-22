@@ -49,11 +49,11 @@ export function SessionComplete({
   const multiTopic = topicBreakdown.length >= 2;
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 pb-24">
+    <div className="min-h-screen bg-slate-50 p-4 pb-24">
       <div className="max-w-lg mx-auto space-y-5 mt-6">
 
         {/* Score circle */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col items-center gap-3">
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 flex flex-col items-center gap-3">
           <div
             className={`w-36 h-36 rounded-full ${circleStyle.bg} ${circleStyle.ring} ring-4 flex flex-col items-center justify-center`}
           >
@@ -65,7 +65,7 @@ export function SessionComplete({
 
         {/* 2×2 stat grid */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-start gap-3">
+          <div className="bg-white rounded-xl border border-slate-100 shadow-sm p-4 flex items-start gap-3">
             <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-xs text-gray-500 font-medium">Correct</p>
@@ -73,7 +73,7 @@ export function SessionComplete({
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-start gap-3">
+          <div className="bg-white rounded-xl border border-slate-100 shadow-sm p-4 flex items-start gap-3">
             <XCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-xs text-gray-500 font-medium">Incorrect</p>
@@ -81,16 +81,16 @@ export function SessionComplete({
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-start gap-3">
-            <Clock className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+          <div className="bg-white rounded-xl border border-slate-100 shadow-sm p-4 flex items-start gap-3">
+            <Clock className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-xs text-gray-500 font-medium">Avg per question</p>
               <p className="text-xl font-bold text-gray-900">{avgTimePerQuestion}<span className="text-sm font-normal text-gray-400">s</span></p>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-start gap-3">
-            <Tag className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+          <div className="bg-white rounded-xl border border-slate-100 shadow-sm p-4 flex items-start gap-3">
+            <Tag className="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-xs text-gray-500 font-medium">Category</p>
               <p className="text-base font-bold text-gray-900 capitalize leading-tight mt-0.5">{selectedCategory || "All"}</p>
@@ -100,7 +100,7 @@ export function SessionComplete({
 
         {/* Topic breakdown */}
         {multiTopic && (
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Topic Breakdown</p>
             <div className="space-y-2.5">
               {topicBreakdown.map(({ topic, correct, total }) => {
@@ -128,11 +128,11 @@ export function SessionComplete({
 
         {/* Actions */}
         <div className="flex gap-3">
-          <Button onClick={onRestart} className="flex-1 bg-blue-600 hover:bg-blue-700">
+          <Button onClick={onRestart} className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white rounded-2xl font-semibold shadow-md shadow-teal-200/50 border-none h-11">
             <RotateCcw className="w-4 h-4 mr-2" />
             Start New Session
           </Button>
-          <Button variant="outline" onClick={onHome} className="flex-1">
+          <Button variant="outline" onClick={onHome} className="flex-1 rounded-2xl h-11 border-slate-200 text-slate-700 hover:bg-slate-50">
             <Home className="w-4 h-4 mr-2" />
             Back to Home
           </Button>

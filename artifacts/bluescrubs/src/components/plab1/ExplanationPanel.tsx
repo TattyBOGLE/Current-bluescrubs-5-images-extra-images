@@ -43,25 +43,25 @@ export function ExplanationPanel({
       {/* Structured AI explanation (or fallback to legacy bullet list) */}
       <div className="text-gray-800 leading-relaxed space-y-4">
         {aiExplanationLoading && !aiExplanation ? (
-          <div className="space-y-2 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <div className="flex items-center gap-2 text-blue-800">
+          <div className="space-y-2 p-4 bg-teal-50/70 border border-teal-100 rounded-2xl">
+            <div className="flex items-center gap-2 text-teal-800">
               <Brain className="w-4 h-4 animate-pulse" />
               <span className="text-sm font-medium">Generating clinical reasoning…</span>
             </div>
             <div className="space-y-2 mt-2">
-              <div className="h-3 bg-blue-100 rounded animate-pulse" />
-              <div className="h-3 bg-blue-100 rounded animate-pulse w-5/6" />
-              <div className="h-3 bg-blue-100 rounded animate-pulse w-4/6" />
+              <div className="h-3 bg-teal-100 rounded animate-pulse" />
+              <div className="h-3 bg-teal-100 rounded animate-pulse w-5/6" />
+              <div className="h-3 bg-teal-100 rounded animate-pulse w-4/6" />
             </div>
           </div>
         ) : aiExplanation ? (
           <div className="space-y-5">
             {aiExplanation.source === 'fallback' ? (
               <>
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <div className="bg-teal-50/70 border-l-4 border-teal-500 p-4 rounded-r-2xl">
                   <div className="flex items-start gap-2 mb-2">
-                    <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <h4 className="font-semibold text-blue-900">Explanation</h4>
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                    <h4 className="font-semibold text-teal-900">Explanation</h4>
                   </div>
                   <div className="space-y-2">
                     {aiExplanation.correctRationale.split(/\n\n+/).filter(s => s.trim()).map((para, i) => (
@@ -76,27 +76,27 @@ export function ExplanationPanel({
                     {aiExplanation.options.map((opt) => (
                       <div
                         key={opt.label}
-                        className={`border-l-4 p-3 rounded-r-lg ${
+                        className={`border-l-4 p-3 rounded-r-2xl ${
                           opt.isCorrect
-                            ? 'border-green-500 bg-green-50'
+                            ? 'border-teal-500 bg-teal-50/70'
                             : opt.isSelected
-                            ? 'border-red-500 bg-red-50'
-                            : 'border-gray-300 bg-gray-50'
+                            ? 'border-rose-400 bg-rose-50'
+                            : 'border-slate-300 bg-slate-50'
                         }`}
                       >
                         <div className="flex items-start gap-2 mb-1">
                           <span className={`font-bold text-sm px-2 py-0.5 rounded flex-shrink-0 ${
                             opt.isCorrect
-                              ? 'bg-green-600 text-white'
+                              ? 'bg-teal-600 text-white'
                               : opt.isSelected
-                              ? 'bg-red-600 text-white'
-                              : 'bg-gray-300 text-gray-800'
+                              ? 'bg-rose-500 text-white'
+                              : 'bg-slate-200 text-slate-700'
                           }`}>
                             {opt.label}
                           </span>
                           <span className="font-medium text-sm text-gray-900">{opt.text}</span>
                           {opt.isCorrect && (
-                            <Badge className="ml-auto bg-green-600 hover:bg-green-700 text-xs">Correct</Badge>
+                            <Badge className="ml-auto bg-teal-600 hover:bg-teal-700 text-xs">Correct</Badge>
                           )}
                           {opt.isSelected && !opt.isCorrect && (
                             <Badge variant="destructive" className="ml-auto text-xs">Your answer</Badge>
@@ -156,10 +156,10 @@ export function ExplanationPanel({
               </>
             ) : (
               <>
-                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                <div className="bg-teal-50/70 border-l-4 border-teal-500 p-4 rounded-r-2xl">
                   <div className="flex items-start gap-2 mb-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <h4 className="font-semibold text-green-900">Why the correct answer fits</h4>
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                    <h4 className="font-semibold text-teal-900">Why the correct answer fits</h4>
                   </div>
                   <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
                     {aiExplanation.correctRationale}
@@ -274,7 +274,7 @@ export function ExplanationPanel({
       <div className="pt-4 border-t border-gray-200">
         {/* Specialty / topic / quality badges */}
         <div className="flex flex-wrap items-center gap-2 mb-2">
-          <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 text-xs font-medium border-0">
+          <Badge className="bg-teal-100 text-teal-800 hover:bg-teal-100 text-xs font-medium border-0">
             {currentQuestion.specialty
               || (currentQuestion.category
                 ? currentQuestion.category.charAt(0).toUpperCase() + currentQuestion.category.slice(1)
@@ -325,14 +325,14 @@ export function ExplanationPanel({
 
         {/* Learning objectives */}
         {Array.isArray(currentQuestion.learningObjectives) && currentQuestion.learningObjectives.length > 0 && (
-          <div className="mb-3 bg-blue-50 rounded-lg p-3">
-            <p className="text-xs font-semibold text-blue-900 mb-1.5 flex items-center gap-1">
+          <div className="mb-3 bg-teal-50/70 rounded-2xl p-3 border border-teal-100">
+            <p className="text-xs font-semibold text-teal-900 mb-1.5 flex items-center gap-1">
               <Target className="w-3.5 h-3.5" /> Learning objectives
             </p>
             <ul className="space-y-1">
               {(currentQuestion.learningObjectives as string[]).map((obj: string, i: number) => (
-                <li key={i} className="text-xs text-blue-800 flex items-start gap-1.5">
-                  <span className="text-blue-400 mt-0.5 flex-shrink-0">•</span>{obj}
+                <li key={i} className="text-xs text-teal-800 flex items-start gap-1.5">
+                  <span className="text-teal-400 mt-0.5 flex-shrink-0">•</span>{obj}
                 </li>
               ))}
             </ul>

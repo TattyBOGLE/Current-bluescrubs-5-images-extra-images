@@ -29971,5 +29971,215 @@
     "category": "all",
     "difficulty": "intermediate",
     "topic": "Cardiology - general variant"
+  },
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_0",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - stroke variant"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_1",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - epilepsy variant"
+  },
+  {
+    "question": "A 45-year-old female presents with 1-month history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Echocardiogram",
+      "ACE inhibitor",
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "Aspirin and clopidogrel"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: ACE inhibitor.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to ACE inhibitor as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Echocardiogram) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Urgent cardiology referral) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_2",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - headache variant"
+  },
+  {
+    "question": "A 65-year-old male with a history of hypertension presents with sudden onset chest pain radiating to the left arm. An ECG shows ST-elevation in leads II, III, and aVF. What is the most appropriate initial management?",
+    "options": [
+      "Beta-blocker",
+      "Urgent cardiology referral",
+      "Aspirin",
+      "ACE inhibitor",
+      "Nitrates"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C: Aspirin.\n\nThis question tests management of a common cardiovascular presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Aspirin as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Beta-blocker) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Urgent cardiology referral) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Aspirin) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption D (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Nitrates) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: MONA - Morphine, Oxygen, Nitrates, Aspirin",
+    "mnemonic": "MONA - Morphine, Oxygen, Nitrates, Aspirin",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg94",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_3",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Acute Coronary Syndrome - dementia variant"
+  },
+  {
+    "question": "A 72-year-old female presents with a 2-week history of worsening ankle swelling and shortness of breath on exertion. On examination, she has pitting edema and a raised jugular venous pressure. What is the most appropriate initial investigation?",
+    "options": [
+      "Chest X-ray",
+      "Echocardiogram",
+      "ECG",
+      "Blood tests for BNP levels",
+      "CT pulmonary angiogram"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Echocardiogram.\n\nThis question tests management of a common cardiovascular presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Chest X-ray) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (ECG) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Blood tests for BNP levels) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (CT pulmonary angiogram) is incorrect here: while it may be appropriate in other cardiovascular scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Echo for Edema and Exertional dyspnea",
+    "mnemonic": "Echo for Edema and Exertional dyspnea",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_4",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Heart Failure - stroke variant"
+  },
+  {
+    "question": "A 65-year-old male presents with a sudden onset of severe headache and neck stiffness. His blood pressure is 190/110 mmHg. What is the most appropriate initial investigation?",
+    "options": [
+      "CT scan of the head",
+      "MRI of the brain",
+      "Lumbar puncture",
+      "Carotid Doppler ultrasound",
+      "EEG"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A: CT scan of the head.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to CT scan of the head as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (CT scan of the head) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (MRI of the brain) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Lumbar puncture) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Carotid Doppler ultrasound) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (EEG) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: CT for Crisis",
+    "mnemonic": "CT for Crisis",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng127",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_5",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Neurology - epilepsy variant"
+  },
+  {
+    "question": "A 50-year-old female presents with fatigue, weight gain, and cold intolerance. TSH is elevated. What is the most appropriate treatment?",
+    "options": [
+      "Carbimazole",
+      "Levothyroxine",
+      "Radioactive iodine therapy",
+      "Thyroidectomy",
+      "Beta-blockers"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Levothyroxine.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Levothyroxine as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Carbimazole) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (Levothyroxine) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption C (Radioactive iodine therapy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Thyroidectomy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Beta-blockers) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Levothyroxine for Low",
+    "mnemonic": "Levothyroxine for Low",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_6",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Endocrinology - headache variant"
+  },
+  {
+    "question": "A 30-year-old male presents with abdominal pain and jaundice. Blood tests show elevated bilirubin and alkaline phosphatase. What is the most appropriate initial imaging?",
+    "options": [
+      "Abdominal ultrasound",
+      "CT scan of the abdomen",
+      "MRI of the liver",
+      "ERCP",
+      "Liver biopsy"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A: Abdominal ultrasound.\n\nThis question tests management of a common all presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Abdominal ultrasound as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Abdominal ultrasound) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (CT scan of the abdomen) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (MRI of the liver) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (ERCP) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Liver biopsy) is incorrect here: while it may be appropriate in other all scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: U for Ultrasound in Uro",
+    "mnemonic": "U for Ultrasound in Uro",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng104",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_7",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Gastroenterology - dementia variant"
+  },
+  {
+    "question": "A 58-year-old female presents with 1-month history of shortness of breath. Chest X-ray shows cardiomegaly. What is the most appropriate initial management?",
+    "options": [
+      "Aspirin and clopidogrel",
+      "ACE inhibitor",
+      "Beta-blocker",
+      "Echocardiogram",
+      "Urgent cardiology referral"
+    ],
+    "answer": 3,
+    "explanation": "The correct answer is D: Echocardiogram.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Echocardiogram as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption B (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Echocardiogram) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption E (Urgent cardiology referral) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_8",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - stroke variant"
+  },
+  {
+    "question": "A 39-year-old male presents with 6-hour history of palpitations. Heart sounds reveal a systolic murmur. What is the most appropriate treatment?",
+    "options": [
+      "Urgent cardiology referral",
+      "Beta-blocker",
+      "ACE inhibitor",
+      "Aspirin and clopidogrel",
+      "Echocardiogram"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A: Urgent cardiology referral.\n\nThis question tests management of a common cardiology presentation. The key clinical clues in the stem (age, symptoms, history, examination findings) point to Urgent cardiology referral as the most appropriate response per current NICE and UK specialist guidelines.\n\nOption A (Urgent cardiology referral) is correct: it is the most appropriate intervention for this presentation based on current UK clinical guidelines.\n\nOption B (Beta-blocker) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption C (ACE inhibitor) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption D (Aspirin and clopidogrel) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nOption E (Echocardiogram) is incorrect here: while it may be appropriate in other cardiology scenarios, the clinical features in this stem do not support it as the best next step.\n\nClinical pearl: Clinical reasoning approach",
+    "mnemonic": "Clinical reasoning approach",
+    "links": {
+      "NICE": "https://www.nice.org.uk",
+      "GMC": "https://www.gmc-uk.org/ethical-guidance"
+    },
+    "id": "generated_neurology_1779490709175_9",
+    "category": "neurology",
+    "difficulty": "intermediate",
+    "topic": "Cardiology - epilepsy variant"
   }
 ]
