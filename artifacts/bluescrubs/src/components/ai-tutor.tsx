@@ -25,7 +25,7 @@ const TABS: { id: TabId; label: string; Icon: typeof MessageCircle }[] = [
   { id: 'voice',    label: 'Voice',      Icon: Mic },
 ];
 
-export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }: AITutorProps) {
+export function Tutor({ currentQuestion, userPerformance, onClose, isVisible }: AITutorProps) {
   const [userQuery, setUserQuery] = useState('');
   const [activeTab, setActiveTab] = useState<TabId>('help');
   const [uploadedContent, setUploadedContent] = useState('');
@@ -81,7 +81,7 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
   const generatePodcast = () => {
     const content = uploadedContent || currentQuestion?.explanation || 'Current medical topic';
     tutorMutation.mutate({
-      query: `Create an AI-narrated podcast script from this content: ${content}`,
+      query: `Create a narrated podcast script from this content: ${content}`,
       context: { type: 'podcast_generation', audioFormat: true },
     });
   };
@@ -123,7 +123,7 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
             <Sparkles className="w-5 h-5 text-white" />
           </div>
           <div className="min-w-0 flex-1">
-            <h2 className="text-base sm:text-lg font-bold text-white leading-tight">AI Medical Tutor</h2>
+            <h2 className="text-base sm:text-lg font-bold text-white leading-tight">Medical Tutor</h2>
             <p className="text-[11px] sm:text-xs text-teal-50">PLAB 1 Assistant</p>
           </div>
           <Badge className="bg-white/20 text-white border-transparent hover:bg-white/25 text-[10px] font-semibold hidden sm:inline-flex">
@@ -187,7 +187,7 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
 
               <div className="bg-white rounded-2xl border border-slate-200 p-4 space-y-3">
                 <label className="text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                  Ask the AI Tutor
+                  Ask the Tutor
                 </label>
                 <Textarea
                   placeholder="Ask anything about medical concepts, exam strategies, or study tips…"
@@ -332,7 +332,7 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
             <div className="bg-white rounded-2xl border border-teal-100 overflow-hidden">
               <div className="bg-teal-50/70 px-4 py-3 flex items-center gap-2 border-b border-teal-100">
                 <Sparkles className="w-4 h-4 text-teal-600" />
-                <p className="text-sm font-semibold text-teal-900">AI Tutor Response</p>
+                <p className="text-sm font-semibold text-teal-900">Tutor Response</p>
               </div>
               <div className="p-4 space-y-4">
                 <p className="text-sm text-slate-700 whitespace-pre-wrap leading-relaxed">

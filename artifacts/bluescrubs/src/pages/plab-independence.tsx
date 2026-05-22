@@ -49,7 +49,7 @@ export default function PLABIndependence() {
             PLAB Independence Dashboard
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-            Complete PLAB preparation without external AI dependency
+            Complete PLAB preparation without external services dependency
           </p>
           
           <div className="flex justify-center gap-4 mb-8">
@@ -103,7 +103,7 @@ export default function PLABIndependence() {
                 <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
                   0%
                 </div>
-                <p className="text-gray-600 dark:text-gray-300">AI Dependency</p>
+                <p className="text-gray-600 dark:text-gray-300">External Dependency</p>
               </div>
               <div className="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
                 <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">

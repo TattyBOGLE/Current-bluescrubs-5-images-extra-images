@@ -85,7 +85,7 @@ export default function Plab2Osce() {
   const [neuroAccommodations, setNeuroAccommodations] = useState<NeuroAtypicalType[]>(['none']);
   const { accommodations, questionStyles, buttonStyles } = useNeuroAccommodations(neuroAccommodations);
 
-  // AI Tutor state
+  // Tutor state
   const [showAITutor, setShowAITutor] = useState(false);
   const [tutorMessages, setTutorMessages] = useState<Array<{role: 'user' | 'assistant', content: string}>>([]);
   const [tutorInput, setTutorInput] = useState('');
@@ -259,7 +259,7 @@ export default function Plab2Osce() {
     return scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length : 0;
   };
 
-  // AI Tutor functionality
+  // Tutor functionality
   const handleAskTutor = async (question: string) => {
     if (!question.trim()) return;
     
@@ -295,7 +295,7 @@ export default function Plab2Osce() {
       const assistantMessage = { role: 'assistant' as const, content: data.response };
       setTutorMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
-      console.error('AI Tutor error:', error);
+      console.error('Tutor error:', error);
       const errorMessage = { 
         role: 'assistant' as const, 
         content: 'I apologize, but I encountered an error. Please try asking your question again.' 
@@ -430,7 +430,7 @@ export default function Plab2Osce() {
                   </div>
                 )}
 
-                {/* AI Tutor Chat Interface */}
+                {/* Tutor Chat Interface */}
                 <div className="mt-6 border border-gray-200 rounded-lg">
                   <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
                     <div className="flex items-center justify-between">
@@ -446,7 +446,7 @@ export default function Plab2Osce() {
                             borderRadius: '4px'
                           }}
                         >
-                          AI Clinical Skills Tutor
+                          Clinical Skills Tutor
                         </h4>
                       </div>
                       <Button
@@ -483,7 +483,7 @@ export default function Plab2Osce() {
                         {isLoadingTutorResponse && (
                           <div className="flex justify-start">
                             <div className="bg-gray-100 p-3 rounded-lg">
-                              <p className="text-sm text-gray-600">AI Tutor is thinking...</p>
+                              <p className="text-sm text-gray-600">Tutor is thinking...</p>
                             </div>
                           </div>
                         )}

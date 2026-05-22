@@ -218,7 +218,7 @@ export function PersonalizedDashboard({ className = '' }: PersonalizedDashboardP
           <Card>
             <CardHeader>
               <CardTitle>Personalized Study Recommendations</CardTitle>
-              <CardDescription>AI-generated suggestions based on your performance patterns</CardDescription>
+              <CardDescription>smart-generated suggestions based on your performance patterns</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">

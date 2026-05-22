@@ -47,13 +47,13 @@ interface AnalyticsData {
 export default function Analytics() {
   const [selectedPeriod, setSelectedPeriod] = useState('7d');
   
-  // AI Tutor state for analytics insights
+  // Tutor state for analytics insights
   const [showAITutor, setShowAITutor] = useState(false);
   const [tutorMessages, setTutorMessages] = useState<Array<{role: 'user' | 'assistant', content: string}>>([]);
   const [tutorInput, setTutorInput] = useState('');
   const [isLoadingTutorResponse, setIsLoadingTutorResponse] = useState(false);
   
-  // AI Tutor functionality for analytics insights
+  // Tutor functionality for analytics insights
   const handleAskTutor = async (question: string) => {
     if (!question.trim()) return;
     
@@ -90,7 +90,7 @@ export default function Analytics() {
       const assistantMessage = { role: 'assistant' as const, content: data.response };
       setTutorMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
-      console.error('AI Tutor error:', error);
+      console.error('Tutor error:', error);
       const errorMessage = { 
         role: 'assistant' as const, 
         content: 'I apologize, but I encountered an error. Please try asking your question again.' 
@@ -338,7 +338,7 @@ export default function Analytics() {
             <TabsTrigger value="specialties">Specialties</TabsTrigger>
             <TabsTrigger value="progress">Progress</TabsTrigger>
             <TabsTrigger value="achievements">Achievements</TabsTrigger>
-            <TabsTrigger value="tutor">AI Tutor</TabsTrigger>
+            <TabsTrigger value="tutor">Tutor</TabsTrigger>
             <TabsTrigger value="recommendations">Insights</TabsTrigger>
           </TabsList>
 
@@ -664,7 +664,7 @@ export default function Analytics() {
                     {isLoadingTutorResponse && (
                       <div className="flex justify-start">
                         <div className="bg-gray-100 p-3 rounded-lg">
-                          <p className="text-sm text-gray-600">AI Tutor is analyzing your performance...</p>
+                          <p className="text-sm text-gray-600">Tutor is analyzing your performance...</p>
                         </div>
                       </div>
                     )}
@@ -702,7 +702,7 @@ export default function Analytics() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Brain className="h-6 w-6 text-purple-500" />
-                  AI-Powered Insights
+                  Smart Insights
                 </CardTitle>
                 <CardDescription>
                   Personalised recommendations for improvement

@@ -155,7 +155,7 @@ export default function More() {
     },
     {
       icon: Brain,
-      title: "AI Medical Tutor",
+      title: "Medical Tutor",
       description: "Get instant answers to medical questions with UK guidelines",
       hasArrow: true,
       link: "/ask-ai"
@@ -274,7 +274,7 @@ export default function More() {
     },
     {
       icon: Brain,
-      title: "Ask BlueScrubsPrep AI",
+      title: "Ask BlueScrubsPrep",
       description: "Get instant answers to any medical question with UK guidelines",
       hasArrow: true,
 link: "/ask-ai"
@@ -296,7 +296,7 @@ link: "/ask-ai"
     {
       icon: Zap,
       title: "Premium Features",
-      description: "Unlock advanced AI tutoring and exclusive content",
+      description: "Unlock advanced tutoring and exclusive content",
       hasArrow: true,
       link: "/premium"
     },
@@ -326,8 +326,8 @@ link: "/ask-ai"
     },
     {
       icon: Brain,
-      title: "AI-Powered Learning",
-      description: "Personalized AI tutoring and adaptive learning systems",
+      title: "Smart Learning",
+      description: "Personalised tutoring and adaptive learning systems",
       hasArrow: true
     },
     {

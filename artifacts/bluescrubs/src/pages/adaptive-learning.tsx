@@ -168,7 +168,7 @@ export default function AdaptiveLearning() {
                 <Badge className="mb-3 bg-green-100 text-green-800">Unique Advantage</Badge>
                 <h3 className="font-semibold mb-2 text-black">Authentic Content Only</h3>
                 <p className="text-sm text-black">
-                  Uses real medical scenarios, not AI-generated content, for genuine exam preparation
+                  Uses real medical scenarios, not smart-generated content, for genuine exam preparation
                 </p>
               </div>
 

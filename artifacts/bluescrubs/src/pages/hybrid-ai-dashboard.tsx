@@ -86,7 +86,7 @@ export default function HybridAIDashboard() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Hybrid AI System
+            Hybrid Smart Systems
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             Best of both worlds: AI enhancement with independent fallback
@@ -165,7 +165,7 @@ export default function HybridAIDashboard() {
           <CardContent className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-medium">Enable AI Enhancement</h3>
+                <h3 className="font-medium">Enable Enhancement</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Use AI for video analysis and feedback when available
                 </p>
@@ -222,7 +222,7 @@ export default function HybridAIDashboard() {
                 
                 <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg text-sm">
                   {status?.aiAvailable && useAI ? (
-                    "Uses AI for detailed performance analysis with natural language feedback"
+                    "Uses smart analysis for detailed performance feedback in natural language"
                   ) : (
                     "Uses structured assessment criteria based on PLAB 2 standards"
                   )}

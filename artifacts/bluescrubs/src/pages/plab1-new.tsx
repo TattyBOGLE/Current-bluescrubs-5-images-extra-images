@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { apiRequest } from "@/lib/queryClient";
-import { AITutor } from "@/components/ai-tutor";
+import { Tutor } from "@/components/ai-tutor";
 import { useToast } from "@/hooks/use-toast";
 import { formatTime, calculatePoints, type AIExplanation, type AIStudyTips } from "@/lib/quiz-utils";
 import {
@@ -76,12 +76,12 @@ export default function PLAB1New() {
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
   const [showExplanation, setShowExplanation] = useState(false);
 
-  // AI-generated structured explanation for the current answer
+  // smart-generated structured explanation for the current answer
   const [aiExplanation, setAiExplanation] = useState<AIExplanation | null>(null);
   const [aiExplanationLoading, setAiExplanationLoading] = useState(false);
   const aiExplanationCache = useRef<Map<string, AIExplanation>>(new Map());
 
-  // AI-generated study tips / mnemonics specific to each question
+  // smart-generated study tips / mnemonics specific to each question
   const [aiStudyTips, setAiStudyTips] = useState<AIStudyTips | null>(null);
   const [aiStudyTipsLoading, setAiStudyTipsLoading] = useState(false);
   const [tipsOpen, setTipsOpen] = useState(true);
@@ -113,7 +113,7 @@ export default function PLAB1New() {
   // Local analytics
   const { recommendations: weakAreaRecommendations, getWeakAreas } = useLocalAnalytics();
 
-  // AI Tutor state
+  // Tutor state
   const [showAITutor, setShowAITutor] = useState(false);
 
 
@@ -311,7 +311,7 @@ export default function PLAB1New() {
     const translations: Record<string, Record<string, string>> = {
       'ar': {
         'Master PLAB 1': 'إتقان PLAB 1',
-        'with AI': 'مع الذكاء الاصطناعي',
+        'with Tutor': 'الموجه',
         'Authentic UK Comprehensive exam preparation': 'تحضير شامل وأصيل للامتحان البريطاني',
         'Start Practice Now': 'ابدأ الممارسة الآن',
         'Settings & Languages': 'الإعدادات واللغات',
@@ -332,7 +332,7 @@ export default function PLAB1New() {
       },
       'hi': {
         'Master PLAB 1': 'PLAB 1 में महारत',
-        'with AI': 'AI के साथ',
+        'with Tutor': 'ट्यूटर के साथ',
         'Authentic UK Comprehensive exam preparation': 'प्रामाणिक UK व्यापक परीक्षा तैयारी',
         'Start Practice Now': 'अभी अभ्यास शुरू करें',
         'Settings & Languages': 'सेटिंग्स और भाषाएँ',
@@ -353,7 +353,7 @@ export default function PLAB1New() {
       },
       'ur': {
         'Master PLAB 1': 'PLAB 1 میں مہارت',
-        'with AI': 'AI کے ساتھ',
+        'with Tutor': 'ٹیوٹر کے ساتھ',
         'Authentic UK Comprehensive exam preparation': 'مستند UK جامع امتحان کی تیاری',
         'Start Practice Now': 'ابھی پریکٹس شروع کریں',
         'Settings & Languages': 'ترتیبات اور زبانیں',
@@ -1217,7 +1217,7 @@ export default function PLAB1New() {
         <Card className="w-full max-w-md mb-16">
           <CardContent className="p-8 text-center">
             <div className="w-16 h-16 border-4 border-teal-100 border-t-teal-600 rounded-full animate-spin mx-auto mb-4"></div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Generating AI Medical Questions</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Generating Medical Questions</h3>
             <p className="text-gray-600">Creating personalized questions for {selectedCategory} practice...</p>
           </CardContent>
         </Card>
@@ -1374,12 +1374,12 @@ export default function PLAB1New() {
         onNext={handleNextQuestion}
       />
 
-      {/* AI Tutor Floating Button */}
+      {/* Tutor Floating Button */}
       {sessionStarted && (
         <Button
           onClick={() => setShowAITutor(true)}
           className="fixed bottom-24 right-4 w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 shadow-lg shadow-teal-200/60 z-50 flex items-center justify-center border-none"
-          title="Ask AI Tutor"
+          title="Ask Tutor"
         >
           <MessageCircle className="w-6 h-6 text-white" />
         </Button>
@@ -1400,8 +1400,8 @@ export default function PLAB1New() {
         </div>
       )}
 
-      {/* AI Tutor Modal */}
-      <AITutor
+      {/* Tutor Modal */}
+      <Tutor
         currentQuestion={generatedQuestions[currentQuestionIndex]}
         userPerformance={{
           correctAnswers: sessionResults.filter(r => r.correct).length,

@@ -19,7 +19,7 @@ export default function ClinicalGuides() {
   const [selectedSpecialty, setSelectedSpecialty] = useState("all");
   const [activeTab, setActiveTab] = useState("guides");
 
-  // AI Tutor state
+  // Tutor state
   const [showAITutor, setShowAITutor] = useState(false);
   const [tutorMessages, setTutorMessages] = useState<Array<{role: 'user' | 'assistant', content: string}>>([]);
   const [tutorInput, setTutorInput] = useState('');
@@ -65,7 +65,7 @@ export default function ClinicalGuides() {
     }
   };
 
-  // AI Tutor functionality for clinical guides
+  // Tutor functionality for clinical guides
   const handleAskTutor = async (question: string) => {
     if (!question.trim()) return;
     
@@ -101,7 +101,7 @@ export default function ClinicalGuides() {
       const assistantMessage = { role: 'assistant' as const, content: data.response };
       setTutorMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
-      console.error('AI Tutor error:', error);
+      console.error('Tutor error:', error);
       const errorMessage = { 
         role: 'assistant' as const, 
         content: 'I apologize, but I encountered an error. Please try asking your question again.' 
@@ -177,7 +177,7 @@ export default function ClinicalGuides() {
                   <TabsTrigger value="clinical">Clinical</TabsTrigger>
                   <TabsTrigger value="management">Management</TabsTrigger>
                   <TabsTrigger value="guidelines">Guidelines</TabsTrigger>
-                  <TabsTrigger value="tutor">AI Tutor</TabsTrigger>
+                  <TabsTrigger value="tutor">Tutor</TabsTrigger>
                   <TabsTrigger value="cases">Cases</TabsTrigger>
                 </TabsList>
                 
@@ -286,7 +286,7 @@ export default function ClinicalGuides() {
                   </div>
                 </TabsContent>
 
-                {/* AI Tutor Integration for Clinical Guides */}
+                {/* Tutor Integration for Clinical Guides */}
                 <TabsContent value="tutor" className="space-y-4">
                   <Card>
                     <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -329,7 +329,7 @@ export default function ClinicalGuides() {
                           {isLoadingTutorResponse && (
                             <div className="flex justify-start">
                               <div className="bg-gray-100 p-3 rounded-lg">
-                                <p className="text-sm text-gray-600">AI Tutor is analyzing...</p>
+                                <p className="text-sm text-gray-600">Tutor is analyzing...</p>
                               </div>
                             </div>
                           )}

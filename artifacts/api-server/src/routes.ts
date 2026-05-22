@@ -60,7 +60,8 @@ async function generateMedicalQuestions(templates: any[], category: string, diff
   try {
     const { default: OpenAI } = await import('openai');
     const openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY || process.env.OPENAI_API_KEY,
+        baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
     });
 
     const categoryMappings = {
@@ -732,7 +733,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const { default: OpenAI } = await import('openai');
       const openai = new OpenAI({
-        apiKey: process.env.OPENAI_API_KEY,
+        apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY || process.env.OPENAI_API_KEY,
+        baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
       });
 
       const specialtyMappings = {

@@ -170,7 +170,7 @@ export function InteractivePatient() {
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Interactive Virtual Patients</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Practice clinical communication skills with AI-powered virtual patients. 
+            Practice clinical communication skills with smart virtual patients. 
             Each interaction is analyzed for communication effectiveness, empathy, and clinical reasoning.
           </p>
         </div>

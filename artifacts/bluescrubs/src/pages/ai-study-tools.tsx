@@ -250,7 +250,7 @@ export default function AIStudyTools() {
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2">AI Study Tools</h1>
         <p className="text-muted-foreground text-lg">
-          Advanced AI-powered features to enhance your medical education experience
+          Advanced smart features to enhance your medical education experience
         </p>
       </div>
 

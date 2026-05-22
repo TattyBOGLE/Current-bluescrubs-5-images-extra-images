@@ -90,7 +90,7 @@ export default function CompleteIndependence() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Complete AI Independence Achieved
+            Complete Independence Achieved
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             Every AI feature replaced with independent, offline-capable alternatives
@@ -122,7 +122,7 @@ export default function CompleteIndependence() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-2xl font-bold mb-2">£0</div>
-                <p className="text-green-100">Monthly AI Costs</p>
+                <p className="text-green-100">Monthly External Costs</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold mb-2">∞</div>
@@ -136,7 +136,7 @@ export default function CompleteIndependence() {
           </CardContent>
         </Card>
 
-        {/* AI Replacement Grid */}
+        {/* Independence Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {status && Object.entries(status.aiReplacement).map(([feature, method]) => {
             const featureInfo = {

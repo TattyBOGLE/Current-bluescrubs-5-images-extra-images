@@ -62,7 +62,7 @@ export default function ContentIndependence() {
             Content Independence Dashboard
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-            Complete medical exam preparation without external AI dependency
+            Complete medical exam preparation without external services dependency
           </p>
           
           <div className="flex justify-center gap-4 mb-8">
@@ -97,7 +97,7 @@ export default function ContentIndependence() {
                   </CardTitle>
                   <CardDescription className="text-lg">
                     {isIndependent 
-                      ? 'System operates without external AI dependency'
+                      ? 'System operates without external services dependency'
                       : 'Expanding content library for complete independence'
                     }
                   </CardDescription>

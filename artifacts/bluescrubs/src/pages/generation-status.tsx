@@ -114,7 +114,7 @@ export default function GenerationStatus() {
               Generation Status
             </CardTitle>
             <CardDescription>
-              AI-powered medical question generation using OpenAI GPT-4o
+              smart medical question generation using OpenAI GPT-4o
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">

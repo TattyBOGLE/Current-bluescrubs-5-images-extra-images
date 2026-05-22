@@ -121,7 +121,7 @@ export default function SmartPlanner() {
             <h1 className="text-3xl font-bold text-gray-900">Smart Study Planner</h1>
           </div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            AI-powered study planning that adapts to your progress, optimizes your schedule, 
+            smart study planning that adapts to your progress, optimizes your schedule, 
             and ensures you're exam-ready by your target date.
           </p>
         </div>

@@ -405,7 +405,7 @@ export default function AskAI() {
                       Educational Disclaimer
                     </p>
                     <p className="text-xs text-amber-700">
-                      This AI-generated information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical decisions.
+                      This smart-generated information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical decisions.
                     </p>
                   </div>
                 </div>

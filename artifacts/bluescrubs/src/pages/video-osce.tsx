@@ -283,7 +283,7 @@ export default function VideoOSCE() {
             Video OSCE Practice
           </h1>
           <p className="text-xl lg:text-2xl mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-            Record yourself performing OSCE stations and get AI-powered feedback
+            Record yourself performing OSCE stations and get smart feedback
           </p>
 
         </div>
@@ -302,7 +302,7 @@ export default function VideoOSCE() {
           <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="practice">Practice Session</TabsTrigger>
             <TabsTrigger value="recordings">My Recordings</TabsTrigger>
-            <TabsTrigger value="feedback">AI Feedback</TabsTrigger>
+            <TabsTrigger value="feedback">Feedback</TabsTrigger>
           </TabsList>
 
           {/* Practice Session Tab */}
@@ -604,7 +604,7 @@ export default function VideoOSCE() {
 
           {/* Feedback Tab */}
           <TabsContent value="feedback" className="space-y-6">
-            <h2 className="text-2xl font-bold text-gray-900">AI Feedback Analysis</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Feedback Analysis</h2>
             <div className="text-center text-gray-600">
               <FileText className="w-16 h-16 mx-auto mb-4 text-gray-400" />
               <p>Complete a recording to receive detailed AI feedback on your performance.</p>

@@ -95,7 +95,7 @@ export default function Landing() {
               Why We're Different
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed px-4">
-              The world's first comprehensive PLAB preparation ecosystem combining AI-powered learning, 
+              The world's first comprehensive PLAB preparation ecosystem combining smart learning, 
               real-time expert consultations, and immersive clinical training in 35 languages.
             </p>
           </div>
@@ -104,18 +104,18 @@ export default function Landing() {
             {[
               {
                 icon: Brain,
-                title: "AI-Powered Adaptive Learning",
+                title: "Smart Adaptive Learning",
                 subtitle: "Smart Technology",
                 description: "Advanced machine learning predicts weaknesses 2-3 weeks before failure, provides contextual hints, and creates personalized study paths with real-time difficulty adjustment.",
-                features: ["Weakness prediction AI", "Contextual hint system", "Adaptive difficulty", "Success probability calculator"],
+                features: ["Weakness prediction", "Contextual hint system", "Adaptive difficulty", "Success probability calculator"],
                 color: "from-blue-500 to-cyan-500"
               },
               {
                 icon: Video,
                 title: "VR OSCE Training",
                 subtitle: "Immersive Practice",
-                description: "World's first virtual reality OSCE stations with AI patient actors, realistic hospital environments, and collaborative multi-user training sessions.",
-                features: ["VR hospital environments", "AI patient actors", "Multi-user sessions", "Real-time performance analysis"],
+                description: "World's first virtual reality OSCE stations with Virtual patient actors, realistic hospital environments, and collaborative multi-user training sessions.",
+                features: ["VR hospital environments", "Virtual patient actors", "Multi-user sessions", "Real-time performance analysis"],
                 color: "from-purple-500 to-pink-500"
               },
               {
@@ -198,12 +198,12 @@ export default function Landing() {
                   {
                     icon: Shield,
                     title: "Independent Content System",
-                    description: "Complete medical accuracy with 5,528 authentic stations generated independently without AI bias. Zero external dependencies ensure unlimited usage, predictable performance, and professional medical standards maintained at all times."
+                    description: "Complete medical accuracy with 5,528 authentic stations generated independently without bias. Zero external dependencies ensure unlimited usage, predictable performance, and professional medical standards maintained at all times."
                   },
                   {
                     icon: Zap,
-                    title: "Hybrid AI Enhancement",
-                    description: "Optional AI enhancement for video analysis and feedback generation with complete independent fallbacks. Questions remain AI-free for authenticity while advanced features benefit from smart AI when available."
+                    title: "Hybrid Enhancement",
+                    description: "Optional enhancement for video analysis and feedback generation with complete independent fallbacks. Questions remain independent for authenticity while advanced features benefit from smart helpers when available."
                   },
                   {
                     icon: Globe,
@@ -245,10 +245,10 @@ export default function Landing() {
               <div className="space-y-4 mb-8">
                 {[
                   "5,528+ authentic medical stations",
-                  "Complete AI independence option",
+                  "Complete independence option",
                   "39-language translation system",
                   "Global exam preparation",
-                  "Hybrid AI enhancement",
+                  "Hybrid enhancement",
                   "Unlimited offline usage",
                   "Professional medical accuracy",
                   "Zero external dependencies"
@@ -333,7 +333,7 @@ export default function Landing() {
                   "Physical examination skills",
                   "Communication training",
                   "Marking criteria included",
-                  "AI clinical skills tutor"
+                  "Clinical skills tutor"
                 ]
               },
               {
@@ -417,7 +417,7 @@ export default function Landing() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-3xl font-bold text-blue-600 mb-2">40+</div>
-                <p className="text-gray-700 font-medium">AI Systems</p>
+                <p className="text-gray-700 font-medium">Smart Systems</p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">35</div>
@@ -546,8 +546,8 @@ export default function Landing() {
                   },
                   {
                     icon: Brain,
-                    title: "Country-Specific AI",
-                    description: "Localized AI tutoring adapted to each country's medical system and examination patterns"
+                    title: "Country-Specific Tutor",
+                    description: "Localised tutoring adapted to each country's medical system and examination patterns"
                   },
                   {
                     icon: Video,
@@ -580,7 +580,7 @@ export default function Landing() {
                   "8 major international medical exams",
                   "45-language content library",
                   "Global job placement network",
-                  "Country-specific AI tutoring",
+                  "Country-specific tutoring",
                   "Cultural adaptation training",
                   "Regional exam strategies",
                   "International mentor network",

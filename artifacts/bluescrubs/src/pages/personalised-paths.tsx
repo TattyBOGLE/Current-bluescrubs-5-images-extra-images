@@ -193,7 +193,7 @@ export default function PersonalisedPaths() {
                 Personalised Learning Paths
               </h1>
               <p className="text-lg" style={{ color: '#555555' }}>
-                AI-curated study pathways tailored to your goals and progress
+                curated study pathways tailored to your goals and progress
               </p>
             </div>
           </div>
@@ -405,7 +405,7 @@ export default function PersonalisedPaths() {
               <CardHeader>
                 <CardTitle className="text-lg flex items-center gap-2" style={{ color: '#000000' }}>
                   <Brain className="w-5 h-5" />
-                  AI Recommendations
+                  Recommendations
                 </CardTitle>
               </CardHeader>
               <CardContent>

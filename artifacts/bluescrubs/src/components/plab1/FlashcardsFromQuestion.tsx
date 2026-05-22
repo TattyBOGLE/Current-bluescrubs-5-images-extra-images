@@ -227,7 +227,7 @@ export function FlashcardsFromQuestion({
         <button
           onClick={handleGenerate}
           disabled={loading}
-          title="Generate AI Flashcards"
+          title="Generate Flashcards"
           className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 disabled:opacity-60 shadow-lg shadow-teal-200/60 flex items-center justify-center transition-all"
         >
           {loading ? (

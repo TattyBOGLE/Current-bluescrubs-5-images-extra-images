@@ -149,7 +149,7 @@ export default function HowToPage() {
                   <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Adaptive Learning</h4>
-                    <p className="text-gray-600 text-sm">AI-powered difficulty adjustment based on your performance</p>
+                    <p className="text-gray-600 text-sm">smart difficulty adjustment based on your performance</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -233,7 +233,7 @@ export default function HowToPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Brain className="w-8 h-8 text-blue-600 mb-2" />
-                <CardTitle className="text-lg">AI Medical Tutor</CardTitle>
+                <CardTitle className="text-lg">Medical Tutor</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
@@ -241,7 +241,7 @@ export default function HowToPage() {
                 </p>
                 <Link href="/ask-ai">
                   <Button variant="outline" size="sm" className="w-full">
-                    Try AI Tutor
+                    Try Tutor
                   </Button>
                 </Link>
               </CardContent>
@@ -306,7 +306,7 @@ export default function HowToPage() {
                   Smart difficulty adjustment, weakness detection, and personalised study recommendations
                 </p>
                 <Badge variant="secondary" className="w-full justify-center">
-                  AI-Powered System
+                  Smart System
                 </Badge>
               </CardContent>
             </Card>
@@ -419,7 +419,7 @@ export default function HowToPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">How do I use the AI Medical Tutor effectively?</CardTitle>
+                <CardTitle className="text-lg">How do I use the Medical Tutor effectively?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">

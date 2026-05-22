@@ -59,7 +59,7 @@ export default function Premium() {
       features: [
         "176 authentic OSCE stations",
         "Detailed marking criteria",
-        "AI clinical skills tutor",
+        "Clinical skills tutor",
         "Multi-language support",
         "Progress tracking"
       ],
@@ -313,7 +313,7 @@ export default function Premium() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Brain className="h-5 w-5" />
-                  AI-Powered Essay Assessment
+                  Smart Essay Assessment
                 </CardTitle>
                 <CardDescription>
                   Comprehensive feedback on clinical reasoning and communication
@@ -556,7 +556,7 @@ export default function Premium() {
             </div>
             <div className="flex flex-col items-center">
               <Brain className="h-8 w-8 text-green-500 mb-2" />
-              <span>AI Essay Marking</span>
+              <span>Essay Marking</span>
             </div>
             <div className="flex flex-col items-center">
               <Headset className="h-8 w-8 text-purple-500 mb-2" />

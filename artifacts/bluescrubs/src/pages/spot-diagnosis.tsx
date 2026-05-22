@@ -71,7 +71,7 @@ const IMAGES = [
 
 const STATUS_CONFIG: Record<ImageStatus, { dot: string; label: string; title: string }> = {
   validated: { dot: "bg-emerald-500", label: "✓", title: "Clinically validated" },
-  pending:   { dot: "bg-amber-400",   label: "⚠", title: "AI-generated, pending validation" },
+  pending:   { dot: "bg-amber-400",   label: "⚠", title: "Pending validation" },
   flagged:   { dot: "bg-rose-500",    label: "✗", title: "Flagged for manual review" },
 };
 

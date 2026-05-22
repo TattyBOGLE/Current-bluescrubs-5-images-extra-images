@@ -91,8 +91,8 @@ export default function Pricing() {
       icon: Star,
       color: 'from-blue-500 to-blue-600',
       features: [
-        '5,000 AI-generated PLAB questions',
-        'Basic AI study recommendations',
+        '5,000 smart-generated PLAB questions',
+        'Basic study recommendations',
         'Progress tracking & analytics',
         'Mobile app access',
         'Community forums',
@@ -117,7 +117,7 @@ export default function Pricing() {
       popular: true,
       features: [
         'Everything in Foundation',
-        '20 Advanced AI systems',
+        '20 Advanced smart systems',
         'VR OSCE training (10 stations)',
         'Live NHS guidelines integration',
         '15 language support',
@@ -143,7 +143,7 @@ export default function Pricing() {
         'All 40+ AI systems',
         'Complete VR OSCE suite (50+ stations)',
         'All 35 languages',
-        'AI patient actors',
+        'Virtual patient actors',
         'Career guidance & hospital partnerships',
         '1-on-1 mentorship matching',
         'Custom study plans',
@@ -176,7 +176,7 @@ export default function Pricing() {
             Choose Your Path to PLAB Success
           </h1>
           <p className="text-xl text-gray-900 max-w-3xl mx-auto">
-            Join thousands of international medical graduates who've passed PLAB with our AI-powered platform. 
+            Join thousands of international medical graduates who've passed PLAB with our smart platform. 
             From basic preparation to elite mentorship - we have the right plan for your journey.
           </p>
         </div>
@@ -502,10 +502,10 @@ export default function Pricing() {
               <Zap className="w-8 h-8 text-blue-600" />
             </div>
             <h3 className="text-xl font-semibold mb-2" style={{ color: '#000000' }}>
-              40+ AI Systems
+              40+ Smart Systems
             </h3>
             <p className="text-gray-600">
-              No competitor offers this level of AI integration for personalized learning
+              No competitor offers this level of integration for personalized learning
             </p>
           </div>
           
