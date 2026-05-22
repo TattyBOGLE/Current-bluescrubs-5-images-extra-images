@@ -28174,5 +28174,752 @@
       "NICE": "https://www.nice.org.uk/guidance/cg94",
       "CKS": "https://cks.nice.org.uk/topics/tachyarrhythmias/"
     }
+  },
+  {
+    "id": "spotdx-031",
+    "title": "Complete Heart Block",
+    "specialty": "Cardiology",
+    "category": "cardiology",
+    "difficulty": "advanced",
+    "topic": "Complete Heart Block (Third-degree AV Block)",
+    "clinical_vignette": "A 78-year-old man with ischaemic heart disease presents with recurrent syncope and pre-syncope. His HR is 38 bpm and regular. His ECG is shown above and reveals P waves and QRS complexes occurring independently of each other at different rates.",
+    "question": "A 78-year-old man with syncope has a ventricular rate of 38 bpm. His ECG shows P waves and QRS complexes with no fixed relationship (AV dissociation) and a wide escape rhythm. What is the definitive treatment?",
+    "options": [
+      "IV atropine long-term",
+      "Permanent pacemaker implantation",
+      "Oral beta-blocker",
+      "IV isoprenaline indefinitely",
+      "DC cardioversion"
+    ],
+    "answer": 1,
+    "correct_answer": "Permanent pacemaker implantation",
+    "explanation": "Complete (third-degree) heart block is characterised by complete dissociation between atrial and ventricular activity \u2014 P waves have no relationship to QRS complexes. The ventricles are driven by an escape rhythm (junctional narrow or ventricular wide/slow). Causes: inferior MI (RCA), Lyme disease, drugs, idiopathic fibrosis. Acute treatment: IV atropine (limited effect on ventricular escapes), temporary pacing if haemodynamically compromised. Definitive treatment: permanent pacemaker. Identify and treat reversible causes first (inferior MI, drug toxicity, electrolytes).\n\nPLAB Pearl: P waves and QRS unrelated (AV dissociation) + slow wide escape rhythm = complete heart block \u2192 permanent pacemaker. Atropine works better in junctional (narrow) than ventricular (wide) escapes.",
+    "key_learning_points": [
+      "Complete heart block: AV dissociation, slow escape rhythm, P\u2013QRS unrelated",
+      "Causes: inferior MI, Lyme disease, AV node drugs (digoxin, beta-blockers)",
+      "Definitive treatment: permanent pacemaker implantation"
+    ],
+    "tags": [
+      "complete heart block",
+      "AV block",
+      "ECG",
+      "pacemaker",
+      "cardiology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/complete-heart-block-ecg.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
+    }
+  },
+  {
+    "id": "spotdx-032",
+    "title": "Left Bundle Branch Block (LBBB)",
+    "specialty": "Cardiology",
+    "category": "cardiology",
+    "difficulty": "intermediate",
+    "topic": "Left Bundle Branch Block",
+    "clinical_vignette": "A 65-year-old woman with hypertension and type 2 diabetes presents with new-onset breathlessness and fatigue. Her ECG shows a broad QRS complex (>120ms) with an M-shaped (notched) pattern in lateral leads (V5, V6, I, aVL) and a W pattern in V1. There are no previous ECGs for comparison.",
+    "question": "A 65-year-old woman presents with new breathlessness. Her ECG shows QRS >120ms, a broad notched M-shaped QRS in V5/V6 and lateral leads, and a W pattern in V1. New LBBB is found. What must be urgently excluded?",
+    "options": [
+      "Pulmonary embolism",
+      "Acute STEMI",
+      "Aortic stenosis",
+      "Digoxin toxicity",
+      "Hypokalaemia"
+    ],
+    "answer": 1,
+    "correct_answer": "Acute STEMI",
+    "explanation": "Left bundle branch block (LBBB) = QRS >120ms, M-shaped (WiLLiaM) pattern in V5/V6 and W-shaped (MaRRoW) in V1, with discordant ST/T changes. NEW LBBB in the context of chest symptoms is treated as a STEMI equivalent (Sgarbossa criteria apply) and warrants immediate coronary reperfusion assessment. The diagnosis of STEMI cannot be made on the usual ST criteria in the presence of LBBB. NICE recommends primary PCI if new LBBB with clinical suspicion of MI. Old LBBB does not mandate the same urgency but should be investigated for structural heart disease (cardiomyopathy, IHD).\n\nPLAB Pearl: New LBBB + cardiac symptoms = STEMI equivalent \u2014 activate cath lab. WiLLiaM (W in V1, M in V5/V6) = LBBB. MaRRoW (M in V1, W in V5/V6) = RBBB.",
+    "key_learning_points": [
+      "LBBB: QRS >120ms, M-shaped QRS in V5/V6, W in V1 (WiLLiaM)",
+      "New LBBB in acute presentation = STEMI equivalent \u2192 urgent PCI assessment",
+      "Discordant ST/T changes expected in LBBB; Sgarbossa criteria for MI superimposed on LBBB"
+    ],
+    "tags": [
+      "LBBB",
+      "bundle branch block",
+      "ECG",
+      "STEMI",
+      "cardiology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/lbbb-ecg.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/chest-pain/"
+    }
+  },
+  {
+    "id": "spotdx-033",
+    "title": "Supraventricular Tachycardia (SVT)",
+    "specialty": "Cardiology",
+    "category": "cardiology",
+    "difficulty": "intermediate",
+    "topic": "Supraventricular Tachycardia",
+    "clinical_vignette": "A 28-year-old woman presents to A&E with sudden-onset palpitations that started 40 minutes ago. She has had similar episodes before that resolved spontaneously. Her BP is 110/70 mmHg and she is haemodynamically stable. Her ECG shows a regular narrow complex tachycardia at 178 bpm with no visible P waves.",
+    "question": "A 28-year-old woman has a regular narrow complex tachycardia at 178 bpm with haemodynamic stability. What is the first-line treatment?",
+    "options": [
+      "IV amiodarone",
+      "Synchronised DC cardioversion",
+      "Vagal manoeuvres (Valsalva)",
+      "IV digoxin",
+      "Oral metoprolol"
+    ],
+    "answer": 2,
+    "correct_answer": "Vagal manoeuvres (Valsalva)",
+    "explanation": "SVT is a regular narrow complex tachycardia (usually AVNRT or AVRT) that is haemodynamically stable in young, fit patients. The 2015 Resuscitation Council and NICE guidelines recommend: (1) vagal manoeuvres first \u2014 modified Valsalva (blow into syringe lying flat, then raise legs) achieves ~40% cardioversion; (2) IV adenosine if vagal manoeuvres fail (6mg \u2192 12mg \u2192 12mg); (3) synchronised DC cardioversion if haemodynamically compromised. Adenosine terminates SVT by briefly blocking the AV node, 'resetting' the circuit. It causes transient AV block and may reveal underlying atrial flutter (saw-tooth baseline).\n\nPLAB Pearl: SVT management: vagal \u2192 adenosine (6\u219212\u219212mg) \u2192 synchronised DC cardioversion. WARN about adenosine's side effects (chest tightness, flushing, transient asystole).",
+    "key_learning_points": [
+      "SVT: regular narrow complex tachycardia, no visible P waves",
+      "First-line: vagal manoeuvres (modified Valsalva \u2014 most effective)",
+      "Second-line: IV adenosine 6mg rapid bolus with flush; DC cardioversion if unstable"
+    ],
+    "tags": [
+      "SVT",
+      "tachycardia",
+      "ECG",
+      "adenosine",
+      "cardiology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/svt-ecg.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg36",
+      "CKS": "https://cks.nice.org.uk/topics/tachyarrhythmias/"
+    }
+  },
+  {
+    "id": "spotdx-034",
+    "title": "Cardiomegaly on CXR",
+    "specialty": "Cardiology",
+    "category": "cardiology",
+    "difficulty": "foundation",
+    "topic": "Cardiomegaly / Heart Failure",
+    "clinical_vignette": "A 72-year-old man with longstanding hypertension and type 2 diabetes presents with 3 weeks of progressive breathlessness on exertion, orthopnoea (sleeps on 3 pillows), and bilateral ankle oedema. CXR is shown above. Echocardiogram reveals an EF of 30%.",
+    "question": "A 72-year-old man with hypertension has progressive exertional dyspnoea, orthopnoea, and ankle oedema. His CXR shows cardiomegaly (cardiothoracic ratio >0.5) and upper lobe diversion. What is the first-line investigation to confirm heart failure?",
+    "options": [
+      "Serum troponin",
+      "ECG alone",
+      "NT-proBNP / BNP",
+      "V/Q scan",
+      "Chest CT"
+    ],
+    "answer": 2,
+    "correct_answer": "NT-proBNP / BNP",
+    "explanation": "Cardiomegaly on CXR (cardiothoracic ratio >50% in PA film) combined with symptoms of heart failure (dyspnoea, orthopnoea, PND, ankle oedema) strongly suggests HF. NICE recommends NT-proBNP as the initial biomarker test for HF. If NT-proBNP >2000 ng/L \u2014 urgent echocardiogram within 2 weeks. If 400\u20132000 ng/L \u2014 echo within 6 weeks. If <400 ng/L \u2014 HF unlikely. Additional CXR features of HF: upper lobe diversion (B-lines/Kerley B lines), perihilar bat-wing oedema, bilateral pleural effusions, cardiomegaly. Echo confirms diagnosis and assesses EF.\n\nPLAB Pearl: Suspected HF \u2192 NT-proBNP first. Cardiomegaly on CXR = CTR >0.5 on PA film (not AP). Systolic HF (reduced EF <40%) vs diastolic HF (preserved EF \u226550%).",
+    "key_learning_points": [
+      "Cardiomegaly: CTR >0.5 on PA CXR; also look for upper lobe diversion, Kerley B lines",
+      "NICE: NT-proBNP first for suspected HF \u2192 echocardiogram",
+      "HFrEF (EF <40%): ACEi/ARB + beta-blocker + MRA + SGLT2i"
+    ],
+    "tags": [
+      "cardiomegaly",
+      "CXR",
+      "heart failure",
+      "cardiology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/cardiomegaly-cxr.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng106",
+      "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
+    }
+  },
+  {
+    "id": "spotdx-035",
+    "title": "Lobar Pneumonia \u2014 CXR Consolidation",
+    "specialty": "Respiratory",
+    "category": "respiratory",
+    "difficulty": "foundation",
+    "topic": "Community-Acquired Pneumonia",
+    "clinical_vignette": "A 58-year-old man presents with a 4-day history of productive cough with rust-coloured sputum, fever (39.1\u00b0C), right-sided pleuritic chest pain, and breathlessness. On examination there is dullness to percussion, bronchial breathing, and increased tactile vocal fremitus at the right base. His CXR is shown above.",
+    "question": "A 58-year-old man has fever, productive cough, and right-sided pleuritic chest pain. His CXR shows right lower lobe opacification with air bronchograms. His CURB-65 score is 2. What is the most appropriate antibiotic regimen?",
+    "options": [
+      "Oral amoxicillin alone",
+      "IV co-amoxiclav + IV clarithromycin",
+      "Oral amoxicillin + oral clarithromycin",
+      "IV benzylpenicillin alone",
+      "Oral doxycycline alone"
+    ],
+    "answer": 2,
+    "correct_answer": "Oral amoxicillin + oral clarithromycin",
+    "explanation": "CXR shows consolidation (homogeneous opacification with air bronchograms) in the right lower lobe \u2014 classic lobar pneumonia. Air bronchograms are visible air-filled bronchi outlined against consolidated (airless) lung \u2014 pathognomonic of air-space consolidation. CURB-65 score: Confusion, Urea >7, RR \u226530, BP <90/60, age \u226565. Score 2 = moderate severity \u2192 oral dual therapy: amoxicillin + clarithromycin per BTS/NICE guidelines. Score 0\u20131 = mild \u2192 amoxicillin monotherapy. Score 3\u20135 = severe \u2192 IV co-amoxiclav + clarithromycin.\n\nPLAB Pearl: CURB-65 determines severity. Score 2 = oral amoxicillin + clarithromycin. Air bronchogram on CXR = consolidation (not pleural effusion or collapse).",
+    "key_learning_points": [
+      "Consolidation CXR: homogeneous opacification + air bronchograms",
+      "CURB-65: 0-1 (mild) \u2192 oral amoxicillin; 2 (moderate) \u2192 oral amox+clarithromycin; \u22653 \u2192 IV",
+      "Rust-coloured sputum = Streptococcus pneumoniae (most common CAP pathogen)"
+    ],
+    "tags": [
+      "pneumonia",
+      "consolidation",
+      "CXR",
+      "CURB-65",
+      "respiratory",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/consolidation-cxr.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng138",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia-in-adults/"
+    }
+  },
+  {
+    "id": "spotdx-036",
+    "title": "Tension Pneumothorax",
+    "specialty": "Respiratory",
+    "category": "respiratory",
+    "difficulty": "advanced",
+    "topic": "Tension Pneumothorax",
+    "clinical_vignette": "A 32-year-old motorcyclist is brought to A&E following a high-speed road traffic collision. He is agitated, tachycardic (HR 130 bpm), hypotensive (BP 80/40 mmHg), and has a respiratory rate of 36/min. On examination there is absent breath sounds on the right, tracheal deviation to the left, and markedly distended neck veins. SpO2 is 82%.",
+    "question": "A trauma patient has absent right breath sounds, tracheal deviation to the left, distended neck veins, and haemodynamic compromise. What is the immediate intervention?",
+    "options": [
+      "Urgent CXR before treatment",
+      "Chest drain insertion",
+      "Needle thoracocentesis (2nd ICS, MCL)",
+      "IV fluid resuscitation alone",
+      "Intubation and ventilation"
+    ],
+    "answer": 2,
+    "correct_answer": "Needle thoracocentesis (2nd ICS, MCL)",
+    "explanation": "Tension pneumothorax is a clinical emergency \u2014 air accumulates under pressure in the pleural cavity, compressing the mediastinum, causing cardiovascular collapse. Classic triad: absent breath sounds ipsilaterally + tracheal deviation contralaterally + haemodynamic compromise. DO NOT wait for CXR \u2014 this is a clinical diagnosis requiring immediate decompression. First: needle decompression at 2nd intercostal space, midclavicular line (or 4th/5th ICS, anterior axillary line per ATLS). This converts tension \u2192 simple pneumothorax. Follow with chest drain. In CXR (if obtained): hyperlucency, mediastinal shift, depressed ipsilateral hemidiaphragm, absent lung markings.\n\nPLAB Pearl: Tension pneumothorax = clinical diagnosis, DO NOT wait for CXR. Needle decompression immediately, then chest drain. Tracheal deviation is a LATE sign.",
+    "key_learning_points": [
+      "Tension pneumothorax: clinical diagnosis \u2014 do NOT wait for CXR",
+      "Classic signs: absent breath sounds + tracheal deviation (contralateral) + haemodynamic collapse + distended JVP",
+      "Immediate: needle decompression 2nd ICS MCL; then definitive chest drain"
+    ],
+    "tags": [
+      "tension pneumothorax",
+      "trauma",
+      "chest",
+      "needle decompression",
+      "respiratory",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/tension-pneumothorax-cxr.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng39",
+      "CKS": "https://cks.nice.org.uk/topics/pneumothorax/"
+    }
+  },
+  {
+    "id": "spotdx-037",
+    "title": "Sigmoid Volvulus \u2014 AXR",
+    "specialty": "Surgery",
+    "category": "gastroenterology",
+    "difficulty": "intermediate",
+    "topic": "Sigmoid Volvulus",
+    "clinical_vignette": "An 80-year-old man with dementia presents from his care home with a 48-hour history of severe abdominal distension, absolute constipation, and cramping abdominal pain. On examination, his abdomen is markedly distended and tympanic. The AXR is shown above and reveals a massively dilated loop of bowel in the shape of a 'coffee bean' arising from the left iliac fossa.",
+    "question": "An 80-year-old man with constipation and abdominal distension has a massively dilated coffee-bean-shaped loop of bowel on AXR arising from the left iliac fossa and pointing towards the right upper quadrant. What is the most appropriate initial management?",
+    "options": [
+      "Emergency laparotomy",
+      "IV antibiotics alone",
+      "Flexible sigmoidoscopy and flatus tube decompression",
+      "Gastrografin enema",
+      "Hartmann's procedure"
+    ],
+    "answer": 2,
+    "correct_answer": "Flexible sigmoidoscopy and flatus tube decompression",
+    "explanation": "Sigmoid volvulus is the most common colonic volvulus, occurring when the sigmoid colon twists on its mesentery. The AXR shows the pathognomonic 'coffee bean' or 'bent inner tube' sign \u2014 a massively dilated loop pointing from left iliac fossa to right upper quadrant, with a central crease (the two walls of the loop touching). Initial management of uncomplicated (non-gangrenous) sigmoid volvulus is endoscopic decompression with flexible sigmoidoscopy/rigid sigmoidoscopy + flatus tube. Success rate ~70-80%. If signs of ischaemia/perforation (peritonitis, sepsis) \u2192 emergency surgery (Hartmann's). Recurrence rate is high \u2192 elective sigmoid resection after decompression.\n\nPLAB Pearl: Coffee bean sign on AXR = sigmoid volvulus. If viable \u2192 endoscopic decompression + flatus tube. If peritonitis \u2192 emergency Hartmann's.",
+    "key_learning_points": [
+      "Sigmoid volvulus: coffee bean/bent inner tube sign on AXR",
+      "Endoscopic decompression (rigid/flexible sigmoidoscopy) if viable \u2014 first-line",
+      "Signs of ischaemia/perforation \u2192 emergency surgery (Hartmann's procedure)"
+    ],
+    "tags": [
+      "sigmoid volvulus",
+      "AXR",
+      "bowel obstruction",
+      "surgery",
+      "gastroenterology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/sigmoid-volvulus-axr.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng149",
+      "CKS": "https://cks.nice.org.uk/topics/bowel-obstruction/"
+    }
+  },
+  {
+    "id": "spotdx-038",
+    "title": "Renal Calculus \u2014 KUB X-ray",
+    "specialty": "Urology",
+    "category": "urology",
+    "difficulty": "intermediate",
+    "topic": "Renal Calculus",
+    "clinical_vignette": "A 38-year-old man presents with sudden-onset severe colicky right loin-to-groin pain, haematuria, and vomiting. He is rolling around in agony. His temperature is 37.2\u00b0C. His KUB X-ray is shown above, and demonstrates a radio-opaque density at the right renal pelvis and a second opacity along the right ureter.",
+    "question": "A 38-year-old man has severe colicky loin-to-groin pain with haematuria. His KUB X-ray shows radio-opaque calculi in the right renal pelvis and ureter. Which stone type is radiolucent and would NOT be visible on KUB?",
+    "options": [
+      "Calcium oxalate",
+      "Calcium phosphate",
+      "Struvite (triple phosphate)",
+      "Uric acid",
+      "Cystine"
+    ],
+    "answer": 3,
+    "correct_answer": "Uric acid",
+    "explanation": "Renal calculi on KUB X-ray: most stones (80-90%) are radio-opaque because they contain calcium (calcium oxalate, calcium phosphate) or other minerals (struvite/triple phosphate, cystine). Uric acid stones are radiolucent \u2014 they contain no calcium and are invisible on plain X-ray. They DO appear on CT (gold standard) and are seen as low-density filling defects on IVU. CTKA (unenhanced CT) is now the gold standard for renal colic investigation. KUB is less sensitive but still useful. Struvite stones are radio-opaque and often form staghorn calculi associated with urease-producing organisms (Proteus, Klebsiella).\n\nPLAB Pearl: Uric acid stones are radiolucent on X-ray (visible on CT). All other common stones are radio-opaque. CTKA is gold standard for renal colic.",
+    "key_learning_points": [
+      "Radio-opaque stones (visible on KUB): calcium oxalate, calcium phosphate, struvite, cystine",
+      "Radiolucent stones (NOT visible on KUB): uric acid",
+      "Gold standard investigation: unenhanced CT-KUB (CTKA); detects all stone types"
+    ],
+    "tags": [
+      "renal calculus",
+      "KUB",
+      "urology",
+      "nephrolithiasis",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/renal-calculus-kub.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg157",
+      "CKS": "https://cks.nice.org.uk/topics/kidney-stones/"
+    }
+  },
+  {
+    "id": "spotdx-039",
+    "title": "Erythema Nodosum",
+    "specialty": "Dermatology",
+    "category": "dermatology",
+    "difficulty": "intermediate",
+    "topic": "Erythema Nodosum",
+    "clinical_vignette": "A 28-year-old woman presents with tender, raised red nodules on both shins for 2 weeks. She has had a mild cough, weight loss, and night sweats for 6 weeks. Examination reveals bilateral tender erythematous nodules on the pretibial surface. Chest X-ray shows bilateral hilar lymphadenopathy. She is originally from sub-Saharan Africa.",
+    "question": "A 28-year-old woman has bilateral tender pretibial erythematous nodules and bilateral hilar lymphadenopathy on CXR. What is the most likely underlying cause in this clinical context?",
+    "options": [
+      "Streptococcal throat infection",
+      "Inflammatory bowel disease",
+      "Sarcoidosis",
+      "Oral contraceptive pill",
+      "Tuberculosis"
+    ],
+    "answer": 2,
+    "correct_answer": "Sarcoidosis",
+    "explanation": "Erythema nodosum (EN) is a form of panniculitis (inflammation of subcutaneous fat) presenting as tender, raised, erythematous nodules on the shins. It is NOT a primary skin diagnosis \u2014 it is always a manifestation of a systemic disease. Key causes: Streptococcal infection (most common in UK), sarcoidosis, tuberculosis, inflammatory bowel disease (Crohn's > UC), drugs (OCP, sulphonamides), Beh\u00e7et's. Bilateral hilar lymphadenopathy + EN = L\u00f6fgren syndrome (acute sarcoidosis) \u2014 an excellent prognosis form. In this clinical context (African origin, respiratory symptoms, bilateral hilar LAP), sarcoidosis is most likely.\n\nPLAB Pearl: EN + bilateral hilar lymphadenopathy = L\u00f6fgren syndrome (sarcoidosis). EN is a reactive panniculitis \u2014 always investigate the cause. Treat underlying condition; NSAIDs/potassium iodide for symptomatic EN.",
+    "key_learning_points": [
+      "Erythema nodosum: tender bilateral pretibial nodules \u2014 reactive panniculitis",
+      "Causes: Strep (most common UK), sarcoidosis, TB, IBD, OCP",
+      "EN + bilateral hilar LAP = L\u00f6fgren syndrome (acute sarcoidosis) \u2014 good prognosis"
+    ],
+    "tags": [
+      "erythema nodosum",
+      "panniculitis",
+      "sarcoidosis",
+      "dermatology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/derm-images/erythema-nodosum.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng149",
+      "CKS": "https://cks.nice.org.uk/topics/erythema-nodosum/"
+    }
+  },
+  {
+    "id": "spotdx-040",
+    "title": "Cellulitis",
+    "specialty": "Dermatology",
+    "category": "dermatology",
+    "difficulty": "foundation",
+    "topic": "Cellulitis",
+    "clinical_vignette": "A 55-year-old woman with type 2 diabetes presents with a 3-day history of an expanding area of redness, warmth, swelling, and tenderness on her right lower leg. She has a temperature of 38.4\u00b0C. Examination reveals a well-demarcated area of erythema with a clear advancing edge on the right shin. There is no lymphangitis. She has tinea pedis affecting both feet.",
+    "question": "A 55-year-old diabetic woman has a spreading warm erythematous area on her right shin with fever. The most likely causative organisms are Group A Streptococcus and Staphylococcus aureus. What is the most appropriate antibiotic?",
+    "options": [
+      "Topical fusidic acid",
+      "IV vancomycin",
+      "Oral flucloxacillin",
+      "Oral ciprofloxacin",
+      "Topical mupirocin"
+    ],
+    "answer": 2,
+    "correct_answer": "Oral flucloxacillin",
+    "explanation": "Cellulitis is a bacterial infection of the dermis and subcutaneous tissue, most commonly caused by Group A Streptococcus (Streptococcus pyogenes) and Staphylococcus aureus, presenting with spreading erythema, warmth, swelling, and tenderness. Tinea pedis is a common portal of entry. NICE/BTS recommendation: oral flucloxacillin is first-line for non-purulent cellulitis (covers both Streptococcus and Staphylococcus). Clarithromycin or doxycycline if penicillin-allergic. IV antibiotics (flucloxacillin IV) for Eron class III/IV (systemic sepsis, lymphangitis, large area). Mark the advancing edge with a pen to monitor progression. Necrotising fasciitis should always be excluded.\n\nPLAB Pearl: Cellulitis = oral flucloxacillin. Mark the erythema border with a pen. Tinea pedis is a common portal of entry \u2014 treat it too. If MRSA suspected \u2192 doxycycline or trimethoprim.",
+    "key_learning_points": [
+      "Cellulitis: spreading warm erythema \u2014 Group A Strep and S. aureus most common",
+      "First-line: oral flucloxacillin; IV if systemically unwell",
+      "Mark erythema border with pen to monitor; treat tinea pedis (portal of entry)"
+    ],
+    "tags": [
+      "cellulitis",
+      "skin infection",
+      "dermatology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/derm-images/cellulitis.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng141",
+      "CKS": "https://cks.nice.org.uk/topics/cellulitis-acute/"
+    }
+  },
+  {
+    "id": "spotdx-041",
+    "title": "Acne Vulgaris",
+    "specialty": "Dermatology",
+    "category": "dermatology",
+    "difficulty": "foundation",
+    "topic": "Acne Vulgaris",
+    "clinical_vignette": "A 17-year-old boy presents with a 2-year history of facial spots affecting his forehead, nose, and cheeks. Examination reveals open and closed comedones (blackheads and whiteheads), inflammatory papules and pustules, and several deep nodules on his cheeks. The condition significantly affects his self-esteem. He has tried OTC benzoyl peroxide for 3 months with partial improvement.",
+    "question": "A 17-year-old boy has moderate-to-severe acne with comedones, papulopustules, and nodules causing psychological distress, partially responsive to OTC benzoyl peroxide. What is the most appropriate next management step?",
+    "options": [
+      "Continue OTC benzoyl peroxide indefinitely",
+      "Oral isotretinoin immediately",
+      "Topical retinoid + topical antibiotic combination",
+      "Oral prednisolone",
+      "Topical hydrocortisone"
+    ],
+    "answer": 2,
+    "correct_answer": "Topical retinoid + topical antibiotic combination",
+    "explanation": "Acne vulgaris management follows a stepwise approach based on severity. Mild (comedones \u00b1 few papules): topical retinoid OR benzoyl peroxide. Moderate (papulopustules \u00b1 nodules): topical retinoid + topical antibiotic (adapalene + clindamycin/erythromycin) \u00b1 oral antibiotic (doxycycline/lymecycline 3-4 months). Severe/nodular/psychological impact: oral isotretinoin (via dermatologist). Oral isotretinoin is reserved for severe/resistant disease due to teratogenicity (mandatory pregnancy prevention programme for females), hepatotoxicity, depression risk. Topical steroids are not used in acne (cause steroid acne).\n\nPLAB Pearl: Moderate acne \u2192 topical retinoid + topical antibiotic \u00b1 oral antibiotic. Oral isotretinoin for severe/resistant cases via dermatology. Never give topical steroids for acne.",
+    "key_learning_points": [
+      "Acne: comedones (non-inflammatory) + papules/pustules/nodules (inflammatory)",
+      "Moderate: topical retinoid + topical antibiotic \u00b1 oral doxycycline/lymecycline",
+      "Oral isotretinoin for severe/resistant: teratogenic \u2014 pregnancy prevention mandatory"
+    ],
+    "tags": [
+      "acne vulgaris",
+      "dermatology",
+      "retinoid",
+      "isotretinoin",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/derm-images/acne-vulgaris.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg177",
+      "CKS": "https://cks.nice.org.uk/topics/acne-vulgaris/"
+    }
+  },
+  {
+    "id": "spotdx-042",
+    "title": "Rosacea",
+    "specialty": "Dermatology",
+    "category": "dermatology",
+    "difficulty": "foundation",
+    "topic": "Rosacea",
+    "clinical_vignette": "A 45-year-old fair-skinned woman presents with a 3-year history of persistent facial redness, flushing triggered by alcohol and spicy food, and visible small blood vessels on her cheeks. Over the past year she has developed red papules and pustules on her nose and cheeks, but no comedones. She is embarrassed by her appearance.",
+    "question": "A 45-year-old woman has persistent facial erythema, telangiectasia, papulopustules on her nose and cheeks (without comedones), and flushing triggered by alcohol. What is the most appropriate first-line treatment for her papulopustular rosacea?",
+    "options": [
+      "Topical benzoyl peroxide",
+      "Oral doxycycline",
+      "Topical azelaic acid or ivermectin cream",
+      "Oral isotretinoin",
+      "Topical hydrocortisone"
+    ],
+    "answer": 2,
+    "correct_answer": "Topical azelaic acid or ivermectin cream",
+    "explanation": "Rosacea is a chronic inflammatory facial condition presenting with: erythema and flushing (subtype 1), papulopustules WITHOUT comedones (subtype 2), phymatous changes/rhinophyma (subtype 3), ocular rosacea (subtype 4). Key triggers: alcohol, spicy food, hot drinks, sunlight, exercise, emotional stress. ABSENCE of comedones distinguishes it from acne. First-line for papulopustular rosacea: topical azelaic acid (15% gel) or topical ivermectin (Soolantra). Topical metronidazole is also used. Oral doxycycline (40mg modified-release) for more severe papulopustular disease. Topical steroids are CONTRAINDICATED \u2014 cause rebound flushing and worsen rosacea long-term.\n\nPLAB Pearl: Rosacea: no comedones (distinguishes from acne). First-line topical: azelaic acid or ivermectin. NO topical steroids. Oral doxycycline for moderate-severe. Laser/IPL for telangiectasia.",
+    "key_learning_points": [
+      "Rosacea: facial erythema + telangiectasia + papulopustules WITHOUT comedones",
+      "Key triggers: alcohol, spicy food, hot drinks, UV light",
+      "First-line: topical azelaic acid or ivermectin; avoid topical steroids (worsen rosacea)"
+    ],
+    "tags": [
+      "rosacea",
+      "dermatology",
+      "facial redness",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/derm-images/rosacea.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg147",
+      "CKS": "https://cks.nice.org.uk/topics/rosacea/"
+    }
+  },
+  {
+    "id": "spotdx-043",
+    "title": "Finger Clubbing",
+    "specialty": "Respiratory",
+    "category": "respiratory",
+    "difficulty": "foundation",
+    "topic": "Finger Clubbing",
+    "clinical_vignette": "A 62-year-old ex-smoker presents to the respiratory clinic with a 4-month history of progressive breathlessness and a dry cough. On examination you note the fingers shown above \u2014 loss of the normal angle between the nail and nail fold, increased curvature of the nail, fluctuance of the nail bed, and increased AP diameter of the fingertip. Hypertrophic pulmonary osteoarthropathy is noted.",
+    "question": "A 62-year-old ex-smoker has clubbing and hypertrophic pulmonary osteoarthropathy. What is the most important diagnosis to exclude in this clinical context?",
+    "options": [
+      "COPD",
+      "Lung fibrosis (IPF)",
+      "Lung carcinoma (non-small cell)",
+      "Tuberculosis",
+      "Bronchiectasis"
+    ],
+    "answer": 2,
+    "correct_answer": "Lung carcinoma (non-small cell)",
+    "explanation": "Clubbing is defined by loss of the normal <165\u00b0 Lovibond angle between nail and fold, nail fluctuance, and increased AP diameter. Key causes by system: Respiratory (most common): bronchial carcinoma (especially squamous cell and adenocarcinoma \u2014 NOT small cell), bronchiectasis, IPF, lung abscess, empyema, mesothelioma. Cardiac: cyanotic congenital heart disease, IE. GI: cirrhosis, IBD (Crohn's), coeliac. HPOA (periosteal new bone formation causing wrist/ankle pain) is strongly associated with bronchial carcinoma \u2014 it almost pathognomonically indicates underlying lung malignancy. COPD does NOT cause clubbing \u2014 its presence in a smoker should prompt urgent lung cancer investigation.\n\nPLAB Pearl: Clubbing in a smoker = lung cancer until proven otherwise. COPD does NOT cause clubbing. HPOA = strongly associated with bronchial carcinoma.",
+    "key_learning_points": [
+      "Clubbing: loss of Lovibond angle, nail fluctuance \u2014 check for underlying cause",
+      "COPD does NOT cause clubbing \u2014 new clubbing in smoker = urgent lung cancer exclusion",
+      "HPOA = periosteal new bone formation, associated with bronchial carcinoma"
+    ],
+    "tags": [
+      "clubbing",
+      "lung cancer",
+      "respiratory",
+      "HPOA",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/clubbing-fingers.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng122",
+      "CKS": "https://cks.nice.org.uk/topics/lung-and-pleural-cancers-recognition-and-referral/"
+    }
+  },
+  {
+    "id": "spotdx-044",
+    "title": "Dupuytren's Contracture",
+    "specialty": "Orthopaedics",
+    "category": "orthopaedics",
+    "difficulty": "foundation",
+    "topic": "Dupuytren's Contracture",
+    "clinical_vignette": "A 58-year-old male accountant presents with difficulty extending his right ring and little fingers for 2 years, progressively worsening. He drinks 28 units of alcohol per week. Examination reveals firm fibrous cords running from the palm to the ring and little fingers, with fixed flexion contracture of both fingers at the MCP and PIP joints. There are no skin changes of inflammation.",
+    "question": "A 58-year-old man with high alcohol intake has firm palmar cords and fixed flexion contracture of the right ring and little fingers without inflammation. What cells are responsible for the abnormal collagen deposition causing this condition?",
+    "options": [
+      "Osteoblasts",
+      "Myofibroblasts",
+      "Mast cells",
+      "Macrophages",
+      "Langerhans cells"
+    ],
+    "answer": 1,
+    "correct_answer": "Myofibroblasts",
+    "explanation": "Dupuytren's contracture is fibroproliferative disease of the palmar fascia, characterised by nodular thickening followed by longitudinal cord formation causing progressive fixed flexion contracture, most commonly affecting the ring and little fingers. Pathology: abnormal myofibroblast proliferation deposits abnormal type III collagen. Risk factors: male sex, Northern European ancestry, diabetes, alcohol, epilepsy, manual work, vibration. Treatment: the 'Hueston table-top test' \u2014 if the hand cannot be placed flat on a table, intervention is indicated. Options: collagenase injection (Xiaflex), needle fasciotomy, or open fasciectomy. No medical treatment alters disease progression.\n\nPLAB Pearl: Dupuytren's = fibrous palmar cords + fixed flexion contracture of ring/little finger. Myofibroblasts deposit abnormal collagen. Table-top test positive \u2192 consider referral for fasciectomy/collagenase.",
+    "key_learning_points": [
+      "Dupuytren's contracture: palmar fibrous cords \u2192 fixed MCP/PIP flexion (ring/little finger)",
+      "Caused by myofibroblast proliferation with abnormal collagen deposition",
+      "Treatment: collagenase injection, needle fasciotomy, or open fasciectomy"
+    ],
+    "tags": [
+      "Dupuytren's contracture",
+      "palmar fascia",
+      "orthopaedics",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/dupuytren-contracture.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ipg377",
+      "CKS": "https://cks.nice.org.uk/topics/dupuytrens-contracture/"
+    }
+  },
+  {
+    "id": "spotdx-045",
+    "title": "Thyroid Goitre",
+    "specialty": "Endocrinology",
+    "category": "endocrinology",
+    "difficulty": "intermediate",
+    "topic": "Thyroid Goitre",
+    "clinical_vignette": "A 34-year-old woman presents with a 6-month history of a visible swelling in her neck. She has had weight loss, heat intolerance, palpitations, and increased sweating. On examination, there is a diffuse smooth enlargement of the thyroid gland which moves on swallowing, a resting tremor, and warm moist skin. Her eyes appear prominent.",
+    "question": "A 34-year-old woman has a diffuse smooth goitre with hyperthyroid symptoms and prominent eyes. TFTs show suppressed TSH and elevated free T4. What is the most likely diagnosis?",
+    "options": [
+      "Toxic multinodular goitre",
+      "De Quervain's thyroiditis",
+      "Graves' disease",
+      "Hashimoto's thyroiditis",
+      "Thyroid adenoma"
+    ],
+    "answer": 2,
+    "correct_answer": "Graves' disease",
+    "explanation": "Graves' disease is the most common cause of hyperthyroidism (75-80% of cases), caused by TSH-receptor stimulating antibodies (TRAb/TSI). Clinical features: hyperthyroid symptoms (weight loss, heat intolerance, palpitations, tremor, sweating, diarrhoea), diffuse smooth goitre, and specific eye signs (Graves' ophthalmopathy: exophthalmos, lid lag, lid retraction, chemosis, ophthalmoplegia). Toxic multinodular goitre presents with a nodular goitre in older patients. Hashimoto's is autoimmune hypothyroidism (anti-TPO, anti-thyroglobulin antibodies), though can cause initial hyperthyroidism (Hashitoxicosis). De Quervain's: painful thyroiditis post-viral. Diagnosis: TRAb/TSI antibodies, thyroid uptake scan.\n\nPLAB Pearl: Diffuse smooth goitre + hyperthyroid + eye signs (exophthalmos) = Graves' disease. Confirm with TRAb. Treatment: carbimazole (block synthesis), radioiodine, or surgery.",
+    "key_learning_points": [
+      "Graves' disease: TSH-receptor antibodies (TRAb) \u2192 diffuse goitre + hyperthyroidism",
+      "Specific signs: exophthalmos, lid lag, lid retraction (Graves' ophthalmopathy)",
+      "Treatment: carbimazole (titration or block-and-replace), radioiodine, or thyroidectomy"
+    ],
+    "tags": [
+      "Graves' disease",
+      "goitre",
+      "hyperthyroidism",
+      "endocrinology",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/thyroid-goitre.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism/"
+    }
+  },
+  {
+    "id": "spotdx-046",
+    "title": "Hypertensive Retinopathy \u2014 Fundoscopy",
+    "specialty": "Ophthalmology",
+    "category": "ophthalmology",
+    "difficulty": "intermediate",
+    "topic": "Hypertensive Retinopathy",
+    "clinical_vignette": "A 58-year-old man with poorly controlled hypertension (BP 190/115 mmHg) attends for a routine diabetic eye check. Fundoscopy reveals flame-shaped haemorrhages, cotton wool spots (soft exudates), hard exudates, arteriovenous nipping, and silver wiring of the arterioles. There is bilateral disc swelling.",
+    "question": "Fundoscopy in a hypertensive patient shows flame haemorrhages, cotton wool spots, disc swelling, and AV nipping. What grade of hypertensive retinopathy is this (Keith-Wagener-Barker classification)?",
+    "options": [
+      "Grade 1 \u2014 mild arteriolar narrowing",
+      "Grade 2 \u2014 AV nipping only",
+      "Grade 3 \u2014 haemorrhages and exudates without disc swelling",
+      "Grade 4 \u2014 papilloedema (disc swelling)",
+      "Grade 0 \u2014 normal"
+    ],
+    "answer": 3,
+    "correct_answer": "Grade 4 \u2014 papilloedema (disc swelling)",
+    "explanation": "Keith-Wagener-Barker (KWB) classification of hypertensive retinopathy: Grade 1: mild arteriolar narrowing (increased light reflex, 'copper wiring'). Grade 2: AV nipping (crossing changes, arteriovenous nicking). Grade 3: haemorrhages (flame-shaped), exudates (cotton wool spots = soft exudates = microinfarcts of nerve fibre layer; hard exudates = lipid deposits), but NO disc swelling. Grade 4: as Grade 3 PLUS papilloedema (disc swelling) \u2014 indicates hypertensive emergency with end-organ damage. Flame haemorrhages follow the nerve fibre layer. AV nipping occurs at arteriovenous crossings. Cotton wool spots = ischaemic nerve fibre layer infarcts.\n\nPLAB Pearl: Disc swelling (papilloedema) on fundoscopy = Grade 4 = hypertensive emergency \u2192 IV labetalol or sodium nitroprusside; reduce BP gradually (not too fast).",
+    "key_learning_points": [
+      "KWB Grade 4 = haemorrhages + exudates + papilloedema = hypertensive emergency",
+      "Cotton wool spots = ischaemic infarcts of nerve fibre layer (NOT hard exudates)",
+      "Flame haemorrhages = follow nerve fibre layer; blot haemorrhages = deeper"
+    ],
+    "tags": [
+      "hypertensive retinopathy",
+      "fundoscopy",
+      "ophthalmology",
+      "hypertension",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/hypertensive-retinopathy-fundus.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension/"
+    }
+  },
+  {
+    "id": "spotdx-047",
+    "title": "Exudative Tonsillitis",
+    "specialty": "ENT",
+    "category": "ENT",
+    "difficulty": "foundation",
+    "topic": "Acute Tonsillitis",
+    "clinical_vignette": "A 19-year-old university student presents with a 3-day history of severe sore throat, difficulty swallowing, fever (38.9\u00b0C), and significant fatigue. On examination, the tonsils are markedly enlarged with whitish-yellow exudate, and there is anterior cervical lymphadenopathy. He has no rash. Monospot test is positive.",
+    "question": "A 19-year-old student has exudative tonsillitis and anterior cervical lymphadenopathy. A Monospot test is positive. What antibiotic must be strictly avoided in this condition and why?",
+    "options": [
+      "Phenoxymethylpenicillin \u2014 causes resistance",
+      "Amoxicillin \u2014 causes a florid maculopapular rash in EBV infection",
+      "Erythromycin \u2014 causes QT prolongation",
+      "Doxycycline \u2014 causes oesophageal ulceration",
+      "Metronidazole \u2014 no anaerobic cover needed"
+    ],
+    "answer": 1,
+    "correct_answer": "Amoxicillin \u2014 causes a florid maculopapular rash in EBV infection",
+    "explanation": "Infectious mononucleosis (glandular fever) is caused by Epstein-Barr virus (EBV) and presents with the triad of exudative tonsillitis, cervical lymphadenopathy, and marked fatigue in young adults. A positive Monospot (Paul-Bunnell) test or EBV-specific antibodies confirm the diagnosis. CRITICAL PLAB POINT: amoxicillin (and ampicillin) should be STRICTLY AVOIDED in EBV infection \u2014 they cause a florid, widespread maculopapular rash in >80% of patients. This is not a true penicillin allergy. Management: supportive (rest, analgesia, fluids). Advise avoiding contact sports for 4-6 weeks due to risk of splenic rupture. Peritonsillar abscess (quinsy) and airway compromise are complications.\n\nPLAB Pearl: EBV mononucleosis = avoid amoxicillin/ampicillin (causes widespread rash). Monospot/Paul-Bunnell test. Advise against contact sports (splenic rupture risk).",
+    "key_learning_points": [
+      "EBV glandular fever: exudative tonsillitis + cervical LN + fatigue in young adults",
+      "Amoxicillin/ampicillin CONTRAINDICATED \u2014 causes widespread maculopapular rash",
+      "Avoid contact sports for 4-6 weeks \u2014 risk of splenic rupture"
+    ],
+    "tags": [
+      "tonsillitis",
+      "EBV",
+      "glandular fever",
+      "ENT",
+      "amoxicillin",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/tonsillitis-exudate.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng84",
+      "CKS": "https://cks.nice.org.uk/topics/glandular-fever-infectious-mononucleosis/"
+    }
+  },
+  {
+    "id": "spotdx-048",
+    "title": "Paget's Disease of Bone \u2014 Skull X-ray",
+    "specialty": "Rheumatology",
+    "category": "rheumatology",
+    "difficulty": "advanced",
+    "topic": "Paget's Disease of Bone",
+    "clinical_vignette": "A 73-year-old man presents with increasing hat size over the past 5 years, bilateral deafness, and bone pain in his skull. His skull X-ray is shown above, revealing an enlarged, thickened skull with patchy sclerotic and lucent areas giving a 'cotton-wool' appearance. ALP is markedly elevated at 890 IU/L with normal calcium and phosphate.",
+    "question": "A 73-year-old man has an enlarged skull with a cotton-wool appearance on X-ray and markedly elevated ALP with normal calcium and phosphate. What is the most appropriate treatment?",
+    "options": [
+      "Oral calcium and vitamin D",
+      "IV bisphosphonate (zoledronate)",
+      "Parathyroidectomy",
+      "Calcitonin injections only",
+      "No treatment needed"
+    ],
+    "answer": 1,
+    "correct_answer": "IV bisphosphonate (zoledronate)",
+    "explanation": "Paget's disease of bone is a focal disorder of bone remodelling with accelerated osteoclast-mediated bone resorption followed by disorganised osteoblastic repair, producing structurally weak, enlarged, and deformed bone. Classic X-ray findings: osteoporosis circumscripta (lytic phase), cotton-wool densities (mixed phase), thickening and expansion of cortex. Biochemistry: markedly elevated ALP (bone-specific) with NORMAL calcium and phosphate (distinguishes from hyperparathyroidism and malignancy). Complications: bone pain, fractures, deafness (cranial nerve compression), high-output cardiac failure, and (rarely) osteosarcomatous transformation (rising ALP + pain = red flag). First-line treatment: IV zoledronate (bisphosphonate) \u2014 single infusion maintains remission for years.\n\nPLAB Pearl: Paget's = elevated ALP + normal Ca/PO4 + bone pain/deformity. Cotton-wool skull X-ray. Treat with IV zoledronate. Rising ALP + pain = sarcomatous change.",
+    "key_learning_points": [
+      "Paget's disease: elevated ALP, NORMAL Ca/PO4 \u2014 key to distinguish from malignancy and hyperPTH",
+      "Cotton-wool skull X-ray + cranial enlargement + deafness",
+      "Treatment: IV zoledronate (bisphosphonate) \u2014 most effective; prevents complications"
+    ],
+    "tags": [
+      "Paget's disease",
+      "skull X-ray",
+      "ALP",
+      "rheumatology",
+      "bisphosphonate",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/pagets-disease-skull-xray.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ta160",
+      "CKS": "https://cks.nice.org.uk/topics/pagets-disease-of-bone/"
+    }
+  },
+  {
+    "id": "spotdx-049",
+    "title": "Lichen Planus",
+    "specialty": "Dermatology",
+    "category": "dermatology",
+    "difficulty": "intermediate",
+    "topic": "Lichen Planus",
+    "clinical_vignette": "A 42-year-old woman presents with a 3-month history of intensely itchy, purple, flat-topped lesions on her wrists and forearms. Examination reveals violaceous, polygonal, flat-topped papules arranged in a linear pattern along scratch marks. On close inspection, fine white lines are visible on the surface of the lesions. Oral mucosa shows white lace-like patches on the buccal mucosa.",
+    "question": "A 42-year-old woman has violaceous, polygonal, flat-topped papules on her wrists with Wickham's striae and white lacy patches on her oral mucosa. What is the name of the white lace-like surface markings characteristic of this condition?",
+    "options": [
+      "Darier's sign",
+      "Auspitz sign",
+      "Wickham's striae",
+      "Koebner's phenomenon",
+      "Nikolsky's sign"
+    ],
+    "answer": 2,
+    "correct_answer": "Wickham's striae",
+    "explanation": "Lichen planus (LP) is an autoimmune T-cell mediated skin condition presenting with the classic '6 Ps': Pruritic, Purple (violaceous), Polygonal, Planar (flat-topped), Papules and Plaques. Wickham's striae are the pathognomonic fine white lace-like lines visible on the surface of papules (best seen with dermatoscope or after applying oil). The condition can also affect mucous membranes (oral LP = white lacy patches on buccal mucosa \u2014 can be premalignant), nails, and genitalia. Koebner phenomenon (isomorphic response) occurs in LP. Management: potent topical steroids for skin; topical tacrolimus for mucosal disease. Oral LP requires monitoring for malignant transformation.\n\nPLAB Pearl: 6 Ps of lichen planus: Pruritic, Purple, Polygonal, Planar, Papules, Plaques. Wickham's striae = pathognomonic. Oral LP \u2192 low malignant potential \u2014 monitor. Koebner phenomenon occurs.",
+    "key_learning_points": [
+      "Lichen planus: 6 Ps \u2014 pruritic, purple, polygonal, planar (flat-topped), papules/plaques",
+      "Wickham's striae = fine white lace-like surface lines \u2014 pathognomonic",
+      "Oral lichen planus has malignant potential \u2014 monitor with regular review"
+    ],
+    "tags": [
+      "lichen planus",
+      "Wickham's striae",
+      "dermatology",
+      "autoimmune",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/derm-images/lichen-planus.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg147",
+      "CKS": "https://cks.nice.org.uk/topics/lichen-planus/"
+    }
+  },
+  {
+    "id": "spotdx-050",
+    "title": "Epiglottitis \u2014 Lateral Neck X-ray (Thumb Sign)",
+    "specialty": "ENT",
+    "category": "ENT",
+    "difficulty": "advanced",
+    "topic": "Acute Epiglottitis",
+    "clinical_vignette": "A 4-year-old boy is brought to A&E with a 12-hour history of high fever (39.8\u00b0C), severe sore throat, drooling, stridor, and an anxious, tripod-sitting posture. He is reluctant to swallow and speaks with a muffled voice. He looks toxic and pale. His lateral neck X-ray is shown above.",
+    "question": "A 4-year-old boy has high fever, drooling, tripod posture, stridor, and a muffled voice. His lateral neck X-ray shows the 'thumb sign' (a swollen, rounded epiglottis). What is the single most dangerous thing to do in this scenario?",
+    "options": [
+      "Give nebulised adrenaline",
+      "Examine the throat with a tongue depressor",
+      "Establish IV access in theatre",
+      "Give IV cefotaxime",
+      "Call for senior anaesthetic support"
+    ],
+    "answer": 1,
+    "correct_answer": "Examine the throat with a tongue depressor",
+    "explanation": "Acute epiglottitis is a life-threatening supraglottic infection (most commonly caused by Haemophilus influenzae type b \u2014 now rare due to HiB vaccine; also Streptococcus pneumoniae, GAS, Staphylococcus aureus). It presents with the 4Ds: Drooling, Dysphagia, Dysphonia (muffled 'hot potato' voice), Distress. The CLASSIC and CRITICAL teaching point: NEVER examine the throat with a tongue depressor or attempt any distressing procedure in the clinic/A&E \u2014 this can precipitate complete airway obstruction and respiratory arrest. Manage with: keep child calm with parent, summon anaesthetist + ENT + paediatrics URGENTLY, take to theatre for controlled intubation, then IV cefotaxime/ceftriaxone. Lateral neck X-ray: 'thumb sign' (swollen epiglottis resembling a thumb).\n\nPLAB Pearl: Epiglottitis = NEVER examine the throat. Thumb sign on lateral neck X-ray. Secure airway in controlled environment (theatre). IV cefotaxime after airway secured.",
+    "key_learning_points": [
+      "Epiglottitis: 4Ds \u2014 drooling, dysphagia, dysphonia, distress; tripod posture",
+      "NEVER examine the throat \u2014 risk of complete airway obstruction and cardiac arrest",
+      "Lateral X-ray: thumb sign. Management: controlled intubation in theatre + IV cefotaxime"
+    ],
+    "tags": [
+      "epiglottitis",
+      "thumb sign",
+      "stridor",
+      "ENT",
+      "paediatrics",
+      "airway",
+      "spot-diagnosis"
+    ],
+    "imageUrl": "/spotdx-images/epiglottitis-thumb-sign.png",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng35",
+      "CKS": "https://cks.nice.org.uk/topics/croup/"
+    }
   }
 ]
