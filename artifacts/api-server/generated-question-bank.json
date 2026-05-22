@@ -32911,5 +32911,425 @@
     "category": "cardiovascular",
     "difficulty": "intermediate",
     "topic": "Cardiology - heart failure variant"
+  },
+  {
+    "id": "generated_all_1779492989817_0",
+    "topic": "Hypertension Management in Adults",
+    "category": "all",
+    "question": "A 56-year-old Black man is diagnosed with hypertension after multiple clinic readings above 150/95 mmHg. He has no significant comorbidities and no history of cardiovascular disease. What is the most appropriate first-line antihypertensive therapy?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Indapamide",
+      "Atenolol",
+      "Spironolactone"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is Amlodipine. NICE NG136 (2023) recommends a calcium channel blocker (CCB) as the first-line treatment for patients over 55 years old or of Black ethnicity, regardless of age. This patient meets both criteria, making amlodipine the best choice. Ramipril (ACE inhibitor) is first-line only for patients under 55 years old who are not Black. Indapamide (thiazide-like diuretic) is considered in step 3 after failure of combination therapy with ACEi/ARB and CCB. Atenolol (beta-blocker) is not recommended as first-line therapy for hypertension unless specific indications, such as heart failure or post-MI, are present. Spironolactone is reserved for resistant hypertension (step 4) when serum potassium is <4.5 mmol/L. Clinical pearl: NICE targets clinic BP <140/90 mmHg (<150/90 if ≥80 years old).",
+    "mnemonic": "CCB for 'Colorful' Blood Pressure (Black ethnicity or >55 years old).",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_1",
+    "topic": "Asthma Management in Adults",
+    "category": "all",
+    "question": "A 28-year-old woman with newly diagnosed asthma presents with episodes of wheezing and shortness of breath twice weekly. She is currently prescribed salbutamol as needed. What is the most appropriate next step in management?",
+    "options": [
+      "Add a low-dose ICS inhaler",
+      "Switch to as-needed low-dose ICS/formoterol combination inhaler",
+      "Add a leukotriene receptor antagonist (LTRA)",
+      "Prescribe regular low-dose ICS inhaler",
+      "Switch to regular ICS/LABA inhaler"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Switch to as-needed low-dose ICS/formoterol combination inhaler'. NICE NG245 (2024) recommends Anti-Inflammatory Reliever (AIR) therapy for newly diagnosed asthma patients or those on SABA-only therapy. This involves switching to a low-dose ICS/formoterol combination inhaler used as needed for both symptom relief and anti-inflammatory control. Adding a separate ICS inhaler to SABA is an outdated approach (pre-2024 guidelines). Leukotriene receptor antagonists (LTRAs) are added only at step 4 after failure of moderate-dose MART therapy. Regular ICS inhalers are part of the old pathway and are no longer first-line. LABA cannot be added without ICS. Clinical pearl: Remember AIR therapy as the cornerstone for 'new asthma' management.",
+    "mnemonic": "AIR for Asthma Initial Relief (ICS/formoterol).",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_2",
+    "topic": "Type 2 Diabetes Management",
+    "category": "all",
+    "question": "A 62-year-old man with newly diagnosed type 2 diabetes has a BMI of 29, HbA1c of 55 mmol/mol, and estimated glomerular filtration rate (eGFR) of 78 mL/min/1.73m². He has no history of cardiovascular disease. What is the most appropriate first-line medication?",
+    "options": [
+      "Empagliflozin",
+      "Metformin",
+      "Gliclazide",
+      "Sitagliptin",
+      "Exenatide"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Metformin. NICE NG28 (2022) states that metformin is the first-line treatment for type 2 diabetes unless contraindicated, such as in patients with significant renal impairment (eGFR <30 mL/min/1.73m²). Empagliflozin (SGLT-2 inhibitor) is reserved for patients with established cardiovascular disease or high risk of CVD. Gliclazide (sulfonylurea) can cause hypoglycaemia and is not first-line. Sitagliptin (DPP-4 inhibitor) and exenatide (GLP-1 receptor agonist) are second-line options after metformin failure or in specific circumstances, such as intolerance to metformin. Clinical pearl: Monitor HbA1c every 3–6 months to assess treatment efficacy.",
+    "mnemonic": "Metformin is the 'Main Management' for type 2 diabetes.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_3",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 65-year-old woman presents with chest pain radiating to her left arm and ECG showing ST elevation in leads II, III, and aVF. She is seen within 90 minutes of symptom onset. What is the most appropriate next step in management?",
+    "options": [
+      "Administer thrombolysis",
+      "Perform primary PCI",
+      "Start a beta-blocker",
+      "Give fondaparinux",
+      "Start dual antiplatelet therapy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Perform primary PCI'. NICE NG185 (2020) recommends primary percutaneous coronary intervention (PCI) as the first-line treatment for STEMI if it can be performed within 120 minutes of first medical contact. Thrombolysis is considered only if PCI is not available within this timeframe. Beta-blockers are initiated after stabilisation but are not the immediate priority. Fondaparinux is used in NSTEMI or UA, not STEMI treated with PCI. Dual antiplatelet therapy (aspirin + ticagrelor) should be initiated after PCI. Clinical pearl: STEMI management prioritises revascularisation within 120 minutes.",
+    "mnemonic": "STEMI = 'Stent Time' (PCI within 120 minutes).",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_4",
+    "topic": "Community-Acquired Pneumonia",
+    "category": "all",
+    "question": "A 48-year-old man presents with fever, productive cough, and pleuritic chest pain. His CURB-65 score is 1. Chest X-ray shows consolidation in the right lower lobe. What is the most appropriate antibiotic therapy?",
+    "options": [
+      "Co-amoxiclav + clarithromycin IV",
+      "Amoxicillin + doxycycline",
+      "Amoxicillin + clarithromycin",
+      "Clarithromycin monotherapy",
+      "Amoxicillin monotherapy"
+    ],
+    "answer": 4,
+    "explanation": "The correct answer is 'Amoxicillin monotherapy'. NICE NG250 (2025) recommends amoxicillin 500 mg TDS for 5 days for low-severity community-acquired pneumonia (CURB-65 score 0 or 1). Co-amoxiclav + clarithromycin IV is used for high-severity pneumonia (CURB-65 ≥3). Amoxicillin + clarithromycin is recommended for moderate-severity pneumonia (CURB-65 = 2). Clarithromycin monotherapy is used in patients with penicillin allergy. Clinical pearl: CURB-65 scoring includes confusion, urea >7 mmol/L, respiratory rate ≥30, BP <90/60, and age ≥65 years.",
+    "mnemonic": "Amoxicillin Alone for 'A' CURB-0/1 pneumonia.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_5",
+    "topic": "Hypothyroidism",
+    "category": "all",
+    "question": "A 45-year-old woman presents with fatigue, weight gain, and cold intolerance. Blood tests show TSH 12 mU/L and free T4 9 pmol/L. What is the most appropriate initial treatment?",
+    "options": [
+      "Levothyroxine 25 mcg OD",
+      "Levothyroxine 100 mcg OD",
+      "Carbimazole 15 mg OD",
+      "Radioactive iodine",
+      "Propranolol"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Levothyroxine 25 mcg OD'. NICE NG145 (2019) recommends starting levothyroxine at 25–50 mcg/day for hypothyroidism, titrated to achieve TSH between 0.5–2.5 mU/L. Levothyroxine 100 mcg OD is too high for an initial dose. Carbimazole and radioactive iodine are used for hyperthyroidism, not hypothyroidism. Propranolol is inappropriate as it treats symptoms of hyperthyroidism. Clinical pearl: Recheck TFTs 8–12 weeks after dose adjustments.",
+    "mnemonic": "Levothyroxine Low Dose for 'Low Thyroid'.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_6",
+    "topic": "Venous Thromboembolism (PE)",
+    "category": "all",
+    "question": "A 34-year-old woman presents with sudden onset of dyspnoea and pleuritic chest pain. Her Wells score is 6, and CT pulmonary angiogram confirms a pulmonary embolism. What is the most appropriate initial treatment?",
+    "options": [
+      "Warfarin",
+      "Rivaroxaban",
+      "Fondaparinux",
+      "LMWH followed by warfarin",
+      "Dabigatran"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Rivaroxaban'. NICE NG158 (2020) recommends a DOAC (rivaroxaban or apixaban) as first-line treatment for confirmed pulmonary embolism unless contraindicated. Warfarin requires bridging with LMWH and is not preferred due to the need for monitoring. Fondaparinux is used in some cases of DVT/PE but is not first-line. LMWH alone is reserved for patients with active cancer. Dabigatran requires initial parenteral anticoagulation before use. Clinical pearl: DOACs simplify anticoagulation therapy for PE.",
+    "mnemonic": "Rivaroxaban for Rapid PE Response.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/pulmonary-embolism/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_7",
+    "topic": "Parkinson's Disease",
+    "category": "all",
+    "question": "A 72-year-old man with newly diagnosed Parkinson’s disease presents with bradykinesia and resting tremor. What is the most appropriate initial treatment?",
+    "options": [
+      "Levodopa",
+      "Ropinirole",
+      "Selegiline",
+      "Amantadine",
+      "Trihexyphenidyl"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is 'Levodopa'. NICE NG71 (2020) states that levodopa with a dopa-decarboxylase inhibitor is the most effective treatment for motor symptoms, particularly in older patients. Ropinirole (dopamine agonist) is preferred in younger patients to delay motor complications. Selegiline (MAO-B inhibitor) is used adjunctively. Amantadine and trihexyphenidyl have limited roles in early Parkinson’s management. Clinical pearl: Levodopa is the 'gold standard' for older patients with Parkinson’s disease.",
+    "mnemonic": "Levodopa Leads in Late-Age Parkinson’s.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng71",
+      "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_8",
+    "topic": "Acute Kidney Injury",
+    "category": "all",
+    "question": "A 68-year-old man with a history of hypertension presents with oliguria and creatinine of 210 µmol/L (baseline: 90 µmol/L). Potassium is 5.6 mmol/L. He is mildly hypovolaemic and taking ramipril and ibuprofen for back pain. What is the most appropriate first step?",
+    "options": [
+      "Start haemodialysis",
+      "Administer IV furosemide",
+      "Stop ramipril and ibuprofen, and give IV fluid resuscitation",
+      "Start a potassium binder",
+      "Monitor electrolytes and renal function without intervention"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Stop ramipril and ibuprofen, and give IV fluid resuscitation'. NICE CG169 (2013) recommends discontinuing nephrotoxic drugs (NSAIDs, ACE inhibitors) and addressing hypovolaemia in pre-renal AKI. Haemodialysis is reserved for refractory cases meeting AEIOU criteria. Furosemide is unnecessary unless fluid overload develops. Potassium binders are used for persistent hyperkalaemia. Observation alone risks further renal injury. Clinical pearl: Address reversible causes first in AKI management.",
+    "mnemonic": "STOP drugs causing kidney Suffering (NSAIDs/ACE-i).",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/cg169",
+      "CKS": "https://cks.nice.org.uk/topics/acute-kidney-injury/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779492989817_9",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 23-year-old man is diagnosed with focal epilepsy after experiencing multiple partial seizures. His renal function is normal, and he is not sexually active. What is the most appropriate first-line treatment?",
+    "options": [
+      "Sodium valproate",
+      "Carbamazepine",
+      "Lamotrigine",
+      "Levetiracetam",
+      "Topiramate"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Carbamazepine'. NICE NG217 (2022) recommends carbamazepine or lamotrigine as first-line treatment for focal epilepsy. Sodium valproate is preferred for generalised epilepsy but avoided in women of childbearing age due to teratogenicity. Levetiracetam and topiramate are second-line options. Clinical pearl: Tailor epilepsy treatment based on seizure type and patient factors.",
+    "mnemonic": "Carbamazepine for 'Cornered' focal seizures.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_0",
+    "topic": "Hypertension Management",
+    "category": "all",
+    "question": "A 55-year-old Black male presents to his GP for a follow-up regarding his elevated blood pressure. His clinic readings are consistently around 158/92 mmHg. He has no significant past medical history and does not smoke or drink alcohol. His QRISK3 score is 12%. What is the most appropriate first-line management?",
+    "options": [
+      "Start an ACE inhibitor such as ramipril",
+      "Start a calcium channel blocker such as amlodipine",
+      "Start a thiazide-like diuretic such as indapamide",
+      "Start a beta-blocker such as bisoprolol",
+      "Advise lifestyle modifications only and review in 6 months"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Start a calcium channel blocker such as amlodipine. NICE NG136 (2023) recommends initiating a calcium channel blocker as the first-line treatment for hypertension in patients over 55 years old or those of Black African or Caribbean heritage. This patient fits both criteria. His consistent clinic BP readings of 158/92 mmHg exceed the target (<140/90 mmHg), necessitating pharmacological intervention. Lifestyle modifications alone would be inadequate given his QRISK3 score of 12%, which indicates a high cardiovascular risk.\n\nOption A is incorrect because ACE inhibitors are first-line only in patients under 55 who are not Black. Option C (thiazide-like diuretic) and Option D (beta-blocker) are considered later steps in the hypertension pathway. Option E does not address the need for immediate pharmacological treatment given the high BP readings and QRISK3 score.\n\nClinical pearl: For Black patients with hypertension, calcium channel blockers are preferred due to reduced efficacy of ACE inhibitors in this population.\n",
+    "mnemonic": "Black patients age >55: 'Block with Calcium.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_1",
+    "topic": "Acute Coronary Syndrome",
+    "category": "all",
+    "question": "A 62-year-old male presents to A&E with central chest pain radiating to his left arm. The pain began 2 hours ago and is associated with nausea and sweating. ECG shows ST elevation in leads II, III, and aVF. Troponin is elevated at 350 ng/L. What is the next best step in management?",
+    "options": [
+      "Administer thrombolysis with alteplase immediately",
+      "Refer for primary PCI within 120 minutes",
+      "Start dual antiplatelet therapy and plan outpatient angiography",
+      "Administer morphine and discharge home with follow-up",
+      "Refer for coronary artery bypass surgery"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Refer for primary PCI within 120 minutes. NICE NG185 (2020) recommends urgent primary percutaneous coronary intervention (PCI) for patients presenting with STEMI and symptom onset within the last 12 hours, provided PCI can be performed within 120 minutes of first medical contact. This patient’s ECG findings of ST elevation in leads II, III, and aVF are diagnostic of an inferior STEMI.\n\nOption A is incorrect because thrombolysis is only considered when PCI is not available within the recommended timeframe. Option C is inappropriate as outpatient angiography is not suitable for STEMI. Option D (discharge) is dangerous, and Option E (CABG) is reserved for complex coronary anatomy after assessment.\n\nClinical pearl: STEMI patients benefit most from revascularisation within the “golden 120 minutes” window after symptom onset.\n",
+    "mnemonic": "STEMI: 'Stents Time Equals Myocardial Improvement.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng185",
+      "CKS": "https://cks.nice.org.uk/topics/acute-coronary-syndrome/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_2",
+    "topic": "Asthma Management",
+    "category": "all",
+    "question": "A 28-year-old female with newly diagnosed asthma presents with intermittent wheezing and breathlessness, often triggered by cold weather. She currently uses a salbutamol inhaler as needed, but her symptoms remain poorly controlled. What is the most appropriate next step in management?",
+    "options": [
+      "Add regular low-dose ICS twice daily",
+      "Switch to as-needed low-dose ICS/formoterol combination inhaler",
+      "Start regular ICS and LABA inhaler therapy",
+      "Continue salbutamol and review in 3 months",
+      "Refer to a respiratory specialist"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Switch to as-needed low-dose ICS/formoterol combination inhaler. NICE NG245 (2024) recommends the AIR pathway for newly diagnosed asthma or patients poorly controlled on SABA-only therapy. As-needed ICS/formoterol therapy (low-dose) serves as both maintenance and reliever. This approach replaces the older stepwise strategy, which suggested adding separate ICS to SABA.\n\nOption A is incorrect as adding regular ICS to SABA is outdated. Option C is not appropriate as regular ICS/LABA therapy is reserved for further steps. Option D fails to address her poor symptom control. Option E is premature without attempting guideline-directed therapy first.\n\nClinical pearl: The AIR pathway simplifies asthma management by combining maintenance and reliever therapy into one inhaler.\n",
+    "mnemonic": "Asthma AIR: 'Anti-Inflammatory Reliever.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_3",
+    "topic": "Diabetes Management",
+    "category": "all",
+    "question": "A 48-year-old male with newly diagnosed type 2 diabetes presents for advice. He has a BMI of 32 kg/m² and a HbA1c of 58 mmol/mol. He has no history of cardiovascular disease. What would be the most appropriate first-line pharmacological therapy?",
+    "options": [
+      "Start metformin 500 mg BD",
+      "Start empagliflozin 10 mg OD",
+      "Start pioglitazone 15 mg OD",
+      "Start gliclazide 40 mg OD",
+      "Advise lifestyle modifications only"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A: Start metformin 500 mg BD. NICE NG28 (2022) recommends metformin as the first-line therapy for type 2 diabetes, particularly in patients with raised BMI (>30 kg/m²) and an HbA1c ≥48 mmol/mol. Metformin improves insulin sensitivity and has a favourable effect on weight.\n\nOption B (empagliflozin) is reserved for patients with established cardiovascular disease or high risk. Option C (pioglitazone) and D (gliclazide) are not first-line agents due to side effects like weight gain and hypoglycaemia. Option E is insufficient given the HbA1c level.\n\nClinical pearl: Metformin is weight-neutral and ideal for overweight patients with type 2 diabetes.\n",
+    "mnemonic": "Metformin: 'More Efficient Treatment For Obesity-Related Metabolism.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng28",
+      "CKS": "https://cks.nice.org.uk/topics/type-2-diabetes/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_4",
+    "topic": "Sepsis Management",
+    "category": "all",
+    "question": "A 74-year-old female is admitted with fever, confusion, and hypotension. Her observations show BP 85/50 mmHg, HR 112 bpm, RR 24/min, SpO₂ 92% on air, and temperature 39°C. Blood lactate is 4.5 mmol/L. What is the most appropriate initial management?",
+    "options": [
+      "Start oral antibiotics and review in 6 hours",
+      "Administer IV fluids and broad-spectrum antibiotics immediately",
+      "Refer to ICU for vasopressors",
+      "Perform CT imaging to identify the source of infection",
+      "Monitor vital signs and await blood culture results"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Administer IV fluids and broad-spectrum antibiotics immediately. NICE NG51 (2016) and the Surviving Sepsis Campaign recommend the ‘Sepsis-6’ bundle within 1 hour, which includes IV antibiotics, IV fluids (500 mL bolus), lactate measurement, blood cultures, oxygen, and urine output monitoring. This patient meets sepsis criteria with hypotension, high lactate, and tachycardia, requiring urgent treatment.\n\nOption A is inappropriate as oral antibiotics are insufficient. Option C (vasopressors) may be needed later but not as the initial step. Option D (CT imaging) can be performed later to identify the source but must not delay treatment. Option E risks worsening sepsis progression.\n\nClinical pearl: Early recognition and treatment of sepsis save lives—act fast with the Sepsis-6 approach.\n",
+    "mnemonic": "Sepsis-6: 'Fluids, Antibiotics, Lactate, Cultures, Oxygen, Urine.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng51",
+      "CKS": "https://cks.nice.org.uk/topics/sepsis/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_5",
+    "topic": "Stroke Management",
+    "category": "all",
+    "question": "A 67-year-old female presents with sudden-onset left-sided weakness and slurred speech that started 1 hour ago. CT head shows no evidence of haemorrhage. What is the most appropriate next step in management?",
+    "options": [
+      "Start aspirin 300 mg immediately",
+      "Perform carotid duplex ultrasound",
+      "Administer alteplase IV thrombolysis",
+      "Refer for urgent neurosurgical evaluation",
+      "Start clopidogrel 75 mg OD"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C: Administer alteplase IV thrombolysis. NICE NG128 (2019) recommends thrombolysis within 4.5 hours of symptom onset for acute ischaemic stroke provided there are no contraindications. This patient’s presentation of sudden-onset weakness and CT findings of no haemorrhage support the diagnosis of ischaemic stroke.\n\nOption A (aspirin) is started after thrombolysis. Option B (carotid ultrasound) is done later if carotid stenosis is suspected. Option D (neurosurgery) is not indicated for ischaemic stroke. Option E (clopidogrel) is used for secondary prevention.\n\nClinical pearl: Time is brain—initiate thrombolysis within 4.5 hours for maximum benefit.\n",
+    "mnemonic": "Alteplase: 'Act Fast Less Than 4.5 Hours.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng128",
+      "CKS": "https://cks.nice.org.uk/topics/stroke/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_6",
+    "topic": "Hypothyroidism Management",
+    "category": "all",
+    "question": "A 38-year-old female presents with fatigue, weight gain, and constipation. Blood tests show TSH 8.5 mU/L (0.5–5.0) and free T4 9 pmol/L (10–20). What is the most appropriate management?",
+    "options": [
+      "Start levothyroxine 25 mcg daily and review in 8 weeks",
+      "Start carbimazole 15 mg OD",
+      "Refer for thyroidectomy",
+      "Repeat TFTs in 3 months",
+      "Advise dietary iodine supplementation"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is A: Start levothyroxine 25 mcg daily and review in 8 weeks. NICE NG145 (2019) recommends initiating levothyroxine in patients with confirmed hypothyroidism (high TSH and low free T4). The dose should be carefully titrated to achieve a target TSH of 0.5–2.5 mU/L, with repeat TFTs after 8–12 weeks.\n\nOption B (carbimazole) is for hyperthyroidism. Option C (thyroidectomy) is not indicated for hypothyroidism. Option D delays treatment unnecessarily. Option E (iodine supplementation) is ineffective as iodine deficiency is rare in the UK.\n\nClinical pearl: Hypothyroidism treatment aims to normalise TSH while avoiding over-replacement.\n",
+    "mnemonic": "Levothyroxine: 'Low Energy, Very Tired? Thyroid Replacement On Exogenous.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng145",
+      "CKS": "https://cks.nice.org.uk/topics/hypothyroidism/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_7",
+    "topic": "Parkinson's Disease Management",
+    "category": "all",
+    "question": "A 70-year-old male with Parkinson’s disease reports worsening bradykinesia and rigidity. He has not yet started any treatment. What is the most effective first-line therapy for symptom control?",
+    "options": [
+      "Start dopamine agonist such as ropinirole",
+      "Start MAO-B inhibitor such as rasagiline",
+      "Start levodopa with carbidopa",
+      "Refer for deep brain stimulation",
+      "Start amantadine"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is C: Start levodopa with carbidopa. NICE NG71 (2020) recommends levodopa as the most effective first-line treatment for motor symptoms in Parkinson's disease, particularly in older patients, due to its superior efficacy in managing bradykinesia and rigidity.\n\nOption A (dopamine agonist) is preferred for younger patients to delay levodopa complications. Option B (MAO-B inhibitor) is less effective for severe motor symptoms. Option D (deep brain stimulation) is reserved for refractory cases. Option E (amantadine) is used for dyskinesia, not initial treatment.\n\nClinical pearl: Levodopa remains the gold standard for Parkinson's motor symptoms despite long-term risks of dyskinesia.\n",
+    "mnemonic": "Levodopa: 'Let Every Velocity Of Dopamine Operate Parkinson’s Action.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng71",
+      "CKS": "https://cks.nice.org.uk/topics/parkinsons-disease/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_8",
+    "topic": "UTI in Pregnancy",
+    "category": "all",
+    "question": "A 32-year-old pregnant female at 28 weeks gestation presents with dysuria and frequency. Urinalysis shows nitrites and leukocytes. What is the most appropriate antibiotic therapy?",
+    "options": [
+      "Start trimethoprim 200 mg BD for 3 days",
+      "Start nitrofurantoin 100 mg MR BD for 7 days",
+      "Start co-amoxiclav 625 mg TDS for 7 days",
+      "Advise cranberry supplements and hydration",
+      "Refer for inpatient IV antibiotics"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Start nitrofurantoin 100 mg MR BD for 7 days. NICE NG109 (2024) recommends nitrofurantoin as the first-line antibiotic for uncomplicated UTI in pregnancy, unless contraindicated (e.g., at term). This choice is safe and effective during the second trimester.\n\nOption A (trimethoprim) is avoided due to teratogenic risk. Option C (co-amoxiclav) is reserved for upper UTI. Option D (cranberry supplements) lacks clinical evidence, and Option E (IV antibiotics) is unnecessary for uncomplicated UTI.\n\nClinical pearl: Nitrofurantoin is safe in pregnancy except at term due to haemolytic risk in neonates.\n",
+    "mnemonic": "Pregnant UTI: 'Nitrofurantoin – Now Treat Risk Of Frequency.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng109",
+      "CKS": "https://cks.nice.org.uk/topics/urinary-tract-infection-pregnancy/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779493111103_9",
+    "topic": "Epilepsy Management",
+    "category": "all",
+    "question": "A 24-year-old female presents with recurrent focal seizures characterised by right arm jerking and preserved awareness. MRI brain shows no abnormalities. What is the most appropriate first-line treatment?",
+    "options": [
+      "Start sodium valproate",
+      "Start carbamazepine",
+      "Start levetiracetam",
+      "Start phenytoin",
+      "Refer for epilepsy surgery"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is B: Start carbamazepine. NICE NG217 (2022) recommends carbamazepine or lamotrigine as first-line therapy for focal epilepsy. This patient’s presentation of focal seizures with preserved awareness fits the diagnosis of focal epilepsy.\n\nOption A (sodium valproate) is reserved for generalised epilepsy and avoided in women of childbearing age. Option C (levetiracetam) is an alternative if first-line agents are contraindicated or not tolerated. Option D (phenytoin) is not first-line due to side effects. Option E (surgery) is reserved for refractory cases.\n\nClinical pearl: Carbamazepine is the cornerstone of focal epilepsy management unless contraindicated.\n",
+    "mnemonic": "Carbamazepine: 'Control Arm Rhythms By Avoiding Myoclonic Activity Zones In Epilepsy.'",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng217",
+      "CKS": "https://cks.nice.org.uk/topics/epilepsy/"
+    },
+    "difficulty": "intermediate"
   }
 ]
