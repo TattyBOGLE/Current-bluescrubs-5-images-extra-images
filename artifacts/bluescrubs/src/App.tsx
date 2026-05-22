@@ -120,25 +120,17 @@ class ChunkErrorBoundary extends React.Component<
 }
 
 function Router() {
-  const { user, isLoading, isAuthenticated, login } = useAuth();
+  const { user } = useAuth();
 
   useEffect(() => {
     import("@/pages/plab1-new");
     import("@/pages/dashboard");
   }, []);
 
-  if (isLoading) {
-    return <PageLoader />;
-  }
-
-  if (!isAuthenticated) {
-    return <LoginScreen onLogin={login} />;
-  }
-
   const navUser = {
     username: user?.firstName
       ? `${user.firstName} ${user.lastName ?? ""}`.trim()
-      : (user?.username ?? user?.email ?? "User"),
+      : (user?.username ?? user?.email ?? "Guest"),
     studyStreak: user?.studyStreak ?? 0,
   };
 
