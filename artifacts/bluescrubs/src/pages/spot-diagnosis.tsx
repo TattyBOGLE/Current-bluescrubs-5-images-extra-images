@@ -70,27 +70,12 @@ const IMAGES = [
 ];
 
 const STATUS_CONFIG: Record<ImageStatus, { dot: string; label: string; title: string }> = {
-  validated: { dot: "bg-green-500", label: "✓", title: "Clinically validated" },
-  pending:   { dot: "bg-amber-400", label: "⚠", title: "AI-generated, pending validation" },
-  flagged:   { dot: "bg-red-500",   label: "✗", title: "Flagged for manual review" },
+  validated: { dot: "bg-emerald-500", label: "✓", title: "Clinically validated" },
+  pending:   { dot: "bg-amber-400",   label: "⚠", title: "AI-generated, pending validation" },
+  flagged:   { dot: "bg-rose-500",    label: "✗", title: "Flagged for manual review" },
 };
 
-const SPECIALTY_COLORS: Record<string, string> = {
-  Cardiology: "bg-red-100 text-red-700",
-  Respiratory: "bg-sky-100 text-sky-700",
-  Neurology: "bg-purple-100 text-purple-700",
-  Ophthalmology: "bg-teal-100 text-teal-700",
-  "Infectious Diseases": "bg-orange-100 text-orange-700",
-  Dermatology: "bg-pink-100 text-pink-700",
-  Rheumatology: "bg-amber-100 text-amber-700",
-  Endocrinology: "bg-lime-100 text-lime-700",
-  Paediatrics: "bg-violet-100 text-violet-700",
-  ENT: "bg-cyan-100 text-cyan-700",
-  Gastroenterology: "bg-yellow-100 text-yellow-700",
-  Radiology: "bg-slate-100 text-slate-700",
-  Urology: "bg-blue-100 text-blue-700",
-  Orthopaedics: "bg-stone-100 text-stone-700",
-};
+const SPECIALTY_BADGE = "bg-slate-100 text-slate-600";
 
 const ALL_SPECIALTIES = [...new Set(IMAGES.map((i) => i.specialty))].sort();
 
@@ -111,80 +96,85 @@ export default function SpotDiagnosis() {
   const validatedCount = IMAGES.filter(i => imageStatus[i.file] === "validated").length;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-4 py-6">
+      <div className="bg-white border-b border-slate-100 px-4 py-5">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between gap-3 mb-1">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Spot Diagnosis Gallery</h1>
-                <p className="text-sm text-gray-500">{IMAGES.length} clinical images across {ALL_SPECIALTIES.length} specialties</p>
-              </div>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-sm shadow-teal-200/50 flex-shrink-0">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
             </div>
-            {/* Quality legend */}
-            <div className="hidden sm:flex items-center gap-4 text-xs text-gray-500">
-              <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
-                Validated ({validatedCount})
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-amber-400 inline-block" />
-                Pending
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
-                Flagged
-              </span>
+            <div className="min-w-0">
+              <h1 className="text-lg sm:text-xl font-bold text-slate-900 leading-tight">Spot Diagnosis Gallery</h1>
+              <p className="text-xs sm:text-sm text-slate-500 mt-0.5">{IMAGES.length} clinical images · {ALL_SPECIALTIES.length} specialties</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        {/* Filters */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-6">
-          <Input
-            placeholder="Search by diagnosis or specialty…"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="max-w-xs"
-          />
-          <div className="flex flex-wrap gap-2">
+      <div className="max-w-6xl mx-auto px-4 py-5">
+        {/* Search */}
+        <Input
+          placeholder="Search by diagnosis or specialty…"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full h-11 rounded-2xl border-slate-200 bg-white mb-4"
+        />
+
+        {/* Specialty chips — single horizontal scroll row */}
+        <div className="-mx-4 mb-5">
+          <div className="flex gap-2 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <button
               onClick={() => setSelectedSpecialty(null)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+              className={`flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
                 !selectedSpecialty
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-white text-gray-600 border-gray-200 hover:border-blue-300"
+                  ? "bg-gradient-to-r from-teal-500 to-teal-600 text-white border-transparent shadow-sm shadow-teal-200/50"
+                  : "bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-700"
               }`}
             >
-              All ({IMAGES.length})
+              All · {IMAGES.length}
             </button>
-            {ALL_SPECIALTIES.map((sp) => (
-              <button
-                key={sp}
-                onClick={() => setSelectedSpecialty(selectedSpecialty === sp ? null : sp)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
-                  selectedSpecialty === sp
-                    ? "bg-blue-600 text-white border-blue-600"
-                    : "bg-white text-gray-600 border-gray-200 hover:border-blue-300"
-                }`}
-              >
-                {sp} ({IMAGES.filter((i) => i.specialty === sp).length})
-              </button>
-            ))}
+            {ALL_SPECIALTIES.map((sp) => {
+              const count = IMAGES.filter((i) => i.specialty === sp).length;
+              const active = selectedSpecialty === sp;
+              return (
+                <button
+                  key={sp}
+                  onClick={() => setSelectedSpecialty(active ? null : sp)}
+                  className={`flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
+                    active
+                      ? "bg-gradient-to-r from-teal-500 to-teal-600 text-white border-transparent shadow-sm shadow-teal-200/50"
+                      : "bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-700"
+                  }`}
+                >
+                  {sp} · {count}
+                </button>
+              );
+            })}
           </div>
         </div>
 
+        {/* Quality legend */}
+        <div className="flex items-center gap-4 text-xs text-slate-500 mb-4 px-0.5">
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+            Validated ({validatedCount})
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-amber-400 inline-block" />
+            Pending
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-rose-500 inline-block" />
+            Flagged
+          </span>
+        </div>
+
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {filtered.map((img) => {
             const status = imageStatus[img.file] ?? "pending";
             const statusCfg = STATUS_CONFIG[status];
@@ -192,9 +182,9 @@ export default function SpotDiagnosis() {
               <button
                 key={img.file}
                 onClick={() => setLightbox(img)}
-                className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-blue-400 hover:shadow-md transition-all text-left"
+                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-teal-300 hover:shadow-md hover:shadow-teal-100/60 transition-all text-left"
               >
-                <div className="aspect-square bg-gray-100 overflow-hidden relative">
+                <div className="aspect-square bg-slate-100 overflow-hidden relative">
                   <img
                     src={`/${img.dir}/${img.file}`}
                     alt={img.label}
@@ -204,16 +194,16 @@ export default function SpotDiagnosis() {
                   {/* Quality dot */}
                   <span
                     title={statusCfg.title}
-                    className={`absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full border border-white/80 shadow-sm ${statusCfg.dot}`}
+                    className={`absolute top-2 right-2 w-2.5 h-2.5 rounded-full border border-white/90 shadow-sm ${statusCfg.dot}`}
                   />
                 </div>
-                <div className="p-2.5">
-                  <p className="text-xs font-semibold text-gray-800 leading-tight mb-1.5 line-clamp-2">{img.label}</p>
-                  <div className="flex items-center gap-1 flex-wrap">
-                    <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded-full ${SPECIALTY_COLORS[img.specialty] ?? "bg-gray-100 text-gray-600"}`}>
+                <div className="p-3">
+                  <p className="text-xs font-semibold text-slate-900 leading-snug mb-1.5 line-clamp-2">{img.label}</p>
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded-full ${SPECIALTY_BADGE}`}>
                       {img.specialty}
                     </span>
-                    <span className="text-[10px] text-gray-400 font-medium">{img.type}</span>
+                    <span className="text-[10px] text-slate-400 font-medium">{img.type}</span>
                   </div>
                 </div>
               </button>
@@ -222,7 +212,7 @@ export default function SpotDiagnosis() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="text-center py-16 text-gray-400">
+          <div className="text-center py-16 text-slate-400">
             <p className="text-sm">No images match your search.</p>
           </div>
         )}
@@ -260,16 +250,16 @@ export default function SpotDiagnosis() {
               <div>
                 <h3 className="font-semibold text-gray-900">{lightbox.label}</h3>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${SPECIALTY_COLORS[lightbox.specialty] ?? "bg-gray-100 text-gray-600"}`}>
+                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${SPECIALTY_BADGE}`}>
                     {lightbox.specialty}
                   </span>
-                  <span className="text-xs text-gray-400">{lightbox.type}</span>
+                  <span className="text-xs text-slate-400">{lightbox.type}</span>
                   <span className={`text-xs px-1.5 py-0.5 rounded-full font-medium ${
                     (imageStatus[lightbox.file] ?? "pending") === "validated"
-                      ? "bg-green-50 text-green-700"
+                      ? "bg-emerald-50 text-emerald-700"
                       : (imageStatus[lightbox.file] ?? "pending") === "flagged"
-                        ? "bg-red-50 text-red-600"
-                        : "bg-amber-50 text-amber-600"
+                        ? "bg-rose-50 text-rose-600"
+                        : "bg-amber-50 text-amber-700"
                   }`}>
                     {STATUS_CONFIG[imageStatus[lightbox.file] ?? "pending"].title}
                   </span>
