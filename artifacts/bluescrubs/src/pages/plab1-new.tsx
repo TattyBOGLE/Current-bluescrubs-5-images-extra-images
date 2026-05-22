@@ -1418,49 +1418,49 @@ export default function PLAB1New() {
       {showPauseModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-center">
+            <div className="bg-gradient-to-r from-teal-500 to-teal-600 p-6 text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-2xl font-bold text-white mb-2">Great Progress!</h2>
-              <p className="text-green-100">
+              <p className="text-teal-50">
                 You've got {sessionResults.filter(r => r.correct).length} questions correct!
               </p>
             </div>
 
             <div className="p-6 space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-green-50 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-green-600">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-teal-50/70 border border-teal-100 rounded-2xl p-4 text-center">
+                  <div className="text-2xl font-bold text-teal-700">
                     {sessionResults.filter(r => r.correct).length}
                   </div>
-                  <div className="text-sm text-green-700">Correct</div>
+                  <div className="text-xs text-teal-600 font-medium mt-0.5">Correct</div>
                 </div>
-                <div className="bg-blue-50 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-600">
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+                  <div className="text-2xl font-bold text-slate-800">
                     {sessionResults.length}
                   </div>
-                  <div className="text-sm text-blue-700">Answered</div>
+                  <div className="text-xs text-slate-500 font-medium mt-0.5">Answered</div>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-4">
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600">Questions Remaining</span>
-                  <span className="font-semibold text-gray-800">
+                  <span className="text-slate-600">Questions Remaining</span>
+                  <span className="font-semibold text-slate-800">
                     {generatedQuestions.length - currentQuestionIndex - 1}
                   </span>
                 </div>
               </div>
 
-              <p className="text-center text-gray-600 text-sm">
+              <p className="text-center text-slate-600 text-sm">
                 Would you like to take a break or continue practicing?
               </p>
 
               <div className="flex flex-col gap-3">
                 <Button
                   onClick={handleContinuePractice}
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white py-3"
+                  className="w-full bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white rounded-2xl h-11 font-semibold shadow-md shadow-teal-200/50 border-none"
                 >
                   <ArrowRight className="w-4 h-4 mr-2" />
                   Continue Practicing
@@ -1468,7 +1468,7 @@ export default function PLAB1New() {
                 <Button
                   onClick={handlePauseSession}
                   variant="outline"
-                  className="w-full border-gray-300 hover:bg-gray-50 py-3"
+                  className="w-full rounded-2xl h-11 border-slate-200 text-slate-700 hover:bg-slate-50"
                 >
                   <CheckCircle className="w-4 h-4 mr-2" />
                   Take a Break & See Results

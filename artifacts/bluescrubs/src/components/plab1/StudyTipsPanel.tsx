@@ -65,17 +65,17 @@ export function StudyTipsPanel({
   return (
     <>
       {/* Study Tips Section */}
-      <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <button
           onClick={() => setTipsOpen(prev => !prev)}
-          className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 transition-colors px-4 py-2.5 flex items-center justify-between"
+          className="w-full bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 transition-colors px-4 py-2.5 flex items-center justify-between"
           aria-expanded={tipsOpen}
         >
           <span className="text-white font-semibold text-sm flex items-center gap-2">
             <Lightbulb className="w-4 h-4 text-white flex-shrink-0" />
             High-Yield Tips &amp; Mnemonics
           </span>
-          <ChevronDown className={`w-4 h-4 text-violet-200 transition-transform duration-200 ${tipsOpen ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`w-4 h-4 text-teal-100 transition-transform duration-200 ${tipsOpen ? 'rotate-180' : ''}`} />
         </button>
 
         {tipsOpen && (
@@ -83,8 +83,8 @@ export function StudyTipsPanel({
             {aiStudyTipsLoading && !aiStudyTips && (
               <div className="space-y-2.5 animate-pulse">
                 {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="bg-white border border-slate-100 rounded-lg p-3 flex gap-3 shadow-sm">
-                    <div className="w-7 h-7 bg-slate-200 rounded-md flex-shrink-0" />
+                  <div key={i} className="bg-white border border-slate-100 rounded-2xl p-3 flex gap-3 shadow-sm">
+                    <div className="w-7 h-7 bg-slate-200 rounded-xl flex-shrink-0" />
                     <div className="flex-1">
                       <div className="h-2.5 bg-slate-200 rounded w-1/3 mb-2" />
                       <div className="h-2 bg-slate-100 rounded w-full mb-1" />

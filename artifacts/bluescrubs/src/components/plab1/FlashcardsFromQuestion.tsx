@@ -72,11 +72,11 @@ function getTypeStyle(type: string) {
   switch (type) {
     case "basic":
       return {
-        bg: "bg-blue-600",
-        border: "border-blue-200",
-        light: "bg-blue-50",
+        bg: "bg-teal-600",
+        border: "border-teal-200",
+        light: "bg-teal-50",
         label: "Basic Recall",
-        accent: "text-blue-700",
+        accent: "text-teal-700",
       };
     case "cloze":
       return {
@@ -228,7 +228,7 @@ export function FlashcardsFromQuestion({
           onClick={handleGenerate}
           disabled={loading}
           title="Generate AI Flashcards"
-          className="w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 disabled:bg-green-400 shadow-lg flex items-center justify-center transition-colors"
+          className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 disabled:opacity-60 shadow-lg shadow-teal-200/60 flex items-center justify-center transition-all"
         >
           {loading ? (
             <Loader2 className="w-6 h-6 text-white animate-spin" />
@@ -242,7 +242,7 @@ export function FlashcardsFromQuestion({
           size="sm"
           onClick={handleGenerate}
           disabled={loading}
-          className="gap-2 border-indigo-200 text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300"
+          className="gap-2 rounded-2xl border-teal-200 text-teal-700 hover:bg-teal-50 hover:border-teal-300"
         >
           {loading ? (
             <Loader2 className="w-4 h-4 animate-spin" />
@@ -257,7 +257,7 @@ export function FlashcardsFromQuestion({
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0">
           <DialogHeader className="px-6 pt-6 pb-4 border-b border-gray-100">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-sm shadow-teal-200/50">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
               <div>
@@ -277,8 +277,8 @@ export function FlashcardsFromQuestion({
                     variant="outline"
                     className={
                       isCorrect
-                        ? "border-green-300 text-green-700 bg-green-50"
-                        : "border-red-300 text-red-700 bg-red-50"
+                        ? "border-emerald-200 text-emerald-700 bg-emerald-50"
+                        : "border-rose-200 text-rose-700 bg-rose-50"
                     }
                   >
                     {isCorrect ? "Answered correctly" : "Missed this one"}
@@ -291,8 +291,8 @@ export function FlashcardsFromQuestion({
           <div className="p-6 space-y-6">
             {loading && (
               <div className="flex flex-col items-center justify-center py-16 gap-4">
-                <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
-                  <Loader2 className="w-6 h-6 text-indigo-600 animate-spin" />
+                <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                  <Loader2 className="w-6 h-6 text-teal-600 animate-spin" />
                 </div>
                 <div className="text-center">
                   <p className="font-medium text-gray-800">Generating personalised flashcards…</p>
@@ -307,7 +307,7 @@ export function FlashcardsFromQuestion({
               <>
                 {/* Personalisation focus banner */}
                 {flashcardSet.personalisation_focus && (
-                  <div className="bg-indigo-50 border border-indigo-200 rounded-lg px-4 py-3 text-sm text-indigo-800">
+                  <div className="bg-teal-50/70 border border-teal-100 rounded-2xl px-4 py-3 text-sm text-teal-800">
                     <span className="font-medium">Focus: </span>
                     {flashcardSet.personalisation_focus}
                   </div>
@@ -324,7 +324,7 @@ export function FlashcardsFromQuestion({
                             key={i}
                             onClick={() => { setFlipped(false); setCurrentIndex(i); }}
                             className={`w-2 h-2 rounded-full transition-colors ${
-                              i === currentIndex ? "bg-indigo-600" : "bg-gray-200 hover:bg-gray-300"
+                              i === currentIndex ? "bg-teal-600" : "bg-slate-200 hover:bg-slate-300"
                             }`}
                           />
                         ))}
@@ -443,12 +443,12 @@ export function FlashcardsFromQuestion({
 
                 {/* High-yield summary */}
                 {flashcardSet.high_yield_summary && (
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="bg-teal-50/70 border border-teal-100 rounded-2xl p-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <Target className="w-4 h-4 text-blue-600" />
-                      <p className="text-sm font-semibold text-blue-900">High-Yield Summary</p>
+                      <Target className="w-4 h-4 text-teal-600" />
+                      <p className="text-sm font-semibold text-teal-900">High-Yield Summary</p>
                     </div>
-                    <p className="text-sm text-blue-800 leading-relaxed">
+                    <p className="text-sm text-teal-800 leading-relaxed">
                       {flashcardSet.high_yield_summary}
                     </p>
                   </div>
@@ -456,15 +456,15 @@ export function FlashcardsFromQuestion({
 
                 {/* Exam traps */}
                 {flashcardSet.common_exam_traps && flashcardSet.common_exam_traps.length > 0 && (
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <div className="bg-rose-50/70 border border-rose-100 rounded-2xl p-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <AlertTriangle className="w-4 h-4 text-red-600" />
-                      <p className="text-sm font-semibold text-red-900">Common Exam Traps</p>
+                      <AlertTriangle className="w-4 h-4 text-rose-600" />
+                      <p className="text-sm font-semibold text-rose-900">Common Exam Traps</p>
                     </div>
                     <ul className="space-y-1">
                       {flashcardSet.common_exam_traps.map((trap, i) => (
-                        <li key={i} className="text-sm text-red-800 flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-1.5 flex-shrink-0" />
+                        <li key={i} className="text-sm text-rose-800 flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 flex-shrink-0" />
                           {trap}
                         </li>
                       ))}
@@ -475,15 +475,15 @@ export function FlashcardsFromQuestion({
                 <div className="grid grid-cols-2 gap-4">
                   {/* Learning objectives */}
                   {flashcardSet.learning_objectives && flashcardSet.learning_objectives.length > 0 && (
-                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
                       <div className="flex items-center gap-2 mb-2">
-                        <BookOpen className="w-4 h-4 text-gray-600" />
-                        <p className="text-xs font-semibold text-gray-700">Learning Objectives</p>
+                        <BookOpen className="w-4 h-4 text-slate-600" />
+                        <p className="text-xs font-semibold text-slate-700">Learning Objectives</p>
                       </div>
                       <ul className="space-y-1">
                         {flashcardSet.learning_objectives.map((obj, i) => (
-                          <li key={i} className="text-xs text-gray-700 flex items-start gap-2">
-                            <span className="font-bold text-gray-400 flex-shrink-0">{i + 1}.</span>
+                          <li key={i} className="text-xs text-slate-700 flex items-start gap-2">
+                            <span className="font-bold text-slate-400 flex-shrink-0">{i + 1}.</span>
                             {obj}
                           </li>
                         ))}
@@ -493,30 +493,30 @@ export function FlashcardsFromQuestion({
 
                   {/* Spaced repetition */}
                   {flashcardSet.spaced_repetition && (
-                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
                       <div className="flex items-center gap-2 mb-2">
-                        <Clock className="w-4 h-4 text-gray-600" />
-                        <p className="text-xs font-semibold text-gray-700">Spaced Repetition</p>
+                        <Clock className="w-4 h-4 text-teal-600" />
+                        <p className="text-xs font-semibold text-slate-700">Spaced Repetition</p>
                       </div>
                       <div className="space-y-2">
                         <div>
-                          <span className="text-xs text-gray-500">Priority: </span>
+                          <span className="text-xs text-slate-500">Priority: </span>
                           <Badge
                             variant="outline"
                             className={`text-xs capitalize ${
                               flashcardSet.spaced_repetition.priority === "high"
-                                ? "border-red-300 text-red-700"
+                                ? "border-rose-200 text-rose-700"
                                 : flashcardSet.spaced_repetition.priority === "medium"
                                 ? "border-amber-300 text-amber-700"
-                                : "border-green-300 text-green-700"
+                                : "border-emerald-200 text-emerald-700"
                             }`}
                           >
                             {flashcardSet.spaced_repetition.priority}
                           </Badge>
                         </div>
                         <div>
-                          <span className="text-xs text-gray-500">Review in: </span>
-                          <span className="text-xs font-medium text-gray-800">
+                          <span className="text-xs text-slate-500">Review in: </span>
+                          <span className="text-xs font-medium text-slate-800">
                             {flashcardSet.spaced_repetition.review_interval_days} day
                             {flashcardSet.spaced_repetition.review_interval_days !== 1 ? "s" : ""}
                           </span>

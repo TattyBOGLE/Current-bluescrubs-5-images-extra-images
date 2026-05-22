@@ -49,7 +49,7 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
               <div className="space-y-1.5">
                 <ExternalLink
                   href={primaryRef.url}
-                  className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
+                  className="text-sm font-medium text-teal-700 hover:text-teal-900 underline underline-offset-2"
                 >
                   {primaryRef.title}
                 </ExternalLink>
@@ -70,7 +70,7 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                 {visualSummaryUrl && (
                   <ExternalLink
                     href={visualSummaryUrl}
-                    className="text-xs text-blue-600 hover:text-blue-800 hover:underline mt-1"
+                    className="text-xs text-teal-600 hover:text-teal-800 hover:underline mt-1"
                   >
                     📄 Visual Summary PDF
                   </ExternalLink>

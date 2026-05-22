@@ -43,20 +43,20 @@ export class QuizErrorBoundary extends React.Component<Props, State> {
     if (!this.state.hasError) return this.props.children;
 
     return (
-      <div className="rounded-xl border border-red-200 bg-red-50 p-6 text-center my-4">
-        <AlertTriangle className="w-8 h-8 text-red-400 mx-auto mb-3" />
-        <h3 className="font-medium text-red-800 mb-1">
+      <div className="rounded-2xl border border-rose-200 bg-rose-50/70 p-6 text-center my-4">
+        <AlertTriangle className="w-8 h-8 text-rose-400 mx-auto mb-3" />
+        <h3 className="font-medium text-rose-800 mb-1">
           Something went wrong
           {this.props.context ? ` in ${this.props.context}` : ''}
         </h3>
-        <p className="text-sm text-red-600 mb-4">
+        <p className="text-sm text-rose-600 mb-4">
           This section couldn't load. Your progress is safe — you can continue or restart.
         </p>
         <div className="flex gap-3 justify-center">
           <Button
             size="sm"
             variant="outline"
-            className="border-red-300 text-red-700 hover:bg-red-100"
+            className="rounded-2xl border-rose-200 text-rose-700 hover:bg-rose-100"
             onClick={this.handleReset}
           >
             <RotateCcw className="w-3.5 h-3.5 mr-1.5" />
@@ -66,7 +66,7 @@ export class QuizErrorBoundary extends React.Component<Props, State> {
             <Button
               size="sm"
               variant="outline"
-              className="border-red-300 text-red-700 hover:bg-red-100"
+              className="rounded-2xl border-rose-200 text-rose-700 hover:bg-rose-100"
               onClick={this.props.onHome}
             >
               <Home className="w-3.5 h-3.5 mr-1.5" />

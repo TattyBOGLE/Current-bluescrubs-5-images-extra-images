@@ -17,7 +17,7 @@ type RefCard = {
 };
 
 const BADGE_STYLES: Record<string, string> = {
-  'NICE Guideline': 'bg-blue-50 text-blue-700 border-blue-200',
+  'NICE Guideline': 'bg-teal-50 text-teal-700 border-teal-200',
   'NICE CKS':       'bg-sky-50 text-sky-700 border-sky-200',
   'BNF':            'bg-indigo-50 text-indigo-700 border-indigo-200',
   'ESC':            'bg-emerald-50 text-emerald-700 border-emerald-200',
@@ -161,17 +161,17 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
   const displayed = deduped.slice(0, 4);
 
   return (
-    <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+    <div className="rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
       <button
         onClick={() => setOpen(prev => !prev)}
-        className="w-full bg-gradient-to-r from-teal-700 to-cyan-700 hover:from-teal-600 hover:to-cyan-600 transition-colors px-4 py-2.5 flex items-center justify-between"
+        className="w-full bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 transition-colors px-4 py-2.5 flex items-center justify-between"
         aria-expanded={open}
       >
         <span className="text-white font-semibold text-sm flex items-center gap-2">
-          <BookOpen className="w-4 h-4 text-cyan-200" />
+          <BookOpen className="w-4 h-4 text-teal-100" />
           Reference Material
         </span>
-        <ChevronDown className={`w-4 h-4 text-teal-200 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-4 h-4 text-teal-100 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
       </button>
 
       {open && (
@@ -179,8 +179,8 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
           {displayed.map((ref, idx) => (
             <div
               key={idx}
-              className={`bg-white rounded-lg border p-3 ${
-                ref.primary ? 'border-green-400 ring-1 ring-green-100' : 'border-slate-200'
+              className={`bg-white rounded-2xl border p-3 ${
+                ref.primary ? 'border-emerald-300 ring-1 ring-emerald-100' : 'border-slate-200'
               }`}
             >
               <div className="flex flex-wrap items-center gap-1.5 mb-1">
@@ -195,7 +195,7 @@ export function ReferenceMaterialPanel({ question }: ReferenceMaterialPanelProps
               </div>
               <ExternalLink
                 href={ref.url}
-                className="text-sm font-medium text-blue-700 hover:text-blue-900 underline underline-offset-2"
+                className="text-sm font-medium text-teal-700 hover:text-teal-900 underline underline-offset-2"
               >
                 {ref.title}
               </ExternalLink>
