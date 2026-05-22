@@ -122,17 +122,17 @@ export function QuickStartChips() {
           </div>
         </section>
 
-        {/* Configuration Chips */}
-        <section className="px-6 space-y-6 mt-2">
+        {/* Configuration Chips — single-line horizontal scrollers */}
+        <section className="space-y-5 mt-2">
           {/* Topic */}
           <div>
-            <h2 className="text-sm font-semibold text-slate-800 mb-3">Topic</h2>
-            <div className="flex flex-wrap gap-2">
+            <h2 className="text-sm font-semibold text-slate-800 mb-3 px-6">Topic</h2>
+            <div className="flex overflow-x-auto px-6 gap-2 no-scrollbar snap-x">
               {TOPICS.map(t => (
                 <button
                   key={t}
                   onClick={() => setTopic(t)}
-                  className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all ${
+                  className={`snap-start shrink-0 px-4 py-2.5 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                     topic === t 
                       ? 'bg-teal-600 text-white shadow-md shadow-teal-200' 
                       : 'bg-white text-slate-600 border border-slate-200 hover:border-teal-300 hover:bg-teal-50'
@@ -146,13 +146,13 @@ export function QuickStartChips() {
 
           {/* Difficulty */}
           <div>
-            <h2 className="text-sm font-semibold text-slate-800 mb-3">Difficulty</h2>
-            <div className="flex flex-wrap gap-2">
+            <h2 className="text-sm font-semibold text-slate-800 mb-3 px-6">Difficulty</h2>
+            <div className="flex overflow-x-auto px-6 gap-2 no-scrollbar snap-x">
               {DIFFICULTIES.map(d => (
                 <button
                   key={d}
                   onClick={() => setDifficulty(d)}
-                  className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all ${
+                  className={`snap-start shrink-0 px-4 py-2.5 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                     difficulty === d 
                       ? 'bg-teal-600 text-white shadow-md shadow-teal-200' 
                       : 'bg-white text-slate-600 border border-slate-200 hover:border-teal-300 hover:bg-teal-50'
@@ -166,13 +166,13 @@ export function QuickStartChips() {
 
           {/* Mode */}
           <div>
-            <h2 className="text-sm font-semibold text-slate-800 mb-3">Mode</h2>
-            <div className="flex flex-wrap gap-2">
+            <h2 className="text-sm font-semibold text-slate-800 mb-3 px-6">Mode</h2>
+            <div className="flex overflow-x-auto px-6 gap-2 no-scrollbar snap-x">
               {MODES.map(m => (
                 <button
                   key={m}
                   onClick={() => setMode(m)}
-                  className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all ${
+                  className={`snap-start shrink-0 px-4 py-2.5 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                     mode === m 
                       ? 'bg-teal-600 text-white shadow-md shadow-teal-200' 
                       : 'bg-white text-slate-600 border border-slate-200 hover:border-teal-300 hover:bg-teal-50'
@@ -187,13 +187,13 @@ export function QuickStartChips() {
           {/* Questions */}
           {mode !== 'Unlimited' && (
             <div>
-              <h2 className="text-sm font-semibold text-slate-800 mb-3">Questions</h2>
-              <div className="flex flex-wrap gap-2">
+              <h2 className="text-sm font-semibold text-slate-800 mb-3 px-6">Questions</h2>
+              <div className="flex overflow-x-auto px-6 gap-2 no-scrollbar snap-x">
                 {QUESTIONS.map(q => (
                   <button
                     key={q}
                     onClick={() => setQuestions(q)}
-                    className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                    className={`snap-start shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                       questions === q 
                         ? 'bg-teal-600 text-white shadow-md shadow-teal-200' 
                         : 'bg-white text-slate-600 border border-slate-200 hover:border-teal-300 hover:bg-teal-50'
