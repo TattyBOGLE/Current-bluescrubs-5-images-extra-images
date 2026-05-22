@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
-import { MessageCircle, BookOpen, Target, Lightbulb, X, Upload, Mic, MicOff, FileText, Headphones, Zap } from 'lucide-react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { apiRequest } from '@/lib/queryClient';
+import {
+  MessageCircle, BookOpen, Target, Lightbulb, X, Upload, Mic, MicOff,
+  FileText, Headphones, Zap, Sparkles, Loader2, ArrowRight,
+} from 'lucide-react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 interface AITutorProps {
   currentQuestion?: any;
@@ -14,28 +15,20 @@ interface AITutorProps {
   isVisible: boolean;
 }
 
-interface StudySession {
-  id: string;
-  title: string;
-  progress: number;
-  flashcards: number;
-  questions: number;
-  timeSpent: number;
-}
+type TabId = 'help' | 'study' | 'concepts' | 'upload' | 'voice';
 
-interface TutorResponse {
-  explanation: string;
-  studyTips: string[];
-  relatedConcepts: string[];
-  mnemonics: string[];
-  recommendedTopics: string[];
-}
+const TABS: { id: TabId; label: string; Icon: typeof MessageCircle }[] = [
+  { id: 'help',     label: 'Help',       Icon: MessageCircle },
+  { id: 'study',    label: 'Study Plan', Icon: BookOpen },
+  { id: 'concepts', label: 'Concepts',   Icon: Target },
+  { id: 'upload',   label: 'Content',    Icon: Upload },
+  { id: 'voice',    label: 'Voice',      Icon: Mic },
+];
 
 export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }: AITutorProps) {
   const [userQuery, setUserQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'help' | 'study' | 'concepts' | 'upload' | 'voice'>('help');
+  const [activeTab, setActiveTab] = useState<TabId>('help');
   const [uploadedContent, setUploadedContent] = useState('');
-  const [voiceMode, setVoiceMode] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const queryClient = useQueryClient();
 
@@ -43,48 +36,37 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
     mutationFn: async (data: { query: string; context?: any }) => {
       const response = await fetch('/api/ai-tutor', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       });
-      
-      if (!response.ok) {
-        throw new Error('Failed to get tutor response');
-      }
-      
+      if (!response.ok) throw new Error('Failed to get tutor response');
       return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['/api/tutor-history'] });
-    }
+    },
   });
 
   const handleAskTutor = () => {
     if (!userQuery.trim()) return;
-    
     tutorMutation.mutate({
       query: userQuery,
-      context: {
-        question: currentQuestion,
-        performance: userPerformance
-      }
+      context: { question: currentQuestion, performance: userPerformance },
     });
   };
 
   const getQuestionHelp = () => {
     if (!currentQuestion) return;
-    
     tutorMutation.mutate({
       query: `Please explain this medical question and provide study guidance: ${currentQuestion.scenario}`,
-      context: { question: currentQuestion }
+      context: { question: currentQuestion },
     });
   };
 
   const getStudyPlan = () => {
     tutorMutation.mutate({
       query: 'Create a personalized study plan based on my performance',
-      context: { performance: userPerformance }
+      context: { performance: userPerformance },
     });
   };
 
@@ -92,7 +74,7 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
     const content = uploadedContent || currentQuestion?.explanation || 'Current medical topic';
     tutorMutation.mutate({
       query: `Generate spaced-repetition flashcards from this content: ${content}`,
-      context: { type: 'flashcard_generation', specialty: currentQuestion?.category || 'general' }
+      context: { type: 'flashcard_generation', specialty: currentQuestion?.category || 'general' },
     });
   };
 
@@ -100,291 +82,272 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
     const content = uploadedContent || currentQuestion?.explanation || 'Current medical topic';
     tutorMutation.mutate({
       query: `Create an AI-narrated podcast script from this content: ${content}`,
-      context: { type: 'podcast_generation', audioFormat: true }
+      context: { type: 'podcast_generation', audioFormat: true },
     });
   };
 
   const startVoiceInteraction = () => {
-    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
-      const recognition = new SpeechRecognition();
-      
-      recognition.continuous = false;
-      recognition.interimResults = false;
-      recognition.lang = 'en-US';
-      
-      recognition.onstart = () => setIsListening(true);
-      recognition.onend = () => setIsListening(false);
-      
-      recognition.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setUserQuery(transcript);
-        handleAskTutor();
-      };
-      
-      recognition.start();
-    } else {
+    const SR = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
+    if (!SR) {
       alert('Voice recognition not supported in this browser');
+      return;
     }
+    const recognition = new SR();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+    recognition.onstart = () => setIsListening(true);
+    recognition.onend = () => setIsListening(false);
+    recognition.onresult = (event: any) => {
+      const transcript = event.results[0][0].transcript;
+      setUserQuery(transcript);
+      handleAskTutor();
+    };
+    recognition.start();
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <div className="flex items-center gap-2">
-            <MessageCircle className="h-5 w-5 text-blue-600" />
-            <CardTitle>AI Medical Tutor</CardTitle>
-            <Badge variant="secondary">PLAB 1 Assistant</Badge>
+    <div
+      className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-2xl max-h-[92vh] bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header — teal gradient */}
+        <div className="bg-gradient-to-r from-teal-500 to-teal-600 px-5 py-4 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+            <Sparkles className="w-5 h-5 text-white" />
           </div>
-          <Button variant="ghost" size="sm" onClick={onClose}>
-            <X className="h-4 w-4" />
-          </Button>
-        </CardHeader>
-        
-        <CardContent className="space-y-6">
-          {/* Tab Navigation */}
-          <div className="flex gap-2 border-b overflow-x-auto">
-            <Button
-              variant={activeTab === 'help' ? 'default' : 'ghost'}
-              size="sm"
-              onClick={() => setActiveTab('help')}
-            >
-              <MessageCircle className="w-4 h-4 mr-1" />
-              Help
-            </Button>
-            <Button
-              variant={activeTab === 'study' ? 'default' : 'ghost'}
-              size="sm"
-              onClick={() => setActiveTab('study')}
-            >
-              <BookOpen className="w-4 h-4 mr-1" />
-              Study Plan
-            </Button>
-            <Button
-              variant={activeTab === 'concepts' ? 'default' : 'ghost'}
-              size="sm"
-              onClick={() => setActiveTab('concepts')}
-            >
-              <Target className="w-4 h-4 mr-1" />
-              Concepts
-            </Button>
-            <Button
-              variant={activeTab === 'upload' ? 'default' : 'ghost'}
-              size="sm"
-              onClick={() => setActiveTab('upload')}
-            >
-              <Upload className="w-4 h-4 mr-1" />
-              Content
-            </Button>
-            <Button
-              variant={activeTab === 'voice' ? 'default' : 'ghost'}
-              size="sm"
-              onClick={() => setActiveTab('voice')}
-            >
-              <Mic className="w-4 h-4 mr-1" />
-              Voice
-            </Button>
+          <div className="min-w-0 flex-1">
+            <h2 className="text-base sm:text-lg font-bold text-white leading-tight">AI Medical Tutor</h2>
+            <p className="text-[11px] sm:text-xs text-teal-50">PLAB 1 Assistant</p>
           </div>
+          <Badge className="bg-white/20 text-white border-transparent hover:bg-white/25 text-[10px] font-semibold hidden sm:inline-flex">
+            Beta
+          </Badge>
+          <button
+            onClick={onClose}
+            className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center text-white transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
 
-          {/* Content Upload Tab */}
-          {activeTab === 'upload' && (
-            <div className="space-y-4">
-              <div className="text-center p-6 border-2 border-dashed border-gray-300 rounded-lg">
-                <Upload className="w-12 h-12 mx-auto mb-4 text-gray-400" />
-                <h3 className="text-lg font-semibold mb-2">Upload Medical Content</h3>
-                <p className="text-gray-600 mb-4">Upload lectures, articles, or medical documents to generate study materials</p>
-                <Textarea
-                  placeholder="Paste medical content here (lectures, articles, case studies)..."
-                  value={uploadedContent}
-                  onChange={(e) => setUploadedContent(e.target.value)}
-                  className="min-h-32 mb-4"
-                />
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                  <Button onClick={generateFlashcards} disabled={!uploadedContent || tutorMutation.isPending}>
-                    <Zap className="w-4 h-4 mr-1" />
-                    Generate Flashcards
-                  </Button>
-                  <Button onClick={generatePodcast} disabled={!uploadedContent || tutorMutation.isPending}>
-                    <Headphones className="w-4 h-4 mr-1" />
-                    Create Podcast
-                  </Button>
-                  <Button onClick={() => tutorMutation.mutate({
-                    query: `Summarize this content: ${uploadedContent}`,
-                    context: { type: 'content_summary' }
-                  })} disabled={!uploadedContent || tutorMutation.isPending}>
-                    <FileText className="w-4 h-4 mr-1" />
-                    AI Summary
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Voice Interaction Tab */}
-          {activeTab === 'voice' && (
-            <div className="space-y-4">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg">
-                <Mic className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-                <h3 className="text-lg font-semibold mb-2">Voice OSCE Simulator</h3>
-                <p className="text-gray-600 mb-4">Practice clinical scenarios with voice interaction</p>
-                <Button
-                  onClick={startVoiceInteraction}
-                  disabled={isListening}
-                  className={`w-full ${isListening ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-600 hover:bg-blue-700'}`}
+        {/* Tabs — horizontal scroll pills */}
+        <div className="border-b border-slate-100 bg-white">
+          <div className="flex gap-1.5 overflow-x-auto px-4 py-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {TABS.map(({ id, label, Icon }) => {
+              const active = activeTab === id;
+              return (
+                <button
+                  key={id}
+                  onClick={() => setActiveTab(id)}
+                  className={`flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
+                    active
+                      ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white border-transparent shadow-sm shadow-teal-200/50'
+                      : 'bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-700'
+                  }`}
                 >
-                  {isListening ? (
-                    <>
-                      <MicOff className="w-4 h-4 mr-2" />
-                      Listening... Click to stop
-                    </>
-                  ) : (
-                    <>
-                      <Mic className="w-4 h-4 mr-2" />
-                      Start Voice Interaction
-                    </>
-                  )}
-                </Button>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Voice Query Result:</label>
-                <Textarea
-                  placeholder="Your voice will be transcribed here..."
-                  value={userQuery}
-                  onChange={(e) => setUserQuery(e.target.value)}
-                  className="min-h-20"
-                />
-              </div>
-            </div>
-          )}
+                  <Icon className="w-3.5 h-3.5" />
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-          {/* Question Help Tab */}
+        {/* Body */}
+        <div className="flex-1 overflow-y-auto p-5 space-y-5 bg-slate-50">
+          {/* Help */}
           {activeTab === 'help' && (
             <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Button
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <ActionCard
+                  Icon={Lightbulb}
+                  label="Explain Current Question"
+                  primary
                   onClick={getQuestionHelp}
                   disabled={!currentQuestion || tutorMutation.isPending}
-                  className="h-20 flex flex-col items-center justify-center"
-                >
-                  <Lightbulb className="h-6 w-6 mb-2" />
-                  Explain Current Question
-                </Button>
-                <Button
-                  variant="outline"
+                />
+                <ActionCard
+                  Icon={BookOpen}
+                  label="Key Learning Points"
                   onClick={() => tutorMutation.mutate({
                     query: 'What are the key learning points for this topic?',
-                    context: { question: currentQuestion }
+                    context: { question: currentQuestion },
                   })}
                   disabled={!currentQuestion || tutorMutation.isPending}
-                  className="h-20 flex flex-col items-center justify-center"
-                >
-                  <BookOpen className="h-6 w-6 mb-2" />
-                  Key Learning Points
-                </Button>
+                />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Ask the AI Tutor:</label>
+              <div className="bg-white rounded-2xl border border-slate-200 p-4 space-y-3">
+                <label className="text-xs font-semibold text-slate-700 uppercase tracking-wider">
+                  Ask the AI Tutor
+                </label>
                 <Textarea
-                  placeholder="Ask me anything about medical concepts, exam strategies, or study tips..."
+                  placeholder="Ask anything about medical concepts, exam strategies, or study tips…"
                   value={userQuery}
                   onChange={(e) => setUserQuery(e.target.value)}
-                  className="min-h-20"
+                  className="min-h-24 rounded-2xl border-slate-200 bg-slate-50 resize-none"
                 />
                 <Button
                   onClick={handleAskTutor}
                   disabled={!userQuery.trim() || tutorMutation.isPending}
-                  className="w-full"
+                  className="w-full h-11 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold shadow-md shadow-teal-200/50 border-none disabled:opacity-50"
                 >
-                  {tutorMutation.isPending ? 'Thinking...' : 'Ask Tutor'}
+                  {tutorMutation.isPending ? (
+                    <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Thinking…</>
+                  ) : (
+                    <>Ask Tutor<ArrowRight className="w-4 h-4 ml-1.5" /></>
+                  )}
                 </Button>
               </div>
             </div>
           )}
 
-          {/* Study Plan Tab */}
+          {/* Study Plan */}
           {activeTab === 'study' && (
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Button
-                  onClick={getStudyPlan}
-                  disabled={tutorMutation.isPending}
-                  className="h-20 flex flex-col items-center justify-center"
-                >
-                  <Target className="h-6 w-6 mb-2" />
-                  Personalized Study Plan
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={() => tutorMutation.mutate({
-                    query: 'What are my weak areas and how can I improve?',
-                    context: { performance: userPerformance }
-                  })}
-                  disabled={tutorMutation.isPending}
-                  className="h-20 flex flex-col items-center justify-center"
-                >
-                  <BookOpen className="h-6 w-6 mb-2" />
-                  Weak Areas Analysis
-                </Button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <ActionCard
+                Icon={Target}
+                label="Personalised Study Plan"
+                primary
+                onClick={getStudyPlan}
+                disabled={tutorMutation.isPending}
+              />
+              <ActionCard
+                Icon={BookOpen}
+                label="Weak Areas Analysis"
+                onClick={() => tutorMutation.mutate({
+                  query: 'What are my weak areas and how can I improve?',
+                  context: { performance: userPerformance },
+                })}
+                disabled={tutorMutation.isPending}
+              />
+            </div>
+          )}
+
+          {/* Concepts */}
+          {activeTab === 'concepts' && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <ActionCard
+                Icon={BookOpen}
+                label="Clinical Pathophysiology"
+                primary
+                onClick={() => tutorMutation.mutate({
+                  query: 'Explain the pathophysiology and clinical approach for this condition',
+                  context: { question: currentQuestion },
+                })}
+                disabled={!currentQuestion || tutorMutation.isPending}
+              />
+              <ActionCard
+                Icon={Lightbulb}
+                label="Memory Aids"
+                onClick={() => tutorMutation.mutate({
+                  query: 'Provide memory aids and mnemonics for this topic',
+                  context: { question: currentQuestion },
+                })}
+                disabled={!currentQuestion || tutorMutation.isPending}
+              />
+            </div>
+          )}
+
+          {/* Upload */}
+          {activeTab === 'upload' && (
+            <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-5 text-center space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center mx-auto">
+                <Upload className="w-6 h-6 text-teal-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900">Upload Medical Content</h3>
+                <p className="text-sm text-slate-500 mt-1">
+                  Paste lectures, articles, or case studies to generate study materials.
+                </p>
+              </div>
+              <Textarea
+                placeholder="Paste content here…"
+                value={uploadedContent}
+                onChange={(e) => setUploadedContent(e.target.value)}
+                className="min-h-28 rounded-2xl border-slate-200 bg-slate-50 resize-none text-left"
+              />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <UploadAction Icon={Zap}        label="Flashcards" onClick={generateFlashcards} disabled={!uploadedContent || tutorMutation.isPending} />
+                <UploadAction Icon={Headphones} label="Podcast"    onClick={generatePodcast}    disabled={!uploadedContent || tutorMutation.isPending} />
+                <UploadAction Icon={FileText}   label="Summary"
+                  onClick={() => tutorMutation.mutate({ query: `Summarize this content: ${uploadedContent}`, context: { type: 'content_summary' } })}
+                  disabled={!uploadedContent || tutorMutation.isPending}
+                />
               </div>
             </div>
           )}
 
-          {/* Concepts Tab */}
-          {activeTab === 'concepts' && (
+          {/* Voice */}
+          {activeTab === 'voice' && (
             <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-2xl border border-slate-200 p-5 text-center space-y-4">
+                <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto">
+                  <Mic className="w-6 h-6 text-teal-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900">Voice OSCE Simulator</h3>
+                  <p className="text-sm text-slate-500 mt-1">Practice clinical scenarios with voice.</p>
+                </div>
                 <Button
-                  onClick={() => tutorMutation.mutate({
-                    query: 'Explain the pathophysiology and clinical approach for this condition',
-                    context: { question: currentQuestion }
-                  })}
-                  disabled={!currentQuestion || tutorMutation.isPending}
-                  className="h-20 flex flex-col items-center justify-center"
+                  onClick={startVoiceInteraction}
+                  disabled={isListening}
+                  className={`w-full h-11 rounded-2xl text-white font-semibold border-none shadow-md ${
+                    isListening
+                      ? 'bg-gradient-to-r from-rose-500 to-rose-600 shadow-rose-200/50'
+                      : 'bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 shadow-teal-200/50'
+                  }`}
                 >
-                  <BookOpen className="h-6 w-6 mb-2" />
-                  Clinical Pathophysiology
+                  {isListening ? (
+                    <><MicOff className="w-4 h-4 mr-2" />Listening… click to stop</>
+                  ) : (
+                    <><Mic className="w-4 h-4 mr-2" />Start Voice Interaction</>
+                  )}
                 </Button>
-                <Button
-                  variant="outline"
-                  onClick={() => tutorMutation.mutate({
-                    query: 'Provide memory aids and mnemonics for this topic',
-                    context: { question: currentQuestion }
-                  })}
-                  disabled={!currentQuestion || tutorMutation.isPending}
-                  className="h-20 flex flex-col items-center justify-center"
-                >
-                  <Lightbulb className="h-6 w-6 mb-2" />
-                  Memory Aids
-                </Button>
+              </div>
+              <div className="bg-white rounded-2xl border border-slate-200 p-4 space-y-2">
+                <label className="text-xs font-semibold text-slate-700 uppercase tracking-wider">
+                  Transcript
+                </label>
+                <Textarea
+                  placeholder="Your voice will be transcribed here…"
+                  value={userQuery}
+                  onChange={(e) => setUserQuery(e.target.value)}
+                  className="min-h-20 rounded-2xl border-slate-200 bg-slate-50 resize-none"
+                />
               </div>
             </div>
           )}
 
           {/* Tutor Response */}
           {tutorMutation.data && (
-            <Card className="bg-blue-50 dark:bg-blue-950/20">
-              <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <MessageCircle className="h-5 w-5 text-blue-600" />
-                  AI Tutor Response
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="prose dark:prose-invert max-w-none">
-                  <p className="whitespace-pre-wrap">{tutorMutation.data.response}</p>
-                </div>
-                
+            <div className="bg-white rounded-2xl border border-teal-100 overflow-hidden">
+              <div className="bg-teal-50/70 px-4 py-3 flex items-center gap-2 border-b border-teal-100">
+                <Sparkles className="w-4 h-4 text-teal-600" />
+                <p className="text-sm font-semibold text-teal-900">AI Tutor Response</p>
+              </div>
+              <div className="p-4 space-y-4">
+                <p className="text-sm text-slate-700 whitespace-pre-wrap leading-relaxed">
+                  {tutorMutation.data.response}
+                </p>
+
                 {tutorMutation.data.studyTips?.length > 0 && (
                   <div>
-                    <h4 className="font-semibold mb-2">Study Tips:</h4>
-                    <ul className="list-disc list-inside space-y-1">
-                      {tutorMutation.data.studyTips.map((tip: string, index: number) => (
-                        <li key={index} className="text-sm">{tip}</li>
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Study Tips</h4>
+                    <ul className="space-y-1.5">
+                      {tutorMutation.data.studyTips.map((tip: string, i: number) => (
+                        <li key={i} className="text-sm text-slate-700 flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-1.5 flex-shrink-0" />
+                          {tip}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -392,10 +355,12 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
 
                 {tutorMutation.data.mnemonics?.length > 0 && (
                   <div>
-                    <h4 className="font-semibold mb-2">Memory Aids:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {tutorMutation.data.mnemonics.map((mnemonic: string, index: number) => (
-                        <Badge key={index} variant="secondary">{mnemonic}</Badge>
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Memory Aids</h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {tutorMutation.data.mnemonics.map((m: string, i: number) => (
+                        <Badge key={i} className="bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100">
+                          {m}
+                        </Badge>
                       ))}
                     </div>
                   </div>
@@ -403,29 +368,72 @@ export function AITutor({ currentQuestion, userPerformance, onClose, isVisible }
 
                 {tutorMutation.data.relatedConcepts?.length > 0 && (
                   <div>
-                    <h4 className="font-semibold mb-2">Related Concepts:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {tutorMutation.data.relatedConcepts.map((concept: string, index: number) => (
-                        <Badge key={index} variant="outline">{concept}</Badge>
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Related Concepts</h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {tutorMutation.data.relatedConcepts.map((c: string, i: number) => (
+                        <Badge key={i} variant="outline" className="border-slate-200 text-slate-600">
+                          {c}
+                        </Badge>
                       ))}
                     </div>
                   </div>
                 )}
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           )}
 
           {tutorMutation.error && (
-            <Card className="bg-red-50 dark:bg-red-950/20 border-red-200">
-              <CardContent className="pt-6">
-                <p className="text-red-600 dark:text-red-400">
-                  Sorry, I'm having trouble responding right now. Please try again.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="rounded-2xl border border-rose-200 bg-rose-50/70 p-4 text-sm text-rose-700">
+              Sorry, I'm having trouble responding right now. Please try again.
+            </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
+  );
+}
+
+function ActionCard({
+  Icon, label, onClick, disabled, primary,
+}: {
+  Icon: typeof MessageCircle;
+  label: string;
+  onClick: () => void;
+  disabled?: boolean;
+  primary?: boolean;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`group h-24 rounded-2xl border flex flex-col items-center justify-center gap-2 px-3 text-center transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
+        primary
+          ? 'bg-gradient-to-br from-teal-500 to-teal-600 border-transparent text-white shadow-md shadow-teal-200/50 hover:shadow-lg hover:shadow-teal-200/60'
+          : 'bg-white border-slate-200 text-slate-700 hover:border-teal-300 hover:bg-teal-50/40'
+      }`}
+    >
+      <Icon className={`w-5 h-5 ${primary ? 'text-white' : 'text-teal-600'}`} />
+      <span className="text-sm font-semibold leading-tight">{label}</span>
+    </button>
+  );
+}
+
+function UploadAction({
+  Icon, label, onClick, disabled,
+}: {
+  Icon: typeof Zap;
+  label: string;
+  onClick: () => void;
+  disabled?: boolean;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className="h-10 rounded-2xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-teal-300 hover:text-teal-700 hover:bg-teal-50/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-1.5"
+    >
+      <Icon className="w-4 h-4" />
+      {label}
+    </button>
   );
 }
