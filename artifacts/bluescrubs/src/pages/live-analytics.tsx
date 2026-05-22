@@ -29,7 +29,7 @@ export default function LiveAnalytics() {
       <div className="min-h-screen bg-gray-50 p-4 pb-24">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-center h-64">
-            <div className="animate-spin w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full"></div>
+            <div className="animate-spin w-8 h-8 border-4 border-teal-200 border-t-teal-600 rounded-full"></div>
           </div>
         </div>
       </div>

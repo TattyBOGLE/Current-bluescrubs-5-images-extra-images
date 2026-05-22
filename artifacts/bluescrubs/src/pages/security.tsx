@@ -99,7 +99,7 @@ export default function Security() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-700">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -229,7 +229,7 @@ export default function Security() {
 
         {/* Security Contact */}
         <div className="text-center">
-          <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200 max-w-2xl mx-auto">
+          <Card className="bg-gradient-to-r from-slate-50 to-teal-700 border-slate-200 max-w-2xl mx-auto">
             <CardContent className="p-8">
               <Smartphone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-blue-900 mb-4">Report Security Issues</h3>

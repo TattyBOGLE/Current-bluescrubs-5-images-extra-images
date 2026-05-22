@@ -24,9 +24,9 @@ import { Link } from "wouter";
 
 export default function HowToPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <div className="bg-gradient-to-r from-teal-500 to-teal-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-6xl font-bold mb-4">
             How to Use BlueScrubsPrep
@@ -51,7 +51,7 @@ export default function HowToPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center border-2 hover:border-blue-300 transition-colors">
+            <Card className="text-center border-2 hover:border-teal-300 transition-colors">
               <CardHeader>
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="w-8 h-8 text-blue-600" />
@@ -79,7 +79,7 @@ export default function HowToPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Answer questions, review explanations, and use our AI tutor for personalised guidance
+                  Answer questions, review explanations, and use our smart tutor for personalised guidance
                 </p>
                 <Link href="/plab2-osce">
                   <Button variant="outline" className="w-full">
@@ -123,7 +123,7 @@ export default function HowToPage() {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* PLAB 1 Guide */}
-            <Card className="border-2 border-blue-200 bg-blue-50/50">
+            <Card className="border-2 border-teal-200 bg-teal-50">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -131,7 +131,7 @@ export default function HowToPage() {
                   </div>
                   <div>
                     <CardTitle className="text-2xl text-blue-900">PLAB 1 MCQ Practice</CardTitle>
-                    <CardDescription className="text-blue-700">
+                    <CardDescription className="text-teal-700">
                       5,528 authentic medical questions across 11 specialties
                     </CardDescription>
                   </div>
@@ -340,7 +340,7 @@ export default function HowToPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+            <Card className="bg-gradient-to-br from-slate-50 to-teal-50 border-teal-200">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Lightbulb className="w-6 h-6 text-blue-600" />
@@ -367,7 +367,7 @@ export default function HowToPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+            <Card className="bg-gradient-to-br from-teal-500 to-teal-700 border-purple-200">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Stethoscope className="w-6 h-6 text-purple-600" />
@@ -423,7 +423,7 @@ export default function HowToPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Ask specific clinical questions, request explanations for concepts you don't understand, and use it to clarify UK medical guidelines. The AI tutor provides evidence-based responses with proper citations to support your learning.
+                  Ask specific clinical questions, request explanations for concepts you don't understand, and use it to clarify UK medical guidelines. The tutor provides evidence-based responses with proper citations to support your learning.
                 </p>
               </CardContent>
             </Card>
@@ -445,7 +445,7 @@ export default function HowToPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Our AI system automatically adjusts question difficulty based on your performance, identifies knowledge gaps in real-time, predicts exam success probability, and generates targeted questions for your weak areas. It learns from every interaction to personalise your study experience.
+                  Our adaptive system automatically adjusts question difficulty based on your performance, identifies knowledge gaps in real-time, predicts exam success probability, and generates targeted questions for your weak areas. It learns from every interaction to personalise your study experience.
                 </p>
               </CardContent>
             </Card>
@@ -453,7 +453,7 @@ export default function HowToPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-12">
+        <section className="text-center bg-gradient-to-r from-teal-500 to-teal-700 text-white rounded-2xl p-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your PLAB Journey?</h2>
           <p className="text-xl mb-8 opacity-90">
             Join thousands of medical graduates who have successfully prepared with BlueScrubsPrep

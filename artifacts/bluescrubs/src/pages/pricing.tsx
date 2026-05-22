@@ -89,7 +89,7 @@ export default function Pricing() {
       annualPrice: 390,
       originalAnnualPrice: 468,
       icon: Star,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-teal-500 to-teal-600',
       features: [
         '5,000 smart-generated PLAB questions',
         'Basic study recommendations',
@@ -101,19 +101,19 @@ export default function Pricing() {
         'Offline study mode'
       ],
       limitations: [
-        'Limited AI systems (5 basic)',
+        'Limited smart systems (5 basic)',
         'No VR OSCE training',
         'Standard question difficulty'
       ]
     },
     {
       name: 'Professional',
-      description: 'Complete PLAB preparation with advanced AI',
+      description: 'Complete PLAB preparation with advanced smart tools',
       monthlyPrice: 69,
       annualPrice: 590,
       originalAnnualPrice: 828,
       icon: Zap,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-teal-500 to-teal-700',
       popular: true,
       features: [
         'Everything in Foundation',
@@ -140,7 +140,7 @@ export default function Pricing() {
       color: 'from-yellow-500 to-orange-600',
       features: [
         'Everything in Professional',
-        'All 40+ AI systems',
+        'All 40+ smart systems',
         'Complete VR OSCE suite (50+ stations)',
         'All 35 languages',
         'Virtual patient actors',
@@ -226,7 +226,7 @@ export default function Pricing() {
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 font-semibold">
+                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-500 to-teal-700 text-white text-center py-2 font-semibold">
                     Most Popular Choice
                   </div>
                 )}
@@ -307,7 +307,7 @@ export default function Pricing() {
         </div>
 
         {/* Enterprise Section */}
-        <Card className="mb-16 bg-gradient-to-r from-gray-50 to-blue-50 border-2 border-gray-200">
+        <Card className="mb-16 bg-gradient-to-r from-slate-50 to-teal-50 border-2 border-gray-200">
           <CardHeader className="text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg flex items-center justify-center mx-auto mb-4">
               <Building2 className="w-8 h-8 text-white" />
@@ -535,7 +535,7 @@ export default function Pricing() {
         </div>
 
         {/* Guarantees */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white">
+        <div className="bg-gradient-to-r from-teal-600 to-teal-700 rounded-2xl p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">
             Risk-Free Investment in Your Medical Career
           </h2>

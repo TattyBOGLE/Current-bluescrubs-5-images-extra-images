@@ -19,7 +19,7 @@ export default function AdaptiveLearning() {
   const [currentUserId] = useState(1); // Demo user ID
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -27,7 +27,7 @@ export default function AdaptiveLearning() {
             <Brain className="h-16 w-16 text-primary mr-4" />
             <div className="text-left">
               <h1 className="text-5xl font-bold text-black">
-                Adaptive AI Learning
+                Adaptive Learning
               </h1>
               <p className="text-xl text-black mt-2">
                 Intelligence that evolves with your learning
@@ -37,13 +37,13 @@ export default function AdaptiveLearning() {
           
           <div className="max-w-3xl mx-auto mb-8">
             <p className="text-lg text-black leading-relaxed">
-              Experience the next generation of medical education with AI that understands your learning patterns, 
+              Experience the next generation of medical education with a system that understands your learning patterns, 
               identifies weaknesses in real-time, and adapts question difficulty to maximize your progress.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <Card className="border-2 border-blue-200 bg-blue-50">
+            <Card className="border-2 border-teal-200 bg-blue-50">
               <CardContent className="p-6 text-center">
                 <Target className="h-8 w-8 mx-auto mb-3 text-blue-600" />
                 <h3 className="font-semibold mb-2 text-black">Adaptive Questions</h3>
@@ -87,7 +87,7 @@ export default function AdaptiveLearning() {
 
         {/* Features Deep Dive */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <Card className="bg-gradient-to-br from-blue-300 to-blue-400 adaptive-card-white">
+          <Card className="bg-gradient-to-br from-teal-400 to-teal-500 adaptive-card-white">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <BarChart3 className="h-5 w-5" />
@@ -119,7 +119,7 @@ export default function AdaptiveLearning() {
             </CardContent>
           </Card>
 
-          <Card className="bg-gradient-to-br from-purple-300 to-purple-400 adaptive-card-white">
+          <Card className="bg-gradient-to-br from-teal-500 to-teal-700 adaptive-card-white">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Zap className="h-5 w-5" />
@@ -156,7 +156,7 @@ export default function AdaptiveLearning() {
         <Card className="mb-8 border-2 border-primary">
           <CardHeader>
             <CardTitle className="text-center text-2xl">
-              Why BlueScrubsPrep Adaptive AI Stands Out
+              Why BlueScrubsPrep Adaptive Learning Stands Out
             </CardTitle>
             <CardDescription className="text-center text-lg">
               Advanced features that competing platforms don't offer

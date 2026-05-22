@@ -270,7 +270,7 @@ export default function CompleteIndependence() {
                 
                 <div className="pt-4">
                   <Link href="/plab-independence">
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                    <Button className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-700 text-white">
                       View PLAB Independence
                     </Button>
                   </Link>

@@ -40,7 +40,7 @@ export default function ContentIndependence() {
 
   if (!stats) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 p-4">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 dark:from-gray-900 dark:to-gray-800 p-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
@@ -55,7 +55,7 @@ export default function ContentIndependence() {
   const isIndependent = stats.aiDependency === 'none' && totalContent > 5000;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 dark:from-gray-900 dark:to-gray-800 p-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -252,7 +252,7 @@ export default function ContentIndependence() {
               <div className="space-y-3">
                 <Button
                   onClick={() => exportContent()}
-                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white"
+                  className="w-full bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Export Complete Library
@@ -278,7 +278,7 @@ export default function ContentIndependence() {
         </div>
 
         {/* Summary Status */}
-        <Card className="bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <Card className="bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <CardContent className="p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">
               Content Independence Achieved

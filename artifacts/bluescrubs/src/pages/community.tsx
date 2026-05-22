@@ -734,7 +734,7 @@ export default function Community() {
           </div>
 
           {/* Success Stories */}
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50">
+          <Card className="bg-gradient-to-r from-slate-50 to-teal-700">
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold mb-4">Success Stories</h3>
               <div className="space-y-4">

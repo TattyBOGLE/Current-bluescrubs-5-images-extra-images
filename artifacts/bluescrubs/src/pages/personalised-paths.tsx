@@ -185,7 +185,7 @@ export default function PersonalisedPaths() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-teal-700 rounded-lg flex items-center justify-center">
               <Route className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -273,7 +273,7 @@ export default function PersonalisedPaths() {
                       className={`p-4 rounded-lg border ${
                         module.status === 'locked' 
                           ? 'bg-gray-50 border-gray-200' 
-                          : 'bg-white border-gray-200 hover:border-blue-200'
+                          : 'bg-white border-gray-200 hover:border-teal-200'
                       }`}
                     >
                       <div className="flex items-start justify-between mb-3">

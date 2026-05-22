@@ -228,7 +228,7 @@ export default function Gamification() {
 
         {/* User Stats Overview */}
         <div className="grid md:grid-cols-4 gap-4 mb-8">
-          <Card className="bg-gradient-to-br from-blue-50 to-indigo-100 border-blue-200">
+          <Card className="bg-gradient-to-br from-slate-50 to-teal-700 border-teal-200">
             <CardContent className="p-6 text-center">
               <div className="text-4xl mb-2">{userStats.level?.currentLevel?.icon || '💡'}</div>
               <div className="text-2xl font-bold text-blue-600 mb-1">
@@ -264,7 +264,7 @@ export default function Gamification() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-gradient-to-br from-purple-50 to-pink-100 border-purple-200">
+          <Card className="bg-gradient-to-br from-teal-500 to-rose-500 border-purple-200">
             <CardContent className="p-6 text-center">
               <TrendingUp className="w-10 h-10 text-purple-600 mx-auto mb-2" />
               <div className="text-3xl font-bold text-purple-700">

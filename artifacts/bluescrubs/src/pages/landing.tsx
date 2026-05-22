@@ -12,7 +12,7 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white">
       {/* Video Hero Banner - Full Screen */}
-      <div className="relative w-full h-screen overflow-hidden bg-gradient-to-r from-blue-600 to-purple-700 mb-0">
+      <div className="relative w-full h-screen overflow-hidden bg-gradient-to-r from-teal-600 to-teal-700 mb-0">
         <video 
           src={heroVideo}
           className="absolute inset-0 w-full h-full object-cover"
@@ -70,7 +70,7 @@ export default function Landing() {
             {/* Bottom Button */}
             <div className="pt-2">
               <Link href="/premium">
-                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 text-sm font-medium rounded-lg shadow-lg transition-all duration-200 group">
+                <Button size="sm" className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-700 text-white px-4 py-2 text-sm font-medium rounded-lg shadow-lg transition-all duration-200 group">
                   Start Free Trial
                   <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -85,7 +85,7 @@ export default function Landing() {
 
 
       {/* Why We're Different Section - Core BlueScrubsPrep Features */}
-      <div className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-blue-800 rounded-full mb-4 sm:mb-6">
@@ -108,7 +108,7 @@ export default function Landing() {
                 subtitle: "Smart Technology",
                 description: "Advanced machine learning predicts weaknesses 2-3 weeks before failure, provides contextual hints, and creates personalized study paths with real-time difficulty adjustment.",
                 features: ["Weakness prediction", "Contextual hint system", "Adaptive difficulty", "Success probability calculator"],
-                color: "from-blue-500 to-cyan-500"
+                color: "from-teal-500 to-cyan-500"
               },
               {
                 icon: Video,
@@ -116,7 +116,7 @@ export default function Landing() {
                 subtitle: "Immersive Practice",
                 description: "World's first virtual reality OSCE stations with Virtual patient actors, realistic hospital environments, and collaborative multi-user training sessions.",
                 features: ["VR hospital environments", "Virtual patient actors", "Multi-user sessions", "Real-time performance analysis"],
-                color: "from-purple-500 to-pink-500"
+                color: "from-teal-500 to-rose-500"
               },
               {
                 icon: Globe,
@@ -140,7 +140,7 @@ export default function Landing() {
                 subtitle: "Learn Anywhere",
                 description: "Microlearning modules for 5-10 minute sessions, smart notifications, voice-to-revision notes, and full offline content synchronization.",
                 features: ["Microlearning modules", "Smart notifications", "Voice-to-notes", "Offline sync"],
-                color: "from-indigo-500 to-purple-500"
+                color: "from-teal-500 to-teal-700"
               },
               {
                 icon: Trophy,
@@ -217,7 +217,7 @@ export default function Landing() {
                   }
                 ].map((advantage, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-700 rounded-xl flex items-center justify-center flex-shrink-0">
                       <advantage.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -296,7 +296,7 @@ export default function Landing() {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 rounded-full mb-6">
               <span className="hero-text text-white font-semibold">Complete Feature Set</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -326,7 +326,7 @@ export default function Landing() {
               {
                 category: "Complete OSCE Practice",
                 icon: Stethoscope,
-                color: "from-blue-500 to-cyan-500",
+                color: "from-teal-500 to-cyan-500",
                 features: [
                   "176 comprehensive OSCE stations",
                   "History taking scenarios",
@@ -339,7 +339,7 @@ export default function Landing() {
               {
                 category: "Multimedia Learning",
                 icon: Video,
-                color: "from-purple-500 to-pink-500",
+                color: "from-teal-500 to-rose-500",
                 features: [
                   "Custom video player with chapters",
                   "Interactive study materials",
@@ -365,7 +365,7 @@ export default function Landing() {
               {
                 category: "Neurodiversity Support",
                 icon: Users,
-                color: "from-indigo-500 to-purple-500",
+                color: "from-teal-500 to-teal-700",
                 features: [
                   "8 accommodation types",
                   "Extended time options",
@@ -409,7 +409,7 @@ export default function Landing() {
           </div>
 
           {/* Feature Statistics */}
-          <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 border border-blue-200">
+          <div className="mt-16 bg-gradient-to-r from-slate-50 to-teal-700 rounded-3xl p-8 border border-teal-200">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Platform Impact</h3>
               <p className="text-gray-600">Real-world results from comprehensive feature integration</p>
@@ -437,16 +437,16 @@ export default function Landing() {
       </div>
 
       {/* BlueScrubsPrep+ Global Expansion Section */}
-      <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 py-20">
+      <div className="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-900 py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-full border border-purple-400/30 shadow-lg mb-6">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-500/20 to-teal-500/20 backdrop-blur-sm rounded-full border border-purple-400/30 shadow-lg mb-6">
               <Globe className="w-5 h-5 mr-3 text-purple-300" />
               <span className="text-sm font-semibold text-white">Now Available Globally</span>
             </div>
             
             <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              <span className="text-white">Beyond</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">BlueScrubsPrep</span>
+              <span className="text-white">Beyond</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">BlueScrubsPrep</span>
             </h2>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -556,7 +556,7 @@ export default function Landing() {
                   }
                 ].map((feature, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -568,7 +568,7 @@ export default function Landing() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 rounded-3xl p-8 border border-white/20">
+            <div className="bg-gradient-to-br from-teal-500/40 to-teal-800/40 rounded-3xl p-8 border border-white/20">
               <div className="text-center mb-6">
                 <h4 className="text-2xl font-bold text-white mb-4">BlueScrubsPrep+ Global Access</h4>
                 <div className="text-5xl font-bold text-white mb-2">£129<span className="text-xl">/month</span></div>
@@ -594,7 +594,7 @@ export default function Landing() {
               </div>
 
               <Link href="/plab1-new">
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 rounded-xl">
+                <Button className="w-full bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-500 hover:to-teal-700 text-white font-bold py-3 rounded-xl">
                   Start Global Journey
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>

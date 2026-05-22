@@ -372,7 +372,7 @@ link: "/ask-ai"
     <div className="min-h-screen bg-white">
       {/* Hero Banner */}
       <div 
-        className="relative bg-gradient-to-r from-blue-600 to-purple-700 w-full h-64 md:h-80 lg:h-96 mb-8 overflow-hidden"
+        className="relative bg-gradient-to-r from-teal-500 to-teal-700 w-full h-64 md:h-80 lg:h-96 mb-8 overflow-hidden"
         style={{
           backgroundImage: `url(${moreBgImage})`,
           backgroundSize: 'cover',
@@ -404,7 +404,7 @@ link: "/ask-ai"
         {/* Admin Tools Section */}
         <div className="mb-12">
           <h2 className="text-xl font-bold text-gray-900 mb-6">Admin Tools</h2>
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 p-6">
+          <Card className="bg-gradient-to-br from-slate-50 to-teal-50 border-slate-200 p-6">
             <div className="mb-4">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">Admin Tools</h3>
               <p className="text-blue-700 text-sm">System management and optimization tools</p>
@@ -412,7 +412,7 @@ link: "/ask-ai"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {adminTools.map((tool, index) => (
                 <Link key={index} href={tool.link || "/dashboard"}>
-                  <Card className="bg-white border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer">
+                  <Card className="bg-white border-teal-300 hover:bg-blue-50 transition-colors cursor-pointer">
                     <CardContent className="flex flex-col items-center justify-center p-6 text-center">
                       <tool.icon className="h-8 w-8 text-blue-600 mb-3" />
                       <h4 className="font-medium text-gray-900" style={{color: '#111827 !important'}}>{tool.title}</h4>
@@ -432,10 +432,10 @@ link: "/ask-ai"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {features.map((feature, index) => {
               const cardContent = (
-                <Card className="bg-blue-50 hover:bg-blue-100 transition-colors cursor-pointer border-blue-200">
+                <Card className="bg-white hover:bg-slate-50 transition-colors cursor-pointer border-slate-200 rounded-2xl">
                   <CardContent className="flex items-center p-6">
-                    <div className="p-3 bg-blue-500/20 rounded-lg mr-4">
-                      <feature.icon className="h-6 w-6 text-blue-600" />
+                    <div className="p-3 bg-teal-500/10 rounded-xl mr-4">
+                      <feature.icon className="h-6 w-6 text-teal-700" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>

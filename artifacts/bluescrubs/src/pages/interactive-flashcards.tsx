@@ -434,7 +434,7 @@ export default function InteractiveFlashcards() {
       </div>
 
       {/* Language Translation Settings */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4 mb-6">
+      <div className="bg-gradient-to-r from-slate-50 to-emerald-50 border border-teal-200 rounded-lg p-4 mb-6">
         <div className="flex items-center gap-4 mb-4">
           <Globe className="w-5 h-5 text-blue-600" />
           <h3 className="font-semibold text-blue-900">Language Translation</h3>
@@ -462,7 +462,7 @@ export default function InteractiveFlashcards() {
               <div>
                 <label className="text-sm font-medium mb-2 block text-blue-900">Target Language</label>
                 <Select value={targetLanguage} onValueChange={setTargetLanguage}>
-                  <SelectTrigger className="border-blue-200">
+                  <SelectTrigger className="border-teal-200">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -488,7 +488,7 @@ export default function InteractiveFlashcards() {
                   size="sm"
                   onClick={translateCurrentCard}
                   disabled={isTranslating}
-                  className="border-blue-200 text-blue-700 hover:bg-blue-50"
+                  className="border-teal-200 text-teal-700 hover:bg-teal-50"
                 >
                   <Languages className="w-4 h-4 mr-2" />
                   {isTranslating ? "Translating..." : "Translate Card"}
@@ -727,7 +727,7 @@ export default function InteractiveFlashcards() {
       {/* High-Yield Help Popup */}
       {showHelpPopup && helpContent && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+          <div className="bg-gradient-to-br from-teal-800 to-teal-900 text-white rounded-lg p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-xl font-bold text-yellow-300">{helpContent.title}</h3>
               <Button 

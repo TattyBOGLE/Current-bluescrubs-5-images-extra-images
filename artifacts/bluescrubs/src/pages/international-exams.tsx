@@ -42,7 +42,7 @@ const examDetails = {
     fullName: 'United States Medical Licensing Examination',
     country: 'USA',
     flag: '🇺🇸',
-    color: 'from-blue-600 to-red-600'
+    color: 'from-teal-600 to-red-600'
   },
   AMC: { 
     name: 'AMC', 
@@ -77,7 +77,7 @@ const examDetails = {
     fullName: 'Health Authority Abu Dhabi',
     country: 'UAE',
     flag: '🇦🇪',
-    color: 'from-blue-600 to-green-600'
+    color: 'from-teal-600 to-green-600'
   }
 };
 
@@ -119,7 +119,7 @@ export default function InternationalExams() {
 
   if (selectedStation) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 dark:from-gray-900 dark:to-gray-800 p-4">
         <div className="max-w-4xl mx-auto">
           <Button
             variant="ghost"
@@ -130,8 +130,8 @@ export default function InternationalExams() {
             Back to Stations
           </Button>
 
-          <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-blue-200 dark:border-gray-600">
-            <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-t-lg">
+          <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-slate-200 dark:border-gray-600">
+            <CardHeader className="bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-t-lg">
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="text-2xl font-bold">{selectedStation.scenario_title}</CardTitle>
@@ -174,8 +174,8 @@ export default function InternationalExams() {
                 </div>
               </div>
 
-              <div className="bg-purple-50 dark:bg-gray-700 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-purple-800 dark:text-purple-300">Mark Scheme</h3>
+              <div className="bg-slate-50 dark:bg-gray-700 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4 text-teal-800 dark:text-purple-300">Mark Scheme</h3>
                 <ul className="space-y-2">
                   {selectedStation.mark_scheme.map((item, index) => (
                     <li key={index} className="flex items-start">
@@ -196,8 +196,8 @@ export default function InternationalExams() {
                 <p className="text-gray-700 dark:text-gray-300">{selectedStation.communication_notes}</p>
               </div>
 
-              <div className="bg-indigo-50 dark:bg-gray-700 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-indigo-800 dark:text-indigo-300">Guidelines & References</h3>
+              <div className="bg-teal-600 dark:bg-gray-700 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4 text-teal-700 dark:text-teal-700">Guidelines & References</h3>
                 <div className="flex flex-wrap gap-3">
                   {Object.entries(selectedStation.guideline_links).map(([name, url]) => (
                     <a
@@ -205,7 +205,7 @@ export default function InternationalExams() {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                      className="inline-flex items-center px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-600 transition-colors"
                     >
                       <BookOpen className="w-4 h-4 mr-2" />
                       {name}
@@ -221,7 +221,7 @@ export default function InternationalExams() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 dark:from-gray-900 dark:to-gray-800 p-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -283,7 +283,7 @@ export default function InternationalExams() {
                     <Button
                       onClick={() => generateStations(examType)}
                       disabled={isGenerating[examType]}
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                      className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-700 text-white"
                       size="sm"
                     >
                       {isGenerating[examType] ? (

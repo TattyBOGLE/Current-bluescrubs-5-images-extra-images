@@ -352,7 +352,7 @@ export default function Plab2Osce() {
                     <h4 className="font-semibold mb-2">Marking Criteria</h4>
                     <div className="space-y-3 text-sm text-gray-600">
                       {activeStation.markingCriteria.map((criteria, index) => (
-                        <div key={index} className="border-l-2 border-blue-200 pl-3">
+                        <div key={index} className="border-l-2 border-slate-200 pl-3">
                           <div className="font-medium text-gray-900">{criteria.category}</div>
                           <div className="text-xs text-gray-500 mb-1">Max: {criteria.maxMarks} marks</div>
                           <ul className="list-disc pl-4 space-y-1">
@@ -432,7 +432,7 @@ export default function Plab2Osce() {
 
                 {/* Tutor Chat Interface */}
                 <div className="mt-6 border border-gray-200 rounded-lg">
-                  <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
+                  <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-slate-50 to-teal-700">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Bot className="w-5 h-5 text-blue-600" />
@@ -543,7 +543,7 @@ export default function Plab2Osce() {
     <div className="min-h-screen bg-white">
       {/* Hero Banner */}
       <div 
-        className="relative bg-gradient-to-r from-blue-600 to-purple-700 w-full h-64 md:h-80 lg:h-96 mb-8 overflow-hidden"
+        className="relative bg-gradient-to-r from-teal-600 to-teal-700 w-full h-64 md:h-80 lg:h-96 mb-8 overflow-hidden"
         style={{
           backgroundImage: `url(${plab2BgImage})`,
           backgroundSize: 'cover',
@@ -573,7 +573,7 @@ export default function Plab2Osce() {
           <p className="text-lg text-gray-600">{translateText('Comprehensive OSCE practice with 16-20 clinical stations covering history taking, examination, explanation, ethics, and acute care scenarios')}</p>
           
           {/* Language Toggle */}
-          <div className="flex items-center gap-4 mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="flex items-center gap-4 mt-4 p-3 bg-blue-50 rounded-lg border border-slate-200">
             <Globe className="w-4 h-4 text-blue-600" />
             <div className="flex items-center gap-3">
               <Switch
@@ -588,7 +588,7 @@ export default function Plab2Osce() {
             </div>
             {isTranslationMode && (
               <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-                <SelectTrigger className="w-48 border-blue-200">
+                <SelectTrigger className="w-48 border-slate-200">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent className="max-h-72 overflow-y-auto">
@@ -619,7 +619,7 @@ export default function Plab2Osce() {
               </Select>
             )}
           </div>
-          <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <div className="mt-4 p-4 bg-blue-50 border border-slate-200 rounded-lg">
             <div className="flex items-center gap-2 mb-2">
               <BookOpen className="w-5 h-5 text-blue-600" />
               <span className="font-semibold text-blue-800">Official PLAB 2 Format</span>
@@ -642,7 +642,7 @@ export default function Plab2Osce() {
         </div>
 
         {/* Accessibility & Neurodiversity Support */}
-        <Card className="mb-6 border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50">
+        <Card className="mb-6 border-2 border-purple-200 bg-gradient-to-r from-teal-500 to-rose-500">
           <CardContent className="pt-6">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div className="flex items-center gap-4">
@@ -710,7 +710,7 @@ export default function Plab2Osce() {
         )}
 
         {/* PLAB 2 OSCE Practice Section - Now under accessibility settings */}
-        <div className="border-t-4 border-blue-200 pt-8 mt-8">
+        <div className="border-t-4 border-slate-200 pt-8 mt-8">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
               <Play className="w-4 h-4 text-blue-600" />
@@ -802,7 +802,7 @@ export default function Plab2Osce() {
                   <Card key={station.id} className={`hover:shadow-lg transition-all duration-200 cursor-pointer border-2 ${
                     isCompleted 
                       ? 'border-green-300 bg-green-50 shadow-md' 
-                      : 'border-gray-200 hover:border-blue-300 hover:shadow-md'
+                      : 'border-gray-200 hover:border-teal-300 hover:shadow-md'
                   }`} onClick={() => setActiveStation(station)}>
                     <CardHeader className="pb-3">
                       <div className="flex items-start justify-between">

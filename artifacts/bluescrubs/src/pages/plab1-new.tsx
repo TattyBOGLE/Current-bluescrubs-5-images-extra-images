@@ -1506,15 +1506,15 @@ export default function PLAB1New() {
                   Clinical Scenario Framework
                 </h3>
                 <div className="space-y-4">
-                  <div className="bg-white border border-blue-200 rounded-lg p-4">
+                  <div className="bg-white border border-teal-200 rounded-lg p-4">
                     <h4 className="font-medium text-blue-800 mb-2">1. Patient Presentation</h4>
                     <p className="text-sm text-blue-700">Age, gender, chief complaint, duration of symptoms, relevant medical history</p>
                   </div>
-                  <div className="bg-white border border-blue-200 rounded-lg p-4">
+                  <div className="bg-white border border-teal-200 rounded-lg p-4">
                     <h4 className="font-medium text-blue-800 mb-2">2. Clinical Findings</h4>
                     <p className="text-sm text-blue-700">Physical examination findings, vital signs, initial observations</p>
                   </div>
-                  <div className="bg-white border border-blue-200 rounded-lg p-4">
+                  <div className="bg-white border border-teal-200 rounded-lg p-4">
                     <h4 className="font-medium text-blue-800 mb-2">3. Investigation Results</h4>
                     <p className="text-sm text-blue-700">Laboratory values, imaging findings, diagnostic test results</p>
                   </div>

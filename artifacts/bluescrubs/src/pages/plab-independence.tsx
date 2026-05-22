@@ -42,7 +42,7 @@ export default function PLABIndependence() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 dark:from-gray-900 dark:to-gray-800 p-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -63,11 +63,11 @@ export default function PLABIndependence() {
         </div>
 
         {/* PLAB Status Overview */}
-        <Card className="mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-blue-200 dark:border-blue-800">
+        <Card className="mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-slate-200 dark:border-blue-800">
           <CardHeader>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-teal-700 rounded-full flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -113,7 +113,7 @@ export default function PLABIndependence() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-lg">
+            <div className="bg-gradient-to-r from-slate-100 to-teal-700 dark:from-slate-900/30 dark:to-teal-900/30 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-800 dark:text-blue-300 mb-4">
                 Your Streamlined Format Success
               </h3>
@@ -173,7 +173,7 @@ export default function PLABIndependence() {
 
                 <Button
                   onClick={() => window.open('/user-format-stations', '_blank')}
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                  className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-700 text-white"
                 >
                   <BookOpen className="w-4 h-4 mr-2" />
                   Browse PLAB Stations
@@ -231,7 +231,7 @@ export default function PLABIndependence() {
         </div>
 
         {/* Action Center */}
-        <Card className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white mb-8">
+        <Card className="bg-gradient-to-r from-teal-600 to-teal-700 text-white mb-8">
           <CardContent className="p-8">
             <div className="text-center mb-6">
               <h3 className="text-3xl font-bold mb-4">

@@ -81,7 +81,7 @@ export default function Team() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-700">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -100,7 +100,7 @@ export default function Team() {
         {/* Vision & Mission */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+            <Card className="bg-gradient-to-br from-slate-50 to-teal-50 border-slate-200">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Heart className="h-6 w-6 text-blue-600" />
@@ -116,7 +116,7 @@ export default function Team() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+            <Card className="bg-gradient-to-br from-teal-500 to-teal-700 border-purple-200">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Star className="h-6 w-6 text-purple-600" />
@@ -138,7 +138,7 @@ export default function Team() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {team.map((member, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
-              <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+              <CardHeader className="bg-gradient-to-r from-teal-600 to-teal-700 text-white">
                 <div className="flex items-start gap-4">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
                     {member.name.includes('Dr.') ? (
@@ -171,7 +171,7 @@ export default function Team() {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {member.qualifications.map((qual, idx) => (
-                      <Badge key={idx} variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                      <Badge key={idx} variant="outline" className="bg-blue-50 text-blue-700 border-slate-200">
                         {qual}
                       </Badge>
                     ))}
@@ -258,7 +258,7 @@ export default function Team() {
 
         {/* Contact Section */}
         <div className="text-center">
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200 max-w-2xl mx-auto">
+          <Card className="bg-gradient-to-r from-slate-50 to-teal-700 border-slate-200 max-w-2xl mx-auto">
             <CardContent className="p-8">
               <Mail className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-blue-900 mb-4">Get in Touch</h3>
@@ -271,7 +271,7 @@ export default function Team() {
                   <Mail className="h-4 w-4 mr-2" />
                   Contact Us
                 </Button>
-                <Button variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-50">
+                <Button variant="outline" className="border-teal-300 text-blue-700 hover:bg-blue-50">
                   <Users className="h-4 w-4 mr-2" />
                   Join Community
                 </Button>

@@ -114,7 +114,7 @@ export default function ClinicalGuides() {
 
   if (selectedGuide) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6" style={{ color: '#1a1a1a' }}>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 p-6" style={{ color: '#1a1a1a' }}>
         <div className="max-w-4xl mx-auto">
           <Button 
             variant="outline" 
@@ -289,11 +289,11 @@ export default function ClinicalGuides() {
                 {/* Tutor Integration for Clinical Guides */}
                 <TabsContent value="tutor" className="space-y-4">
                   <Card>
-                    <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <CardHeader className="bg-gradient-to-r from-teal-50 to-emerald-50">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Bot className="w-5 h-5 text-blue-600" />
-                          <CardTitle className="text-blue-800">AI Clinical Knowledge Tutor</CardTitle>
+                          <Bot className="w-5 h-5 text-teal-700" />
+                          <CardTitle className="text-teal-800">Clinical Knowledge Tutor</CardTitle>
                         </div>
                         <Button
                           variant="outline"
@@ -467,7 +467,7 @@ export default function ClinicalGuides() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6" style={{ color: '#1a1a1a' }}>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 p-6" style={{ color: '#1a1a1a' }}>
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2" style={{ color: '#000000' }}>Clinical Knowledge Hub</h1>

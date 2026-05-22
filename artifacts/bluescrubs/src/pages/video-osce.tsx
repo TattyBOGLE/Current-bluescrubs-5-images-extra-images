@@ -267,7 +267,7 @@ export default function VideoOSCE() {
     <div className="video-osce min-h-screen bg-white" data-page="video-osce">
       {/* Hero Banner */}
       <div 
-        className="relative bg-gradient-to-r from-blue-600 to-purple-700 w-full h-64 md:h-80 lg:h-96 mb-8 overflow-hidden"
+        className="relative bg-gradient-to-r from-teal-600 to-teal-700 w-full h-64 md:h-80 lg:h-96 mb-8 overflow-hidden"
         style={{
           backgroundImage: `url(${videoBgImage})`,
           backgroundSize: 'cover',
@@ -607,7 +607,7 @@ export default function VideoOSCE() {
             <h2 className="text-2xl font-bold text-gray-900">Feedback Analysis</h2>
             <div className="text-center text-gray-600">
               <FileText className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-              <p>Complete a recording to receive detailed AI feedback on your performance.</p>
+              <p>Complete a recording to receive detailed feedback on your performance.</p>
             </div>
           </TabsContent>
         </Tabs>

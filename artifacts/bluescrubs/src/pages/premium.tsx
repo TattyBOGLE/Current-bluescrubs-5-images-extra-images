@@ -522,7 +522,7 @@ export default function Premium() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-lg border">
+                <div className="bg-gradient-to-br from-slate-50 to-teal-700 p-4 rounded-lg border">
                   <div className="text-center">
                     <Award className="h-8 w-8 mx-auto text-blue-600 mb-2" />
                     <div className="font-medium">Sample Certificate</div>
@@ -537,7 +537,7 @@ export default function Premium() {
       </Tabs>
 
       {/* Pricing Summary */}
-      <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200">
+      <Card className="bg-gradient-to-r from-slate-50 to-teal-700 border-teal-200">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Complete Premium Package</CardTitle>
           <CardDescription className="text-lg">

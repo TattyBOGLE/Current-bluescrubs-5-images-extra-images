@@ -82,7 +82,7 @@ export default function HybridAIDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-500 to-teal-50 dark:from-gray-900 dark:to-gray-800 p-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -120,9 +120,9 @@ export default function HybridAIDashboard() {
                 </CardDescription>
               </div>
               <Badge 
-                className={status?.aiAvailable ? 'bg-blue-600 text-white' : 'bg-green-600 text-white'}
+                className={status?.aiAvailable ? 'bg-teal-600 text-white' : 'bg-emerald-600 text-white'}
               >
-                {status?.aiAvailable ? 'AI Available' : 'Independent Mode'}
+                {status?.aiAvailable ? 'Smart Tools Ready' : 'Independent Mode'}
               </Badge>
             </div>
           </CardHeader>
@@ -155,7 +155,7 @@ export default function HybridAIDashboard() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Settings className="w-5 h-5" />
-              AI Configuration
+              Smart Configuration
             </CardTitle>
             <CardDescription>
               Configure AI enhancement preferences
@@ -299,7 +299,7 @@ export default function HybridAIDashboard() {
         </Card>
 
         {/* System Benefits */}
-        <Card className="mt-8 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+        <Card className="mt-8 bg-gradient-to-r from-teal-500 to-teal-600 text-white">
           <CardContent className="p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">
               Hybrid System Benefits
@@ -308,7 +308,7 @@ export default function HybridAIDashboard() {
               <div>
                 <CheckCircle className="w-6 h-6 mx-auto mb-2" />
                 <h4 className="font-semibold mb-1">AI When Available</h4>
-                <p>Enhanced features with AI when API keys are provided</p>
+                <p>Enhanced features when smart tools are enabled</p>
               </div>
               <div>
                 <Shield className="w-6 h-6 mx-auto mb-2" />

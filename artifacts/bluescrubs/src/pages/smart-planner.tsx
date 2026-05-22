@@ -112,7 +112,7 @@ export default function SmartPlanner() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-500 to-teal-50 p-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -254,7 +254,7 @@ export default function SmartPlanner() {
                 {smartRecommendations.map((rec, index) => (
                   <div key={index} className={`p-4 rounded-lg ${
                     rec.type === 'priority' ? 'bg-red-50 border border-red-200' :
-                    rec.type === 'optimization' ? 'bg-blue-50 border border-blue-200' :
+                    rec.type === 'optimization' ? 'bg-blue-50 border border-teal-200' :
                     'bg-green-50 border border-green-200'
                   }`}>
                     <div className="flex items-start gap-3">

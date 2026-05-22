@@ -123,17 +123,17 @@ export default function AskAI() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 p-4">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <Card className="text-center bg-white shadow-lg">
           <CardHeader className="pb-4">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-sm shadow-teal-200">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <CardTitle className="text-2xl font-bold text-gray-900">Medical AI Assistant</CardTitle>
+                <CardTitle className="text-2xl font-bold text-gray-900">Medical Assistant</CardTitle>
                 <CardDescription className="text-gray-600">
                   Ask any medical question and get evidence-based answers
                 </CardDescription>
@@ -147,7 +147,7 @@ export default function AskAI() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-green-600" />
-              AI Question Generator
+              Question Generator
             </CardTitle>
             <CardDescription>
               Generate medical examination questions using OpenAI integration
@@ -296,7 +296,7 @@ export default function AskAI() {
                   ) : (
                     <>
                       <Send className="w-4 h-4 mr-2" />
-                      Ask AI
+                      Ask
                     </>
                   )}
                 </Button>
@@ -317,14 +317,14 @@ export default function AskAI() {
           </Card>
         )}
 
-        {/* AI Response */}
+        {/* Response */}
         {response && (
           <Card className="shadow-lg">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
                   <Lightbulb className="w-5 h-5 text-yellow-600" />
-                  AI Response
+                  Response
                 </CardTitle>
                 <Badge className={getConfidenceColor(response.confidence)}>
                   {response.confidence} confidence
@@ -366,7 +366,7 @@ export default function AskAI() {
                               variant="outline" 
                               className={`text-xs ${
                                 source.type === 'guideline' 
-                                  ? 'border-blue-300 text-blue-700' 
+                                  ? 'border-teal-300 text-blue-700' 
                                   : source.type === 'research'
                                   ? 'border-green-300 text-green-700'
                                   : 'border-purple-300 text-purple-700'
@@ -415,7 +415,7 @@ export default function AskAI() {
         )}
 
         {/* Example Questions */}
-        <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+        <Card className="bg-gradient-to-r from-slate-50 to-teal-700 border-teal-200">
           <CardHeader>
             <CardTitle className="text-lg">Example Questions</CardTitle>
             <CardDescription>Try asking about these medical topics</CardDescription>
@@ -433,7 +433,7 @@ export default function AskAI() {
                 <Button
                   key={index}
                   variant="outline"
-                  className="text-left h-auto p-3 text-sm text-gray-700 hover:bg-blue-50 hover:border-blue-300"
+                  className="text-left h-auto p-3 text-sm text-gray-700 hover:bg-blue-50 hover:border-teal-300"
                   onClick={() => setQuestion(example)}
                   disabled={isLoading}
                 >

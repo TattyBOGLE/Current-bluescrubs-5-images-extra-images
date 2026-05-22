@@ -101,7 +101,7 @@ export default function TranslationDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-500 to-teal-50 dark:from-gray-900 dark:to-gray-800 p-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -122,7 +122,7 @@ export default function TranslationDashboard() {
         </div>
 
         {/* Independence Status */}
-        <Card className="mb-8 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <Card className="mb-8 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -346,7 +346,7 @@ export default function TranslationDashboard() {
                 
                 <Button
                   onClick={() => translateIndependently(selectedExam || 'PLAB2')}
-                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white"
+                  className="w-full bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white"
                 >
                   <Shield className="w-4 h-4 mr-2" />
                   Create Independent Translations
@@ -355,7 +355,7 @@ export default function TranslationDashboard() {
                 <Button
                   onClick={() => downloadTranslations(selectedExam, selectedLanguage)}
                   disabled={!selectedExam || !selectedLanguage}
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                  className="w-full bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-500 hover:to-teal-700 text-white"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Translations
@@ -394,7 +394,7 @@ export default function TranslationDashboard() {
         </div>
 
         {/* System Status */}
-        <Card className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+        <Card className="bg-gradient-to-r from-teal-500 to-teal-600 text-white">
           <CardContent className="p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">
               Translation System Ready

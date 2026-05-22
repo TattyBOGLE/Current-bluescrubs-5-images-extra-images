@@ -223,7 +223,7 @@ export default function Analytics() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800">
+      <div className="min-h-screen bg-gradient-to-br from-teal-500 to-rose-400 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 py-8">
           <div className="animate-pulse">
             <div className="h-8 bg-gray-200 rounded w-1/3 mb-4"></div>
@@ -245,7 +245,7 @@ export default function Analytics() {
 
   if (!analytics) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800">
+      <div className="min-h-screen bg-gradient-to-br from-teal-500 to-rose-400 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center py-12">
             <Brain className="h-16 w-16 text-gray-400 mx-auto mb-4" />
@@ -262,7 +262,7 @@ export default function Analytics() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-teal-500 to-rose-400 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -621,11 +621,11 @@ export default function Analytics() {
 
           <TabsContent value="tutor" className="space-y-6">
             <Card>
-              <CardHeader className="bg-gradient-to-r from-purple-50 to-indigo-50">
+              <CardHeader className="bg-gradient-to-r from-teal-50 to-emerald-50">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Bot className="w-5 h-5 text-purple-600" />
-                    <CardTitle className="text-purple-800">AI Performance Tutor</CardTitle>
+                    <Bot className="w-5 h-5 text-teal-700" />
+                    <CardTitle className="text-teal-800">Performance Feedback</CardTitle>
                   </div>
                   <Button
                     variant="outline"

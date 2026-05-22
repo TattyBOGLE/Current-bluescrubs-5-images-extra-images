@@ -233,7 +233,7 @@ export default function Placements() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-teal-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -380,7 +380,7 @@ export default function Placements() {
           <TabsContent value="applied" className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {filteredPlacements.filter(p => p.isApplied).map((placement) => (
-                <Card key={placement.id} className="border-blue-200 bg-blue-50 dark:bg-blue-900/10">
+                <Card key={placement.id} className="border-slate-200 bg-blue-50 dark:bg-blue-900/10">
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-3">
