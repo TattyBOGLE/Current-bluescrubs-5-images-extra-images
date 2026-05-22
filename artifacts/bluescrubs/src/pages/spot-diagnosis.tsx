@@ -33,6 +33,7 @@ const IMAGES = [
   { file: "obstructive-jaundice-pancreatic-cancer.png", label: "Obstructive Jaundice", specialty: "Gastroenterology", type: "Clinical" },
   { file: "cirrhosis-stigmata.png", label: "Liver Cirrhosis Stigmata", specialty: "Gastroenterology", type: "Clinical" },
   { file: "small-bowel-obstruction-axr.png", label: "Small Bowel Obstruction", specialty: "Radiology", type: "AXR" },
+  { file: "ventricular-tachycardia-ecg.png", label: "Ventricular Tachycardia", specialty: "Cardiology", type: "ECG" },
 ];
 
 const SPECIALTY_COLORS: Record<string, string> = {
