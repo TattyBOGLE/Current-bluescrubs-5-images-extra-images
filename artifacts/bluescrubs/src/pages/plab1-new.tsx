@@ -1203,6 +1203,8 @@ export default function PLAB1New() {
           onStartAdaptivePractice={startAdaptivePractice}
           onStartIncorrectOnlyPractice={startIncorrectOnlyPractice}
           onStartSpotDiagnosis={startSpotDiagnosis}
+          userName={user?.firstName ?? undefined}
+          weakAreas={weakAreaRecommendations}
         />
       </QuizErrorBoundary>
     );

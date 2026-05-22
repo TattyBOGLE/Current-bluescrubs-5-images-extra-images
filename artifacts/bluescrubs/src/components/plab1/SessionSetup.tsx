@@ -1,53 +1,44 @@
 import { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
 import {
-  Clock, ArrowRight, Globe, Volume2
+  Languages, Volume2, Play, HeartPulse, Droplets, Brain,
 } from "lucide-react";
-import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
 import { availableCategories } from "@/lib/quiz-utils";
+import type { WeakAreaRecommendation } from "@/hooks/useLocalAnalytics";
 
-type SessionMode = 'practice' | 'timed' | 'unlimited' | 'plab' | 'adaptive' | 'incorrect-only' | 'spot-diagnosis';
+const SUPPORTED_LANGUAGES: { code: string; nativeName: string; flag: string }[] = [
+  { code: 'en', nativeName: 'English (UK)', flag: '🇬🇧' },
+  { code: 'es', nativeName: 'Español',      flag: '🇪🇸' },
+  { code: 'fr', nativeName: 'Français',     flag: '🇫🇷' },
+  { code: 'de', nativeName: 'Deutsch',      flag: '🇩🇪' },
+  { code: 'it', nativeName: 'Italiano',     flag: '🇮🇹' },
+  { code: 'pt', nativeName: 'Português',    flag: '🇵🇹' },
+  { code: 'ar', nativeName: 'العربية',      flag: '🇸🇦' },
+  { code: 'hi', nativeName: 'हिन्दी',         flag: '🇮🇳' },
+  { code: 'ur', nativeName: 'اردو',          flag: '🇵🇰' },
+  { code: 'zh', nativeName: '中文',          flag: '🇨🇳' },
+  { code: 'ja', nativeName: '日本語',        flag: '🇯🇵' },
+  { code: 'ko', nativeName: '한국어',         flag: '🇰🇷' },
+  { code: 'ru', nativeName: 'Русский',      flag: '🇷🇺' },
+  { code: 'tr', nativeName: 'Türkçe',       flag: '🇹🇷' },
+  { code: 'pl', nativeName: 'Polski',       flag: '🇵🇱' },
+  { code: 'nl', nativeName: 'Nederlands',   flag: '🇳🇱' },
+  { code: 'sv', nativeName: 'Svenska',      flag: '🇸🇪' },
+];
 
-const MODE_TABS: { id: SessionMode; label: string; description: string }[] = [
-  {
-    id: 'practice',
-    label: 'Practice',
-    description: 'Complete a set number of questions at your own pace',
-  },
-  {
-    id: 'timed',
-    label: 'Timed',
-    description: 'Answer as many questions as possible within a time limit',
-  },
-  {
-    id: 'unlimited',
-    label: 'Unlimited',
-    description: 'Study without time pressure — continue as long as you want',
-  },
-  {
-    id: 'plab',
-    label: 'PLAB Exam',
-    description: 'Real exam conditions — exactly 1 minute per question',
-  },
-  {
-    id: 'adaptive',
-    label: 'Adaptive',
-    description: 'Smart mode: prioritises your weak areas and recently missed questions',
-  },
-  {
-    id: 'incorrect-only',
-    label: 'Incorrect Only',
-    description: 'Revisit only the questions you have previously answered incorrectly',
-  },
-  {
-    id: 'spot-diagnosis',
-    label: 'Spot Diagnosis',
-    description: 'Identify conditions from clinical images — ECGs, X-rays, dermatology, and more',
-  },
+type SessionMode =
+  | 'practice' | 'timed' | 'unlimited' | 'plab'
+  | 'adaptive' | 'incorrect-only' | 'spot-diagnosis';
+
+const MODE_CHIPS: { id: SessionMode; label: string; description: string }[] = [
+  { id: 'practice',        label: 'Practice',        description: 'Self-paced practice with a set number of questions' },
+  { id: 'timed',           label: 'Timed',           description: 'Answer as many as you can within a time limit' },
+  { id: 'unlimited',       label: 'Unlimited',       description: 'No timer, no question cap — keep going as long as you like' },
+  { id: 'plab',            label: 'PLAB Exam',       description: 'Real exam conditions — 1 minute per question' },
+  { id: 'adaptive',        label: 'Adaptive',        description: 'Smart mode focused on your weak areas' },
+  { id: 'incorrect-only',  label: 'Incorrect Only',  description: 'Revisit questions you got wrong' },
+  { id: 'spot-diagnosis',  label: 'Spot Diagnosis',  description: 'Identify conditions from clinical images' },
 ];
 
 type SessionOption = { value: number; label: string; note?: string };
@@ -74,6 +65,18 @@ const PLAB_COUNTS: SessionOption[] = [
   { value: 50, label: '50' },
   { value: 60, label: '60' },
   { value: 180, label: '180', note: 'Full PLAB' },
+];
+
+const DIFFICULTIES: { value: string; label: string }[] = [
+  { value: 'foundation',   label: 'Foundation' },
+  { value: 'intermediate', label: 'Intermediate' },
+  { value: 'advanced',     label: 'Advanced' },
+];
+
+const WEAK_AREA_ICON = [
+  { Icon: HeartPulse, color: 'text-rose-500',   bg: 'bg-rose-50',   ring: 'stroke-rose-400' },
+  { Icon: Droplets,   color: 'text-blue-500',   bg: 'bg-blue-50',   ring: 'stroke-blue-400' },
+  { Icon: Brain,      color: 'text-purple-500', bg: 'bg-purple-50', ring: 'stroke-purple-400' },
 ];
 
 interface SessionSetupProps {
@@ -103,11 +106,11 @@ interface SessionSetupProps {
   onStartAdaptivePractice: (count: number) => void;
   onStartIncorrectOnlyPractice: (count: number) => void;
   onStartSpotDiagnosis: () => void;
+  userName?: string;
+  weakAreas?: WeakAreaRecommendation[];
 }
 
 export function SessionSetup({
-  heroImageLoaded,
-  setHeroImageLoaded,
   isTranslationMode,
   setIsTranslationMode,
   selectedLanguage,
@@ -132,291 +135,310 @@ export function SessionSetup({
   onStartAdaptivePractice,
   onStartIncorrectOnlyPractice,
   onStartSpotDiagnosis,
+  userName,
+  weakAreas,
 }: SessionSetupProps) {
   const [selectedMode, setSelectedMode] = useState<SessionMode>('practice');
   const [selectedCount, setSelectedCount] = useState<number>(10);
 
   const handleModeChange = (mode: SessionMode) => {
     setSelectedMode(mode);
-    // Reset to first option for the new mode
-    if (mode === 'practice') setSelectedCount(10);
-    else if (mode === 'timed') setSelectedCount(10);
-    else if (mode === 'plab') setSelectedCount(10);
+    if (mode === 'practice' || mode === 'timed' || mode === 'plab') setSelectedCount(10);
   };
 
   const handleStart = () => {
-    if (selectedMode === 'practice') {
-      onStartPractice(selectedCount);
-    } else if (selectedMode === 'timed') {
-      onStartTimedPractice(selectedCount);
-    } else if (selectedMode === 'unlimited') {
-      onStartUnlimitedPractice();
-    } else if (selectedMode === 'plab') {
-      onStartAuthenticTimedPractice(selectedCount);
-    } else if (selectedMode === 'adaptive') {
-      onStartAdaptivePractice(selectedCount);
-    } else if (selectedMode === 'incorrect-only') {
-      onStartIncorrectOnlyPractice(selectedCount);
-    } else if (selectedMode === 'spot-diagnosis') {
-      onStartSpotDiagnosis();
-    }
+    if (selectedMode === 'practice')        return onStartPractice(selectedCount);
+    if (selectedMode === 'timed')           return onStartTimedPractice(selectedCount);
+    if (selectedMode === 'unlimited')       return onStartUnlimitedPractice();
+    if (selectedMode === 'plab')            return onStartAuthenticTimedPractice(selectedCount);
+    if (selectedMode === 'adaptive')        return onStartAdaptivePractice(selectedCount);
+    if (selectedMode === 'incorrect-only')  return onStartIncorrectOnlyPractice(selectedCount);
+    if (selectedMode === 'spot-diagnosis')  return onStartSpotDiagnosis();
   };
 
-  const canStart = selectedMode === 'unlimited' || selectedMode === 'spot-diagnosis' || selectedCount > 0;
+  const handleWeakAreaClick = (categoryValue: string) => {
+    setSelectedCategory(categoryValue);
+    setSelectedMode('adaptive');
+    setSelectedCount(10);
+  };
 
-  const currentMode = MODE_TABS.find(m => m.id === selectedMode)!;
+  const showCount = selectedMode !== 'unlimited' && selectedMode !== 'spot-diagnosis';
+  const countOptions =
+    selectedMode === 'timed' ? TIMED_OPTIONS :
+    selectedMode === 'plab'  ? PLAB_COUNTS   :
+    PRACTICE_COUNTS;
+
+  const categoryLabel =
+    availableCategories.find(c => c.value === selectedCategory)?.label ?? 'All Categories';
+  const difficultyLabel =
+    DIFFICULTIES.find(d => d.value === selectedDifficulty)?.label ?? 'Intermediate';
+  const modeLabel = MODE_CHIPS.find(m => m.id === selectedMode)?.label ?? 'Practice';
+
+  const summary = showCount
+    ? `${selectedCount} ${difficultyLabel.toLowerCase()} ${categoryLabel.toLowerCase()} ${selectedMode === 'timed' ? 'min' : 'Qs'} · ${modeLabel}`
+    : `${categoryLabel} · ${modeLabel}`;
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 pb-24">
-      <div className="max-w-4xl mx-auto mb-16">
-
-        {/* Hero Banner */}
-        <div className="relative bg-gradient-to-r from-blue-600 to-purple-700 w-full h-48 md:h-64 mb-6 overflow-hidden rounded-xl">
-          {!heroImageLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-700">
-              <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-            </div>
-          )}
-          <img
-            src={plab1BgImage}
-            alt="PLAB 1 Practice"
-            className={`absolute inset-0 w-full h-full object-cover opacity-60 transition-opacity duration-300 ${heroImageLoaded ? 'opacity-60' : 'opacity-0'}`}
-            loading="eager"
-            decoding="async"
-            onLoad={() => setHeroImageLoaded(true)}
-          />
-          <div className="relative z-10 flex flex-col items-center justify-center text-center px-8 h-full">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-              {translateText('Master PLAB 1')} {translateText('with AI')}
+    <div className="min-h-screen bg-slate-50 font-sans">
+      <div className="max-w-[680px] mx-auto pb-44">
+        {/* Header */}
+        <header className="flex items-center justify-between px-6 pt-8 pb-4 bg-white">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+              {translateText('Hi')}, {userName || translateText('Doctor')} <span>👋</span>
             </h1>
-            <p className="text-base md:text-lg text-white/90 drop-shadow" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
-              {translateText('Authentic UK Comprehensive exam preparation')}
-            </p>
+            <p className="text-slate-500 text-sm mt-1">{translateText("Ready for today's practice?")}</p>
           </div>
-        </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              aria-label="Toggle translation"
+              aria-pressed={isTranslationMode}
+              onClick={() => setIsTranslationMode(!isTranslationMode)}
+              className={`p-2.5 rounded-full transition-colors ${
+                isTranslationMode ? 'bg-teal-100 text-teal-700' : 'bg-slate-100 text-slate-600'
+              }`}
+              data-testid="button-toggle-translation"
+            >
+              <Languages className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              aria-label="Toggle voice reading"
+              aria-pressed={speechEnabled}
+              onClick={() => setSpeechEnabled(!speechEnabled)}
+              className={`p-2.5 rounded-full transition-colors ${
+                speechEnabled ? 'bg-teal-100 text-teal-700' : 'bg-slate-100 text-slate-600'
+              }`}
+              data-testid="button-toggle-voice"
+            >
+              <Volume2 className="w-5 h-5" />
+            </button>
+          </div>
+        </header>
 
-        {/* Settings row: language + voice */}
-        <div id="settings" className="flex flex-wrap gap-3 mb-6">
-          <div className="flex items-center gap-3 flex-1 min-w-[240px] p-3 bg-blue-50 rounded-lg border border-blue-200">
-            <Globe className="w-4 h-4 text-blue-600 flex-shrink-0" />
-            <div className="flex items-center gap-2">
-              <Switch
-                checked={isTranslationMode}
-                onCheckedChange={setIsTranslationMode}
-                className="data-[state=checked]:bg-blue-600"
-              />
-              <span className="text-sm font-medium text-blue-900 whitespace-nowrap">Translation</span>
-            </div>
+        {/* Translation / Voice expanded controls */}
+        {(isTranslationMode || speechEnabled) && (
+          <div className="px-6 pb-3 bg-white border-b border-slate-100 flex flex-wrap gap-3">
             {isTranslationMode && (
               <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-                <SelectTrigger className="w-44 border-blue-200 h-8 text-sm">
-                  <SelectValue />
+                <SelectTrigger className="h-9 w-44 text-sm border-teal-200 bg-teal-50/60">
+                  <SelectValue placeholder="Language" />
                 </SelectTrigger>
                 <SelectContent className="max-h-72 overflow-y-auto">
-                  <SelectItem value="en">🇬🇧 English</SelectItem>
-                  <SelectItem value="ar">🇸🇦 العربية Arabic</SelectItem>
-                  <SelectItem value="hi">🇮🇳 हिन्दी Hindi</SelectItem>
-                  <SelectItem value="ur">🇵🇰 اردو Urdu</SelectItem>
-                  <SelectItem value="bn">🇧🇩 বাংলা Bengali</SelectItem>
-                  <SelectItem value="ta">🇮🇳 தமிழ் Tamil</SelectItem>
-                  <SelectItem value="te">🇮🇳 తెలుగు Telugu</SelectItem>
-                  <SelectItem value="gu">🇮🇳 ગુજરાતી Gujarati</SelectItem>
-                  <SelectItem value="mr">🇮🇳 मराठी Marathi</SelectItem>
-                  <SelectItem value="pa">🇮🇳 ਪੰਜਾਬੀ Punjabi</SelectItem>
-                  <SelectItem value="kn">🇮🇳 ಕನ್ನಡ Kannada</SelectItem>
-                  <SelectItem value="ml">🇮🇳 മലയാളം Malayalam</SelectItem>
-                  <SelectItem value="es">🇪🇸 Español Spanish</SelectItem>
-                  <SelectItem value="fr">🇫🇷 Français French</SelectItem>
-                  <SelectItem value="de">🇩🇪 Deutsch German</SelectItem>
-                  <SelectItem value="pt">🇵🇹 Português Portuguese</SelectItem>
-                  <SelectItem value="it">🇮🇹 Italiano Italian</SelectItem>
-                  <SelectItem value="ru">🇷🇺 Русский Russian</SelectItem>
-                  <SelectItem value="zh">🇨🇳 简体中文 Chinese</SelectItem>
-                  <SelectItem value="ja">🇯🇵 日本語 Japanese</SelectItem>
-                  <SelectItem value="ko">🇰🇷 한국어 Korean</SelectItem>
-                  <SelectItem value="th">🇹🇭 ไทย Thai</SelectItem>
-                  <SelectItem value="vi">🇻🇳 Tiếng Việt Vietnamese</SelectItem>
-                  <SelectItem value="id">🇮🇩 Bahasa Indonesia</SelectItem>
-                  <SelectItem value="ms">🇲🇾 Bahasa Melayu</SelectItem>
-                  <SelectItem value="tr">🇹🇷 Türkçe Turkish</SelectItem>
-                  <SelectItem value="fa">🇮🇷 فارسی Persian</SelectItem>
-                  <SelectItem value="he">🇮🇱 עברית Hebrew</SelectItem>
-                  <SelectItem value="pl">🇵🇱 Polski Polish</SelectItem>
-                  <SelectItem value="ro">🇷🇴 Română Romanian</SelectItem>
-                  <SelectItem value="hu">🇭🇺 Magyar Hungarian</SelectItem>
-                  <SelectItem value="cs">🇨🇿 Čeština Czech</SelectItem>
-                  <SelectItem value="sk">🇸🇰 Slovenčina Slovak</SelectItem>
-                  <SelectItem value="bg">🇧🇬 Български Bulgarian</SelectItem>
-                  <SelectItem value="hr">🇭🇷 Hrvatski Croatian</SelectItem>
-                  <SelectItem value="sr">🇷🇸 Српски Serbian</SelectItem>
-                  <SelectItem value="uk">🇺🇦 Українська Ukrainian</SelectItem>
-                  <SelectItem value="sw">🇰🇪 Kiswahili Swahili</SelectItem>
-                  <SelectItem value="tl">🇵🇭 Filipino (Tagalog)</SelectItem>
-                  <SelectItem value="am">🇪🇹 አማርኛ Amharic</SelectItem>
-                  <SelectItem value="nl">🇳🇱 Nederlands Dutch</SelectItem>
-                  <SelectItem value="sv">🇸🇪 Svenska Swedish</SelectItem>
-                  <SelectItem value="da">🇩🇰 Dansk Danish</SelectItem>
-                  <SelectItem value="no">🇳🇴 Norsk Norwegian</SelectItem>
-                  <SelectItem value="fi">🇫🇮 Suomi Finnish</SelectItem>
+                  {SUPPORTED_LANGUAGES.map(l => (
+                    <SelectItem key={l.code} value={l.code}>
+                      {l.flag} {l.nativeName}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             )}
-          </div>
-
-          <div className="flex items-center gap-3 flex-1 min-w-[240px] p-3 bg-green-50 rounded-lg border border-green-200">
-            <Volume2 className="w-4 h-4 text-green-600 flex-shrink-0" />
-            <div className="flex items-center gap-2">
-              <Switch
-                checked={speechEnabled}
-                onCheckedChange={setSpeechEnabled}
-                className="data-[state=checked]:bg-green-600"
-              />
-              <span className="text-sm font-medium text-green-900 whitespace-nowrap">Voice Reading</span>
-            </div>
-            {speechEnabled && (
-              <div className="flex items-center gap-2">
-                <Select value={selectedVoice} onValueChange={setSelectedVoice}>
-                  <SelectTrigger className="w-36 border-green-200 h-8 text-sm">
-                    <SelectValue placeholder="Select Voice" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {availableVoices.map((voice) => (
-                      <SelectItem key={voice.name} value={voice.name}>
-                        {voice.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                {isSpeaking && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={stopSpeaking}
-                    className="border-green-200 text-green-700 hover:bg-green-50 h-8"
-                  >
-                    Stop
-                  </Button>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Main setup panel */}
-        <Card id="practice-options" className="shadow-sm">
-          <CardHeader className="pb-4">
-            <CardTitle className="text-lg">Customise Your Practice</CardTitle>
-            <CardDescription>Select your category, difficulty, and practice mode</CardDescription>
-          </CardHeader>
-
-          <CardContent className="space-y-5">
-            {/* Category + Difficulty */}
-            <div className="grid md:grid-cols-2 gap-4 pb-5 border-b">
-              <div>
-                <Label className="text-sm font-medium mb-1.5 block">Medical Specialty</Label>
-                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select category" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {availableCategories.map((category) => (
-                      <SelectItem key={category.value} value={category.value}>
-                        {category.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <Label className="text-sm font-medium mb-1.5 block">Difficulty Level</Label>
-                <Select value={selectedDifficulty} onValueChange={setSelectedDifficulty}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select difficulty" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="foundation">Foundation</SelectItem>
-                    <SelectItem value="intermediate">Intermediate</SelectItem>
-                    <SelectItem value="advanced">Advanced</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-
-            {/* Step 1 — Mode tabs */}
-            <div>
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Step 1 — Select Mode</p>
-              <div className="flex gap-2 flex-wrap">
-                {MODE_TABS.map((mode) => (
-                  <button
-                    key={mode.id}
-                    onClick={() => handleModeChange(mode.id)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium border transition-all whitespace-nowrap ${
-                      selectedMode === mode.id
-                        ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
-                        : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400 hover:text-blue-700'
-                    }`}
-                  >
-                    {mode.label}
-                  </button>
-                ))}
-              </div>
-              <p className="text-sm text-gray-500 mt-2">{currentMode.description}</p>
-            </div>
-
-            {/* Step 2 — Count / Duration pills */}
-            {selectedMode !== 'unlimited' && selectedMode !== 'spot-diagnosis' && (
-              <div>
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                  Step 2 — {selectedMode === 'timed' ? 'Select Duration' : 'Select Question Count'}
-                  {selectedMode === 'plab' && (
-                    <span className="ml-2 normal-case font-normal text-gray-400">· 1 minute per question</span>
-                  )}
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  {(selectedMode === 'timed' ? TIMED_OPTIONS : selectedMode === 'plab' ? PLAB_COUNTS : PRACTICE_COUNTS).map((opt) => (
-                    <button
-                      key={opt.value}
-                      onClick={() => setSelectedCount(opt.value)}
-                      className={`flex flex-col items-center justify-center px-5 py-2 rounded-full text-sm font-medium border transition-all min-w-[72px] ${
-                        selectedCount === opt.value
-                          ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
-                          : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400 hover:text-blue-700'
-                      }`}
-                    >
-                      <span className="font-semibold">{opt.label}</span>
-                      {'note' in opt && opt.note && (
-                        <span className={`text-[10px] leading-none mt-0.5 ${selectedCount === opt.value ? 'text-blue-100' : 'text-gray-400'}`}>
-                          {opt.note}
-                        </span>
-                      )}
-                    </button>
+            {speechEnabled && availableVoices.length > 0 && (
+              <Select value={selectedVoice} onValueChange={setSelectedVoice}>
+                <SelectTrigger className="h-9 w-44 text-sm border-teal-200 bg-teal-50/60">
+                  <SelectValue placeholder="Voice" />
+                </SelectTrigger>
+                <SelectContent className="max-h-72 overflow-y-auto">
+                  {availableVoices.map(v => (
+                    <SelectItem key={v.name} value={v.name}>{v.name}</SelectItem>
                   ))}
-                </div>
-              </div>
+                </SelectContent>
+              </Select>
             )}
-
-            {/* Start button */}
-            <div className="pt-1">
+            {speechEnabled && isSpeaking && (
               <Button
-                onClick={handleStart}
-                disabled={isGeneratingQuestions || !canStart}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2.5 font-semibold"
+                variant="outline"
+                size="sm"
+                onClick={stopSpeaking}
+                className="h-9 border-teal-200 text-teal-700 hover:bg-teal-50"
               >
-                {isGeneratingQuestions ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                    Generating…
-                  </>
-                ) : (
-                  <>
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    {selectedMode === 'unlimited' ? 'Start Unlimited Practice' : selectedMode === 'spot-diagnosis' ? 'Open Spot Diagnosis' : 'Start Session'}
-                  </>
-                )}
+                Stop voice
               </Button>
+            )}
+          </div>
+        )}
+
+        {/* Weak Areas — top horizontal scroller */}
+        {weakAreas && weakAreas.length > 0 && (
+          <section className="mt-4">
+            <div className="px-6 mb-3">
+              <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">
+                {translateText('Recommended Focus')}
+              </h2>
             </div>
-          </CardContent>
-        </Card>
+            <div className="flex overflow-x-auto px-6 pb-4 gap-3 plab1-no-scrollbar snap-x">
+              {weakAreas.slice(0, 6).map((area, i) => {
+                const visual = WEAK_AREA_ICON[i % WEAK_AREA_ICON.length];
+                const Icon = visual.Icon;
+                const label =
+                  availableCategories.find(c => c.value === area.category)?.label ?? area.category;
+                const pct = Math.max(
+                  0,
+                  Math.min(100, Math.round((area.estimatedStudyTime ?? 0) % 100) || 50),
+                );
+                return (
+                  <button
+                    key={`${area.category}-${i}`}
+                    type="button"
+                    onClick={() => handleWeakAreaClick(area.category)}
+                    aria-label={`Focus on ${label} (${area.priority} priority)`}
+                    className="snap-start shrink-0 w-[160px] bg-white p-3 rounded-2xl shadow-sm border border-slate-100 text-left transition-transform active:scale-95"
+                    data-testid={`weak-area-${area.category}`}
+                  >
+                    <div className="flex items-start justify-between mb-2">
+                      <div className={`p-2 rounded-xl ${visual.bg}`}>
+                        <Icon className={`w-5 h-5 ${visual.color}`} />
+                      </div>
+                      <div className="relative w-10 h-10 flex items-center justify-center">
+                        <svg className="w-10 h-10 -rotate-90" viewBox="0 0 40 40">
+                          <circle cx="20" cy="20" r="16" fill="transparent" stroke="#f1f5f9" strokeWidth="4" />
+                          <circle
+                            cx="20" cy="20" r="16" fill="transparent"
+                            strokeWidth="4" strokeLinecap="round"
+                            strokeDasharray={`${(pct / 100) * 100.5} 100.5`}
+                            className={visual.ring}
+                          />
+                        </svg>
+                        <span className="absolute text-[10px] font-bold text-slate-700">
+                          {area.priority === 'high' ? '!' : pct + '%'}
+                        </span>
+                      </div>
+                    </div>
+                    <h3 className="font-semibold text-slate-800 text-sm leading-tight">{label}</h3>
+                    <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                      {area.suggestedAction || area.reason}
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* Chip rows — single-line horizontal scrollers */}
+        <section className="space-y-5 mt-2">
+          <ChipRow
+            label="Topic"
+            items={availableCategories.map(c => ({ value: c.value, label: c.label }))}
+            value={selectedCategory}
+            onChange={setSelectedCategory}
+            testIdPrefix="topic"
+          />
+          <ChipRow
+            label="Difficulty"
+            items={DIFFICULTIES}
+            value={selectedDifficulty}
+            onChange={setSelectedDifficulty}
+            testIdPrefix="difficulty"
+          />
+          <ChipRow
+            label="Mode"
+            items={MODE_CHIPS.map(m => ({ value: m.id, label: m.label }))}
+            value={selectedMode}
+            onChange={(v) => handleModeChange(v as SessionMode)}
+            testIdPrefix="mode"
+          />
+          {showCount && (
+            <ChipRow
+              label={selectedMode === 'timed' ? 'Duration' : 'Questions'}
+              items={countOptions.map(o => ({
+                value: String(o.value),
+                label: o.label,
+                note: o.note,
+              }))}
+              value={String(selectedCount)}
+              onChange={(v) => setSelectedCount(Number(v))}
+              testIdPrefix="count"
+            />
+          )}
+          <p className="px-6 text-xs text-slate-500 leading-relaxed">
+            {MODE_CHIPS.find(m => m.id === selectedMode)?.description}
+          </p>
+        </section>
+      </div>
+
+      {/* Floating CTA */}
+      <div className="fixed bottom-0 left-0 right-0 px-4 pb-5 pt-6 pointer-events-none z-40
+                      bg-gradient-to-t from-slate-50 via-slate-50/95 to-transparent">
+        <div className="max-w-[680px] mx-auto pointer-events-auto">
+          <Button
+            onClick={handleStart}
+            disabled={isGeneratingQuestions}
+            className="w-full h-16 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white shadow-xl shadow-teal-200/50 flex flex-col items-center justify-center gap-0.5 border-none disabled:opacity-70"
+            data-testid="button-start-session"
+          >
+            {isGeneratingQuestions ? (
+              <div className="flex items-center gap-2 text-base font-semibold">
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                Generating…
+              </div>
+            ) : (
+              <>
+                <div className="flex items-center gap-2 text-lg font-bold">
+                  {translateText(
+                    selectedMode === 'unlimited'      ? 'Start Unlimited' :
+                    selectedMode === 'spot-diagnosis' ? 'Open Spot Diagnosis' :
+                                                       'Start Session'
+                  )}
+                  <Play className="w-5 h-5 fill-current" />
+                </div>
+                <span className="text-teal-50 text-xs font-medium truncate max-w-full px-3">
+                  {summary}
+                </span>
+              </>
+            )}
+          </Button>
+        </div>
+      </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        .plab1-no-scrollbar::-webkit-scrollbar { display: none; }
+        .plab1-no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}} />
+    </div>
+  );
+}
+
+interface ChipRowProps {
+  label: string;
+  items: { value: string; label: string; note?: string }[];
+  value: string;
+  onChange: (v: string) => void;
+  testIdPrefix: string;
+}
+
+function ChipRow({ label, items, value, onChange, testIdPrefix }: ChipRowProps) {
+  return (
+    <div>
+      <h2 className="text-sm font-semibold text-slate-800 mb-3 px-6">{label}</h2>
+      <div className="flex overflow-x-auto px-6 gap-2 plab1-no-scrollbar snap-x">
+        {items.map(item => {
+          const active = value === item.value;
+          return (
+            <button
+              key={item.value}
+              type="button"
+              role="radio"
+              aria-checked={active}
+              aria-label={`${label}: ${item.label}${item.note ? ` (${item.note})` : ''}`}
+              onClick={() => onChange(item.value)}
+              className={`snap-start shrink-0 px-4 py-2.5 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
+                active
+                  ? 'bg-teal-600 text-white shadow-md shadow-teal-200'
+                  : 'bg-white text-slate-600 border border-slate-200 hover:border-teal-300 hover:bg-teal-50'
+              }`}
+              data-testid={`chip-${testIdPrefix}-${item.value}`}
+            >
+              {item.label}
+              {item.note && (
+                <span className={`ml-1.5 text-[10px] ${active ? 'text-teal-50' : 'text-slate-400'}`}>
+                  · {item.note}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
