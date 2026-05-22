@@ -347,13 +347,18 @@ export function SessionSetup({
             onChange={setSelectedDifficulty}
             testIdPrefix="difficulty"
           />
-          <ChipRow
-            label="Mode"
-            items={MODE_CHIPS.map(m => ({ value: m.id, label: m.label }))}
-            value={selectedMode}
-            onChange={(v) => handleModeChange(v as SessionMode)}
-            testIdPrefix="mode"
-          />
+          <div>
+            <ChipRow
+              label="Mode"
+              items={MODE_CHIPS.map(m => ({ value: m.id, label: m.label }))}
+              value={selectedMode}
+              onChange={(v) => handleModeChange(v as SessionMode)}
+              testIdPrefix="mode"
+            />
+            <p className="px-6 mt-2 text-xs text-slate-500 leading-relaxed">
+              {MODE_CHIPS.find(m => m.id === selectedMode)?.description}
+            </p>
+          </div>
           {showCount && (
             <ChipRow
               label={selectedMode === 'timed' ? 'Duration' : 'Questions'}
@@ -367,9 +372,6 @@ export function SessionSetup({
               testIdPrefix="count"
             />
           )}
-          <p className="px-6 text-xs text-slate-500 leading-relaxed">
-            {MODE_CHIPS.find(m => m.id === selectedMode)?.description}
-          </p>
         </section>
       </div>
 
