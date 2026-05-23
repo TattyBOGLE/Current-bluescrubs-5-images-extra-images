@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle, XCircle, Volume2, Languages } from "lucide-react";
 
@@ -74,13 +73,27 @@ export function QuizQuestion({
           {/* Translation Controls */}
           <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200">
             <div className="flex items-center gap-3">
-              <Languages className="w-4 h-4 text-teal-600" />
-              <Switch
-                checked={translateQuestions}
-                onCheckedChange={setTranslateQuestions}
-                className="data-[state=checked]:bg-teal-600"
-              />
-              <span className="text-sm text-gray-700">Translate</span>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={translateQuestions}
+                aria-label="Toggle translation"
+                onClick={() => setTranslateQuestions(!translateQuestions)}
+                className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
+                  translateQuestions
+                    ? 'bg-teal-600 border-teal-600 text-white'
+                    : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
+                }`}
+                data-testid="toggle-translate"
+              >
+                <Languages className="w-4 h-4" />
+                Translate
+                <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
+                  translateQuestions ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
+                }`}>
+                  {translateQuestions ? 'ON' : 'OFF'}
+                </span>
+              </button>
               {translateQuestions && (
                 <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
                   <SelectTrigger className="w-36 h-8 text-xs">
@@ -153,16 +166,31 @@ export function QuizQuestion({
           {/* Voice Controls */}
           <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200">
             <div className="flex items-center gap-3">
-              <Volume2 className="w-4 h-4 text-teal-600" />
-              <Switch
-                checked={speechEnabled}
-                onCheckedChange={(checked) => {
-                  setSpeechEnabled(checked);
-                  if (!checked) stopSpeaking();
+              <button
+                type="button"
+                role="switch"
+                aria-checked={speechEnabled}
+                aria-label="Toggle voice reading"
+                onClick={() => {
+                  const next = !speechEnabled;
+                  setSpeechEnabled(next);
+                  if (!next) stopSpeaking();
                 }}
-                className="data-[state=checked]:bg-teal-600"
-              />
-              <span className="text-sm text-gray-700">Voice</span>
+                className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
+                  speechEnabled
+                    ? 'bg-teal-600 border-teal-600 text-white'
+                    : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
+                }`}
+                data-testid="toggle-voice"
+              >
+                <Volume2 className="w-4 h-4" />
+                Voice
+                <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
+                  speechEnabled ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
+                }`}>
+                  {speechEnabled ? 'ON' : 'OFF'}
+                </span>
+              </button>
               {speechEnabled && (
                 <>
                   <Select value={selectedVoice} onValueChange={setSelectedVoice}>
