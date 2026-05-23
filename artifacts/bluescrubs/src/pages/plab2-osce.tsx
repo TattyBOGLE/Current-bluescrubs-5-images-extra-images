@@ -455,7 +455,8 @@ export default function Plab2Osce() {
                   <button
                     onClick={() => handleAskTutor(tutorInput)}
                     disabled={!tutorInput.trim() || isLoadingTutor}
-                    className="self-end h-10 w-10 rounded-xl bg-gradient-to-r from-teal-600 to-teal-700 text-white flex items-center justify-center disabled:opacity-60"
+                    className="self-end h-10 w-10 rounded-xl bg-gradient-to-r from-teal-600 to-teal-700 flex items-center justify-center disabled:opacity-60"
+                    style={{ color: '#ffffff' }}
                   >
                     <Send className="w-4 h-4" />
                   </button>
@@ -514,7 +515,8 @@ export default function Plab2Osce() {
             </div>
             <button
               onClick={() => handleStationComplete(activeStation.id, selfScore)}
-              className="w-full h-11 rounded-xl bg-gradient-to-r from-teal-600 to-teal-700 text-white text-sm font-semibold shadow-sm shadow-teal-200 hover:opacity-95"
+              className="w-full h-11 rounded-xl bg-gradient-to-r from-teal-600 to-teal-700 text-sm font-semibold shadow-sm shadow-teal-200 hover:opacity-95"
+              style={{ color: '#ffffff' }}
               data-testid="button-complete-station"
             >
               Complete station

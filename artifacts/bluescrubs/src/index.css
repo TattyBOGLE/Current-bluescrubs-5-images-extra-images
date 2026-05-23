@@ -675,9 +675,8 @@ p#subtext {
 
 .bg-gradient-to-br.from-blue-600 p,
 .bg-gradient-to-br.from-blue-600 p *,
-.bg-gradient-to-br p,
-.bg-gradient-to-br h2,
-.bg-gradient-to-br h3 {
+.bg-gradient-to-br.from-blue-600 h2,
+.bg-gradient-to-br.from-blue-600 h3 {
   color: #ffffff !important;
 }
 

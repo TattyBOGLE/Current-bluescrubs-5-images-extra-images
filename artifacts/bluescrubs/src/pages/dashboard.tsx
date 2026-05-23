@@ -44,7 +44,7 @@ export default function Dashboard() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-20 md:pb-0">
+    <div className="min-h-screen bg-slate-50 pb-24 md:pb-0">
       {/* Dashboard Hero Section */}
       <section className="relative min-h-[400px] overflow-hidden dashboard-hero">
         <img 

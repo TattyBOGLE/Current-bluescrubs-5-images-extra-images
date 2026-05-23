@@ -53,7 +53,7 @@ export default function CostCalculator() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 p-6">
+    <div className="min-h-screen bg-slate-50 p-6 pb-24">
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">

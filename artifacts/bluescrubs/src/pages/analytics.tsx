@@ -140,13 +140,13 @@ export default function Analytics() {
   const weakest = specialties.slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-20">
+    <div className="min-h-screen bg-slate-50 pb-24">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 text-white">
+      <section className="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700" style={{ color: '#ffffff' }}>
         <div className="max-w-6xl mx-auto px-6 py-10">
-          <div className="text-xs uppercase tracking-wider opacity-80">Analytics</div>
-          <h1 className="text-3xl md:text-4xl font-semibold mt-1">Performance Analytics</h1>
-          <p className="text-white/85 mt-2 max-w-2xl">
+          <div className="text-xs uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.8)' }}>Analytics</div>
+          <h1 className="text-3xl md:text-4xl font-semibold mt-1" style={{ color: '#ffffff' }}>Performance Analytics</h1>
+          <p className="mt-2 max-w-2xl" style={{ color: 'rgba(255,255,255,0.9)' }}>
             Detailed insight into your PLAB 1 preparation. Track accuracy, time, streak, and where to focus next.
           </p>
 
@@ -247,7 +247,8 @@ export default function Analytics() {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full mt-4 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white rounded-xl"
+                <Button className="w-full mt-4 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 rounded-xl"
+                  style={{ color: '#ffffff' }}
                   onClick={() => setLocation(`/plab1?focus=${encodeURIComponent(weakest.map(w => w.name).join(","))}`)}
                   data-testid="button-practice-weakest">
                   Practice these specialties
