@@ -1,455 +1,263 @@
-import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { ProgressChart } from "@/components/progress-chart";
-import { 
-  BookOpen, Users, GraduationCap, Play, Clock, CheckCircle, 
-  TrendingUp, Calendar, Award, Flame, Heart, Brain, Stethoscope 
+import {
+  Search, Bell, BookOpen, Stethoscope, Sparkles, Timer,
+  ChevronRight, Flame, Award, Heart, Brain, Activity, Baby, Eye, Pill,
+  CheckCircle, TrendingUp,
 } from "lucide-react";
-import type { User, UserStats, Question, CommunityPost, StudyPlan } from "@/lib/types";
-import dashboardHeroImage from '@assets/B584B977-70BB-4134-8338-FD9B4B07B0D0_1750518606574.png';
+import type { UserStats, CommunityPost } from "@/lib/types";
 
-// Mock user for demo - in real app this would come from auth
-const DEMO_USER: User = {
+const DEMO_USER = {
   id: 1,
-  email: "demo@example.com",
   username: "Dr. Sarah Ahmed",
-
-  currentStage: "plab1",
   studyStreak: 12,
   totalPoints: 2847,
-  country: "UK",
-  city: "London",
-  flagEmoji: "🇬🇧",
-  timezone: "Europe/London",
-  isLocationPublic: true,
-  createdAt: new Date().toISOString()
 };
 
-export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+const CATEGORIES = [
+  { slug: "cardiology",  label: "Cardiology",  Icon: Heart,       tone: "bg-rose-50 text-rose-600" },
+  { slug: "neurology",   label: "Neurology",   Icon: Brain,       tone: "bg-violet-50 text-violet-600" },
+  { slug: "respiratory", label: "Respiratory", Icon: Activity,    tone: "bg-sky-50 text-sky-600" },
+  { slug: "paediatrics", label: "Paediatrics", Icon: Baby,        tone: "bg-amber-50 text-amber-600" },
+];
 
-  // Fetch user stats
+const SHORTCUTS = [
+  { to: "/plab1-new",         label: "PLAB 1",  desc: "MCQ practice",        Icon: BookOpen,    accent: "from-teal-500 to-teal-600" },
+  { to: "/plab2-osce",        label: "PLAB 2",  desc: "OSCE stations",       Icon: Stethoscope, accent: "from-teal-600 to-emerald-600" },
+  { to: "/adaptive-learning", label: "Smart",   desc: "Adaptive sessions",   Icon: Sparkles,    accent: "from-teal-500 to-cyan-600" },
+  { to: "/plab1-new",         label: "Mocks",   desc: "Timed full mock",     Icon: Timer,       accent: "from-teal-600 to-teal-700" },
+];
+
+const RECOMMENDED = [
+  { slug: "cardiology",  title: "Cardiology Essentials",  meta: "32 questions",  Icon: Heart,      tint: "bg-rose-50 text-rose-600" },
+  { slug: "neurology",   title: "Neurology High-Yield",   meta: "24 questions",  Icon: Brain,      tint: "bg-violet-50 text-violet-600" },
+  { slug: "respiratory", title: "Respiratory Review",     meta: "20 questions",  Icon: Activity,   tint: "bg-sky-50 text-sky-600" },
+  { slug: "pharmacology",title: "Pharmacology Quick-Fire", meta: "15 questions", Icon: Pill,       tint: "bg-emerald-50 text-emerald-600" },
+];
+
+export default function Home() {
   const { data: userStats } = useQuery<UserStats>({
     queryKey: [`/api/users/${DEMO_USER.id}/stats`],
   });
-
-  // Fetch recent questions for quick practice
-  const { data: questions } = useQuery<Question[]>({
-    queryKey: [`/api/questions?examType=plab1&limit=5`],
-  });
-
-  // Fetch community posts
   const { data: communityPosts } = useQuery<(CommunityPost & { author: { username: string } })[]>({
-    queryKey: [`/api/community/posts?limit=3`],
+    queryKey: [`/api/community/posts?limit=2`],
   });
 
-  // Today's date for study plan
-  const today = new Date().toISOString().split('T')[0];
-  const { data: todaysPlan } = useQuery<StudyPlan>({
-    queryKey: [`/api/users/${DEMO_USER.id}/study-plan/${today}`],
-  });
-
-  const categoryStats = userStats?.categoryStats || {};
-  const topCategories = Object.entries(categoryStats)
-    .map(([category, stats]) => ({
-      category,
-      accuracy: stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0,
-      total: stats.total
-    }))
-    .sort((a, b) => b.accuracy - a.accuracy)
-    .slice(0, 4);
+  const firstName = DEMO_USER.username.split(" ").slice(-1)[0];
+  const initials = DEMO_USER.username.split(" ").slice(-2).map(p => p[0]).join("");
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      {/* Dashboard Hero Section */}
-      <section className="relative bg-gradient-to-r from-teal-500 to-teal-700 min-h-[400px] overflow-hidden">
-        <img 
-          src={dashboardHeroImage}
-          alt="Medical Dashboard"
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
-          loading="eager"
-          decoding="async"
-        />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-2xl">
-              Welcome back, {DEMO_USER.username.split(' ')[1]}!
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 drop-shadow-lg opacity-95">
-              Continue your PLAB journey with personalised study plans and comprehensive practice.
-            </p>
-            
-            <div className="flex justify-center gap-4">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/30">
-                <div className="flex items-center space-x-2 mb-1">
-                  <Flame className="w-5 h-5 text-white" />
-                  <span className="text-sm font-medium text-white">Study Streak</span>
-                </div>
-                <div className="text-2xl font-bold text-white">{DEMO_USER.studyStreak} days</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/30">
-                <div className="flex items-center space-x-2 mb-1">
-                  <Award className="w-5 h-5 text-white" />
-                  <span className="text-sm font-medium text-white">Total Points</span>
-                </div>
-                <div className="text-2xl font-bold text-white">{DEMO_USER.totalPoints.toLocaleString()}</div>
-              </div>
-            </div>
+    <div className="min-h-screen bg-slate-50 pb-24 md:pb-12">
+      <div className="max-w-[680px] md:max-w-5xl mx-auto px-4 pt-6 space-y-5">
 
-            <div className="flex justify-center gap-4 mt-8">
-              <Link href="/plab1">
-                <Button size="lg" className="bg-white text-teal-700 hover:bg-gray-100 font-semibold px-8 py-3">
-                  Continue Learning
-                </Button>
-              </Link>
-              <Link href="/plab1-new">
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 px-8 py-3">
-                  View Progress
-                </Button>
-              </Link>
+        {/* Top bar */}
+        <header className="flex items-center justify-between">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white text-sm font-bold shrink-0 shadow-sm shadow-teal-200">
+              {initials}
+            </div>
+            <div className="min-w-0">
+              <p className="text-[11px] text-slate-500 font-medium uppercase tracking-wider">Welcome back</p>
+              <p className="text-sm font-bold text-slate-900 truncate">{firstName}</p>
             </div>
           </div>
-        </div>
-      </section>
+          <div className="flex items-center gap-2">
+            <button
+              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:text-teal-700 hover:border-teal-200"
+              aria-label="Search"
+              data-testid="button-search"
+            >
+              <Search className="w-4 h-4" />
+            </button>
+            <button
+              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:text-teal-700 hover:border-teal-200 relative"
+              aria-label="Notifications"
+              data-testid="button-notifications"
+            >
+              <Bell className="w-4 h-4" />
+              <span className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-rose-500" />
+            </button>
+          </div>
+        </header>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Quick Action Cards */}
-        <section className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/plab1">
-              <Card className="card-hover cursor-pointer">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-teal-600/10 rounded-lg flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-teal-600" />
-                    </div>
-                    <Badge variant="secondary">Active</Badge>
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">PLAB 1 MCQs</h3>
-                  <p className="text-sm text-gray-600 mb-4">Practice multiple choice questions</p>
-                  <div className="flex items-center text-sm text-teal-600 font-medium">
-                    <Play className="w-4 h-4 mr-2" />
-                    Start Practice
-                  </div>
-                </CardContent>
-              </Card>
+        {/* Hero CTA */}
+        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 p-5 text-white shadow-sm shadow-teal-200">
+          <div className="absolute -right-8 -top-10 w-40 h-40 rounded-full bg-white/10" />
+          <div className="absolute -right-4 bottom-0 w-28 h-28 rounded-full bg-white/5" />
+          <div className="relative max-w-[78%]">
+            <div className="flex items-center gap-2 mb-2">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-[11px] font-semibold tracking-wider uppercase text-teal-50">
+                Ready to study?
+              </span>
+            </div>
+            <h1 className="text-2xl font-bold leading-tight">Continue your PLAB journey</h1>
+            <p className="text-sm text-teal-50 mt-1">Pick up where you left off.</p>
+            <Link
+              href="/plab1-new"
+              className="inline-flex items-center gap-1 mt-4 h-10 px-5 rounded-full bg-white text-teal-700 text-sm font-semibold shadow-sm hover:bg-teal-50"
+              data-testid="button-start-practising"
+            >
+              Start practising
+              <ChevronRight className="w-4 h-4" />
             </Link>
+          </div>
+          <Stethoscope className="absolute right-4 bottom-4 w-20 h-20 text-white/15" strokeWidth={1.5} />
+        </section>
 
-            <Link href="/plab2">
-              <Card className="card-hover cursor-pointer">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-rose-500/10 rounded-lg flex items-center justify-center">
-                      <Stethoscope className="w-6 h-6 text-rose-500" />
-                    </div>
-                    <Badge variant="outline">Coming Soon</Badge>
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">PLAB 2 OSCE</h3>
-                  <p className="text-sm text-gray-600 mb-4">Clinical station simulations</p>
-                  <div className="flex items-center text-sm text-rose-500 font-medium">
-                    <Play className="w-4 h-4 mr-2" />
-                    Start OSCE
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+        {/* Streak / points stat strip */}
+        <section className="grid grid-cols-2 gap-2">
+          <StatPill Icon={Flame}  label="Day streak"  value={`${DEMO_USER.studyStreak}`} />
+          <StatPill Icon={Award}  label="Points"      value={DEMO_USER.totalPoints.toLocaleString()} />
+        </section>
 
-            <Card className="card-hover cursor-pointer">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-emerald-500" />
-                  </div>
-                  <Badge variant="secondary">Ready</Badge>
+        {/* Shortcuts row */}
+        <section>
+          <div className="flex items-center justify-between px-1 mb-3">
+            <h2 className="text-base font-bold text-slate-900">Quick start</h2>
+            <Link href="/more" className="text-xs font-medium text-teal-700 hover:text-teal-800">See all</Link>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {SHORTCUTS.map((s) => (
+              <Link
+                key={s.label}
+                href={s.to}
+                className="flex flex-col items-center gap-2 group"
+                data-testid={`shortcut-${s.label.toLowerCase()}`}
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.accent} flex items-center justify-center shadow-sm shadow-teal-200 group-hover:scale-[1.03] transition-transform`}>
+                  <s.Icon className="w-6 h-6 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Timed Mock</h3>
-                <p className="text-sm text-gray-600 mb-4">Full exam simulation</p>
-                <div className="flex items-center text-sm text-emerald-500 font-medium">
-                  <Play className="w-4 h-4 mr-2" />
-                  Start Mock
+                <div className="text-center">
+                  <div className="text-xs font-semibold text-slate-900 leading-tight">{s.label}</div>
+                  <div className="text-[10px] text-slate-500 leading-tight">{s.desc}</div>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover cursor-pointer">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-purple-500" />
-                  </div>
-                  <Badge variant="outline">Personal</Badge>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Study Plan</h3>
-                <p className="text-sm text-gray-600 mb-4">Your personalized schedule</p>
-                <div className="flex items-center text-sm text-purple-500 font-medium">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  View Plan
-                </div>
-              </CardContent>
-            </Card>
+              </Link>
+            ))}
           </div>
         </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Progress Overview */}
-            {userStats && (
-              <ProgressChart userStats={userStats} />
-            )}
-
-            {/* Study Modules */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl font-bold">Study Modules</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* PLAB 1 Module */}
-                  <div className="border border-gray-200 rounded-lg p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-teal-600/10 rounded-lg flex items-center justify-center">
-                        <BookOpen className="w-6 h-6 text-teal-600" />
-                      </div>
-                      <Badge className="bg-teal-600/10 text-teal-600">Active</Badge>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">PLAB 1 Practice</h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Master MCQs with 3,000+ questions across all medical specialties
-                    </p>
-                    
-                    <div className="mb-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-gray-700">Progress</span>
-                        <span className="text-sm font-medium text-teal-600">68%</span>
-                      </div>
-                      <Progress value={68} className="h-2" />
-                    </div>
-                    
-                    <Link href="/plab1">
-                      <Button className="w-full btn-medical">
-                        Continue Practice
-                      </Button>
-                    </Link>
-                  </div>
-
-                  {/* PLAB 2 Module */}
-                  <div className="border border-gray-200 rounded-lg p-6 opacity-75">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <Stethoscope className="w-6 h-6 text-gray-400" />
-                      </div>
-                      <Badge variant="secondary" className="bg-gray-100 text-gray-500">Locked</Badge>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">PLAB 2 OSCE</h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Practice clinical stations with video scenarios and communication skills
-                    </p>
-                    
-                    <div className="mb-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-gray-700">Requirement</span>
-                        <span className="text-sm font-medium text-gray-500">Pass PLAB 1</span>
-                      </div>
-                      <Progress value={15} className="h-2" />
-                    </div>
-                    
-                    <Button disabled className="w-full bg-gray-300 text-gray-500 cursor-not-allowed">
-                      Unlock After PLAB 1
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Recent Activity */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl font-bold">Recent Activity</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="w-10 h-10 bg-emerald-500/10 rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-5 h-5 text-emerald-500" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-medium text-gray-900">Completed Cardiology Quiz</p>
-                      <p className="text-sm text-gray-600">Score: 8/10 (80%) • 2 hours ago</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="w-10 h-10 bg-teal-600/10 rounded-full flex items-center justify-center">
-                      <TrendingUp className="w-5 h-5 text-teal-600" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-medium text-gray-900">Improved in Respiratory Medicine</p>
-                      <p className="text-sm text-gray-600">Accuracy increased to 85% • 1 day ago</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="w-10 h-10 bg-amber-500/10 rounded-full flex items-center justify-center">
-                      <Award className="w-5 h-5 text-amber-500" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-medium text-gray-900">Achieved 10-day Study Streak</p>
-                      <p className="text-sm text-gray-600">Keep up the momentum! • 2 days ago</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+        {/* Pick a topic — circular category tiles */}
+        <section>
+          <div className="flex items-center justify-between px-1 mb-3">
+            <h2 className="text-base font-bold text-slate-900">Pick a topic</h2>
+            <Link href="/plab1-new" className="text-xs font-medium text-teal-700 hover:text-teal-800">See all</Link>
           </div>
-
-          {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Today's Study Plan */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Today's Plan</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-gray-900">Cardiology MCQs</p>
-                      <p className="text-xs text-gray-600">20 questions • Completed ✓</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-gray-900">Respiratory MCQs</p>
-                      <p className="text-xs text-gray-600">15 questions • In Progress (7/15)</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-gray-600">Review Flashcards</p>
-                      <p className="text-xs text-gray-500">Endocrinology • Pending</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-gray-600">Mock Exam Review</p>
-                      <p className="text-xs text-gray-500">Previous errors • Pending</p>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-4 gap-2">
+            {CATEGORIES.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/plab1-new?category=${c.slug}`}
+                className="flex flex-col items-center gap-2 group"
+                data-testid={`topic-${c.slug}`}
+              >
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center ${c.tone} ring-1 ring-slate-100 group-hover:ring-teal-200 transition`}>
+                  <c.Icon className="w-7 h-7" strokeWidth={1.75} />
                 </div>
-                
-                <div className="mt-6 pt-4 border-t border-gray-200">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium text-gray-700">Daily Progress</span>
-                    <span className="text-sm font-medium text-teal-600">60%</span>
-                  </div>
-                  <Progress value={60} className="h-2" />
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Performance by Topic */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Performance by Topic</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {topCategories.map(({ category, accuracy, total }) => (
-                    <div key={category} className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                          {category === 'cardiology' ? <Heart className="w-4 h-4 text-red-500" /> :
-                           category === 'neurology' ? <Brain className="w-4 h-4 text-purple-500" /> :
-                           <Stethoscope className="w-4 h-4 text-blue-500" />}
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-900 capitalize">{category}</h4>
-                          <p className="text-xs text-gray-600">{total} questions</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className={`text-lg font-semibold ${
-                          accuracy >= 85 ? 'text-emerald-500' :
-                          accuracy >= 70 ? 'text-amber-500' :
-                          'text-rose-500'
-                        }`}>
-                          {accuracy}%
-                        </div>
-                        <div className="w-16 bg-gray-200 rounded-full h-1">
-                          <div
-                            className={`h-1 rounded-full ${
-                              accuracy >= 85 ? 'bg-emerald-500' :
-                              accuracy >= 70 ? 'bg-amber-500' :
-                              'bg-rose-500'
-                            }`}
-                            style={{ width: `${accuracy}%` }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Community Highlights */}
-            <Card>
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-lg font-bold">Community</CardTitle>
-                  <Link href="/community">
-                    <Button variant="ghost" size="sm" className="text-teal-600">
-                      View All
-                    </Button>
-                  </Link>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {communityPosts?.slice(0, 2).map((post) => (
-                    <div key={post.id} className="border-l-4 border-teal-600 pl-4">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <span className="text-sm font-medium text-gray-900">{post.author.username}</span>
-                        <span className="text-xs text-gray-500">2h ago</span>
-                      </div>
-                      <p className="text-sm text-gray-700 line-clamp-2">{post.content}</p>
-                      <div className="flex items-center space-x-4 mt-2">
-                        <button className="text-xs text-gray-500 hover:text-teal-600">
-                          👍 {post.likes}
-                        </button>
-                        <button className="text-xs text-gray-500 hover:text-teal-600">
-                          💬 {post.replies}
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="mt-4 pt-4 border-t border-gray-200">
-                  <Link href="/community">
-                    <Button variant="outline" className="w-full text-sm">
-                      Join Discussion
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+                <span className="text-[11px] font-medium text-slate-700 text-center leading-tight">
+                  {c.label}
+                </span>
+              </Link>
+            ))}
           </div>
-        </div>
+        </section>
+
+        {/* Continue practising — list */}
+        <section>
+          <div className="flex items-center justify-between px-1 mb-3">
+            <h2 className="text-base font-bold text-slate-900">Recommended</h2>
+            <Link href="/plab1-new" className="text-xs font-medium text-teal-700 hover:text-teal-800">See all</Link>
+          </div>
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-100 overflow-hidden">
+            {RECOMMENDED.map((r) => (
+              <Link
+                key={r.slug}
+                href={`/plab1-new?category=${r.slug}`}
+                className="flex items-center gap-3 p-4 hover:bg-slate-50 transition"
+                data-testid={`recommended-${r.slug}`}
+              >
+                <div className={`w-11 h-11 rounded-2xl flex items-center justify-center ${r.tint} shrink-0`}>
+                  <r.Icon className="w-5 h-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-slate-900 truncate">{r.title}</p>
+                  <p className="text-xs text-slate-500">{r.meta}</p>
+                </div>
+                <span className="h-8 px-3 rounded-full bg-gradient-to-r from-teal-600 to-teal-700 text-white text-xs font-semibold flex items-center gap-1 shrink-0">
+                  Start
+                  <ChevronRight className="w-3 h-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Today */}
+        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-base font-bold text-slate-900">Today</h2>
+            <Link href="/analytics" className="text-xs font-medium text-teal-700 hover:text-teal-800">Details</Link>
+          </div>
+          <ul className="space-y-3">
+            <ActivityRow Icon={CheckCircle} tint="bg-emerald-50 text-emerald-600" title="Completed cardiology quiz" meta="8/10 · 2h ago" />
+            <ActivityRow Icon={TrendingUp}  tint="bg-teal-50 text-teal-700"      title="Respiratory accuracy +5%" meta={userStats?.totalAnswered ? `${userStats.totalAnswered} questions answered` : "1d ago"} />
+            <ActivityRow Icon={Award}       tint="bg-amber-50 text-amber-600"    title="10-day study streak"      meta="Keep going" />
+          </ul>
+        </section>
+
+        {/* Community */}
+        {communityPosts && communityPosts.length > 0 && (
+          <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-base font-bold text-slate-900">Community</h2>
+              <Link href="/community" className="text-xs font-medium text-teal-700 hover:text-teal-800">View all</Link>
+            </div>
+            <div className="space-y-3">
+              {communityPosts.slice(0, 2).map((p) => (
+                <div key={p.id} className="border-l-2 border-teal-400 pl-3">
+                  <p className="text-xs font-semibold text-slate-900">{p.author?.username || "Member"}</p>
+                  <p className="text-sm text-slate-700 line-clamp-2">{p.content}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </div>
+  );
+}
+
+function StatPill({
+  Icon, label, value,
+}: { Icon: React.ComponentType<{ className?: string }>; label: string; value: string }) {
+  return (
+    <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-3 flex items-center gap-3">
+      <div className="w-9 h-9 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+        <Icon className="w-4 h-4 text-teal-700" />
+      </div>
+      <div className="min-w-0">
+        <div className="text-lg font-bold text-slate-900 leading-none tabular-nums">{value}</div>
+        <div className="text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">{label}</div>
+      </div>
+    </div>
+  );
+}
+
+function ActivityRow({
+  Icon, tint, title, meta,
+}: {
+  Icon: React.ComponentType<{ className?: string }>;
+  tint: string; title: string; meta: string;
+}) {
+  return (
+    <li className="flex items-center gap-3">
+      <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${tint} shrink-0`}>
+        <Icon className="w-4 h-4" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-medium text-slate-900 truncate">{title}</p>
+        <p className="text-[11px] text-slate-500">{meta}</p>
+      </div>
+    </li>
   );
 }
