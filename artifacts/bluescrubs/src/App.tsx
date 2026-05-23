@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { I18nProvider } from "@/hooks/useI18n";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { FeedbackWidget } from "@/components/feedback-widget";
 import NotFound from "@/pages/not-found";
 import { useAuth } from "@/hooks/use-auth";
 import { getBypassAuth } from "@/pages/login";
@@ -522,6 +523,7 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <Router />
+            <FeedbackWidget />
           </TooltipProvider>
         </I18nProvider>
       </QueryClientProvider>

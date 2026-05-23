@@ -567,7 +567,60 @@ const lightLimiter = rateLimit({
   ),
 });
 
+// In-memory + JSONL-on-disk feedback store. Lightweight, no schema migration.
+async function appendFeedback(entry: Record<string, unknown>) {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  const dir = path.resolve(process.cwd(), 'data');
+  await fs.mkdir(dir, { recursive: true });
+  const file = path.join(dir, 'feedback.jsonl');
+  await fs.appendFile(file, JSON.stringify(entry) + '\n', 'utf8');
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Feedback intake — accepts short messages from the in-app widget.
+  // Public/unauthenticated, so apply a strict per-IP limiter to prevent
+  // spam and disk-growth abuse on the JSONL store.
+  const feedbackLimiter = rateLimit({
+    windowMs: 60 * 1000,
+    max: 5,
+    standardHeaders: true,
+    legacyHeaders: false,
+    keyGenerator: (req: any) => ipKeyGenerator(req.ip),
+    message: { error: 'Too many feedback submissions. Please wait a minute and try again.' },
+  });
+  app.post('/api/feedback', feedbackLimiter, async (req, res) => {
+    try {
+      const { sentiment, message, email, page, userAgent } = req.body || {};
+      const msg = typeof message === 'string' ? message.trim() : '';
+      if (!msg) return res.status(400).json({ error: 'Message is required' });
+      if (msg.length > 2000) return res.status(400).json({ error: 'Message too long (max 2000 chars)' });
+
+      const allowedSentiments = new Set(['love', 'ok', 'bug', 'idea']);
+      const safeSentiment = allowedSentiments.has(sentiment) ? sentiment : null;
+
+      const safeEmail = typeof email === 'string' && email.length <= 200 && /\S+@\S+\.\S+/.test(email)
+        ? email.trim()
+        : null;
+
+      const entry = {
+        ts: new Date().toISOString(),
+        sentiment: safeSentiment,
+        message: msg,
+        email: safeEmail,
+        page: typeof page === 'string' ? page.slice(0, 200) : null,
+        userAgent: typeof userAgent === 'string' ? userAgent.slice(0, 500) : null,
+        ip: (req.ip || req.socket?.remoteAddress || '').toString().slice(0, 64),
+      };
+
+      await appendFeedback(entry);
+      res.json({ success: true });
+    } catch (err) {
+      console.error('Feedback intake error:', err);
+      res.status(500).json({ error: 'Could not save feedback' });
+    }
+  });
+
   
   // AI Status endpoint
   app.get("/api/ai/status", async (req, res) => {
