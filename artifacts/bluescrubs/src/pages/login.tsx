@@ -44,7 +44,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center">
       {/* Phone-sized frame on desktop; full-bleed on mobile */}
-      <div className="relative w-full max-w-md min-h-screen sm:min-h-0 sm:h-[860px] sm:my-6 sm:rounded-[2.5rem] overflow-hidden bg-white sm:shadow-2xl">
+      <div className="relative w-full max-w-md min-h-screen sm:min-h-[860px] sm:h-auto sm:my-6 sm:rounded-[2.5rem] overflow-hidden bg-white sm:shadow-2xl">
         {/* Doctor photo background — top portion */}
         <div className="relative h-[55vh] sm:h-[470px] w-full overflow-hidden bg-gradient-to-b from-teal-200 to-teal-100">
           <img
