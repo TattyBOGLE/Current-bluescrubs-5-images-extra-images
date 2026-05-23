@@ -151,7 +151,7 @@ export default function More() {
       title: "Multimedia Learning",
       description: "Custom video player with chapters and progress tracking",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/video-osce"
     },
     {
       icon: Brain,
@@ -172,21 +172,21 @@ export default function More() {
       title: "Local Analytics Engine",
       description: "Performance tracking and weakness detection system",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/analytics"
     },
     {
       icon: Timer,
       title: "Study Scheduling",
       description: "Smart scheduling with browser notifications and reminders",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/smart-planner"
     },
     {
       icon: Target,
       title: "Adaptive Difficulty",
       description: "Automatic difficulty adjustment based on performance",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/adaptive-learning"
     },
     {
       icon: MapPin,
@@ -221,21 +221,21 @@ export default function More() {
       title: "Analytics Dashboard",
       description: "Advanced performance tracking and progress analytics",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/analytics"
     },
     {
       icon: MapPin,
       title: "Cultural Bridge",
       description: "UK healthcare culture and communication training",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/cultural-training"
     },
     {
       icon: Building,
       title: "NHS Preparation",
       description: "Complete NHS job application and interview preparation",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/placements"
     },
     {
       icon: UserCheck,
@@ -263,7 +263,7 @@ export default function More() {
       title: "Job Placement",
       description: "NHS job search, CV review, and interview preparation",
       hasArrow: true,
-      link: "/premium"
+      link: "/placements"
     },
     {
       icon: MessageCircle,
@@ -284,14 +284,14 @@ link: "/ask-ai"
       title: "Accessibility",
       description: "Customizable learning experience for diverse needs",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/settings"
     },
     {
       icon: Scale,
       title: "Legal & Privacy",
       description: "Privacy policy, terms of service, and data protection",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/security"
     },
     {
       icon: Zap,
@@ -305,14 +305,14 @@ link: "/ask-ai"
       title: "Neurodiverse Support",
       description: "Specialized learning tools for different cognitive styles",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/settings"
     },
     {
       icon: Headphones,
       title: "Help Center",
       description: "Get support, tutorials, and frequently asked questions",
       hasArrow: true,
-      link: "/dashboard"
+      link: "/how-to"
     }
   ];
 
