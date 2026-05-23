@@ -156,8 +156,10 @@ export default function Analytics() {
                 key={p}
                 onClick={() => setPeriod(p)}
                 aria-pressed={period === p}
-                className={`px-4 py-1.5 rounded-full transition ${
-                  period === p ? "bg-white text-teal-700 shadow" : "text-white/90 hover:bg-white/10"
+                className={`px-4 py-1.5 rounded-full font-medium transition ${
+                  period === p
+                    ? "bg-white !text-teal-700 shadow"
+                    : "!text-white hover:bg-white/10"
                 }`}
                 data-testid={`period-${p}`}
               >
