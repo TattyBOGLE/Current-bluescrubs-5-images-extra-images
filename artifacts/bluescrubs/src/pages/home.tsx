@@ -173,11 +173,12 @@ export default function Home() {
             <p className="text-sm text-teal-50 mt-1">Pick up where you left off.</p>
             <Link
               href="/plab1-new"
-              className="inline-flex items-center gap-1 mt-4 h-10 px-5 rounded-full bg-white text-teal-700 text-sm font-semibold shadow-sm hover:bg-teal-50"
+              className="hero-cta inline-flex items-center gap-1 mt-4 h-10 px-5 rounded-full text-sm font-semibold shadow-sm"
+              style={{ backgroundColor: '#ffffff', color: '#0f766e' }}
               data-testid="button-start-practising"
             >
               Start practising
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-4 h-4" style={{ color: '#0f766e' }} />
             </Link>
           </div>
           <Stethoscope className="absolute right-4 bottom-4 w-20 h-20 text-white/15" strokeWidth={1.5} />
