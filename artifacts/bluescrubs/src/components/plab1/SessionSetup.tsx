@@ -374,33 +374,37 @@ export function SessionSetup({
       <div className="fixed bottom-16 md:bottom-0 left-0 right-0 px-4 pb-3 pt-6 pointer-events-none z-30
                       bg-gradient-to-t from-slate-50 via-slate-50/95 to-transparent">
         <div className="max-w-[680px] mx-auto pointer-events-auto">
-          <Button
+          <button
+            type="button"
             onClick={handleStart}
             disabled={isGeneratingQuestions}
-            className="w-full h-16 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 !text-white shadow-xl shadow-teal-200/50 flex flex-col items-center justify-center gap-0.5 border-none disabled:opacity-70 [&_*]:!text-white"
+            style={{ color: '#ffffff' }}
+            className="w-full h-16 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 shadow-xl shadow-teal-200/50 flex flex-col items-center justify-center gap-0.5 border-none disabled:opacity-70 cursor-pointer"
             data-testid="button-start-session"
           >
             {isGeneratingQuestions ? (
-              <div className="flex items-center gap-2 text-base font-semibold">
+              <div style={{ color: '#ffffff' }} className="flex items-center gap-2 text-base font-semibold">
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 Generating…
               </div>
             ) : (
               <>
-                <div className="flex items-center gap-2 text-lg font-bold">
-                  {translateText(
-                    selectedMode === 'unlimited'      ? 'Start Unlimited' :
-                    selectedMode === 'spot-diagnosis' ? 'Open Spot Diagnosis' :
-                                                       'Start Session'
-                  )}
-                  <Play className="w-5 h-5 fill-current" />
+                <div style={{ color: '#ffffff' }} className="flex items-center gap-2 text-lg font-bold">
+                  <span style={{ color: '#ffffff' }}>
+                    {translateText(
+                      selectedMode === 'unlimited'      ? 'Start Unlimited' :
+                      selectedMode === 'spot-diagnosis' ? 'Open Spot Diagnosis' :
+                                                         'Start Session'
+                    )}
+                  </span>
+                  <Play className="w-5 h-5 fill-current" style={{ color: '#ffffff' }} />
                 </div>
-                <span className="!text-white text-xs font-medium truncate max-w-full px-3">
+                <span style={{ color: '#ffffff' }} className="text-xs font-medium truncate max-w-full px-3">
                   {summary}
                 </span>
               </>
             )}
-          </Button>
+          </button>
         </div>
       </div>
 
