@@ -81,6 +81,7 @@ export default function Team() {
         "Graphic Design & Creative Direction"
       ],
       achievements: [
+        "Level 4 British Athletics Coach — the sport's highest UK coaching qualification",
         "Coached Lee Whiteley to a Bronze medal at the 2013 World Championships",
         "Coached Clovis Asong (400m) to European and Commonwealth Junior Championships",
         "33 English Schools gold medallists coached",
