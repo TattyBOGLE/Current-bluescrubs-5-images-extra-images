@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import {
   Search, Bell, BookOpen, Stethoscope, Sparkles, Timer,
@@ -124,6 +125,18 @@ export default function Home() {
   const firstName = DEMO_USER.username.split(" ").slice(-1)[0];
   const initials = DEMO_USER.username.split(" ").slice(-2).map(p => p[0]).join("");
 
+  // Force CTA pill colors with !important via direct DOM call — beats any cached/legacy CSS rule.
+  const ctaRef = useRef<HTMLAnchorElement | null>(null);
+  useEffect(() => {
+    const a = ctaRef.current;
+    if (!a) return;
+    a.style.setProperty("background-color", "#ffffff", "important");
+    a.style.setProperty("color", "#0f766e", "important");
+    a.querySelectorAll<HTMLElement>("*").forEach((el) => {
+      el.style.setProperty("color", "#0f766e", "important");
+    });
+  });
+
   return (
     <div className="min-h-screen bg-slate-50 pb-24 md:pb-12">
       <div className="max-w-[680px] md:max-w-5xl mx-auto px-4 pt-6 space-y-5">
@@ -141,19 +154,21 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2">
             <button
-              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:text-teal-700 hover:border-teal-200"
+              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center hover:border-teal-300 hover:bg-teal-50"
               aria-label="Search"
               data-testid="button-search"
+              style={{ color: "#334155" }}
             >
-              <Search className="w-4 h-4" />
+              <Search className="w-[18px] h-[18px]" strokeWidth={2.25} style={{ color: "#334155" }} />
             </button>
             <button
-              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:text-teal-700 hover:border-teal-200 relative"
+              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center hover:border-teal-300 hover:bg-teal-50 relative"
               aria-label="Notifications"
               data-testid="button-notifications"
+              style={{ color: "#334155" }}
             >
-              <Bell className="w-4 h-4" />
-              <span className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-rose-500" />
+              <Bell className="w-[18px] h-[18px]" strokeWidth={2.25} style={{ color: "#334155" }} />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white" />
             </button>
           </div>
         </header>
@@ -171,16 +186,22 @@ export default function Home() {
             </div>
             <h1 className="text-2xl font-bold leading-tight">Continue your PLAB journey</h1>
             <p className="text-sm text-teal-50 mt-1">Pick up where you left off.</p>
-            <Link
+            <a
+              ref={ctaRef}
               href="/plab1-new"
               className="hero-cta inline-flex items-center gap-1 mt-4 h-10 px-5 rounded-full text-sm font-semibold shadow-sm"
               data-testid="button-start-practising"
             >
               <span className="hero-cta-label">Start practising</span>
               <ChevronRight className="w-4 h-4 hero-cta-icon" />
-            </Link>
+            </a>
           </div>
-          <Stethoscope className="absolute right-4 bottom-4 w-20 h-20 text-white/15" strokeWidth={1.5} />
+          {/* Decorative progress badge — replaces the stethoscope watermark */}
+          <div className="absolute right-4 bottom-4 w-24 h-24 rounded-full bg-white/15 backdrop-blur-sm flex flex-col items-center justify-center text-white shadow-inner">
+            <Flame className="w-5 h-5 text-amber-200" strokeWidth={2.5} />
+            <span className="text-xl font-extrabold leading-none mt-1">{DEMO_USER.studyStreak}</span>
+            <span className="text-[9px] uppercase tracking-wider text-teal-50 mt-0.5">Day streak</span>
+          </div>
         </section>
 
         {/* Streak / points stat strip */}
