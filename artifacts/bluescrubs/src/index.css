@@ -288,10 +288,10 @@
     fill: white !important;
   }
   
-  /* Force white text on dashboard hero section */
-  section h1,
-  section p,
-  section span {
+  /* Force white text on dashboard hero section (scoped to .dashboard-hero only) */
+  .dashboard-hero h1,
+  .dashboard-hero p,
+  .dashboard-hero span {
     color: white !important;
   }
   
@@ -329,24 +329,28 @@
     color: white !important;
   }
   
-  /* Specific dashboard hero text override */
-  .relative.z-10 h1,
-  .relative.z-10 p,
-  .relative.z-10 span,
-  .relative.z-10 div {
+  /* Specific dashboard hero text override (scoped to .dashboard-hero only) */
+  .dashboard-hero .relative.z-10 h1,
+  .dashboard-hero .relative.z-10 p,
+  .dashboard-hero .relative.z-10 span,
+  .dashboard-hero .relative.z-10 div {
     color: white !important;
   }
   
-  /* Target all text in dashboard hero section */
-  section.relative h1,
-  section.relative p,
-  section.relative span,
-  section.relative div {
+  /* Target all text in dashboard hero section (scoped) */
+  .dashboard-hero section.relative h1,
+  .dashboard-hero section.relative p,
+  .dashboard-hero section.relative span,
+  .dashboard-hero section.relative div {
     color: white !important;
   }
   
-  /* Force white text for dashboard text elements */
-  .text-4xl, .text-5xl, .text-lg, .text-xl, .text-2xl {
+  /* Force white text for dashboard text elements (scoped) */
+  .dashboard-hero .text-4xl,
+  .dashboard-hero .text-5xl,
+  .dashboard-hero .text-lg,
+  .dashboard-hero .text-xl,
+  .dashboard-hero .text-2xl {
     color: white !important;
   }
   
@@ -409,21 +413,13 @@
   --radius: 0.75rem;
 }
 
-/* Comprehensive text visibility fix */
-* {
-  color: inherit !important;
-}
-
+/* Comprehensive text visibility fix — wildcard removed (was breaking Tailwind text-* classes) */
 body {
-  color: #1a1a1a !important;
-  background-color: #ffffff !important;
+  color: #1a1a1a;
+  background-color: #ffffff;
 }
 
-/* Force proper contrast for ALL text elements */
-h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th, label, button, 
-.text-white, .text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500 {
-  color: #1a1a1a !important;
-}
+/* Removed broad element selector that forced all text dark — let Tailwind classes work */
 
 /* Specific overrides for light text that should remain light */
 .text-white.bg-blue-600,
@@ -447,63 +443,9 @@ input, textarea, select, placeholder {
   background-color: #ffffff !important;
 }
 
-/* Ensure all Tailwind text utilities show dark text */
-.text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl {
-  color: #1a1a1a !important;
-}
-
-/* Additional comprehensive text fixes */
-[class*="text-"], [class*="Text"], 
-.prose, .prose *, 
-.card *, .Card *, 
-.button *, .Button *,
-.container *, .Container *,
-.flex *, .grid *,
-.space-y-* *, .space-x-* *,
-.gap-* *, .p-* *, .m-* *,
-.rounded * {
-  color: #1a1a1a !important;
-}
-
-/* Force all React component text to be visible */
-div[class*="text"] *,
-span[class*="text"] *,
-p[class*="text"] *,
-h1[class*="text"] *,
-h2[class*="text"] *,
-h3[class*="text"] *,
-h4[class*="text"] *,
-h5[class*="text"] *,
-h6[class*="text"] * {
-  color: #1a1a1a !important;
-}
-
-/* Specific fixes for shadcn/ui components */
-.card-header *, .card-content *, .card-title *, .card-description *,
-.button *, .input *, .textarea *, .label *, .badge *,
-.alert *, .dialog *, .dropdown * {
-  color: #1a1a1a !important;
-}
-
-/* Ultimate text visibility fix - override everything */
-* {
-  color: #1a1a1a !important;
-}
-
-/* Force visibility on all possible selectors */
-body *, html *, div *, span *, p *, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, 
-a *, li *, ul *, ol *, button *, input *, textarea *, label *, 
-.card *, .Card *, [class*="card"] *, [class*="Card"] *,
-[class*="text"] *, [data-testid] *, [role] *, 
-.container *, .flex *, .grid *, .space-y *, .space-x *,
-.gap *, .p *, .m *, .rounded *, .border *, .shadow * {
-  color: #1a1a1a !important;
-}
-
-/* React component text visibility */
-[class] *, [className] * {
-  color: #1a1a1a !important;
-}
+/* NOTE: removed legacy "ultimate text visibility" wildcard overrides that were
+   forcing every text node to #1a1a1a/white !important and wiping out Tailwind
+   text-* classes. Modern Tailwind v4 already provides proper color utilities. */
 
 /* Exception for elements that should remain white */
 .bg-blue-600, .bg-blue-600 *,
