@@ -192,8 +192,8 @@ The "explanation" field MUST be a detailed string (not an object), minimum 150 w
 Return ONLY a valid JSON array. No additional text.`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o",
-      max_tokens: 8000,
+      model: "gpt-4o-mini",
+      max_tokens: Math.min(8000, Math.max(1500, count * 600)),
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7
     });
@@ -1090,21 +1090,55 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
     const { category, difficulty = "mixed", count = 50 } = req.body;
     const requestedCount = parseInt(String(count)) || 50;
 
-    // If AI is unavailable, serve questions from the existing bank
-    if (!isAIEnabled()) {
-      const questions = pickFromBank(category, difficulty, requestedCount);
+    // Prefer the local bank whenever it can STRICTLY satisfy the request
+    // (category+difficulty filters honoured exactly). Avoids a 20s+ AI
+    // round-trip when the bank already covers the requested slice.
+    // Note: pickFromBank() relaxes filters when matches < 5, which is fine
+    // as a last-resort fallback but unsafe here — so we count strict matches
+    // first and only short-circuit when that strict count is sufficient.
+    const strictMatchCount = (() => {
+      let pool: any[] = ukQuestionBank;
+      if (category && category !== 'all') {
+        const needle = category.toLowerCase().replace(/[-_\s]+/g, '');
+        pool = pool.filter((q: any) => {
+          const qCat = (q.category || q.topic || '').toLowerCase().replace(/[-_\s]+/g, '');
+          return qCat && (qCat.includes(needle) || needle.includes(qCat));
+        });
+      }
+      if (difficulty && difficulty !== 'mixed') {
+        pool = pool.filter((q: any) =>
+          (q.difficulty || '').toLowerCase() === difficulty.toLowerCase()
+        );
+      }
+      return pool.length;
+    })();
 
-      if (questions.length === 0) {
+    if (strictMatchCount >= requestedCount) {
+      const fromBank = pickFromBank(category, difficulty, requestedCount);
+      return res.json({
+        success: true,
+        generated: fromBank.length,
+        questions: fromBank,
+        totalQuestionBank: ukQuestionBank.length,
+        source: 'bank'
+      });
+    }
+
+    // Compute relaxed bank result once for downstream fallback paths.
+    const fromBank = pickFromBank(category, difficulty, requestedCount);
+
+    // If AI is unavailable, serve whatever the bank has (even if short)
+    if (!isAIEnabled()) {
+      if (fromBank.length === 0) {
         return res.status(503).json({
           error: "No questions available",
           message: "Question bank is empty and AI generation is unavailable."
         });
       }
-
       return res.json({
         success: true,
-        generated: questions.length,
-        questions,
+        generated: fromBank.length,
+        questions: fromBank,
         totalQuestionBank: ukQuestionBank.length,
         source: 'bank'
       });

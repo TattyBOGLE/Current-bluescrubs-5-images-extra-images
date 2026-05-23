@@ -33625,5 +33625,173 @@
     },
     "difficulty": "intermediate",
     "mnemonic": "Remember the key clinical signs"
+  },
+  {
+    "id": "generated_respiratory_1779560289379_0",
+    "topic": "Asthma Management in Adults",
+    "category": "Respiratory",
+    "question": "A 28-year-old woman presents to the GP with a 6-month history of breathlessness and wheezing, which worsens at night and after exercise. She has no significant past medical history and currently uses a salbutamol inhaler as needed, which provides temporary relief. She has been using the inhaler more frequently over the past month. Her peak expiratory flow rate (PEFR) is 70% of the predicted value. What is the most appropriate next step in management?",
+    "options": [
+      "Add a long-acting beta-2 agonist (LABA)",
+      "Prescribe a short course of oral corticosteroids",
+      "Switch to as-needed low-dose ICS/formoterol combination inhaler",
+      "Increase the dose of salbutamol",
+      "Prescribe a leukotriene receptor antagonist (LTRA)"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Switch to as-needed low-dose ICS/formoterol combination inhaler'. According to NICE NG245 (2024), the initial step for newly diagnosed asthma or patients using SABA only is to start as-needed low-dose ICS/formoterol (Anti-Inflammatory Reliever or AIR therapy). This is because SABA monotherapy is no longer recommended due to the risk of poor asthma control and exacerbations. The patient's increased usage of salbutamol indicates poor control, necessitating a switch to the new first-line management. \n\nOption A (Add a LABA) is incorrect because adding a LABA without an ICS is contraindicated in asthma management. Option B (Prescribe a short course of oral corticosteroids) is inappropriate for chronic management as oral steroids are reserved for acute exacerbations or severe persistent asthma. Option D (Increase salbutamol dose) is incorrect as it does not address underlying inflammation. Option E (Prescribe an LTRA) is not the first-line step in this scenario, as NICE guidelines recommend ICS/formoterol first. \n\nClinical pearl: Always consider the underlying inflammation in asthma, and ensure SABA monotherapy is no longer used for long-term control.",
+    "mnemonic": "AIR the issue: Asthma Initial Relief = As-needed ICS/formoterol",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_respiratory_1779560289379_1",
+    "topic": "COPD Maintenance Therapy",
+    "category": "Respiratory",
+    "question": "A 62-year-old man presents to the respiratory outpatient clinic with worsening breathlessness over the past year. He has a 40 pack-year smoking history and has been diagnosed with moderate chronic obstructive pulmonary disease (COPD) based on spirometry (FEV₁ 55% predicted). He currently uses a salbutamol inhaler as needed but still struggles with exertional dyspnoea. What is the next best step in management according to NICE guidelines?",
+    "options": [
+      "Add an ICS/LABA combination inhaler",
+      "Switch to a LABA or LAMA inhaler",
+      "Start regular oral corticosteroids",
+      "Prescribe a short course of antibiotics",
+      "Initiate long-term oxygen therapy"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Switch to a LABA or LAMA inhaler'. According to NICE NG115 (2018), for patients with moderate COPD and persistent symptoms despite as-needed SABA, the next step is to initiate a long-acting bronchodilator, either a LABA or a LAMA. This improves airflow and reduces symptoms. The choice between LABA and LAMA depends on patient preference and tolerance. \n\nOption A (Add an ICS/LABA combination inhaler) is incorrect as ICS is not indicated unless the patient has frequent exacerbations or significant eosinophilia. Option C (Start regular oral corticosteroids) is not recommended for chronic COPD management due to systemic side effects. Option D (Prescribe a short course of antibiotics) is unnecessary in the absence of signs of infection such as increased sputum purulence. Option E (Initiate long-term oxygen therapy) is only indicated in patients with chronic hypoxaemia (PaO₂ <7.3 kPa). \n\nClinical pearl: Use LABA or LAMA as first-line long-acting treatments in COPD. Monitor response and escalate therapy if symptoms persist.",
+    "mnemonic": "COPD Ladder: SABA → LABA/LAMA → Dual LABA+LAMA or ICS/LABA",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng115",
+      "CKS": "https://cks.nice.org.uk/topics/copd/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_respiratory_1779560289379_2",
+    "topic": "Community-Acquired Pneumonia (CAP)",
+    "category": "Respiratory",
+    "question": "A 72-year-old man presents to A&E with fever, productive cough with green sputum, and shortness of breath for 4 days. His observations reveal: BP 100/65 mmHg, HR 108 bpm, RR 24/min, SpO₂ 92% on air, temperature 38.5°C, and he appears lethargic. Blood tests show urea 9 mmol/L, CRP 115 mg/L, and WCC 14 × 10⁹/L. What is the most appropriate next step in management?",
+    "options": [
+      "Discharge with oral amoxicillin",
+      "Admit to hospital and start oral amoxicillin",
+      "Admit to hospital and start IV co-amoxiclav and clarithromycin",
+      "Start oral doxycycline and arrange outpatient follow-up",
+      "Provide symptomatic treatment and reassess in 48 hours"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Admit to hospital and start IV co-amoxiclav and clarithromycin'. The patient's CURB-65 score is 3 (confusion, urea >7 mmol/L, and age ≥65), indicating severe pneumonia and the need for hospital admission and intravenous antibiotics. NICE NG250 (2025) recommends co-amoxiclav plus clarithromycin for severe community-acquired pneumonia. \n\nOption A (Discharge with oral amoxicillin) is incorrect as this patient has severe pneumonia and requires hospitalisation. Option B (Admit to hospital and start oral amoxicillin) is incorrect as oral antibiotics are insufficient for severe CAP. Option D (Start oral doxycycline and arrange outpatient follow-up) is not appropriate for severe CAP. Option E (Provide symptomatic treatment and reassess in 48 hours) delays appropriate treatment and risks deterioration. \n\nClinical pearl: For CAP, calculate the CURB-65 score (Confusion, Urea >7 mmol/L, RR ≥30, BP <90/60 mmHg, age ≥65). A score of ≥2 requires hospital admission; ≥3 indicates severe CAP needing IV antibiotics.",
+    "mnemonic": "CURB-65: Confusion, Urea >7, RR ≥30, BP <90/60, Age ≥65",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng250",
+      "CKS": "https://cks.nice.org.uk/topics/pneumonia/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_respiratory_1779560289379_3",
+    "topic": "Pulmonary Embolism",
+    "category": "Respiratory",
+    "question": "A 45-year-old woman presents to A&E with sudden-onset pleuritic chest pain and dyspnoea for the past 3 hours. She recently underwent a knee replacement 2 weeks ago. Her observations are: BP 95/60 mmHg, HR 120 bpm, RR 28/min, SpO₂ 88% on air, and temperature 37.2°C. D-dimer is elevated, and a CT pulmonary angiogram (CTPA) confirms a large pulmonary embolism. What is the next best step in management?",
+    "options": [
+      "Start oral rivaroxaban",
+      "Start subcutaneous enoxaparin",
+      "Administer thrombolysis with IV alteplase",
+      "Start warfarin with LMWH bridge",
+      "Administer IV heparin immediately"
+    ],
+    "answer": 2,
+    "explanation": "The correct answer is 'Administer thrombolysis with IV alteplase'. The patient is haemodynamically unstable (BP <90 mmHg) with a confirmed large pulmonary embolism, which fulfills the criteria for massive PE. According to NICE NG158, thrombolysis with a fibrinolytic agent such as alteplase is indicated in cases of massive pulmonary embolism with haemodynamic compromise. \n\nOption A (Start oral rivaroxaban) is incorrect as anticoagulation alone is insufficient for massive PE with haemodynamic instability. Option B (Start subcutaneous enoxaparin) is also incorrect, as LMWH is indicated for stable PE or in cases where thrombolysis is contraindicated. Option D (Start warfarin with LMWH bridge) is outdated practice and not the current first-line approach. Option E (Administer IV heparin immediately) is incorrect because thrombolysis is the priority in massive PE. \n\nClinical pearl: In massive PE with haemodynamic instability, initiate thrombolysis promptly with alteplase or consider surgical embolectomy if thrombolysis is contraindicated.",
+    "mnemonic": "Massive PE = Massive Action (Alteplase or Embolectomy)",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng158",
+      "CKS": "https://cks.nice.org.uk/topics/pulmonary-embolism/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_respiratory_1779560289379_4",
+    "topic": "Pneumothorax",
+    "category": "Respiratory",
+    "question": "A 23-year-old man presents with sudden-onset right-sided pleuritic chest pain and breathlessness. He is a smoker with no significant past medical history. Examination reveals reduced breath sounds and hyper-resonance on the right side. A chest X-ray confirms a 3 cm right-sided pneumothorax. He is stable with BP 120/80 mmHg, HR 90 bpm, RR 18/min, and SpO₂ 97% on air. What is the most appropriate next step in management?",
+    "options": [
+      "Immediate chest drain insertion",
+      "Needle aspiration",
+      "High-flow oxygen therapy and observation",
+      "Elective surgery for pleurodesis",
+      "Discharge with safety-net advice"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is 'Needle aspiration'. According to the British Thoracic Society Guidelines (2023), a primary spontaneous pneumothorax >2 cm or associated with symptoms such as breathlessness should be treated with needle aspiration as the first-line intervention. If aspiration fails, a chest drain is considered. \n\nOption A (Immediate chest drain insertion) is incorrect as this is a second-line intervention, only indicated if aspiration fails. Option C (High-flow oxygen therapy and observation) is insufficient for a 3 cm pneumothorax with symptoms. Option D (Elective surgery for pleurodesis) is inappropriate for an acute presentation and is usually reserved for recurrent pneumothoraces. Option E (Discharge with safety-net advice) is inappropriate as active management is required for this size and symptomatic presentation. \n\nClinical pearl: Primary spontaneous pneumothorax <2 cm and asymptomatic can often be managed conservatively with observation or oxygen therapy. Larger or symptomatic pneumothoraces require active intervention.",
+    "mnemonic": "Primary Pneumothorax >2 cm = Consider Aspiration",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/bts2023",
+      "CKS": "https://cks.nice.org.uk/topics/pneumothorax/"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779560377923_0",
+    "topic": "Hypertension",
+    "category": "all",
+    "question": "A 48-year-old non-Black male presents with newly diagnosed hypertension. His clinic blood pressure readings are consistently above 155/95 mmHg. He has no other medical conditions and does not take any medications. What would be the most appropriate first-line treatment according to UK guidelines?",
+    "options": [
+      "Amlodipine",
+      "Ramipril",
+      "Indapamide",
+      "Spironolactone",
+      "No treatment required"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is Ramipril. NICE NG136 (2023) recommends starting an ACE inhibitor (or ARB if ACE inhibitor is not tolerated) as the first-line agent for patients under 55 years old who are non-Black. This patient fits the criteria, as he is 48 years old and has no contraindications to ACE inhibitors. Amlodipine (a calcium channel blocker) would be first-line only for patients aged ≥55 years or Black ethnicity. Indapamide is a thiazide-like diuretic used at step 3, and spironolactone at step 4 (for resistant hypertension with K+ <4.5 mmol/L). 'No treatment required' is incorrect, as his BP is above the threshold for treatment. Clinical pearl: ACE inhibitors can cause a dry cough; if this occurs, switch to an ARB.",
+    "mnemonic": "RAM for younger patients: Ramipril for <55 years.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng136",
+      "CKS": "https://cks.nice.org.uk/topics/hypertension"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779560377923_1",
+    "topic": "Asthma",
+    "category": "all",
+    "question": "A 24-year-old woman presents with worsening breathlessness and wheeze. She reports using her salbutamol inhaler frequently, but has not been prescribed any other medication for her asthma. What is the most appropriate next step in management according to the latest NICE NG245 guideline?",
+    "options": [
+      "Add regular low-dose ICS",
+      "Switch to low-dose ICS/formoterol combination inhaler (AIR therapy)",
+      "Add LABA to ICS",
+      "Continue SABA + start regular ICS",
+      "Refer to a specialist"
+    ],
+    "answer": 1,
+    "explanation": "The correct answer is to switch to low-dose ICS/formoterol combination inhaler (AIR therapy). NICE NG245 (2024) fundamentally changes asthma management, recommending ICS/formoterol as-needed (AIR therapy) for patients who are newly diagnosed or currently using SABA-only therapy. Adding a separate ICS to a SABA inhaler or continuing SABA + ICS are outdated approaches from earlier guidelines (NG80/BTS/SIGN). LABA should never be added without ICS, and referral to a specialist is unnecessary at this stage. Clinical pearl: The AIR therapy approach reduces exacerbations and dependency on SABA.",
+    "mnemonic": "AIR for asthma: Anti-Inflammatory Reliever (ICS/formoterol).",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng245",
+      "CKS": "https://cks.nice.org.uk/topics/asthma"
+    },
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "generated_all_1779560377923_2",
+    "topic": "Atrial Fibrillation",
+    "category": "all",
+    "question": "A 68-year-old man presents with palpitations and fatigue. ECG shows atrial fibrillation with a ventricular rate of 126 bpm and no ischemic changes. He has a CHA₂DS₂-VASc score of 3. What is the most appropriate initial management step?",
+    "options": [
+      "Rate control with bisoprolol",
+      "Anticoagulation with warfarin",
+      "Rhythm control with amiodarone",
+      "Immediate cardioversion",
+      "Anticoagulation with aspirin"
+    ],
+    "answer": 0,
+    "explanation": "The correct answer is rate control with bisoprolol. NICE NG196 (2021) recommends rate control as the first-line management strategy for atrial fibrillation unless the patient is symptomatic from AF or has reversible causes. Bisoprolol is a beta-blocker suitable for rate control. Anticoagulation with a DOAC or warfarin would also be indicated due to his CHA₂DS₂-VASc score ≥2, but rate control is prioritized initially. Rhythm control is reserved for symptomatic patients or those failing rate control. Cardioversion is inappropriate in this stable patient without life-threatening symptoms. Aspirin is not recommended for anticoagulation in AF. Clinical pearl: CHA₂DS₂-VASc guides anticoagulation, not immediate management.",
+    "mnemonic": "Beta for beats: Bisoprolol slows the heart.",
+    "links": {
+      "NICE": "https://www.nice.org.uk/guidance/ng196",
+      "CKS": "https://cks.nice.org.uk/topics/atrial-fibrillation"
+    },
+    "difficulty": "intermediate"
   }
 ]

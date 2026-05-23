@@ -68,33 +68,56 @@ export function QuizQuestion({
   return (
     <Card className="mb-6 rounded-2xl border-slate-200">
       <CardContent className="p-6">
-        {/* Controls - Translation and Voice */}
-        <div className="flex justify-between items-start mb-4 gap-4 flex-wrap">
-          {/* Translation Controls */}
-          <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200">
-            <div className="flex items-center gap-3">
-              <button
-                type="button"
-                role="switch"
-                aria-checked={translateQuestions}
-                aria-label="Toggle translation"
-                onClick={() => setTranslateQuestions(!translateQuestions)}
-                className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
-                  translateQuestions
-                    ? 'bg-teal-600 border-teal-600 text-white'
-                    : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
-                }`}
-                data-testid="toggle-translate"
-              >
-                <Languages className="w-4 h-4" />
-                Translate
-                <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
-                  translateQuestions ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
-                }`}>
-                  {translateQuestions ? 'ON' : 'OFF'}
-                </span>
-              </button>
-              {translateQuestions && (
+        {/* Controls - Translation and Voice (single row) */}
+        <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200 mb-4">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <button
+              type="button"
+              role="switch"
+              aria-checked={translateQuestions}
+              aria-label="Toggle translation"
+              onClick={() => setTranslateQuestions(!translateQuestions)}
+              className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
+                translateQuestions
+                  ? 'bg-teal-600 border-teal-600 text-white'
+                  : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
+              }`}
+              data-testid="toggle-translate"
+            >
+              <Languages className="w-4 h-4" />
+              Translate
+              <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
+                translateQuestions ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
+              }`}>
+                {translateQuestions ? 'ON' : 'OFF'}
+              </span>
+            </button>
+            <button
+              type="button"
+              role="switch"
+              aria-checked={speechEnabled}
+              aria-label="Toggle voice reading"
+              onClick={() => {
+                const next = !speechEnabled;
+                setSpeechEnabled(next);
+                if (!next) stopSpeaking();
+              }}
+              className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
+                speechEnabled
+                  ? 'bg-teal-600 border-teal-600 text-white'
+                  : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
+              }`}
+              data-testid="toggle-voice"
+            >
+              <Volume2 className="w-4 h-4" />
+              Voice
+              <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
+                speechEnabled ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
+              }`}>
+                {speechEnabled ? 'ON' : 'OFF'}
+              </span>
+            </button>
+            {translateQuestions && (
                 <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
                   <SelectTrigger className="w-36 h-8 text-xs">
                     <SelectValue />
@@ -160,79 +183,47 @@ export function QuizQuestion({
                   </SelectContent>
                 </Select>
               )}
-            </div>
-          </div>
-
-          {/* Voice Controls */}
-          <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200">
-            <div className="flex items-center gap-3">
-              <button
-                type="button"
-                role="switch"
-                aria-checked={speechEnabled}
-                aria-label="Toggle voice reading"
-                onClick={() => {
-                  const next = !speechEnabled;
-                  setSpeechEnabled(next);
-                  if (!next) stopSpeaking();
-                }}
-                className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
-                  speechEnabled
-                    ? 'bg-teal-600 border-teal-600 text-white'
-                    : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
-                }`}
-                data-testid="toggle-voice"
-              >
-                <Volume2 className="w-4 h-4" />
-                Voice
-                <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
-                  speechEnabled ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
-                }`}>
-                  {speechEnabled ? 'ON' : 'OFF'}
-                </span>
-              </button>
-              {speechEnabled && (
-                <>
-                  <Select value={selectedVoice} onValueChange={setSelectedVoice}>
-                    <SelectTrigger className="w-48 h-8 text-xs">
-                      <SelectValue placeholder="Select Voice" />
-                    </SelectTrigger>
-                    <SelectContent className="max-h-64 overflow-y-auto">
-                      {availableVoices.map((voice) => {
-                        const isEnglish = voice.lang.startsWith('en');
-                        const countryCode = voice.lang.split('-')[1] || '';
-                        const flagEmoji = ({
-                          'US': '🇺🇸', 'GB': '🇬🇧', 'AU': '🇦🇺', 'CA': '🇨🇦',
-                          'AR': '🇸🇦', 'ES': '🇪🇸', 'FR': '🇫🇷', 'DE': '🇩🇪',
-                          'IT': '🇮🇹', 'PT': '🇵🇹', 'RU': '🇷🇺', 'CN': '🇨🇳',
-                          'JP': '🇯🇵', 'KR': '🇰🇷', 'IN': '🇮🇳'
-                        } as Record<string, string>)[countryCode] || '🌐';
-                        const voiceName = voice.name.length > 20
-                          ? voice.name.substring(0, 17) + '...'
-                          : voice.name;
-                        return (
-                          <SelectItem key={voice.name} value={voice.name}>
-                            <div className="flex items-center gap-2">
-                              <span>{flagEmoji}</span>
-                              <span className="text-xs">{voiceName}</span>
-                              {isEnglish && <span className="text-xs text-teal-600">★</span>}
-                            </div>
-                          </SelectItem>
-                        );
-                      })}
-                    </SelectContent>
-                  </Select>
-                  <Button
-                    size="sm"
-                    variant={isSpeaking ? "destructive" : "default"}
-                    onClick={isSpeaking ? stopSpeaking : speakCurrentQuestion}
-                    className="h-8 px-2"
-                  >
-                    {isSpeaking ? "Stop" : "Play"}
-                  </Button>
-                </>
-              )}
-            </div>
+            {speechEnabled && (
+              <>
+                <Select value={selectedVoice} onValueChange={setSelectedVoice}>
+                  <SelectTrigger className="w-48 h-8 text-xs">
+                    <SelectValue placeholder="Select Voice" />
+                  </SelectTrigger>
+                  <SelectContent className="max-h-64 overflow-y-auto">
+                    {availableVoices.map((voice) => {
+                      const isEnglish = voice.lang.startsWith('en');
+                      const countryCode = voice.lang.split('-')[1] || '';
+                      const flagEmoji = ({
+                        'US': '🇺🇸', 'GB': '🇬🇧', 'AU': '🇦🇺', 'CA': '🇨🇦',
+                        'AR': '🇸🇦', 'ES': '🇪🇸', 'FR': '🇫🇷', 'DE': '🇩🇪',
+                        'IT': '🇮🇹', 'PT': '🇵🇹', 'RU': '🇷🇺', 'CN': '🇨🇳',
+                        'JP': '🇯🇵', 'KR': '🇰🇷', 'IN': '🇮🇳'
+                      } as Record<string, string>)[countryCode] || '🌐';
+                      const voiceName = voice.name.length > 20
+                        ? voice.name.substring(0, 17) + '...'
+                        : voice.name;
+                      return (
+                        <SelectItem key={voice.name} value={voice.name}>
+                          <div className="flex items-center gap-2">
+                            <span>{flagEmoji}</span>
+                            <span className="text-xs">{voiceName}</span>
+                            {isEnglish && <span className="text-xs text-teal-600">★</span>}
+                          </div>
+                        </SelectItem>
+                      );
+                    })}
+                  </SelectContent>
+                </Select>
+                <Button
+                  size="sm"
+                  variant={isSpeaking ? "destructive" : "default"}
+                  onClick={isSpeaking ? stopSpeaking : speakCurrentQuestion}
+                  className="h-8 px-2"
+                >
+                  {isSpeaking ? "Stop" : "Play"}
+                </Button>
+              </>
+            )}
           </div>
         </div>
 
