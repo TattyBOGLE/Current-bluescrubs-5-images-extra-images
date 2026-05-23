@@ -1,194 +1,353 @@
-import { useState } from "react";
-import { AdaptiveLearningDashboard } from "@/components/adaptive-learning-dashboard";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useMemo, useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useLocation } from "wouter";
 import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 import {
   Brain,
+  Zap,
   Target,
   TrendingUp,
-  Zap,
   AlertTriangle,
   CheckCircle,
-  Lightbulb,
-  BarChart3,
+  Sparkles,
+  ChevronRight,
+  HeartPulse,
+  Droplets,
+  Activity,
+  Stethoscope,
+  Pill,
+  Microscope,
 } from "lucide-react";
+import { apiRequest } from "@/lib/queryClient";
 
-const FEATURE_CARDS = [
-  {
-    Icon: Target,
-    title: "Adaptive Questions",
-    desc: "Difficulty adjusts to your performance in real time.",
-    tint: "bg-teal-50",
-    color: "text-teal-700",
-  },
-  {
-    Icon: AlertTriangle,
-    title: "Weakness Detection",
-    desc: "Spots specific knowledge gaps from your answer patterns.",
-    tint: "bg-slate-100",
-    color: "text-slate-700",
-  },
-  {
-    Icon: TrendingUp,
-    title: "Success Prediction",
-    desc: "Estimates your exam readiness with confidence intervals.",
-    tint: "bg-teal-50",
-    color: "text-teal-700",
-  },
-  {
-    Icon: Lightbulb,
-    title: "Smart Generation",
-    desc: "Creates targeted practice using your authentic question bank.",
-    tint: "bg-slate-100",
-    color: "text-slate-700",
-  },
-];
+type Analytics = {
+  overallPerformance?: Array<{ accuracy: number; topic: string }>;
+  sessionHistory?: Array<{ questionsAnswered: number; accuracy: number; topicsExplored?: string[] }>;
+  weaknessAnalysis?: {
+    criticalWeaknesses?: Array<{ topic: string; weaknessScore: number; questionsAttempted: number }>;
+    moderateWeaknesses?: Array<{ topic: string; weaknessScore: number }>;
+    improvingAreas?: Array<{ topic: string }>;
+    overallWeaknessScore: number;
+  };
+  examPrediction?: {
+    successProbability: number;
+    readinessLevel: string;
+    timeToReadiness: number;
+  };
+};
 
-const DIFFERENTIATORS = [
-  { tag: "Authentic", title: "Real Medical Content", desc: "Built on genuine PLAB scenarios, not synthetic data." },
-  { tag: "Offline", title: "Works Without Internet", desc: "Full functionality without any external API calls." },
-  { tag: "UK-aligned", title: "NICE / BNF / CKS / GMC", desc: "Aligned with current UK clinical guidelines." },
-  { tag: "Predictive", title: "Exam Readiness Score", desc: "Statistical models predict your success probability." },
-  { tag: "Real-time", title: "Instant Feedback", desc: "Knowledge gaps surfaced as you practise." },
-  { tag: "Dynamic", title: "Personal Difficulty", desc: "Pace and challenge tuned to your progress." },
+const USER_ID = 1;
+
+const FOCUS_ICONS = [HeartPulse, Droplets, Activity, Stethoscope, Pill, Microscope];
+
+const SESSION_PRESETS = [
+  { count: 5,  label: "Quick",     mins: "~5 min"  },
+  { count: 10, label: "Standard",  mins: "~10 min" },
+  { count: 20, label: "Deep",      mins: "~20 min" },
 ];
 
 export default function AdaptiveLearning() {
-  const [currentUserId] = useState(1);
+  const [, setLocation] = useLocation();
+  const [selectedCount, setSelectedCount] = useState(10);
+  const queryClient = useQueryClient();
+
+  const { data: analytics, isLoading } = useQuery<Analytics>({
+    queryKey: [`/api/adaptive/analytics/${USER_ID}`],
+  });
+
+  const startSession = useMutation({
+    mutationFn: async () => {
+      const r = await apiRequest("POST", "/api/adaptive/start-session", {
+        userId: USER_ID,
+        existingPerformance: analytics?.overallPerformance ?? [],
+      });
+      return r.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [`/api/adaptive/analytics/${USER_ID}`] });
+      setLocation(`/plab1?mode=adaptive&count=${selectedCount}`);
+    },
+  });
+
+  const stats = useMemo(() => {
+    const perf = analytics?.overallPerformance ?? [];
+    const total = perf.length;
+    const avgAccuracy = total
+      ? Math.round((perf.reduce((s, p) => s + p.accuracy, 0) / total) * 100)
+      : 0;
+    const topicsCovered = new Set(perf.map((p) => p.topic)).size;
+    const knowledge = analytics?.weaknessAnalysis
+      ? 100 - analytics.weaknessAnalysis.overallWeaknessScore
+      : null;
+    return { total, avgAccuracy, topicsCovered, knowledge };
+  }, [analytics]);
+
+  const weakSpots = useMemo(() => {
+    const w = analytics?.weaknessAnalysis;
+    if (!w) return [];
+    const list = [
+      ...(w.criticalWeaknesses?.map((x) => ({ topic: x.topic, score: x.weaknessScore, severity: "high" as const })) ?? []),
+      ...(w.moderateWeaknesses?.map((x) => ({ topic: x.topic, score: x.weaknessScore, severity: "medium" as const })) ?? []),
+    ];
+    return list.slice(0, 6);
+  }, [analytics]);
+
+  const prediction = analytics?.examPrediction;
 
   return (
     <div className="min-h-screen bg-slate-50 pb-24 md:pb-12">
-      <div className="max-w-[680px] md:max-w-5xl mx-auto px-4 pt-6 space-y-6">
+      <div className="max-w-[680px] mx-auto px-4 pt-6 space-y-5">
 
-        {/* Hero sheet */}
-        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <div className="flex items-start gap-4">
-            <div className="shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-sm shadow-teal-200">
-              <Brain className="w-6 h-6 text-white" />
+        {/* Hero */}
+        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 p-5 text-white shadow-sm shadow-teal-200">
+          <div className="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-white/10" />
+          <div className="absolute -right-2 bottom-0 w-24 h-24 rounded-full bg-white/5" />
+          <div className="relative">
+            <div className="flex items-center gap-2 mb-2">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-[11px] font-semibold tracking-wider uppercase text-teal-50">
+                Smart Practice
+              </span>
             </div>
-            <div className="flex-1 min-w-0">
-              <h1 className="text-2xl font-bold text-slate-900 leading-tight">
-                Adaptive Learning
-              </h1>
-              <p className="text-sm text-slate-500 mt-1">
-                Practice that learns from how you study.
+            <h1 className="text-2xl font-bold leading-tight">Adaptive Learning</h1>
+            <p className="text-sm text-teal-50 mt-1 max-w-[34ch]">
+              Practice that learns from your performance and targets your gaps.
+            </p>
+          </div>
+        </section>
+
+        {/* Start a session card */}
+        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <h2 className="text-base font-semibold text-slate-900">Start a session</h2>
+              <p className="text-xs text-slate-500">Pick a length — difficulty adapts as you go.</p>
+            </div>
+            <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center">
+              <Zap className="w-5 h-5 text-teal-700" />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-2 mb-4">
+            {SESSION_PRESETS.map((p) => {
+              const active = selectedCount === p.count;
+              return (
+                <button
+                  key={p.count}
+                  type="button"
+                  onClick={() => setSelectedCount(p.count)}
+                  className={`rounded-xl p-3 text-left border transition-all ${
+                    active
+                      ? "border-teal-600 bg-teal-50"
+                      : "border-slate-200 bg-white hover:border-slate-300"
+                  }`}
+                  data-testid={`preset-${p.count}`}
+                >
+                  <div className={`text-lg font-bold tabular-nums ${active ? "text-teal-700" : "text-slate-900"}`}>
+                    {p.count}
+                  </div>
+                  <div className="text-[11px] font-medium text-slate-500">{p.label}</div>
+                  <div className="text-[10px] text-slate-400">{p.mins}</div>
+                </button>
+              );
+            })}
+          </div>
+
+          <button
+            onClick={() => startSession.mutate()}
+            disabled={startSession.isPending}
+            className="w-full h-12 rounded-xl bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold text-sm shadow-sm shadow-teal-200 disabled:opacity-60 flex items-center justify-center gap-2"
+            data-testid="button-start-adaptive"
+          >
+            {startSession.isPending ? "Starting…" : `Start ${selectedCount}-question session`}
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </section>
+
+        {/* Stats strip */}
+        <section className="grid grid-cols-2 gap-3">
+          <StatCard
+            label="Questions done"
+            value={stats.total}
+            tone="teal"
+            Icon={Target}
+            loading={isLoading}
+          />
+          <StatCard
+            label="Avg. accuracy"
+            value={`${stats.avgAccuracy}%`}
+            tone="emerald"
+            Icon={TrendingUp}
+            loading={isLoading}
+          />
+          <StatCard
+            label="Topics covered"
+            value={stats.topicsCovered}
+            tone="slate"
+            Icon={Brain}
+            loading={isLoading}
+          />
+          <StatCard
+            label="Knowledge"
+            value={stats.knowledge !== null ? `${stats.knowledge}%` : "—"}
+            tone="teal"
+            Icon={CheckCircle}
+            loading={isLoading}
+          />
+        </section>
+
+        {/* Readiness */}
+        {prediction && (
+          <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-base font-semibold text-slate-900">Exam readiness</h2>
+              <ReadinessBadge level={prediction.readinessLevel} />
+            </div>
+            <div className="flex items-end justify-between mb-2">
+              <span className="text-4xl font-bold text-teal-700 tabular-nums leading-none">
+                {prediction.successProbability}%
+              </span>
+              <span className="text-xs text-slate-500">
+                {prediction.timeToReadiness === 0
+                  ? "Ready now"
+                  : `~${prediction.timeToReadiness} days to 80%`}
+              </span>
+            </div>
+            <Progress value={prediction.successProbability} className="h-2" />
+          </section>
+        )}
+
+        {/* Focus areas */}
+        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <h2 className="text-base font-semibold text-slate-900">Focus areas</h2>
+              <p className="text-xs text-slate-500">
+                {weakSpots.length > 0 ? "Topics needing the most work" : "Practise more to surface gaps"}
               </p>
             </div>
+            <AlertTriangle className="w-5 h-5 text-amber-500" />
           </div>
-          <p className="text-[15px] text-slate-700 leading-relaxed mt-4">
-            A system that understands your learning patterns, spots weaknesses in real
-            time, and tunes question difficulty to keep you progressing.
-          </p>
-        </section>
 
-        {/* Feature grid */}
-        <section className="grid grid-cols-2 gap-3">
-          {FEATURE_CARDS.map(({ Icon, title, desc, tint, color }) => (
-            <div
-              key={title}
-              className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4"
-            >
-              <div className={`w-10 h-10 rounded-xl ${tint} flex items-center justify-center mb-3`}>
-                <Icon className={`w-5 h-5 ${color}`} />
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900">{title}</h3>
-              <p className="text-xs text-slate-500 mt-1 leading-snug">{desc}</p>
+          {weakSpots.length > 0 ? (
+            <div className="space-y-2">
+              {weakSpots.map((w, i) => {
+                const Icon = FOCUS_ICONS[i % FOCUS_ICONS.length];
+                return (
+                  <button
+                    key={`${w.topic}-${i}`}
+                    onClick={() => setLocation(`/plab1?category=${encodeURIComponent(w.topic)}&mode=adaptive&count=10`)}
+                    className="w-full flex items-center gap-3 p-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors text-left"
+                    data-testid={`focus-${i}`}
+                  >
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+                      w.severity === "high" ? "bg-rose-50" : "bg-amber-50"
+                    }`}>
+                      <Icon className={`w-4 h-4 ${
+                        w.severity === "high" ? "text-rose-600" : "text-amber-600"
+                      }`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-semibold text-slate-900 truncate capitalize">
+                        {w.topic}
+                      </div>
+                      <div className="text-[11px] text-slate-500">
+                        {Math.round(w.score)}% error rate
+                      </div>
+                    </div>
+                    <ChevronRight className="w-4 h-4 text-slate-400" />
+                  </button>
+                );
+              })}
             </div>
-          ))}
-        </section>
-
-        {/* Dual feature cards */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <Card className="rounded-2xl border-slate-100 shadow-sm bg-white">
-            <CardHeader className="pb-3">
-              <div className="flex items-center gap-2">
-                <div className="w-9 h-9 rounded-xl bg-teal-50 flex items-center justify-center">
-                  <BarChart3 className="w-5 h-5 text-teal-700" />
-                </div>
-                <div>
-                  <CardTitle className="text-base text-slate-900">Analytics Engine</CardTitle>
-                  <CardDescription className="text-xs text-slate-500">
-                    Runs entirely on-device
-                  </CardDescription>
-                </div>
+          ) : (
+            <div className="text-center py-6">
+              <div className="w-12 h-12 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-3">
+                <Sparkles className="w-5 h-5 text-slate-400" />
               </div>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <ul className="space-y-2">
-                {[
-                  "Pattern recognition",
-                  "Performance modelling",
-                  "Real-time weakness scoring",
-                  "Predictive readiness",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2 text-sm text-slate-700">
-                    <CheckCircle className="w-4 h-4 text-teal-600 shrink-0" />
-                    {t}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+              <p className="text-sm text-slate-500">
+                Run a few sessions and your weak topics will appear here.
+              </p>
+            </div>
+          )}
+        </section>
 
-          <Card className="rounded-2xl border-slate-100 shadow-sm bg-white">
-            <CardHeader className="pb-3">
-              <div className="flex items-center gap-2">
-                <div className="w-9 h-9 rounded-xl bg-teal-50 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-teal-700" />
+        {/* Recent sessions */}
+        {(analytics?.sessionHistory?.length ?? 0) > 0 && (
+          <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+            <h2 className="text-base font-semibold text-slate-900 mb-3">Recent sessions</h2>
+            <div className="space-y-2">
+              {analytics!.sessionHistory!.slice(0, 3).map((s, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-between p-3 rounded-xl bg-slate-50"
+                >
+                  <div>
+                    <div className="text-sm font-medium text-slate-900">
+                      {s.questionsAnswered} questions
+                    </div>
+                    <div className="text-[11px] text-slate-500">
+                      {s.topicsExplored?.length ?? 0} topics
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-bold text-teal-700 tabular-nums">
+                      {Math.round(s.accuracy * 100)}%
+                    </div>
+                    <div className="text-[11px] text-slate-500">accuracy</div>
+                  </div>
                 </div>
-                <div>
-                  <CardTitle className="text-base text-slate-900">Question System</CardTitle>
-                  <CardDescription className="text-xs text-slate-500">
-                    Built on your authentic bank
-                  </CardDescription>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <ul className="space-y-2">
-                {[
-                  "5,000+ medical questions",
-                  "Difficulty adaptation",
-                  "Targeted weakness drills",
-                  "UK guideline coverage",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2 text-sm text-slate-700">
-                    <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                    {t}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </section>
+              ))}
+            </div>
+          </section>
+        )}
 
-        {/* Differentiators */}
-        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
-          <h2 className="text-base font-semibold text-slate-900 mb-1">Why this works</h2>
-          <p className="text-xs text-slate-500 mb-4">
-            What sets BlueScrubsPrep adaptive learning apart.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {DIFFERENTIATORS.map(({ tag, title, desc }) => (
-              <div
-                key={title}
-                className="p-4 rounded-2xl bg-slate-50 border border-slate-100"
-              >
-                <Badge className="mb-2 bg-teal-100 text-teal-800 hover:bg-teal-100 border-none">
-                  {tag}
-                </Badge>
-                <h3 className="text-sm font-semibold text-slate-900 mb-1">{title}</h3>
-                <p className="text-xs text-slate-600 leading-snug">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Live dashboard */}
-        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 overflow-hidden">
-          <AdaptiveLearningDashboard userId={currentUserId} />
-        </section>
       </div>
     </div>
   );
+}
+
+function StatCard({
+  label,
+  value,
+  Icon,
+  tone,
+  loading,
+}: {
+  label: string;
+  value: React.ReactNode;
+  Icon: React.ComponentType<{ className?: string }>;
+  tone: "teal" | "emerald" | "slate";
+  loading?: boolean;
+}) {
+  const toneMap = {
+    teal: { bg: "bg-teal-50", color: "text-teal-700" },
+    emerald: { bg: "bg-emerald-50", color: "text-emerald-700" },
+    slate: { bg: "bg-slate-100", color: "text-slate-700" },
+  }[tone];
+
+  return (
+    <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
+      <div className={`w-9 h-9 rounded-xl ${toneMap.bg} flex items-center justify-center mb-2`}>
+        <Icon className={`w-4 h-4 ${toneMap.color}`} />
+      </div>
+      <div className="text-2xl font-bold text-slate-900 tabular-nums leading-tight">
+        {loading ? "—" : value}
+      </div>
+      <div className="text-[11px] text-slate-500 mt-0.5">{label}</div>
+    </div>
+  );
+}
+
+function ReadinessBadge({ level }: { level: string }) {
+  const cfg =
+    level === "highly-ready" || level === "likely-ready"
+      ? { tone: "bg-emerald-100 text-emerald-800 hover:bg-emerald-100", label: "On track" }
+      : level === "needs-work"
+      ? { tone: "bg-amber-100 text-amber-800 hover:bg-amber-100", label: "Needs work" }
+      : level === "not-ready"
+      ? { tone: "bg-rose-100 text-rose-800 hover:bg-rose-100", label: "Not ready" }
+      : { tone: "bg-slate-100 text-slate-700 hover:bg-slate-100", label: "—" };
+  return <Badge className={`${cfg.tone} border-none text-xs`}>{cfg.label}</Badge>;
 }

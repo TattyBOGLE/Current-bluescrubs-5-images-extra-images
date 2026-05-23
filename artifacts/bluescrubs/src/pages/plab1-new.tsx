@@ -730,6 +730,27 @@ export default function PLAB1New() {
     }
   };
 
+  // Auto-start adaptive session when arriving with ?mode=adaptive&count=N (from Smart tab)
+  const autoStartedRef = useRef(false);
+  useEffect(() => {
+    if (autoStartedRef.current) return;
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get("mode");
+    const countRaw = params.get("count");
+    const category = params.get("category");
+    if (mode !== "adaptive") return;
+    autoStartedRef.current = true;
+    if (category) setSelectedCategory(category);
+    const count = Math.max(1, Math.min(50, parseInt(countRaw || "10", 10) || 10));
+    const t = setTimeout(() => {
+      startAdaptivePractice(count);
+      window.history.replaceState({}, "", window.location.pathname);
+    }, 50);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Start incorrect-only mode — filters to questions previously answered wrong
   const startIncorrectOnlyPractice = async (questionCount: number) => {
     clearSessionTimeout();
