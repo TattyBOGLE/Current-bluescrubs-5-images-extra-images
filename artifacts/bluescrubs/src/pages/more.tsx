@@ -405,22 +405,21 @@ link: "/ask-ai"
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-2">Admin Tools</h2>
           <p className="text-sm text-slate-600 mb-6">System management and optimization tools</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {adminTools.map((tool, index) => (
-              <Link key={index} href={tool.link || "/dashboard"}>
-                <div
-                  className="group bg-white border border-slate-200 hover:border-teal-400 hover:shadow-md rounded-2xl p-5 transition-all cursor-pointer flex items-start gap-3"
-                  data-testid={`admin-tool-${index}`}
-                >
-                  <div className="p-2.5 rounded-xl bg-teal-50 group-hover:bg-teal-100 transition-colors flex-shrink-0">
-                    <tool.icon className="h-5 w-5 text-teal-700" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-slate-900 text-sm mb-0.5">{tool.title}</h4>
-                    <p className="text-xs text-slate-500 leading-snug">{tool.description}</p>
-                  </div>
-                  <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-teal-600 flex-shrink-0 mt-1" />
-                </div>
+              <Link key={index} href={tool.link || "/dashboard"} data-testid={`admin-tool-${index}`}>
+                <Card className="bg-white hover:bg-slate-50 transition-colors cursor-pointer border-slate-200 rounded-2xl">
+                  <CardContent className="flex items-center p-6">
+                    <div className="p-3 bg-teal-500/10 rounded-xl mr-4">
+                      <tool.icon className="h-6 w-6 text-teal-700" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900 mb-1">{tool.title}</h3>
+                      <p className="text-gray-600 text-sm">{tool.description}</p>
+                    </div>
+                    <ChevronRight className="h-5 w-5 text-gray-400" />
+                  </CardContent>
+                </Card>
               </Link>
             ))}
           </div>
