@@ -2,10 +2,88 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import {
   Search, Bell, BookOpen, Stethoscope, Sparkles, Timer,
-  ChevronRight, Flame, Award, Heart, Brain, Activity, Baby, Eye, Pill,
+  ChevronRight, Flame, Award, Heart, Brain, Activity, Pill,
   CheckCircle, TrendingUp,
 } from "lucide-react";
 import type { UserStats, CommunityPost } from "@/lib/types";
+
+/* ── Premium topic illustrations (soft fills, brand palette) ───────── */
+type IllProps = { className?: string };
+
+const HeartIllustration = ({ className }: IllProps) => (
+  <svg viewBox="0 0 64 64" className={className} fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="heartG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#fda4af" />
+        <stop offset="100%" stopColor="#f43f5e" />
+      </linearGradient>
+    </defs>
+    <path
+      d="M32 53s-18-10.4-18-23.2C14 22.3 19.6 17 26.2 17c3.6 0 6.6 1.7 8.8 4.6C37.2 18.7 40.2 17 43.8 17 50.4 17 56 22.3 56 29.8 56 42.6 38 53 38 53"
+      fill="url(#heartG)"
+    />
+    <path d="M22 30c1.5-3.4 4.2-5.6 7.8-6.2" stroke="#fff" strokeWidth="2" strokeLinecap="round" opacity=".7" />
+    <path d="M26 38l4-4 3 5 4-7 5 9" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const BrainIllustration = ({ className }: IllProps) => (
+  <svg viewBox="0 0 64 64" className={className} fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="brainG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#c4b5fd" />
+        <stop offset="100%" stopColor="#7c3aed" />
+      </linearGradient>
+    </defs>
+    <path
+      d="M22 14c-4 0-7 3-7 7 0 1.4.4 2.7 1 3.8C13.2 26.2 12 28.7 12 31.5c0 3 1.4 5.6 3.6 7.2-.4 1-.6 2.1-.6 3.3 0 4.4 3.6 8 8 8 1.4 0 2.7-.4 3.9-1 1.2.6 2.5 1 3.9 1h2.4c1.4 0 2.7-.4 3.9-1 1.2.6 2.5 1 3.9 1 4.4 0 8-3.6 8-8 0-1.2-.2-2.3-.6-3.3 2.2-1.6 3.6-4.2 3.6-7.2 0-2.8-1.2-5.3-3-7C50.6 23.7 51 22.4 51 21c0-4-3-7-7-7-2.4 0-4.5 1.1-5.8 2.9C36.7 15.7 34.4 14 32 14c-2.4 0-4.7 1.7-6.2 2.9C24.5 15.1 22.4 14 22 14z"
+      fill="url(#brainG)"
+    />
+    <path
+      d="M32 16v34M22 24c2 1 3 3 3 5M42 24c-2 1-3 3-3 5M20 34c2 0 4 1 5 3M44 34c-2 0-4 1-5 3M26 44c1.5-1 3-1.5 6-1.5s4.5.5 6 1.5"
+      stroke="#fff"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      opacity=".85"
+    />
+  </svg>
+);
+
+const LungsIllustration = ({ className }: IllProps) => (
+  <svg viewBox="0 0 64 64" className={className} fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="lungG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#5eead4" />
+        <stop offset="100%" stopColor="#0d9488" />
+      </linearGradient>
+    </defs>
+    <path d="M32 14v22" stroke="#0f766e" strokeWidth="2.5" strokeLinecap="round" />
+    <circle cx="32" cy="14" r="2.2" fill="#0f766e" />
+    <path
+      d="M30 22c0 4-1 6-3 9-3 4.5-9 7-9 14 0 4 2 7 6 7 3 0 6-2 6-6V22zM34 22c0 4 1 6 3 9 3 4.5 9 7 9 14 0 4-2 7-6 7-3 0-6-2-6-6V22z"
+      fill="url(#lungG)"
+    />
+    <path d="M22 36c1.5 1 2.5 2.5 3 4M42 36c-1.5 1-2.5 2.5-3 4M21 44c2 .5 3.5 1.5 4.5 3M43 44c-2 .5-3.5 1.5-4.5 3" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" opacity=".75" />
+  </svg>
+);
+
+const BabyIllustration = ({ className }: IllProps) => (
+  <svg viewBox="0 0 64 64" className={className} fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="babyG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#fcd34d" />
+        <stop offset="100%" stopColor="#f59e0b" />
+      </linearGradient>
+    </defs>
+    <path d="M20 22c0-8 5.4-12 12-12s12 4 12 12v4c0 6.6-5.4 12-12 12s-12-5.4-12-12v-4z" fill="url(#babyG)" />
+    <path d="M20 24c-2 0-3.5 1.5-3.5 3.5S18 31 20 31M44 24c2 0 3.5 1.5 3.5 3.5S46 31 44 31" fill="url(#babyG)" />
+    <circle cx="27" cy="26" r="1.6" fill="#7c2d12" />
+    <circle cx="37" cy="26" r="1.6" fill="#7c2d12" />
+    <path d="M28 32c1.2 1.4 2.5 2 4 2s2.8-.6 4-2" stroke="#7c2d12" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+    <path d="M22 18c2-3 5-5 10-5s8 2 10 5" stroke="#fff" strokeWidth="2" strokeLinecap="round" opacity=".7" fill="none" />
+    <path d="M32 42v8M24 50h16" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
+);
 
 const DEMO_USER = {
   id: 1,
@@ -15,10 +93,10 @@ const DEMO_USER = {
 };
 
 const CATEGORIES = [
-  { slug: "cardiology",  label: "Cardiology",  Icon: Heart,       tone: "bg-rose-50 text-rose-600" },
-  { slug: "neurology",   label: "Neurology",   Icon: Brain,       tone: "bg-violet-50 text-violet-600" },
-  { slug: "respiratory", label: "Respiratory", Icon: Activity,    tone: "bg-sky-50 text-sky-600" },
-  { slug: "paediatrics", label: "Paediatrics", Icon: Baby,        tone: "bg-amber-50 text-amber-600" },
+  { slug: "cardiology",  label: "Cardiology",  Illus: HeartIllustration, tint: "bg-rose-50/70" },
+  { slug: "neurology",   label: "Neurology",   Illus: BrainIllustration, tint: "bg-violet-50/70" },
+  { slug: "respiratory", label: "Respiratory", Illus: LungsIllustration, tint: "bg-teal-50/70" },
+  { slug: "paediatrics", label: "Paediatrics", Illus: BabyIllustration,  tint: "bg-amber-50/70" },
 ];
 
 const SHORTCUTS = [
@@ -151,8 +229,8 @@ export default function Home() {
                 className="flex flex-col items-center gap-2 group"
                 data-testid={`topic-${c.slug}`}
               >
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center ${c.tone} ring-1 ring-slate-100 group-hover:ring-teal-200 transition`}>
-                  <c.Icon className="w-7 h-7" strokeWidth={1.75} />
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center ${c.tint} ring-1 ring-slate-100 group-hover:ring-teal-200 group-hover:scale-[1.03] transition shadow-sm`}>
+                  <c.Illus className="w-11 h-11" />
                 </div>
                 <span className="text-[11px] font-medium text-slate-700 text-center leading-tight">
                   {c.label}
