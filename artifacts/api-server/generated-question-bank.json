@@ -13477,7 +13477,7 @@
       "NICE": "https://www.nice.org.uk/guidance/cg153",
       "CKS": "https://cks.nice.org.uk/topics/psoriasis/"
     },
-    "imageUrl": "/derm-images/psoriasis-plaque.png"
+    "imageUrl": "/derm-images/psoriasis-plaque.jpg"
   },
   {
     "id": "derm-plab-002",
@@ -13514,7 +13514,7 @@
       "NICE": "https://www.nice.org.uk/guidance/ng190",
       "CKS": "https://cks.nice.org.uk/topics/eczema-atopic/"
     },
-    "imageUrl": "/derm-images/atopic-eczema.png"
+    "imageUrl": "/derm-images/atopic-eczema.jpg"
   },
   {
     "id": "derm-plab-003",
@@ -13550,7 +13550,7 @@
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/seborrhoeic-dermatitis/"
     },
-    "imageUrl": "/derm-images/seborrhoeic-dermatitis.png"
+    "imageUrl": "/derm-images/seborrhoeic-dermatitis.jpg"
   },
   {
     "id": "derm-plab-004",
@@ -13586,7 +13586,7 @@
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/fungal-skin-infection-body-and-groin/"
     },
-    "imageUrl": "/derm-images/tinea-corporis.png"
+    "imageUrl": "/derm-images/tinea-corporis.jpg"
   },
   {
     "id": "derm-plab-005",
@@ -13622,7 +13622,7 @@
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/pityriasis-rosea/"
     },
-    "imageUrl": "/derm-images/pityriasis-rosea.png"
+    "imageUrl": "/derm-images/pityriasis-rosea.jpg"
   },
   {
     "id": "derm-plab-006",
@@ -13658,7 +13658,7 @@
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/scabies/"
     },
-    "imageUrl": "/derm-images/scabies-burrows.png"
+    "imageUrl": "/derm-images/scabies-burrows.jpg"
   },
   {
     "id": "derm-plab-007",
@@ -13694,7 +13694,7 @@
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/shingles/"
     },
-    "imageUrl": "/derm-images/herpes-zoster.png"
+    "imageUrl": "/derm-images/herpes-zoster.jpg"
   },
   {
     "id": "derm-plab-008",
@@ -13730,7 +13730,7 @@
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/impetigo/"
     },
-    "imageUrl": "/derm-images/impetigo.png"
+    "imageUrl": "/derm-images/impetigo.jpg"
   },
   {
     "id": "derm-plab-009",
@@ -13766,7 +13766,7 @@
     "links": {
       "CKS": "https://cks.nice.org.uk/topics/urticaria/"
     },
-    "imageUrl": "/derm-images/urticaria.png"
+    "imageUrl": "/derm-images/urticaria.jpg"
   },
   {
     "id": "derm-plab-010",
@@ -13803,7 +13803,7 @@
       "NICE": "https://www.nice.org.uk/guidance/ng12",
       "CKS": "https://cks.nice.org.uk/topics/basal-cell-carcinoma/"
     },
-    "imageUrl": "/derm-images/basal-cell-carcinoma.png"
+    "imageUrl": "/derm-images/basal-cell-carcinoma.jpg"
   },
   {
     "id": "spotdx-001",
@@ -13845,7 +13845,7 @@
       "Reciprocal ST depression in I and aVL",
       "Pathological Q waves may be developing in inferior leads"
     ],
-    "imageUrl": "/spotdx-images/inferior-stemi-ecg.png"
+    "imageUrl": "/spotdx-images/inferior-stemi-ecg.jpg"
   },
   {
     "id": "spotdx-002",
@@ -13887,7 +13887,7 @@
       "Absent lung markings peripheral to the pleural line",
       "Partial collapse of right lung"
     ],
-    "imageUrl": "/spotdx-images/pneumothorax-cxr.png"
+    "imageUrl": "/spotdx-images/pneumothorax-cxr.jpg"
   },
   {
     "id": "spotdx-003",
@@ -13929,7 +13929,7 @@
       "Inability to close the right eye (lagophthalmos)",
       "Loss of right nasolabial fold, droop of right mouth corner"
     ],
-    "imageUrl": "/spotdx-images/bells-palsy.png"
+    "imageUrl": "/spotdx-images/bells-palsy.jpg"
   },
   {
     "id": "spotdx-004",
@@ -13971,7 +13971,7 @@
       "Hazy/steamy cornea",
       "Fixed mid-dilated pupil"
     ],
-    "imageUrl": "/spotdx-images/acute-angle-closure-glaucoma.png"
+    "imageUrl": "/spotdx-images/acute-angle-closure-glaucoma.jpg"
   },
   {
     "id": "spotdx-005",
@@ -14013,7 +14013,7 @@
       "Larger purpuric patches",
       "Non-blanching under glass test"
     ],
-    "imageUrl": "/spotdx-images/meningococcal-rash.png"
+    "imageUrl": "/spotdx-images/meningococcal-rash.jpg"
   },
   {
     "id": "spotdx-006",
@@ -14055,7 +14055,7 @@
       "Ulnar deviation of fingers",
       "Swan-neck deformities"
     ],
-    "imageUrl": "/spotdx-images/rheumatoid-hands.png"
+    "imageUrl": "/spotdx-images/rheumatoid-hands.jpg"
   },
   {
     "id": "spotdx-007",
@@ -14097,7 +14097,7 @@
       "Lid retraction and lid lag",
       "Diffuse smooth neck swelling (goitre)"
     ],
-    "imageUrl": "/spotdx-images/graves-disease.png"
+    "imageUrl": "/spotdx-images/graves-disease.jpg"
   },
   {
     "id": "spotdx-008",
@@ -14139,7 +14139,7 @@
       "Bilateral conjunctival injection (non-purulent)",
       "Polymorphous erythematous truncal rash"
     ],
-    "imageUrl": "/spotdx-images/kawasaki-disease.png"
+    "imageUrl": "/spotdx-images/kawasaki-disease.jpg"
   },
   {
     "id": "spotdx-009",
@@ -14181,7 +14181,7 @@
       "Valvulae conniventes (complete transverse folds)",
       "Step-ladder configuration"
     ],
-    "imageUrl": "/spotdx-images/small-bowel-obstruction-axr.png"
+    "imageUrl": "/spotdx-images/small-bowel-obstruction-axr.jpg"
   },
   {
     "id": "spotdx-010",
@@ -14223,7 +14223,7 @@
       "Irregularly irregular QRS complexes",
       "Variable ventricular rate with narrow QRS"
     ],
-    "imageUrl": "/spotdx-images/atrial-fibrillation-ecg.png"
+    "imageUrl": "/spotdx-images/atrial-fibrillation-ecg.jpg"
   },
   {
     "id": "generated_all_1779372789929_0",
@@ -27472,7 +27472,7 @@
       "paediatrics",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/chickenpox.png",
+    "imageUrl": "/spotdx-images/chickenpox.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg102",
       "CKS": "https://cks.nice.org.uk/topics/chickenpox/"
@@ -27509,7 +27509,7 @@
       "ophthalmology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/chlamydial-conjunctivitis.png",
+    "imageUrl": "/spotdx-images/chlamydial-conjunctivitis.jpg",
     "links": {
       "NICE": "https://cks.nice.org.uk/topics/conjunctivitis-infective/",
       "CKS": "https://cks.nice.org.uk/topics/chlamydia-uncomplicated-genital/"
@@ -27546,7 +27546,7 @@
       "gastroenterology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/cirrhosis-stigmata.png",
+    "imageUrl": "/spotdx-images/cirrhosis-stigmata.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng50",
       "CKS": "https://cks.nice.org.uk/topics/cirrhosis/"
@@ -27582,7 +27582,7 @@
       "paediatrics",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/croup-laryngotracheobronchitis.png",
+    "imageUrl": "/spotdx-images/croup-laryngotracheobronchitis.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng35",
       "CKS": "https://cks.nice.org.uk/topics/croup/"
@@ -27619,7 +27619,7 @@
       "rheumatology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/gout-foot.png",
+    "imageUrl": "/spotdx-images/gout-foot.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg177",
       "CKS": "https://cks.nice.org.uk/topics/gout/"
@@ -27656,7 +27656,7 @@
       "dermatology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/herpes-zoster-shingles.png",
+    "imageUrl": "/spotdx-images/herpes-zoster-shingles.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ta310",
       "CKS": "https://cks.nice.org.uk/topics/shingles/"
@@ -27693,7 +27693,7 @@
       "electrolytes",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/hyperkalaemia-ecg.png",
+    "imageUrl": "/spotdx-images/hyperkalaemia-ecg.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng213",
       "CKS": "https://cks.nice.org.uk/topics/hyperkalaemia/"
@@ -27730,7 +27730,7 @@
       "2WW",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/melanoma.png",
+    "imageUrl": "/spotdx-images/melanoma.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng14",
       "CKS": "https://cks.nice.org.uk/topics/melanoma-and-pigmented-lesions/"
@@ -27767,7 +27767,7 @@
       "endocrinology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/neuropathic-diabetic-ulcer.png",
+    "imageUrl": "/spotdx-images/neuropathic-diabetic-ulcer.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng19",
       "CKS": "https://cks.nice.org.uk/topics/diabetes-type-2/management/foot-care/"
@@ -27804,7 +27804,7 @@
       "gastroenterology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/obstructive-jaundice-pancreatic-cancer.png",
+    "imageUrl": "/spotdx-images/obstructive-jaundice-pancreatic-cancer.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng12",
       "CKS": "https://cks.nice.org.uk/topics/jaundice-in-adults/"
@@ -27840,7 +27840,7 @@
       "ENT",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/otitis-externa.png",
+    "imageUrl": "/spotdx-images/otitis-externa.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg60",
       "CKS": "https://cks.nice.org.uk/topics/otitis-externa/"
@@ -27877,7 +27877,7 @@
       "respiratory",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/pancoast-horner-syndrome.png",
+    "imageUrl": "/spotdx-images/pancoast-horner-syndrome.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng122",
       "CKS": "https://cks.nice.org.uk/topics/lung-and-pleural-cancers-recognition-and-referral/"
@@ -27914,7 +27914,7 @@
       "chest pain",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/pericarditis-ecg.png",
+    "imageUrl": "/spotdx-images/pericarditis-ecg.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg95",
       "CKS": "https://cks.nice.org.uk/topics/chest-pain/"
@@ -27950,7 +27950,7 @@
       "ENT",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/peritonsillar-abscess-quinsy.png",
+    "imageUrl": "/spotdx-images/peritonsillar-abscess-quinsy.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng84",
       "CKS": "https://cks.nice.org.uk/topics/sore-throat-acute/"
@@ -27986,7 +27986,7 @@
       "respiratory",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/pleural-effusion-cxr.png",
+    "imageUrl": "/spotdx-images/pleural-effusion-cxr.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng115",
       "CKS": "https://cks.nice.org.uk/topics/pleural-effusion/"
@@ -28022,7 +28022,7 @@
       "spot-diagnosis",
       "treatment"
     ],
-    "imageUrl": "/spotdx-images/psoriasis.png",
+    "imageUrl": "/spotdx-images/psoriasis.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg153",
       "CKS": "https://cks.nice.org.uk/topics/psoriasis/"
@@ -28059,7 +28059,7 @@
       "respiratory",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/pulmonary-embolism-ctpa.png",
+    "imageUrl": "/spotdx-images/pulmonary-embolism-ctpa.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng158",
       "CKS": "https://cks.nice.org.uk/topics/pulmonary-embolism/"
@@ -28095,7 +28095,7 @@
       "paediatrics",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/scarlet-fever.png",
+    "imageUrl": "/spotdx-images/scarlet-fever.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng84",
       "CKS": "https://cks.nice.org.uk/topics/scarlet-fever/"
@@ -28131,7 +28131,7 @@
       "paediatrics",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/slapped-cheek-erythema-infectiosum.png",
+    "imageUrl": "/spotdx-images/slapped-cheek-erythema-infectiosum.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg102",
       "CKS": "https://cks.nice.org.uk/topics/parvovirus-b19-infection/"
@@ -28169,7 +28169,7 @@
       "broad complex",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/ventricular-tachycardia-ecg.png",
+    "imageUrl": "/spotdx-images/ventricular-tachycardia-ecg.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg94",
       "CKS": "https://cks.nice.org.uk/topics/tachyarrhythmias/"
@@ -28207,7 +28207,7 @@
       "cardiology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/complete-heart-block-ecg.png",
+    "imageUrl": "/spotdx-images/complete-heart-block-ecg.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng196",
       "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
@@ -28245,7 +28245,7 @@
       "cardiology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/lbbb-ecg.png",
+    "imageUrl": "/spotdx-images/lbbb-ecg.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng185",
       "CKS": "https://cks.nice.org.uk/topics/chest-pain/"
@@ -28283,7 +28283,7 @@
       "cardiology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/svt-ecg.png",
+    "imageUrl": "/spotdx-images/svt-ecg.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg36",
       "CKS": "https://cks.nice.org.uk/topics/tachyarrhythmias/"
@@ -28320,7 +28320,7 @@
       "cardiology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/cardiomegaly-cxr.png",
+    "imageUrl": "/spotdx-images/cardiomegaly-cxr.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng106",
       "CKS": "https://cks.nice.org.uk/topics/heart-failure-chronic/"
@@ -28358,7 +28358,7 @@
       "respiratory",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/consolidation-cxr.png",
+    "imageUrl": "/spotdx-images/consolidation-cxr.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng138",
       "CKS": "https://cks.nice.org.uk/topics/pneumonia-in-adults/"
@@ -28396,7 +28396,7 @@
       "respiratory",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/tension-pneumothorax-cxr.png",
+    "imageUrl": "/spotdx-images/tension-pneumothorax-cxr.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng39",
       "CKS": "https://cks.nice.org.uk/topics/pneumothorax/"
@@ -28434,7 +28434,7 @@
       "gastroenterology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/sigmoid-volvulus-axr.png",
+    "imageUrl": "/spotdx-images/sigmoid-volvulus-axr.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng149",
       "CKS": "https://cks.nice.org.uk/topics/bowel-obstruction/"
@@ -28471,7 +28471,7 @@
       "nephrolithiasis",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/renal-calculus-kub.png",
+    "imageUrl": "/spotdx-images/renal-calculus-kub.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg157",
       "CKS": "https://cks.nice.org.uk/topics/kidney-stones/"
@@ -28508,7 +28508,7 @@
       "dermatology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/derm-images/erythema-nodosum.png",
+    "imageUrl": "/derm-images/erythema-nodosum.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng149",
       "CKS": "https://cks.nice.org.uk/topics/erythema-nodosum/"
@@ -28544,7 +28544,7 @@
       "dermatology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/derm-images/cellulitis.png",
+    "imageUrl": "/derm-images/cellulitis.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng141",
       "CKS": "https://cks.nice.org.uk/topics/cellulitis-acute/"
@@ -28581,7 +28581,7 @@
       "isotretinoin",
       "spot-diagnosis"
     ],
-    "imageUrl": "/derm-images/acne-vulgaris.png",
+    "imageUrl": "/derm-images/acne-vulgaris.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg177",
       "CKS": "https://cks.nice.org.uk/topics/acne-vulgaris/"
@@ -28617,7 +28617,7 @@
       "facial redness",
       "spot-diagnosis"
     ],
-    "imageUrl": "/derm-images/rosacea.png",
+    "imageUrl": "/derm-images/rosacea.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg147",
       "CKS": "https://cks.nice.org.uk/topics/rosacea/"
@@ -28654,7 +28654,7 @@
       "HPOA",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/clubbing-fingers.png",
+    "imageUrl": "/spotdx-images/clubbing-fingers.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng122",
       "CKS": "https://cks.nice.org.uk/topics/lung-and-pleural-cancers-recognition-and-referral/"
@@ -28690,7 +28690,7 @@
       "orthopaedics",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/dupuytren-contracture.png",
+    "imageUrl": "/spotdx-images/dupuytren-contracture.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ipg377",
       "CKS": "https://cks.nice.org.uk/topics/dupuytrens-contracture/"
@@ -28727,7 +28727,7 @@
       "endocrinology",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/thyroid-goitre.png",
+    "imageUrl": "/spotdx-images/thyroid-goitre.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng145",
       "CKS": "https://cks.nice.org.uk/topics/hyperthyroidism/"
@@ -28764,7 +28764,7 @@
       "hypertension",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/hypertensive-retinopathy-fundus.png",
+    "imageUrl": "/spotdx-images/hypertensive-retinopathy-fundus.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng136",
       "CKS": "https://cks.nice.org.uk/topics/hypertension/"
@@ -28802,7 +28802,7 @@
       "amoxicillin",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/tonsillitis-exudate.png",
+    "imageUrl": "/spotdx-images/tonsillitis-exudate.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng84",
       "CKS": "https://cks.nice.org.uk/topics/glandular-fever-infectious-mononucleosis/"
@@ -28840,7 +28840,7 @@
       "bisphosphonate",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/pagets-disease-skull-xray.png",
+    "imageUrl": "/spotdx-images/pagets-disease-skull-xray.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ta160",
       "CKS": "https://cks.nice.org.uk/topics/pagets-disease-of-bone/"
@@ -28877,7 +28877,7 @@
       "autoimmune",
       "spot-diagnosis"
     ],
-    "imageUrl": "/derm-images/lichen-planus.png",
+    "imageUrl": "/derm-images/lichen-planus.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/cg147",
       "CKS": "https://cks.nice.org.uk/topics/lichen-planus/"
@@ -28916,7 +28916,7 @@
       "airway",
       "spot-diagnosis"
     ],
-    "imageUrl": "/spotdx-images/epiglottitis-thumb-sign.png",
+    "imageUrl": "/spotdx-images/epiglottitis-thumb-sign.jpg",
     "links": {
       "NICE": "https://www.nice.org.uk/guidance/ng35",
       "CKS": "https://cks.nice.org.uk/topics/croup/"

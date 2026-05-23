@@ -26,7 +26,7 @@ const spotDxQuestions = [
     category: "cardiology",
     difficulty: "easy",
     examType: "plab1",
-    imageUrl: "/spotdx-images/inferior-stemi-ecg.png",
+    imageUrl: "/spotdx-images/inferior-stemi-ecg.jpg",
     tags: ["spot-diagnosis", "ecg", "cardiology"],
     content:
       "A 58-year-old man presents to A&E with crushing central chest pain radiating to his jaw for the past 90 minutes. He is diaphoretic and pale. His ECG is shown above. What is the most likely diagnosis?",
@@ -40,7 +40,7 @@ const spotDxQuestions = [
     category: "cardiology",
     difficulty: "easy",
     examType: "plab1",
-    imageUrl: "/spotdx-images/atrial-fibrillation-ecg.png",
+    imageUrl: "/spotdx-images/atrial-fibrillation-ecg.jpg",
     tags: ["spot-diagnosis", "ecg", "cardiology"],
     content:
       "A 72-year-old woman attends her GP with a 2-week history of palpitations and occasional breathlessness. She has no chest pain. Her ECG is shown above. What is the most likely rhythm?",
@@ -54,7 +54,7 @@ const spotDxQuestions = [
     category: "respiratory",
     difficulty: "moderate",
     examType: "plab1",
-    imageUrl: "/spotdx-images/pneumothorax-cxr.png",
+    imageUrl: "/spotdx-images/pneumothorax-cxr.jpg",
     tags: ["spot-diagnosis", "radiology", "respiratory"],
     content:
       "A 22-year-old tall, slim man presents with sudden-onset right-sided pleuritic chest pain and mild breathlessness. He is haemodynamically stable. His chest X-ray is shown above. What is the immediate management?",
@@ -74,7 +74,7 @@ const spotDxQuestions = [
     category: "neurology",
     difficulty: "easy",
     examType: "plab1",
-    imageUrl: "/spotdx-images/bells-palsy.png",
+    imageUrl: "/spotdx-images/bells-palsy.jpg",
     tags: ["spot-diagnosis", "neurology", "facial-nerve"],
     content:
       "A 34-year-old woman wakes up with sudden-onset left-sided facial weakness. She is unable to close her left eye fully or raise her left eyebrow. She has no limb weakness and no hearing changes. The clinical photograph is shown above. What is the most likely diagnosis?",
@@ -88,7 +88,7 @@ const spotDxQuestions = [
     category: "ophthalmology",
     difficulty: "moderate",
     examType: "plab1",
-    imageUrl: "/spotdx-images/acute-angle-closure-glaucoma.png",
+    imageUrl: "/spotdx-images/acute-angle-closure-glaucoma.jpg",
     tags: ["spot-diagnosis", "ophthalmology", "emergency"],
     content:
       "A 65-year-old woman presents to A&E with a 3-hour history of severe right-sided headache, nausea, blurred vision, and seeing halos around lights. On examination her right eye appears red with a hazy cornea. The clinical photograph is shown above. What is the most appropriate immediate management?",
@@ -108,7 +108,7 @@ const spotDxQuestions = [
     category: "infectious-diseases",
     difficulty: "easy",
     examType: "plab1",
-    imageUrl: "/spotdx-images/meningococcal-rash.png",
+    imageUrl: "/spotdx-images/meningococcal-rash.jpg",
     tags: ["spot-diagnosis", "dermatology", "infectious-diseases", "emergency"],
     content:
       "A 19-year-old university student is brought to A&E by his flatmate. He is confused, febrile (39.8\u00b0C), and has neck stiffness. The rash shown above is visible on his legs and does not blanch on a glass tumbler test. What is the single most important immediate action?",
@@ -128,7 +128,7 @@ const spotDxQuestions = [
     category: "rheumatology",
     difficulty: "easy",
     examType: "plab1",
-    imageUrl: "/spotdx-images/rheumatoid-hands.png",
+    imageUrl: "/spotdx-images/rheumatoid-hands.jpg",
     tags: ["spot-diagnosis", "rheumatology", "hands"],
     content:
       "A 52-year-old woman presents with a 2-year history of morning stiffness lasting over 1 hour, symmetrical joint pain, and fatigue. Her hands are shown above. Blood tests reveal raised ESR, CRP, and positive anti-CCP antibodies. What is the most likely diagnosis?",
@@ -142,7 +142,7 @@ const spotDxQuestions = [
     category: "endocrinology",
     difficulty: "moderate",
     examType: "plab1",
-    imageUrl: "/spotdx-images/graves-disease.png",
+    imageUrl: "/spotdx-images/graves-disease.jpg",
     tags: ["spot-diagnosis", "endocrinology", "thyroid"],
     content:
       "A 28-year-old woman presents with a 3-month history of weight loss despite increased appetite, heat intolerance, palpitations, and anxiety. The clinical photograph is shown above. TFTs reveal suppressed TSH with elevated free T3 and T4. What is the most likely diagnosis?",
@@ -156,7 +156,7 @@ const spotDxQuestions = [
     category: "paediatrics",
     difficulty: "moderate",
     examType: "plab1",
-    imageUrl: "/spotdx-images/kawasaki-disease.png",
+    imageUrl: "/spotdx-images/kawasaki-disease.jpg",
     tags: ["spot-diagnosis", "paediatrics", "vasculitis"],
     content:
       "A 4-year-old boy has had a fever for 6 days. On examination he has bilateral conjunctival injection, a strawberry tongue, cervical lymphadenopathy, and an erythematous rash on his trunk. The photograph is shown above. What is the most important complication to screen for?",
@@ -176,7 +176,7 @@ const spotDxQuestions = [
     category: "radiology",
     difficulty: "moderate",
     examType: "plab1",
-    imageUrl: "/spotdx-images/small-bowel-obstruction-axr.png",
+    imageUrl: "/spotdx-images/small-bowel-obstruction-axr.jpg",
     tags: ["spot-diagnosis", "radiology", "gastroenterology", "surgery"],
     content:
       "A 68-year-old man with a history of previous appendicectomy presents with colicky central abdominal pain, vomiting, and absolute constipation for 24 hours. His abdomen is distended. His abdominal X-ray is shown above. What is the most likely diagnosis?",
