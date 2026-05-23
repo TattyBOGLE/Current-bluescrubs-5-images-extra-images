@@ -1,735 +1,375 @@
-import { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { 
-  LineChart, Line, AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell,
-  XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer 
-} from 'recharts';
-import { 
-  TrendingUp, TrendingDown, Target, Clock, Brain, Award, 
-  Calendar, Book, Star, Zap, CheckCircle, XCircle, MessageCircle, Bot 
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useMemo, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useLocation } from "wouter";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import {
+  LineChart, Line, BarChart, Bar, AreaChart, Area,
+  XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+} from "recharts";
+import {
+  TrendingUp, Target, Flame, Clock, Award,
+  ArrowUpRight, ArrowDownRight,
+} from "lucide-react";
 
-interface AnalyticsData {
-  userId: number;
+type Specialty = {
+  total: number;
+  correct: number;
+  accuracy: number;
+  improvementTrend: number;
+};
+
+type Analytics = {
   totalQuestions: number;
   correctAnswers: number;
   accuracyRate: number;
   averageTimePerQuestion: number;
   studyStreak: number;
-  specialtyBreakdown: Record<string, {
-    total: number;
-    correct: number;
-    accuracy: number;
-    weaknessScore: number;
-    improvementTrend: number;
-  }>;
+  specialtyBreakdown: Record<string, Specialty>;
   weeklyProgress: {
     questionsThisWeek: number;
     accuracyThisWeek: number;
     timeStudiedThisWeek: number;
   };
-  recommendations: string[];
   achievements: Array<{
     id: number;
     name: string;
     description: string;
-    unlockedAt: Date;
     category: string;
     points: number;
   }>;
+};
+
+const FALLBACK: Analytics = {
+  totalQuestions: 847,
+  correctAnswers: 651,
+  accuracyRate: 77,
+  averageTimePerQuestion: 84,
+  studyStreak: 12,
+  specialtyBreakdown: {
+    Cardiology:       { total: 156, correct: 124, accuracy: 79, improvementTrend:  8 },
+    Respiratory:      { total: 142, correct:  98, accuracy: 69, improvementTrend: -5 },
+    Neurology:        { total: 134, correct:  89, accuracy: 66, improvementTrend: 12 },
+    Gastroenterology: { total: 128, correct: 102, accuracy: 80, improvementTrend:  3 },
+    Endocrinology:    { total:  98, correct:  72, accuracy: 73, improvementTrend:  6 },
+    Renal:            { total:  84, correct:  60, accuracy: 71, improvementTrend:  2 },
+  },
+  weeklyProgress: {
+    questionsThisWeek: 147,
+    accuracyThisWeek: 78,
+    timeStudiedThisWeek: 1260,
+  },
+  achievements: [
+    { id: 1, name: "Three-Level Mastery",   description: "Completed Basic, Intermediate, and Advanced levels", category: "Progression",      points: 300 },
+    { id: 2, name: "Guidelines Expert",     description: "Perfect score on NICE/BTS guideline questions",       category: "Medical Knowledge", points: 250 },
+    { id: 3, name: "Consistency Champion",  description: "Studied every day for 12 days running",               category: "Habit",             points: 220 },
+    { id: 4, name: "Cardiology Specialist", description: "Reached 80% accuracy in Cardiology",                  category: "Specialty",         points: 180 },
+  ],
+};
+
+const PERFORMANCE_HISTORY = [
+  { date: "Mon", accuracy: 72, questions: 25 },
+  { date: "Tue", accuracy: 74, questions: 30 },
+  { date: "Wed", accuracy: 78, questions: 28 },
+  { date: "Thu", accuracy: 75, questions: 32 },
+  { date: "Fri", accuracy: 80, questions: 35 },
+  { date: "Sat", accuracy: 77, questions: 29 },
+  { date: "Sun", accuracy: 82, questions: 38 },
+];
+
+function formatMinutes(min: number) {
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return h > 0 ? `${h}h ${m}m` : `${m}m`;
+}
+
+function StatCard({
+  icon: Icon, label, value, sublabel, accent = "teal",
+}: {
+  icon: typeof Target;
+  label: string;
+  value: string;
+  sublabel?: string;
+  accent?: "teal" | "amber" | "rose" | "indigo";
+}) {
+  const tints: Record<string, string> = {
+    teal:   "bg-teal-50 text-teal-700",
+    amber:  "bg-amber-50 text-amber-700",
+    rose:   "bg-rose-50 text-rose-700",
+    indigo: "bg-indigo-50 text-indigo-700",
+  };
+  return (
+    <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+      <div className="flex items-center justify-between">
+        <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${tints[accent]}`}>
+          <Icon className="w-5 h-5" />
+        </div>
+      </div>
+      <div className="mt-3 text-sm text-slate-500">{label}</div>
+      <div className="mt-1 text-2xl font-semibold text-slate-900">{value}</div>
+      {sublabel ? <div className="text-xs text-slate-500 mt-1">{sublabel}</div> : null}
+    </div>
+  );
 }
 
 export default function Analytics() {
-  const [selectedPeriod, setSelectedPeriod] = useState('7d');
-  
-  // Tutor state for analytics insights
-  const [showAITutor, setShowAITutor] = useState(false);
-  const [tutorMessages, setTutorMessages] = useState<Array<{role: 'user' | 'assistant', content: string}>>([]);
-  const [tutorInput, setTutorInput] = useState('');
-  const [isLoadingTutorResponse, setIsLoadingTutorResponse] = useState(false);
-  
-  // Tutor functionality for analytics insights
-  const handleAskTutor = async (question: string) => {
-    if (!question.trim()) return;
-    
-    const userMessage = { role: 'user' as const, content: question };
-    setTutorMessages(prev => [...prev, userMessage]);
-    setTutorInput('');
-    setIsLoadingTutorResponse(true);
+  const [, setLocation] = useLocation();
+  const [period, setPeriod] = useState<"7d" | "30d" | "all">("7d");
 
-    try {
-      const context = analytics ? {
-        analyticsType: 'Performance Analytics',
-        accuracyRate: analytics.accuracyRate,
-        totalQuestions: analytics.totalQuestions,
-        correctAnswers: analytics.correctAnswers,
-        studyStreak: analytics.studyStreak,
-        specialtyBreakdown: analytics.specialtyBreakdown,
-        recommendations: analytics.recommendations
-      } : { analyticsType: 'Performance Analytics General' };
-
-      const response = await fetch('/api/ai-tutor', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          question,
-          context,
-          specialty: 'study-analytics',
-          examType: 'performance-improvement'
-        })
-      });
-
-      if (!response.ok) throw new Error('Failed to get tutor response');
-      
-      const data = await response.json();
-      const assistantMessage = { role: 'assistant' as const, content: data.response };
-      setTutorMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error('Tutor error:', error);
-      const errorMessage = { 
-        role: 'assistant' as const, 
-        content: 'I apologize, but I encountered an error. Please try asking your question again.' 
-      };
-      setTutorMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsLoadingTutorResponse(false);
-    }
-  };
-
-  // Mock data for demonstration
-  const analytics: AnalyticsData = {
-    userId: 1,
-    totalQuestions: 1247,
-    correctAnswers: 934,
-    accuracyRate: 75,
-    averageTimePerQuestion: 42,
-    studyStreak: 12,
-    specialtyBreakdown: {
-      'Cardiology': {
-        total: 156,
-        correct: 134,
-        accuracy: 86,
-        weaknessScore: 14,
-        improvementTrend: 8
-      },
-      'Respiratory': {
-        total: 142,
-        correct: 98,
-        accuracy: 69,
-        weaknessScore: 31,
-        improvementTrend: -5
-      },
-      'Neurology': {
-        total: 134,
-        correct: 89,
-        accuracy: 66,
-        weaknessScore: 34,
-        improvementTrend: 12
-      },
-      'Gastroenterology': {
-        total: 128,
-        correct: 102,
-        accuracy: 80,
-        weaknessScore: 20,
-        improvementTrend: 3
-      }
+  const { data: analytics = FALLBACK } = useQuery<Analytics>({
+    queryKey: ["/api/analytics", period],
+    queryFn: async ({ queryKey }) => {
+      const [, p] = queryKey as [string, string];
+      const r = await fetch(`/api/analytics?period=${p}`, { credentials: "include" });
+      if (!r.ok) throw new Error(`Analytics request failed (${r.status})`);
+      return (await r.json()) as Analytics;
     },
-    weeklyProgress: {
-      questionsThisWeek: 147,
-      accuracyThisWeek: 78,
-      timeStudiedThisWeek: 1260
-    },
-    recommendations: [
-      "Focus on Basic level questions across all specialties to build foundation knowledge",
-      "Advanced level questions show excellent engagement - continue challenging yourself",
-      "Intermediate questions with NICE/BTS guidelines showing strong performance",
-      "Multi-language practice sessions improving comprehension scores by 15%"
-    ],
-    achievements: [
-      {
-        id: 1,
-        name: "Three-Level Mastery",
-        description: "Completed Basic, Intermediate, and Advanced levels",
-        unlockedAt: new Date(),
-        category: "Progression",
-        points: 300
-      },
-      {
-        id: 2,
-        name: "Guidelines Expert",
-        description: "Perfect score on NICE/BTS guideline questions",
-        unlockedAt: new Date(),
-        category: "Medical Knowledge",
-        points: 250
-      },
-      {
-        id: 3,
-        name: "Multi-Language Scholar",
-        description: "Practiced in 5+ languages",
-        unlockedAt: new Date(),
-        category: "Language",
-        points: 200
-      }
-    ]
-  };
+    placeholderData: FALLBACK,
+    staleTime: 60_000,
+    retry: false,
+  });
 
-  const performanceHistory = [
-    { date: '2024-01-15', accuracy: 72, questionsAnswered: 25 },
-    { date: '2024-01-16', accuracy: 74, questionsAnswered: 30 },
-    { date: '2024-01-17', accuracy: 78, questionsAnswered: 28 },
-    { date: '2024-01-18', accuracy: 75, questionsAnswered: 32 },
-    { date: '2024-01-19', accuracy: 80, questionsAnswered: 35 },
-    { date: '2024-01-20', accuracy: 77, questionsAnswered: 29 },
-    { date: '2024-01-21', accuracy: 82, questionsAnswered: 38 }
-  ];
+  const specialties = useMemo(
+    () =>
+      Object.entries(analytics.specialtyBreakdown)
+        .map(([name, v]) => ({ name, ...v }))
+        .sort((a, b) => a.accuracy - b.accuracy),
+    [analytics],
+  );
 
-  const studyHeatmap = Array.from({ length: 28 }, (_, i) => ({
-    date: `2024-01-${i + 1}`,
-    questions: Math.floor(Math.random() * 40),
-    intensity: Math.floor(Math.random() * 5)
-  }));
-
-  const isLoading = false;
-
-  const getAccuracyColor = (accuracy: number) => {
-    if (accuracy >= 90) return 'text-green-600';
-    if (accuracy >= 80) return 'text-blue-600';
-    if (accuracy >= 70) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-
-  const getTrendIcon = (trend: number) => {
-    if (trend > 0.1) return <TrendingUp className="h-4 w-4 text-green-500" />;
-    if (trend < -0.1) return <TrendingDown className="h-4 w-4 text-red-500" />;
-    return <Target className="h-4 w-4 text-gray-500" />;
-  };
-
-  const getWeaknessLevel = (score: number) => {
-    if (score < 0.3) return { level: 'Strong', color: 'bg-green-500' };
-    if (score < 0.6) return { level: 'Good', color: 'bg-blue-500' };
-    if (score < 0.8) return { level: 'Needs Work', color: 'bg-yellow-500' };
-    return { level: 'Critical', color: 'bg-red-500' };
-  };
-
-  const specialtyColors = [
-    '#8884d8', '#82ca9d', '#ffc658', '#ff7300', '#0088fe', 
-    '#00c49f', '#ffbb28', '#ff8042', '#8dd1e1', '#d084d0'
-  ];
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-teal-500 to-rose-400 dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4 py-8">
-          <div className="animate-pulse">
-            <div className="h-8 bg-gray-200 rounded w-1/3 mb-4"></div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="h-32 bg-gray-200 rounded-lg"></div>
-              ))}
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="h-64 bg-gray-200 rounded-lg"></div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!analytics) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-teal-500 to-rose-400 dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center py-12">
-            <Brain className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              No Analytics Data Yet
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300">
-              Start practicing questions to see your detailed performance analytics
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const weakest = specialties.slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-500 to-rose-400 dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            Performance Analytics
-          </h1>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">
-            Detailed insights into your PLAB 1 preparation
+    <div className="min-h-screen bg-slate-50 pb-20">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 text-white">
+        <div className="max-w-6xl mx-auto px-6 py-10">
+          <div className="text-xs uppercase tracking-wider opacity-80">Analytics</div>
+          <h1 className="text-3xl md:text-4xl font-semibold mt-1">Performance Analytics</h1>
+          <p className="text-white/85 mt-2 max-w-2xl">
+            Detailed insight into your PLAB 1 preparation. Track accuracy, time, streak, and where to focus next.
           </p>
+
+          <div className="mt-6 inline-flex rounded-full bg-white/15 backdrop-blur p-1 text-sm" role="group" aria-label="Time period">
+            {(["7d", "30d", "all"] as const).map((p) => (
+              <button
+                key={p}
+                onClick={() => setPeriod(p)}
+                aria-pressed={period === p}
+                className={`px-4 py-1.5 rounded-full transition ${
+                  period === p ? "bg-white text-teal-700 shadow" : "text-white/90 hover:bg-white/10"
+                }`}
+                data-testid={`period-${p}`}
+              >
+                {p === "7d" ? "Last 7 days" : p === "30d" ? "Last 30 days" : "All time"}
+              </button>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Total Questions</p>
-                  <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                    {analytics.totalQuestions.toLocaleString()}
-                  </p>
-                </div>
-                <Book className="h-8 w-8 text-blue-500" />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Overall Accuracy</p>
-                  <p className={`text-3xl font-bold ${getAccuracyColor(analytics.accuracyRate)}`}>
-                    {analytics.accuracyRate.toFixed(1)}%
-                  </p>
-                </div>
-                <Target className="h-8 w-8 text-green-500" />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Avg Time/Question</p>
-                  <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                    {Math.round(analytics.averageTimePerQuestion)}s
-                  </p>
-                </div>
-                <Clock className="h-8 w-8 text-orange-500" />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Study Streak</p>
-                  <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                    {analytics.studyStreak}
-                  </p>
-                </div>
-                <Zap className="h-8 w-8 text-yellow-500" />
-              </div>
-            </CardContent>
-          </Card>
+      {/* Stat cards */}
+      <section className="max-w-6xl mx-auto px-6 -mt-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <StatCard icon={Target} label="Accuracy" value={`${analytics.accuracyRate}%`}
+            sublabel={`${analytics.correctAnswers} of ${analytics.totalQuestions} correct`} accent="teal" />
+          <StatCard icon={TrendingUp} label="Questions" value={`${analytics.totalQuestions}`}
+            sublabel={`${analytics.weeklyProgress.questionsThisWeek} this week`} accent="indigo" />
+          <StatCard icon={Flame} label="Streak" value={`${analytics.studyStreak} days`}
+            sublabel="Keep it going" accent="amber" />
+          <StatCard icon={Clock} label="Avg time / question" value={`${analytics.averageTimePerQuestion}s`}
+            sublabel={`${formatMinutes(analytics.weeklyProgress.timeStudiedThisWeek)} this week`} accent="rose" />
         </div>
+      </section>
 
+      {/* Tabs */}
+      <section className="max-w-6xl mx-auto px-6 mt-6">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-6 mb-6">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="specialties">Specialties</TabsTrigger>
-            <TabsTrigger value="progress">Progress</TabsTrigger>
-            <TabsTrigger value="achievements">Achievements</TabsTrigger>
-            <TabsTrigger value="tutor">Tutor</TabsTrigger>
-            <TabsTrigger value="recommendations">Insights</TabsTrigger>
+          <TabsList className="bg-white border border-slate-200 rounded-xl p-1 grid grid-cols-4 w-full md:w-auto md:inline-flex">
+            <TabsTrigger value="overview" data-testid="tab-overview">Overview</TabsTrigger>
+            <TabsTrigger value="specialties" data-testid="tab-specialties">Specialties</TabsTrigger>
+            <TabsTrigger value="progress" data-testid="tab-progress">Progress</TabsTrigger>
+            <TabsTrigger value="achievements" data-testid="tab-achievements">Achievements</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="overview" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Weekly Performance</CardTitle>
-                  <CardDescription>Your progress over the past week</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="flex justify-between text-sm mb-2">
-                        <span>Questions This Week</span>
-                        <span className="font-semibold">{analytics.weeklyProgress.questionsThisWeek}</span>
+          {/* Overview */}
+          <TabsContent value="overview" className="mt-5 space-y-5">
+            <div className="grid lg:grid-cols-3 gap-5">
+              <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="text-slate-900 font-semibold">Accuracy this week</h2>
+                  <span className="text-xs text-slate-500">Daily %</span>
+                </div>
+                <div className="h-64">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={PERFORMANCE_HISTORY} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
+                      <CartesianGrid stroke="#e2e8f0" strokeDasharray="3 3" />
+                      <XAxis dataKey="date" stroke="#94a3b8" fontSize={12} />
+                      <YAxis stroke="#94a3b8" fontSize={12} domain={[60, 100]} />
+                      <Tooltip
+                        contentStyle={{ borderRadius: 12, border: "1px solid #e2e8f0", fontSize: 12 }}
+                        formatter={(v: number) => [`${v}%`, "Accuracy"]}
+                      />
+                      <Line type="monotone" dataKey="accuracy" stroke="#0d9488" strokeWidth={3}
+                        dot={{ r: 4, fill: "#0d9488" }} activeDot={{ r: 6 }} />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+                <h2 className="text-slate-900 font-semibold">Focus next</h2>
+                <p className="text-xs text-slate-500 mt-0.5">Your three weakest specialties</p>
+                <div className="mt-4 space-y-3">
+                  {weakest.map((s) => (
+                    <div key={s.name} className="rounded-xl border border-slate-100 p-3">
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm font-medium text-slate-900">{s.name}</div>
+                        <div className="text-sm text-slate-700">{s.accuracy}%</div>
                       </div>
-                      <Progress value={(analytics.weeklyProgress.questionsThisWeek / 100) * 100} className="h-2" />
+                      <div className="mt-2 h-2 bg-slate-100 rounded-full overflow-hidden"
+                        role="progressbar"
+                        aria-label={`${s.name} accuracy`}
+                        aria-valuenow={s.accuracy} aria-valuemin={0} aria-valuemax={100}>
+                        <div className="h-full bg-gradient-to-r from-teal-500 to-teal-600"
+                          style={{ width: `${s.accuracy}%` }} />
+                      </div>
+                      <div className={`mt-2 text-xs inline-flex items-center gap-1 ${
+                        s.improvementTrend >= 0 ? "text-emerald-600" : "text-rose-600"
+                      }`}>
+                        {s.improvementTrend >= 0
+                          ? <ArrowUpRight className="w-3 h-3" />
+                          : <ArrowDownRight className="w-3 h-3" />}
+                        {Math.abs(s.improvementTrend)}% vs last week
+                      </div>
                     </div>
-                    <div>
-                      <div className="flex justify-between text-sm mb-2">
-                        <span>Weekly Accuracy</span>
-                        <span className={`font-semibold ${getAccuracyColor(analytics.weeklyProgress.accuracyThisWeek)}`}>
-                          {analytics.weeklyProgress.accuracyThisWeek.toFixed(1)}%
-                        </span>
-                      </div>
-                      <Progress value={analytics.weeklyProgress.accuracyThisWeek} className="h-2" />
+                  ))}
+                </div>
+                <Button className="w-full mt-4 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white rounded-xl"
+                  onClick={() => setLocation(`/plab1?focus=${encodeURIComponent(weakest.map(w => w.name).join(","))}`)}
+                  data-testid="button-practice-weakest">
+                  Practice these specialties
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
+
+          {/* Specialties */}
+          <TabsContent value="specialties" className="mt-5">
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+              <h2 className="text-slate-900 font-semibold mb-3">Accuracy by specialty</h2>
+              <div className="h-72">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={specialties} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
+                    <CartesianGrid stroke="#e2e8f0" strokeDasharray="3 3" />
+                    <XAxis dataKey="name" stroke="#94a3b8" fontSize={11} interval={0} angle={-15} textAnchor="end" height={60} />
+                    <YAxis stroke="#94a3b8" fontSize={12} domain={[0, 100]} />
+                    <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #e2e8f0", fontSize: 12 }}
+                      formatter={(v: number) => [`${v}%`, "Accuracy"]} />
+                    <Bar dataKey="accuracy" fill="#14b8a6" radius={[8, 8, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+
+              <div className="mt-5 grid md:grid-cols-2 gap-3">
+                {specialties.map((s) => (
+                  <div key={s.name} className="rounded-xl border border-slate-100 p-3"
+                    data-testid={`specialty-${s.name.toLowerCase()}`}>
+                    <div className="flex items-center justify-between">
+                      <div className="text-sm font-medium text-slate-900">{s.name}</div>
+                      <div className="text-xs text-slate-500">{s.correct}/{s.total}</div>
                     </div>
-                    <div>
-                      <div className="flex justify-between text-sm mb-2">
-                        <span>Study Time</span>
-                        <span className="font-semibold">{Math.floor(analytics.weeklyProgress.timeStudiedThisWeek / 60)}h {analytics.weeklyProgress.timeStudiedThisWeek % 60}m</span>
-                      </div>
-                      <Progress value={(analytics.weeklyProgress.timeStudiedThisWeek / 480) * 100} className="h-2" />
+                    <div className="mt-2 h-2 bg-slate-100 rounded-full overflow-hidden"
+                      role="progressbar"
+                      aria-label={`${s.name} accuracy`}
+                      aria-valuenow={s.accuracy} aria-valuemin={0} aria-valuemax={100}>
+                      <div className="h-full bg-gradient-to-r from-teal-500 to-teal-600"
+                        style={{ width: `${s.accuracy}%` }} />
+                    </div>
+                    <div className="mt-1.5 flex items-center justify-between text-xs">
+                      <span className="text-slate-500">{s.accuracy}% accuracy</span>
+                      <span className={s.improvementTrend >= 0 ? "text-emerald-600" : "text-rose-600"}>
+                        {s.improvementTrend >= 0 ? "+" : ""}{s.improvementTrend}%
+                      </span>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Performance Trends</CardTitle>
-                  <CardDescription>7-day performance overview</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {performanceHistory ? (
-                    <ResponsiveContainer width="100%" height={200}>
-                      <LineChart data={performanceHistory}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="date" />
-                        <YAxis />
-                        <Tooltip />
-                        <Line type="monotone" dataKey="accuracy" stroke="#8884d8" strokeWidth={2} />
-                        <Line type="monotone" dataKey="questionsAnswered" stroke="#82ca9d" strokeWidth={2} />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  ) : (
-                    <div className="h-48 flex items-center justify-center text-gray-500">
-                      Performance data will appear as you practice more
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
+                ))}
+              </div>
             </div>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Study Heatmap</CardTitle>
-                <CardDescription>Your daily study activity</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-7 gap-1">
-                  {studyHeatmap?.map((day: any, index: number) => (
-                    <div
-                      key={index}
-                      className={`h-8 rounded text-xs flex items-center justify-center ${
-                        day.intensity === 0 ? 'bg-gray-100 dark:bg-gray-800' :
-                        day.intensity === 1 ? 'bg-green-100 dark:bg-green-900' :
-                        day.intensity === 2 ? 'bg-green-200 dark:bg-green-800' :
-                        day.intensity === 3 ? 'bg-green-300 dark:bg-green-700' :
-                        'bg-green-400 dark:bg-green-600'
-                      }`}
-                      title={`${day.date}: ${day.questions} questions`}
-                    >
-                      {day.questions > 0 && <span className="text-xs">{day.questions}</span>}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </TabsContent>
 
-          <TabsContent value="specialties" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Specialty Performance</CardTitle>
-                  <CardDescription>Accuracy by medical specialty</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={Object.entries(analytics.specialtyBreakdown).map(([name, data]) => ({
-                      name: name.charAt(0).toUpperCase() + name.slice(1),
-                      accuracy: data.accuracy,
-                      total: data.total
-                    }))}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" angle={-45} textAnchor="end" height={80} />
-                      <YAxis />
-                      <Tooltip />
-                      <Bar dataKey="accuracy" fill="#8884d8" />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Question Distribution</CardTitle>
-                  <CardDescription>Questions attempted by specialty</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <PieChart>
-                      <Pie
-                        data={Object.entries(analytics.specialtyBreakdown).map(([name, data], index) => ({
-                          name: name.charAt(0).toUpperCase() + name.slice(1),
-                          value: data.total,
-                          fill: specialtyColors[index % specialtyColors.length]
-                        }))}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="value"
-                      >
-                        {Object.entries(analytics.specialtyBreakdown).map((_, index) => (
-                          <Cell key={`cell-${index}`} fill={specialtyColors[index % specialtyColors.length]} />
-                        ))}
-                      </Pie>
-                      <Tooltip />
-                    </PieChart>
-                  </ResponsiveContainer>
-                </CardContent>
-              </Card>
-            </div>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Detailed Specialty Analysis</CardTitle>
-                <CardDescription>Comprehensive breakdown with improvement trends</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {Object.entries(analytics.specialtyBreakdown).map(([specialty, data]) => {
-                    const weakness = getWeaknessLevel(data.weaknessScore);
-                    return (
-                      <div key={specialty} className="p-4 border rounded-lg">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center gap-3">
-                            <h3 className="font-semibold capitalize">{specialty}</h3>
-                            <Badge variant="outline" className={weakness.color}>
-                              {weakness.level}
-                            </Badge>
-                            {getTrendIcon(data.improvementTrend)}
-                          </div>
-                          <div className="text-right">
-                            <p className={`text-lg font-bold ${getAccuracyColor(data.accuracy)}`}>
-                              {data.accuracy.toFixed(1)}%
-                            </p>
-                            <p className="text-sm text-gray-600 dark:text-gray-300">
-                              {data.correct}/{data.total} correct
-                            </p>
-                          </div>
-                        </div>
-                        <Progress value={data.accuracy} className="h-2" />
-                      </div>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="progress" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Long-term Progress</CardTitle>
-                <CardDescription>Your improvement over time</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex gap-2 mb-4">
-                  {['7d', '30d', '90d', 'all'].map((period) => (
-                    <button
-                      key={period}
-                      onClick={() => setSelectedPeriod(period)}
-                      className={`px-3 py-1 rounded text-sm ${
-                        selectedPeriod === period
-                          ? 'bg-blue-500 text-white'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-                      }`}
-                    >
-                      {period === 'all' ? 'All Time' : period.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
-                {performanceHistory ? (
-                  <ResponsiveContainer width="100%" height={400}>
-                    <AreaChart data={performanceHistory}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="date" />
-                      <YAxis />
-                      <Tooltip />
-                      <Area type="monotone" dataKey="accuracy" stackId="1" stroke="#8884d8" fill="#8884d8" />
-                      <Area type="monotone" dataKey="speed" stackId="2" stroke="#82ca9d" fill="#82ca9d" />
+          {/* Progress */}
+          <TabsContent value="progress" className="mt-5">
+            <div className="grid lg:grid-cols-3 gap-5">
+              <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+                <h2 className="text-slate-900 font-semibold mb-3">Questions answered this week</h2>
+                <div className="h-64">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={PERFORMANCE_HISTORY} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
+                      <defs>
+                        <linearGradient id="qGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#14b8a6" stopOpacity={0.4} />
+                          <stop offset="100%" stopColor="#14b8a6" stopOpacity={0} />
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid stroke="#e2e8f0" strokeDasharray="3 3" />
+                      <XAxis dataKey="date" stroke="#94a3b8" fontSize={12} />
+                      <YAxis stroke="#94a3b8" fontSize={12} />
+                      <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #e2e8f0", fontSize: 12 }} />
+                      <Area type="monotone" dataKey="questions" stroke="#0d9488" strokeWidth={2}
+                        fill="url(#qGrad)" />
                     </AreaChart>
                   </ResponsiveContainer>
-                ) : (
-                  <div className="h-96 flex items-center justify-center text-gray-500">
-                    More data will appear as you continue practicing
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="achievements" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Award className="h-6 w-6 text-yellow-500" />
-                  Achievement Gallery
-                </CardTitle>
-                <CardDescription>
-                  Your earned badges and milestones
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                {analytics.achievements.length > 0 ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {analytics.achievements.map((achievement) => (
-                      <div
-                        key={achievement.id}
-                        className="p-4 border rounded-lg bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20"
-                      >
-                        <div className="flex items-center gap-3 mb-2">
-                          <Star className="h-8 w-8 text-yellow-500" />
-                          <div>
-                            <h3 className="font-semibold text-gray-900 dark:text-white">
-                              {achievement.name}
-                            </h3>
-                            <Badge variant="outline">{achievement.points} points</Badge>
-                          </div>
-                        </div>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                          {achievement.description}
-                        </p>
-                        <p className="text-xs text-gray-500">
-                          Unlocked: {new Date(achievement.unlockedAt).toLocaleDateString()}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <Award className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      No Achievements Yet
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Keep practicing to earn your first achievement badge!
-                    </p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="tutor" className="space-y-6">
-            <Card>
-              <CardHeader className="bg-gradient-to-r from-teal-50 to-emerald-50">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Bot className="w-5 h-5 text-teal-700" />
-                    <CardTitle className="text-teal-800">Performance Feedback</CardTitle>
-                  </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setShowAITutor(!showAITutor)}
-                  >
-                    {showAITutor ? 'Hide' : 'Show'} Tutor
-                  </Button>
                 </div>
-                <CardDescription className="text-purple-600">
-                  Get personalised insights about your study performance and improvement strategies
-                </CardDescription>
-              </CardHeader>
-              
-              {showAITutor && (
-                <CardContent className="p-4">
-                  <div className="space-y-4 mb-4 max-h-96 overflow-y-auto">
-                    {tutorMessages.length === 0 && (
-                      <div className="text-center text-gray-500 py-8">
-                        <MessageCircle className="w-8 h-8 mx-auto mb-2 text-gray-400" />
-                        <p>Ask me about your performance analytics and study strategies!</p>
-                        <p className="text-sm mt-1">Examples: "How can I improve my weak areas?" or "What's my best study schedule?"</p>
-                      </div>
-                    )}
-                    {tutorMessages.map((message, index) => (
-                      <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                        <div className={`max-w-[80%] p-3 rounded-lg ${
-                          message.role === 'user' 
-                            ? 'bg-purple-600 text-white' 
-                            : 'bg-gray-100 text-gray-800'
-                        }`}>
-                          <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-                        </div>
-                      </div>
-                    ))}
-                    {isLoadingTutorResponse && (
-                      <div className="flex justify-start">
-                        <div className="bg-gray-100 p-3 rounded-lg">
-                          <p className="text-sm text-gray-600">Tutor is analyzing your performance...</p>
-                        </div>
-                      </div>
-                    )}
+              </div>
+
+              <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <h2 className="text-slate-900 font-semibold">This week</h2>
+                <div>
+                  <div className="text-xs text-slate-500">Questions</div>
+                  <div className="text-2xl font-semibold text-slate-900">
+                    {analytics.weeklyProgress.questionsThisWeek}
                   </div>
-                  
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={tutorInput}
-                      onChange={(e) => setTutorInput(e.target.value)}
-                      placeholder="Ask about your performance, study strategies, or improvement tips..."
-                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' && !e.shiftKey) {
-                          e.preventDefault();
-                          handleAskTutor(tutorInput);
-                        }
-                      }}
-                    />
-                    <Button
-                      onClick={() => handleAskTutor(tutorInput)}
-                      disabled={!tutorInput.trim() || isLoadingTutorResponse}
-                      className="bg-purple-600 hover:bg-purple-700"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                    </Button>
+                </div>
+                <div>
+                  <div className="text-xs text-slate-500">Accuracy</div>
+                  <div className="text-2xl font-semibold text-slate-900">
+                    {analytics.weeklyProgress.accuracyThisWeek}%
                   </div>
-                </CardContent>
-              )}
-            </Card>
+                </div>
+                <div>
+                  <div className="text-xs text-slate-500">Time studied</div>
+                  <div className="text-2xl font-semibold text-slate-900">
+                    {formatMinutes(analytics.weeklyProgress.timeStudiedThisWeek)}
+                  </div>
+                </div>
+              </div>
+            </div>
           </TabsContent>
 
-          <TabsContent value="recommendations" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Brain className="h-6 w-6 text-purple-500" />
-                  Smart Insights
-                </CardTitle>
-                <CardDescription>
-                  Personalised recommendations for improvement
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {analytics.recommendations.map((recommendation, index) => (
-                    <div key={index} className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-900 dark:text-white">{recommendation}</p>
+          {/* Achievements */}
+          <TabsContent value="achievements" className="mt-5">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {analytics.achievements.map((a) => (
+                <div key={a.id} className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100"
+                  data-testid={`achievement-${a.id}`}>
+                  <div className="flex items-start justify-between">
+                    <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
+                      <Award className="w-5 h-5" />
                     </div>
-                  ))}
-                  {analytics.recommendations.length === 0 && (
-                    <div className="text-center py-8">
-                      <Brain className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <p className="text-gray-600 dark:text-gray-300">
-                        Answer more questions to receive personalised insights
-                      </p>
+                    <div className="text-xs font-medium text-amber-700 bg-amber-50 rounded-full px-2 py-0.5">
+                      +{a.points} pts
                     </div>
-                  )}
+                  </div>
+                  <div className="mt-3 text-slate-900 font-semibold">{a.name}</div>
+                  <div className="text-sm text-slate-500 mt-1">{a.description}</div>
+                  <div className="mt-3 text-xs text-slate-400">{a.category}</div>
                 </div>
-              </CardContent>
-            </Card>
+              ))}
+            </div>
           </TabsContent>
         </Tabs>
-      </div>
+      </section>
     </div>
   );
 }
