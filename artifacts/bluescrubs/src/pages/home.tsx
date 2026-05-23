@@ -174,11 +174,10 @@ export default function Home() {
             <Link
               href="/plab1-new"
               className="hero-cta inline-flex items-center gap-1 mt-4 h-10 px-5 rounded-full text-sm font-semibold shadow-sm"
-              style={{ backgroundColor: '#ffffff', color: '#0f766e' }}
               data-testid="button-start-practising"
             >
-              Start practising
-              <ChevronRight className="w-4 h-4" style={{ color: '#0f766e' }} />
+              <span className="hero-cta-label">Start practising</span>
+              <ChevronRight className="w-4 h-4 hero-cta-icon" />
             </Link>
           </div>
           <Stethoscope className="absolute right-4 bottom-4 w-20 h-20 text-white/15" strokeWidth={1.5} />

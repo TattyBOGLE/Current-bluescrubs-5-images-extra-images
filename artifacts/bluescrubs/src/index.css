@@ -1656,3 +1656,26 @@ button[id*="video-station-"][id$="-btn"] svg,
     transform-origin: 50% 50%;
   }
 }
+
+/* ---- Home hero CTA: nuclear color overrides so nothing in legacy CSS can hide them ---- */
+a.hero-cta,
+a.hero-cta:link,
+a.hero-cta:visited,
+a.hero-cta:hover,
+a.hero-cta:active,
+section a.hero-cta,
+.text-white a.hero-cta {
+  background-color: #ffffff !important;
+  color: #0f766e !important;
+}
+a.hero-cta .hero-cta-label,
+section a.hero-cta .hero-cta-label,
+.text-white a.hero-cta .hero-cta-label {
+  color: #0f766e !important;
+}
+a.hero-cta .hero-cta-icon,
+section a.hero-cta .hero-cta-icon,
+.text-white a.hero-cta .hero-cta-icon {
+  color: #0f766e !important;
+  stroke: #0f766e !important;
+}

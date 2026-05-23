@@ -666,7 +666,8 @@ export default function PLAB1New() {
   };
 
   // Start adaptive practice — fetches a larger pool then uses weighted selection
-  const startAdaptivePractice = async (questionCount: number) => {
+  const startAdaptivePractice = async (questionCount: number, categoryOverride?: string) => {
+    const effectiveCategory = categoryOverride ?? selectedCategory;
     clearSessionTimeout();
     setIsGeneratingQuestions(true);
     setGeneratedQuestions([]);
@@ -686,7 +687,7 @@ export default function PLAB1New() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          category: selectedCategory,
+          category: effectiveCategory,
           count: fetchCount,
           difficulty: selectedDifficulty,
         }),
@@ -749,7 +750,7 @@ export default function PLAB1New() {
     autoStartedRef.current = true;
     const count = Math.max(1, Math.min(50, parseInt(countRaw || "10", 10) || 10));
     const t = setTimeout(() => {
-      startAdaptivePractice(count);
+      startAdaptivePractice(count, category ?? undefined);
       window.history.replaceState({}, "", window.location.pathname);
     }, 50);
     return () => clearTimeout(t);
