@@ -133,7 +133,7 @@ export default function AskAI() {
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <CardTitle className="text-2xl font-bold text-gray-900">Medical Assistant</CardTitle>
+                <CardTitle className="text-xl font-semibold text-slate-900">Medical Assistant</CardTitle>
                 <CardDescription className="text-gray-600">
                   Ask any medical question and get evidence-based answers
                 </CardDescription>

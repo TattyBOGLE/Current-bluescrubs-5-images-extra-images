@@ -26,15 +26,15 @@ export default function HowToPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-teal-500 to-teal-700 text-white py-16">
+      <div className="bg-gradient-to-r from-teal-500 to-teal-700 text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
             How to Use BlueScrubsPrep
           </h1>
-          <p className="text-xl lg:text-2xl mb-8 opacity-90">
+          <p className="text-base md:text-lg mb-6 opacity-90">
             Your complete guide to mastering PLAB 1 & 2 preparation
           </p>
-          <Badge className="bg-white/20 text-white text-lg px-6 py-2">
+          <Badge className="bg-white/20 text-white text-xs px-4 py-1">
             Professional PLAB Preparation Platform
           </Badge>
         </div>
@@ -44,8 +44,8 @@ export default function HowToPage() {
         {/* Quick Start Guide */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Start Guide</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Quick Start Guide</h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Get started with BlueScrubsPrep in just a few simple steps and begin your PLAB preparation journey
             </p>
           </div>
@@ -115,8 +115,8 @@ export default function HowToPage() {
         {/* Feature Guides */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Platform Features</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Platform Features</h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive tools designed specifically for PLAB preparation success
             </p>
           </div>
@@ -130,7 +130,7 @@ export default function HowToPage() {
                     <BookOpen className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl text-blue-900">PLAB 1 MCQ Practice</CardTitle>
+                    <CardTitle className="text-xl text-blue-900">PLAB 1 MCQ Practice</CardTitle>
                     <CardDescription className="text-teal-700">
                       5,528 authentic medical questions across 11 specialties
                     </CardDescription>
@@ -177,7 +177,7 @@ export default function HowToPage() {
                     <Stethoscope className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl text-purple-900">PLAB 2 OSCE Practice</CardTitle>
+                    <CardTitle className="text-xl text-purple-900">PLAB 2 OSCE Practice</CardTitle>
                     <CardDescription className="text-purple-700">
                       3,898 clinical stations with actor scripts and mark schemes
                     </CardDescription>
@@ -223,8 +223,8 @@ export default function HowToPage() {
         {/* Advanced Features */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Features</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Advanced Features</h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Powerful tools to enhance your learning experience and exam preparation
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function HowToPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Brain className="w-8 h-8 text-blue-600 mb-2" />
-                <CardTitle className="text-lg">Medical Tutor</CardTitle>
+                <CardTitle className="text-xl">Medical Tutor</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
@@ -250,7 +250,7 @@ export default function HowToPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <BarChart3 className="w-8 h-8 text-green-600 mb-2" />
-                <CardTitle className="text-lg">Performance Analytics</CardTitle>
+                <CardTitle className="text-xl">Performance Analytics</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
@@ -267,7 +267,7 @@ export default function HowToPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Users className="w-8 h-8 text-purple-600 mb-2" />
-                <CardTitle className="text-lg">Global Leaderboards</CardTitle>
+                <CardTitle className="text-xl">Global Leaderboards</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
@@ -284,7 +284,7 @@ export default function HowToPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Globe className="w-8 h-8 text-orange-600 mb-2" />
-                <CardTitle className="text-lg">Multi-Language Support</CardTitle>
+                <CardTitle className="text-xl">Multi-Language Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
@@ -299,7 +299,7 @@ export default function HowToPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Clock className="w-8 h-8 text-red-600 mb-2" />
-                <CardTitle className="text-lg">Adaptive Learning</CardTitle>
+                <CardTitle className="text-xl">Adaptive Learning</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
@@ -314,7 +314,7 @@ export default function HowToPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Award className="w-8 h-8 text-yellow-600 mb-2" />
-                <CardTitle className="text-lg">Neurodiversity Support</CardTitle>
+                <CardTitle className="text-xl">Neurodiversity Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
@@ -333,8 +333,8 @@ export default function HowToPage() {
         {/* Study Tips */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Study Tips & Best Practices</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Study Tips & Best Practices</h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Proven strategies to maximise your PLAB preparation effectiveness
             </p>
           </div>
@@ -401,8 +401,8 @@ export default function HowToPage() {
         {/* FAQ Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Common questions about using BlueScrubsPrep for PLAB preparation
             </p>
           </div>
@@ -410,7 +410,7 @@ export default function HowToPage() {
           <div className="space-y-6 max-w-4xl mx-auto">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">How many questions should I practice daily?</CardTitle>
+                <CardTitle className="text-xl">How many questions should I practice daily?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
@@ -421,7 +421,7 @@ export default function HowToPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">How do I use the Medical Tutor effectively?</CardTitle>
+                <CardTitle className="text-xl">How do I use the Medical Tutor effectively?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
@@ -432,7 +432,7 @@ export default function HowToPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">What are the neurodiversity accommodations available?</CardTitle>
+                <CardTitle className="text-xl">What are the neurodiversity accommodations available?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
@@ -443,7 +443,7 @@ export default function HowToPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">How does the adaptive learning system work?</CardTitle>
+                <CardTitle className="text-xl">How does the adaptive learning system work?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
@@ -456,8 +456,8 @@ export default function HowToPage() {
 
         {/* Call to Action */}
         <section className="text-center bg-gradient-to-r from-teal-500 to-teal-700 text-white rounded-2xl p-12">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your PLAB Journey?</h2>
-          <p className="text-xl mb-8 opacity-90">
+          <h2 className="text-2xl font-bold mb-4">Ready to Start Your PLAB Journey?</h2>
+          <p className="text-base md:text-lg mb-8 opacity-90">
             Join thousands of medical graduates who have successfully prepared with BlueScrubsPrep
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

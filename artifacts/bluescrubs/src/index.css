@@ -235,14 +235,14 @@
     fill: #ffffff !important;
   }
   
-  /* Mobile text adjustments */
+  /* Mobile text adjustments — scoped to landing hero only */
   @media (max-width: 768px) {
-    .hero-text h1 {
+    .landing-hero .hero-text h1 {
       font-size: 2.5rem !important;
       line-height: 1.2 !important;
     }
-    
-    .hero-text p {
+
+    .landing-hero .hero-text p {
       font-size: 1.25rem !important;
       line-height: 1.4 !important;
     }

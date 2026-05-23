@@ -549,8 +549,8 @@ export default function Plab2Osce() {
                 {translateText("PLAB 2 OSCE")}
               </span>
             </div>
-            <h1 className="text-2xl font-bold leading-tight">OSCE Practice</h1>
-            <p className="text-sm text-teal-50 mt-1 max-w-[36ch]">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight">OSCE Practice</h1>
+            <p className="text-base md:text-lg text-teal-50 mt-1 max-w-[40ch]">
               16–20 clinical stations covering history, examination, communication, ethics and acute care.
             </p>
           </div>

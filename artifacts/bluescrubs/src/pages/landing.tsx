@@ -12,7 +12,7 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white">
       {/* Video Hero Banner - Full Screen */}
-      <div className="relative w-full h-screen overflow-hidden bg-gradient-to-r from-teal-600 to-teal-700 mb-0">
+      <div className="landing-hero relative w-full h-screen overflow-hidden bg-gradient-to-r from-teal-600 to-teal-700 mb-0">
         <video 
           src={heroVideo}
           className="absolute inset-0 w-full h-full object-cover"

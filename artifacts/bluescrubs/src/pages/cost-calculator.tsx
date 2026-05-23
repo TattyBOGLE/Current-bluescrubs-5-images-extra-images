@@ -56,10 +56,10 @@ export default function CostCalculator() {
     <div className="min-h-screen bg-slate-50 p-6 pb-24">
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
             OpenAI Cost Calculator
           </h1>
-          <p className="text-gray-600">
+          <p className="text-base md:text-lg text-slate-600">
             Calculate generation costs for PLAB medical questions
           </p>
         </div>

@@ -193,10 +193,10 @@ export default function Premium() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 pb-24">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-4">Premium Features</h1>
-        <p className="text-lg text-muted-foreground">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">Premium Features</h1>
+        <p className="text-base md:text-lg text-muted-foreground">
           Unlock advanced capabilities designed for serious PLAB preparation and professional development
         </p>
       </div>
@@ -218,7 +218,7 @@ export default function Premium() {
                   <IconComponent className="h-8 w-8 text-primary" />
                   <Badge variant="secondary">{feature.price}</Badge>
                 </div>
-                <CardTitle className="text-lg">{feature.name}</CardTitle>
+                <CardTitle className="text-xl">{feature.name}</CardTitle>
                 <CardDescription>{feature.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -540,7 +540,7 @@ export default function Premium() {
       <Card className="bg-white border-slate-200 rounded-2xl">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl text-slate-900">Complete Premium Package</CardTitle>
-          <CardDescription className="text-lg text-slate-600">
+          <CardDescription className="text-base md:text-lg text-slate-600">
             All premium features included for comprehensive PLAB preparation
           </CardDescription>
         </CardHeader>

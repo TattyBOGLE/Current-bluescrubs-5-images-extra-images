@@ -289,10 +289,10 @@ export default function Community() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
+    <div className="container mx-auto px-4 py-8 pb-24 max-w-6xl">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">Community</h1>
-        <p className="text-muted-foreground text-lg">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2">Community</h1>
+        <p className="text-muted-foreground text-base md:text-lg">
           Connect with fellow medical professionals preparing for PLAB and working in the UK
         </p>
       </div>
@@ -459,7 +459,7 @@ export default function Community() {
         {/* Study Groups Tab */}
         <TabsContent value="groups" className="space-y-6">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold">Study Groups</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Study Groups</h2>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
               Create Group
