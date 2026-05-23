@@ -304,25 +304,20 @@ export function SessionSetup({
                       <div className={`p-2 rounded-xl ${visual.bg}`}>
                         <Icon className={`w-5 h-5 ${visual.color}`} />
                       </div>
-                      <div className="relative w-10 h-10 flex items-center justify-center">
-                        <svg className="w-10 h-10 -rotate-90" viewBox="0 0 40 40">
-                          <circle cx="20" cy="20" r="16" fill="transparent" stroke="#f1f5f9" strokeWidth="4" />
-                          <circle
-                            cx="20" cy="20" r="16" fill="transparent"
-                            strokeWidth="4" strokeLinecap="round"
-                            strokeDasharray={`${(pct / 100) * 100.5} 100.5`}
-                            className={visual.ring}
-                          />
-                        </svg>
-                        <span className="absolute text-[10px] font-bold text-slate-700">
-                          {area.priority === 'high' ? '!' : pct + '%'}
-                        </span>
-                      </div>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[10px] font-semibold tabular-nums">
+                        10 Qs
+                      </span>
                     </div>
                     <h3 className="font-semibold text-slate-800 text-sm leading-tight">{label}</h3>
-                    <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
-                      {area.suggestedAction || area.reason}
-                    </p>
+                    <div className="flex items-center gap-1.5 mt-1">
+                      <span className={`inline-block w-1.5 h-1.5 rounded-full ${
+                        area.priority === 'high' ? 'bg-rose-500' :
+                        area.priority === 'medium' ? 'bg-amber-500' : 'bg-emerald-500'
+                      }`} />
+                      <p className="text-[11px] text-slate-500 line-clamp-1">
+                        {area.suggestedAction || area.reason}
+                      </p>
+                    </div>
                   </button>
                 );
               })}
