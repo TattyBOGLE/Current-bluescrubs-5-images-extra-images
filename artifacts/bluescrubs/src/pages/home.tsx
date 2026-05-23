@@ -232,7 +232,7 @@ export default function Home() {
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center ${c.tint} ring-1 ring-slate-100 group-hover:ring-teal-200 group-hover:scale-[1.03] transition shadow-sm`}>
                   <c.Illus className="w-11 h-11" />
                 </div>
-                <span className="text-[11px] font-medium text-slate-700 text-center leading-tight">
+                <span className="text-[11px] font-semibold text-slate-800 text-center leading-tight">
                   {c.label}
                 </span>
               </Link>
