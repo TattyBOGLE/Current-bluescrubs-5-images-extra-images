@@ -403,25 +403,27 @@ link: "/ask-ai"
 
         {/* Admin Tools Section */}
         <div className="mb-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Admin Tools</h2>
-          <Card className="bg-gradient-to-br from-slate-50 to-teal-50 border-slate-200 p-6">
-            <div className="mb-4">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">Admin Tools</h3>
-              <p className="text-blue-700 text-sm">System management and optimization tools</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {adminTools.map((tool, index) => (
-                <Link key={index} href={tool.link || "/dashboard"}>
-                  <Card className="bg-white border-teal-300 hover:bg-blue-50 transition-colors cursor-pointer">
-                    <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                      <tool.icon className="h-8 w-8 text-blue-600 mb-3" />
-                      <h4 className="font-medium text-gray-900" style={{color: '#111827 !important'}}>{tool.title}</h4>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          </Card>
+          <h2 className="text-xl font-bold text-slate-900 mb-2">Admin Tools</h2>
+          <p className="text-sm text-slate-600 mb-6">System management and optimization tools</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {adminTools.map((tool, index) => (
+              <Link key={index} href={tool.link || "/dashboard"}>
+                <div
+                  className="group bg-white border border-slate-200 hover:border-teal-400 hover:shadow-md rounded-2xl p-5 transition-all cursor-pointer flex items-start gap-3"
+                  data-testid={`admin-tool-${index}`}
+                >
+                  <div className="p-2.5 rounded-xl bg-teal-50 group-hover:bg-teal-100 transition-colors flex-shrink-0">
+                    <tool.icon className="h-5 w-5 text-teal-700" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-slate-900 text-sm mb-0.5">{tool.title}</h4>
+                    <p className="text-xs text-slate-500 leading-snug">{tool.description}</p>
+                  </div>
+                  <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-teal-600 flex-shrink-0 mt-1" />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
 
