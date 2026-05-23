@@ -734,18 +734,18 @@ export default function Community() {
           </div>
 
           {/* Success Stories */}
-          <Card className="bg-gradient-to-r from-slate-50 to-teal-700">
+          <Card className="bg-white border-slate-200 rounded-2xl">
             <CardContent className="p-6">
-              <h3 className="text-lg font-semibold mb-4">Success Stories</h3>
+              <h3 className="text-lg font-semibold mb-4 text-slate-900">Success Stories</h3>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <Avatar className="w-8 h-8">
                     <AvatarFallback>MK</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="text-sm font-medium">Dr. Maya Kumar</p>
-                    <p className="text-sm text-muted-foreground">
-                      "Dr. Williams was instrumental in my PLAB success. Her guidance on clinical communication 
+                    <p className="text-sm font-medium text-slate-900">Dr. Maya Kumar</p>
+                    <p className="text-sm text-slate-600">
+                      "Dr. Williams was instrumental in my PLAB success. Her guidance on clinical communication
                       and NHS culture helped me pass PLAB 2 on my first attempt!"
                     </p>
                   </div>
@@ -755,9 +755,9 @@ export default function Community() {
                     <AvatarFallback>RN</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="text-sm font-medium">Dr. Raj Nair</p>
-                    <p className="text-sm text-muted-foreground">
-                      "The mentorship program connected me with Dr. Singh who helped me navigate the specialty 
+                    <p className="text-sm font-medium text-slate-900">Dr. Raj Nair</p>
+                    <p className="text-sm text-slate-600">
+                      "The mentorship program connected me with Dr. Singh who helped me navigate the specialty
                       application process. Now I'm a registrar in emergency medicine!"
                     </p>
                   </div>

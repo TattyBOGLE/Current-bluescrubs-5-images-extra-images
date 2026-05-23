@@ -367,29 +367,31 @@ export default function HowToPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-teal-500 to-teal-700 border-purple-200">
+            <Card className="bg-white border-slate-200 rounded-2xl">
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <Stethoscope className="w-6 h-6 text-purple-600" />
-                  <CardTitle className="text-xl text-purple-900">PLAB 2 Excellence Tips</CardTitle>
+                  <div className="p-2 bg-teal-50 rounded-xl">
+                    <Stethoscope className="w-5 h-5 text-teal-700" />
+                  </div>
+                  <CardTitle className="text-xl text-slate-900">PLAB 2 Excellence Tips</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-purple-800 text-sm"><strong>Practice Communication:</strong> Use structured frameworks like SPIKES for difficult conversations</p>
+                  <div className="w-2 h-2 bg-teal-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-slate-700 text-sm"><strong>Practice Communication:</strong> Use structured frameworks like SPIKES for difficult conversations</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-purple-800 text-sm"><strong>Time Management:</strong> Practice stations within realistic time limits (8-10 minutes)</p>
+                  <div className="w-2 h-2 bg-teal-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-slate-700 text-sm"><strong>Time Management:</strong> Practice stations within realistic time limits (8-10 minutes)</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-purple-800 text-sm"><strong>Physical Examination:</strong> Follow systematic approaches like IPPA (inspection, palpation, percussion, auscultation)</p>
+                  <div className="w-2 h-2 bg-teal-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-slate-700 text-sm"><strong>Physical Examination:</strong> Follow systematic approaches like IPPA (inspection, palpation, percussion, auscultation)</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-purple-800 text-sm"><strong>Actor Interaction:</strong> Maintain professionalism and empathy throughout the station</p>
+                  <div className="w-2 h-2 bg-teal-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-slate-700 text-sm"><strong>Actor Interaction:</strong> Maintain professionalism and empathy throughout the station</p>
                 </div>
               </CardContent>
             </Card>

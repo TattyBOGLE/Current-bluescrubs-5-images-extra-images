@@ -123,7 +123,7 @@ export default function AskAI() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 p-4">
+    <div className="min-h-screen bg-slate-50 p-4 pb-24">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <Card className="text-center bg-white shadow-lg">
@@ -415,10 +415,10 @@ export default function AskAI() {
         )}
 
         {/* Example Questions */}
-        <Card className="bg-gradient-to-r from-slate-50 to-teal-700 border-teal-200">
+        <Card className="bg-white border-slate-200 rounded-2xl">
           <CardHeader>
-            <CardTitle className="text-lg">Example Questions</CardTitle>
-            <CardDescription>Try asking about these medical topics</CardDescription>
+            <CardTitle className="text-lg text-slate-900">Example Questions</CardTitle>
+            <CardDescription className="text-slate-600">Try asking about these medical topics</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 gap-3">
@@ -433,7 +433,7 @@ export default function AskAI() {
                 <Button
                   key={index}
                   variant="outline"
-                  className="text-left h-auto p-3 text-sm text-gray-700 hover:bg-blue-50 hover:border-teal-300"
+                  className="text-left h-auto p-3 text-sm text-slate-700 border-slate-200 hover:bg-teal-50 hover:border-teal-300"
                   onClick={() => setQuestion(example)}
                   disabled={isLoading}
                 >

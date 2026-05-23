@@ -99,7 +99,7 @@ export default function Security() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-700">
+    <div className="min-h-screen bg-slate-50 pb-24">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -229,15 +229,17 @@ export default function Security() {
 
         {/* Security Contact */}
         <div className="text-center">
-          <Card className="bg-gradient-to-r from-slate-50 to-teal-700 border-slate-200 max-w-2xl mx-auto">
+          <Card className="bg-white border-slate-200 rounded-2xl max-w-2xl mx-auto">
             <CardContent className="p-8">
-              <Smartphone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-blue-900 mb-4">Report Security Issues</h3>
-              <p className="text-blue-700 mb-6">
-                If you discover a security vulnerability or have concerns about your account security, 
+              <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Smartphone className="h-7 w-7 text-teal-700" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Report Security Issues</h3>
+              <p className="text-slate-600 mb-6">
+                If you discover a security vulnerability or have concerns about your account security,
                 please contact our security team immediately.
               </p>
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700" style={{ color: '#ffffff' }}>
                 Contact Security Team
               </Button>
             </CardContent>

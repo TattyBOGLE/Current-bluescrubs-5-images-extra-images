@@ -522,12 +522,12 @@ export default function Premium() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-slate-50 to-teal-700 p-4 rounded-lg border">
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
                   <div className="text-center">
-                    <Award className="h-8 w-8 mx-auto text-blue-600 mb-2" />
-                    <div className="font-medium">Sample Certificate</div>
-                    <div className="text-sm text-muted-foreground">PLAB Foundation Graduate</div>
-                    <div className="text-xs mt-2">Verification: VERIFY_2024_ABC123</div>
+                    <Award className="h-8 w-8 mx-auto text-teal-700 mb-2" />
+                    <div className="font-medium text-slate-900">Sample Certificate</div>
+                    <div className="text-sm text-slate-600">PLAB Foundation Graduate</div>
+                    <div className="text-xs mt-2 text-slate-500">Verification: VERIFY_2024_ABC123</div>
                   </div>
                 </div>
               </CardContent>
@@ -537,41 +537,41 @@ export default function Premium() {
       </Tabs>
 
       {/* Pricing Summary */}
-      <Card className="bg-gradient-to-r from-slate-50 to-teal-700 border-teal-200">
+      <Card className="bg-white border-slate-200 rounded-2xl">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl">Complete Premium Package</CardTitle>
-          <CardDescription className="text-lg">
+          <CardTitle className="text-2xl text-slate-900">Complete Premium Package</CardTitle>
+          <CardDescription className="text-lg text-slate-600">
             All premium features included for comprehensive PLAB preparation
           </CardDescription>
         </CardHeader>
         <CardContent className="text-center">
           <div className="mb-6">
-            <div className="text-4xl font-bold text-blue-600 mb-2">£79/month</div>
-            <div className="text-muted-foreground">or £799/year (save 15%)</div>
+            <div className="text-4xl font-bold text-teal-600 mb-2">£79/month</div>
+            <div className="text-slate-600">or £799/year (save 15%)</div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-sm">
-            <div className="flex flex-col items-center">
-              <Video className="h-8 w-8 text-blue-500 mb-2" />
+            <div className="flex flex-col items-center text-slate-700">
+              <Video className="h-8 w-8 text-teal-600 mb-2" />
               <span>Unlimited Video Sessions</span>
             </div>
-            <div className="flex flex-col items-center">
-              <Brain className="h-8 w-8 text-green-500 mb-2" />
+            <div className="flex flex-col items-center text-slate-700">
+              <Brain className="h-8 w-8 text-teal-600 mb-2" />
               <span>Essay Marking</span>
             </div>
-            <div className="flex flex-col items-center">
-              <Headset className="h-8 w-8 text-purple-500 mb-2" />
+            <div className="flex flex-col items-center text-slate-700">
+              <Headset className="h-8 w-8 text-teal-600 mb-2" />
               <span>VR Scenarios</span>
             </div>
-            <div className="flex flex-col items-center">
-              <Award className="h-8 w-8 text-orange-500 mb-2" />
+            <div className="flex flex-col items-center text-slate-700">
+              <Award className="h-8 w-8 text-teal-600 mb-2" />
               <span>All Certifications</span>
             </div>
           </div>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+          <Button size="lg" className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 px-8" style={{ color: '#ffffff' }}>
             <Zap className="h-5 w-5 mr-2" />
             Upgrade to Premium
           </Button>
-          <p className="text-xs text-muted-foreground mt-4">
+          <p className="text-xs text-slate-500 mt-4">
             14-day free trial • Cancel anytime • 30-day money-back guarantee
           </p>
         </CardContent>
