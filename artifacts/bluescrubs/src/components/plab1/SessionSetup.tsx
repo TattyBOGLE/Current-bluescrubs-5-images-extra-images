@@ -377,7 +377,7 @@ export function SessionSetup({
           <Button
             onClick={handleStart}
             disabled={isGeneratingQuestions}
-            className="w-full h-16 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white shadow-xl shadow-teal-200/50 flex flex-col items-center justify-center gap-0.5 border-none disabled:opacity-70"
+            className="w-full h-16 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 !text-white shadow-xl shadow-teal-200/50 flex flex-col items-center justify-center gap-0.5 border-none disabled:opacity-70 [&_*]:!text-white"
             data-testid="button-start-session"
           >
             {isGeneratingQuestions ? (
