@@ -20,30 +20,35 @@ export default function Team() {
       name: "Dr. Yasar Ahmad",
       role: "Medical Director & Co-Founder",
       image: "/api/placeholder/150/150",
-      bio: "Leading NHS doctor with extensive experience in medical education and PLAB preparation. Dr. Ahmad brings deep clinical expertise and understanding of the challenges faced by international medical graduates seeking to practice in the UK.",
+      bio: "UK-trained General Practitioner (MRCGP) with over 10 years' NHS experience as a Salaried and Sessional GP in Central Manchester. Clinical Supervisor and PCN-level Audit Lead with a strong focus on chronic disease management, education, and quality improvement — bringing deep insight into the realities of UK primary care for international medical graduates.",
       qualifications: [
+        "BSc (Hons) Biomedical Sciences, King's College London",
         "MBBS",
-        "MRCP",
-        "NHS Consultant",
-        "Medical Education Specialist"
+        "MRCGP",
+        "PGCert Clinical Practice, Management & Education",
+        "PGCert Advancing Diabetes Care",
+        "GMC No. 7051255"
       ],
       experience: [
-        "10+ years NHS clinical experience",
-        "PLAB examination expert",
-        "Medical education curriculum developer",
-        "International medical graduate mentor"
+        "Portfolio Salaried/Locum GP, Central Manchester (2016 – present)",
+        "Clinical Supervisor — mentoring GP trainees and junior clinicians",
+        "CMN Audit Lead at PCN level — driving QOF and guideline adherence",
+        "GP VTS, Northwest Deanery, Pennine Acute Trust (2012 – 2016)",
+        "Foundation Training, Tameside General Hospital (2010 – 2012)"
       ],
       specialties: [
-        "Internal Medicine",
-        "Medical Education",
-        "PLAB Preparation",
-        "Clinical Skills Training"
+        "General Practice",
+        "Chronic Disease Management",
+        "Diabetes Care",
+        "Clinical Audit & Quality Improvement",
+        "Medical Education & Supervision"
       ],
       achievements: [
-        "Helped 500+ international doctors pass PLAB",
-        "Developed UK-specific clinical scenarios",
-        "NHS training programme contributor",
-        "Medical education research publications"
+        "Led audits improving anticoagulation safety in AF and warfarin TTR monitoring",
+        "Improved prescribing safety in bisphosphonates, clopidogrel/PPI, lipids and antihypertensives",
+        "Contributed to national audits (NPDA, EVAR) supporting benchmarking",
+        "Accredited Clinical and APEP Supervisor",
+        "Nidan Black Belt karate instructor — 20+ years; medical relief work, Pakistan earthquake"
       ]
     },
     {
