@@ -739,9 +739,14 @@ export default function PLAB1New() {
     const mode = params.get("mode");
     const countRaw = params.get("count");
     const category = params.get("category");
-    if (mode !== "adaptive") return;
-    autoStartedRef.current = true;
+    // Always preselect the topic when ?category= is present, even without auto-start.
     if (category) setSelectedCategory(category);
+    if (mode !== "adaptive") {
+      // Clean the URL so refreshes don't re-trigger; keep the selected state.
+      if (category) window.history.replaceState({}, "", window.location.pathname);
+      return;
+    }
+    autoStartedRef.current = true;
     const count = Math.max(1, Math.min(50, parseInt(countRaw || "10", 10) || 10));
     const t = setTimeout(() => {
       startAdaptivePractice(count);
