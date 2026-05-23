@@ -1,278 +1,193 @@
 import { useState } from "react";
 import { AdaptiveLearningDashboard } from "@/components/adaptive-learning-dashboard";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Zap, 
-  AlertTriangle, 
+import {
+  Brain,
+  Target,
+  TrendingUp,
+  Zap,
+  AlertTriangle,
   CheckCircle,
-  ArrowRight,
   Lightbulb,
-  BarChart3
+  BarChart3,
 } from "lucide-react";
 
+const FEATURE_CARDS = [
+  {
+    Icon: Target,
+    title: "Adaptive Questions",
+    desc: "Difficulty adjusts to your performance in real time.",
+    tint: "bg-teal-50",
+    color: "text-teal-700",
+  },
+  {
+    Icon: AlertTriangle,
+    title: "Weakness Detection",
+    desc: "Spots specific knowledge gaps from your answer patterns.",
+    tint: "bg-slate-100",
+    color: "text-slate-700",
+  },
+  {
+    Icon: TrendingUp,
+    title: "Success Prediction",
+    desc: "Estimates your exam readiness with confidence intervals.",
+    tint: "bg-teal-50",
+    color: "text-teal-700",
+  },
+  {
+    Icon: Lightbulb,
+    title: "Smart Generation",
+    desc: "Creates targeted practice using your authentic question bank.",
+    tint: "bg-slate-100",
+    color: "text-slate-700",
+  },
+];
+
+const DIFFERENTIATORS = [
+  { tag: "Authentic", title: "Real Medical Content", desc: "Built on genuine PLAB scenarios, not synthetic data." },
+  { tag: "Offline", title: "Works Without Internet", desc: "Full functionality without any external API calls." },
+  { tag: "UK-aligned", title: "NICE / BNF / CKS / GMC", desc: "Aligned with current UK clinical guidelines." },
+  { tag: "Predictive", title: "Exam Readiness Score", desc: "Statistical models predict your success probability." },
+  { tag: "Real-time", title: "Instant Feedback", desc: "Knowledge gaps surfaced as you practise." },
+  { tag: "Dynamic", title: "Personal Difficulty", desc: "Pace and challenge tuned to your progress." },
+];
+
 export default function AdaptiveLearning() {
-  const [currentUserId] = useState(1); // Demo user ID
+  const [currentUserId] = useState(1);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-700 dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 py-8">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Brain className="h-16 w-16 text-primary mr-4" />
-            <div className="text-left">
-              <h1 className="text-5xl font-bold text-black">
+    <div className="min-h-screen bg-slate-50 pb-24 md:pb-12">
+      <div className="max-w-[680px] md:max-w-5xl mx-auto px-4 pt-6 space-y-6">
+
+        {/* Hero sheet */}
+        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+          <div className="flex items-start gap-4">
+            <div className="shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-sm shadow-teal-200">
+              <Brain className="w-6 h-6 text-white" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h1 className="text-2xl font-bold text-slate-900 leading-tight">
                 Adaptive Learning
               </h1>
-              <p className="text-xl text-black mt-2">
-                Intelligence that evolves with your learning
+              <p className="text-sm text-slate-500 mt-1">
+                Practice that learns from how you study.
               </p>
             </div>
           </div>
-          
-          <div className="max-w-3xl mx-auto mb-8">
-            <p className="text-lg text-black leading-relaxed">
-              Experience the next generation of medical education with a system that understands your learning patterns, 
-              identifies weaknesses in real-time, and adapts question difficulty to maximize your progress.
-            </p>
-          </div>
+          <p className="text-[15px] text-slate-700 leading-relaxed mt-4">
+            A system that understands your learning patterns, spots weaknesses in real
+            time, and tunes question difficulty to keep you progressing.
+          </p>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <Card className="border-2 border-teal-200 bg-blue-50">
-              <CardContent className="p-6 text-center">
-                <Target className="h-8 w-8 mx-auto mb-3 text-blue-600" />
-                <h3 className="font-semibold mb-2 text-black">Adaptive Questions</h3>
-                <p className="text-sm text-black">
-                  Questions automatically adjust difficulty based on your performance patterns
-                </p>
-              </CardContent>
-            </Card>
+        {/* Feature grid */}
+        <section className="grid grid-cols-2 gap-3">
+          {FEATURE_CARDS.map(({ Icon, title, desc, tint, color }) => (
+            <div
+              key={title}
+              className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4"
+            >
+              <div className={`w-10 h-10 rounded-xl ${tint} flex items-center justify-center mb-3`}>
+                <Icon className={`w-5 h-5 ${color}`} />
+              </div>
+              <h3 className="text-sm font-semibold text-slate-900">{title}</h3>
+              <p className="text-xs text-slate-500 mt-1 leading-snug">{desc}</p>
+            </div>
+          ))}
+        </section>
 
-            <Card className="border-2 border-orange-200 bg-orange-50">
-              <CardContent className="p-6 text-center">
-                <AlertTriangle className="h-8 w-8 mx-auto mb-3 text-orange-600" />
-                <h3 className="font-semibold mb-2 text-black">Weakness Detection</h3>
-                <p className="text-sm text-black">
-                  AI scans your answer patterns to identify specific knowledge gaps
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-green-200 bg-green-50">
-              <CardContent className="p-6 text-center">
-                <TrendingUp className="h-8 w-8 mx-auto mb-3 text-green-600" />
-                <h3 className="font-semibold mb-2 text-black">Success Prediction</h3>
-                <p className="text-sm text-black">
-                  ML algorithm predicts your exam success probability with confidence intervals
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-purple-200 bg-purple-50">
-              <CardContent className="p-6 text-center">
-                <Lightbulb className="h-8 w-8 mx-auto mb-3 text-purple-600" />
-                <h3 className="font-semibold mb-2 text-black">Smart Generation</h3>
-                <p className="text-sm text-black">
-                  Creates targeted questions using your existing bank to address weak areas
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        {/* Features Deep Dive */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <Card className="bg-gradient-to-br from-teal-400 to-teal-500 adaptive-card-white">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <BarChart3 className="h-5 w-5" />
-                Advanced Analytics Engine
-              </CardTitle>
-              <CardDescription>
-                No external API calls - completely offline intelligence
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">Pattern recognition algorithms</span>
+        {/* Dual feature cards */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <Card className="rounded-2xl border-slate-100 shadow-sm bg-white">
+            <CardHeader className="pb-3">
+              <div className="flex items-center gap-2">
+                <div className="w-9 h-9 rounded-xl bg-teal-50 flex items-center justify-center">
+                  <BarChart3 className="w-5 h-5 text-teal-700" />
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">Statistical performance modeling</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">Real-time weakness identification</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">Predictive exam readiness scoring</span>
+                <div>
+                  <CardTitle className="text-base text-slate-900">Analytics Engine</CardTitle>
+                  <CardDescription className="text-xs text-slate-500">
+                    Runs entirely on-device
+                  </CardDescription>
                 </div>
               </div>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <ul className="space-y-2">
+                {[
+                  "Pattern recognition",
+                  "Performance modelling",
+                  "Real-time weakness scoring",
+                  "Predictive readiness",
+                ].map((t) => (
+                  <li key={t} className="flex items-center gap-2 text-sm text-slate-700">
+                    <CheckCircle className="w-4 h-4 text-teal-600 shrink-0" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
             </CardContent>
           </Card>
 
-          <Card className="bg-gradient-to-br from-teal-500 to-teal-700 adaptive-card-white">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Zap className="h-5 w-5" />
-                Intelligent Question System
-              </CardTitle>
-              <CardDescription>
-                Template-based generation using your authentic question bank
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">5,000+ authentic medical questions</span>
+          <Card className="rounded-2xl border-slate-100 shadow-sm bg-white">
+            <CardHeader className="pb-3">
+              <div className="flex items-center gap-2">
+                <div className="w-9 h-9 rounded-xl bg-teal-50 flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-teal-700" />
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">Difficulty adaptation algorithms</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">Weakness-targeted question creation</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  <span className="text-sm">UK medical guidelines integration</span>
+                <div>
+                  <CardTitle className="text-base text-slate-900">Question System</CardTitle>
+                  <CardDescription className="text-xs text-slate-500">
+                    Built on your authentic bank
+                  </CardDescription>
                 </div>
               </div>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <ul className="space-y-2">
+                {[
+                  "5,000+ medical questions",
+                  "Difficulty adaptation",
+                  "Targeted weakness drills",
+                  "UK guideline coverage",
+                ].map((t) => (
+                  <li key={t} className="flex items-center gap-2 text-sm text-slate-700">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
             </CardContent>
           </Card>
-        </div>
+        </section>
 
-        {/* Key Differentiators */}
-        <Card className="mb-8 border-2 border-primary">
-          <CardHeader>
-            <CardTitle className="text-center text-2xl">
-              Why BlueScrubsPrep Adaptive Learning Stands Out
-            </CardTitle>
-            <CardDescription className="text-center text-lg">
-              Advanced features that competing platforms don't offer
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="text-center p-4 border rounded-lg">
-                <Badge className="mb-3 bg-green-100 text-green-800">Unique Advantage</Badge>
-                <h3 className="font-semibold mb-2 text-black">Authentic Content Only</h3>
-                <p className="text-sm text-black">
-                  Uses real medical scenarios, not smart-generated content, for genuine exam preparation
-                </p>
+        {/* Differentiators */}
+        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+          <h2 className="text-base font-semibold text-slate-900 mb-1">Why this works</h2>
+          <p className="text-xs text-slate-500 mb-4">
+            What sets BlueScrubsPrep adaptive learning apart.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {DIFFERENTIATORS.map(({ tag, title, desc }) => (
+              <div
+                key={title}
+                className="p-4 rounded-2xl bg-slate-50 border border-slate-100"
+              >
+                <Badge className="mb-2 bg-teal-100 text-teal-800 hover:bg-teal-100 border-none">
+                  {tag}
+                </Badge>
+                <h3 className="text-sm font-semibold text-slate-900 mb-1">{title}</h3>
+                <p className="text-xs text-slate-600 leading-snug">{desc}</p>
               </div>
+            ))}
+          </div>
+        </section>
 
-              <div className="text-center p-4 border rounded-lg">
-                <Badge className="mb-3 bg-blue-100 text-blue-800">Technical Innovation</Badge>
-                <h3 className="font-semibold mb-2 text-black">Offline Intelligence</h3>
-                <p className="text-sm text-black">
-                  Complete AI functionality without external API dependencies or internet requirements
-                </p>
-              </div>
-
-              <div className="text-center p-4 border rounded-lg">
-                <Badge className="mb-3 bg-purple-100 text-purple-800">Medical Focus</Badge>
-                <h3 className="font-semibold mb-2 text-black">UK Guidelines Integration</h3>
-                <p className="text-sm text-black">
-                  Deep integration with NICE, BNF, CKS, and GMC standards for accurate learning
-                </p>
-              </div>
-
-              <div className="text-center p-4 border rounded-lg">
-                <Badge className="mb-3 bg-orange-100 text-orange-800">Predictive Analytics</Badge>
-                <h3 className="font-semibold mb-2 text-black">ML Exam Prediction</h3>
-                <p className="text-sm text-black">
-                  Statistical models predict success probability with confidence intervals
-                </p>
-              </div>
-
-              <div className="text-center p-4 border rounded-lg">
-                <Badge className="mb-3 bg-red-100 text-red-800">Real-time Analysis</Badge>
-                <h3 className="font-semibold mb-2 text-black">Instant Weakness Detection</h3>
-                <p className="text-sm text-black">
-                  Identifies knowledge gaps during practice with immediate feedback
-                </p>
-              </div>
-
-              <div className="text-center p-4 border rounded-lg">
-                <Badge className="mb-3 bg-yellow-100 text-yellow-800">Adaptive Learning</Badge>
-                <h3 className="font-semibold mb-2 text-black">Dynamic Difficulty</h3>
-                <p className="text-sm text-black">
-                  Questions adapt in real-time based on performance patterns and learning speed
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Main Dashboard */}
-        <AdaptiveLearningDashboard userId={currentUserId} />
-
-        {/* Technical Details */}
-        <Card className="mt-8 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Brain className="h-5 w-5" />
-              Technical Implementation
-            </CardTitle>
-            <CardDescription>
-              Advanced algorithms working behind the scenes
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold mb-3 text-black">Adaptive Learning Engine</h3>
-                <ul className="space-y-2 text-sm text-black">
-                  <li>• Performance tracking across 11 medical specialties</li>
-                  <li>• Mastery threshold algorithms (85% accuracy target)</li>
-                  <li>• Dynamic difficulty adjustment based on user patterns</li>
-                  <li>• Spaced repetition optimization for weak areas</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-3 text-black">Weakness Detection System</h3>
-                <ul className="space-y-2 text-sm text-black">
-                  <li>• Real-time pattern analysis of answer selections</li>
-                  <li>• Common mistake identification and categorization</li>
-                  <li>• Improvement trend tracking over time</li>
-                  <li>• Critical vs moderate weakness classification</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-3 text-black">Performance Prediction</h3>
-                <ul className="space-y-2 text-sm text-black">
-                  <li>• Statistical modeling with confidence intervals</li>
-                  <li>• Multi-factor analysis (accuracy, consistency, coverage)</li>
-                  <li>• Time-to-readiness estimation algorithms</li>
-                  <li>• Exam success probability calculation</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-3 text-black">Smart Question Generation</h3>
-                <ul className="space-y-2 text-sm text-black">
-                  <li>• Template extraction from authentic questions</li>
-                  <li>• Weakness-targeted scenario creation</li>
-                  <li>• Clinical pattern recognition and variation</li>
-                  <li>• Quality scoring and confidence assessment</li>
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        {/* Live dashboard */}
+        <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 overflow-hidden">
+          <AdaptiveLearningDashboard userId={currentUserId} />
+        </section>
       </div>
     </div>
   );
