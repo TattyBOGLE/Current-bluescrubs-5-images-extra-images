@@ -395,7 +395,7 @@ export function SessionSetup({
                   )}
                   <Play className="w-5 h-5 fill-current" />
                 </div>
-                <span className="text-teal-50 text-xs font-medium truncate max-w-full px-3">
+                <span className="!text-white text-xs font-medium truncate max-w-full px-3">
                   {summary}
                 </span>
               </>
