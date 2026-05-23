@@ -462,15 +462,9 @@ button[class*="bg-gradient"], button[class*="bg-gradient"] * {
   color: white !important;
 }
 
-/* Specific override for NICE NG136 overlay blocks to ensure black text */
-.bg-blue-50, .bg-blue-50 *,
-.bg-purple-50, .bg-purple-50 *,
-.bg-yellow-50, .bg-yellow-50 *,
-.bg-green-50, .bg-green-50 *,
-.bg-gray-50, .bg-gray-50 *,
-.bg-white, .bg-white * {
-  color: #000000 !important;
-}
+/* NOTE: removed unscoped .bg-white/.bg-*-50 black-text forcing — was breaking
+   any element that happens to have a bg-white/bg-*-50 class (CTAs, pills, etc.)
+   The properly-scoped NICE NG136 overlay rule below still covers that legit case. */
 
 /* Force black text in NICE guide overlay specifically */
 .fixed.inset-0.bg-black.bg-opacity-60 .bg-white *,
