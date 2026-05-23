@@ -54,32 +54,39 @@ export default function Team() {
     {
       name: "Keith Hunter",
       role: "Co-Founder & Creative Director",
-      image: "/api/placeholder/150/150", 
-      bio: "Creative technology leader with 25+ years of experience in digital innovation and educational platform development. Keith combines technical expertise with creative vision to build engaging medical education experiences.",
+      image: "/api/placeholder/150/150",
+      bio: "Co-founder of Core Principles and one of the UK's leading authorities in training design, with 30 years across coaching, consulting and deep-tissue therapy. Best known for 20 years on the Track and Field coaching staff at Sale Harriers Manchester. A Leeds-trained graphic designer by background, Keith blends elite-coaching discipline with creative direction to shape the BlueScrubsPrep learner experience.",
       qualifications: [
-        "BA Hons Dip CSD",
-        "Certified Sports Massage Therapist",
-        "Advanced Digital Design Specialist",
-        "Educational Technology Expert"
+        "BA Graphic Design, Leeds University (1982)",
+        "Level 4 British Athletics Coach",
+        "British Athletics — Mobilis Stabilise / Normalise / Functionalise Phase",
+        "British Athletics — Strength & Conditioning",
+        "Biomechanical Assessment — Sporting Therapy Organisation",
+        "Myofascial Release & Structural Integration — Sporting Therapy Organisation",
+        "Sports, Deep Tissue, Swedish & Pregnancy Massage Therapist"
       ],
       experience: [
-        "25+ years creative technology leadership",
-        "Educational platform development",
-        "Digital innovation specialist",
-        "Sports performance coach"
+        "Co-Founder, Core Principles",
+        "Lead Jumps Coach, Sale Harriers Manchester",
+        "20 years on the Track & Field coaching staff, Sale Harriers Manchester",
+        "Lecturer in biomechanics, training design and event-specific courses",
+        "Consultant in football player development and combine prep (2013 – present)",
+        "Graphic Designer and Author, The Business in Manchester"
       ],
       specialties: [
-        "Educational Technology",
-        "User Experience Design",
-        "Platform Development",
-        "Creative Direction"
+        "Training Design & Curriculum Development",
+        "Biomechanics & Speed/Power Training",
+        "Strength & Conditioning",
+        "Sports Therapy & Rehabilitation",
+        "Graphic Design & Creative Direction"
       ],
       achievements: [
-        "Coach of the Year 2012",
-        "Queens Award 2020",
-        "Coached 1 European bronze medalist",
-        "One European long jump champion",
-        "One world champion bronze medalist"
+        "Coached Lee Whiteley to a Bronze medal at the 2013 World Championships",
+        "Coached Clovis Asong (400m) to European and Commonwealth Junior Championships",
+        "33 English Schools gold medallists coached",
+        "Masterminded 4 English Schools gold medallists in 2011",
+        "Level I, II and III certified; voted Ambassador for the Sporting Therapy Organisation",
+        "England Athletics Local Coach Mentoring Programme"
       ],
       location: "Manchester, UK"
     }
