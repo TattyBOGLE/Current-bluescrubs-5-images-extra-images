@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MessageCircle, X, Send, Check } from "lucide-react";
+import { MessageCircle, X, Send, Check, Mic, MicOff } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 
 type Sentiment = "love" | "ok" | "bug" | "idea";
@@ -19,7 +19,19 @@ export function FeedbackWidget() {
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [listening, setListening] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const recognitionRef = useRef<any>(null);
+  const messageAtStartRef = useRef<string>("");
+
+  // Force white header text (beats global !important color rules in index.css)
+  useEffect(() => {
+    titleRef.current?.style.setProperty("color", "#ffffff", "important");
+    subtitleRef.current?.style.setProperty("color", "#ffffff", "important");
+  });
 
   useEffect(() => {
     if (open && !sent) {
@@ -33,6 +45,87 @@ export function FeedbackWidget() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  // Web Speech API setup (Chrome/Safari prefix-aware). Detect once.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const SR =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    setSpeechSupported(!!SR);
+  }, []);
+
+  const stopListening = () => {
+    try {
+      recognitionRef.current?.stop();
+    } catch {}
+    setListening(false);
+  };
+
+  const startListening = () => {
+    if (typeof window === "undefined") return;
+    const SR =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) {
+      setError("Voice input isn't supported in this browser.");
+      return;
+    }
+    setError(null);
+    const rec = new SR();
+    rec.continuous = true;
+    rec.interimResults = true;
+    rec.lang = (typeof navigator !== "undefined" && navigator.language) || "en-GB";
+
+    messageAtStartRef.current = message;
+
+    rec.onresult = (event: any) => {
+      let finalText = "";
+      let interimText = "";
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) finalText += transcript;
+        else interimText += transcript;
+      }
+      const base = messageAtStartRef.current;
+      const sep = base && !base.endsWith(" ") ? " " : "";
+      const combined = (base + sep + finalText + interimText).slice(0, 2000);
+      setMessage(combined);
+      if (finalText) {
+        // Lock the final chunk in so further interim results don't overwrite it.
+        messageAtStartRef.current = (base + sep + finalText).slice(0, 2000);
+      }
+    };
+    rec.onerror = (e: any) => {
+      setListening(false);
+      if (e?.error === "not-allowed" || e?.error === "service-not-allowed") {
+        setError("Microphone permission denied.");
+      } else if (e?.error === "no-speech") {
+        setError("No speech detected. Try again.");
+      } else if (e?.error && e.error !== "aborted") {
+        setError("Voice input error: " + e.error);
+      }
+    };
+    rec.onend = () => setListening(false);
+
+    try {
+      rec.start();
+      recognitionRef.current = rec;
+      setListening(true);
+    } catch (e: any) {
+      setError(e?.message || "Could not start voice input.");
+      setListening(false);
+    }
+  };
+
+  // Stop recording when the panel closes or unmounts.
+  useEffect(() => {
+    if (!open && listening) stopListening();
+    return () => {
+      if (recognitionRef.current) {
+        try { recognitionRef.current.stop(); } catch {}
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const reset = () => {
@@ -85,8 +178,8 @@ export function FeedbackWidget() {
           {/* Header */}
           <div className="bg-gradient-to-r from-teal-500 to-teal-600 px-4 py-3 flex items-center justify-between">
             <div>
-              <h3 className="text-white text-sm font-bold">Send feedback</h3>
-              <p className="text-teal-50 text-xs">We read every message.</p>
+              <h3 ref={titleRef} className="text-white text-sm font-bold">Send feedback</h3>
+              <p ref={subtitleRef} className="text-white text-xs opacity-90">We read every message.</p>
             </div>
             <button
               type="button"
@@ -138,18 +231,50 @@ export function FeedbackWidget() {
                 <label htmlFor="feedback-message" className="block text-xs font-semibold text-slate-700 mb-1">
                   Your feedback
                 </label>
-                <textarea
-                  ref={textareaRef}
-                  id="feedback-message"
-                  rows={4}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  maxLength={2000}
-                  placeholder="What's working, what's not, what would help…"
-                  className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm text-slate-800 placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none resize-none"
-                  data-testid="textarea-feedback-message"
-                />
-                <p className="text-[10px] text-slate-400 text-right mt-0.5">{message.length}/2000</p>
+                <div className="relative">
+                  <textarea
+                    ref={textareaRef}
+                    id="feedback-message"
+                    rows={4}
+                    value={message}
+                    onChange={(e) => {
+                      setMessage(e.target.value);
+                      messageAtStartRef.current = e.target.value;
+                    }}
+                    maxLength={2000}
+                    placeholder={listening ? "Listening… speak now" : "What's working, what's not, what would help…"}
+                    className="w-full rounded-xl border border-slate-300 px-3 py-2 pr-11 text-sm text-slate-800 placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none resize-none"
+                    data-testid="textarea-feedback-message"
+                  />
+                  {speechSupported && (
+                    <button
+                      type="button"
+                      onClick={listening ? stopListening : startListening}
+                      aria-label={listening ? "Stop voice input" : "Start voice input"}
+                      aria-pressed={listening}
+                      title={listening ? "Stop voice input" : "Dictate with microphone"}
+                      className={`absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                        listening
+                          ? "bg-rose-500 text-white animate-pulse"
+                          : "bg-slate-100 text-slate-600 hover:bg-teal-100 hover:text-teal-700"
+                      }`}
+                      data-testid="button-feedback-mic"
+                    >
+                      {listening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                    </button>
+                  )}
+                </div>
+                <div className="flex items-center justify-between mt-0.5">
+                  {listening ? (
+                    <span className="text-[10px] text-rose-600 font-semibold flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" />
+                      Recording…
+                    </span>
+                  ) : (
+                    <span />
+                  )}
+                  <p className="text-[10px] text-slate-400">{message.length}/2000</p>
+                </div>
               </div>
 
               {/* Email (optional) */}
