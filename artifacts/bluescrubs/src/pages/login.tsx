@@ -3,8 +3,8 @@ import { useAuth } from "@/hooks/use-auth";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Stethoscope, Mail, Lock, ArrowRight, RefreshCw } from "lucide-react";
-import doctorMain from "@/assets/login-doctor-main.png";
-import doctorCivilian from "@/assets/login-doctor-civilian.png";
+import doctorMain from "@/assets/login-doctor-main.jpg";
+import doctorCivilian from "@/assets/login-doctor-civilian.jpg";
 
 const BYPASS_KEY = "bluescrubs.bypassAuth";
 

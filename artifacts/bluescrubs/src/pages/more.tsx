@@ -39,7 +39,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import moreBgImage from '@assets/9252557F-8639-4C96-BFDA-AEACAAA7E77E_1750366172462.png';
+import moreBgImage from '@assets/9252557F-8639-4C96-BFDA-AEACAAA7E77E_1750366172462.jpg';
 
 export default function More() {
   // Leaderboard state

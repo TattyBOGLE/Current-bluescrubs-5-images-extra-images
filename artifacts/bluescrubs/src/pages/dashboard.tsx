@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { User } from "@shared/schema";
 import { Flame, Award } from "lucide-react";
-import dashboardHeroImage from '@assets/B584B977-70BB-4134-8338-FD9B4B07B0D0_1750518606574.png';
+import dashboardHeroImage from '@assets/B584B977-70BB-4134-8338-FD9B4B07B0D0_1750518606574.jpg';
 import type { UserStats } from "@/lib/types";
 
 // Mock user for demo - in real app this would come from auth

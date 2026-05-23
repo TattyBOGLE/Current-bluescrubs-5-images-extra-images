@@ -11,7 +11,7 @@ import {
   Camera, Upload, Download, Settings, Volume2, VolumeX, X
 } from "lucide-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import videoBgImage from '@assets/3FEBA1E1-EE29-45D2-8251-602E336171C5_1750366172462.png';
+import videoBgImage from '@assets/3FEBA1E1-EE29-45D2-8251-602E336171C5_1750366172462.jpg';
 
 interface VideoOSCESession {
   id: string;

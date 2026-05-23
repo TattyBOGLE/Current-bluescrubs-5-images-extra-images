@@ -6,7 +6,7 @@ import {
   Clock, ArrowRight, ArrowLeft, Award, CheckCircle, ExternalLink,
   BookOpen, Target, Brain, Lightbulb, X, MessageCircle, Flame, AlertTriangle
 } from "lucide-react";
-import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.png';
+import plab1BgImage from '@assets/458CC7DF-D6D7-4BAD-85F5-99EEBD33ECD9_1750366142331.jpg';
 import { apiRequest } from "@/lib/queryClient";
 import { Tutor } from "@/components/ai-tutor";
 import { useToast } from "@/hooks/use-toast";
