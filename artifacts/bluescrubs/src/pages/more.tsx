@@ -414,7 +414,7 @@ link: "/ask-ai"
                       <tool.icon className="h-6 w-6 text-teal-700" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 mb-1">{tool.title}</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{tool.title}</h3>
                       <p className="text-gray-600 text-sm">{tool.description}</p>
                     </div>
                     <ChevronRight className="h-5 w-5 text-gray-400" />
@@ -439,7 +439,7 @@ link: "/ask-ai"
                       <feature.icon className="h-6 w-6 text-teal-700" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{feature.title}</h3>
                       <p className="text-gray-600 text-sm">{feature.description}</p>
                     </div>
                     {feature.hasArrow && (

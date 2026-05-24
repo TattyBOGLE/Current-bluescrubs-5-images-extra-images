@@ -1244,7 +1244,7 @@ export default function PLAB1New() {
         <Card className="w-full max-w-md mb-16">
           <CardContent className="p-8 text-center">
             <div className="w-16 h-16 border-4 border-teal-100 border-t-teal-600 rounded-full animate-spin mx-auto mb-4"></div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Generating Medical Questions</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Generating Medical Questions</h3>
             <p className="text-gray-600">Creating personalized questions for {selectedCategory} practice...</p>
           </CardContent>
         </Card>
@@ -1451,7 +1451,7 @@ export default function PLAB1New() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2">Great Progress!</h2>
+              <h2 className="text-2xl font-semibold text-white mb-2">Great Progress!</h2>
               <p className="text-teal-50">
                 You've got {sessionResults.filter(r => r.correct).length} questions correct!
               </p>
@@ -1460,13 +1460,13 @@ export default function PLAB1New() {
             <div className="p-6 space-y-4">
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-teal-50/70 border border-teal-100 rounded-2xl p-4 text-center">
-                  <div className="text-2xl font-bold text-teal-700">
+                  <div className="text-2xl font-semibold text-teal-700">
                     {sessionResults.filter(r => r.correct).length}
                   </div>
                   <div className="text-xs text-teal-600 font-medium mt-0.5">Correct</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
-                  <div className="text-2xl font-bold text-slate-800">
+                  <div className="text-2xl font-semibold text-slate-800">
                     {sessionResults.length}
                   </div>
                   <div className="text-xs text-slate-500 font-medium mt-0.5">Answered</div>
@@ -1514,7 +1514,7 @@ export default function PLAB1New() {
           <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <h2 className="text-2xl font-bold text-gray-900">NICE NG136 + PLAB MCQ Format</h2>
+                <h2 className="text-2xl font-semibold text-gray-900">NICE NG136 + PLAB MCQ Format</h2>
               </div>
               <Button
                 onClick={() => {}}
@@ -1528,7 +1528,7 @@ export default function PLAB1New() {
 
             <div className="p-6 space-y-8">
               <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-blue-900 mb-4 flex items-center gap-2">
+                <h3 className="text-xl font-semibold text-blue-900 mb-4 flex items-center gap-2">
                   <BookOpen className="w-5 h-5" />
                   Clinical Scenario Framework
                 </h3>
@@ -1549,7 +1549,7 @@ export default function PLAB1New() {
               </div>
 
               <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-green-900 mb-4 flex items-center gap-2">
+                <h3 className="text-xl font-semibold text-green-900 mb-4 flex items-center gap-2">
                   <Target className="w-5 h-5" />
                   NICE NG136 Guidance Integration
                 </h3>
@@ -1570,7 +1570,7 @@ export default function PLAB1New() {
               </div>
 
               <div className="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-purple-900 mb-4 flex items-center gap-2">
+                <h3 className="text-xl font-semibold text-purple-900 mb-4 flex items-center gap-2">
                   <Brain className="w-5 h-5" />
                   PLAB MCQ Structure
                 </h3>
@@ -1597,7 +1597,7 @@ export default function PLAB1New() {
               </div>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-yellow-900 mb-4 flex items-center gap-2">
+                <h3 className="text-xl font-semibold text-yellow-900 mb-4 flex items-center gap-2">
                   <Lightbulb className="w-5 h-5" />
                   Memory Aids & Mnemonics
                 </h3>

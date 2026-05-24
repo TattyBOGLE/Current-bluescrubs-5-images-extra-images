@@ -199,7 +199,7 @@ export default function Analytics() {
             <div className="grid lg:grid-cols-3 gap-5">
               <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
                 <div className="flex items-center justify-between mb-3">
-                  <h2 className="text-slate-900 font-semibold">Accuracy this week</h2>
+                  <h2 className="text-2xl font-semibold text-slate-900">Accuracy this week</h2>
                   <span className="text-xs text-slate-500">Daily %</span>
                 </div>
                 <div className="h-64">
@@ -220,7 +220,7 @@ export default function Analytics() {
               </div>
 
               <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
-                <h2 className="text-slate-900 font-semibold">Focus next</h2>
+                <h2 className="text-2xl font-semibold text-slate-900">Focus next</h2>
                 <p className="text-xs text-slate-500 mt-0.5">Your three weakest specialties</p>
                 <div className="mt-4 space-y-3">
                   {weakest.map((s) => (
@@ -260,7 +260,7 @@ export default function Analytics() {
           {/* Specialties */}
           <TabsContent value="specialties" className="mt-5">
             <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
-              <h2 className="text-slate-900 font-semibold mb-3">Accuracy by specialty</h2>
+              <h2 className="text-2xl font-semibold text-slate-900 mb-3">Accuracy by specialty</h2>
               <div className="h-72">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={specialties} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
@@ -305,7 +305,7 @@ export default function Analytics() {
           <TabsContent value="progress" className="mt-5">
             <div className="grid lg:grid-cols-3 gap-5">
               <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
-                <h2 className="text-slate-900 font-semibold mb-3">Questions answered this week</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-3">Questions answered this week</h2>
                 <div className="h-64">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={PERFORMANCE_HISTORY} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
@@ -327,7 +327,7 @@ export default function Analytics() {
               </div>
 
               <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 space-y-4">
-                <h2 className="text-slate-900 font-semibold">This week</h2>
+                <h2 className="text-2xl font-semibold text-slate-900">This week</h2>
                 <div>
                   <div className="text-xs text-slate-500">Questions</div>
                   <div className="text-2xl font-semibold text-slate-900">
