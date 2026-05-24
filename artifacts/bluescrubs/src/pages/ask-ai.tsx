@@ -125,22 +125,16 @@ export default function AskAI() {
   return (
     <div className="min-h-screen bg-slate-50 p-4 pb-24">
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* Header */}
-        <Card className="text-center bg-white shadow-lg">
-          <CardHeader className="pb-4">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-sm shadow-teal-200">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <CardTitle className="text-xl font-semibold text-slate-900">Medical Assistant</CardTitle>
-                <CardDescription className="text-gray-600">
-                  Ask any medical question and get evidence-based answers
-                </CardDescription>
-              </div>
-            </div>
-          </CardHeader>
-        </Card>
+        {/* Page Hero */}
+        <div className="text-center">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl shadow-sm shadow-teal-200 mb-4">
+            <Brain className="w-6 h-6 text-white" />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-2">Medical Assistant</h1>
+          <p className="text-base md:text-lg text-slate-600">
+            Ask any medical question and get evidence-based answers
+          </p>
+        </div>
 
         {/* AI Question Generator */}
         <Card className="shadow-lg border-l-4 border-l-green-500">

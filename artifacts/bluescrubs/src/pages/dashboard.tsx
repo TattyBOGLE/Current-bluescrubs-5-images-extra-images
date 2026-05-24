@@ -56,35 +56,35 @@ export default function Dashboard() {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-teal-700/40 to-teal-500/30"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center hero-text-white">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6)'}}>
+          <div className="text-center dashboard-hero">
+            <h1 className="text-3xl md:text-4xl font-semibold mb-6 drop-shadow-lg">
               Welcome back, {user.username.split(' ')[1]}!
             </h1>
-            <p className="text-base md:text-lg mb-2" style={{color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6)'}}>
+            <p className="text-base md:text-lg mb-2 drop-shadow-lg">
               {currentDate} • Ready to continue your PLAB journey?
             </p>
 
             <div className="flex justify-center gap-4 mt-8">
               <div className="bg-white/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/50">
                 <div className="flex items-center space-x-2 mb-1">
-                  <Flame className="w-5 h-5" style={{color: 'white'}} />
-                  <span className="text-sm font-medium" style={{color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>Day Streak</span>
+                  <Flame className="w-5 h-5 text-white" />
+                  <span className="text-sm font-medium">Day Streak</span>
                 </div>
-                <div className="text-2xl font-bold" style={{color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>{user.studyStreak}</div>
+                <div className="text-2xl font-semibold">{user.studyStreak}</div>
               </div>
               <div className="bg-white/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/50">
                 <div className="flex items-center space-x-2 mb-1">
-                  <Award className="w-5 h-5" style={{color: 'white'}} />
-                  <span className="text-sm font-medium" style={{color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>Total Points</span>
+                  <Award className="w-5 h-5 text-white" />
+                  <span className="text-sm font-medium">Total Points</span>
                 </div>
-                <div className="text-2xl font-bold" style={{color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>{user.totalPoints.toLocaleString()}</div>
+                <div className="text-2xl font-semibold">{user.totalPoints.toLocaleString()}</div>
               </div>
               <div className="bg-white/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/50">
                 <div className="flex items-center space-x-2 mb-1">
-                  <span className="text-2xl">📚</span>
-                  <span className="text-sm font-medium" style={{color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>Questions Correct</span>
+                  <Award className="w-5 h-5 text-white" />
+                  <span className="text-sm font-medium">Questions Correct</span>
                 </div>
-                <div className="text-2xl font-bold" style={{color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>0</div>
+                <div className="text-2xl font-semibold">0</div>
               </div>
             </div>
 
@@ -108,7 +108,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Questions Answered</h3>
-                <div className="text-3xl font-bold text-gray-900 mt-1">0</div>
+                <div className="text-3xl font-semibold text-gray-900 mt-1">0</div>
               </div>
               <div className="text-4xl">📚</div>
             </div>
@@ -122,7 +122,7 @@ export default function Dashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">Questions Answered</p>
-                  <p className="text-2xl font-bold text-gray-900">{userStats?.totalAnswered || 0}</p>
+                  <p className="text-2xl font-semibold text-gray-900">{userStats?.totalAnswered || 0}</p>
                 </div>
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                   <span className="text-blue-600">📝</span>
@@ -136,7 +136,7 @@ export default function Dashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">Accuracy Rate</p>
-                  <p className="text-2xl font-bold text-gray-900">
+                  <p className="text-2xl font-semibold text-gray-900">
                     {userStats?.totalAnswered ? Math.round((userStats.correctAnswers / userStats.totalAnswered) * 100) : 0}%
                   </p>
                 </div>
@@ -152,7 +152,7 @@ export default function Dashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">Study Streak</p>
-                  <p className="text-2xl font-bold text-gray-900">{user.studyStreak} days</p>
+                  <p className="text-2xl font-semibold text-gray-900">{user.studyStreak} days</p>
                 </div>
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
                   <span className="text-orange-600">🔥</span>
@@ -166,7 +166,7 @@ export default function Dashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">Total Points</p>
-                  <p className="text-2xl font-bold text-gray-900">{user.totalPoints.toLocaleString()}</p>
+                  <p className="text-2xl font-semibold text-gray-900">{user.totalPoints.toLocaleString()}</p>
                 </div>
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
                   <span className="text-purple-600">🏆</span>

@@ -102,7 +102,7 @@ export default function Team() {
             <div className="p-3 bg-teal-100 rounded-full">
               <Users className="h-8 w-8 text-teal-700" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900">Who are BlueScrubsPrep</h1>
+            <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">Who are BlueScrubsPrep</h1>
           </div>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             Meet the dedicated team behind BlueScrubsPrep — combining medical expertise with innovative technology
@@ -165,7 +165,7 @@ export default function Team() {
                     )}
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-xl font-bold" style={{ color: '#ffffff' }}>{member.name}</h2>
+                    <h2 className="text-xl font-semibold" style={{ color: '#ffffff' }}>{member.name}</h2>
                     <p style={{ color: 'rgba(255,255,255,0.9)' }}>{member.role}</p>
                     {member.location && (
                       <div className="flex items-center gap-1 mt-2" style={{ color: 'rgba(255,255,255,0.9)' }}>
@@ -239,7 +239,7 @@ export default function Team() {
 
         {/* Company Values */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">Our Values</h2>
+          <h2 className="text-2xl font-semibold text-slate-900 mb-8 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="text-center p-6 hover:shadow-lg transition-shadow bg-white rounded-2xl border-slate-200">
               <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">

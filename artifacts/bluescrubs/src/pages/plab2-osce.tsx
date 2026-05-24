@@ -272,7 +272,7 @@ export default function Plab2Osce() {
                 <Stethoscope className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1 min-w-0">
-                <h1 className="text-xl font-bold text-slate-900 leading-tight">{ds.title}</h1>
+                <h1 className="text-xl font-semibold text-slate-900 leading-tight">{ds.title}</h1>
                 <div className="flex flex-wrap gap-1.5 mt-2">
                   <Badge className="bg-teal-50 text-teal-700 hover:bg-teal-50 border-none text-xs capitalize">
                     {activeStation.category}
@@ -508,7 +508,7 @@ export default function Plab2Osce() {
                   className="flex-1 accent-teal-600"
                   data-testid="input-self-score"
                 />
-                <span className="w-12 text-right text-lg font-bold text-teal-700 tabular-nums">
+                <span className="w-12 text-right text-lg font-semibold text-teal-700 tabular-nums">
                   {selfScore}
                 </span>
               </div>
@@ -549,7 +549,7 @@ export default function Plab2Osce() {
                 {translateText("PLAB 2 OSCE")}
               </span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold leading-tight">OSCE Practice</h1>
+            <h1 className="text-3xl md:text-4xl font-semibold leading-tight">OSCE Practice</h1>
             <p className="text-base md:text-lg text-teal-50 mt-1 max-w-[40ch]">
               16–20 clinical stations covering history, examination, communication, ethics and acute care.
             </p>
@@ -573,7 +573,7 @@ export default function Plab2Osce() {
               </p>
             </div>
             <div className="text-right">
-              <div className="text-2xl font-bold text-teal-700 tabular-nums leading-none">{progressPct}%</div>
+              <div className="text-2xl font-semibold text-teal-700 tabular-nums leading-none">{progressPct}%</div>
               {avgScore > 0 && (
                 <div className="text-xs text-slate-500">avg {avgScore}/20</div>
               )}
@@ -728,7 +728,7 @@ export default function Plab2Osce() {
                     {isCompleted ? (
                       <div className="flex items-center gap-1 text-emerald-700">
                         <CheckCircle className="w-3.5 h-3.5" />
-                        <span className="text-xs font-bold tabular-nums">{score}/20</span>
+                        <span className="text-xs font-semibold tabular-nums">{score}/20</span>
                       </div>
                     ) : (
                       <ChevronRight className="w-4 h-4 text-slate-400" />
@@ -773,7 +773,7 @@ function Info({
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-3 text-center">
       <Icon className="w-4 h-4 text-teal-700 mx-auto mb-1" />
-      <div className="text-sm font-bold text-slate-900 leading-tight">{value}</div>
+      <div className="text-sm font-semibold text-slate-900 leading-tight">{value}</div>
       <div className="text-xs text-slate-500 uppercase tracking-wider mt-0.5">{label}</div>
     </div>
   );

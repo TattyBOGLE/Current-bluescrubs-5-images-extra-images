@@ -382,10 +382,10 @@ link: "/ask-ai"
       >
 
         <div className="relative z-50 flex flex-col items-center justify-center text-center px-8 py-16 hero-text">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-2xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6)'}}>
+          <h1 className="text-3xl md:text-4xl font-semibold mb-4 drop-shadow-2xl">
             More Resources
           </h1>
-          <p className="text-base md:text-lg mb-6 drop-shadow-2xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6)'}}>
+          <p className="text-base md:text-lg mb-6 drop-shadow-2xl">
             Advanced tools and comprehensive medical education resources
           </p>
 
@@ -398,12 +398,12 @@ link: "/ask-ai"
           <Link href="/dashboard" className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
             <ChevronLeft className="h-5 w-5 text-gray-600" />
           </Link>
-          <h2 className="text-2xl font-bold text-slate-900">All Features</h2>
+          <h2 className="text-2xl font-semibold text-slate-900">All Features</h2>
         </div>
 
         {/* Admin Tools Section */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Admin Tools</h2>
+          <h2 className="text-2xl font-semibold text-slate-900 mb-2">Admin Tools</h2>
           <p className="text-sm text-slate-600 mb-6">System management and optimization tools</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {adminTools.map((tool, index) => (
@@ -429,7 +429,7 @@ link: "/ask-ai"
 
         {/* Features Section */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Features</h2>
+          <h2 className="text-2xl font-semibold text-slate-900 mb-6">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {features.map((feature, index) => {
               const cardContent = (

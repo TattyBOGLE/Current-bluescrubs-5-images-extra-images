@@ -28,7 +28,7 @@ export default function HowToPage() {
       {/* Header */}
       <div className="bg-gradient-to-r from-teal-500 to-teal-700 text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-semibold mb-4">
             How to Use BlueScrubsPrep
           </h1>
           <p className="text-base md:text-lg mb-6 opacity-90">
@@ -44,7 +44,7 @@ export default function HowToPage() {
         {/* Quick Start Guide */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Quick Start Guide</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">Quick Start Guide</h2>
             <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Get started with BlueScrubsPrep in just a few simple steps and begin your PLAB preparation journey
             </p>
@@ -115,7 +115,7 @@ export default function HowToPage() {
         {/* Feature Guides */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Platform Features</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">Platform Features</h2>
             <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive tools designed specifically for PLAB preparation success
             </p>
@@ -223,7 +223,7 @@ export default function HowToPage() {
         {/* Advanced Features */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Advanced Features</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">Advanced Features</h2>
             <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Powerful tools to enhance your learning experience and exam preparation
             </p>
@@ -333,7 +333,7 @@ export default function HowToPage() {
         {/* Study Tips */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Study Tips & Best Practices</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">Study Tips & Best Practices</h2>
             <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Proven strategies to maximise your PLAB preparation effectiveness
             </p>
@@ -401,7 +401,7 @@ export default function HowToPage() {
         {/* FAQ Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
               Common questions about using BlueScrubsPrep for PLAB preparation
             </p>
@@ -456,7 +456,7 @@ export default function HowToPage() {
 
         {/* Call to Action */}
         <section className="text-center bg-gradient-to-r from-teal-500 to-teal-700 text-white rounded-2xl p-12">
-          <h2 className="text-2xl font-bold mb-4">Ready to Start Your PLAB Journey?</h2>
+          <h2 className="text-2xl font-semibold mb-4">Ready to Start Your PLAB Journey?</h2>
           <p className="text-base md:text-lg mb-8 opacity-90">
             Join thousands of medical graduates who have successfully prepared with BlueScrubsPrep
           </p>

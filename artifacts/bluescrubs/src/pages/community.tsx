@@ -291,7 +291,7 @@ export default function Community() {
   return (
     <div className="container mx-auto px-4 py-8 pb-24 max-w-6xl">
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold mb-2">Community</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold mb-2">Community</h1>
         <p className="text-muted-foreground text-base md:text-lg">
           Connect with fellow medical professionals preparing for PLAB and working in the UK
         </p>
@@ -302,28 +302,28 @@ export default function Community() {
         <Card>
           <CardContent className="p-6 text-center">
             <Users className="w-8 h-8 mx-auto mb-2 text-blue-600" />
-            <div className="text-2xl font-bold">2,847</div>
+            <div className="text-2xl font-semibold">2,847</div>
             <div className="text-sm text-muted-foreground">Active Members</div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-6 text-center">
             <MessageCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
-            <div className="text-2xl font-bold">1,234</div>
+            <div className="text-2xl font-semibold">1,234</div>
             <div className="text-sm text-muted-foreground">Discussions</div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-6 text-center">
             <Award className="w-8 h-8 mx-auto mb-2 text-purple-600" />
-            <div className="text-2xl font-bold">456</div>
+            <div className="text-2xl font-semibold">456</div>
             <div className="text-sm text-muted-foreground">Success Stories</div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-6 text-center">
             <Calendar className="w-8 h-8 mx-auto mb-2 text-orange-600" />
-            <div className="text-2xl font-bold">89</div>
+            <div className="text-2xl font-semibold">89</div>
             <div className="text-sm text-muted-foreground">Upcoming Events</div>
           </CardContent>
         </Card>
@@ -459,7 +459,7 @@ export default function Community() {
         {/* Study Groups Tab */}
         <TabsContent value="groups" className="space-y-6">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-slate-900">Study Groups</h2>
+            <h2 className="text-2xl font-semibold text-slate-900">Study Groups</h2>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
               Create Group
@@ -519,7 +519,7 @@ export default function Community() {
         {/* Events Tab */}
         <TabsContent value="events" className="space-y-6">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold">Upcoming Events</h2>
+            <h2 className="text-2xl font-semibold">Upcoming Events</h2>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
               Create Event
@@ -569,7 +569,7 @@ export default function Community() {
         {/* Mentorship Tab */}
         <TabsContent value="mentorship" className="space-y-6">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold">Mentorship Program</h2>
+            <h2 className="text-2xl font-semibold">Mentorship Program</h2>
             <div className="flex gap-2">
               <Button variant="outline">
                 <Star className="w-4 h-4 mr-2" />
@@ -586,19 +586,19 @@ export default function Community() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-blue-600">127</div>
+                <div className="text-2xl font-semibold text-blue-600">127</div>
                 <div className="text-sm text-muted-foreground">Active Mentors</div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-green-600">342</div>
+                <div className="text-2xl font-semibold text-green-600">342</div>
                 <div className="text-sm text-muted-foreground">Successful Matches</div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-purple-600">94%</div>
+                <div className="text-2xl font-semibold text-purple-600">94%</div>
                 <div className="text-sm text-muted-foreground">Success Rate</div>
               </CardContent>
             </Card>

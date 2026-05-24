@@ -88,7 +88,7 @@ export default function Settings() {
             <div className="p-3 bg-blue-500/10 rounded-full">
               <SettingsIcon className="h-8 w-8 text-blue-600" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Settings</h1>
+            <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">Settings</h1>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Customise your BlueScrubsPrep experience with personalised preferences and accessibility options.

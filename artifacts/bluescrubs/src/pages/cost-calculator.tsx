@@ -56,7 +56,7 @@ export default function CostCalculator() {
     <div className="min-h-screen bg-slate-50 p-6 pb-24">
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
+          <h1 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-2">
             OpenAI Cost Calculator
           </h1>
           <p className="text-base md:text-lg text-slate-600">
@@ -126,7 +126,7 @@ export default function CostCalculator() {
                   <span className="font-medium">${cost.outputCost.toFixed(2)}</span>
                 </div>
                 <div className="border-t pt-2">
-                  <div className="flex justify-between text-lg font-bold">
+                  <div className="flex justify-between text-lg font-semibold">
                     <span>Total Cost:</span>
                     <span className="text-green-600">${cost.totalCost.toFixed(2)}</span>
                   </div>
@@ -151,7 +151,7 @@ export default function CostCalculator() {
                     <Zap className="h-8 w-8 text-blue-600 mx-auto" />
                     <h3 className="font-semibold">Test Generation</h3>
                     <p className="text-sm text-gray-600">Generate 10 questions</p>
-                    <p className="text-lg font-bold text-blue-600">~$0.10</p>
+                    <p className="text-lg font-semibold text-blue-600">~$0.10</p>
                     <Button 
                       onClick={() => startGeneration(10)}
                       className="w-full"
@@ -169,7 +169,7 @@ export default function CostCalculator() {
                     <Calculator className="h-8 w-8 text-green-600 mx-auto" />
                     <h3 className="font-semibold">Medium Set</h3>
                     <p className="text-sm text-gray-600">Generate 100 questions</p>
-                    <p className="text-lg font-bold text-green-600">~$1.00</p>
+                    <p className="text-lg font-semibold text-green-600">~$1.00</p>
                     <Button 
                       onClick={() => startGeneration(100)}
                       className="w-full"
@@ -187,7 +187,7 @@ export default function CostCalculator() {
                     <DollarSign className="h-8 w-8 text-purple-600 mx-auto" />
                     <h3 className="font-semibold">Full Generation</h3>
                     <p className="text-sm text-gray-600">Generate {questionCount} questions</p>
-                    <p className="text-lg font-bold text-purple-600">${cost.totalCost.toFixed(2)}</p>
+                    <p className="text-lg font-semibold text-purple-600">${cost.totalCost.toFixed(2)}</p>
                     <Button 
                       onClick={() => window.location.href = '/generation'}
                       className="w-full"

@@ -107,7 +107,7 @@ export default function Security() {
             <div className="p-3 bg-blue-500/10 rounded-full">
               <Shield className="h-8 w-8 text-blue-600" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Security Centre</h1>
+            <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">Security Centre</h1>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Your data security and privacy are our top priorities. Learn about our comprehensive security measures and best practices.
@@ -127,15 +127,15 @@ export default function Security() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white/50 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-green-600">99.9%</div>
+                  <div className="text-2xl font-semibold text-green-600">99.9%</div>
                   <div className="text-sm text-green-700">Uptime</div>
                 </div>
                 <div className="bg-white/50 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-green-600">256-bit</div>
+                  <div className="text-2xl font-semibold text-green-600">256-bit</div>
                   <div className="text-sm text-green-700">Encryption</div>
                 </div>
                 <div className="bg-white/50 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-green-600">GDPR</div>
+                  <div className="text-2xl font-semibold text-green-600">GDPR</div>
                   <div className="text-sm text-green-700">Compliant</div>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function Security() {
 
         {/* Security Features */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Security Features</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Security Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {securityFeatures.map((feature, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
@@ -180,7 +180,7 @@ export default function Security() {
 
         {/* Security Policies */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Security Policies</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Security Policies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {securityPolicies.map((policy, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
@@ -206,7 +206,7 @@ export default function Security() {
 
         {/* Security Best Practices */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Security Best Practices</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Security Best Practices</h2>
           <Card className="bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200">
             <CardHeader>
               <div className="flex items-center gap-3">

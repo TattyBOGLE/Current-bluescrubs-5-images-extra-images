@@ -195,7 +195,7 @@ export default function Premium() {
   return (
     <div className="container mx-auto px-4 py-8 pb-24">
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">Premium Features</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold mb-4">Premium Features</h1>
         <p className="text-base md:text-lg text-muted-foreground">
           Unlock advanced capabilities designed for serious PLAB preparation and professional development
         </p>
@@ -546,7 +546,7 @@ export default function Premium() {
         </CardHeader>
         <CardContent className="text-center">
           <div className="mb-6">
-            <div className="text-4xl font-bold text-teal-600 mb-2">£79/month</div>
+            <div className="text-4xl font-semibold text-teal-600 mb-2">£79/month</div>
             <div className="text-slate-600">or £799/year (save 15%)</div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-sm">

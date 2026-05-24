@@ -162,9 +162,10 @@
 
 /* Hero banner text override - mobile responsive */
 @layer utilities {
-  .hero-text, .hero-text * {
-    color: #ffffff !important;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6) !important;
+  .hero-text,
+  .hero-text * {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6);
   }
   
   /* Force white text on colored buttons */
@@ -248,14 +249,7 @@
     }
   }
   
-  /* Preserve normal text colors on light backgrounds */
-  .text-gray-500 { color: #6b7280 !important; }
-  .text-gray-600 { color: #4b5563 !important; }
-  .text-gray-700 { color: #374151 !important; }
-  .text-gray-800 { color: #1f2937 !important; }
-  .text-gray-900 { color: #111827 !important; }
-  
-  .text-muted-foreground { color: #6b7280 !important; }
+  /* Text colour overrides removed — rely on Tailwind utilities directly. */
   
   /* Force white text on practice buttons */
   button.bg-blue-600 span,
@@ -288,11 +282,13 @@
     fill: white !important;
   }
   
-  /* Force white text on dashboard hero section (scoped to .dashboard-hero only) */
+  /* White text inside dashboard hero (scoped). */
+  .dashboard-hero,
   .dashboard-hero h1,
   .dashboard-hero p,
-  .dashboard-hero span {
-    color: white !important;
+  .dashboard-hero span,
+  .dashboard-hero div {
+    color: #ffffff;
   }
   
   /* Force black text for AI Clinical Skills Tutor - Very specific override */
