@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { User } from "@shared/schema";
-import { Flame, Award } from "lucide-react";
+import { Flame, Award, BookOpen } from "lucide-react";
 import dashboardHeroImage from '@assets/B584B977-70BB-4134-8338-FD9B4B07B0D0_1750518606574.jpg';
 import type { UserStats } from "@/lib/types";
 
@@ -110,7 +110,7 @@ export default function Dashboard() {
                 <h3 className="text-xl font-semibold text-gray-900">Questions Answered</h3>
                 <div className="text-3xl font-semibold text-gray-900 mt-1">0</div>
               </div>
-              <div className="text-4xl">📚</div>
+              <BookOpen className="w-10 h-10 text-teal-600" />
             </div>
           </CardContent>
         </Card>
