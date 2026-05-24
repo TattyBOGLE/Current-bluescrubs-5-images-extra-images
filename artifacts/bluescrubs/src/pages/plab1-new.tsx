@@ -1354,37 +1354,39 @@ export default function PLAB1New() {
         </QuizErrorBoundary>
 
         {showExplanation && (
-          <>
-            <QuizErrorBoundary
-              context="explanation"
-              onReset={() => setAiExplanation(null)}
-            >
-              <ExplanationPanel
-                currentQuestion={currentQuestion}
-                aiExplanation={aiExplanation}
-                aiExplanationLoading={aiExplanationLoading}
-                selectedAnswer={selectedAnswer}
-                isCorrect={(() => {
-                  const correctIdx = currentQuestion?.correctAnswer ?? currentQuestion?.correct_answer ?? currentQuestion?.answer;
-                  return parseInt(selectedAnswer) === (typeof correctIdx === 'string' ? correctIdx.charCodeAt(0) - 65 : correctIdx);
-                })()}
-                questionStats={questionStatsMap[String(currentQuestion?.id)]}
-              />
-            </QuizErrorBoundary>
+          <QuizErrorBoundary
+            context="explanation"
+            onReset={() => setAiExplanation(null)}
+          >
+            <ExplanationPanel
+              currentQuestion={currentQuestion}
+              aiExplanation={aiExplanation}
+              aiExplanationLoading={aiExplanationLoading}
+              selectedAnswer={selectedAnswer}
+              isCorrect={(() => {
+                const correctIdx = currentQuestion?.correctAnswer ?? currentQuestion?.correct_answer ?? currentQuestion?.answer;
+                return parseInt(selectedAnswer) === (typeof correctIdx === 'string' ? correctIdx.charCodeAt(0) - 65 : correctIdx);
+              })()}
+              questionStats={questionStatsMap[String(currentQuestion?.id)]}
+            />
+          </QuizErrorBoundary>
+        )}
 
-            <QuizErrorBoundary
-              context="study tips"
-              onReset={() => setAiStudyTips(null)}
-            >
-              <StudyTipsPanel
-                currentQuestion={currentQuestion}
-                aiStudyTips={aiStudyTips}
-                aiStudyTipsLoading={aiStudyTipsLoading}
-                tipsOpen={tipsOpen}
-                setTipsOpen={setTipsOpen}
-              />
-            </QuizErrorBoundary>
-          </>
+        {/* Tips & Mnemonics + Revision + Reference always visible per question,
+            independent of whether the user has submitted an answer yet. */}
+        {currentQuestion && (
+          <QuizErrorBoundary
+            context="study tips"
+            onReset={() => setAiStudyTips(null)}
+          >
+            <StudyTipsPanel
+              currentQuestion={currentQuestion}
+              aiStudyTips={aiStudyTips}
+              aiStudyTipsLoading={aiStudyTipsLoading}
+              tipsOpen={tipsOpen}
+              setTipsOpen={setTipsOpen}
+            />
+          </QuizErrorBoundary>
         )}
       </div>
 
