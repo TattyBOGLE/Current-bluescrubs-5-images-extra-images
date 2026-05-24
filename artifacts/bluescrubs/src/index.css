@@ -162,12 +162,9 @@
 
 /* Hero banner text override - mobile responsive */
 @layer utilities {
-  .hero-text,
-  .hero-text * {
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6);
-  }
-  
+  /* .hero-text rules consolidated into a single top-level block below
+     (search for "Consolidated .hero-text styles"). */
+
   /* Force white text on colored buttons */
   .force-white-text,
   .force-white-text * {
@@ -211,12 +208,6 @@
   .p-4.border-b.border-gray-200.bg-gradient-to-r.from-blue-50.to-indigo-50 h4.ai-tutor-text {
     color: #000000 !important;
     text-shadow: none !important;
-  }
-  
-  /* Prevent hero-text from affecting AI tutor */
-  .hero-text .ai-tutor-text,
-  .hero-text * .ai-tutor-text {
-    color: #000000 !important;
   }
   
   /* Ultimate override with ID selector */
@@ -302,12 +293,6 @@
   .border-gray-200 .ai-tutor-text {
     color: #000000 !important;
     text-shadow: none !important;
-  }
-  
-  /* Override any hero text rules for AI tutor specifically */
-  .hero-text .ai-tutor-text,
-  .hero-text * .ai-tutor-text {
-    color: #000000 !important;
   }
   
   /* Maximum specificity override outside utilities layer */
@@ -746,14 +731,32 @@ p.auth-icon-text {
   -webkit-text-fill-color: #ffffff !important;
 }
 
-/* Hero banner text should be white */
+/* ===== Consolidated .hero-text styles =====
+   Applied to hero containers on the Landing, More, and Video-OSCE pages.
+   Forces white text + readable shadow on all descendants, with explicit
+   exceptions for badges (white pills) and the AI tutor heading.
+   `!important` is kept on `color` because nested elements use Tailwind
+   text-* utilities (e.g. text-gray-700) that must be overridden. */
 .hero-text,
-.hero-text *,
-.hero-text h1,
-.hero-text p,
-.hero-text span,
-.hero-text div {
-  color: white !important;
+.hero-text * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.6);
+}
+
+/* Badge/pill exception — keep dark text on white badges inside the hero. */
+.hero-text .bg-white,
+.hero-text .bg-white * {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000;
+  text-shadow: none;
+}
+
+/* AI tutor heading exception inside hero. */
+.hero-text .ai-tutor-text,
+.hero-text .ai-tutor-text * {
+  color: #000000 !important;
+  text-shadow: none;
 }
 
 /* Force text to white only in specific dark gradient backgrounds */
@@ -926,14 +929,6 @@ h4.text-white,
   fill: white !important;
 }
 
-/* Override any conflicting styles for hero section */
-.hero-text.text-white,
-.hero-text .text-white,
-.hero-text h1.text-white,
-.hero-text p.text-white {
-  color: white !important;
-}
-
 /* Button text styling */
 button {
   color: inherit !important;
@@ -996,22 +991,8 @@ label {
   font-weight: bold !important;
 }
 
-/* Target specific hero text to make it white */
-#hero-text {
-  color: white !important;
-}
-
-/* Target subtext to make it white */
-#subtext {
-  color: white !important;
-}
-
-/* Target feature description texts to make them white */
-#security-text,
-#community-text,
-#results-text {
-  color: white !important;
-}
+/* Removed unused #hero-text / #subtext / #security-text / #community-text /
+   #results-text ID overrides — no component references those ids. */
 
 /* Fix button text visibility */
 #prep-button {
@@ -1054,32 +1035,8 @@ input[type="radio"]:focus {
   border-color: #3b82f6 !important;
 }
 
-/* Target landing page hero text to make it white */
-#landing-hero-text,
-.hero-text,
-.hero-text *,
-.hero-text h1,
-.hero-text h2,
-.hero-text h3,
-.hero-text p,
-.hero-text span,
-.hero-text div {
-  color: white !important;
-  -webkit-text-fill-color: white !important;
-}
-
-/* Ensure badge text stays black even in hero sections */
-.hero-text .bg-white,
-.hero-text .bg-white *,
-.bg-white.text-black,
-.bg-white.text-black *,
-Badge.bg-white,
-Badge.bg-white *,
-.hero-text Badge.bg-white,
-.hero-text Badge.bg-white * {
-  color: black !important;
-  -webkit-text-fill-color: black !important;
-}
+/* .hero-text and badge-exception rules consolidated above
+   (search for "Consolidated .hero-text styles"). */
 
 /* Removed conflicting blue text styling - handled by consistent button styling below */
 
