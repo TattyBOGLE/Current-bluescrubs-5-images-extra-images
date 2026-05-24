@@ -2,11 +2,26 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import imageStatusRaw from "@/data/image-status.json";
+import extraImages from "@/data/spot-diagnosis-extra.json";
 
 type ImageStatus = "validated" | "pending" | "flagged";
 const imageStatus = imageStatusRaw as Record<string, ImageStatus>;
 
-const IMAGES = [
+type GalleryItem = {
+  dir: string;
+  file: string;
+  label: string;
+  specialty: string;
+  type: string;
+  vignette?: string;
+  stem?: string;
+  options?: string[];
+  correctAnswer?: string;
+  correctAnswerText?: string;
+  explanation?: string;
+};
+
+const BASE_IMAGES: GalleryItem[] = [
   { dir: "spotdx-images", file: "inferior-stemi-ecg.jpg", label: "Inferior STEMI", specialty: "Cardiology", type: "ECG" },
   { dir: "spotdx-images", file: "atrial-fibrillation-ecg.jpg", label: "Atrial Fibrillation", specialty: "Cardiology", type: "ECG" },
   { dir: "spotdx-images", file: "hyperkalaemia-ecg.jpg", label: "Hyperkalaemia ECG", specialty: "Cardiology", type: "ECG" },
@@ -69,6 +84,8 @@ const IMAGES = [
   { dir: "derm-images", file: "lichen-planus.jpg", label: "Lichen Planus", specialty: "Dermatology", type: "Clinical" },
 ];
 
+const IMAGES: GalleryItem[] = [...BASE_IMAGES, ...(extraImages as GalleryItem[])];
+
 const STATUS_CONFIG: Record<ImageStatus, { dot: string; label: string; title: string }> = {
   validated: { dot: "bg-emerald-500", label: "✓", title: "Clinically validated" },
   pending:   { dot: "bg-amber-400",   label: "⚠", title: "Pending validation" },
@@ -82,7 +99,8 @@ const ALL_SPECIALTIES = [...new Set(IMAGES.map((i) => i.specialty))].sort();
 export default function SpotDiagnosis() {
   const [search, setSearch] = useState("");
   const [selectedSpecialty, setSelectedSpecialty] = useState<string | null>(null);
-  const [lightbox, setLightbox] = useState<(typeof IMAGES)[0] | null>(null);
+  const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
+  const [revealed, setRevealed] = useState(false);
 
   const filtered = IMAGES.filter((img) => {
     const matchesSearch =
@@ -181,7 +199,7 @@ export default function SpotDiagnosis() {
             return (
               <button
                 key={img.file}
-                onClick={() => setLightbox(img)}
+                onClick={() => { setLightbox(img); setRevealed(false); }}
                 className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-teal-300 hover:shadow-md hover:shadow-teal-100/60 transition-all text-left"
               >
                 <div className="aspect-square bg-slate-100 overflow-hidden relative">
@@ -221,20 +239,19 @@ export default function SpotDiagnosis() {
       {/* Lightbox */}
       {lightbox && (
         <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 z-50 flex items-start sm:items-center justify-center p-4 overflow-y-auto"
           onClick={() => setLightbox(null)}
         >
           <div
-            className="bg-white rounded-2xl overflow-hidden max-w-2xl w-full shadow-2xl"
+            className="bg-white rounded-2xl overflow-hidden max-w-2xl w-full shadow-2xl my-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative">
+            <div className="relative bg-slate-900">
               <img
                 src={`/${lightbox.dir}/${lightbox.file}`}
                 alt={lightbox.label}
-                className="w-full object-contain max-h-[70vh]"
+                className="w-full object-contain max-h-[60vh] mx-auto"
               />
-              {/* Quality badge in lightbox */}
               {(() => {
                 const status = imageStatus[lightbox.file] ?? "pending";
                 const cfg = STATUS_CONFIG[status];
@@ -245,34 +262,79 @@ export default function SpotDiagnosis() {
                   />
                 );
               })()}
+              <button
+                onClick={() => setLightbox(null)}
+                className="absolute top-2 left-2 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                aria-label="Close"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <div className="p-4 flex items-center justify-between">
+
+            <div className="p-4 sm:p-5 space-y-4">
               <div>
-                <h3 className="font-semibold text-gray-900">{lightbox.label}</h3>
-                <div className="flex items-center gap-2 mt-1">
+                <h3 className="text-base font-semibold text-slate-900">{lightbox.label}</h3>
+                <div className="flex items-center gap-2 mt-1.5 flex-wrap">
                   <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${SPECIALTY_BADGE}`}>
                     {lightbox.specialty}
                   </span>
                   <span className="text-xs text-slate-400">{lightbox.type}</span>
-                  <span className={`text-xs px-1.5 py-0.5 rounded-full font-medium ${
-                    (imageStatus[lightbox.file] ?? "pending") === "validated"
-                      ? "bg-emerald-50 text-emerald-700"
-                      : (imageStatus[lightbox.file] ?? "pending") === "flagged"
-                        ? "bg-rose-50 text-rose-600"
-                        : "bg-amber-50 text-amber-700"
-                  }`}>
-                    {STATUS_CONFIG[imageStatus[lightbox.file] ?? "pending"].title}
-                  </span>
                 </div>
               </div>
-              <button
-                onClick={() => setLightbox(null)}
-                className="text-gray-400 hover:text-gray-600 transition-colors p-1"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+
+              {lightbox.vignette && (
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Clinical Vignette</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">{lightbox.vignette}</p>
+                </div>
+              )}
+
+              {lightbox.stem && (
+                <div>
+                  <p className="text-sm font-medium text-slate-900 leading-relaxed">{lightbox.stem}</p>
+                </div>
+              )}
+
+              {lightbox.options && lightbox.options.length > 0 && (
+                <div className="space-y-1.5">
+                  {lightbox.options.map((opt, i) => {
+                    const letter = String.fromCharCode(65 + i);
+                    const isCorrect = revealed && letter === lightbox.correctAnswer;
+                    return (
+                      <div
+                        key={i}
+                        className={`text-sm px-3 py-2 rounded-xl border ${
+                          isCorrect
+                            ? "border-emerald-300 bg-emerald-50 text-emerald-900"
+                            : "border-slate-200 bg-slate-50 text-slate-700"
+                        }`}
+                      >
+                        <span className="font-semibold mr-2">{letter}.</span>
+                        {opt}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
+              {lightbox.explanation && !revealed && (
+                <button
+                  onClick={() => setRevealed(true)}
+                  className="w-full py-2.5 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 text-sm font-semibold shadow-sm shadow-teal-200/50 hover:shadow-md transition-shadow"
+                  style={{ color: '#ffffff' }}
+                >
+                  Reveal Answer & Explanation
+                </button>
+              )}
+
+              {revealed && lightbox.explanation && (
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-teal-700 mb-1">Explanation</p>
+                  <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-line">{lightbox.explanation}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

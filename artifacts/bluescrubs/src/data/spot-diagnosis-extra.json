@@ -1,0 +1,1370 @@
+[
+  {
+    "dir": "spotdx-images",
+    "file": "erythema-multiforme.jpg",
+    "label": "Erythema Multiforme",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 28-year-old man presents with a 3-day history of widespread skin eruption. He had a cold sore two weeks ago and was otherwise well. The image shows symmetrical target lesions on his palms and forearms, with concentric rings of erythema and central dusky discolouration. There is no mucosal involvement. What is the most likely diagnosis?",
+    "options": [
+      "Stevens-Johnson syndrome",
+      "Erythema multiforme minor",
+      "Urticaria",
+      "Fixed drug eruption",
+      "Pityriasis rosea"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Erythema multiforme minor",
+    "explanation": "This 28-year-old presents with target lesions on the palms and forearms following herpes simplex virus (HSV) infection \u2014 the classic trigger for erythema multiforme (EM). The concentric ring \"target\" morphology is pathognomonic.\n\nOption B (Erythema multiforme minor) is CORRECT because this presentation is classic: target lesions post-HSV, acral distribution (palms/forearms), no mucosal involvement, and no systemic features. EM minor is the most common form, almost always triggered by HSV recurrence, and is self-limiting over 2\u20134 weeks. Oral aciclovir suppression reduces recurrent EM in HSV-triggered cases per NICE CKS.\n\nOption A (Stevens-Johnson syndrome) is INCORRECT because SJS requires >30% mucosal involvement (oral, ocular, genital) and epidermal detachment. It is triggered by drugs (sulphonamides, NSAIDs, allopurinol), not typically HSV, and carries significant mortality.\n\nOption C (Urticaria) is INCORRECT because urticarial wheals are raised, pruritic, and transient (individual lesions <24 hours). The fixed, non-pruritic target morphology with central darkening is not urticaria.\n\nOption D (Fixed drug eruption) is INCORRECT because fixed drug eruption causes solitary or few hyperpigmented oval plaques that recur at the same site with drug re-exposure. The bilateral acral symmetry with target morphology excludes this.\n\nOption E (Pityriasis rosea) is INCORRECT because pityriasis rosea shows a herald patch followed by a \"Christmas tree\" pattern on the trunk, not target lesions on the palms."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "psoriatic-arthritis.jpg",
+    "label": "Psoriatic Arthritis",
+    "specialty": "Rheumatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 42-year-old man is referred to rheumatology with a 6-month history of painful swollen fingers, morning stiffness lasting over 90 minutes, and asymmetric joint involvement. He has had a rash on his elbows since his twenties. The image shows well-demarcated, silvery-scaled erythematous plaques. He reports that his fingernails have pitting and onycholysis. Rheumatoid factor is negative. What investigation is most appropriate to confirm the likely diagnosis?",
+    "options": [
+      "Anti-CCP antibodies",
+      "MRI of the hands",
+      "Plain X-rays of hands and feet, and a full clinical assessment using CASPAR criteria",
+      "Skin biopsy of the plaque lesion",
+      "Anti-nuclear antibodies (ANA)"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Plain X-rays of hands and feet, and a full clinical assessment using CASPAR criteria",
+    "explanation": "This 42-year-old has psoriatic arthritis (PsA): asymmetric inflammatory arthritis, plaque psoriasis, nail pitting, and seronegative (RF-negative) status. The CASPAR (Classification Criteria for Psoriatic Arthritis) score \u22653 confirms diagnosis.\n\nOption C (Plain X-rays hands/feet + CASPAR criteria) is CORRECT. Plain X-rays may show \"pencil-in-cup\" deformity or periosteal new bone formation. The CASPAR criteria include: current psoriasis (+2), personal/family history of psoriasis (+1), psoriatic nail dystrophy (+1), negative rheumatoid factor (+1), dactylitis (+1), radiological new bone formation (+1). A score \u22653 is required. This structured approach is the recommended diagnostic pathway.\n\nOption A (Anti-CCP antibodies) is INCORRECT because anti-CCP antibodies confirm rheumatoid arthritis (RA), not PsA. PsA is seronegative \u2014 anti-CCP is typically negative. The asymmetric pattern and psoriasis make RA unlikely.\n\nOption B (MRI of hands) is INCORRECT as the first-line investigation. While MRI may detect enthesitis and early erosions, clinical assessment with plain radiographs is recommended initially per NICE NG65 before considering MRI.\n\nOption D (Skin biopsy) is INCORRECT because the plaque psoriasis is already clinically evident and histological confirmation of skin disease is unnecessary for the arthritis diagnosis.\n\nOption E (ANA) is INCORRECT because ANA screens for connective tissue diseases such as SLE and Sj\u00f6gren's syndrome. It is not diagnostic for PsA."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "peutz-jeghers-syndrome.jpg",
+    "label": "Peutz Jeghers Syndrome",
+    "specialty": "Gastroenterology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 24-year-old woman attends her GP with recurrent episodes of colicky abdominal pain and a previous episode of intussusception requiring surgery. Her mother had similar episodes and died of bowel cancer aged 52. The image shows multiple small, dark brown, flat macules scattered around the lips and on the buccal mucosa. What is the most likely diagnosis?",
+    "options": [
+      "Gardner syndrome",
+      "Cowden syndrome",
+      "Peutz-Jeghers syndrome",
+      "Familial adenomatous polyposis",
+      "HNPCC (Lynch syndrome)"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Peutz-Jeghers syndrome",
+    "explanation": "This 24-year-old presents with the classic triad of Peutz-Jeghers syndrome (PJS): mucocutaneous pigmentation, hamartomatous GI polyps causing intussusception, and autosomal dominant family history.\n\nOption C (Peutz-Jeghers syndrome) is CORRECT because PJS is caused by STK11 (LKB1) germline mutations. The pathognomonic finding is perioral and mucosal freckling (melanin macules). Hamartomatous polyps cause recurrent intussusception. PJS carries a significantly elevated lifetime risk of GI, breast, pancreatic, ovarian, and cervical cancers. Surveillance colonoscopy and upper GI endoscopy from age 8 are recommended.\n\nOption A (Gardner syndrome) is INCORRECT because Gardner syndrome is a variant of FAP characterised by colorectal adenomatous polyps plus extraintestinal features (osteomas, desmoid tumours, dental anomalies). It does not cause mucocutaneous pigmentation or intussusception.\n\nOption B (Cowden syndrome) is INCORRECT because Cowden syndrome (PTEN hamartoma) presents with trichilemmomas, acral keratoses, and increased risk of breast, thyroid, and endometrial cancer, but without the characteristic perioral pigmentation.\n\nOption D (FAP) is INCORRECT because FAP causes hundreds of colorectal adenomas and desmoid tumours, but not perioral pigmentation or hamartomatous polyps with intussusception.\n\nOption E (Lynch syndrome) is INCORRECT because Lynch syndrome causes microsatellite-unstable colorectal and endometrial cancers without mucocutaneous pigmentation or hamartomatous polyps."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "measles.jpg",
+    "label": "Measles",
+    "specialty": "Paediatrics",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 4-year-old boy is brought by his mother with a 3-day history of fever, runny nose, cough, and red eyes. He is unvaccinated. The image shows multiple small, white spots on an erythematous base, distributed across the buccal mucosa opposite the lower molars. A widespread maculopapular rash has begun spreading from behind the ears. What is the most likely diagnosis?",
+    "options": [
+      "Scarlet fever",
+      "Kawasaki disease",
+      "Measles (rubeola)",
+      "Roseola infantum",
+      "Hand, foot and mouth disease"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Measles (rubeola)",
+    "explanation": "This unvaccinated 4-year-old has measles: the classic prodrome of the three Cs (cough, coryza, conjunctivitis), fever, and the pathognomonic Koplik spots shown in the image \u2014 small white spots on erythematous buccal mucosa. The maculopapular rash spreading cephalocaudally confirms measles.\n\nOption C (Measles) is CORRECT because Koplik spots appear 1\u20132 days before the rash and are specific to measles caused by measles morbillivirus. The rash begins behind the ears and spreads down the body. Measles is a notifiable disease in the UK. Management is supportive; vitamin A supplementation reduces complications in deficient children. Contact with immunocompromised individuals and non-immune pregnant women must be prevented.\n\nOption A (Scarlet fever) is INCORRECT because scarlet fever (group A Streptococcus) produces a fine sandpaper rash with strawberry tongue and circumoral pallor. It does not cause Koplik spots or conjunctivitis.\n\nOption B (Kawasaki disease) is INCORRECT because Kawasaki disease requires \u22655 days of fever plus \u22654 of five features: rash, conjunctivitis, lymphadenopathy, lip changes, and hand/foot oedema. Koplik spots are not a feature.\n\nOption D (Roseola infantum) is INCORRECT because roseola (HHV-6) causes high fever followed by a fine pink rash as the fever resolves \u2014 there is no prodrome of the three Cs and no Koplik spots.\n\nOption E (Hand, foot and mouth disease) is INCORRECT because HFMD causes vesicles on the palms, soles, and oral mucosa, not the white spots on erythematous buccal mucosa that characterise Koplik spots."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "iron-deficiency-anaemia.jpg",
+    "label": "Iron Deficiency Anaemia",
+    "specialty": "Haematology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 35-year-old woman presents with fatigue and exertional breathlessness for 4 months. She has heavy menstrual periods. The image shows her nails, which are thin, brittle, and spoon-shaped (concave). Blood tests: Hb 82 g/L, MCV 68 fL, serum ferritin 6 mcg/L. What is the most appropriate initial investigation to determine the cause of her anaemia before starting treatment?",
+    "options": [
+      "Bone marrow biopsy",
+      "Reticulocyte count",
+      "Upper GI endoscopy and colonoscopy",
+      "Haematinics including B12, folate, and ferritin",
+      "Coeliac serology (anti-tissue transglutaminase IgA)"
+    ],
+    "correctAnswer": "E",
+    "correctAnswerText": "Coeliac serology (anti-tissue transglutaminase IgA)",
+    "explanation": "The nail finding shown \u2014 koilonychia (spoon-shaped nails) \u2014 combined with microcytic hypochromic anaemia and low ferritin confirms iron deficiency anaemia (IDA). In a 35-year-old woman with menorrhagia, the most appropriate investigation to identify a co-existing or alternative cause before treatment is coeliac serology.\n\nOption E (Coeliac serology) is CORRECT because NICE NG20 recommends that all patients with IDA of unclear aetiology should have anti-tissue transglutaminase IgA (anti-tTG) measured. Coeliac disease causes malabsorption of iron and is a frequently missed cause of IDA, particularly in women of reproductive age. Early identification changes management fundamentally \u2014 a gluten-free diet rather than supplementation alone.\n\nOption A (Bone marrow biopsy) is INCORRECT because bone marrow examination is not indicated in straightforward IDA with a clear clinical picture and low ferritin. It is reserved for unexplained cytopenias or suspected haematological malignancy.\n\nOption B (Reticulocyte count) is INCORRECT as the priority investigation. Reticulocytes are useful to assess erythropoietic response to treatment but do not determine the cause of IDA.\n\nOption C (Upper GI endoscopy/colonoscopy) is INCORRECT as the immediate first investigation. Endoscopy to exclude GI blood loss is appropriate \u2014 but in a premenopausal woman with heavy periods and no GI symptoms, menorrhagia is the most likely cause. Coeliac testing is prioritised first per NICE.\n\nOption D (Haematinics including B12 and folate) is INCORRECT because the diagnosis of iron deficiency is already confirmed by low ferritin and microcytosis. B12 and folate testing would be relevant for macrocytic or normocytic anaemia."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "polymorphic-eruption-of-pregnancy.jpg",
+    "label": "Polymorphic Eruption Of Pregnancy",
+    "specialty": "Obstetrics & Gynaecology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 28-year-old primigravida at 36 weeks gestation presents with intensely itchy papules and urticarial plaques that began within the abdominal striae and are spreading to the thighs. The image shows erythematous urticarial plaques confined to the abdominal striae with periumbilical sparing. Liver function tests, bile acids, and urine dipstick are all normal. What is the most likely diagnosis?",
+    "options": [
+      "Obstetric cholestasis (intrahepatic cholestasis of pregnancy)",
+      "Pemphigoid gestationis (herpes gestationis)",
+      "Polymorphic eruption of pregnancy (PEP)",
+      "Atopic eruption of pregnancy",
+      "Psoriasis exacerbated by pregnancy"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Polymorphic eruption of pregnancy (PEP)",
+    "explanation": "This 36-week primigravida has the classic presentation of polymorphic eruption of pregnancy (PEP), also called pruritic urticarial papules and plaques of pregnancy (PUPPP). Key features: first pregnancy, onset within the abdominal striae in the third trimester, periumbilical sparing, normal liver function and bile acids.\n\nOption C (PEP) is CORRECT because PEP is the most common specific dermatosis of pregnancy, occurring in approximately 1 in 160 pregnancies, almost always in primigravidas and multiple gestations. It begins within striae and shows characteristic periumbilical sparing (distinguishing it from pemphigoid gestationis). Normal bile acids exclude obstetric cholestasis. Management is emollients, topical corticosteroids (mild-moderate for symptom relief), and antihistamines. It resolves spontaneously after delivery without fetal risk.\n\nOption A (Obstetric cholestasis) is INCORRECT because intrahepatic cholestasis of pregnancy (ICP) causes pruritus without a primary rash (scratch marks may be seen) with elevated bile acids >10 \u03bcmol/L and/or abnormal LFTs. Normal bile acids exclude this diagnosis.\n\nOption B (Pemphigoid gestationis) is INCORRECT because pemphigoid gestationis is an autoimmune blistering disorder associated with anti-BP180 antibodies. It begins in the periumbilical area and progresses to bullae \u2014 the periumbilical sparing here and absence of blisters make this unlikely.\n\nOption D (Atopic eruption of pregnancy) is INCORRECT because AEP typically presents earlier in pregnancy in women with a personal or family history of atopy as eczematous patches, often on flexures.\n\nOption E (Psoriasis) is INCORRECT because psoriasis typically improves in pregnancy due to immune changes. New-onset widespread psoriasis in pregnancy without personal history is uncommon."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "iga-vasculitis.jpg",
+    "label": "Iga Vasculitis",
+    "specialty": "Nephrology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 7-year-old boy presents following an upper respiratory tract infection one week ago. The image shows symmetrical palpable purpura predominantly on the buttocks and lower limbs, sparing the trunk. He also has mild arthralgia of the ankles and bilateral knee joints. Urinalysis shows haematuria and proteinuria. Blood tests: platelet count 320 \u00d7 10\u2079/L, coagulation screen normal. What is the most appropriate next step?",
+    "options": [
+      "Immediate platelet transfusion",
+      "Skin biopsy and request IgA level",
+      "Referral to paediatric nephrology for urinalysis monitoring, and blood pressure measurement",
+      "Start prednisolone 1 mg/kg/day immediately",
+      "Bone marrow aspiration to exclude leukaemia"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Referral to paediatric nephrology for urinalysis monitoring, and blood pressure measurement",
+    "explanation": "This 7-year-old has IgA vasculitis (Henoch-Sch\u00f6nlein Purpura \u2014 HSP): palpable purpura on buttocks and lower limbs with normal platelets, post-URTI onset, arthralgia, and haematuria/proteinuria indicating HSP nephritis. The most important immediate step is monitoring for renal involvement.\n\nOption C (Paediatric nephrology referral with urinalysis and BP monitoring) is CORRECT because HSP nephritis (IgA vasculitis nephritis) determines long-term prognosis. NICE CKS and BSPED recommend regular urinalysis for at least 6 months after diagnosis. Blood pressure monitoring detects hypertensive nephropathy early. Nephrology referral is indicated when there is significant proteinuria or progressive renal impairment.\n\nOption A (Platelet transfusion) is INCORRECT because platelet count is normal (320 \u00d7 10\u2079/L) \u2014 this confirms the purpura is palpable (vasculitic), not thrombocytopaenic. Thrombocytopaenic purpura (ITP) causes non-palpable purpura with low platelets.\n\nOption B (Skin biopsy and IgA level) is INCORRECT as the immediate next step. While skin biopsy showing IgA deposition confirms HSP, it is not required when the clinical diagnosis is clear. Serum IgA level is elevated in only 50% of cases and does not change management.\n\nOption D (Start prednisolone immediately) is INCORRECT because steroids are not recommended for uncomplicated HSP. They may be used for severe abdominal pain or significant nephritis but are not given routinely without assessment of severity.\n\nOption E (Bone marrow aspiration) is INCORRECT because normal platelets and symmetrical purpura in a post-URTI context make leukaemia very unlikely. Bone marrow examination is reserved for unexplained cytopenias with blasts."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "sarcoidosis.jpg",
+    "label": "Sarcoidosis",
+    "specialty": "Respiratory",
+    "type": "CXR",
+    "vignette": "",
+    "stem": "A 32-year-old Black woman presents with a 2-month history of dry cough, mild breathlessness on exertion, and bilateral ankle swelling. She is a non-smoker. The image shows symmetrical bilateral hilar enlargement with a lobulated contour and no lung parenchymal shadowing. Serum calcium is 2.78 mmol/L. Serum ACE is elevated. Spirometry shows a mildly restrictive pattern. What does this chest X-ray most likely demonstrate?",
+    "options": [
+      "Bilateral pulmonary metastases",
+      "Primary tuberculosis (Ghon complex)",
+      "Bilateral hilar lymphadenopathy consistent with stage I sarcoidosis",
+      "Congestive cardiac failure with bilateral pleural effusions",
+      "Malignant lymphoma (Hodgkin lymphoma)"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Bilateral hilar lymphadenopathy consistent with stage I sarcoidosis",
+    "explanation": "The CXR shows symmetrical bilateral hilar lymphadenopathy (BHL) without pulmonary infiltrates \u2014 this is stage I sarcoidosis. The combination of BHL, elevated ACE, hypercalcaemia, and the demographic (young Black woman) is classic for sarcoidosis.\n\nOption C (Bilateral hilar lymphadenopathy \u2014 stage I sarcoidosis) is CORRECT. Sarcoidosis staging by CXR: Stage I = BHL only; Stage II = BHL + parenchymal infiltrates; Stage III = parenchymal infiltrates only; Stage IV = fibrosis. The symmetrical \"lobulated\" hilar appearance is pathognomonic. Elevated ACE reflects granuloma burden. Hypercalcaemia results from activated macrophage production of 1,25-dihydroxyvitamin D. Stage I sarcoidosis has spontaneous resolution in 60\u201380% of cases.\n\nOption A (Bilateral pulmonary metastases) is INCORRECT because metastases produce pulmonary nodules, not smooth bilateral hilar enlargement. The hilar lobulation here is lymphadenopathy, not vascular enlargement.\n\nOption B (Primary TB) is INCORRECT because primary TB typically causes unilateral hilar lymphadenopathy with a Ghon focus, not symmetrical BHL. TB should be considered but is less likely given the symmetric appearance and elevated ACE.\n\nOption D (Congestive cardiac failure) is INCORRECT because CCF shows cardiomegaly, upper lobe venous diversion, Kerley B lines, and bilateral basal effusions \u2014 not symmetrical lobulated hilar enlargement.\n\nOption E (Hodgkin lymphoma) is INCORRECT because while HL can cause BHL, it is typically asymmetric and associated with constitutional B symptoms (fever, night sweats, weight loss). Elevated ACE is specific to sarcoidosis."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "acute-pulmonary-oedema.jpg",
+    "label": "Acute Pulmonary Oedema",
+    "specialty": "Cardiology",
+    "type": "CXR",
+    "vignette": "",
+    "stem": "An 80-year-old man with known ischaemic heart disease is brought to A&E with 2-hour history of severe breathlessness and frothy pink sputum. His oxygen saturation is 84% on air. The image shows bilateral perihilar \"bat-wing\" infiltrates, cardiomegaly, upper lobe vascular diversion, and bilateral small pleural effusions. What is the most appropriate immediate management?",
+    "options": [
+      "Start IV furosemide 40 mg, high-flow oxygen (target SpO\u2082 94\u201398%), sit patient upright, and arrange urgent echocardiogram",
+      "Immediate intubation and mechanical ventilation",
+      "IV amiodarone 300 mg loading dose",
+      "Chest physiotherapy and salbutamol nebuliser",
+      "Urgent CT pulmonary angiography to exclude PE"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Start IV furosemide 40 mg, high-flow oxygen (target SpO\u2082 94\u201398%), sit patient upright, and arrange urgent echocardiogram",
+    "explanation": "This 80-year-old with ischaemic heart disease presents with acute pulmonary oedema: frothy pink sputum, severe hypoxia, and the classic CXR features \u2014 bilateral \"bat-wing\" perihilar infiltrates, cardiomegaly, upper lobe venous diversion, and pleural effusions.\n\nOption A (IV furosemide 40 mg, high-flow O\u2082, sit upright, urgent echo) is CORRECT per NICE NG106. Immediate management includes: sitting the patient upright (reduces cardiac preload), high-flow oxygen (target SpO\u2082 94\u201398%), IV loop diuretic (furosemide 40 mg to promote diuresis and venodilation), and urgent echocardiogram to identify the underlying cause (e.g., MI, severe mitral regurgitation). Consider IV nitrates if BP allows.\n\nOption B (Immediate intubation) is INCORRECT as the first-line intervention. Non-invasive ventilation (BiPAP/CPAP) should be trialled before invasive ventilation in acute pulmonary oedema if the patient can protect their airway. SpO\u2082 of 84% is severe but not immediately imminently fatal with oxygen.\n\nOption C (IV amiodarone) is INCORRECT because amiodarone is used for arrhythmias (VT, AF). There is no indication of arrhythmia in this scenario. Amiodarone does not treat pulmonary oedema.\n\nOption D (Chest physiotherapy and salbutamol) is INCORRECT because this is cardiogenic pulmonary oedema, not obstructive airways disease. Salbutamol is not indicated and may cause tachycardia worsening cardiac workload.\n\nOption E (CT pulmonary angiography) is INCORRECT because the clinical and radiological picture is unambiguously acute pulmonary oedema, not PE. CTPA requires patient transport and contrast injection \u2014 delay would be dangerous."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "perforated-viscus.jpg",
+    "label": "Perforated Viscus",
+    "specialty": "Gastroenterology",
+    "type": "CT",
+    "vignette": "",
+    "stem": "A 56-year-old man with a history of peptic ulcer disease presents with sudden onset severe generalised abdominal pain that began 3 hours ago. On examination he has generalised peritonism, absent bowel sounds, and board-like abdominal rigidity. The image shows a crescent of gas under both hemidiaphragms. What is the most appropriate immediate management?",
+    "options": [
+      "Urgent upper GI endoscopy to identify the bleeding source",
+      "CT abdomen with IV contrast",
+      "Nil by mouth, IV access, IV antibiotics, analgesia, urgent surgical referral, and consent for laparotomy",
+      "Nasogastric tube insertion and observation for 6 hours",
+      "IV omeprazole 40 mg twice daily and Helicobacter pylori eradication"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Nil by mouth, IV access, IV antibiotics, analgesia, urgent surgical referral, and consent for laparotomy",
+    "explanation": "This man has a perforated peptic ulcer: classic history of peptic ulcer disease, sudden severe abdominal pain, peritonism, and the pathognomonic finding of free gas under the diaphragm (pneumoperitoneum) on erect CXR.\n\nOption C (Nil by mouth, IV access, IV antibiotics, analgesia, urgent surgical referral, consent for laparotomy) is CORRECT. This is a surgical emergency. Immediate management: NBM, IV access, fluid resuscitation, broad-spectrum IV antibiotics (e.g., piperacillin-tazobactam), adequate analgesia, urinary catheter, and urgent surgical referral. Laparotomy for peritoneal washout and perforation repair (Graham patch) is the definitive treatment. Delay increases mortality significantly.\n\nOption A (Upper GI endoscopy) is INCORRECT because endoscopy is contraindicated in the context of perforation and pneumoperitoneum. It may worsen the perforation and delay definitive surgical treatment.\n\nOption B (CT abdomen) is INCORRECT as the immediate management step. CT may be performed to characterise the perforation if the diagnosis is unclear, but when clinical signs of peritonitis and pneumoperitoneum are present, the priority is immediate surgical referral, not further imaging.\n\nOption D (NGT insertion and observation) is INCORRECT because free peritoneal gas with peritonitis constitutes a surgical emergency. Observation would cause preventable deterioration and death from sepsis.\n\nOption E (IV omeprazole and H. pylori eradication) is INCORRECT as the immediate treatment. These are appropriate for managing non-perforated peptic ulcer disease but are inadequate for an acute perforation requiring surgical repair."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "subdural-haematoma.jpg",
+    "label": "Subdural Haematoma",
+    "specialty": "Neurology",
+    "type": "CT",
+    "vignette": "",
+    "stem": "A 78-year-old woman on warfarin (for AF, INR 2.8) is brought to A&E following a fall 3 days ago. She has been increasingly confused and her family reports that she has not been her usual self. GCS is 13 (E3, V4, M6). The CT head shows bilateral crescent-shaped hyperdense collections between the brain surface and the dura, causing midline shift. What is the most appropriate immediate management?",
+    "options": [
+      "MRI brain with gadolinium contrast",
+      "Immediate reversal of anticoagulation with Vitamin K and prothrombin complex concentrate (PCC), urgent neurosurgical referral",
+      "IV dexamethasone 8 mg to reduce cerebral oedema",
+      "Lumbar puncture to exclude subarachnoid haemorrhage",
+      "Observation and repeat CT in 24 hours"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Immediate reversal of anticoagulation with Vitamin K and prothrombin complex concentrate (PCC), urgent neurosurgical referral",
+    "explanation": "This 78-year-old anticoagulated patient has bilateral acute-on-chronic subdural haematomas (SDH): crescent-shaped collections with midline shift, recent fall history, and progressive confusion. Anticoagulation reversal is the immediate priority.\n\nOption B (Immediate anticoagulation reversal with Vitamin K + PCC, urgent neurosurgical referral) is CORRECT. With INR 2.8 and an intracranial haematoma, warfarin must be reversed immediately. PCC provides rapid reversal (within minutes), while IV Vitamin K 5\u201310 mg ensures sustained reversal. The midline shift and GCS depression indicate likely need for burr-hole evacuation \u2014 urgent neurosurgical referral is essential. NICE NG68 mandates immediate reversal in ICH on anticoagulants.\n\nOption A (MRI with gadolinium) is INCORRECT because CT head has already confirmed the diagnosis. MRI provides no additional immediate benefit and causes a dangerous delay in anticoagulation reversal and surgical intervention.\n\nOption C (IV dexamethasone) is INCORRECT because dexamethasone is not indicated in traumatic intracranial haematoma. Steroids may worsen outcomes in traumatic brain injury and are only used in cerebral oedema secondary to tumour.\n\nOption D (Lumbar puncture) is INCORRECT because LP is absolutely contraindicated when there is raised intracranial pressure with midline shift, as it risks fatal transtentorial herniation.\n\nOption E (Observation and repeat CT) is INCORRECT because deteriorating GCS, midline shift, and anticoagulant use constitute urgent indications for reversal and neurosurgical intervention, not watchful waiting."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "pagets-disease.jpg",
+    "label": "Pagets Disease",
+    "specialty": "Rheumatology",
+    "type": "X-ray",
+    "vignette": "",
+    "stem": "A 74-year-old retired builder attends orthopaedics with increasing hat size over several years, frontal headache, and bilateral sensorineural hearing loss. Serum alkaline phosphatase (ALP) is 890 IU/L; calcium, phosphate, and PTH are all normal. The image shows an enlarged skull vault with a \"cotton-wool\" appearance \u2014 areas of sclerosis interspersed with lucency \u2014 and thickening of the outer table. What is the most likely diagnosis?",
+    "options": [
+      "Osteomalacia",
+      "Hyperparathyroidism (osteitis fibrosa cystica)",
+      "Multiple myeloma",
+      "Paget's disease of bone (osteitis deformans)",
+      "Skull metastases from prostate cancer"
+    ],
+    "correctAnswer": "D",
+    "correctAnswerText": "Paget's disease of bone (osteitis deformans)",
+    "explanation": "This 74-year-old has Paget's disease of bone: classic skull features on X-ray (cotton-wool sclerosis, vault thickening), isolated markedly elevated ALP with normal calcium/phosphate, increasing hat size, deafness (VIII nerve compression), and headache (skull base compression).\n\nOption D (Paget's disease) is CORRECT because the cotton-wool radiological appearance of the skull is pathognomonic for Paget's disease. Paget's is characterised by disorganised osteoclast-mediated bone resorption followed by excessive osteoblastic activity, producing structurally weak, enlarged bone. ALP reflects osteoblastic activity and is markedly elevated while calcium, phosphate, and PTH remain normal. Bisphosphonates (zoledronic acid) are first-line treatment per NICE.\n\nOption A (Osteomalacia) is INCORRECT because osteomalacia causes diffuse bone pain, hypocalcaemia, hypophosphataemia, and elevated ALP with Looser zones (pseudofractures) on X-ray \u2014 not the cotton-wool pattern. Calcium is normal here.\n\nOption B (Hyperparathyroidism) is INCORRECT because primary hyperparathyroidism causes hypercalcaemia and a 'salt-and-pepper' skull appearance on X-ray, not cotton-wool densities. PTH is elevated in hyperparathyroidism, which is normal here.\n\nOption C (Multiple myeloma) is INCORRECT because myeloma causes 'punched-out' lytic lesions in the skull (not sclerotic cotton-wool), elevated ESR/paraprotein, and renal impairment. ALP is typically normal in myeloma (no osteoblastic activity).\n\nOption E (Skull metastases from prostate cancer) is INCORRECT because prostate metastases are sclerotic (not mixed sclerotic/lytic) and would be associated with elevated PSA, not isolated elevated ALP with normal calcium."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "acromegaly.jpg",
+    "label": "Acromegaly",
+    "specialty": "Endocrinology",
+    "type": "X-ray",
+    "vignette": "",
+    "stem": "A 44-year-old man is referred with a 5-year history of increasing shoe and glove size, prominence of the jaw, excessive sweating, and headache. His wife has noticed facial changes in photographs over the years. The image shows an enlarged pituitary fossa (expanded sella turcica), frontal bossing, and prognathism on the lateral skull X-ray. IGF-1 is markedly elevated. What does this lateral skull X-ray most likely demonstrate?",
+    "options": [
+      "Pituitary apoplexy",
+      "Craniopharyngioma with suprasellar calcification",
+      "Radiological features consistent with acromegaly \u2014 enlarged sella turcica with prognathism",
+      "Paget's disease of the skull",
+      "Normal variant \u2014 large sella turcica"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Radiological features consistent with acromegaly \u2014 enlarged sella turcica with prognathism",
+    "explanation": "The lateral skull X-ray shows the classic features of acromegaly caused by a GH-secreting pituitary adenoma: enlarged sella turcica (expanded pituitary fossa), frontal bossing (thickened skull vault), and prognathism (protruding mandible). Combined with elevated IGF-1, this confirms acromegaly.\n\nOption C (Acromegaly \u2014 enlarged sella turcica with prognathism) is CORRECT because chronic GH excess causes bony enlargement through periosteal new bone formation. The sella enlarges as the pituitary tumour grows. IGF-1 is the best screening test for acromegaly (reflects GH action); confirmation is by failure of GH suppression during oral glucose tolerance test (OGTT). Treatment is transsphenoidal surgery as first-line per NICE.\n\nOption A (Pituitary apoplexy) is INCORRECT because apoplexy refers to acute haemorrhage or infarction into a pituitary tumour, causing sudden severe headache, visual field defects, and meningism. It does not cause the chronic bony changes seen here.\n\nOption B (Craniopharyngioma) is INCORRECT because craniopharyngioma typically occurs in children/young adults and shows suprasellar calcification on X-ray. IGF-1 would be low, not elevated.\n\nOption D (Paget's disease) is INCORRECT because Paget's causes cotton-wool sclerosis of the skull vault, not selective enlargement of the sella turcica with prognathism.\n\nOption E (Normal variant) is INCORRECT because the combination of markedly enlarged sella with prognathism and elevated IGF-1 is not a normal finding. Clinically, the shoe/ring size increase, sweating, and headache confirm active acromegaly."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "staghorn-calculus.jpg",
+    "label": "Staghorn Calculus",
+    "specialty": "Nephrology",
+    "type": "KUB",
+    "vignette": "",
+    "stem": "A 48-year-old woman with recurrent urinary tract infections presents with dull left loin pain, nocturia, and foul-smelling urine. Urine culture grows Proteus mirabilis. The KUB X-ray shows a large radio-opaque calculus in the left renal pelvis and calyces that fills and conforms to the pelvicalyceal system. Serum creatinine is 98 \u03bcmol/L. What is the most appropriate management?",
+    "options": [
+      "Long-term prophylactic trimethoprim and watchful waiting",
+      "Extracorporeal shock wave lithotripsy (ESWL)",
+      "Percutaneous nephrolithotomy (PCNL) and antibiotic treatment of underlying infection",
+      "Ureteroscopy and laser fragmentation",
+      "Increase fluid intake to >3 litres per day and urine alkalinisation"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Percutaneous nephrolithotomy (PCNL) and antibiotic treatment of underlying infection",
+    "explanation": "This woman has a staghorn calculus (struvite/infection stone) filling the left pelvicalyceal system. Staghorn calculi are caused by urease-producing organisms (Proteus, Klebsiella) that split urea to ammonia, alkalinising the urine and precipitating struvite (magnesium ammonium phosphate).\n\nOption C (PCNL and antibiotic treatment) is CORRECT because PCNL is the treatment of choice for large staghorn calculi per NICE guidance and EAU guidelines. PCNL involves percutaneous access to the kidney to fragment and remove stones under direct vision. It achieves the highest stone-free rates for complex/staghorn stones. Concurrent treatment of Proteus UTI with appropriate antibiotics (e.g., co-amoxiclav or ciprofloxacin based on sensitivity) is essential to prevent recurrence and septic complications.\n\nOption A (Trimethoprim and watchful waiting) is INCORRECT because staghorn calculi do not resolve without intervention and untreated infection stones lead to renal destruction, xanthogranulomatous pyelonephritis, and sepsis. Antibiotic suppression alone is inadequate.\n\nOption B (ESWL) is INCORRECT because ESWL is contraindicated for large staghorn calculi (>20 mm). Fragment clearance is very poor, and fragments may cause ureteric obstruction (\"steinstrasse\"). PCNL is preferred.\n\nOption D (Ureteroscopy and laser) is INCORRECT because ureteroscopy is suitable for ureteric calculi and smaller renal stones, not large staghorn calculi filling the entire pelvicalyceal system.\n\nOption E (Increased fluids and alkalinisation) is INCORRECT because this may help prevent calcium oxalate stones. Struvite stones require alkaline urine (they form in alkaline urine) and further alkalinisation would promote their growth rather than dissolution."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "wpw-syndrome.jpg",
+    "label": "Wpw Syndrome",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 23-year-old man presents with recurrent episodes of palpitations and one episode of syncope. He has no structural heart disease on echocardiogram. The 12-lead ECG is shown. The trace shows a short PR interval (<120 ms), a slurred upstroke of the QRS complex (delta wave), and broad QRS complexes. What is the most likely diagnosis?",
+    "options": [
+      "Long QT syndrome type 1",
+      "Brugada syndrome",
+      "Wolff-Parkinson-White syndrome",
+      "Lown-Ganong-Levine syndrome",
+      "Right bundle branch block with first-degree AV block"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Wolff-Parkinson-White syndrome",
+    "explanation": "This 23-year-old has the ECG hallmarks of Wolff-Parkinson-White (WPW) syndrome: short PR interval (<120 ms), delta wave (slurred initial QRS upstroke), and broad QRS \u2014 the \"WPW triad.\"\n\nOption C (Wolff-Parkinson-White syndrome) is CORRECT. WPW results from an accessory conduction pathway (Bundle of Kent) that bypasses the AV node, causing ventricular pre-excitation. Pre-excitation creates the delta wave. Patients are at risk of AVRT (orthodromic or antidromic re-entry tachycardia) and, critically, rapid ventricular response in AF via the accessory pathway \u2014 which can degenerate to VF. Management includes electrophysiological study and radiofrequency catheter ablation of the accessory pathway.\n\nOption A (Long QT syndrome) is INCORRECT because LQTS shows a prolonged QTc interval with normal PR interval and no delta wave. It predisposes to torsades de pointes, not pre-excitation.\n\nOption B (Brugada syndrome) is INCORRECT because Brugada shows a right bundle branch block-like pattern with coved ST elevation in V1-V3. PR interval and QRS are not characterised by pre-excitation or delta wave.\n\nOption D (Lown-Ganong-Levine syndrome) is INCORRECT because LGL shows a short PR interval WITHOUT a delta wave or broad QRS \u2014 the conduction travels through the AV node via a James fibre, not a Kent bundle.\n\nOption E (RBBB with first-degree AV block) is INCORRECT because RBBB causes a prolonged (not shortened) PR and RSR' pattern in V1 with wide S in V6. There is no delta wave in RBBB."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "pericarditis.jpg",
+    "label": "Pericarditis",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 29-year-old man presents with sharp central chest pain that worsens on lying flat and improves on leaning forward. He had a viral illness 5 days ago. The ECG shown demonstrates widespread concave (\"saddle-shaped\") ST elevation in most leads with PR depression in I, II, V4-V6 and PR elevation in aVR. Troponin is mildly elevated. Echocardiogram shows a small pericardial effusion. What is the most likely diagnosis?",
+    "options": [
+      "Anterior STEMI requiring primary PCI",
+      "Hyperkalaemia",
+      "Acute pericarditis",
+      "Left ventricular aneurysm",
+      "Benign early repolarisation"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Acute pericarditis",
+    "explanation": "This 29-year-old has acute pericarditis: viral prodrome, positional pleuritic chest pain relieved by leaning forward (reduced friction on pericardium), widespread saddle-shaped ST elevation, and PR depression \u2014 the classic ECG pattern.\n\nOption C (Acute pericarditis) is CORRECT. The four ECG stages of pericarditis: Stage 1 \u2014 widespread concave ST elevation and PR depression (this patient); Stage 2 \u2014 ST returns to baseline, PR remains depressed; Stage 3 \u2014 T-wave inversions; Stage 4 \u2014 ECG normalises. PR depression is due to atrial inflammation (epicardial current vector). Management per ESC guidelines: aspirin 500\u20131000 mg three times daily or ibuprofen 400\u2013600 mg three times daily plus colchicine 500 mcg twice daily for 3 months to reduce recurrence. Restrict strenuous activity for \u22653 months.\n\nOption A (Anterior STEMI) is INCORRECT because STEMI shows focal, convex ST elevation in a coronary territory, not widespread concave elevation across multiple leads. Reciprocal ST depression would be seen in STEMI. This patient's young age, viral prodrome, and positional relief make STEMI very unlikely.\n\nOption B (Hyperkalaemia) is INCORRECT because hyperkalaemia causes peaked T waves, widened QRS, and loss of P waves \u2014 not widespread saddle-shaped ST elevation with PR depression.\n\nOption D (LV aneurysm) is INCORRECT because LV aneurysm causes persistent ST elevation (typically anterior leads V1-V4) with deep Q waves after a previous MI. The widespread distribution and PR depression are not features of LV aneurysm.\n\nOption E (Benign early repolarisation) is INCORRECT because BER shows focal ST elevation in V2-V5 in young men with \"fish-hook\" J-point notching. BER does not cause PR depression or the widespread saddle-shaped morphology."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "right-bundle-branch-block.jpg",
+    "label": "Right Bundle Branch Block",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 55-year-old man with no cardiac symptoms has an ECG performed as part of a pre-employment medical. The trace shows an RSR' pattern (M-shaped complex) in V1 and V2, wide slurred S waves in leads I, aVL, and V5-V6, and a QRS duration of 140 ms. He is asymptomatic with no history of heart disease. What does this ECG demonstrate?",
+    "options": [
+      "Left bundle branch block \u2014 requires urgent cardiac investigation",
+      "Wolff-Parkinson-White syndrome",
+      "Right bundle branch block (RBBB) \u2014 an incidental finding, no immediate action required",
+      "Ventricular tachycardia requiring urgent cardioversion",
+      "Anterior STEMI with right ventricular involvement"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Right bundle branch block (RBBB) \u2014 an incidental finding, no immediate action required",
+    "explanation": "The ECG shows the classic features of right bundle branch block (RBBB): RSR' pattern in V1-V2 (M-shaped \"rabbit ears\"), broad slurred S waves in lateral leads (I, aVL, V5-V6), and QRS >120 ms. In an asymptomatic man with no cardiac history, isolated RBBB is usually benign.\n\nOption C (RBBB \u2014 incidental finding, no immediate action) is CORRECT. Isolated RBBB is commonly found incidentally in otherwise healthy individuals and does not require urgent investigation or treatment. The RBBB pattern results from delayed activation of the right ventricle \u2014 the left ventricle activates normally, then depolarisation \"crosses over\" to the right ventricle, creating the broad QRS and RSR' morphology. If RBBB is new and symptomatic (dyspnoea, syncope), investigation for structural heart disease (echo, Holter) is warranted. Asymptomatic isolated RBBB requires no specific management.\n\nOption A (LBBB requiring urgent investigation) is INCORRECT because LBBB (not RBBB) shows broad monophasic R waves in lateral leads and QS or rS in V1. New LBBB with chest pain is treated as STEMI equivalent, but this is RBBB, not LBBB.\n\nOption B (WPW) is INCORRECT because WPW shows a short PR interval and delta wave \u2014 initial slurring of the QRS. RBBB shows a slurred terminal portion (S waves laterally, R' in V1) not the initial delta wave.\n\nOption D (VT) is INCORRECT because VT produces a regular wide complex tachycardia typically at >100 bpm without clear P waves. This ECG presumably shows a normal rate with distinct RSR' morphology, not the pattern of VT.\n\nOption E (Anterior STEMI with RV involvement) is INCORRECT because acute STEMI would show ST elevation in a coronary distribution. RBBB does not in itself indicate STEMI, though new RBBB can sometimes accompany large anterior MI (left anterior descending artery territory)."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "hyperkalaemia.jpg",
+    "label": "Hyperkalaemia",
+    "specialty": "Endocrinology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 62-year-old man with type 2 diabetes and CKD stage 3b is admitted with reduced urine output and confusion. He takes ramipril, spironolactone, and metformin. Serum potassium is 7.2 mmol/L, creatinine 380 \u03bcmol/L. The ECG shows tall, peaked symmetrical T waves in precordial leads, widening of the QRS complex to 160 ms, and a \"sine wave\" pattern. What is the most appropriate immediate management?",
+    "options": [
+      "Stop ramipril and spironolactone, and restrict dietary potassium",
+      "IV calcium gluconate 10 mL of 10% solution over 2\u20135 minutes, followed by insulin-dextrose infusion",
+      "Sodium bicarbonate 8.4% 50 mL IV bolus",
+      "Calcium resonium (sodium polystyrene sulfonate) rectally stat",
+      "Urgent renal biopsy"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "IV calcium gluconate 10 mL of 10% solution over 2\u20135 minutes, followed by insulin-dextrose infusion",
+    "explanation": "This man has severe hyperkalaemia (K+ 7.2 mmol/L) with life-threatening ECG changes: peaked T waves \u2192 widened QRS \u2192 sine wave pattern, which indicates imminent ventricular fibrillation. This is a cardiac emergency requiring immediate membrane stabilisation.\n\nOption B (IV calcium gluconate then insulin-dextrose) is CORRECT. The sequence in severe symptomatic hyperkalaemia is: (1) IV calcium gluconate 10 mL of 10% over 2\u20135 minutes \u2014 stabilises the cardiac membrane within minutes (does not lower K+); (2) Insulin-dextrose (10 units actrapid in 50 mL of 50% dextrose) \u2014 drives K+ into cells, lowering serum K+ by 0.5\u20131.0 mmol/L over 15\u201330 minutes; (3) Salbutamol 10\u201320 mg nebulised \u2014 further shifts K+ intracellularly; (4) Definitive removal: calcium resonium, sodium zirconium cyclosilicate (patiromer), or dialysis.\n\nOption A (Stop ramipril/spironolactone, dietary restriction) is INCORRECT as the immediate action. Stopping the offending agents and dietary restriction are appropriate medium-term measures but have no acute effect on critically elevated K+ with cardiac arrhythmia risk.\n\nOption C (Sodium bicarbonate) is INCORRECT as first-line in hyperkalaemia. Bicarbonate used to be recommended but recent evidence and NICE guidance no longer recommend it as routine first-line treatment for hyperkalaemia. Calcium gluconate is the priority.\n\nOption D (Calcium resonium rectally) is INCORRECT as the immediate step. Ion exchange resins act over hours and are used for medium-term K+ removal after initial emergency management, not as the first-line cardiac membrane-stabilising agent.\n\nOption E (Renal biopsy) is INCORRECT because there is no indication for biopsy in acute-on-chronic renal failure from medication-induced hyperkalaemia without glomerulonephritis features."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "long-qt-hypothyroidism.jpg",
+    "label": "Long Qt Hypothyroidism",
+    "specialty": "Endocrinology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 54-year-old woman with known autoimmune hypothyroidism (not currently treated) presents with fatigue, weight gain, cold intolerance, and one episode of syncope. She takes no other medications. The ECG shows a heart rate of 48 bpm, prolonged QTc of 580 ms, and low voltage complexes. TSH is 85 mIU/L, free T4 <5 pmol/L. What is the most appropriate immediate management to address the ECG abnormality?",
+    "options": [
+      "IV amiodarone for rate control",
+      "Start levothyroxine cautiously at a low dose (25\u201350 mcg/day) with regular TSH monitoring \u2014 the QT will normalise with thyroid replacement",
+      "Immediate cardiac pacing for bradycardia",
+      "Implantable cardioverter-defibrillator (ICD) insertion",
+      "Magnesium sulfate IV for torsades de pointes prophylaxis"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Start levothyroxine cautiously at a low dose (25\u201350 mcg/day) with regular TSH monitoring \u2014 the QT will normalise with thyroid replacement",
+    "explanation": "This woman has severe hypothyroidism (TSH 85, low free T4) causing bradycardia, prolonged QTc (580 ms), and low-voltage ECG. The prolonged QT in hypothyroidism is secondary to metabolic slowing of cardiac repolarisation and reverses with thyroid hormone replacement.\n\nOption B (Levothyroxine starting at low dose 25\u201350 mcg/day) is CORRECT because the underlying cause of the QT prolongation is hypothyroidism, not a primary cardiac channelopathy. Levothyroxine replacement gradually corrects the metabolic derangement, normalising heart rate and QTc over weeks to months. In severe hypothyroidism, starting doses should be low (25 mcg in elderly patients, 50 mcg in younger) with gradual dose titration to avoid precipitating angina or arrhythmia in patients with possible coronary disease. TSH monitoring guides dose adjustment.\n\nOption A (IV amiodarone) is INCORRECT because amiodarone itself markedly prolongs the QT interval and blocks T4-to-T3 conversion \u2014 it would worsen the situation. Amiodarone is absolutely avoided in patients with QTc >500 ms or hypothyroid state.\n\nOption C (Immediate cardiac pacing) is INCORRECT because the bradycardia and prolonged QT are metabolic (hypothyroid) rather than intrinsic conduction disease. Pacing does not address the cause and is not indicated unless the patient is haemodynamically compromised or symptomatic from the bradycardia alone.\n\nOption D (ICD insertion) is INCORRECT because ICD is reserved for inherited channelopathies (congenital LQTS) with high-risk features or prior aborted cardiac arrest. Secondary causes of QT prolongation do not require ICD if the underlying cause is treated.\n\nOption E (Magnesium sulfate) is INCORRECT as the primary management. Magnesium is used acutely for torsades de pointes, but this patient is not currently in torsades. The priority is to treat the underlying cause."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "pulmonary-embolism-ecg.jpg",
+    "label": "Pulmonary Embolism Ecg",
+    "specialty": "Respiratory",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 38-year-old woman, 6 weeks post-caesarean section, presents with sudden onset pleuritic chest pain and dyspnoea. She is tachycardic at 115 bpm, SpO\u2082 90%. The ECG shown demonstrates sinus tachycardia, new right axis deviation, S wave in lead I, Q wave in lead III, inverted T wave in lead III (S1Q3T3 pattern), and right bundle branch block. D-dimer is 3.8 \u03bcg/mL. What is the most likely diagnosis?",
+    "options": [
+      "Atrial flutter with 2:1 block",
+      "Right ventricular myocardial infarction",
+      "Massive pulmonary embolism causing acute right heart strain",
+      "Ventricular tachycardia degenerating from RBBB",
+      "Anterior STEMI with right ventricular involvement"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Massive pulmonary embolism causing acute right heart strain",
+    "explanation": "This post-caesarean woman with pleuritic chest pain, hypoxia, tachycardia, and the S1Q3T3 ECG pattern plus RBBB has massive pulmonary embolism with acute right heart strain. Post-partum period is one of the highest-risk periods for VTE.\n\nOption C (Massive PE with acute right heart strain) is CORRECT. The S1Q3T3 pattern (though not sensitive) is the classic ECG sign of acute PE due to right ventricular pressure overload. RBBB results from right bundle compression or ischaemia from right heart dilation. The combination of post-partum state, hypoxia, tachycardia, and elevated D-dimer strongly supports massive PE. Management: immediate anticoagulation (LMWH or unfractionated heparin), if massive PE with haemodynamic instability \u2014 consider thrombolysis (alteplase) or surgical embolectomy per NICE NG158 and BTS guidelines.\n\nOption A (Atrial flutter with 2:1 block) is INCORRECT because atrial flutter produces regular sawtooth P waves at 300 bpm with ventricular rate of 150 bpm. The patient has sinus tachycardia at 115 bpm, not the characteristic flutter pattern.\n\nOption B (RV myocardial infarction) is INCORRECT because RV MI typically follows inferior STEMI with ST elevation in right-sided leads (V4R, V5R). While RV strain occurs in both, the clinical context (post-partum, high D-dimer, pleuritic pain) and lack of Q waves in inferior leads make PE far more likely.\n\nOption D (VT from RBBB) is INCORRECT because RBBB is not a substrate for VT. The patient is haemodynamically stable enough to be assessed, with a clear clinical context for PE.\n\nOption E (Anterior STEMI) is INCORRECT because there are no ST elevations in anterior leads. The RBBB here is a new finding from right heart strain, not the wide QRS of STEMI."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "subarachnoid-haemorrhage.jpg",
+    "label": "Subarachnoid Haemorrhage",
+    "specialty": "Neurology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 51-year-old woman presents with the \"worst headache of her life\" of sudden onset during exertion. She is drowsy (GCS 13). CT head confirms subarachnoid haemorrhage. The ECG performed on admission shows deep symmetrical T-wave inversions across V2-V6, prolonged QTc of 560 ms, and prominent U waves. Troponin is mildly elevated. Echocardiogram shows apical wall motion abnormality. What does this ECG most likely demonstrate?",
+    "options": [
+      "Anterior STEMI requiring emergency coronary angiography",
+      "Neurogenic cardiac injury (Neurogenic stunned myocardium) secondary to subarachnoid haemorrhage",
+      "Hypokalaemia causing deep T-wave inversions",
+      "Type 2 myocardial infarction requiring anticoagulation",
+      "Wellens' syndrome indicating critical LAD stenosis"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Neurogenic cardiac injury (Neurogenic stunned myocardium) secondary to subarachnoid haemorrhage",
+    "explanation": "The ECG findings \u2014 deep T-wave inversions in V2-V6, prolonged QTc, U waves \u2014 in the context of acute SAH represent neurogenic cardiac injury (neurogenic stunned myocardium), not primary ACS.\n\nOption B (Neurogenic cardiac injury secondary to SAH) is CORRECT. SAH causes massive catecholamine release from hypothalamic stimulation, leading to myocardial contraction band necrosis and apical wall motion abnormality (Takotsubo-like pattern). ECG changes including T-wave inversions, QT prolongation, and U waves are well-recognised in SAH. Mild troponin elevation and wall motion abnormalities are neurogenic in origin. The priority remains treating the SAH (neurosurgical assessment, nimodipine, anticonvulsant prophylaxis) \u2014 coronary angiography is NOT immediately indicated unless there is haemodynamic instability from arrhythmia.\n\nOption A (Anterior STEMI requiring emergency coronary angiography) is INCORRECT because the clinical context is SAH, not ACS. STEMI shows ST elevation, not T-wave inversions, as the primary finding. Emergency coronary angiography would divert attention from neurosurgical management of the SAH.\n\nOption C (Hypokalaemia) is INCORRECT because hypokalaemia causes U waves and flat T waves but not the deep symmetric T-wave inversions spanning V2-V6 and QTc 560 ms. Potassium would need to be checked but the pattern is neurogenic.\n\nOption D (Type 2 MI) is INCORRECT as the primary diagnosis. While type 2 MI (demand ischaemia) can occur in the context of SAH, the pattern is more consistent with neurogenic stunned myocardium. Anticoagulation must be avoided in acute SAH due to bleeding risk.\n\nOption E (Wellens' syndrome) is INCORRECT because Wellens' syndrome occurs in a pain-free patient after resolved chest pain and indicates critical LAD stenosis. The context here is SAH, not ACS, and the clinical picture completely explains the ECG changes."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "hypocalcaemia-ecg.jpg",
+    "label": "Hypocalcaemia Ecg",
+    "specialty": "Nephrology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 38-year-old woman who had a total thyroidectomy 3 days ago presents with perioral tingling, carpopedal spasm, and muscle cramps. Chvostek's and Trousseau's signs are positive. The ECG shown demonstrates prolonged QT interval (QTc 540 ms) predominantly due to a markedly lengthened ST segment (plateau phase). Serum calcium is 1.62 mmol/L (corrected). What does this ECG most likely show?",
+    "options": [
+      "Hyperkalaemia \u2014 peaked T waves and wide QRS",
+      "Drug-induced QT prolongation from sotalol",
+      "QT prolongation consistent with hypocalcaemia \u2014 ST segment prolongation due to reduced intracellular calcium",
+      "Congenital long QT syndrome type 2",
+      "Pericarditis with diffuse ST elevation"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "QT prolongation consistent with hypocalcaemia \u2014 ST segment prolongation due to reduced intracellular calcium",
+    "explanation": "This post-thyroidectomy patient has hypocalcaemia from inadvertent parathyroid gland removal (hypoparathyroidism). The ECG shows QT prolongation predominantly from ST segment lengthening \u2014 the characteristic ECG feature of hypocalcaemia.\n\nOption C (QT prolongation from hypocalcaemia \u2014 ST segment prolongation) is CORRECT. Calcium is essential for phase 2 of the cardiac action potential (plateau phase). Low calcium prolongs the plateau, lengthening the ST segment and QTc. Unlike other causes of long QT (drugs, LQTS) where the T wave morphology changes, hypocalcaemia specifically lengthens the ST segment before the T wave. Trousseau's sign (carpal spasm on BP cuff inflation) and Chvostek's sign (facial twitching on percussion) confirm hypocalcaemia clinically. Treatment: IV calcium gluconate 10 mL of 10% over 10 minutes, then oral calcium carbonate and alfacalcidol (active vitamin D) for hypoparathyroidism.\n\nOption A (Hyperkalaemia) is INCORRECT because hyperkalaemia causes peaked T waves, widened QRS, and eventual sine-wave pattern \u2014 not isolated QT prolongation from ST lengthening with normal T waves.\n\nOption B (Sotalol-induced QT prolongation) is INCORRECT because drug-induced QT prolongation from sotalol or other class III antiarrhythmics changes T-wave morphology (broad or notched T wave) rather than specifically prolonging the ST segment plateau. There is no indication the patient takes sotalol.\n\nOption D (Congenital LQTS type 2) is INCORRECT because congenital LQTS type 2 shows notched, bifid T waves that are triggered by auditory stimuli. The clinical context here is clear post-surgical hypocalcaemia, making a congenital cause irrelevant.\n\nOption E (Pericarditis) is INCORRECT because pericarditis causes saddle-shaped ST elevation with PR depression \u2014 not isolated QT prolongation from ST lengthening."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "coeliac-disease.jpg",
+    "label": "Coeliac Disease",
+    "specialty": "Gastroenterology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 34-year-old woman presents with a 1-year history of diarrhoea, bloating, fatigue, and 6 kg weight loss. She has iron deficiency anaemia and elevated anti-tissue transglutaminase IgA antibodies. The duodenal biopsy is shown. The image demonstrates flattening of villi (villous atrophy), crypt hyperplasia, and an increased number of intraepithelial lymphocytes. What does this histological section most likely demonstrate?",
+    "options": [
+      "Crohn's disease \u2014 granulomatous inflammation with skip lesions",
+      "Whipple's disease \u2014 PAS-positive macrophages in the lamina propria",
+      "Coeliac disease \u2014 Marsh type 3 changes with total villous atrophy",
+      "Tropical sprue \u2014 subtotal villous atrophy in a traveller",
+      "Small intestinal bacterial overgrowth \u2014 patchy villous blunting"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Coeliac disease \u2014 Marsh type 3 changes with total villous atrophy",
+    "explanation": "The duodenal biopsy shows Marsh type 3 changes of coeliac disease: total villous atrophy, crypt hyperplasia (compensatory elongation), and increased intraepithelial lymphocytes (>25 per 100 enterocytes). Combined with positive anti-tTG IgA antibodies, this confirms coeliac disease.\n\nOption C (Coeliac disease \u2014 Marsh type 3 villous atrophy) is CORRECT. Coeliac disease is an immune-mediated enteropathy triggered by dietary gluten (wheat, barley, rye) in genetically susceptible individuals (HLA-DQ2/DQ8). The Marsh classification grades histological severity. Diagnosis requires consistent serology + compatible histology per NICE NG20. A strict lifelong gluten-free diet is the only treatment. Annual monitoring of TTG antibody levels, FBC, ferritin, B12, folate, calcium, and bone density is recommended.\n\nOption A (Crohn's disease) is INCORRECT because Crohn's affects the small bowel with granulomatous transmural inflammation, skip lesions, and cobblestone mucosa on endoscopy \u2014 not villous atrophy. Anti-tTG antibodies would not be positive in Crohn's.\n\nOption B (Whipple's disease) is INCORRECT because Whipple's is caused by Tropheryma whipplei and shows PAS-positive foamy macrophages in the lamina propria, not villous atrophy with intraepithelial lymphocytosis.\n\nOption D (Tropical sprue) is INCORRECT because tropical sprue occurs in individuals from or visiting tropical regions and shows a similar histological picture. However, the UK-based clinical context with positive serology makes coeliac disease the correct diagnosis.\n\nOption E (SIBO) is INCORRECT because SIBO causes patchy mild villous blunting, not the severe total villous atrophy shown here with characteristic crypt hyperplasia and intraepithelial lymphocytosis."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "chronic-myeloid-leukaemia.jpg",
+    "label": "Chronic Myeloid Leukaemia",
+    "specialty": "Haematology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 48-year-old man is referred with an incidentally elevated WBC of 142 \u00d7 10\u2079/L on a routine blood test. He is asymptomatic, afebrile, with mild splenomegaly on examination. The blood film shown demonstrates a marked granulocytosis with the complete spectrum of myeloid maturation: myeloblasts, promyelocytes, myelocytes, metamyelocytes, band forms, and mature neutrophils, with eosinophilia and basophilia. What does this blood film most likely demonstrate?",
+    "options": [
+      "Acute myeloid leukaemia (AML) \u2014 blast crisis",
+      "Chronic myeloid leukaemia (CML) with the Philadelphia chromosome",
+      "Leukaemoid reaction from severe infection",
+      "Myelofibrosis with leukoerythroblastic picture",
+      "Essential thrombocythaemia"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Chronic myeloid leukaemia (CML) with the Philadelphia chromosome",
+    "explanation": "The blood film shows the characteristic complete spectrum of myeloid maturation \u2014 from blasts to mature neutrophils \u2014 with basophilia and eosinophilia. This pattern with WBC 142 \u00d7 10\u2079/L and splenomegaly is diagnostic of CML.\n\nOption B (CML with Philadelphia chromosome) is CORRECT. CML is caused by the BCR-ABL1 fusion gene (Philadelphia chromosome \u2014 translocation t(9;22)). The blood film shows the hallmark \"left shift\" with all stages of granulocytic maturation, pronounced basophilia and eosinophilia, and thrombocytosis. Diagnosis is confirmed by detection of BCR-ABL1 by PCR or FISH. First-line treatment is imatinib (or second-generation TKI dasatinib/nilotinib) per NICE guidance, which achieves complete molecular response in most patients.\n\nOption A (AML \u2014 blast crisis) is INCORRECT because AML shows >20% blasts with a paucity of maturing cells. The blood film here shows the FULL maturation spectrum with few blasts \u2014 the opposite of AML.\n\nOption C (Leukaemoid reaction) is INCORRECT because leukaemoid reactions rarely produce WBC >50 \u00d7 10\u2079/L and show left shift predominantly of neutrophils/bands without the basophilia and eosinophilia characteristic of CML. A high leukocyte alkaline phosphatase (LAP) score distinguishes leukaemoid reaction (high LAP) from CML (low LAP).\n\nOption D (Myelofibrosis) is INCORRECT because myelofibrosis causes a leukoerythroblastic picture with teardrop cells (dacrocytes), nucleated red cells, and significant marrow fibrosis. The full granulocytic maturation spectrum without teardrop cells makes myelofibrosis unlikely.\n\nOption E (Essential thrombocythaemia) is INCORRECT because ET primarily causes thrombocytosis with relatively normal WBC and no shift in granulocytic maturation."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "pemphigus-vulgaris.jpg",
+    "label": "Pemphigus Vulgaris",
+    "specialty": "Dermatology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 58-year-old woman presents with widespread painful oral erosions for 3 months, followed by development of flaccid blisters on the scalp, chest, and back. The blisters rupture easily, leaving raw eroded areas. Nikolsky sign is positive. Skin biopsy is shown. The image demonstrates acantholysis (loss of cohesion between keratinocytes) with a suprabasal blister and intact basal layer (\"tombstoning\"). What is the most likely diagnosis?",
+    "options": [
+      "Bullous pemphigoid \u2014 subepidermal blister with eosinophilia",
+      "Dermatitis herpetiformis \u2014 subepidermal blister with neutrophil microabscesses",
+      "Pemphigus vulgaris \u2014 suprabasal acantholysis with anti-desmoglein 3 antibodies",
+      "Epidermolysis bullosa \u2014 mechanobullous disease from collagen XVII deficiency",
+      "Staphylococcal scalded skin syndrome \u2014 subcorneal cleavage"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Pemphigus vulgaris \u2014 suprabasal acantholysis with anti-desmoglein 3 antibodies",
+    "explanation": "The histology shows suprabasal acantholysis (loss of keratinocyte-to-keratinocyte adhesion) with the basal layer remaining attached to the basement membrane like a \"row of tombstones.\" This is pathognomonic for pemphigus vulgaris.\n\nOption C (Pemphigus vulgaris \u2014 suprabasal acantholysis with anti-desmoglein 3) is CORRECT. Pemphigus vulgaris is an autoimmune blistering disease caused by IgG antibodies against desmoglein 3 (and sometimes desmoglein 1). Desmogleins are desmosomal adhesion proteins \u2014 their disruption causes keratinocyte separation (acantholysis). Oral mucosa is involved in nearly all cases (desmoglein 3 predominance). A positive Nikolsky sign (lateral pressure causes blister extension) confirms fragile intraepidermal blistering. Treatment: high-dose oral prednisolone plus rituximab per NICE BAD guidance.\n\nOption A (Bullous pemphigoid) is INCORRECT because BP involves subepidermal blistering (not suprabasal) with IgG antibodies against BP180/BP230 at the basement membrane zone. BP blisters are tense (not flaccid) and oral involvement is less common. Nikolsky sign is negative in BP.\n\nOption B (Dermatitis herpetiformis) is INCORRECT because DH causes intensely pruritic urticarial papules and vesicles on extensor surfaces, with subepidermal blisters containing neutrophil microabscesses (not acantholysis). It is associated with coeliac disease.\n\nOption D (Epidermolysis bullosa) is INCORRECT because EB is a genetic disorder causing mechanobullous disease from trauma. It presents from infancy and does not show acantholysis histologically.\n\nOption E (SSSS) is INCORRECT because staphylococcal scalded skin syndrome occurs predominantly in neonates/young children and shows subcorneal (not suprabasal) cleavage from exfoliative toxins, without acantholysis."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "cin-iii.jpg",
+    "label": "Cin Iii",
+    "specialty": "Obstetrics & Gynaecology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 32-year-old woman is referred to colposcopy after a high-grade squamous intraepithelial lesion (HGSIL) on cervical smear, positive for high-risk HPV (type 16). Colposcopy shows an acetowhite area with punctation at the transformation zone. The biopsy shown demonstrates full-thickness dysplastic squamous cells with loss of normal stratification, nuclear atypia, and frequent mitoses throughout all layers of the epithelium. There is an intact basement membrane with no stromal invasion. What is the most appropriate management?",
+    "options": [
+      "Repeat smear in 3 years \u2014 results may represent HPV-related change only",
+      "Total hysterectomy as definitive management",
+      "Large loop excision of the transformation zone (LLETZ) to achieve clearance of CIN 3",
+      "Chemotherapy with topical 5-fluorouracil cream",
+      "HPV vaccination and repeat colposcopy in 6 months"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Large loop excision of the transformation zone (LLETZ) to achieve clearance of CIN 3",
+    "explanation": "The cervical biopsy shows CIN 3 (high-grade cervical intraepithelial neoplasia): full-thickness dysplasia with nuclear atypia, loss of polarity, and frequent mitoses from basal to superficial layers, with intact basement membrane (no invasion). This requires excisional treatment.\n\nOption C (LLETZ \u2014 large loop excision of the transformation zone) is CORRECT per NICE NG208. LLETZ is the first-line treatment for CIN 2 and CIN 3 in the UK. It excises the transformation zone under colposcopic guidance using a diathermy loop under local anaesthetic. Cure rates exceed 90% with clear excision margins. Follow-up involves test-of-cure cytology and HPV testing at 6 months post-treatment.\n\nOption A (Repeat smear in 3 years) is INCORRECT because CIN 3 has a significant risk of progression to invasive cervical carcinoma (up to 30% over 10 years if untreated). Watchful waiting is not appropriate for confirmed CIN 3.\n\nOption B (Total hysterectomy) is INCORRECT as first-line management for CIN 3, which is pre-invasive. Hysterectomy may be considered if LLETZ fails, there are positive margins despite re-excision, or there are concurrent gynaecological reasons. It is not the appropriate initial treatment.\n\nOption D (Topical 5-fluorouracil) is INCORRECT because 5-FU has no established role in UK practice for CIN management. It is not recommended in NICE guidelines.\n\nOption E (HPV vaccination) is INCORRECT because vaccination prevents future HPV acquisition but does not treat existing CIN 3. Vaccination is recommended for unvaccinated women up to 25 years old in the UK schedule but does not substitute for excisional treatment."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "small-cell-lung-carcinoma.jpg",
+    "label": "Small Cell Lung Carcinoma",
+    "specialty": "Respiratory",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 67-year-old man with a 50 pack-year smoking history presents with a 3-month history of cough, weight loss, and confusion. He has hyponatraemia (Na\u207a 119 mmol/L) with low serum and high urine osmolality. CT chest shows a central hilar mass with mediastinal lymphadenopathy. The bronchial biopsy shown demonstrates sheets of small, uniform cells with very little cytoplasm, hyperchromatic nuclei, nuclear moulding, and high mitotic rate. What is the most likely diagnosis?",
+    "options": [
+      "Squamous cell carcinoma of the lung \u2014 keratin pearls and intercellular bridges",
+      "Small cell lung carcinoma (SCLC) \u2014 oat cell type",
+      "Pulmonary carcinoid tumour \u2014 neuroendocrine differentiation",
+      "Large cell neuroendocrine carcinoma",
+      "Mesothelioma \u2014 biphasic type"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Small cell lung carcinoma (SCLC) \u2014 oat cell type",
+    "explanation": "The biopsy shows small cell lung carcinoma (SCLC): small cells with very little cytoplasm, dark (hyperchromatic) nuclei, nuclear moulding (cells conform to adjacent cell shape), and a very high mitotic rate. Hyponatraemia from SIADH (ectopic ADH secretion) is a classic paraneoplastic syndrome of SCLC.\n\nOption B (SCLC \u2014 oat cell type) is CORRECT. SCLC accounts for 15% of lung cancers, arises from neuroendocrine cells, and is almost exclusively caused by cigarette smoking. The histological features \u2014 small oat-shaped cells, nuclear moulding, scant cytoplasm \u2014 are pathognomonic. SCLC secretes multiple ectopic hormones causing paraneoplastic syndromes: SIADH (hyponatraemia \u2014 as here), ectopic ACTH (Cushing's), Lambert-Eaton myasthenic syndrome, and encephalomyelitis. Treatment: chemotherapy (carboplatin/etoposide) \u00b1 immunotherapy (atezolizumab); surgery is rarely possible due to widespread disease at presentation.\n\nOption A (Squamous cell carcinoma) is INCORRECT because SCC shows large polygonal cells with eosinophilic cytoplasm, keratin pearl formation, and intercellular bridges. Cells are larger with more cytoplasm than SCLC.\n\nOption C (Carcinoid) is INCORRECT because carcinoid tumours show neuroendocrine differentiation with organoid/trabecular architecture, salt-and-pepper chromatin, and low mitotic rate. They are associated with carcinoid syndrome (flushing, diarrhoea, wheeze) rather than SIADH.\n\nOption D (Large cell neuroendocrine carcinoma) is INCORRECT because LCNEC has large cells (>3\u00d7 lymphocyte diameter), in contrast to the small cells here with nuclear moulding. Both are aggressive, but histological distinction is essential.\n\nOption E (Mesothelioma) is INCORRECT because mesothelioma arises from the pleura, not the bronchial epithelium, and shows distinctive biphasic epithelioid/sarcomatoid patterns or tubular/papillary formations."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "glioblastoma.jpg",
+    "label": "Glioblastoma",
+    "specialty": "Neurology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 63-year-old man presents with 6 weeks of headache, right-sided weakness, and confusion. MRI shows a ring-enhancing lesion in the left temporal lobe with surrounding oedema and midline shift. Stereotactic biopsy is performed. The histology shown demonstrates hypercellular glial tumour cells with nuclear pleomorphism, microvascular proliferation, and areas of central necrosis surrounded by palisading tumour cells (\"pseudopalisading necrosis\"). What does this histological section most likely demonstrate?",
+    "options": [
+      "Grade 2 diffuse astrocytoma \u2014 IDH-mutant",
+      "Primary CNS lymphoma \u2014 large B-cell lymphoma",
+      "Glioblastoma multiforme (grade 4 astrocytoma) \u2014 pseudopalisading necrosis",
+      "Brain metastasis from adenocarcinoma",
+      "Oligodendroglioma \u2014 1p/19q co-deletion"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Glioblastoma multiforme (grade 4 astrocytoma) \u2014 pseudopalisading necrosis",
+    "explanation": "The histology shows glioblastoma multiforme (GBM, WHO grade 4): hypercellular glial tumour with nuclear pleomorphism, microvascular proliferation (glomeruloid vascular tufts), and the pathognomonic pseudopalisading necrosis \u2014 tumour cells palisading around central necrotic foci.\n\nOption C (Glioblastoma multiforme \u2014 pseudopalisading necrosis) is CORRECT. GBM is the most common and most aggressive primary brain tumour in adults. Pseudopalisading necrosis results from tumour outgrowing its blood supply. Diagnosis requires these histological features. GBM is IDH-wildtype (unlike lower-grade gliomas). MGMT promoter methylation status predicts response to temozolomide chemotherapy. Treatment: surgical resection + radiotherapy + temozolomide (Stupp protocol). Median survival remains approximately 15 months despite treatment.\n\nOption A (Grade 2 astrocytoma) is INCORRECT because low-grade astrocytomas show mild hypercellularity with nuclear atypia but WITHOUT necrosis or microvascular proliferation. These features are by definition absent in grade 2 tumours.\n\nOption B (CNS lymphoma) is INCORRECT because primary CNS lymphoma shows dense perivascular lymphocytic infiltration with large B-cell morphology around blood vessels, not glial cells with pseudopalisading. PCNSL is associated with immunocompromise and responds dramatically to corticosteroids (which can cause diagnostic difficulties).\n\nOption D (Brain metastasis) is INCORRECT because metastases have sharp margins between tumour and adjacent brain and show histological features of the primary tumour (glandular pattern for adenocarcinoma). Metastases are the most common brain tumours overall but show non-glial histology.\n\nOption E (Oligodendroglioma) is INCORRECT because oligodendroglioma shows characteristic \"fried egg\" cells (clear perinuclear halos) with chicken-wire vascularity, and 1p/19q co-deletion. Pseudopalisading necrosis is absent."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "gout.jpg",
+    "label": "Gout",
+    "specialty": "Rheumatology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 55-year-old man with hypertension presents with his third episode of acute painful swelling of the right first metatarsophalangeal joint (podagra) over 3 years. He takes bendroflumethiazide. Serum uric acid is 0.58 mmol/L. Joint aspiration is performed. Under polarised light microscopy, the synovial fluid shows needle-shaped crystals that are negatively birefringent (yellow when parallel to the polariser). What is the most likely diagnosis?",
+    "options": [
+      "Pseudogout (calcium pyrophosphate deposition disease) \u2014 weakly positively birefringent rhomboid crystals",
+      "Septic arthritis \u2014 gram-positive diplococci in synovial fluid",
+      "Reactive arthritis \u2014 sterile pyuria in synovial fluid",
+      "Gout \u2014 negatively birefringent needle-shaped monosodium urate crystals",
+      "Chondrocalcinosis on X-ray \u2014 cartilage calcification"
+    ],
+    "correctAnswer": "D",
+    "correctAnswerText": "Gout \u2014 negatively birefringent needle-shaped monosodium urate crystals",
+    "explanation": "Polarised light microscopy shows negatively birefringent needle-shaped monosodium urate (MSU) crystals \u2014 the definitive diagnosis of gout. Negative birefringence means the crystals appear yellow when aligned parallel to the slow axis of the compensator.\n\nOption D (Gout \u2014 negatively birefringent needle-shaped MSU crystals) is CORRECT. Gout results from MSU crystal deposition in joints, triggered by hyperuricaemia. Bendroflumethiazide causes hyperuricaemia by reducing renal uric acid excretion. The first MTPJ (podagra) is affected in 90% of gout cases. Acute attacks are managed with NSAIDs (naproxen), colchicine, or prednisolone if contraindicated. Prophylaxis with urate-lowering therapy (allopurinol) is started 2\u20134 weeks after the acute attack settles per NICE CKS, targeting serum uric acid <0.36 mmol/L.\n\nOption A (Pseudogout) is INCORRECT because CPPD crystals are weakly positively birefringent (blue when parallel) and rhomboid-shaped \u2014 the opposite of MSU crystals. Pseudogout affects larger joints (knee, wrist) rather than the first MTPJ.\n\nOption B (Septic arthritis) is INCORRECT because septic arthritis would show cloudy fluid with organisms on Gram stain and high WBC. The presence of crystals makes crystal arthropathy the primary diagnosis, though infection should always be considered in an acute monoarthritis.\n\nOption C (Reactive arthritis) is INCORRECT because reactive arthritis follows a triggering infection (urogenital or enteric) and shows sterile fluid with no crystals. It is typically asymmetric, affecting knees, ankles, and sacroiliac joints.\n\nOption E (Chondrocalcinosis) is INCORRECT because chondrocalcinosis is a radiological finding of calcification within cartilage, seen in pseudogout, not the crystal finding described here. It is a separate finding from the polarised microscopy result."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "hashimotos-thyroiditis.jpg",
+    "label": "Hashimotos Thyroiditis",
+    "specialty": "Endocrinology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 44-year-old woman presents with fatigue, weight gain, constipation, cold intolerance, and dry skin. TSH is 52 mIU/L, free T4 is 6 pmol/L, anti-TPO antibodies are markedly elevated at >600 IU/mL. A thyroid biopsy is performed for an incidental nodule and the histology shown is obtained from the adjacent thyroid tissue. The section demonstrates diffuse lymphocytic infiltration with germinal centre formation, H\u00fcrthle cell (oxyphilic) metaplasia of follicular epithelium, and small atrophic thyroid follicles with fibrous tissue replacement. What does this histology most likely demonstrate?",
+    "options": [
+      "De Quervain's thyroiditis \u2014 granulomatous inflammation with giant cells",
+      "Papillary thyroid carcinoma \u2014 psammoma bodies and nuclear grooves",
+      "Graves' disease \u2014 follicular hyperplasia with scalloped colloid",
+      "Hashimoto's thyroiditis (chronic autoimmune lymphocytic thyroiditis)",
+      "Simple colloid goitre \u2014 normal follicles with stored colloid"
+    ],
+    "correctAnswer": "D",
+    "correctAnswerText": "Hashimoto's thyroiditis (chronic autoimmune lymphocytic thyroiditis)",
+    "explanation": "The thyroid histology shows Hashimoto's thyroiditis: dense lymphocytic infiltration with germinal centre formation, H\u00fcrthle cell (oxyphilic/eosinophilic) metaplasia of follicular epithelium, atrophic follicles, and interstitial fibrosis \u2014 the classic histological triad.\n\nOption D (Hashimoto's thyroiditis) is CORRECT. Hashimoto's is the most common cause of hypothyroidism in iodine-sufficient regions. It is an autoimmune condition characterised by T-lymphocyte-mediated destruction of thyroid follicular cells and anti-TPO/anti-thyroglobulin antibodies. The lymphocytic infiltrate with germinal centres (immune reaction) and H\u00fcrthle cell change (oxyphilic transformation of damaged epithelium) are pathognomonic. Treatment is levothyroxine replacement titrated to normalise TSH. Monitoring annually for disease progression and complications (including primary thyroid lymphoma \u2014 rare) is recommended.\n\nOption A (De Quervain's thyroiditis) is INCORRECT because De Quervain's (subacute granulomatous thyroiditis) shows granulomatous inflammation with giant cells surrounding disrupted follicles and colloid. It follows a viral infection and is self-limiting with transient thyrotoxicosis then hypothyroidism.\n\nOption B (Papillary thyroid carcinoma) is INCORRECT because PTC shows distinctive nuclear features: ground-glass nuclei (Orphan Annie eyes), nuclear grooves, pseudoinclusions, and psammoma bodies. The dominant lymphocyte pattern with germinal centres seen here is autoimmune, not neoplastic.\n\nOption C (Graves' disease) is INCORRECT because Graves' shows follicular hyperplasia with tall columnar epithelium, infolding into lumen, and scalloped/marginated colloid due to TSH receptor stimulation. The histology here shows atrophic follicles, the opposite of Graves.\n\nOption E (Simple colloid goitre) is INCORRECT because colloid goitre shows large follicles distended with colloid and normal flattened epithelium without lymphocytic infiltration or H\u00fcrthle cell change."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "diabetic-retinopathy.jpg",
+    "label": "Diabetic Retinopathy",
+    "specialty": "Ophthalmology",
+    "type": "Fundoscopy",
+    "vignette": "",
+    "stem": "A 52-year-old woman with type 2 diabetes (diagnosed 10 years ago, poorly controlled, HbA1c 76 mmol/mol) attends diabetic eye screening. The fundus photograph shown demonstrates multiple dot and blot haemorrhages, microaneurysms (tiny red dots), hard exudates (yellow lipid deposits) near the macula, and cotton-wool spots scattered across the retina. There is no new vessel formation. Visual acuity is 6/9 in the right eye. What is the most likely diagnosis?",
+    "options": [
+      "Central retinal vein occlusion",
+      "Hypertensive retinopathy grade 3",
+      "Background (non-proliferative) diabetic retinopathy with maculopathy",
+      "Proliferative diabetic retinopathy requiring urgent laser photocoagulation",
+      "Age-related macular degeneration \u2014 drusen formation"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Background (non-proliferative) diabetic retinopathy with maculopathy",
+    "explanation": "The fundus shows background (non-proliferative) diabetic retinopathy with features of maculopathy: dot/blot haemorrhages, microaneurysms, hard exudates near the macula, and cotton-wool spots (nerve fibre layer infarcts). No neovascularisation is visible, confirming pre-proliferative stage with macular involvement.\n\nOption C (Background diabetic retinopathy with maculopathy) is CORRECT. Diabetic maculopathy (hard exudates within one disc diameter of the fovea) is the leading cause of visual loss in type 2 diabetes, affecting central vision. Management includes urgent referral to ophthalmology for consideration of intravitreal anti-VEGF therapy (ranibizumab or bevacizumab) if visual acuity is \u22646/12 and centre-involving oedema is present on OCT, per NICE TA274. Optimising glycaemic control (target HbA1c <53 mmol/mol) and blood pressure (<140/80 mmHg) slows progression.\n\nOption A (CRVO) is INCORRECT because central retinal vein occlusion causes unilateral sudden vision loss with flame haemorrhages in all four quadrants (blood and thunder fundus) and optic disc oedema \u2014 not the gradual symmetric changes of diabetic retinopathy.\n\nOption B (Hypertensive retinopathy) is INCORRECT because hypertensive retinopathy shows arteriovenous nipping, flame haemorrhages (follows nerve fibre layer), and papilloedema in severe cases, but not microaneurysms or hard exudates at the macula as the dominant feature.\n\nOption D (Proliferative DR) is INCORRECT because proliferative DR requires the presence of neovascularisation (new vessels on the disc or elsewhere). The fundus here shows no new vessels \u2014 this is pre-proliferative/non-proliferative DR.\n\nOption E (AMD) is INCORRECT because AMD shows drusen (pale yellow deposits at the macula), geographic atrophy, or choroidal neovascularisation membranes, not the microaneurysms and haemorrhages of diabetic retinopathy."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "papilloedema.jpg",
+    "label": "Papilloedema",
+    "specialty": "Ophthalmology",
+    "type": "Fundoscopy",
+    "vignette": "",
+    "stem": "A 26-year-old obese woman presents with a 3-month history of daily headaches, worse on lying flat, pulsatile tinnitus, and transient visual obscurations lasting seconds. Visual acuity is preserved at 6/6. The fundoscopy shown demonstrates bilateral optic disc swelling with blurred disc margins, haemorrhages at the disc edge, and loss of physiological cup. What is the most appropriate next investigation?",
+    "options": [
+      "Visual field testing alone and reassurance",
+      "MRI brain with gadolinium and MR venography, followed by lumbar puncture if imaging is normal",
+      "Urgent ophthalmology referral for laser treatment of the optic discs",
+      "Temporal artery biopsy to exclude giant cell arteritis",
+      "Carotid Doppler ultrasound"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "MRI brain with gadolinium and MR venography, followed by lumbar puncture if imaging is normal",
+    "explanation": "This obese young woman with headaches, pulsatile tinnitus, transient visual obscurations, and bilateral papilloedema has the classic presentation of idiopathic intracranial hypertension (IIH, pseudotumour cerebri). Investigation must exclude secondary causes before confirming the diagnosis.\n\nOption B (MRI brain + gadolinium + MR venography, then LP if imaging normal) is CORRECT per NICE NG228. MRI with gadolinium is performed first to exclude secondary causes of raised ICP: space-occupying lesions, cerebral venous sinus thrombosis, meningeal carcinomatosis. MR venography assesses for cerebral venous sinus thrombosis (particularly relevant in obese women). If imaging is normal, lumbar puncture measures opening CSF pressure (>25 cmH\u2082O in IIH, often 30\u201350 cmH\u2082O), confirms diagnosis, and provides therapeutic pressure reduction.\n\nOption A (Visual field testing alone) is INCORRECT because visual field testing is important for monitoring IIH but does not establish the diagnosis or exclude secondary causes. The history warrants urgent full investigation.\n\nOption C (Laser treatment of optic discs) is INCORRECT because the optic disc swelling is from raised ICP \u2014 laser treatment of the disc would have no therapeutic effect on the underlying pressure and no role in IIH management.\n\nOption D (Temporal artery biopsy) is INCORRECT because giant cell arteritis is a disease of >50-year-olds with jaw claudication, scalp tenderness, and elevated ESR. This 26-year-old's fundoscopic findings represent papilloedema from raised ICP, not ischaemic optic neuropathy from GCA.\n\nOption E (Carotid Doppler) is INCORRECT because pulsatile tinnitus in IIH results from pressure transmitted to the venous sinuses, not carotid stenosis. Carotid Doppler does not investigate raised ICP."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "sickle-cell-disease.jpg",
+    "label": "Sickle Cell Disease",
+    "specialty": "Haematology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 25-year-old man of West African origin presents with severe pain in his lower back and bilateral femur, fever of 38.8\u00b0C, and worsening anaemia. He has a known haemoglobinopathy. The blood film shown demonstrates sickle-shaped (crescent/holly-leaf) red cells, target cells, and Howell-Jolly bodies (nuclear remnants indicating hyposplenia). Hb is 62 g/L, reticulocytes are elevated at 18%. What is the most appropriate management for this acute vaso-occlusive crisis?",
+    "options": [
+      "Urgent bone marrow biopsy to exclude aplastic crisis",
+      "IV iron infusion (ferric carboxymaltose)",
+      "IV morphine, aggressive IV fluids, supplemental oxygen, and haematology review \u2014 with urgent exchange transfusion if indicated",
+      "Hydroxycarbamide (hydroxyurea) starting dose 15 mg/kg/day",
+      "Platelet transfusion for thrombocytopaenia"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "IV morphine, aggressive IV fluids, supplemental oxygen, and haematology review \u2014 with urgent exchange transfusion if indicated",
+    "explanation": "This 25-year-old with sickle cell disease (evidenced by the blood film) is having an acute vaso-occlusive crisis (painful sickle crisis): severe bone pain, fever, and worsening anaemia. Immediate pain management and supportive care are the priorities.\n\nOption C (IV morphine, IV fluids, O\u2082, haematology review, exchange transfusion if indicated) is CORRECT per NICE NG143. Acute sickle crisis management: (1) Analgesia \u2014 oral or IV morphine within 30 minutes of arrival (patient controlled analgesia if possible); (2) Oxygen if SpO\u2082 <95%; (3) IV fluids for hydration; (4) Fever/infection assessment \u2014 sickle patients are functionally asplenic (Howell-Jolly bodies confirm hyposplenia) and vulnerable to encapsulated organisms (Streptococcus pneumoniae, Haemophilus influenzae); (5) Exchange transfusion is indicated in acute chest syndrome, stroke, or severe sequestration.\n\nOption A (Bone marrow biopsy) is INCORRECT as the immediate step. Aplastic crisis (from parvovirus B19) causes a sudden drop in Hb with absent reticulocytes \u2014 this patient has elevated reticulocytes (18%), indicating normal bone marrow response.\n\nOption B (IV iron infusion) is INCORRECT because sickle cell patients are not iron deficient \u2014 they have a haemolytic anaemia with normal or elevated iron stores. Iron supplementation could worsen iron overload from repeated transfusions.\n\nOption D (Hydroxycarbamide) is INCORRECT as the acute management. Hydroxycarbamide (hydroxyurea) is used for prophylaxis of recurrent sickling crises by increasing HbF levels, but is not a treatment for an acute crisis.\n\nOption E (Platelet transfusion) is INCORRECT because there is no thrombocytopaenia mentioned. Platelet transfusion does not address vaso-occlusion."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "iron-deficiency-blood-film.jpg",
+    "label": "Iron Deficiency Blood Film",
+    "specialty": "Haematology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 42-year-old woman with a history of menorrhagia presents with fatigue and breathlessness on climbing stairs. FBC: Hb 81 g/L, MCV 66 fL, MCH 20 pg, RDW elevated. The blood film shown demonstrates microcytic hypochromic red cells, pencil cells (elongated pencil-shaped red cells), anisocytosis (variation in cell size), and a large area of central pallor (>1/3 of red cell diameter). Serum ferritin is 4 mcg/L. What does this blood film most likely demonstrate?",
+    "options": [
+      "Thalassaemia trait \u2014 target cells with near-normal iron stores",
+      "Anaemia of chronic disease \u2014 normocytic normochromic cells",
+      "Iron deficiency anaemia \u2014 microcytic hypochromic cells with pencil cells",
+      "Sideroblastic anaemia \u2014 dimorphic red cell population",
+      "Vitamin B12 deficiency \u2014 macrocytic oval cells with hypersegmented neutrophils"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Iron deficiency anaemia \u2014 microcytic hypochromic cells with pencil cells",
+    "explanation": "The blood film shows iron deficiency anaemia (IDA): microcytic hypochromic red cells with central pallor >1/3 of diameter, pencil cells (elliptocytes/poikilocytes), and increased anisocytosis (RDW elevated). Combined with low ferritin (4 mcg/L), MCV 66, and menorrhagia, this is classic IDA.\n\nOption C (Iron deficiency anaemia \u2014 microcytic hypochromic with pencil cells) is CORRECT. IDA results from insufficient iron for haem synthesis, causing small, poorly haemoglobinised red cells. Pencil cells are elongated deformed cells from the thin cell membrane of iron-deficient cells. Management: identify and treat the cause (here: investigate and treat menorrhagia), oral ferrous sulfate 200 mg three times daily for at least 3 months (continue for 3 months after Hb normalises to replenish stores) per NICE CKS.\n\nOption A (Thalassaemia trait) is INCORRECT because thalassaemia trait causes microcytosis with near-normal or elevated red cell count, target cells, and NORMAL ferritin. The very low ferritin (4 mcg/L) indicates true iron deficiency, not thalassaemia. Mentzer index (MCV/RBC): <13 favours thalassaemia, >13 favours IDA.\n\nOption B (Anaemia of chronic disease) is INCORRECT because ACD causes normocytic or mildly microcytic anaemia with elevated ferritin (stored iron), reduced serum iron and TIBC. The very low ferritin excludes ACD.\n\nOption D (Sideroblastic anaemia) is INCORRECT because sideroblastic anaemia shows a dimorphic blood film (two populations: normal and microcytic hypochromic) with elevated ferritin and ring sideroblasts on bone marrow iron staining.\n\nOption E (B12 deficiency) is INCORRECT because B12 deficiency causes macrocytic (not microcytic) anaemia with hypersegmented neutrophils and macro-ovalocytes. MCV would be elevated, not reduced."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "sensorineural-hearing-loss.jpg",
+    "label": "Sensorineural Hearing Loss",
+    "specialty": "Neurology",
+    "type": "Audiogram",
+    "vignette": "",
+    "stem": "A 72-year-old man presents with progressive bilateral hearing loss over 6 years, worse for high-frequency sounds and in noisy environments. He also reports tinnitus. He denies vertigo, ear pain, or discharge. The pure-tone audiogram shown demonstrates bilateral symmetrical high-frequency sensorineural hearing loss with air-bone gap absent (air conduction = bone conduction thresholds), with thresholds of 60 dB at 4000 Hz and 80 dB at 8000 Hz. What does this audiogram most likely demonstrate?",
+    "options": [
+      "Bilateral conductive hearing loss from otosclerosis \u2014 elevated bone conduction thresholds",
+      "Unilateral sensorineural hearing loss from acoustic neuroma",
+      "Bilateral sensorineural hearing loss consistent with age-related hearing loss (presbycusis)",
+      "Mixed hearing loss from chronic otitis media with effusion",
+      "Noise-induced hearing loss at 4 kHz notch \u2014 occupational history required"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Bilateral sensorineural hearing loss consistent with age-related hearing loss (presbycusis)",
+    "explanation": "The audiogram shows bilateral high-frequency sensorineural hearing loss (SNHL) with no air-bone gap \u2014 characteristic of presbycusis (age-related hearing loss). The symmetric downward sloping audiogram pattern with loss greatest at high frequencies is pathognomonic.\n\nOption C (Bilateral SNHL consistent with presbycusis) is CORRECT. Presbycusis is the most common cause of hearing loss in older adults, caused by cumulative loss of outer hair cells in the cochlea (predominantly basal turn, responsible for high-frequency hearing). Key features: bilateral, symmetric, high-frequency SNHL, no air-bone gap. Management per NICE NG98: referral to audiology for bilateral digital hearing aids. Hearing aids improve quality of life significantly and reduce risk of social isolation and cognitive decline.\n\nOption A (Conductive hearing loss from otosclerosis) is INCORRECT because otosclerosis causes conductive hearing loss at low frequencies with a characteristic Carhart notch at 2000 Hz and an air-bone gap on audiogram (bone conduction better than air conduction). Otosclerosis typically presents in younger women.\n\nOption B (Unilateral acoustic neuroma) is INCORRECT because acoustic neuroma (vestibular schwannoma) causes asymmetric (typically unilateral) SNHL, often with associated tinnitus and/or vertigo. The bilateral symmetric pattern here is inconsistent with acoustic neuroma.\n\nOption D (Mixed hearing loss from COME) is INCORRECT because chronic otitis media with effusion causes conductive hearing loss (air-bone gap present) with flat or gently sloping audiogram, not the high-frequency SNHL pattern of presbycusis.\n\nOption E (Noise-induced hearing loss) is INCORRECT because noise-induced SNHL characteristically shows a \"4000 Hz notch\" (isolated dip at 4 kHz) with recovery at higher frequencies. The progressive downsloping loss without a notch in this 72-year-old is more consistent with presbycusis, though an occupational history is relevant."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "failure-to-thrive.jpg",
+    "label": "Failure To Thrive",
+    "specialty": "Paediatrics",
+    "type": "Growth Chart",
+    "vignette": "",
+    "stem": "A 3-year-old boy is referred by his GP with faltering growth (previously called failure to thrive). The growth chart shown demonstrates his weight was on the 50th centile at birth and 6 months, but has progressively fallen through centiles \u2014 now tracking below the 2nd centile at age 3 years. He has chronic diarrhoea, abdominal distension, and was miserable. He eats poorly. His parents are of normal height. What is the most appropriate initial investigation?",
+    "options": [
+      "Bone age X-ray to assess growth potential",
+      "Karyotype analysis to exclude Turner syndrome",
+      "Full blood count, coeliac serology (anti-tTG IgA), and IgA level",
+      "Growth hormone stimulation test",
+      "Renal function, urine dipstick and culture"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Full blood count, coeliac serology (anti-tTG IgA), and IgA level",
+    "explanation": "This 3-year-old has organic faltering growth with a crossed centile pattern (downward deviation across centiles), diarrhoea, abdominal distension, and irritability \u2014 a classic presentation of coeliac disease.\n\nOption C (FBC, anti-tTG IgA, and serum IgA level) is CORRECT per NICE NG20 and NICE NG75. Coeliac disease is the most common organic cause of faltering growth with GI symptoms in this age group. The anti-tTG IgA is the primary screening test; total IgA is measured simultaneously as IgA deficiency (present in 2\u20133% of coeliac patients) causes false-negative anti-tTG IgA results. FBC checks for iron deficiency anaemia (a common associated finding in coeliac disease). If anti-tTG IgA >10\u00d7 upper limit of normal AND HLA-DQ2/DQ8 positive, diagnosis can be made without duodenal biopsy in children.\n\nOption A (Bone age X-ray) is INCORRECT as the first investigation. Bone age is useful for constitutional growth delay or growth hormone deficiency, where there is consistent short stature without GI symptoms or centile crossing. This child has clear organic symptoms warranting coeliac investigation first.\n\nOption B (Karyotype for Turner syndrome) is INCORRECT because Turner syndrome causes short stature in girls, not boys. This patient is male.\n\nOption D (Growth hormone stimulation test) is INCORRECT as first-line because GH deficiency is associated with proportionate short stature, reduced growth velocity, and normal GI findings \u2014 not the GI symptoms and centile crossing seen here.\n\nOption E (Renal function and urine culture) is INCORRECT as the first-line investigation, though chronic renal failure can cause faltering growth. The dominant GI features here point to a GI cause, making coeliac disease the primary diagnosis to exclude."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "ctg-late-decelerations.jpg",
+    "label": "Ctg Late Decelerations",
+    "specialty": "Obstetrics & Gynaecology",
+    "type": "CTG",
+    "vignette": "",
+    "stem": "A 29-year-old primigravida at 39 weeks gestation is in active labour. She has pre-eclampsia with BP 155/98 mmHg on labetalol. The CTG shown demonstrates a baseline fetal heart rate of 155 bpm, reduced variability (<5 bpm for >90 minutes), recurrent late decelerations (decelerations beginning after the peak of each contraction and returning to baseline after the contraction ends), and a rising baseline. The woman is 6 cm dilated. What is the most appropriate management?",
+    "options": [
+      "Continue monitoring and reassess in 2 hours",
+      "Augmentation with IV oxytocin to expedite labour",
+      "Immediate category 1 caesarean section (decision-to-delivery <30 minutes)",
+      "Fetal blood sampling (FBS) to assess fetal scalp pH",
+      "Change maternal position to left lateral, stop oxytocin, and give high-flow oxygen"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Immediate category 1 caesarean section (decision-to-delivery <30 minutes)",
+    "explanation": "This CTG shows pathological features indicating acute fetal compromise: recurrent late decelerations (uteroplacental insufficiency), reduced variability <5 bpm for >90 minutes, and a rising baseline \u2014 this is a pathological CTG requiring immediate delivery.\n\nOption C (Immediate category 1 caesarean section \u2014 <30 minutes) is CORRECT per NICE CG190 and FIGO CTG interpretation guidelines. Late decelerations with reduced variability and a rising baseline in a pre-eclamptic mother constitute a pathological CTG requiring immediate action. The combination of reduced variability and repetitive late decelerations is a category 1 indication (immediate threat to fetal or maternal life). At 6 cm dilation, caesarean section is the fastest route to delivery. FBS would be contraindicated in pre-eclampsia as the mother cannot safely flex for the procedure under these circumstances.\n\nOption A (Continue monitoring for 2 hours) is INCORRECT because pathological CTG changes (late decelerations with reduced variability) cannot be watched for 2 hours. Fetal acidosis progresses rapidly and permanent neurological injury can result from delay.\n\nOption B (Augment with oxytocin) is INCORRECT because oxytocin increases uterine contraction frequency/amplitude, reducing uteroplacental blood flow further and worsening late decelerations. Oxytocin must be stopped, not started, in this situation.\n\nOption D (Fetal blood sampling) is INCORRECT in this scenario because the CTG shows multiple pathological features (late decels + reduced variability + rising baseline) \u2014 immediate delivery is indicated without FBS. FBS is appropriate for equivocal CTG findings.\n\nOption E (Left lateral, stop oxytocin, O\u2082) is INCORRECT as the definitive response. These are temporising measures in acute decelerations (cord compression) but do not address persistent pathological CTG from uteroplacental insufficiency, which requires immediate delivery."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "dress-syndrome.jpg",
+    "label": "Dress Syndrome",
+    "specialty": "Dermatology",
+    "type": "Histology",
+    "vignette": "",
+    "stem": "A 38-year-old man with epilepsy developed a widespread morbilliform rash 4 weeks after starting carbamazepine. He now has fever (38.9\u00b0C), facial oedema, cervical lymphadenopathy, and hepatomegaly. The blood film shown demonstrates marked peripheral eosinophilia with atypical lymphocytes. FBC: WBC 18 \u00d7 10\u2079/L, eosinophils 3.2 \u00d7 10\u2079/L. ALT is 380 IU/L. What does this blood film most likely demonstrate, and what is the most important immediate management?",
+    "options": [
+      "Infectious mononucleosis \u2014 test for EBV antibodies and manage conservatively",
+      "Eosinophilia consistent with DRESS syndrome \u2014 immediately stop carbamazepine and start high-dose oral prednisolone",
+      "Hypereosinophilic syndrome \u2014 start imatinib",
+      "Atopic dermatitis exacerbation \u2014 topical corticosteroids and antihistamines",
+      "Leukaemia \u2014 bone marrow biopsy urgently"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Eosinophilia consistent with DRESS syndrome \u2014 immediately stop carbamazepine and start high-dose oral prednisolone",
+    "explanation": "The blood film shows eosinophilia with atypical lymphocytes in a patient with fever, rash, facial oedema, lymphadenopathy, and hepatitis starting 4 weeks after carbamazepine \u2014 this is the classic presentation of DRESS syndrome (Drug Reaction with Eosinophilia and Systemic Symptoms).\n\nOption B (DRESS syndrome \u2014 stop carbamazepine + high-dose oral prednisolone) is CORRECT. DRESS is a potentially life-threatening drug hypersensitivity reaction characterised by: skin rash (often morbilliform), fever, lymphadenopathy, facial oedema, internal organ involvement (hepatitis, nephritis, pneumonitis), and eosinophilia/atypical lymphocytes. RegiSCAR score confirms diagnosis. Aromatic antiepileptics (carbamazepine, phenytoin, lamotrigine) are a common cause. Immediate drug withdrawal is essential; systemic corticosteroids (prednisolone 1 mg/kg) reduce inflammation and organ damage. The reaction can persist or worsen weeks after drug cessation.\n\nOption A (Infectious mononucleosis) is INCORRECT because EBV causes fever, lymphadenopathy, and atypical lymphocytes \u2014 but without eosinophilia and specifically without the temporal relationship to a new drug. Hepatitis occurs in EBV, but the 4-week drug timeline and eosinophilia point to DRESS.\n\nOption C (Hypereosinophilic syndrome) is INCORRECT because HES requires eosinophils >1.5 \u00d7 10\u2079/L for >6 months with end-organ damage in the absence of an identifiable cause. Here the cause is clearly carbamazepine-induced DRESS.\n\nOption D (Atopic dermatitis exacerbation) is INCORRECT because atopic dermatitis does not cause systemic features of fever, lymphadenopathy, hepatitis, and eosinophilia. This is not an atopic reaction.\n\nOption E (Leukaemia) is INCORRECT because leukaemia causes anaemia, thrombocytopaenia, and blast cells on blood film. The clinical context \u2014 drug exposure, rash, organ involvement \u2014 makes DRESS the correct diagnosis."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "hearing-loss.jpg",
+    "label": "Hearing Loss",
+    "specialty": "ENT",
+    "type": "Audiogram",
+    "vignette": "",
+    "stem": "A 45-year-old woman presents with a 2-year history of progressive bilateral hearing loss, worse on the left. She reports no tinnitus, ear discharge, or vertigo. Otoscopy shows intact tympanic membranes bilaterally with a normal light reflex on the right and a slightly dull reflex on the left. The audiogram shown demonstrates the pattern above. What type of hearing loss does this audiogram demonstrate, and what is the most likely underlying diagnosis?",
+    "options": [
+      "Sensorineural hearing loss \u2014 most likely presbycusis",
+      "Conductive hearing loss \u2014 most likely otosclerosis",
+      "Mixed hearing loss \u2014 most likely chronic suppurative otitis media",
+      "Sensorineural hearing loss \u2014 most likely noise-induced hearing loss",
+      "Conductive hearing loss \u2014 most likely acoustic neuroma"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Conductive hearing loss \u2014 most likely otosclerosis",
+    "explanation": "The audiogram shows reduced air conduction (AC) thresholds in both ears (hearing loss present) with normal bone conduction (BC) thresholds at 0 dB HL. This air-bone gap \u2014 where AC is impaired but BC is preserved \u2014 is the hallmark of conductive hearing loss. The pattern is bilateral and worse at all frequencies on the left.\n\nOption B (Conductive hearing loss \u2014 otosclerosis) is CORRECT. Otosclerosis is the most common cause of progressive bilateral conductive hearing loss in adults aged 30\u201350, more common in women. It involves abnormal bone remodelling fixing the stapes footplate in the oval window, preventing transmission of sound vibrations. BC is preserved because the cochlea is unaffected. Classic features: bilateral, progressive, often worse in one ear, no discharge or vertigo, normal otoscopy (or Schwartze sign \u2014 flamingo pink blush through tympanic membrane). Treatment: surgical stapedectomy or hearing aids.\n\nOption A (Sensorineural \u2014 presbycusis) is INCORRECT. Presbycusis causes sensorineural hearing loss: both AC and BC are reduced equally, with no air-bone gap. It also typically shows high-frequency loss first.\n\nOption C (Mixed hearing loss) is INCORRECT. Mixed hearing loss would show both AC and BC reduced, with AC worse than BC. Here, BC is completely normal.\n\nOption D (Sensorineural \u2014 noise-induced) is INCORRECT. Noise-induced hearing loss is sensorineural, characterised by a 4 kHz notch on audiogram with equal AC and BC reduction.\n\nOption E (Acoustic neuroma) is INCORRECT. Acoustic neuroma (vestibular schwannoma) causes unilateral sensorineural hearing loss, typically with tinnitus and sometimes vertigo. It does not produce a conductive pattern with air-bone gap."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "lbbb.jpg",
+    "label": "Lbbb",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 67-year-old man with known heart failure presents with sudden-onset chest pain and dyspnoea. His ECG shows broad QRS complexes (>120 ms) with a dominant S wave in V1, broad notched R wave in V5\u2013V6, and discordant ST changes. This is a new ECG finding compared to 6 months ago. What is the significance of this finding?",
+    "options": [
+      "New LBBB in the context of chest pain is equivalent to STEMI and requires urgent reperfusion",
+      "LBBB is a normal finding in elderly patients and requires no action",
+      "LBBB indicates left ventricular hypertrophy \u2014 start antihypertensives",
+      "LBBB rules out myocardial infarction as the cause of chest pain",
+      "Rate-control medication should be started immediately"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "New LBBB in the context of chest pain is equivalent to STEMI and requires urgent reperfusion",
+    "explanation": "The ECG shows left bundle branch block (LBBB) \u2014 broad QRS >120 ms, dominant S in V1, notched R in lateral leads, and secondary ST/T changes. Crucially, this is NEW.\n\nOption A is CORRECT. New LBBB in the context of ischaemic symptoms is treated as a STEMI equivalent and triggers the same urgent reperfusion pathway (primary PCI) per NICE NG185 and ESC guidelines. LBBB masks the typical ST changes of MI, making diagnosis of co-existing infarction difficult using standard ECG criteria alone. The Sgarbossa criteria can help identify STEMI in LBBB.\n\nOption B is INCORRECT \u2014 new LBBB is never a normal finding to be dismissed.\n\nOption C is INCORRECT \u2014 LBBB morphology is distinct from LVH pattern (tall R waves, strain pattern).\n\nOption D is INCORRECT \u2014 LBBB does not rule out MI; it makes ECG diagnosis harder.\n\nOption E is INCORRECT \u2014 rate control is irrelevant here; the patient is in sinus rhythm with a conduction defect."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "svt.jpg",
+    "label": "Svt",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 32-year-old woman presents with sudden-onset palpitations and mild dizziness for 45 minutes. She is haemodynamically stable. Her ECG shows a narrow complex tachycardia at 185 bpm with no visible P waves. Vagal manoeuvres (Valsalva) have failed. What is the next most appropriate treatment?",
+    "options": [
+      "IV adenosine 6 mg rapid bolus",
+      "IV verapamil 5 mg",
+      "Synchronised DC cardioversion at 100 J",
+      "IV metoprolol 5 mg",
+      "IV digoxin loading dose"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "IV adenosine 6 mg rapid bolus",
+    "explanation": "This ECG shows supraventricular tachycardia (SVT) \u2014 narrow complex regular tachycardia at 185 bpm with absent P waves (likely concealed in QRS in AVNRT). The patient is haemodynamically stable.\n\nOption A is CORRECT. After failed vagal manoeuvres, IV adenosine 6 mg rapid IV bolus (followed by 12 mg if no response) is first-line pharmacological treatment for stable SVT per Resus UK and NICE. Adenosine blocks the AV node transiently, terminating re-entrant tachycardias. Warn the patient of transient chest tightness and flushing.\n\nOption B is INCORRECT \u2014 verapamil is an acceptable alternative but not first-line in the UK and should not be given if adenosine has been used or if broad complex tachycardia is possible.\n\nOption C is INCORRECT \u2014 DC cardioversion is reserved for haemodynamically unstable SVT.\n\nOption D is INCORRECT \u2014 IV metoprolol can terminate SVT but is slower acting and less effective than adenosine.\n\nOption E is INCORRECT \u2014 digoxin has a slow onset and is not used for acute SVT termination."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "pancoast-horner.jpg",
+    "label": "Pancoast Horner",
+    "specialty": "Respiratory",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 59-year-old male smoker presents with right shoulder pain radiating down the medial arm for 3 months. On examination, there is right-sided ptosis, miosis, and anhidrosis. His CXR shows an opacity at the right lung apex. What is the most likely diagnosis?",
+    "options": [
+      "Pancoast tumour with Horner's syndrome",
+      "Cervical disc herniation at C7\u2013T1",
+      "Brachial neuritis (Neuralgic amyotrophy)",
+      "Right-sided apical pneumonia",
+      "Subclavian artery aneurysm"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Pancoast tumour with Horner's syndrome",
+    "explanation": "The combination of apical lung mass, ipsilateral shoulder/arm pain (T1 nerve root), and Horner's syndrome (ptosis, miosis, anhidrosis \u2014 sympathetic chain involvement) is pathognomonic for a Pancoast tumour.\n\nOption A is CORRECT. A Pancoast tumour (superior sulcus tumour) is most commonly non-small cell lung cancer (squamous cell or adenocarcinoma) at the lung apex. It invades adjacent structures: lower brachial plexus (T1 \u2014 medial arm pain/weakness), sympathetic chain (Horner's syndrome), subclavian vessels, and ribs. It requires CT/PET staging and MRI for local invasion assessment.\n\nOption B is INCORRECT \u2014 cervical disc prolapse at C7\u2013T1 causes radiculopathy but does not cause Horner's syndrome or an apical lung mass.\n\nOption C is INCORRECT \u2014 neuralgic amyotrophy causes acute brachial plexus inflammation; it is self-limiting and does not cause an apical mass.\n\nOption D is INCORRECT \u2014 apical pneumonia typically presents with acute fever, does not cause Horner's syndrome, and resolves.\n\nOption E is INCORRECT \u2014 subclavian aneurysm may cause brachial symptoms but not Horner's + apical mass."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "meningococcal-septicaemia.jpg",
+    "label": "Meningococcal Septicaemia",
+    "specialty": "Infectious Diseases",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 4-year-old boy is brought to the ED by his parents. He has had a fever and vomiting for 6 hours and is now drowsy. On examination, a widespread non-blanching purpuric rash is found across the trunk and legs. The image shown is from his right leg. What is the immediate management?",
+    "options": [
+      "IV ceftriaxone 50 mg/kg immediately, before transfer to PICU",
+      "Take blood cultures first and await results before antibiotics",
+      "Lumbar puncture to confirm meningococcal disease",
+      "IV aciclovir for viral encephalitis",
+      "Observe for 4 hours and reassess"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "IV ceftriaxone 50 mg/kg immediately, before transfer to PICU",
+    "explanation": "The non-blanching purpuric rash in a febrile, unwell child is meningococcal septicaemia (Neisseria meningitidis) until proven otherwise. This is a life-threatening medical emergency.\n\nOption A is CORRECT. NICE CKS and NICE NG51 mandate immediate IV or IM benzylpenicillin (or IV ceftriaxone if available) WITHOUT waiting for investigations. Antibiotics must not be delayed for blood cultures or LP in a critically ill child. Transfer to PICU/HDU is required urgently.\n\nOption B is INCORRECT \u2014 NEVER delay antibiotics waiting for blood cultures in suspected meningococcal disease. Mortality risk is very high without immediate treatment.\n\nOption C is INCORRECT \u2014 lumbar puncture is contraindicated in a haemodynamically unstable patient with a coagulopathy/petechial rash until stabilised.\n\nOption D is INCORRECT \u2014 aciclovir would be considered for encephalitis (herpes), not septicaemia with purpuric rash.\n\nOption E is INCORRECT \u2014 a child with non-blanching purpura and deteriorating consciousness requires immediate treatment, not watchful waiting."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "erythema-infectiosum.jpg",
+    "label": "Erythema Infectiosum",
+    "specialty": "Infectious Diseases",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 7-year-old child presents with a bright red facial rash on both cheeks giving a \"slapped\" appearance, followed by a lacy reticular rash on the arms. She has been mildly febrile but is now apyrexial and well. Her mother is 24 weeks pregnant. What is the most important concern?",
+    "options": [
+      "Parvovirus B19 infection \u2014 urgent referral of the pregnant mother to obstetrics",
+      "Rubella \u2014 admit the child for isolation",
+      "Scarlet fever \u2014 start oral phenoxymethylpenicillin",
+      "Roseola infantum \u2014 reassure mother",
+      "Kawasaki disease \u2014 check for coronary artery aneurysm"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Parvovirus B19 infection \u2014 urgent referral of the pregnant mother to obstetrics",
+    "explanation": "The clinical picture \u2014 bilateral bright red facial rash (\"slapped cheeks\") followed by a lacy reticular rash on the limbs, in an otherwise well child \u2014 is classic of erythema infectiosum (Fifth disease), caused by Parvovirus B19.\n\nOption A is CORRECT. While erythema infectiosum is benign and self-limiting in healthy children, Parvovirus B19 in pregnancy can cause hydrops fetalis (severe foetal anaemia) especially before 20 weeks gestation. A 24-week-pregnant mother exposed to parvovirus B19 requires urgent obstetric referral for maternal serology (IgM/IgG) and foetal surveillance by ultrasound.\n\nOption B is INCORRECT \u2014 rubella causes a different rash (pink maculopapular, starting on face, spreading caudally) with postauricular lymphadenopathy.\n\nOption C is INCORRECT \u2014 scarlet fever has a sandpaper-textured diffuse rash with circumoral pallor and strawberry tongue, not isolated facial erythema.\n\nOption D is INCORRECT \u2014 roseola (HHV-6) causes high fever then rash on the trunk after fever resolves \u2014 different pattern.\n\nOption E is INCORRECT \u2014 Kawasaki requires 5+ days of fever plus 4 other criteria."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "scabies.jpg",
+    "label": "Scabies",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 22-year-old university student presents with a 4-week history of intense nocturnal itch affecting his hands, wrists, and genital area. His flatmate has similar symptoms. The image shows linear burrows between the fingers. What is the most appropriate treatment?",
+    "options": [
+      "Permethrin 5% cream \u2014 applied to entire body from neck down, left on for 8\u201312 hours",
+      "Topical hydrocortisone cream for 2 weeks",
+      "Oral antihistamine only for symptom relief",
+      "Malathion 0.5% lotion \u2014 applied only to affected areas",
+      "Systemic ivermectin only \u2014 topical treatments are ineffective"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Permethrin 5% cream \u2014 applied to entire body from neck down, left on for 8\u201312 hours",
+    "explanation": "Linear burrows (pathognomonic of Sarcoptes scabiei mite tunnelling), nocturnal itch, interdigital and genital distribution, and household contact with similar symptoms confirms scabies.\n\nOption A is CORRECT. Permethrin 5% cream is the recommended first-line treatment in the UK (NICE CKS). It is applied to the entire body surface from the neck downwards (including under fingernails, genitalia, skin folds), left for 8\u201312 hours, then washed off. A repeat application after 7 days is recommended. All household contacts must be treated simultaneously. Wash all bedding and clothing at 60\u00b0C.\n\nOption B is INCORRECT \u2014 topical steroids treat itch but not the underlying mite infestation.\n\nOption C is INCORRECT \u2014 antihistamines address itch (antihistamine-insensitive in scabies) but do not eradicate the mite.\n\nOption D is INCORRECT \u2014 malathion is second-line (first-line in pregnancy as permethrin avoided). It should also be applied to the whole body, not just affected areas.\n\nOption E is INCORRECT \u2014 oral ivermectin (unlicensed in UK) is used for crusted (Norwegian) scabies or institutional outbreaks, not routine scabies."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "herpes-zoster-dermatomal.jpg",
+    "label": "Herpes Zoster Dermatomal",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 65-year-old man presents with severe burning pain in a band across the left side of his abdomen followed 3 days later by a vesicular eruption in the same distribution, not crossing the midline. He is otherwise well and immunocompetent. He is seen on day 5 of the rash. Should antiviral therapy be started?",
+    "options": [
+      "No \u2014 antiviral treatment is most effective within 72 hours; at day 5 with mild disease it offers minimal benefit. Focus on pain management.",
+      "Yes \u2014 start IV aciclovir immediately",
+      "Yes \u2014 start oral aciclovir 800 mg five times daily regardless of timing",
+      "No \u2014 antivirals are only for immunocompromised patients",
+      "Yes \u2014 start oral prednisolone to reduce post-herpetic neuralgia"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "No \u2014 antiviral treatment is most effective within 72 hours; at day 5 with mild disease it offers minimal benefit. Focus on pain management.",
+    "explanation": "This is herpes zoster (shingles) \u2014 unilateral dermatomal vesicular rash following a prodrome of pain. The dermatomal distribution not crossing the midline is pathognomonic.\n\nOption A is CORRECT. Antiviral therapy (aciclovir, valaciclovir, famciclovir) is most effective when started within 72 hours of rash onset. After 72 hours in an otherwise well, immunocompetent patient with mild-moderate disease, the benefit is minimal. Focus should shift to pain management: paracetamol, NSAIDs, and if needed, amitriptyline or gabapentin for neuropathic pain (post-herpetic neuralgia prevention).\n\nOption B is INCORRECT \u2014 IV aciclovir is reserved for immunocompromised patients, disseminated disease, ophthalmic or Ramsay Hunt zoster.\n\nOption C is INCORRECT \u2014 starting oral antivirals after day 5 in mild uncomplicated zoster in an immunocompetent adult is not recommended.\n\nOption D is INCORRECT \u2014 antivirals ARE recommended in immunocompromised patients regardless of timing.\n\nOption E is INCORRECT \u2014 oral steroids do not prevent post-herpetic neuralgia and may cause immunosuppression."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "rheumatoid-arthritis.jpg",
+    "label": "Rheumatoid Arthritis",
+    "specialty": "Rheumatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 52-year-old woman presents with an 18-month history of symmetrical small joint pain, early morning stiffness lasting over 1 hour, and bilateral hand deformities. The image shows ulnar deviation of the fingers at the MCPJs, swan neck deformities, and subluxation. She is RF and anti-CCP positive. What is the most appropriate initial disease-modifying treatment?",
+    "options": [
+      "Methotrexate (up to 25 mg/week) plus folic acid 5 mg once weekly",
+      "Prednisolone 40 mg daily as monotherapy",
+      "Hydroxychloroquine monotherapy",
+      "NSAIDs as sole disease-modifying treatment",
+      "Rituximab as first-line biologic"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Methotrexate (up to 25 mg/week) plus folic acid 5 mg once weekly",
+    "explanation": "The classic deformities of established rheumatoid arthritis (RA) \u2014 ulnar deviation, swan neck deformity, MCPJ subluxation \u2014 with symmetrical polyarthritis, prolonged morning stiffness, positive RF and anti-CCP confirm the diagnosis.\n\nOption A is CORRECT. NICE NG100 recommends methotrexate as the anchor DMARD (disease-modifying anti-rheumatic drug) in RA. It should be started as early as possible. Folic acid 5 mg once weekly (not on the same day as methotrexate) reduces side effects (mucositis, hepatotoxicity). The T2T (treat-to-target) strategy aims for remission or low disease activity.\n\nOption B is INCORRECT \u2014 oral steroids are used as short-term bridging therapy during disease flares, not as primary DMARD. Long-term steroid monotherapy causes significant harm.\n\nOption C is INCORRECT \u2014 hydroxychloroquine has a mild effect and is used in combination for very mild disease; it is not first-line for established seropositive RA with deformity.\n\nOption D is INCORRECT \u2014 NSAIDs reduce inflammation and pain but have no disease-modifying effect.\n\nOption E is INCORRECT \u2014 biologics (rituximab, anti-TNF agents) are second-line after failure of \u22652 conventional DMARDs."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "gout-img-sd-039.jpg",
+    "label": "Gout",
+    "specialty": "Rheumatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 58-year-old obese man presents with sudden onset severe pain, redness, and swelling of the right first metatarsophalangeal joint (podagra) that woke him from sleep. Serum urate is 520 \u03bcmol/L. The image shows the affected foot. He is on thiazide diuretics for hypertension. What is the most appropriate immediate treatment?",
+    "options": [
+      "Naproxen 500 mg twice daily or colchicine 500 mcg 2\u20134 times daily",
+      "Start allopurinol immediately to lower urate",
+      "Oral prednisolone 30\u201335 mg daily for 5 days",
+      "Joint aspiration and intravenous antibiotics",
+      "IV colchicine"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Naproxen 500 mg twice daily or colchicine 500 mcg 2\u20134 times daily",
+    "explanation": "Acute podagra \u2014 sudden, severe MTP joint pain, erythema, and tenderness in a middle-aged obese man on diuretics \u2014 is the classic presentation of gout (urate crystal deposition).\n\nOption A is CORRECT. First-line treatment for acute gout is an NSAID (e.g. naproxen, indomethacin) or colchicine 500 mcg 2\u20134 times daily. NICE CKS recommends choosing based on comorbidities \u2014 NSAIDs are contraindicated in renal impairment/PUD; colchicine is preferred then. A short course (7\u201310 days) relieves the attack.\n\nOption B is INCORRECT \u2014 allopurinol (urate-lowering therapy) must NOT be started during an acute attack as it can prolong or worsen the flare by mobilising urate crystals. Start 2\u20134 weeks after the acute episode settles.\n\nOption C is INCORRECT \u2014 prednisolone is an appropriate second-line option if NSAIDs and colchicine are both contraindicated; not first-line.\n\nOption D is INCORRECT \u2014 joint aspiration is appropriate to confirm diagnosis (urate crystals) if uncertain, but antibiotics are only for septic arthritis.\n\nOption E is INCORRECT \u2014 IV colchicine is not available in the UK and has a narrow therapeutic index."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "peritonsillar-abscess.jpg",
+    "label": "Peritonsillar Abscess",
+    "specialty": "Surgery",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 22-year-old man presents with 4 days of severe worsening sore throat, inability to open his mouth fully (trismus), muffled \"hot potato\" voice, and dysphagia. The image shows unilateral tonsillar swelling with deviation of the uvula to the right, and a bulging of the left soft palate. What is the correct management?",
+    "options": [
+      "Needle aspiration of the abscess plus IV amoxicillin/metronidazole",
+      "Oral amoxicillin and discharge",
+      "Immediate tonsillectomy under general anaesthetic",
+      "Systemic antifungal \u2014 this is oral candidiasis",
+      "Reassurance \u2014 this is severe tonsillitis that will resolve with rest"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Needle aspiration of the abscess plus IV amoxicillin/metronidazole",
+    "explanation": "The unilateral tonsillar swelling with uvular deviation, trismus, and muffled voice with dysphagia is classic peritonsillar abscess (quinsy) \u2014 a collection of pus between the tonsillar capsule and superior constrictor muscle.\n\nOption A is CORRECT. Treatment requires both drainage and antibiotics. Needle aspiration (or incision and drainage) is performed under local anaesthetic \u2014 this immediately relieves symptoms and confirms pus. IV/oral co-amoxiclav or amoxicillin + metronidazole covers Streptococcus and anaerobes. Hospital admission is appropriate for IV fluids and analgesia if unable to swallow.\n\nOption B is INCORRECT \u2014 oral antibiotics alone do not drain the abscess; aspiration/I&D is essential for cure.\n\nOption C is INCORRECT \u2014 interval (elective) tonsillectomy is considered after \u22652 quinsy episodes, not as emergency treatment of an acute abscess with trismus.\n\nOption D is INCORRECT \u2014 oral candidiasis presents with white plaques, not tonsillar swelling with uvular deviation.\n\nOption E is INCORRECT \u2014 peritonsillar abscess will not resolve without drainage; airway compromise can occur if untreated."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "exudative-tonsillitis.jpg",
+    "label": "Exudative Tonsillitis",
+    "specialty": "Surgery",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 19-year-old woman presents with a 4-day history of severe sore throat, difficulty swallowing, fever (38.5\u00b0C), and extreme fatigue. Examination reveals bilateral tonsillar enlargement with white exudate, cervical lymphadenopathy, and splenomegaly. The image shows the oropharynx. Monospot test is positive. What is the most important drug to avoid?",
+    "options": [
+      "Amoxicillin \u2014 causes a widespread maculopapular rash in EBV infection",
+      "Paracetamol \u2014 worsens fever in EBV",
+      "Ibuprofen \u2014 contraindicated in all throat infections",
+      "Aciclovir \u2014 contraindicated in glandular fever",
+      "Prednisolone \u2014 never used in EBV infection"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Amoxicillin \u2014 causes a widespread maculopapular rash in EBV infection",
+    "explanation": "The clinical picture \u2014 bilateral exudative tonsillitis, massive cervical lymphadenopathy, splenomegaly, extreme fatigue, and positive monospot \u2014 is diagnostic of infectious mononucleosis (glandular fever) caused by Epstein-Barr virus (EBV).\n\nOption A is CORRECT. Amoxicillin (and ampicillin) MUST be avoided in suspected EBV/glandular fever because it causes a widespread maculopapular rash in ~90\u2013100% of cases (the amoxicillin-EBV rash). This is the most important prescribing pitfall. Management is supportive: adequate hydration, analgesia (paracetamol/ibuprofen), rest, and advice about splenomegaly (avoid contact sports for 4\u20136 weeks due to splenic rupture risk).\n\nOption B is INCORRECT \u2014 paracetamol is appropriate and safe for symptom relief.\n\nOption C is INCORRECT \u2014 ibuprofen is appropriate unless there are contraindications (renal disease, asthma). It is not specifically contraindicated in EBV.\n\nOption D is INCORRECT \u2014 aciclovir is not effective against EBV and is not contraindicated per se; it just has no benefit.\n\nOption E is INCORRECT \u2014 prednisolone is occasionally used for severe tonsillar swelling threatening the airway."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "copd-emphysema.jpg",
+    "label": "Copd Emphysema",
+    "specialty": "Respiratory",
+    "type": "CXR",
+    "vignette": "",
+    "stem": "A 68-year-old man with a 45 pack-year smoking history presents with a 6-month history of progressive dyspnoea on exertion and a chronic productive cough. His FEV1/FVC ratio is 0.58. The chest X-ray above is obtained. Which of the following radiological findings is most consistent with the diagnosis of COPD/emphysema?",
+    "options": [
+      "Bilateral hilar lymphadenopathy",
+      "Hyperinflated lungs with flattened hemidiaphragms",
+      "Unilateral pleural effusion",
+      "Bilateral interstitial shadowing in the lower zones",
+      "Cardiomegaly with upper lobe blood diversion"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Hyperinflated lungs with flattened hemidiaphragms",
+    "explanation": "The CXR demonstrates the hallmark features of COPD/emphysema: hyperinflated lung fields with increased lucency (air trapping) and flattened hemidiaphragms sitting below the anterior end of the 6th rib.\n\nOption A (Bilateral hilar lymphadenopathy) is INCORRECT \u2014 this pattern suggests sarcoidosis or lymphoma, not COPD.\n\nOption B (Hyperinflated lungs with flattened hemidiaphragms) is CORRECT. Air trapping from loss of elastic recoil pushes the diaphragms flat and increases the AP diameter, giving the classic barrel chest appearance. Diaphragm flattening below the 6th anterior rib is the key diagnostic sign.\n\nOption C (Unilateral pleural effusion) is INCORRECT \u2014 not a typical feature of COPD; should prompt investigation for another cause.\n\nOption D (Bilateral basal interstitial shadowing) is INCORRECT \u2014 this pattern is seen in pulmonary fibrosis or heart failure, not COPD.\n\nOption E (Cardiomegaly with upper lobe diversion) is INCORRECT \u2014 this is the CXR pattern of left ventricular failure.\n\nClinical pearl: Do not confuse the increased lucency of emphysema with a pneumothorax \u2014 in emphysema, lung markings extend symmetrically to the periphery on both sides."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "oral-candidiasis.jpg",
+    "label": "Oral Candidiasis",
+    "specialty": "Infectious Diseases",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 58-year-old man with HIV (CD4 count 85 cells/\u00b5L, not on antiretrovirals) presents with a 2-week history of a sore mouth and difficulty swallowing. Examination reveals white curd-like plaques on the tongue and buccal mucosa that can be scraped off, leaving a red bleeding base. The clinical photograph above is shown. What is the most appropriate first-line treatment?",
+    "options": [
+      "Nystatin oral suspension 100,000 units/mL, 1 mL four times daily for 7 days",
+      "Fluconazole 150 mg oral single dose",
+      "Fluconazole 50 mg orally once daily for 7\u201314 days",
+      "Clotrimazole 1% oral gel four times daily for 14 days",
+      "IV amphotericin B"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Fluconazole 50 mg orally once daily for 7\u201314 days",
+    "explanation": "This clinical photograph shows oral candidiasis (thrush): white curd-like plaques on the tongue that are characteristic of Candida albicans infection. The plaques scrape off to reveal an erythematous, bleeding base \u2014 distinguishing thrush from leukoplakia (which cannot be scraped off).\n\nOption A (Nystatin suspension) is INCORRECT as first-line in immunocompromised patients \u2014 nystatin is appropriate for mild disease in immunocompetent patients but is less effective in those with significant immunosuppression (CD4 <200).\n\nOption B (Fluconazole 150 mg single dose) is INCORRECT \u2014 a single dose is used for vaginal candidiasis; oropharyngeal candidiasis in immunocompromised patients requires a 7\u201314 day course.\n\nOption C (Fluconazole 50 mg once daily for 7\u201314 days) is CORRECT. This is the NICE/BNF recommended first-line systemic treatment for oropharyngeal candidiasis in immunocompromised patients. A longer course is used for HIV patients with low CD4 counts.\n\nOption D (Clotrimazole gel) may be used in mild disease in immunocompetent patients but is insufficient here given the degree of immunosuppression and dysphagia suggesting oesophageal involvement.\n\nOption E (IV amphotericin B) is reserved for systemic/invasive candidiasis or fluconazole-resistant disease.\n\nClinical pearl: Oropharyngeal candidiasis in an adult should prompt investigation for underlying immunosuppression \u2014 HIV, haematological malignancy, prolonged corticosteroid use, or diabetes."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "onychomycosis.jpg",
+    "label": "Onychomycosis",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 64-year-old man with type 2 diabetes presents with a 9-month history of a thickened, yellowed, crumbling toenail. The clinical photograph is shown. Nail clippings confirm Trichophyton rubrum on mycology. He takes metformin and simvastatin. What is the most appropriate treatment?",
+    "options": [
+      "Topical amorolfine 5% nail lacquer once weekly for 6 months",
+      "Oral terbinafine 250 mg once daily for 6 weeks",
+      "Oral terbinafine 250 mg once daily for 12\u201316 weeks",
+      "Oral itraconazole 200 mg twice daily for 7 days per month for 3 months (pulse)",
+      "No treatment; reassure and advise foot hygiene"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Oral terbinafine 250 mg once daily for 12\u201316 weeks",
+    "explanation": "This image shows onychomycosis (tinea unguium): subungual hyperkeratosis with yellow-white discolouration and partial onycholysis, confirmed by positive mycology for Trichophyton rubrum \u2014 the most common causative organism.\n\nOption A (Topical amorolfine alone) is INCORRECT for established toenail infection with matrix involvement \u2014 topical agents cannot penetrate the nail plate sufficiently and are only suitable for mild distal disease without matrix involvement.\n\nOption B (Terbinafine 6 weeks) is the correct duration for fingernail onychomycosis, not toenails.\n\nOption C (Terbinafine 250 mg daily for 12\u201316 weeks) is CORRECT. This is the NICE/BNF first-line treatment for dermatophyte toenail onychomycosis. Check LFTs before starting \u2014 terbinafine is hepatotoxic. A key PLAB distinction: fingernails need 6 weeks, toenails need 12\u201316 weeks.\n\nOption D (Itraconazole pulse) is an alternative for patients intolerant of terbinafine, or for non-dermatophyte/Candida infections.\n\nOption E (No treatment) may be appropriate for asymptomatic elderly patients without comorbidities, but is incorrect here \u2014 diabetes increases the risk of secondary bacterial infection, cellulitis, and spread.\n\nClinical pearl: Always confirm with mycology before prescribing systemic antifungals. Psoriatic nail disease can closely mimic onychomycosis."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "atrial-flutter.jpg",
+    "label": "Atrial Flutter",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 61-year-old man with hypertension and mild mitral regurgitation presents with a 4-hour history of palpitations and mild breathlessness. BP 128/76 mmHg, HR 150 bpm regular, SpO\u2082 97%. The ECG above is shown. What is the most likely diagnosis and the most appropriate initial management?",
+    "options": [
+      "Atrial fibrillation \u2014 metoprolol 5 mg IV",
+      "Atrial flutter with 2:1 block \u2014 bisoprolol 5 mg orally for rate control",
+      "Atrial flutter with 2:1 block \u2014 immediate DC cardioversion",
+      "SVT \u2014 adenosine 6 mg IV bolus",
+      "Ventricular tachycardia \u2014 amiodarone 300 mg IV"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Atrial flutter with 2:1 block \u2014 bisoprolol 5 mg orally for rate control",
+    "explanation": "This ECG shows classic atrial flutter: regular sawtooth flutter waves (F waves) at ~300 bpm, best seen in leads II, III, aVF and V1, with a ventricular rate of ~150 bpm due to 2:1 AV conduction. A regular tachycardia at exactly 150 bpm should always raise suspicion for atrial flutter with 2:1 block.\n\nOption A (AF with metoprolol IV) is INCORRECT \u2014 AF produces an irregularly irregular rhythm with no organised atrial activity, not the regular sawtooth pattern seen here.\n\nOption B (Atrial flutter 2:1 \u2014 bisoprolol orally) is CORRECT for this haemodynamically stable patient. Rate control with a beta-blocker (or rate-limiting calcium channel blocker such as diltiazem or verapamil) is first-line per NICE NG196 for stable atrial flutter.\n\nOption C (DC cardioversion) is indicated if haemodynamically unstable (hypotension, pulmonary oedema, syncope) or for elective rhythm control after anticoagulation assessment \u2014 not first-line in a stable patient.\n\nOption D (Adenosine for SVT) is INCORRECT as definitive treatment. Adenosine increases AV block and can transiently unmask flutter waves (useful diagnostically) but does not terminate flutter.\n\nOption E (Amiodarone for VT) is INCORRECT \u2014 VT produces a broad complex tachycardia; this ECG shows narrow complexes.\n\nClinical pearl: HR of exactly 150 bpm = atrial flutter with 2:1 block until proven otherwise. Consider anticoagulation assessment in the same way as AF."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "lvh.jpg",
+    "label": "Lvh",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "",
+    "stem": "A 58-year-old man with a 15-year history of poorly controlled hypertension attends for routine review. BP today is 168/102 mmHg. He is asymptomatic. The ECG above is obtained. Which of the following best describes the finding and its clinical significance?",
+    "options": [
+      "Right ventricular hypertrophy \u2014 suggests cor pulmonale; arrange CTPA",
+      "Left ventricular hypertrophy \u2014 confirms hypertensive end-organ damage; intensify antihypertensive therapy",
+      "Left bundle branch block \u2014 urgent cardiology referral for pacing assessment",
+      "Anterior STEMI \u2014 call the cath lab immediately",
+      "Normal ECG variant \u2014 no action required"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Left ventricular hypertrophy \u2014 confirms hypertensive end-organ damage; intensify antihypertensive therapy",
+    "explanation": "This ECG shows left ventricular hypertrophy (LVH): tall R waves in lateral leads (I, aVL, V4\u2013V6), deep S waves in right precordial leads (V1\u2013V2), and a lateral strain pattern (ST depression with T-wave inversion in V5\u2013V6, I, aVL).\n\nDiagnostic voltage criteria:\n\u2022 Sokolow\u2013Lyon: S(V1) + R(V5 or V6) \u226535 mm\n\u2022 Cornell: R(aVL) + S(V3) \u226528 mm in men\n\nOption A (RVH) is INCORRECT \u2014 RVH shows tall R in V1, right axis deviation, and deep S in lateral leads \u2014 the opposite pattern.\n\nOption B (LVH \u2014 intensify treatment) is CORRECT. LVH is a NICE-defined marker of hypertensive end-organ damage, significantly increasing cardiovascular risk. It mandates intensification of antihypertensives targeting BP <130/80 mmHg and consideration of echocardiography.\n\nOption C (LBBB) is INCORRECT \u2014 LBBB requires broad QRS >120 ms with M-pattern in V5/V6; QRS here is narrow.\n\nOption D (Anterior STEMI) is INCORRECT \u2014 there is no ST elevation; the lateral ST depression is the LV strain pattern secondary to hypertrophy.\n\nOption E (Normal variant) is INCORRECT \u2014 voltage criteria are clearly exceeded.\n\nClinical pearl: LVH strain pattern (lateral ST depression/T-inversion) is frequently confused with lateral ischaemia \u2014 context is key: longstanding hypertension + voltage criteria = LVH strain."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "geographic-tongue.jpg",
+    "label": "Geographic Tongue",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 28-year-old woman attends her GP concerned about the appearance of her tongue, which she noticed 2 weeks ago. She reports mild sensitivity to spicy and acidic foods but no pain at rest, no fever, and no difficulty swallowing. She is otherwise well with no significant past medical history. Examination reveals the finding shown. What is the most appropriate management?",
+    "options": [
+      "Prescribe oral fluconazole for 7 days",
+      "Urgent 2-week-wait referral to oral surgery",
+      "Reassure and advise avoidance of known triggers",
+      "Take a tongue biopsy to exclude dysplasia",
+      "Prescribe topical corticosteroids (hydrocortisone oromucosal pellets)"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Reassure and advise avoidance of known triggers",
+    "explanation": "This image shows geographic tongue (benign migratory glossitis): irregularly shaped erythematous patches with white serpiginous borders on the dorsal tongue, representing areas of desquamated filiform papillae. The map-like pattern migrates over days to weeks.\n\nOption C is CORRECT. Geographic tongue is a benign, self-limiting inflammatory condition. No treatment is required. Management is reassurance plus avoidance of triggers (spicy/acidic food, alcohol, tobacco).\n\nOption A (Fluconazole) is INCORRECT \u2014 oral candidiasis presents as white pseudomembranous plaques that wipe off, leaving a raw red base. Geographic tongue has erythematous patches with fixed white borders and no removable coating.\n\nOption B (2WW referral) is INCORRECT \u2014 geographic tongue is benign. Red flags for oral cancer include indurated non-healing ulcers and persistent white/red patches (leukoplakia/erythroplakia) for >3 weeks. None are present here.\n\nOption D (Biopsy) is INCORRECT \u2014 biopsy is not indicated for classic geographic tongue without suspicious features.\n\nOption E (Topical corticosteroids) may reduce symptoms in severe symptomatic cases but is not first-line for a mildly symptomatic presentation.\n\nClinical pearl: Geographic tongue is associated with psoriasis and atopy. The key distinction from candidiasis \u2014 candidal plaques are white and removable; geographic tongue patches are smooth red areas that cannot be wiped off."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "cyanosis.jpg",
+    "label": "Cyanosis",
+    "specialty": "Respiratory",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 68-year-old man with a long history of COPD presents to the emergency department with worsening breathlessness over 3 days. He smokes 20 cigarettes/day. Examination of the hands reveals the finding shown. Oxygen saturation is 84% on air. What is the most appropriate immediate management?",
+    "options": [
+      "High-flow oxygen via non-rebreather mask at 15 L/min",
+      "Controlled oxygen therapy titrated to SpO\u2082 88\u201392%, with arterial blood gas monitoring",
+      "Salbutamol nebuliser only and reassess in 1 hour",
+      "Oral prednisolone 40 mg and discharge with community follow-up",
+      "Urgent CT pulmonary angiogram to exclude pulmonary embolism"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Controlled oxygen therapy titrated to SpO\u2082 88\u201392%, with arterial blood gas monitoring",
+    "explanation": "The image shows peripheral cyanosis: blue-purple discolouration of the nail beds and fingertips due to increased deoxygenated haemoglobin in peripheral capillaries.\n\nOption B is CORRECT. In known COPD (a CO\u2082-retaining condition), controlled oxygen therapy targeting SpO\u2082 88\u201392% is mandated. A subset of COPD patients have chronic hypercapnia and depend on their hypoxic drive for ventilation. Uncontrolled high-flow oxygen suppresses this drive, worsens hypercapnia, and precipitates type 2 respiratory failure. A Venturi mask at 24\u201328% FiO\u2082 is the delivery device of choice, with ABG to monitor CO\u2082.\n\nOption A (15 L/min high-flow O\u2082) is INCORRECT and potentially lethal in COPD \u2014 this is the standard approach for non-COPD patients (e.g. pneumonia, trauma) where target SpO\u2082 is 94\u201398%.\n\nOption C (Salbutamol only) is insufficient for SpO\u2082 84%.\n\nOption D (Oral prednisolone + discharge) is dangerous \u2014 this patient requires hospital admission.\n\nOption E (CTPA) is not the immediate priority; correct the acute hypoxaemia first.\n\nClinical pearl: The single highest-yield oxygen target distinction in PLAB \u2014 COPD = 88\u201392%; everyone else = 94\u201398%. Always check the diagnosis before reaching for the oxygen mask."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "herpes-labialis.jpg",
+    "label": "Herpes Labialis",
+    "specialty": "Infectious Diseases",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 22-year-old woman presents to her GP with a 2-day history of painful, tingling blisters on her upper lip. She reports a similar episode 6 months ago that resolved spontaneously. She is otherwise well with no fever. The appearance is shown. What is the most appropriate management?",
+    "options": [
+      "Oral aciclovir 200 mg five times daily for 5 days",
+      "Topical aciclovir 5% cream applied five times daily for 5 days",
+      "Oral fluconazole 150 mg single dose",
+      "Topical hydrocortisone 1% cream twice daily",
+      "Reassure \u2014 no treatment required; will resolve in 48 hours"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Topical aciclovir 5% cream applied five times daily for 5 days",
+    "explanation": "The image shows herpes labialis (cold sore): a cluster of painful vesicles on the vermilion border of the lip, caused by reactivation of latent HSV-1.\n\nOption B is CORRECT. NICE CKS recommends topical aciclovir 5% cream five times daily for 5 days as first-line treatment in an immunocompetent patient. Efficacy is greatest when started at the first sign of tingling (prodrome).\n\nOption A (Oral aciclovir) is reserved for severe or widespread HSV, immunocompromised patients, eczema herpeticum, or herpetic keratoconjunctivitis \u2014 not a straightforward cold sore.\n\nOption C (Fluconazole) is an antifungal \u2014 ineffective against HSV.\n\nOption D (Topical hydrocortisone) is CONTRAINDICATED in viral infections \u2014 steroids suppress local immunity and may worsen HSV spread.\n\nOption E (Reassure only) is INCORRECT \u2014 untreated cold sores take 7\u201310 days to resolve; topical aciclovir shortens duration and reduces symptoms.\n\nClinical pearl: The prodromal tingling before blisters appear is the optimal treatment window. Counsel patients to keep topical aciclovir at home and start it at first tingle."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "aphthous-ulcer.jpg",
+    "label": "Aphthous Ulcer",
+    "specialty": "ENT",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 19-year-old woman presents to her GP with a painful lesion on the inside of her lower lip for 4 days, shown above. She reports this is her third episode in 6 months. She has no systemic symptoms, no weight loss, and no diarrhoea. What is the most appropriate initial management?",
+    "options": [
+      "Topical chlorhexidine mouthwash and topical corticosteroid (hydrocortisone oromucosal pellet)",
+      "Oral aciclovir 200 mg five times daily for 5 days",
+      "Urgent 2-week-wait referral to oral surgery",
+      "Full blood count, B12, folate, ferritin, and anti-TTG antibodies",
+      "Topical aciclovir cream applied to the ulcer"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Topical chlorhexidine mouthwash and topical corticosteroid (hydrocortisone oromucosal pellet)",
+    "explanation": "The image shows a minor aphthous ulcer: a well-defined, round/oval shallow ulcer with a white/grey pseudomembranous base and an erythematous halo on the labial mucosa.\n\nOption A is CORRECT. First-line management per NICE CKS:\n\u2022 Topical chlorhexidine 0.2% mouthwash \u2014 reduces secondary infection and pain\n\u2022 Topical corticosteroid \u2014 hydrocortisone oromucosal 2.5 mg pellet four times daily (or beclometasone inhaler as mouthwash) \u2014 shortens healing time\n\nOption B (Oral aciclovir) is INCORRECT \u2014 aphthous ulcers are NOT caused by HSV. Herpetic ulcers are smaller, more numerous, preceded by vesicles, and occur on keratinised mucosa (hard palate, gingiva); aphthous ulcers occur on non-keratinised mucosa (labial, buccal, floor of mouth).\n\nOption C (2WW referral) is INCORRECT \u2014 red flags for oral cancer requiring urgent referral are: unexplained ulcer persisting >3 weeks, induration, associated lymphadenopathy, or risk factors (smoking, alcohol). None apply here.\n\nOption D (Bloods) is appropriate for recurrent aphthous ulcers to exclude underlying causes (iron, B12/folate deficiency, coeliac disease), but treatment should be initiated concurrently.\n\nOption E (Topical aciclovir) is INCORRECT \u2014 aciclovir is antiviral; aphthous ulcers have no viral aetiology.\n\nClinical pearl: Location is the key distinction \u2014 aphthous on non-keratinised (mobile) mucosa; herpetic on keratinised (fixed) mucosa such as the hard palate and attached gingiva."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "tinea-pedis.jpg",
+    "label": "Tinea Pedis",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 24-year-old male university student presents with a 3-week history of itchy, peeling, and macerated skin between his toes and on the sole of his foot, as shown. He uses a communal shower at his gym. There is no nail involvement. What is the first-line treatment?",
+    "options": [
+      "Topical clotrimazole 1% cream twice daily for 4 weeks",
+      "Oral terbinafine 250 mg once daily for 6 weeks",
+      "Topical hydrocortisone 1% cream twice daily for 2 weeks",
+      "Oral fluconazole 150 mg once weekly for 4 weeks",
+      "Topical fusidic acid cream twice daily for 7 days"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Topical clotrimazole 1% cream twice daily for 4 weeks",
+    "explanation": "The image shows tinea pedis (athlete's foot): scaling, maceration, and peeling of the interdigital web spaces and plantar surface, caused by dermatophyte fungi (most commonly Trichophyton rubrum).\n\nOption A is CORRECT. Topical antifungal is first-line for tinea pedis without nail involvement. NICE CKS recommends clotrimazole 1% cream twice daily for 4 weeks (or terbinafine 1% cream once daily for 1 week \u2014 shorter, equally effective).\n\nOption B (Oral terbinafine) is second-line \u2014 reserved for topical treatment failure, extensive/moccasin-type tinea pedis, or onychomycosis (nail involvement). Not appropriate as initial therapy here.\n\nOption C (Topical hydrocortisone) is CONTRAINDICATED as monotherapy in fungal infections. Steroids suppress local immunity, worsen tinea, and can cause tinea incognito \u2014 an atypical altered appearance that delays diagnosis.\n\nOption D (Oral fluconazole) is second-line and not indicated as initial therapy for uncomplicated tinea pedis.\n\nOption E (Topical fusidic acid) is an antibacterial \u2014 ineffective against dermatophyte fungi.\n\nClinical pearl: Always consider fungal infection before prescribing topical steroids for an itchy rash on the foot. Counsel on hygiene: dry thoroughly between toes, wear cotton socks, change footwear regularly, avoid communal barefoot areas."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "oral-leukoplakia.jpg",
+    "label": "Oral Leukoplakia",
+    "specialty": "Oncology",
+    "type": "Clinical",
+    "vignette": "",
+    "stem": "A 58-year-old man who smokes 20 cigarettes per day and drinks 30 units of alcohol per week is referred by his dentist. He has a painless white patch on the lateral border of his tongue that cannot be wiped off, present for 6 weeks, as shown. What is the most appropriate next step?",
+    "options": [
+      "Urgent 2-week-wait referral to oral and maxillofacial surgery for biopsy",
+      "Prescribe oral fluconazole 50 mg daily for 7 days and review in 2 weeks",
+      "Apply topical aciclovir and review in 1 week",
+      "Reassure and advise smoking cessation; review in 3 months",
+      "Prescribe topical nystatin suspension and review in 2 weeks"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Urgent 2-week-wait referral to oral and maxillofacial surgery for biopsy",
+    "explanation": "The image shows oral leukoplakia: a white patch on the lateral border of the tongue that cannot be wiped off. This is a potentially malignant disorder with a 1\u20135% risk of transformation to oral squamous cell carcinoma. Risk factors here: age >50, heavy smoking, heavy alcohol use \u2014 all present.\n\nOption A is CORRECT. NICE NG12 mandates an urgent 2-week-wait (2WW) referral to oral and maxillofacial surgery for any unexplained white or red patch in the mouth lasting >3 weeks, particularly in patients with tobacco use, alcohol excess, or age >45. Biopsy is required to exclude dysplasia or carcinoma-in-situ.\n\nOption B (Fluconazole) is INCORRECT \u2014 oral candidiasis presents as white pseudomembranous plaques that wipe off, leaving a raw erythematous base. This lesion does NOT wipe off \u2014 the critical distinguishing feature.\n\nOption C (Topical aciclovir) is INCORRECT \u2014 leukoplakia is not viral in aetiology.\n\nOption D (Reassure + smoking cessation) is INCORRECT. Smoking cessation is essential long-term but does not substitute for urgent biopsy when a red-flag lesion is present. A 3-month delay is dangerous.\n\nOption E (Nystatin) is for oral candidiasis \u2014 incorrect diagnosis.\n\nClinical pearl: Do NOT be reassured by the absence of pain \u2014 early oral cancer and leukoplakia with dysplasia are typically painless. The triad to memorise: non-wipeable white/red patch + >3 weeks + tobacco/alcohol = 2WW referral."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "copd-emphysema-admin-3.jpg",
+    "label": "COPD / Emphysema",
+    "specialty": "Respiratory",
+    "type": "CXR",
+    "vignette": "A 68-year-old man with a 45 pack-year smoking history presents with a 6-month history of progressive dyspnoea on exertion and a chronic productive cough. His FEV1/FVC ratio is 0.58. The chest X-ray above is obtained.",
+    "stem": "Which of the following radiological findings is most consistent with the diagnosis of COPD/emphysema on this chest X-ray?",
+    "options": [
+      "Bilateral hilar lymphadenopathy",
+      "Hyperinflated lungs with flattened hemidiaphragms",
+      "Unilateral pleural effusion",
+      "Bilateral interstitial shadowing in the lower zones",
+      "Cardiomegaly with upper lobe blood diversion"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Hyperinflated lungs with flattened hemidiaphragms",
+    "explanation": "This CXR demonstrates the hallmark features of COPD/emphysema: hyperinflated lung fields with increased lucency (air trapping), flattened hemidiaphragms (seen below the anterior end of the 6th rib), and a barrel-shaped chest. The increased AP diameter reflects chronic air trapping. Bilateral hilar lymphadenopathy would suggest sarcoidosis or lymphoma. A unilateral pleural effusion is not a feature of COPD. Bilateral basal interstitial shadowing is more consistent with pulmonary fibrosis. Cardiomegaly with upper lobe diversion suggests left heart failure."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "oral-candidiasis-thrush.jpg",
+    "label": "Oral Candidiasis (Thrush)",
+    "specialty": "Infectious Diseases",
+    "type": "Clinical",
+    "vignette": "A 58-year-old man with HIV (CD4 count 85 cells/\u00b5L, not on antiretrovirals) presents with a 2-week history of a sore mouth and difficulty swallowing.",
+    "stem": "Examination reveals white curd-like plaques on the tongue and buccal mucosa that can be scraped off, leaving a red bleeding base. What is the most appropriate first-line treatment?",
+    "options": [
+      "Nystatin oral suspension 100,000 units/mL four times daily for 7 days",
+      "Fluconazole 150 mg oral single dose",
+      "Fluconazole 50 mg orally once daily for 7\u201314 days",
+      "Clotrimazole 1% oral gel four times daily for 14 days",
+      "IV amphotericin B"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Fluconazole 50 mg orally once daily for 7\u201314 days",
+    "explanation": "This image shows oral candidiasis (thrush): white curd-like plaques that scrape off to reveal a bleeding erythematous base, distinguishing thrush from leukoplakia.\n\nOption C (Fluconazole 50 mg once daily for 7\u201314 days) is CORRECT \u2014 NICE/BNF first-line systemic treatment for oropharyngeal candidiasis in immunocompromised patients.\n\nOption A (Nystatin) is first-line only in mild disease in immunocompetent patients; less effective in significant immunosuppression.\n\nOption B (Fluconazole 150 mg single dose) is used for vaginal candidiasis, not oropharyngeal.\n\nOption D (Clotrimazole gel) is insufficient in immunosuppressed patients, especially with dysphagia suggesting oesophageal involvement.\n\nOption E (IV amphotericin B) is reserved for systemic/invasive or fluconazole-resistant candidiasis."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "onychomycosis-fungal-nail-infection.jpg",
+    "label": "Onychomycosis (Fungal Nail Infection)",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "A 64-year-old man with type 2 diabetes presents with a 9-month history of a thickened, yellowed, crumbling toenail. Nail clippings confirm Trichophyton rubrum on mycology. He takes metformin and simvastatin.",
+    "stem": "What is the most appropriate treatment?",
+    "options": [
+      "Topical amorolfine 5% nail lacquer once weekly for 6 months",
+      "Oral terbinafine 250 mg once daily for 6 weeks",
+      "Oral terbinafine 250 mg once daily for 12\u201316 weeks",
+      "Oral itraconazole 200 mg twice daily for 7 days per month for 3 months (pulse)",
+      "No treatment; reassure and advise foot hygiene"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Oral terbinafine 250 mg once daily for 12\u201316 weeks",
+    "explanation": "This image shows onychomycosis (tinea unguium): subungual hyperkeratosis with yellow-white discolouration and partial onycholysis, confirmed by Trichophyton rubrum mycology.\n\nOption C (Terbinafine 250 mg daily for 12\u201316 weeks) is CORRECT \u2014 NICE/BNF first-line for dermatophyte toenail onychomycosis. Key PLAB distinction: fingernails = 6 weeks, toenails = 12\u201316 weeks. Check LFTs before starting.\n\nOption A (Topical amorolfine alone) is insufficient for established toenail infection with matrix involvement \u2014 topicals cannot penetrate the nail plate adequately.\n\nOption B (6 weeks) is the correct duration for fingernails only.\n\nOption D (Itraconazole pulse) is an alternative for terbinafine-intolerant patients or non-dermatophyte/Candida infections.\n\nOption E (No treatment) would be appropriate in asymptomatic elderly patients without comorbidities, but not here \u2014 diabetes increases risk of secondary bacterial infection and cellulitis.\n\nClinical pearl: Always confirm with mycology before prescribing systemic antifungals. Psoriatic nail disease closely mimics onychomycosis."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "atrial-flutter-admin-7.jpg",
+    "label": "Atrial Flutter",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "A 61-year-old man with hypertension and mild mitral regurgitation presents with a 4-hour history of palpitations and mild breathlessness. BP 128/76 mmHg, HR 150 bpm regular, SpO\u2082 97%.",
+    "stem": "The ECG above is shown. What is the most likely diagnosis and the most appropriate initial management?",
+    "options": [
+      "Atrial fibrillation \u2014 metoprolol 5 mg IV",
+      "Atrial flutter with 2:1 block \u2014 bisoprolol 5 mg orally for rate control",
+      "Atrial flutter with 2:1 block \u2014 immediate DC cardioversion",
+      "SVT \u2014 adenosine 6 mg IV bolus",
+      "Ventricular tachycardia \u2014 amiodarone 300 mg IV"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Atrial flutter with 2:1 block \u2014 bisoprolol 5 mg orally for rate control",
+    "explanation": "This ECG shows classic atrial flutter: regular sawtooth F waves at ~300 bpm best seen in II, III, aVF and V1, with a ventricular rate of ~150 bpm due to 2:1 AV conduction.\n\nOption B (Atrial flutter 2:1 \u2014 bisoprolol orally) is CORRECT for a haemodynamically stable patient. Rate control with a beta-blocker or rate-limiting calcium channel blocker is first-line per NICE NG196.\n\nOption A (AF) is incorrect \u2014 AF is irregularly irregular with no organised atrial activity.\n\nOption C (DC cardioversion) is for haemodynamic instability or elective rhythm control, not first-line in a stable patient.\n\nOption D (Adenosine) can unmask flutter waves diagnostically but does not terminate flutter.\n\nOption E (Amiodarone for VT) is incorrect \u2014 VT is broad complex; this is narrow complex.\n\nClinical pearl: HR of exactly 150 bpm = atrial flutter with 2:1 block until proven otherwise."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "left-ventricular-hypertrophy-lvh.jpg",
+    "label": "Left Ventricular Hypertrophy (LVH)",
+    "specialty": "Cardiology",
+    "type": "ECG",
+    "vignette": "A 58-year-old man with a 15-year history of poorly controlled hypertension attends for routine review. BP today is 168/102 mmHg. He is asymptomatic.",
+    "stem": "The ECG above is obtained. Which of the following best describes the finding and its clinical significance?",
+    "options": [
+      "Right ventricular hypertrophy \u2014 suggests cor pulmonale; arrange CTPA",
+      "Left ventricular hypertrophy \u2014 confirms hypertensive end-organ damage; intensify antihypertensive therapy",
+      "Left bundle branch block \u2014 urgent cardiology referral for pacing assessment",
+      "Anterior STEMI \u2014 call the cath lab immediately",
+      "Normal ECG variant \u2014 no action required"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Left ventricular hypertrophy \u2014 confirms hypertensive end-organ damage; intensify antihypertensive therapy",
+    "explanation": "This ECG shows LVH: tall R waves in lateral leads (I, aVL, V4\u2013V6), deep S waves in V1\u2013V2, and lateral strain pattern (ST depression with T-wave inversion in V5\u2013V6).\n\nVoltage criteria: Sokolow\u2013Lyon: S(V1) + R(V5 or V6) \u226535 mm; Cornell: R(aVL) + S(V3) \u226528 mm (men).\n\nOption B is CORRECT \u2014 LVH is a NICE-defined marker of hypertensive end-organ damage, mandating intensification of antihypertensives to BP <130/80 mmHg and echocardiography.\n\nOption A (RVH) shows the opposite pattern: tall R in V1, right axis deviation.\n\nOption C (LBBB) requires broad QRS >120 ms; QRS here is narrow.\n\nOption D (Anterior STEMI) \u2014 no ST elevation; the lateral ST depression is LV strain, not ischaemia.\n\nOption E (Normal) \u2014 voltage criteria clearly exceeded.\n\nClinical pearl: LVH strain pattern mimics lateral ischaemia \u2014 distinguish by context (longstanding hypertension + voltage criteria) rather than ST changes alone."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "geographic-tongue-benign-migratory-glossitis.jpg",
+    "label": "Geographic Tongue (Benign Migratory Glossitis)",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "A 28-year-old woman attends her GP concerned about the appearance of her tongue, which she noticed 2 weeks ago. She reports mild sensitivity to spicy and acidic foods but no pain at rest, no fever, and no difficulty swallowing. She is otherwise well with no significant past medical history.",
+    "stem": "Examination reveals the finding shown. What is the most appropriate management?",
+    "options": [
+      "Prescribe oral fluconazole for 7 days",
+      "Urgent 2-week-wait referral to oral surgery",
+      "Reassure and advise avoidance of known triggers",
+      "Take a tongue biopsy to exclude dysplasia",
+      "Prescribe topical corticosteroids (hydrocortisone oromucosal pellets)"
+    ],
+    "correctAnswer": "C",
+    "correctAnswerText": "Reassure and advise avoidance of known triggers",
+    "explanation": "This image shows geographic tongue (benign migratory glossitis): irregularly shaped erythematous patches with white serpiginous borders on the dorsal tongue, representing desquamation of filiform papillae. The map-like pattern migrates over days to weeks.\n\nOption C is CORRECT. Geographic tongue is benign and self-limiting. Management is reassurance plus avoidance of triggers (spicy/acidic food, alcohol, tobacco).\n\nOption A (Fluconazole) is INCORRECT \u2014 oral candidiasis presents as white pseudomembranous plaques that wipe off, leaving a raw red base; geographic tongue patches do not wipe off.\n\nOption B (2WW referral) is INCORRECT \u2014 oral cancer red flags include indurated non-healing ulcers and persistent leukoplakia/erythroplakia >3 weeks; none present here.\n\nOption D (Biopsy) is INCORRECT \u2014 not indicated for classic geographic tongue without suspicious features.\n\nOption E (Topical corticosteroids) may help in severe symptomatic cases but is not first-line here.\n\nClinical pearl: Associated with psoriasis and atopy. Key distinction from candidiasis: candidal plaques are white and wipe off; geographic tongue has smooth red patches with white borders that cannot be removed."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "peripheral-cyanosis.jpg",
+    "label": "Peripheral Cyanosis",
+    "specialty": "Respiratory",
+    "type": "Clinical",
+    "vignette": "A 68-year-old man with a long history of COPD presents to the emergency department with worsening breathlessness over 3 days. He smokes 20 cigarettes/day. Examination of the hands reveals the finding shown. Oxygen saturation is 84% on air.",
+    "stem": "What is the most appropriate immediate management?",
+    "options": [
+      "High-flow oxygen via non-rebreather mask at 15 L/min",
+      "Controlled oxygen therapy titrated to SpO\u2082 88\u201392%, with arterial blood gas monitoring",
+      "Salbutamol nebuliser only and reassess in 1 hour",
+      "Oral prednisolone 40 mg and discharge with community follow-up",
+      "Urgent CT pulmonary angiogram to exclude pulmonary embolism"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Controlled oxygen therapy titrated to SpO\u2082 88\u201392%, with arterial blood gas monitoring",
+    "explanation": "The image shows peripheral cyanosis: blue-purple discolouration of the nail beds and fingertips due to increased deoxygenated haemoglobin in peripheral capillaries.\n\nOption B is CORRECT. In known COPD, controlled oxygen targeting SpO\u2082 88\u201392% is mandated. Chronic hypercapnic COPD patients depend on hypoxic drive for ventilation \u2014 uncontrolled high-flow oxygen suppresses this drive, worsens CO\u2082 retention, and precipitates type 2 respiratory failure. Use a Venturi mask at 24\u201328% FiO\u2082 with ABG monitoring.\n\nOption A (15 L/min high-flow O\u2082) is INCORRECT in COPD \u2014 the standard 94\u201398% target does NOT apply. This is potentially fatal.\n\nOption C (Salbutamol only) is insufficient for SpO\u2082 84%.\n\nOption D (Discharge on oral prednisolone) is dangerous \u2014 this patient needs hospital admission.\n\nOption E (CTPA) is not the immediate priority; correct hypoxaemia first.\n\nClinical pearl: COPD = target SpO\u2082 88\u201392%. Everyone else = 94\u201398%. This is the highest-yield oxygen distinction in PLAB."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "herpes-labialis-cold-sore.jpg",
+    "label": "Herpes Labialis (Cold Sore)",
+    "specialty": "Infectious Diseases",
+    "type": "Clinical",
+    "vignette": "A 22-year-old woman presents to her GP with a 2-day history of painful, tingling blisters on her upper lip. She reports a similar episode 6 months ago that resolved spontaneously. She is otherwise well with no fever.",
+    "stem": "The appearance is shown. What is the most appropriate management?",
+    "options": [
+      "Oral aciclovir 200 mg five times daily for 5 days",
+      "Topical aciclovir 5% cream applied five times daily for 5 days",
+      "Oral fluconazole 150 mg single dose",
+      "Topical hydrocortisone 1% cream twice daily",
+      "Reassure \u2014 no treatment required; will resolve in 48 hours"
+    ],
+    "correctAnswer": "B",
+    "correctAnswerText": "Topical aciclovir 5% cream applied five times daily for 5 days",
+    "explanation": "The image shows herpes labialis (cold sore): painful vesicles on the vermilion border of the lip due to reactivation of latent HSV-1.\n\nOption B is CORRECT. NICE CKS recommends topical aciclovir 5% cream five times daily for 5 days as first-line treatment in immunocompetent patients. Most effective when started at the prodromal tingling stage.\n\nOption A (Oral aciclovir) is reserved for severe/widespread HSV, immunocompromised patients, eczema herpeticum, or herpetic keratoconjunctivitis \u2014 not a straightforward cold sore.\n\nOption C (Fluconazole) is an antifungal \u2014 ineffective against HSV.\n\nOption D (Topical hydrocortisone) is CONTRAINDICATED \u2014 steroids suppress local immunity and can worsen HSV spread.\n\nOption E (Reassure only) is INCORRECT \u2014 cold sores take 7\u201310 days untreated; topical aciclovir shortens this.\n\nClinical pearl: Start topical aciclovir at first tingle \u2014 before blisters appear \u2014 for maximum benefit."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "aphthous-ulcer-mouth-ulcer.jpg",
+    "label": "Aphthous Ulcer (Mouth Ulcer)",
+    "specialty": "ENT",
+    "type": "Clinical",
+    "vignette": "A 19-year-old woman presents to her GP with a painful lesion on the inside of her lower lip for 4 days. She reports this is her third episode in 6 months. She has no systemic symptoms, no weight loss, and no diarrhoea. She is otherwise well.",
+    "stem": "The appearance is shown. What is the most appropriate initial management?",
+    "options": [
+      "Topical chlorhexidine mouthwash and topical corticosteroid (hydrocortisone oromucosal pellet)",
+      "Oral aciclovir 200 mg five times daily for 5 days",
+      "Urgent 2-week-wait referral to oral surgery",
+      "Full blood count, B12, folate, ferritin, and anti-TTG antibodies",
+      "Topical aciclovir cream applied to the ulcer"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Topical chlorhexidine mouthwash and topical corticosteroid (hydrocortisone oromucosal pellet)",
+    "explanation": "The image shows a minor aphthous ulcer: a well-defined round/oval shallow ulcer with a white/grey pseudomembranous base and an erythematous halo on the labial mucosa.\n\nOption A is CORRECT. NICE CKS first-line: topical chlorhexidine 0.2% mouthwash (reduces secondary infection and pain) plus topical corticosteroid \u2014 hydrocortisone oromucosal 2.5 mg pellet four times daily \u2014 to shorten healing time.\n\nOption B (Oral aciclovir) is INCORRECT \u2014 aphthous ulcers are NOT caused by HSV. Herpetic ulcers are smaller, more numerous, vesicle-preceded, and occur on keratinised mucosa (hard palate, gingiva). Aphthous ulcers occur on non-keratinised mucosa (labial, buccal, floor of mouth).\n\nOption C (2WW referral) is INCORRECT \u2014 no red flags here. Urgent referral for: unexplained ulcer >3 weeks, induration, lymphadenopathy, or high-risk history (smoking, alcohol).\n\nOption D (Bloods) is appropriate for recurrent aphthous ulcers to exclude iron/B12/folate deficiency or coeliac disease, but treatment should also be started.\n\nOption E (Topical aciclovir) is INCORRECT \u2014 aciclovir is antiviral; aphthous ulcers have no viral cause.\n\nClinical pearl: Location distinguishes aphthous from herpetic \u2014 aphthous on non-keratinised (mobile) mucosa; herpetic on keratinised (fixed) mucosa."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "tinea-pedis-athlete-s-foot.jpg",
+    "label": "Tinea Pedis (Athlete's Foot)",
+    "specialty": "Dermatology",
+    "type": "Clinical",
+    "vignette": "A 24-year-old male university student presents with a 3-week history of itchy, peeling, and macerated skin between his toes and on the sole of his foot. He uses a communal shower at his gym. There is no nail involvement.",
+    "stem": "The appearance is shown. What is the first-line treatment?",
+    "options": [
+      "Topical clotrimazole 1% cream twice daily for 4 weeks",
+      "Oral terbinafine 250 mg once daily for 6 weeks",
+      "Topical hydrocortisone 1% cream twice daily for 2 weeks",
+      "Oral fluconazole 150 mg once weekly for 4 weeks",
+      "Topical fusidic acid cream twice daily for 7 days"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Topical clotrimazole 1% cream twice daily for 4 weeks",
+    "explanation": "The image shows tinea pedis (athlete's foot): scaling, maceration, and peeling of the interdigital web spaces and plantar surface, caused by dermatophyte fungi (most commonly Trichophyton rubrum).\n\nOption A is CORRECT. Topical antifungal is first-line for tinea pedis without nail involvement. NICE CKS recommends clotrimazole 1% cream twice daily for 4 weeks, or terbinafine 1% cream once daily for 1 week (shorter, equally effective).\n\nOption B (Oral terbinafine) is second-line \u2014 for topical treatment failure, extensive/moccasin-type disease, or onychomycosis. Not first-line here.\n\nOption C (Topical hydrocortisone) is CONTRAINDICATED as monotherapy \u2014 steroids worsen tinea and can cause tinea incognito.\n\nOption D (Oral fluconazole) is second-line; not initial therapy for uncomplicated tinea pedis.\n\nOption E (Topical fusidic acid) is antibacterial \u2014 ineffective against dermatophytes.\n\nClinical pearl: Consider fungal infection before prescribing topical steroids for any itchy foot rash. Hygiene advice: dry between toes, cotton socks, change footwear regularly."
+  },
+  {
+    "dir": "spotdx-images",
+    "file": "oral-leukoplakia-admin-14.jpg",
+    "label": "Oral Leukoplakia",
+    "specialty": "ENT",
+    "type": "Clinical",
+    "vignette": "A 58-year-old man who smokes 20 cigarettes per day and drinks 30 units of alcohol per week is referred by his dentist. He has a painless white patch on the lateral border of his tongue that cannot be wiped off, present for 6 weeks.",
+    "stem": "The appearance is shown. What is the most appropriate next step?",
+    "options": [
+      "Urgent 2-week-wait referral to oral and maxillofacial surgery for biopsy",
+      "Prescribe oral fluconazole 50 mg daily for 7 days and review in 2 weeks",
+      "Apply topical aciclovir and review in 1 week",
+      "Reassure and advise smoking cessation; review in 3 months",
+      "Prescribe topical nystatin suspension and review in 2 weeks"
+    ],
+    "correctAnswer": "A",
+    "correctAnswerText": "Urgent 2-week-wait referral to oral and maxillofacial surgery for biopsy",
+    "explanation": "The image shows oral leukoplakia: a non-wipeable white patch on the lateral tongue \u2014 a potentially malignant disorder with 1\u20135% risk of SCC transformation. Risk factors: age >50, heavy smoking, heavy alcohol \u2014 all present.\n\nOption A is CORRECT. NICE NG12 mandates urgent 2WW referral to oral and maxillofacial surgery for any unexplained white/red oral patch lasting >3 weeks, especially with tobacco, alcohol, or age >45. Biopsy is required to exclude dysplasia or carcinoma-in-situ.\n\nOption B (Fluconazole) is INCORRECT \u2014 oral candidiasis plaques wipe off; leukoplakia does NOT wipe off. This is the critical distinction.\n\nOption C (Topical aciclovir) is INCORRECT \u2014 leukoplakia is not viral.\n\nOption D (Reassure + smoking cessation) is INCORRECT \u2014 a 3-month delay is dangerous with a red-flag lesion present. Smoking cessation is important but does not replace biopsy.\n\nOption E (Nystatin) is for candidiasis \u2014 wrong diagnosis.\n\nClinical pearl: Absence of pain does NOT exclude oral cancer. Non-wipeable white patch + >3 weeks + tobacco/alcohol = 2WW regardless of symptoms."
+  }
+]
