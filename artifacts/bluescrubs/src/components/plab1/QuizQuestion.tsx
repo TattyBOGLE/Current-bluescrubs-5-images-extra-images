@@ -71,52 +71,55 @@ export function QuizQuestion({
         {/* Controls - Translation and Voice (single row) */}
         <div className="bg-slate-50 rounded-2xl p-3 border border-slate-200 mb-4">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            <button
-              type="button"
-              role="switch"
-              aria-checked={translateQuestions}
-              aria-label="Toggle translation"
-              onClick={() => setTranslateQuestions(!translateQuestions)}
-              className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
-                translateQuestions
-                  ? 'bg-teal-600 border-teal-600 text-white'
-                  : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
-              }`}
-              data-testid="toggle-translate"
-            >
-              <Languages className="w-4 h-4" />
-              Translate
-              <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
-                translateQuestions ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
-              }`}>
-                {translateQuestions ? 'ON' : 'OFF'}
-              </span>
-            </button>
-            <button
-              type="button"
-              role="switch"
-              aria-checked={speechEnabled}
-              aria-label="Toggle voice reading"
-              onClick={() => {
-                const next = !speechEnabled;
-                setSpeechEnabled(next);
-                if (!next) stopSpeaking();
-              }}
-              className={`inline-flex items-center gap-2 h-9 px-3 rounded-full text-sm font-semibold border transition-colors ${
-                speechEnabled
-                  ? 'bg-teal-600 border-teal-600 text-white'
-                  : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
-              }`}
-              data-testid="toggle-voice"
-            >
-              <Volume2 className="w-4 h-4" />
-              Voice
-              <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
-                speechEnabled ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
-              }`}>
-                {speechEnabled ? 'ON' : 'OFF'}
-              </span>
-            </button>
+            {/* Toggles row: always keep Translate + Voice side-by-side, even on mobile */}
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              <button
+                type="button"
+                role="switch"
+                aria-checked={translateQuestions}
+                aria-label="Toggle translation"
+                onClick={() => setTranslateQuestions(!translateQuestions)}
+                className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 h-9 px-2.5 sm:px-3 rounded-full text-sm font-semibold border transition-colors ${
+                  translateQuestions
+                    ? 'bg-teal-600 border-teal-600 text-white'
+                    : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
+                }`}
+                data-testid="toggle-translate"
+              >
+                <Languages className="w-4 h-4" />
+                Translate
+                <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
+                  translateQuestions ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
+                }`}>
+                  {translateQuestions ? 'ON' : 'OFF'}
+                </span>
+              </button>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={speechEnabled}
+                aria-label="Toggle voice reading"
+                onClick={() => {
+                  const next = !speechEnabled;
+                  setSpeechEnabled(next);
+                  if (!next) stopSpeaking();
+                }}
+                className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 h-9 px-2.5 sm:px-3 rounded-full text-sm font-semibold border transition-colors ${
+                  speechEnabled
+                    ? 'bg-teal-600 border-teal-600 text-white'
+                    : 'bg-white border-slate-300 text-slate-600 hover:border-teal-400'
+                }`}
+                data-testid="toggle-voice"
+              >
+                <Volume2 className="w-4 h-4" />
+                Voice
+                <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
+                  speechEnabled ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-500'
+                }`}>
+                  {speechEnabled ? 'ON' : 'OFF'}
+                </span>
+              </button>
+            </div>
             {translateQuestions && (
                 <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
                   <SelectTrigger className="w-36 h-8 text-xs">
