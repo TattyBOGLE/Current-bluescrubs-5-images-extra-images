@@ -299,7 +299,7 @@ export default function Plab2Osce() {
                 <AudioSupport text={ds.scenario} size="default" />
               )}
             </div>
-            <p className="text-[15px] text-slate-700 leading-relaxed">{ds.scenario}</p>
+            <p className="text-sm text-slate-700 leading-relaxed">{ds.scenario}</p>
           </section>
 
           <section className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -323,7 +323,7 @@ export default function Plab2Osce() {
                 {ds.markingCriteria.map((c: any, i: number) => (
                   <div key={i} className="border-l-2 border-teal-200 pl-3">
                     <div className="text-sm font-medium text-slate-900">{c.category}</div>
-                    <div className="text-[11px] text-slate-500 mb-1">Max {c.maxMarks} marks</div>
+                    <div className="text-xs text-slate-500 mb-1">Max {c.maxMarks} marks</div>
                     <ul className="text-xs text-slate-600 space-y-0.5 list-disc pl-4">
                       {c.criteria.map((cr: string, idx: number) => <li key={idx}>{cr}</li>)}
                     </ul>
@@ -524,7 +524,7 @@ export default function Plab2Osce() {
           </section>
 
           <section className="bg-amber-50 rounded-2xl border border-amber-100 p-3">
-            <p className="text-[11px] text-amber-800">
+            <p className="text-xs text-amber-800">
               Educational use only — not a substitute for professional medical advice.
             </p>
           </section>
@@ -545,7 +545,7 @@ export default function Plab2Osce() {
           <div className="relative">
             <div className="flex items-center gap-2 mb-2">
               <Sparkles className="w-4 h-4" />
-              <span className="text-[11px] font-semibold tracking-wider uppercase text-teal-50">
+              <span className="text-xs font-semibold tracking-wider uppercase text-teal-50">
                 {translateText("PLAB 2 OSCE")}
               </span>
             </div>
@@ -575,7 +575,7 @@ export default function Plab2Osce() {
             <div className="text-right">
               <div className="text-2xl font-bold text-teal-700 tabular-nums leading-none">{progressPct}%</div>
               {avgScore > 0 && (
-                <div className="text-[11px] text-slate-500">avg {avgScore}/20</div>
+                <div className="text-xs text-slate-500">avg {avgScore}/20</div>
               )}
             </div>
           </div>
@@ -721,7 +721,7 @@ export default function Plab2Osce() {
                       }`}>
                         <Icon className={`w-4 h-4 ${isCompleted ? "text-emerald-700" : "text-teal-700"}`} />
                       </div>
-                      <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+                      <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
                         Station {index + 1}
                       </span>
                     </div>
@@ -743,15 +743,15 @@ export default function Plab2Osce() {
                   </p>
 
                   <div className="flex flex-wrap gap-1">
-                    <Badge className={`${difficultyTone(station.difficulty)} border-none text-[10px] capitalize`}>
+                    <Badge className={`${difficultyTone(station.difficulty)} border-none text-xs capitalize`}>
                       {station.difficulty}
                     </Badge>
-                    <Badge className="bg-slate-100 text-slate-700 hover:bg-slate-100 border-none text-[10px] flex items-center gap-1">
+                    <Badge className="bg-slate-100 text-slate-700 hover:bg-slate-100 border-none text-xs flex items-center gap-1">
                       <Clock className="w-3 h-3" />
                       {station.duration}m
                     </Badge>
                     {station.medications && station.medications.length > 0 && (
-                      <Badge className="bg-teal-50 text-teal-700 hover:bg-teal-50 border-none text-[10px] flex items-center gap-1">
+                      <Badge className="bg-teal-50 text-teal-700 hover:bg-teal-50 border-none text-xs flex items-center gap-1">
                         <Heart className="w-3 h-3" />
                         {station.medications.length} meds
                       </Badge>
@@ -774,7 +774,7 @@ function Info({
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-3 text-center">
       <Icon className="w-4 h-4 text-teal-700 mx-auto mb-1" />
       <div className="text-sm font-bold text-slate-900 leading-tight">{value}</div>
-      <div className="text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">{label}</div>
+      <div className="text-xs text-slate-500 uppercase tracking-wider mt-0.5">{label}</div>
     </div>
   );
 }
