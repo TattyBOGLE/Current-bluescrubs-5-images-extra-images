@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { User } from "@shared/schema";
-import { Flame, Award, BookOpen } from "lucide-react";
+import { Flame, Award, BookOpen, FileText, Target, Trophy } from "lucide-react";
 import dashboardHeroImage from '@assets/B584B977-70BB-4134-8338-FD9B4B07B0D0_1750518606574.jpg';
 import type { UserStats } from "@/lib/types";
 
@@ -110,7 +110,9 @@ export default function Dashboard() {
                 <h3 className="text-xl font-semibold text-gray-900">Questions Answered</h3>
                 <div className="text-3xl font-semibold text-gray-900 mt-1">0</div>
               </div>
-              <BookOpen className="w-10 h-10 text-teal-600" />
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                <BookOpen className="w-6 h-6 text-blue-600" />
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -125,7 +127,7 @@ export default function Dashboard() {
                   <p className="text-2xl font-semibold text-gray-900">{userStats?.totalAnswered || 0}</p>
                 </div>
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600">📝</span>
+                  <FileText className="w-4 h-4 text-blue-600" />
                 </div>
               </div>
             </CardContent>
@@ -141,7 +143,7 @@ export default function Dashboard() {
                   </p>
                 </div>
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600">🎯</span>
+                  <Target className="w-4 h-4 text-green-600" />
                 </div>
               </div>
             </CardContent>
@@ -155,7 +157,7 @@ export default function Dashboard() {
                   <p className="text-2xl font-semibold text-gray-900">{user.studyStreak} days</p>
                 </div>
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                  <span className="text-orange-600">🔥</span>
+                  <Flame className="w-4 h-4 text-orange-600" />
                 </div>
               </div>
             </CardContent>
@@ -169,7 +171,7 @@ export default function Dashboard() {
                   <p className="text-2xl font-semibold text-gray-900">{user.totalPoints.toLocaleString()}</p>
                 </div>
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                  <span className="text-purple-600">🏆</span>
+                  <Trophy className="w-4 h-4 text-purple-600" />
                 </div>
               </div>
             </CardContent>
