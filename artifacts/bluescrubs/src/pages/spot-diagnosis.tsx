@@ -143,6 +143,7 @@ export default function SpotDiagnosis() {
                   {/\.(mp4|webm|mov)$/i.test(img.file) ? (
                     <video
                       src={`/${img.dir}/${img.file}`}
+                      poster={`/${img.dir}/${img.file.replace(/\.(mp4|webm|mov)$/i, '.jpg')}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       autoPlay
                       loop
@@ -199,6 +200,7 @@ export default function SpotDiagnosis() {
               {/\.(mp4|webm|mov)$/i.test(lightbox.file) ? (
                 <video
                   src={`/${lightbox.dir}/${lightbox.file}`}
+                  poster={`/${lightbox.dir}/${lightbox.file.replace(/\.(mp4|webm|mov)$/i, '.jpg')}`}
                   className="w-full object-contain max-h-[60vh] mx-auto"
                   autoPlay
                   loop
