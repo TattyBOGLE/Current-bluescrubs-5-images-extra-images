@@ -1143,31 +1143,16 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
     const { category, difficulty = "mixed", count = 50 } = req.body;
     const requestedCount = parseInt(String(count)) || 50;
 
-    // Prefer the local bank whenever it can STRICTLY satisfy the request
-    // (category+difficulty filters honoured exactly). Avoids a 20s+ AI
-    // round-trip when the bank already covers the requested slice.
-    // Note: pickFromBank() relaxes filters when matches < 5, which is fine
-    // as a last-resort fallback but unsafe here — so we count strict matches
-    // first and only short-circuit when that strict count is sufficient.
-    const strictMatchCount = (() => {
-      let pool: any[] = ukQuestionBank;
-      if (category && category !== 'all') {
-        const needle = category.toLowerCase().replace(/[-_\s]+/g, '');
-        pool = pool.filter((q: any) => {
-          const qCat = (q.category || q.topic || '').toLowerCase().replace(/[-_\s]+/g, '');
-          return qCat && (qCat.includes(needle) || needle.includes(qCat));
-        });
-      }
-      if (difficulty && difficulty !== 'mixed') {
-        pool = pool.filter((q: any) =>
-          (q.difficulty || '').toLowerCase() === difficulty.toLowerCase()
-        );
-      }
-      return pool.length;
-    })();
+    // Always prefer the local bank for speed. With ~1,500+ questions
+    // available, the bank can satisfy virtually every request instantly,
+    // and a 20s+ live-AI round-trip on every "Start practice" click is
+    // unacceptable UX. pickFromBank() relaxes filters when matches < 5,
+    // which is exactly what we want: serve the best-matching pool rather
+    // than blocking on AI generation. AI is reserved for the genuine
+    // edge case where the bank has zero matches at all.
+    const fromBank = pickFromBank(category, difficulty, requestedCount);
 
-    if (strictMatchCount >= requestedCount) {
-      const fromBank = pickFromBank(category, difficulty, requestedCount);
+    if (fromBank.length > 0) {
       return res.json({
         success: true,
         generated: fromBank.length,
@@ -1176,9 +1161,6 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
         source: 'bank'
       });
     }
-
-    // Compute relaxed bank result once for downstream fallback paths.
-    const fromBank = pickFromBank(category, difficulty, requestedCount);
 
     // If AI is unavailable, serve whatever the bank has (even if short)
     if (!isAIEnabled()) {
