@@ -508,7 +508,7 @@ export default function Plab2Osce() {
                   className="flex-1 accent-teal-600"
                   data-testid="input-self-score"
                 />
-                <span className="w-12 text-right text-lg font-semibold text-teal-700 tabular-nums">
+                <span className="w-12 text-right text-base font-semibold text-teal-700 tabular-nums">
                   {selfScore}
                 </span>
               </div>
