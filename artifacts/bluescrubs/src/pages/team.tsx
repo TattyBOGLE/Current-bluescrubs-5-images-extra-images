@@ -104,7 +104,7 @@ export default function Team() {
             </div>
             <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">Who are BlueScrubsPrep</h1>
           </div>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
             Meet the dedicated team behind BlueScrubsPrep — combining medical expertise with innovative technology
             to transform PLAB preparation for international medical graduates.
           </p>
@@ -119,7 +119,7 @@ export default function Team() {
                   <div className="p-2 bg-teal-50 rounded-xl">
                     <Heart className="h-5 w-5 text-teal-700" />
                   </div>
-                  <CardTitle className="text-slate-900">Our Mission</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-slate-900">Our Mission</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -137,7 +137,7 @@ export default function Team() {
                   <div className="p-2 bg-teal-50 rounded-xl">
                     <Star className="h-5 w-5 text-teal-700" />
                   </div>
-                  <CardTitle className="text-slate-900">Our Vision</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-slate-900">Our Vision</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>

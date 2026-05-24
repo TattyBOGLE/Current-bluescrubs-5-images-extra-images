@@ -411,7 +411,7 @@ export default function AskAI() {
         {/* Example Questions */}
         <Card className="bg-white border-slate-200 rounded-2xl">
           <CardHeader>
-            <CardTitle className="text-lg text-slate-900">Example Questions</CardTitle>
+            <CardTitle className="text-xl font-semibold text-slate-900">Example Questions</CardTitle>
             <CardDescription className="text-slate-600">Try asking about these medical topics</CardDescription>
           </CardHeader>
           <CardContent>

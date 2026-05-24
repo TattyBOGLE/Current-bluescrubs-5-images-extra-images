@@ -107,7 +107,7 @@ export default function Dashboard() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Questions Answered</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Questions Answered</h3>
                 <div className="text-3xl font-semibold text-gray-900 mt-1">0</div>
               </div>
               <div className="text-4xl">📚</div>
@@ -179,7 +179,7 @@ export default function Dashboard() {
         {/* Recent Activity */}
         <Card>
           <CardHeader>
-            <CardTitle>Recent Activity</CardTitle>
+            <CardTitle className="text-xl font-semibold">Recent Activity</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-center py-8 text-gray-500">

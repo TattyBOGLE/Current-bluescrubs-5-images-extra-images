@@ -614,7 +614,7 @@ export default function Community() {
                   </Avatar>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-lg font-semibold">Dr. Rebecca Williams</h3>
+                      <h3 className="text-xl font-semibold">Dr. Rebecca Williams</h3>
                       <Badge className="bg-green-100 text-green-800">Available</Badge>
                     </div>
                     <p className="text-sm text-muted-foreground mb-2">
@@ -656,7 +656,7 @@ export default function Community() {
                   </Avatar>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-lg font-semibold">Dr. James Singh</h3>
+                      <h3 className="text-xl font-semibold">Dr. James Singh</h3>
                       <Badge className="bg-yellow-100 text-yellow-800">Busy</Badge>
                     </div>
                     <p className="text-sm text-muted-foreground mb-2">
@@ -698,7 +698,7 @@ export default function Community() {
                   </Avatar>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-lg font-semibold">Dr. Amira Lopez</h3>
+                      <h3 className="text-xl font-semibold">Dr. Amira Lopez</h3>
                       <Badge className="bg-green-100 text-green-800">Available</Badge>
                     </div>
                     <p className="text-sm text-muted-foreground mb-2">
@@ -736,7 +736,7 @@ export default function Community() {
           {/* Success Stories */}
           <Card className="bg-white border-slate-200 rounded-2xl">
             <CardContent className="p-6">
-              <h3 className="text-lg font-semibold mb-4 text-slate-900">Success Stories</h3>
+              <h3 className="text-xl font-semibold mb-4 text-slate-900">Success Stories</h3>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <Avatar className="w-8 h-8">

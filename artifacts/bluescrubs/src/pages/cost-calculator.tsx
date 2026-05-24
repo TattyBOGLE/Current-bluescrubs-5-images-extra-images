@@ -138,7 +138,7 @@ export default function CostCalculator() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Generation Options</CardTitle>
+            <CardTitle className="text-xl font-semibold">Generation Options</CardTitle>
             <CardDescription>
               Choose your generation approach based on cost and needs
             </CardDescription>
@@ -203,7 +203,7 @@ export default function CostCalculator() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Token Usage Details</CardTitle>
+            <CardTitle className="text-xl font-semibold">Token Usage Details</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">

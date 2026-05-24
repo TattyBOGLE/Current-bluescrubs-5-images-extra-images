@@ -276,7 +276,7 @@ export default function Premium() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-gray-900">Available Tutors</CardTitle>
+                <CardTitle className="text-xl font-semibold text-gray-900">Available Tutors</CardTitle>
                 <CardDescription className="text-gray-700 font-medium">Verified PLAB examiners and NHS doctors</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -350,7 +350,7 @@ export default function Premium() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Improvement Tracking</CardTitle>
+                <CardTitle className="text-xl font-semibold">Improvement Tracking</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
@@ -425,7 +425,7 @@ export default function Premium() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Available Scenarios</CardTitle>
+                <CardTitle className="text-xl font-semibold">Available Scenarios</CardTitle>
                 <CardDescription>Choose from 50+ clinical scenarios</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -497,7 +497,7 @@ export default function Premium() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Certificate Verification</CardTitle>
+                <CardTitle className="text-xl font-semibold">Certificate Verification</CardTitle>
                 <CardDescription>Blockchain-secured digital credentials</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">

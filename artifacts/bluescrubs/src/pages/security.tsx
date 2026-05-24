@@ -109,7 +109,7 @@ export default function Security() {
             </div>
             <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">Security Centre</h1>
           </div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Your data security and privacy are our top priorities. Learn about our comprehensive security measures and best practices.
           </p>
         </div>
@@ -156,7 +156,7 @@ export default function Security() {
                         <feature.icon className="h-6 w-6 text-blue-600" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg">{feature.title}</CardTitle>
+                        <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
                         <Badge 
                           variant={feature.status === 'Active' ? 'default' : 'secondary'}
                           className="mt-1"
@@ -211,7 +211,7 @@ export default function Security() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <AlertTriangle className="h-6 w-6 text-orange-600" />
-                <CardTitle className="text-orange-900">Keep Your Account Secure</CardTitle>
+                <CardTitle className="text-xl font-semibold text-orange-900">Keep Your Account Secure</CardTitle>
               </div>
             </CardHeader>
             <CardContent>

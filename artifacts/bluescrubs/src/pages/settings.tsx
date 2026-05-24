@@ -90,7 +90,7 @@ export default function Settings() {
             </div>
             <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">Settings</h1>
           </div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Customise your BlueScrubsPrep experience with personalised preferences and accessibility options.
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function Settings() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <User className="h-6 w-6 text-blue-600" />
-                <CardTitle>Account Settings</CardTitle>
+                <CardTitle className="text-xl font-semibold">Account Settings</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -156,7 +156,7 @@ export default function Settings() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Bell className="h-6 w-6 text-blue-600" />
-                <CardTitle>Notifications</CardTitle>
+                <CardTitle className="text-xl font-semibold">Notifications</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -211,7 +211,7 @@ export default function Settings() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Palette className="h-6 w-6 text-blue-600" />
-                <CardTitle>Appearance & Language</CardTitle>
+                <CardTitle className="text-xl font-semibold">Appearance & Language</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -280,7 +280,7 @@ export default function Settings() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Accessibility className="h-6 w-6 text-blue-600" />
-                <CardTitle>Accessibility</CardTitle>
+                <CardTitle className="text-xl font-semibold">Accessibility</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -346,7 +346,7 @@ export default function Settings() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Timer className="h-6 w-6 text-blue-600" />
-                <CardTitle>Study Preferences</CardTitle>
+                <CardTitle className="text-xl font-semibold">Study Preferences</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -401,7 +401,7 @@ export default function Settings() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Shield className="h-6 w-6 text-blue-600" />
-                <CardTitle>Data & Privacy</CardTitle>
+                <CardTitle className="text-xl font-semibold">Data & Privacy</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
