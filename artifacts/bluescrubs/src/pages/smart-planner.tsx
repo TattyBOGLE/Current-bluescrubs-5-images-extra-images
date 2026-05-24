@@ -133,7 +133,7 @@ export default function SmartPlanner() {
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <div className="text-sm text-gray-600">{metric.label}</div>
-                  <div className="text-2xl font-bold">{metric.value}</div>
+                  <div className="text-2xl font-bold text-gray-900">{metric.value}</div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between text-xs text-gray-500">
@@ -152,7 +152,7 @@ export default function SmartPlanner() {
           <div className="lg:col-span-2 space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-gray-900">
                   <Target className="w-5 h-5" />
                   12-Week Study Plan
                 </CardTitle>
@@ -179,7 +179,7 @@ export default function SmartPlanner() {
                             {week.week}
                           </div>
                           <div>
-                            <h3 className="font-medium">Week {week.week}: {week.theme}</h3>
+                            <h3 className="font-medium text-gray-900">Week {week.week}: {week.theme}</h3>
                             <p className="text-sm text-gray-600">{week.topics.join(", ")}</p>
                           </div>
                         </div>
@@ -206,7 +206,7 @@ export default function SmartPlanner() {
             {/* Daily Schedule */}
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-gray-900">
                   <Clock className="w-5 h-5" />
                   This Week's Schedule
                 </CardTitle>
@@ -215,7 +215,7 @@ export default function SmartPlanner() {
                 <div className="space-y-6">
                   {dailyTasks.map((day, dayIndex) => (
                     <div key={dayIndex}>
-                      <h4 className="font-medium mb-3">{day.day}, {day.date}</h4>
+                      <h4 className="font-medium mb-3 text-gray-900">{day.day}, {day.date}</h4>
                       <div className="space-y-2">
                         {day.tasks.map((task, taskIndex) => (
                           <div key={taskIndex} className={`flex items-center justify-between p-3 rounded-lg ${
@@ -226,7 +226,7 @@ export default function SmartPlanner() {
                                 task.completed ? 'bg-green-600' : 'bg-gray-300'
                               }`}></div>
                               <div>
-                                <div className="font-medium">{task.time} - {task.subject}</div>
+                                <div className="font-medium text-gray-900">{task.time} - {task.subject}</div>
                                 <div className="text-sm text-gray-600">{task.type} • {task.duration}</div>
                               </div>
                             </div>
@@ -245,7 +245,7 @@ export default function SmartPlanner() {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-gray-900">
                   <Brain className="w-5 h-5" />
                   Smart Recommendations
                 </CardTitle>
@@ -264,7 +264,7 @@ export default function SmartPlanner() {
                         'text-green-600'
                       }`} />
                       <div className="flex-1">
-                        <h4 className="font-medium mb-1">{rec.title}</h4>
+                        <h4 className="font-medium mb-1 text-gray-900">{rec.title}</h4>
                         <p className="text-sm text-gray-600 mb-3">{rec.description}</p>
                         <Button size="sm" variant="outline">
                           {rec.action}
@@ -278,7 +278,7 @@ export default function SmartPlanner() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Exam Countdown</CardTitle>
+                <CardTitle className="text-gray-900">Exam Countdown</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <div className="text-3xl font-bold text-indigo-600 mb-2">
@@ -295,7 +295,7 @@ export default function SmartPlanner() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Quick Actions</CardTitle>
+                <CardTitle className="text-gray-900">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <Button className="w-full justify-start">
