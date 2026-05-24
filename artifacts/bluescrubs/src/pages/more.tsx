@@ -466,8 +466,11 @@ link: "/ask-ai"
           </div>
         </div>
 
-
-
+        <div className="mt-12 rounded-2xl bg-white border border-slate-200 p-6">
+          <p className="text-xs text-slate-500 leading-relaxed">
+            <span className="font-semibold text-slate-700">Disclaimer:</span> Some images shown are intended for illustrative and conceptual purposes only and may not be 100% accurate. Certain visual details, proportions, finishes, or representations may vary from the final outcome.
+          </p>
+        </div>
 
 
 
