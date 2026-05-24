@@ -539,7 +539,7 @@ export default function Premium() {
       {/* Pricing Summary */}
       <Card className="bg-white border-slate-200 rounded-2xl">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl text-slate-900">Complete Premium Package</CardTitle>
+          <CardTitle className="text-xl font-semibold text-slate-900">Complete Premium Package</CardTitle>
           <CardDescription className="text-base md:text-lg text-slate-600">
             All premium features included for comprehensive PLAB preparation
           </CardDescription>
