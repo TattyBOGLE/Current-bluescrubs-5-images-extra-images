@@ -140,12 +140,24 @@ export default function SpotDiagnosis() {
                 className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-teal-300 hover:shadow-md hover:shadow-teal-100/60 transition-all text-left"
               >
                 <div className="aspect-square bg-slate-100 overflow-hidden relative">
-                  <img
-                    src={`/${img.dir}/${img.file}`}
-                    alt={img.label}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+                  {/\.(mp4|webm|mov)$/i.test(img.file) ? (
+                    <video
+                      src={`/${img.dir}/${img.file}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                    />
+                  ) : (
+                    <img
+                      src={`/${img.dir}/${img.file}`}
+                      alt={img.label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  )}
                   {/* Quality dot */}
                   <span
                     title={statusCfg.title}
@@ -184,11 +196,23 @@ export default function SpotDiagnosis() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative bg-slate-900">
-              <img
-                src={`/${lightbox.dir}/${lightbox.file}`}
-                alt={lightbox.label}
-                className="w-full object-contain max-h-[60vh] mx-auto"
-              />
+              {/\.(mp4|webm|mov)$/i.test(lightbox.file) ? (
+                <video
+                  src={`/${lightbox.dir}/${lightbox.file}`}
+                  className="w-full object-contain max-h-[60vh] mx-auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                />
+              ) : (
+                <img
+                  src={`/${lightbox.dir}/${lightbox.file}`}
+                  alt={lightbox.label}
+                  className="w-full object-contain max-h-[60vh] mx-auto"
+                />
+              )}
               {(() => {
                 const status = imageStatus[lightbox.file] ?? "pending";
                 const cfg = STATUS_CONFIG[status];
