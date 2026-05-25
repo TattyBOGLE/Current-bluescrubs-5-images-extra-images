@@ -21,7 +21,17 @@ type GalleryItem = {
   explanation?: string;
 };
 
-const IMAGES: GalleryItem[] = extraImages as GalleryItem[];
+const IMAGES: GalleryItem[] = (() => {
+  const seen = new Set<string>();
+  const out: GalleryItem[] = [];
+  for (const item of extraImages as GalleryItem[]) {
+    const key = `${item.dir}/${item.file}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(item);
+  }
+  return out;
+})();
 
 const STATUS_CONFIG: Record<ImageStatus, { dot: string; label: string; title: string }> = {
   validated: { dot: "bg-emerald-500", label: "✓", title: "Clinically validated" },

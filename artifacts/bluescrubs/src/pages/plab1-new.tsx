@@ -1372,9 +1372,9 @@ export default function PLAB1New() {
           </QuizErrorBoundary>
         )}
 
-        {/* Tips & Mnemonics + Revision + Reference always visible per question,
-            independent of whether the user has submitted an answer yet. */}
-        {currentQuestion && (
+        {/* Tips & Mnemonics + Revision + Reference shown after the user has
+            submitted an answer (alongside the explanation). */}
+        {showExplanation && currentQuestion && (
           <QuizErrorBoundary
             context="study tips"
             onReset={() => setAiStudyTips(null)}

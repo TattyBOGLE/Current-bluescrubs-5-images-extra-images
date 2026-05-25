@@ -61,7 +61,7 @@ export const NICE_GUIDELINE_MAP: Record<string, string> = {
   'hyperthyroidism': 'ng145',
   'uti': 'ng109',
   'urinary-tract-infection': 'ng109',
-  'sepsis': 'ng51',
+  'sepsis': 'ng253',
   'depression': 'ng222',
   'anxiety-old': 'cg113',
   'epilepsy': 'ng217',

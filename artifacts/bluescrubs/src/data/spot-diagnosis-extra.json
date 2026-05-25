@@ -2098,18 +2098,5 @@
     "correctAnswer": "A",
     "correctAnswerText": "Topical clotrimazole 1% cream twice daily for 4 weeks",
     "explanation": "The image shows tinea pedis (athlete's foot): scaling, maceration, and peeling of the interdigital web spaces and plantar surface, caused by dermatophyte fungi (most commonly Trichophyton rubrum). Option A is CORRECT. Topical antifungal is first-line for tinea pedis without nail involvement. CKS recommends clotrimazole 1% cream twice daily for 4 weeks, or terbinafine 1% cream once daily for 1 week (shorter, equally effective). Option B (Oral terbinafine) is second-line — for topical treatment failure, extensive/moccasin-type disease, or onychomycosis. Not first-line here. Option C (Topical hydrocortisone) is CONTRAINDICATED as monotherapy — steroids worsen tinea and can cause tinea incognito. Option D (Oral fluconazole) is second-line; not initial therapy for uncomplicated tinea pedis. Option E (Topical fusidic acid) is antibacterial — ineffective against dermatophytes. Clinical pearl: Consider fungal infection before prescribing topical steroids for any itchy foot rash. Hygiene advice: dry between toes, cotton socks, change footwear regularly."
-  },
-  {
-    "dir": "spotdx-images",
-    "file": "oral-leukoplakia.jpg",
-    "label": "oral-leukoplakia.jpg",
-    "specialty": "General",
-    "type": "Clinical",
-    "vignette": "",
-    "stem": "The appearance is shown. What is the most appropriate next step?",
-    "options": [],
-    "correctAnswer": "A",
-    "correctAnswerText": "Urgent 2-week-wait referral to oral and maxillofacial surgery for biopsy",
-    "explanation": "The image shows oral leukoplakia: a non-wipeable white patch on the lateral tongue — a potentially malignant disorder with 1–5% risk of SCC transformation. Risk factors: age >50, heavy smoking, heavy alcohol — all present. Option A is CORRECT. NG12 mandates urgent 2WW referral to oral and maxillofacial surgery for any unexplained white/red oral patch lasting >3 weeks, especially with tobacco, alcohol, or age >45. Biopsy is required to exclude dysplasia or carcinoma-in-situ. Option B (Fluconazole) is INCORRECT — oral candidiasis plaques wipe off; leukoplakia does NOT wipe off. This is the critical distinction. Option C (Topical aciclovir) is INCORRECT — leukoplakia is not viral. Option D (Reassure + smoking cessation) is INCORRECT — a 3-month delay is dangerous with a red-flag lesion present. Smoking cessation is important but does not replace biopsy. Option E (Nystatin) is for candidiasis — wrong diagnosis. Clinical pearl: Absence of pain does NOT exclude oral cancer. Non-wipeable white patch + >3 weeks + tobacco/alcohol = 2WW regardless of symptoms."
   }
 ]

@@ -717,7 +717,7 @@ const ADDITIONAL_CLINICAL_GUIDES: ClinicalGuide[] = [
           ]
         },
         {
-          source: "NICE NG51",
+          source: "NICE NG253",
           year: 2017,
           keyRecommendations: [
             "Use structured assessment tools",
@@ -742,7 +742,7 @@ const ADDITIONAL_CLINICAL_GUIDES: ClinicalGuide[] = [
     tags: ['sepsis', 'emergency', 'shock', 'antibiotics', 'critical care'],
     references: [
       "Surviving Sepsis Campaign Guidelines 2021",
-      "NICE NG51: Sepsis recognition, diagnosis and early management, 2017"
+      "NICE NG253: Suspected sepsis: recognition, diagnosis and early management, 2024"
     ]
   },
   {
