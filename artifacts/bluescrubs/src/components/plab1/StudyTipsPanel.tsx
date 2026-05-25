@@ -148,17 +148,22 @@ export function StudyTipsPanel({
         )}
       </div>
 
-      {/* Collapsible Revision Panel */}
+      {/* Collapsible Revision Panel — keyed by question so open/closed
+          state resets each time the user moves to a new question. */}
       {aiStudyTips && aiStudyTips.tips && aiStudyTips.tips.length > 0 && (
         <RevisionPanel
+          key={`rev-${currentQuestion?.id ?? currentQuestion?.stem ?? ''}`}
           question={currentQuestion}
           tips={aiStudyTips.tips}
           niceRefs={niceRefs}
         />
       )}
 
-      {/* Reference Material */}
-      <ReferenceMaterialPanel question={currentQuestion} />
+      {/* Reference Material — also keyed per question so it always opens closed. */}
+      <ReferenceMaterialPanel
+        key={`ref-${currentQuestion?.id ?? currentQuestion?.stem ?? ''}`}
+        question={currentQuestion}
+      />
     </>
   );
 }

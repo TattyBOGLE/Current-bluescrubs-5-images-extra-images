@@ -122,6 +122,12 @@ Create authentic UK medical scenarios with:
 - Detailed explanations for each option (why correct/incorrect)
 - A relevant clinical mnemonic
 
+OPTION ORDERING RULES (strict):
+- "All of the above" (or any equivalent like "All of these", "A, B and C") is ONLY permitted as option E (the LAST option), and ONLY when options A-D are EACH individually correct. If used, the correct answer MUST be E.
+- Never place "All of the above" anywhere except position E.
+- Never use "None of the above" — pick a real clinical distractor instead.
+- The other four options must be plausible, mutually-exclusive distractors drawn from real differentials or alternative managements — not joke options.
+
 Format as JSON array with fields: question, options (array of 5 strings), answer (0-based index of correct option), explanation (object with keys A-E), mnemonic`;
 
       const response = await openai.chat.completions.create({

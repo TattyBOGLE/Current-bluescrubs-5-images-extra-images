@@ -144,7 +144,7 @@ PSYCHIATRY:
 - Bipolar Disorder: NICE CG185 (2014) — Mania: antipsychotic (olanzapine or quetiapine). Depression: quetiapine or lamotrigine (NOT antidepressant monotherapy). Maintenance: lithium first-line; monitor renal/thyroid/levels.
 
 INFECTION:
-- Sepsis: NICE NG51 (2016) / Surviving Sepsis Campaign 2021 — Sepsis-6 within 1 hour: blood cultures, IV antibiotics (broad-spectrum per local policy), IV fluid 500 mL crystalloid bolus, lactate, urine output monitoring, oxygen.
+- Sepsis: NICE NG253 (2024, replaces NG51) / Surviving Sepsis Campaign 2021 — Sepsis-6 within 1 hour: blood cultures, IV antibiotics (broad-spectrum per local policy), IV fluid 500 mL crystalloid bolus, lactate, urine output monitoring, oxygen.
 - UTI: NICE NG109 (2018, updated 2024) — Lower UTI (non-pregnant women): nitrofurantoin 100 mg MR BD for 3 days first-line; trimethoprim 200 mg BD 3 days if contraindicated. Pregnant: nitrofurantoin 7 days (avoid at term). Upper UTI: co-amoxiclav or cefalexin 7–14 days.
 - Cellulitis: NICE NG141 (2019) — Eron class I (no systemic signs): flucloxacillin 500 mg QDS. Class II+: IV flucloxacillin. Mark margins, elevation, analgesia. Exclude DVT.
 
@@ -174,6 +174,12 @@ PAEDIATRICS:
 
 For ${displayCategory}, focus on core topics like:
 ${getCategoryTopics(category)}
+
+OPTION ORDERING RULES (strict — failure to follow makes the question unusable):
+- "All of the above" (or any equivalent like "All of these", "A, B and C are all correct") is ONLY permitted as option E (the LAST option in the array), and ONLY when options A–D are EACH individually correct. When used, "answer" MUST be 4 (the index for E).
+- Never place "All of the above" at A, B, C or D.
+- Never use "None of the above" — pick a real clinical distractor.
+- The other four options must be plausible, mutually-exclusive distractors drawn from real differentials or alternative managements.
 
 Return ONLY a valid JSON array with exactly ${count} questions. Each question must follow this EXACT structure:
 {
@@ -232,7 +238,7 @@ Return ONLY a valid JSON array. No additional text.`;
 function getCategoryTopics(category: string): string {
   const topics = {
     cardiovascular: "Hypertension, Acute Coronary Syndrome, Heart Failure, Arrhythmias, Valvular Disease",
-    respiratory: "Asthma (NICE NG245 2024), COPD (NICE NG115), Pneumonia (NICE CG191 / CURB-65), Pulmonary Embolism (NICE NG158), Pleural Disease, Bronchiectasis",
+    respiratory: "Asthma (NICE NG245 2024), COPD (NICE NG115), Pneumonia (NICE NG250 2025 / CURB-65), Pulmonary Embolism (NICE NG158), Pleural Disease, Bronchiectasis",
     'infectious-diseases': "UTI, Sepsis, Meningitis, Endocarditis, Tuberculosis",
     endocrinology: "Diabetes, Thyroid Disorders, Adrenal Disorders, Calcium Disorders",
     gastroenterology: "IBD, Peptic Ulcer Disease, Hepatitis, Pancreatitis, Bowel Obstruction",

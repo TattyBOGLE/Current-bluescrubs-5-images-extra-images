@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { buildDynamicLink } from "@/lib/clinical-links";
+import { buildDynamicLink, toNICEResourcesUrl } from "@/lib/clinical-links";
 import type { NICERef } from "@/lib/clinical-links";
 import { ExternalLink } from "@/components/ui/external-link";
 
@@ -21,7 +21,13 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
   const keyClue = keyClueMatch ? keyClueMatch[1] : null;
 
   const qTopic = question?.topic || question?.category || '';
+  // Prefer a real visual-summary PDF when we have one mapped; otherwise fall
+  // back to the guideline's "Resources" page (where NICE collates visual
+  // summaries, slide sets and patient leaflets) so the link is always useful.
   const visualSummaryUrl = buildDynamicLink('NICE', qTopic)?.visualUrl ?? null;
+  const resourcesUrl = visualSummaryUrl ? null : toNICEResourcesUrl(qTopic);
+  const linkUrl = visualSummaryUrl ?? resourcesUrl;
+  const linkLabel = visualSummaryUrl ? '📄 Visual Summary PDF' : '📂 Guideline Resources (PDFs, summaries, slides)';
 
   return (
     <div className="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
@@ -67,12 +73,12 @@ export function RevisionPanel({ question, tips, niceRefs }: RevisionPanelProps) 
                     </p>
                   </>
                 )}
-                {visualSummaryUrl && (
+                {linkUrl && (
                   <ExternalLink
-                    href={visualSummaryUrl}
-                    className="text-xs text-teal-600 hover:text-teal-800 hover:underline mt-1"
+                    href={linkUrl}
+                    className="text-xs text-teal-600 hover:text-teal-800 hover:underline mt-1 inline-block"
                   >
-                    📄 Visual Summary PDF
+                    {linkLabel}
                   </ExternalLink>
                 )}
               </div>

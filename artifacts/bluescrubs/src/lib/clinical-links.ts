@@ -22,6 +22,16 @@ const NICE_VISUAL_SUMMARY_MAP: Record<string, string> = {
   'ng28':  'https://www.nice.org.uk/guidance/ng28/resources/visual-summary-full-version-choosing-medicines-for-firstline-and-further-treatment-pdf-10956472093',
 };
 
+// When no visual summary PDF is mapped, fall back to the guideline's
+// "Resources" page (NICE hosts visual summaries, slide sets and
+// patient leaflets there) instead of hiding the link entirely.
+export function toNICEResourcesUrl(topic: string): string | null {
+  const base = toConditionSlug(topic);
+  const code = NICE_GUIDELINE_MAP[base];
+  if (!code) return null;
+  return `https://www.nice.org.uk/guidance/${code}/resources`;
+}
+
 export const NICE_GUIDELINE_MAP: Record<string, string> = {
   'hypertension': 'ng136',
   'heart-failure': 'ng106',
@@ -92,10 +102,12 @@ export const NICE_GUIDELINE_MAP: Record<string, string> = {
   'gi-bleed': 'ng141',
   'anxiety': 'ng197',
   'generalised-anxiety': 'ng197',
-  'schizophrenia': 'ng185',
+  'schizophrenia': 'cg178',
+  'psychosis': 'cg178',
   'adhd': 'ng87',
   'eating-disorders': 'ng69',
-  'bipolar': 'ng185',
+  'bipolar': 'cg185',
+  'bipolar-disorder': 'cg185',
   'multiple-sclerosis': 'ng220',
   'ms': 'ng220',
   'endometriosis': 'ng73',
@@ -597,7 +609,34 @@ export function getNICEReferencesForQuestion(question: any): NICERef[] {
     refs.push({ title: 'NICE NG197 — Generalised anxiety disorder and panic disorder in adults', url: 'https://www.nice.org.uk/guidance/ng197', type: 'NICE Guideline', guidelineId: 'NG197', relevance: 'Stepped-care approach, SSRI/SNRI prescribing and CBT referral', primary: true });
   }
   if (/schizophrenia|psychosis/i.test(combined)) {
-    refs.push({ title: 'NICE NG185 — Psychosis and schizophrenia in adults', url: 'https://www.nice.org.uk/guidance/ng185', type: 'NICE Guideline', guidelineId: 'NG185', relevance: 'Antipsychotic choice, clozapine criteria and monitoring', primary: true });
+    refs.push({ title: 'NICE CG178 — Psychosis and schizophrenia in adults', url: 'https://www.nice.org.uk/guidance/cg178', type: 'NICE Guideline', guidelineId: 'CG178', relevance: 'Antipsychotic choice, clozapine criteria and monitoring', primary: true });
+  }
+  if (/bipolar/i.test(combined)) {
+    refs.push({ title: 'NICE CG185 — Bipolar disorder: assessment and management', url: 'https://www.nice.org.uk/guidance/cg185', type: 'NICE Guideline', guidelineId: 'CG185', relevance: 'Mania, depression, maintenance therapy and lithium monitoring', primary: true });
+  }
+  if (/\bsepsis\b|septic shock/i.test(combined)) {
+    refs.push({ title: 'NICE NG253 — Suspected sepsis: recognition, diagnosis and early management', url: 'https://www.nice.org.uk/guidance/ng253', type: 'NICE Guideline', guidelineId: 'NG253', relevance: 'Risk stratification, Sepsis Six bundle and antibiotic timing', primary: true });
+  }
+  if (/acute coronary|\bacs\b|\bstemi\b|\bnstemi\b|myocardial infarction|\bmi\b/i.test(combined)) {
+    refs.push({ title: 'NICE NG185 — Acute coronary syndromes', url: 'https://www.nice.org.uk/guidance/ng185', type: 'NICE Guideline', guidelineId: 'NG185', relevance: 'Primary PCI vs thrombolysis, dual antiplatelet and secondary prevention', primary: true });
+  }
+  if (/atrial fibrillation|\baf\b/i.test(combined)) {
+    refs.push({ title: 'NICE NG196 — Atrial fibrillation: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng196', type: 'NICE Guideline', guidelineId: 'NG196', relevance: 'Rate vs rhythm control, CHA2DS2-VASc, HAS-BLED and DOAC choice', primary: true });
+  }
+  if (/heart failure/i.test(combined)) {
+    refs.push({ title: 'NICE NG106 — Chronic heart failure in adults', url: 'https://www.nice.org.uk/guidance/ng106', type: 'NICE Guideline', guidelineId: 'NG106', relevance: 'ACEi/ARB + beta-blocker + MRA + SGLT2i ladder for HFrEF', primary: true });
+  }
+  if (/hypertension(?!.*pregnancy)/i.test(combined)) {
+    refs.push({ title: 'NICE NG136 — Hypertension in adults', url: 'https://www.nice.org.uk/guidance/ng136', type: 'NICE Guideline', guidelineId: 'NG136', relevance: 'ABCD step therapy, ABPM/HBPM thresholds and target BP', primary: true });
+  }
+  if (/type 2 diabetes|\bt2dm\b/i.test(combined)) {
+    refs.push({ title: 'NICE NG28 — Type 2 diabetes in adults', url: 'https://www.nice.org.uk/guidance/ng28', type: 'NICE Guideline', guidelineId: 'NG28', relevance: 'Metformin, SGLT2i for CV/renal risk, HbA1c targets', primary: true });
+  }
+  if (/type 1 diabetes|\bt1dm\b|\bdka\b|diabetic ketoacidosis/i.test(combined)) {
+    refs.push({ title: 'NICE NG17 — Type 1 diabetes in adults', url: 'https://www.nice.org.uk/guidance/ng17', type: 'NICE Guideline', guidelineId: 'NG17', relevance: 'Insulin regimens, DKA management and HbA1c targets', primary: true });
+  }
+  if (/dementia|alzheimer/i.test(combined)) {
+    refs.push({ title: 'NICE NG97 — Dementia: assessment, management and support', url: 'https://www.nice.org.uk/guidance/ng97', type: 'NICE Guideline', guidelineId: 'NG97', relevance: 'Cholinesterase inhibitors, memantine and BPSD management', primary: true });
   }
   if (/adhd/i.test(combined)) {
     refs.push({ title: 'NICE NG87 — Attention deficit hyperactivity disorder: diagnosis and management', url: 'https://www.nice.org.uk/guidance/ng87', type: 'NICE Guideline', guidelineId: 'NG87', relevance: 'Medication thresholds, stimulant use and follow-up intervals', primary: true });
