@@ -1139,7 +1139,7 @@ Return ONLY a valid JSON array with exactly ${count} stations. No additional tex
   };
 
   // Single batch generation endpoint (for smaller requests)
-  app.post("/api/generate-questions", expensiveLimiter, async (req, res) => {
+  app.post("/api/generate-questions", async (req, res) => {
     const { category, difficulty = "mixed", count = 50 } = req.body;
     const requestedCount = parseInt(String(count)) || 50;
 
