@@ -22,15 +22,38 @@ type GalleryItem = {
 };
 
 const IMAGES: GalleryItem[] = (() => {
-  const seen = new Set<string>();
-  const out: GalleryItem[] = [];
+  // Score each entry so the "better" duplicate wins:
+  // - proper label (not a filename) scores higher
+  // - specialty other than "General" scores higher
+  // - validated > pending > flagged in image-status
+  const score = (it: GalleryItem) => {
+    let s = 0;
+    if (!/\.(jpe?g|png|webp|mp4|webm|mov)$/i.test(it.label)) s += 10;
+    if (it.specialty && it.specialty.toLowerCase() !== "general") s += 5;
+    const st = imageStatus[it.file];
+    if (st === "validated") s += 3;
+    else if (st === "pending") s += 1;
+    return s;
+  };
+  const norm = (s: string) =>
+    s.toLowerCase()
+      .replace(/\.(jpe?g|png|webp|mp4|webm|mov)$/i, "")
+      .replace(/[-_]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  const bestByLabel = new Map<string, GalleryItem>();
   for (const item of extraImages as GalleryItem[]) {
-    const key = `${item.dir}/${item.file}`.toLowerCase();
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(item);
+    const key = norm(item.label);
+    const prev = bestByLabel.get(key);
+    if (!prev || score(item) > score(prev)) bestByLabel.set(key, item);
   }
-  return out;
+  // Also dedupe by file path in case the same file shows up under different labels
+  const byFile = new Map<string, GalleryItem>();
+  for (const item of bestByLabel.values()) {
+    const k = `${item.dir}/${item.file}`.toLowerCase();
+    if (!byFile.has(k)) byFile.set(k, item);
+  }
+  return [...byFile.values()];
 })();
 
 const STATUS_CONFIG: Record<ImageStatus, { dot: string; label: string; title: string }> = {

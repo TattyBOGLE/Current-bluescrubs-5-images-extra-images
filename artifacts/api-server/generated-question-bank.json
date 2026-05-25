@@ -1356,7 +1356,7 @@
     "topic": "Respiratory"
   },
   {
-    "question": "A 50-year-old female is newly diagnosed with rheumatoid arthritis. She has joint pain, morning stiffness lasting >1 hour, and a positive rheumatoid factor. She has no contraindications to disease-modifying therapy. What is the most appropriate initial treatment NG100?",
+    "question": "A 50-year-old female is newly diagnosed with rheumatoid arthritis. She has joint pain, morning stiffness lasting >1 hour, and a positive rheumatoid factor. She has no contraindications to disease-modifying therapy. What is the most appropriate initial treatment?",
     "options": [
       "NSAIDs alone",
       "Methotrexate",
@@ -1632,7 +1632,7 @@
     "id": "generated_all_1779039924287_1",
     "topic": "Type 2 Diabetes — Step-Up Therapy: SGLT-2i vs Sulfonylurea (NICE NG28 2022)",
     "category": "endocrinology",
-    "question": "A 45-year-old man with type 2 diabetes is reviewed in clinic. He is currently on metformin 1 g BD. His HbA1c is 72 mmol/mol (8.7%) and he has no established cardiovascular disease, CKD, or heart failure. NG28, what is the most appropriate next step?",
+    "question": "A 45-year-old man with type 2 diabetes is reviewed in clinic. He is currently on metformin 1 g BD. His HbA1c is 72 mmol/mol (8.7%) and he has no established cardiovascular disease, CKD, or heart failure. what is the most appropriate next step?",
     "options": [
       "Add an SGLT-2 inhibitor (e.g. dapagliflozin)",
       "Add a DPP-4 inhibitor (e.g. sitagliptin)",
@@ -1652,7 +1652,7 @@
   },
   {
     "id": "generated_all_1779039924287_2",
-    "question": "A 22-year-old woman is newly diagnosed with asthma in clinic. She has daytime wheeze on most days and her GP wishes to start her on an inhaler. NG245 (2024), which prescribing strategy is correct?",
+    "question": "A 22-year-old woman is newly diagnosed with asthma in clinic. She has daytime wheeze on most days and her GP wishes to start her on an inhaler. (2024), which prescribing strategy is correct?",
     "options": [
       "Prescribe salbutamol inhaler alone and review in 3 months",
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -1783,7 +1783,7 @@
     "id": "generated_all_1779039924287_8",
     "topic": "Depression — Moderate: First-Line Treatment (NICE NG222)",
     "category": "psychiatry",
-    "question": "A 35-year-old woman presents with low mood, loss of interest in activities, and fatigue for the past two months. She has had no previous treatment for depression. Her PHQ-9 score indicates moderate depression. NG222, what is the most appropriate initial treatment?",
+    "question": "A 35-year-old woman presents with low mood, loss of interest in activities, and fatigue for the past two months. She has had no previous treatment for depression. Her PHQ-9 score indicates moderate depression. what is the most appropriate initial treatment?",
     "options": [
       "Sertraline alone",
       "Amitriptyline alone",
@@ -1845,7 +1845,7 @@
   },
   {
     "id": "generated_all_1779041298976_1",
-    "question": "A 22-year-old female with asthma was prescribed salbutamol alone at diagnosis one year ago and has not had a preventer inhaler since. She reports waking three nights this week with wheeze. NG245, which statement about her current management is correct?",
+    "question": "A 22-year-old female with asthma was prescribed salbutamol alone at diagnosis one year ago and has not had a preventer inhaler since. She reports waking three nights this week with wheeze. which statement about her current management is correct?",
     "options": [
       "Salbutamol alone remains appropriate as her symptoms are mild",
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -1913,7 +1913,7 @@
     "id": "generated_all_1779041298976_4",
     "topic": "Heart Failure with Reduced EF — First-Line Therapy (NICE NG106)",
     "category": "cardiovascular",
-    "question": "A 68-year-old male with a history of myocardial infarction presents with exertional dyspnoea and ankle swelling. Echocardiogram shows left ventricular ejection fraction (LVEF) of 35%, confirming HFrEF. He is not currently on any regular cardiac medications. What is the most appropriate first drug class to initiate NG106?",
+    "question": "A 68-year-old male with a history of myocardial infarction presents with exertional dyspnoea and ankle swelling. Echocardiogram shows left ventricular ejection fraction (LVEF) of 35%, confirming HFrEF. He is not currently on any regular cardiac medications. What is the most appropriate first drug class to initiate?",
     "options": [
       "ACE inhibitor (e.g. ramipril)",
       "Beta-blocker (e.g. bisoprolol)",
@@ -2292,7 +2292,7 @@
     "id": "generated_all_1779041565982_2",
     "topic": "Type 2 Diabetes — Step-Up Therapy (NICE NG28)",
     "category": "endocrinology",
-    "question": "A 60-year-old woman with type 2 diabetes is reviewed in clinic. She is currently on metformin 1 g BD and has no cardiovascular disease or significant renal impairment (eGFR 72). Her HbA1c is 65 mmol/mol (8.1%). NG28, what is the most appropriate next step?",
+    "question": "A 60-year-old woman with type 2 diabetes is reviewed in clinic. She is currently on metformin 1 g BD and has no cardiovascular disease or significant renal impairment (eGFR 72). Her HbA1c is 65 mmol/mol (8.1%). what is the most appropriate next step?",
     "options": [
       "Increase metformin to maximum dose",
       "Add an SGLT-2 inhibitor (e.g. dapagliflozin or empagliflozin)",
@@ -2694,7 +2694,7 @@
   },
   {
     "id": "generated_all_1779042522269_1",
-    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She is currently on salbutamol PRN only — she has never been prescribed a preventer inhaler. She reports using her salbutamol inhaler most days and wakes up at night with breathlessness twice a week. NG245, what is the most appropriate next step?",
+    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She is currently on salbutamol PRN only — she has never been prescribed a preventer inhaler. She reports using her salbutamol inhaler most days and wakes up at night with breathlessness twice a week. what is the most appropriate next step?",
     "options": [
       "Increase the frequency of salbutamol use",
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -2910,7 +2910,7 @@
     "id": "generated_all_1779042657723_1",
     "topic": "Atrial Fibrillation — Anticoagulation (NICE NG196)",
     "category": "cardiovascular",
-    "question": "A 70-year-old man is newly diagnosed with atrial fibrillation. His CHA₂DS₂-VASc score is 2. He has hypertension and type 2 diabetes, but no history of stroke, heart failure, or structural heart disease. He is not currently on any anticoagulant. What is the most appropriate management NG196?",
+    "question": "A 70-year-old man is newly diagnosed with atrial fibrillation. His CHA₂DS₂-VASc score is 2. He has hypertension and type 2 diabetes, but no history of stroke, heart failure, or structural heart disease. He is not currently on any anticoagulant. What is the most appropriate management?",
     "options": [
       "Start warfarin and rate control with bisoprolol",
       "Start a DOAC (e.g. apixaban or rivaroxaban) and rate control with bisoprolol",
@@ -2930,7 +2930,7 @@
   },
   {
     "id": "generated_all_1779042657723_2",
-    "question": "A 35-year-old woman is newly diagnosed with asthma in clinic today. She has symptoms twice a week and has been given a salbutamol inhaler for immediate relief. She has not yet been prescribed any preventer treatment. What is the most appropriate management strategy NG245?",
+    "question": "A 35-year-old woman is newly diagnosed with asthma in clinic today. She has symptoms twice a week and has been given a salbutamol inhaler for immediate relief. She has not yet been prescribed any preventer treatment. What is the most appropriate management strategy?",
     "options": [
       "Continue with salbutamol alone and review in 6 weeks",
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -3121,7 +3121,7 @@
   },
   {
     "id": "generated_all_1779042809048_1",
-    "question": "A 34-year-old man with known asthma has been on regular low-dose beclometasone 200 mcg/day and salbutamol as required for 3 months. He continues to wake at night with breathlessness twice a week and uses his salbutamol inhaler on most days. What is the most appropriate next step NG245?",
+    "question": "A 34-year-old man with known asthma has been on regular low-dose beclometasone 200 mcg/day and salbutamol as required for 3 months. He continues to wake at night with breathlessness twice a week and uses his salbutamol inhaler on most days. What is the most appropriate next step?",
     "options": [
       "Increase beclometasone to high-dose ICS",
       "Add a long-acting beta-agonist (LABA) to the existing low-dose ICS",
@@ -3306,7 +3306,7 @@
   },
   {
     "id": "ng245_review_1779043390177_1",
-    "question": "A 38-year-old woman with asthma was prescribed salbutamol alone in 2021 under the then-current BTS/SIGN guidelines. She presents for a routine medication review. She uses salbutamol 3–4 times per week. Her asthma has never been formally stepped up. What change is required to bring her management NG245 (2024)?",
+    "question": "A 38-year-old woman with asthma was prescribed salbutamol alone in 2021 under the then-current BTS/SIGN guidelines. She presents for a routine medication review. She uses salbutamol 3–4 times per week. Her asthma has never been formally stepped up. What change is required to bring her management (2024)?",
     "options": [
       "Continue salbutamol alone as she is clinically stable",
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -3331,7 +3331,7 @@
   },
   {
     "id": "ng245_review_1779043390177_2",
-    "question": "A 45-year-old man with asthma was previously stepped up to high-dose ICS monotherapy (beclometasone 800 mcg/day) three years ago. He is reviewed in clinic and his asthma has been well controlled for the past 18 months with no exacerbations. NG245, what should be considered?",
+    "question": "A 45-year-old man with asthma was previously stepped up to high-dose ICS monotherapy (beclometasone 800 mcg/day) three years ago. He is reviewed in clinic and his asthma has been well controlled for the past 18 months with no exacerbations. what should be considered?",
     "options": [
       "Continue high-dose ICS indefinitely as he is stable",
       "Step down: try reducing to low-dose ICS + LABA combination",
@@ -3404,7 +3404,7 @@
     "id": "generated_all_1779043452703_1",
     "topic": "Asthma — SABA-Only Prescribing Review (NICE NG245)",
     "category": "respiratory",
-    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She has never been prescribed a preventer inhaler and is currently on salbutamol PRN only. She reports using her salbutamol inhaler more frequently and wakes up at night due to breathlessness. NG245, what is the most appropriate next step?",
+    "question": "A 30-year-old woman with a history of asthma presents to her GP with worsening symptoms over the past month. She has never been prescribed a preventer inhaler and is currently on salbutamol PRN only. She reports using her salbutamol inhaler more frequently and wakes up at night due to breathlessness. what is the most appropriate next step?",
     "options": [
       "Increase salbutamol use",
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -3615,7 +3615,7 @@
     "id": "generated_all_1779044247004_1",
     "topic": "Asthma Management",
     "category": "respiratory",
-    "question": "A 35-year-old woman is newly diagnosed with asthma at her GP. She reports wheezing and breathlessness twice a week with no nocturnal symptoms. NG245, what is the recommended initial pharmacological treatment?",
+    "question": "A 35-year-old woman is newly diagnosed with asthma at her GP. She reports wheezing and breathlessness twice a week with no nocturnal symptoms. what is the recommended initial pharmacological treatment?",
     "options": [
       "SABA inhaler only",
       "As-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -3636,7 +3636,7 @@
     "id": "generated_all_1779044247004_2",
     "topic": "Type 2 Diabetes — Established CVD: Metformin + SGLT-2i (NICE NG28)",
     "category": "endocrinology",
-    "question": "A 58-year-old man with a BMI of 32 kg/m² and a history of myocardial infarction two years ago is newly diagnosed with type 2 diabetes. He has no contraindications to any glucose-lowering agent and his eGFR is 78. NG28, what is the most appropriate initial pharmacological treatment?",
+    "question": "A 58-year-old man with a BMI of 32 kg/m² and a history of myocardial infarction two years ago is newly diagnosed with type 2 diabetes. He has no contraindications to any glucose-lowering agent and his eGFR is 78. what is the most appropriate initial pharmacological treatment?",
     "options": [
       "Metformin alone",
       "Gliclazide alone",
@@ -4876,7 +4876,7 @@
     "id": "generated_all_1779295044268_1",
     "topic": "Asthma — Step 1: ICS from Diagnosis (NICE NG245)",
     "category": "respiratory",
-    "question": "A 25-year-old woman with a confirmed diagnosis of asthma has been using salbutamol as needed for the past 3 months. She still has symptoms on most days. NG245, what is the most appropriate next step in her management?",
+    "question": "A 25-year-old woman with a confirmed diagnosis of asthma has been using salbutamol as needed for the past 3 months. She still has symptoms on most days. what is the most appropriate next step in her management?",
     "options": [
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
       "Increase the frequency of salbutamol use",
@@ -4919,7 +4919,7 @@
     "id": "generated_all_1779295044268_3",
     "topic": "Diabetes Management",
     "category": "endocrinology",
-    "question": "A 60-year-old woman with type 2 diabetes and a history of myocardial infarction is being reviewed. Her HbA1c is 65 mmol/mol. She is currently on metformin. NG28, what is the most appropriate next step in her treatment?",
+    "question": "A 60-year-old woman with type 2 diabetes and a history of myocardial infarction is being reviewed. Her HbA1c is 65 mmol/mol. She is currently on metformin. what is the most appropriate next step in her treatment?",
     "options": [
       "Add a sulfonylurea",
       "Add an SGLT-2 inhibitor",
@@ -4961,7 +4961,7 @@
     "id": "generated_all_1779295044268_5",
     "topic": "Heart Failure Management",
     "category": "cardiovascular",
-    "question": "A 67-year-old man with heart failure with reduced ejection fraction presents for a review. He is currently on lisinopril and bisoprolol. NG106, what should be the next step in optimizing his therapy?",
+    "question": "A 67-year-old man with heart failure with reduced ejection fraction presents for a review. He is currently on lisinopril and bisoprolol. what should be the next step in optimizing his therapy?",
     "options": [
       "Add spironolactone",
       "Add digoxin",
@@ -4982,7 +4982,7 @@
     "id": "generated_all_1779295044268_6",
     "topic": "Type 1 Diabetes",
     "category": "endocrinology",
-    "question": "A 19-year-old male with type 1 diabetes attends the clinic for a routine review. His HbA1c is 60 mmol/mol. What is the target HbA1c NG17 guidelines?",
+    "question": "A 19-year-old male with type 1 diabetes attends the clinic for a routine review. His HbA1c is 60 mmol/mol. What is the target HbA1c guidelines?",
     "options": [
       "42 mmol/mol",
       "48 mmol/mol",
@@ -5003,7 +5003,7 @@
     "id": "generated_all_1779295044268_7",
     "topic": "Stroke/TIA Management",
     "category": "neurology",
-    "question": "A 68-year-old man presents with a transient episode of right-sided weakness and aphasia lasting 30 minutes. He has a carotid ultrasound showing 70% stenosis of the left internal carotid artery. NG128, what is the most appropriate management?",
+    "question": "A 68-year-old man presents with a transient episode of right-sided weakness and aphasia lasting 30 minutes. He has a carotid ultrasound showing 70% stenosis of the left internal carotid artery. what is the most appropriate management?",
     "options": [
       "Start aspirin and clopidogrel",
       "Immediate carotid endarterectomy",
@@ -5024,7 +5024,7 @@
     "id": "generated_all_1779295044268_8",
     "topic": "Obstetrics - Pre-eclampsia",
     "category": "obstetrics-gynaecology",
-    "question": "A 30-year-old pregnant woman at 34 weeks of gestation presents with elevated blood pressure readings of 160/100 mmHg and proteinuria of 1+. NG133, what is the first-line antihypertensive treatment for her condition?",
+    "question": "A 30-year-old pregnant woman at 34 weeks of gestation presents with elevated blood pressure readings of 160/100 mmHg and proteinuria of 1+. what is the first-line antihypertensive treatment for her condition?",
     "options": [
       "Methyldopa",
       "Labetalol",
@@ -5045,7 +5045,7 @@
     "id": "generated_all_1779295044268_9",
     "topic": "Epilepsy Management",
     "category": "neurology",
-    "question": "A 28-year-old woman with focal epilepsy wishes to become pregnant. She is currently on sodium valproate. NG217, what is the most appropriate action regarding her medication?",
+    "question": "A 28-year-old woman with focal epilepsy wishes to become pregnant. She is currently on sodium valproate. what is the most appropriate action regarding her medication?",
     "options": [
       "Continue sodium valproate",
       "Switch to lamotrigine",
@@ -5717,7 +5717,7 @@
     "id": "generated_all_1779298432711_1",
     "topic": "Asthma Management in Adults",
     "category": "respiratory",
-    "question": "A 28-year-old woman with a known history of asthma is on salbutamol reliever inhaler only — she has never been prescribed a preventer. She reports using her salbutamol at least twice a week. NG245, what is the most appropriate next step in her management?",
+    "question": "A 28-year-old woman with a known history of asthma is on salbutamol reliever inhaler only — she has never been prescribed a preventer. She reports using her salbutamol at least twice a week. what is the most appropriate next step in her management?",
     "options": [
       "Continue Salbutamol alone",
       "Switch to as-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -5927,7 +5927,7 @@
     "id": "generated_all_1779298958471_1",
     "topic": "Asthma Management",
     "category": "respiratory",
-    "question": "A 30-year-old woman receives a new diagnosis of asthma in clinic. She experiences wheezing and shortness of breath twice a week but has no night waking. NG245, what is the most appropriate initial pharmacological treatment?",
+    "question": "A 30-year-old woman receives a new diagnosis of asthma in clinic. She experiences wheezing and shortness of breath twice a week but has no night waking. what is the most appropriate initial pharmacological treatment?",
     "options": [
       "SABA inhaler only",
       "As-needed low-dose ICS/formoterol combination (AIR therapy)",
@@ -6137,7 +6137,7 @@
     "id": "generated_all_1779299487566_1",
     "topic": "Asthma Management in Adults",
     "category": "respiratory",
-    "question": "A 28-year-old woman with known asthma is currently on salbutamol PRN only. She reports wheezing and breathlessness twice a week and occasional night waking. NG245, what is the most appropriate next step?",
+    "question": "A 28-year-old woman with known asthma is currently on salbutamol PRN only. She reports wheezing and breathlessness twice a week and occasional night waking. what is the most appropriate next step?",
     "options": [
       "Continue salbutamol alone",
       "Switch to as-needed ICS/formoterol combination (AIR therapy)",
@@ -26228,7 +26228,7 @@
     "id": "generated_all_1779395401161_2",
     "topic": "Type 2 Diabetes Management",
     "category": "all",
-    "question": "A 60-year-old man with type 2 diabetes and established cardiovascular disease presents for a medication review. He is currently on metformin. NG28, what additional medication should be considered?",
+    "question": "A 60-year-old man with type 2 diabetes and established cardiovascular disease presents for a medication review. He is currently on metformin. what additional medication should be considered?",
     "options": [
       "Sulfonylurea",
       "DPP-4 inhibitor",
@@ -26249,7 +26249,7 @@
     "id": "generated_all_1779395401161_3",
     "topic": "Community-Acquired Pneumonia",
     "category": "all",
-    "question": "A 65-year-old man is admitted to the hospital with symptoms of cough, fever, and breathlessness. His CURB-65 score is 3. NG250, what is the most appropriate antibiotic regimen?",
+    "question": "A 65-year-old man is admitted to the hospital with symptoms of cough, fever, and breathlessness. His CURB-65 score is 3. what is the most appropriate antibiotic regimen?",
     "options": [
       "Amoxicillin 500 mg TDS",
       "Amoxicillin + Clarithromycin",
@@ -26270,7 +26270,7 @@
     "id": "generated_all_1779395401161_4",
     "topic": "Atrial Fibrillation Management",
     "category": "all",
-    "question": "A 70-year-old woman with a history of hypertension and atrial fibrillation presents for anticoagulation management. Her CHA₂DS₂-VASc score is 4. NG196, what is the appropriate anticoagulation strategy?",
+    "question": "A 70-year-old woman with a history of hypertension and atrial fibrillation presents for anticoagulation management. Her CHA₂DS₂-VASc score is 4. what is the appropriate anticoagulation strategy?",
     "options": [
       "Aspirin",
       "Warfarin",
@@ -26291,7 +26291,7 @@
     "id": "generated_all_1779395401161_5",
     "topic": "Hyperthyroidism Management",
     "category": "all",
-    "question": "A 45-year-old woman presents with symptoms of weight loss, palpitations, and heat intolerance. Her thyroid function tests show suppressed TSH and elevated free T4. NG145, what is the first-line treatment?",
+    "question": "A 45-year-old woman presents with symptoms of weight loss, palpitations, and heat intolerance. Her thyroid function tests show suppressed TSH and elevated free T4. what is the first-line treatment?",
     "options": [
       "Methimazole",
       "Radioactive iodine",
@@ -26312,7 +26312,7 @@
     "id": "generated_all_1779395401161_6",
     "topic": "Sepsis Management",
     "category": "all",
-    "question": "A 58-year-old man with a history of COPD presents to the A&E with fever, confusion, and hypotension. His lactate level is 4 mmol/L. NG51, what is the immediate management step?",
+    "question": "A 58-year-old man with a history of COPD presents to the A&E with fever, confusion, and hypotension. His lactate level is 4 mmol/L. what is the immediate management step?",
     "options": [
       "Blood cultures",
       "IV antibiotics",
@@ -26333,7 +26333,7 @@
     "id": "generated_all_1779395401161_7",
     "topic": "COPD Management",
     "category": "all",
-    "question": "A 68-year-old man with COPD presents with worsening breathlessness. His FEV₁ is 45% of predicted. NG115, what is the most appropriate inhaler therapy?",
+    "question": "A 68-year-old man with COPD presents with worsening breathlessness. His FEV₁ is 45% of predicted. what is the most appropriate inhaler therapy?",
     "options": [
       "SABA",
       "SAMA",
@@ -26354,7 +26354,7 @@
     "id": "generated_all_1779395401161_8",
     "topic": "Acute Coronary Syndrome",
     "category": "all",
-    "question": "A 62-year-old man with chest pain and ST-elevation on ECG arrives at the hospital. NG185, what is the preferred management approach if PCI is available within 120 minutes?",
+    "question": "A 62-year-old man with chest pain and ST-elevation on ECG arrives at the hospital. what is the preferred management approach if PCI is available within 120 minutes?",
     "options": [
       "Thrombolysis",
       "Primary PCI",
@@ -26375,7 +26375,7 @@
     "id": "generated_all_1779395401161_9",
     "topic": "Parkinson's Disease Management",
     "category": "all",
-    "question": "A 75-year-old man with newly diagnosed Parkinson's disease presents with bradykinesia and rigidity. NG71, what is the most effective initial treatment?",
+    "question": "A 75-year-old man with newly diagnosed Parkinson's disease presents with bradykinesia and rigidity. what is the most effective initial treatment?",
     "options": [
       "Levodopa",
       "Dopamine agonist",
@@ -26459,7 +26459,7 @@
     "id": "generated_all_1779397346459_3",
     "topic": "Asthma Management",
     "category": "all",
-    "question": "A 30-year-old woman with newly diagnosed asthma presents with wheeze and dyspnoea. She uses a salbutamol inhaler occasionally. NG245, what is the most appropriate management?",
+    "question": "A 30-year-old woman with newly diagnosed asthma presents with wheeze and dyspnoea. She uses a salbutamol inhaler occasionally. what is the most appropriate management?",
     "options": [
       "Continue salbutamol and start low-dose ICS",
       "Switch to as-needed low-dose ICS/formoterol",
@@ -26606,7 +26606,7 @@
     "id": "generated_all_1779397427603_0",
     "topic": "Hypertension",
     "category": "all",
-    "question": "A 52-year-old Caucasian man presents to the GP for a routine check-up. His blood pressure is measured at 155/95 mmHg on two separate occasions. He has no significant past medical history and is not on any medication. NG136 guidelines, what is the first-line treatment for his hypertension?",
+    "question": "A 52-year-old Caucasian man presents to the GP for a routine check-up. His blood pressure is measured at 155/95 mmHg on two separate occasions. He has no significant past medical history and is not on any medication. guidelines, what is the first-line treatment for his hypertension?",
     "options": [
       "Amlodipine",
       "Ramipril",
@@ -26627,7 +26627,7 @@
     "id": "generated_all_1779397427603_1",
     "topic": "Asthma",
     "category": "all",
-    "question": "A 30-year-old woman with a history of asthma presents with increased wheezing and shortness of breath. She is currently using a salbutamol inhaler only. According to the NG245 guidelines, what is the next step in her asthma management?",
+    "question": "A 30-year-old woman with a history of asthma presents with increased wheezing and shortness of breath. She is currently using a salbutamol inhaler only. According to the guidelines, what is the next step in her asthma management?",
     "options": [
       "Add a low-dose inhaled corticosteroid",
       "Switch to low-dose ICS/formoterol as needed",
@@ -26648,7 +26648,7 @@
     "id": "generated_all_1779397427603_2",
     "topic": "Type 2 Diabetes",
     "category": "all",
-    "question": "A 58-year-old man with a history of type 2 diabetes and a recent myocardial infarction comes for review. His current medication is metformin. NG28, which medication should be added next?",
+    "question": "A 58-year-old man with a history of type 2 diabetes and a recent myocardial infarction comes for review. His current medication is metformin. which medication should be added next?",
     "options": [
       "Sulfonylurea",
       "SGLT-2 inhibitor",
@@ -26669,7 +26669,7 @@
     "id": "generated_all_1779397427603_3",
     "topic": "Heart Failure",
     "category": "all",
-    "question": "A 65-year-old woman with heart failure with reduced ejection fraction (HFrEF) has been started on ramipril and bisoprolol. Her symptoms persist. NG106, what should be added next?",
+    "question": "A 65-year-old woman with heart failure with reduced ejection fraction (HFrEF) has been started on ramipril and bisoprolol. Her symptoms persist. what should be added next?",
     "options": [
       "Digoxin",
       "Spironolactone",
@@ -26690,7 +26690,7 @@
     "id": "generated_all_1779397427603_4",
     "topic": "Stroke",
     "category": "all",
-    "question": "A 70-year-old woman presents with sudden right-sided weakness and aphasia. Her CT scan shows no haemorrhage. Her symptoms started 2 hours ago. NG128, what is the most appropriate next step?",
+    "question": "A 70-year-old woman presents with sudden right-sided weakness and aphasia. Her CT scan shows no haemorrhage. Her symptoms started 2 hours ago. what is the most appropriate next step?",
     "options": [
       "Aspirin 300 mg orally",
       "Thrombolysis with alteplase",
@@ -26711,7 +26711,7 @@
     "id": "generated_all_1779397427603_5",
     "topic": "Chronic Obstructive Pulmonary Disease",
     "category": "all",
-    "question": "A 68-year-old man with moderate COPD has frequent exacerbations despite using a SABA. NG115, what is the next step in his management?",
+    "question": "A 68-year-old man with moderate COPD has frequent exacerbations despite using a SABA. what is the next step in his management?",
     "options": [
       "Add ICS/LABA combination",
       "Start a LAMA",
@@ -26732,7 +26732,7 @@
     "id": "generated_all_1779397427603_6",
     "topic": "Community-Acquired Pneumonia",
     "category": "all",
-    "question": "A 45-year-old woman presents with cough, fever, and pleuritic chest pain. Her CURB-65 score is 1. NG250, what is the most appropriate antibiotic management?",
+    "question": "A 45-year-old woman presents with cough, fever, and pleuritic chest pain. Her CURB-65 score is 1. what is the most appropriate antibiotic management?",
     "options": [
       "Amoxicillin alone",
       "Amoxicillin and clarithromycin",
@@ -26753,7 +26753,7 @@
     "id": "generated_all_1779397427603_7",
     "topic": "Epilepsy",
     "category": "all",
-    "question": "A 28-year-old woman with focal epilepsy is planning to become pregnant. NG217, which antiepileptic drug is recommended as first-line for her condition?",
+    "question": "A 28-year-old woman with focal epilepsy is planning to become pregnant. which antiepileptic drug is recommended as first-line for her condition?",
     "options": [
       "Sodium valproate",
       "Carbamazepine",
@@ -26774,7 +26774,7 @@
     "id": "generated_all_1779397427603_8",
     "topic": "Rheumatoid Arthritis",
     "category": "all",
-    "question": "A 55-year-old woman has been diagnosed with rheumatoid arthritis. NG100, what is the first-line disease-modifying antirheumatic drug (DMARD) she should be started on?",
+    "question": "A 55-year-old woman has been diagnosed with rheumatoid arthritis. what is the first-line disease-modifying antirheumatic drug (DMARD) she should be started on?",
     "options": [
       "Methotrexate",
       "Sulfasalazine",
@@ -33357,7 +33357,7 @@
     "id": "generated_all_1779493274997_1",
     "topic": "Asthma Management",
     "category": "all",
-    "question": "A 28-year-old woman with no previous asthma diagnosis presents with wheezing and intermittent shortness of breath. She reports using a salbutamol inhaler occasionally, which provides temporary relief. NG245 (2024), what is the most appropriate next step in her treatment?",
+    "question": "A 28-year-old woman with no previous asthma diagnosis presents with wheezing and intermittent shortness of breath. She reports using a salbutamol inhaler occasionally, which provides temporary relief. (2024), what is the most appropriate next step in her treatment?",
     "options": [
       "Start as-needed low-dose ICS/formoterol combination inhaler",
       "Add low-dose ICS to her current salbutamol inhaler",
@@ -33378,7 +33378,7 @@
     "id": "generated_all_1779493274997_2",
     "topic": "Type 2 Diabetes Management",
     "category": "all",
-    "question": "A 64-year-old man with newly diagnosed type 2 diabetes has an HbA1c of 58 mmol/mol. He has a history of myocardial infarction two years ago. Lifestyle advice has been provided, but his HbA1c remains elevated. NG28 (2022), which drug should be started?",
+    "question": "A 64-year-old man with newly diagnosed type 2 diabetes has an HbA1c of 58 mmol/mol. He has a history of myocardial infarction two years ago. Lifestyle advice has been provided, but his HbA1c remains elevated. (2022), which drug should be started?",
     "options": [
       "Metformin",
       "Gliclazide",
@@ -33399,7 +33399,7 @@
     "id": "generated_all_1779493274997_3",
     "topic": "Acute Coronary Syndrome",
     "category": "all",
-    "question": "A 60-year-old man presents to the ED with chest pain for the past 2 hours. ECG shows ST-elevation in leads II, III, and aVF. NG185 (2020), what is the most appropriate immediate management?",
+    "question": "A 60-year-old man presents to the ED with chest pain for the past 2 hours. ECG shows ST-elevation in leads II, III, and aVF. (2020), what is the most appropriate immediate management?",
     "options": [
       "Administer aspirin 300 mg and refer for primary PCI",
       "Administer thrombolysis with alteplase and transfer to coronary care",
@@ -33756,7 +33756,7 @@
     "id": "generated_all_1779560377923_1",
     "topic": "Asthma",
     "category": "all",
-    "question": "A 24-year-old woman presents with worsening breathlessness and wheeze. She reports using her salbutamol inhaler frequently, but has not been prescribed any other medication for her asthma. What is the most appropriate next step in management according to the latest NG245 guideline?",
+    "question": "A 24-year-old woman presents with worsening breathlessness and wheeze. She reports using her salbutamol inhaler frequently, but has not been prescribed any other medication for her asthma. What is the most appropriate next step in management according to the latest guideline?",
     "options": [
       "Add regular low-dose ICS",
       "Switch to low-dose ICS/formoterol combination inhaler (AIR therapy)",
